@@ -15,11 +15,11 @@ Both are safe to run again. The last query of file 2 must show `100 | 1000 | 2`.
 
 | Item | Value |
 |---|---|
-| Project name | (fill in) |
-| Project ref | (fill in) |
-| Region | (fill in) |
-| Project URL | (fill in) |
-| Publishable / anon key | (fill in) |
+| Project name | businessidea |
+| Project ref | ubuavzcuwvvedojsrmux |
+| Region | ap-south-1 (Mumbai) |
+| Project URL | https://ubuavzcuwvvedojsrmux.supabase.co |
+| Publishable / anon key | sb_publishable_jjA0oFdaqraLaCTY_AqUIw_hKOVV8mD |
 
 ## Secret values: never in any file
 
