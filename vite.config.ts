@@ -37,8 +37,12 @@ export default defineConfig(({ command, mode }) => {
       server: { entry: "server" },
     }),
   ];
-  // Cloudflare Workers output, build only.
-  if (command === "build") plugins.push(nitro({ defaultPreset: "cloudflare-module" }));
+  // Build output for the host doing the build: Vercel sets VERCEL=1 in its
+  // build environment and needs its own output format (.vercel/output);
+  // anywhere else the build stays Cloudflare Workers.
+  if (command === "build") {
+    plugins.push(nitro({ preset: process.env["VERCEL"] ? "vercel" : "cloudflare-module" }));
+  }
   plugins.push(viteReact());
 
   // VITE_* variables, visible to both the browser and the server bundles.

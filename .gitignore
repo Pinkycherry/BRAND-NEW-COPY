@@ -52,3 +52,6 @@ LOGIN_CREDENTIALS_AND_API_KEYS.md
 
 # Local environment (set real values in the Cloudflare build settings)
 .env
+
+# Vercel build output
+.vercel/
