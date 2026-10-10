@@ -6,7 +6,8 @@ The user manual for everyone who works on BusinessIdea.io. If a chat, a memory o
 - Code freeze: 25 October 2026
 - Go live: 26 October 2026
 - Repository: `pinkycherry/brand-new-copy`, branch `main`
-- Staging: Vercel project `bbinewcopy` (https://bbinewcopy.vercel.app)
+- Staging: Vercel project `bbinewcopy` (https://bbinewcopy.vercel.app), free plan
+- Live host from 26 October: Cloudflare (free)
 - Final domain: businessidea.io
 
 ---
@@ -81,11 +82,24 @@ The category and subcategory list is fixed. It comes from the approved architect
 
 1. There is no draft, checked, approved, published chain.
 2. A writer who is confident in an idea publishes it. A writer who is not confident marks it `flagged` with one line saying why. Flagged ideas go to the founder, who decides.
-3. The architects audit after the fact (Part 9), they do not block.
+3. The founder audits after the fact (Part 9). Audits never block writing.
 
 ### 2.6 Names
 
 Platforms are never named in our work files or public copy. Everyone works under a name (Part 5). Public copy never names an AI vendor, except the destinations inside the Validate picker.
+
+### 2.7 Rules carried over from the old site
+
+1. **Free tiers only.** No paid plan on any platform and no paid API until revenue starts. One free Supabase account now, a second free account when the first nears 500 MB.
+2. **No paid AI API inside the site.** The Validate button opens the reader's own assistant; the site never calls a paid model.
+3. **Never invent** a category slug, a subcategory, an idea title for another writer's range, or a statistic.
+4. **Never change database rows by hand without the founder's go-ahead.** Ideas reach the database only through the import script.
+5. **Commit and push after every finished piece of work**, with a message that says what changed and why. Nothing stays only on one machine.
+6. **Packages: bun only.** `bun.lock` is the only lockfile.
+7. **Never commit a key or password.** If someone pastes one in chat, do not store it anywhere.
+8. **Report work with full URLs**, never bare commit numbers.
+9. **The custom cursor stays removed.**
+10. **Plain, matter-of-fact replies** to the founder: do the task, say what was done in a line or two.
 
 ---
 
@@ -95,12 +109,9 @@ These were verified on the official pages on 10 October 2026. Re-check before sp
 
 | Topic | Fact | What it means for us |
 |---|---|---|
-| Vercel Hobby (free) | Non-commercial use only. Taking payments or running ads (AdSense) counts as commercial. | Upgrade the `bbinewcopy` project to **Vercel Pro ($20 per member per month)** before the first payment or ad. Hobby is fine for staging until then. |
-| Vercel limits | Hobby includes about 1M function invocations and 4 hours of active CPU a month. Page count has no limit. | Cache category and subcategory pages hard. Search engine crawling counts against these limits. |
-| Supabase Free | 2 projects, 500 MB database, 5 GB egress, 50,000 auth users a month. **Paused after 1 week of inactivity. No backups.** | 10,000 ideas at about 8 KB each is about 80 MB, which fits. We run our own nightly backup to GitHub (7.4). Live traffic keeps the project active. |
-| Payments | Razorpay: 2% per domestic transaction (UPI included) + 18% GST on the fee, no setup fee. Cashfree: 1.95% + GST, with an offer for new merchants on eligible volume. | On ₹199 we pay roughly ₹4.70, on ₹399 roughly ₹9.40. Choose one gateway in decision D5. |
-| Gateway onboarding | Individual: PAN, address proof (Aadhaar etc.), bank proof in own name, live website with Terms, Privacy, Refund and Contact pages. GST needed only above the turnover threshold. | Terms, Privacy, Refund and Contact pages must be live on businessidea.io before applying. |
-| Domain on Vercel | Add the domain in Project Settings, Domains. Vercel shows the exact A record for the apex and a project-specific CNAME for www. | Copy the values from the Vercel domain card, never from memory. |
+| Vercel Hobby (free) | Non-commercial use only. | Vercel is **staging only**. The live site runs on Cloudflare (free), where the code already builds; switching takes minutes, as on the old site. |
+| Supabase Free | 2 projects, 500 MB database, 5 GB egress, 50,000 auth users a month. **Paused after 1 week of inactivity. No backups.** | One free account for now. 10,000 ideas at about 8 KB each is about 80 MB, which fits. When usage nears 500 MB we open another free account. Paid plans only after revenue starts. Nightly backup to GitHub (7.4). |
+| Domain | businessidea.io points to the live Cloudflare site at launch. | DNS values are taken from the Cloudflare dashboard, never from memory. |
 | Search engines and AI text | Google does not penalise content for being AI-written. It penalises pages made mainly to rank without helping the reader. | Every subcategory page must genuinely help a reader choose. That is our only SEO rule for content. |
 
 ---
@@ -109,16 +120,16 @@ These were verified on the official pages on 10 October 2026. Re-check before sp
 
 | Phase | Dates | What gets done | Owner |
 |---|---|---|---|
-| 0. Foundation | 10 to 11 Oct | This master plan. Names given to every worker. New Supabase project created by the founder. | Founder, Arjun |
-| 1. Core build | 11 to 16 Oct | Database tables and import pipeline. Idea page template. Subcategory page with idea cards and compare table. Validate button. Pricing ₹199 / ₹399, sign-in, paywall. External links block. Validator script. | Arjun, Bheem |
-| 1b. Look and feel | 12 to 18 Oct | Brand: name, logo, colours, mobile layout fixes, interactivity. | Nakul (with architect review) |
+| 0. Foundation | 10 to 11 Oct | This master plan. Names given to every worker. New Supabase project created by the founder. | Founder |
+| 1. Core build | 11 to 16 Oct | Database tables and import pipeline. Idea page template. Subcategory page with idea cards and compare table. Validate button. Pricing ₹199 / ₹399, sign-in, paywall. External links block. Validator script. | Founder |
+| 1b. Look and feel | 12 to 18 Oct | Brand: name, logo, colours, mobile layout fixes, interactivity. | Nakul (founder approves) |
 | 2. Subcategory research | 13 to 15 Oct | One research note per subcategory (1,000 notes). This is the only research we do. | Writers, by category range |
 | 3. Idea writing | 14 to 22 Oct | 10,000 ideas, 10 per subcategory, as JSON files through GitHub. | Writers |
-| 4. Audit | 18 to 24 Oct | Architects sample every category, fix or send back. Flagged ideas to founder. | Arjun, Bheem, Founder |
-| 5. Launch prep | 23 to 25 Oct | Vercel Pro. Domain businessidea.io. Payment gateway live. Search Console, sitemaps. Code freeze 25 Oct night. | Arjun, Founder |
+| 4. Audit | 18 to 24 Oct | Every category sampled, fixed or sent back. Flagged ideas decided. | Founder |
+| 5. Launch prep | 23 to 25 Oct | Switch live hosting to Cloudflare (free). Domain businessidea.io. Search Console, sitemaps. Code freeze 25 Oct night. | Founder |
 | 6. Live | 26 Oct | Switch on. Watch errors, payments and indexing. | Everyone |
 
-Daily rhythm: each writer finishes its day by pushing its files and updating its line in `docs/agents/STATUS.md`. Architects read STATUS every morning.
+Daily rhythm: each writer finishes its day by pushing its files and updating its line in `docs/agents/STATUS.md`. The founder reads STATUS every morning.
 
 ---
 
@@ -128,9 +139,7 @@ Daily rhythm: each writer finishes its day by pushing its files and updating its
 
 | Name | Role | Does | Does not |
 |---|---|---|---|
-| Krishna (the founder) | Owner and final word | Decides open questions, reviews flagged ideas, owns money, domain and accounts | Write code |
-| Arjun | Architect 1 | Site structure, database, templates, pipeline, launch | Write bulk ideas |
-| Bheem | Architect 2 | Writer brief, quality audit, subcategory pages, fixes | Change the taxonomy |
+| Krishna (the founder) | Owner and final word | Site structure, database, templates, imports, audits, flagged ideas, domain and accounts | |
 | Nakul | Designer and writer | Brand, colours, mobile layout, interactivity, then writing | Touch data or pipeline code |
 | Sahadev | Writer | Research notes and ideas for its range | Edit site code |
 | Yudhi | Writer | Research notes and ideas for its range | Edit site code |
@@ -147,7 +156,7 @@ The founder tells each account its name once. Accounts refer to each other only 
 | Abhi | C061 to C090 | 300 | 3,000 |
 | Nakul | C091 to C100 (after design work) | 100 | 1,000 |
 
-If a writer runs out of capacity, the architects move whole categories, never half a subcategory. Every change of ownership is written in `docs/agents/STATUS.md`.
+If a writer runs out of capacity, the founder moves whole categories, never half a subcategory. Every change of ownership is written in `docs/agents/STATUS.md`.
 
 ### 5.3 Ownership rule
 
@@ -229,10 +238,10 @@ Before writing a subcategory's ten ideas, the writer writes one research note fo
 
 ### 7.1 Why ideas travel through GitHub
 
-Writers never get database keys. They write JSON files into the repository. An import script, run by an architect, checks every file and loads it into Supabase. This keeps four platforms away from the database, gives us a full history and a free backup.
+Writers never get database keys. They write JSON files into the repository. An import script, run by the founder, checks every file and loads it into Supabase. This keeps four platforms away from the database, gives us a full history and a free backup.
 
 ```
-writer → content/ideas/C016/S03.json → validator (automatic) → import (architect) → Supabase → site
+writer → content/ideas/C016/S03.json → validator (automatic) → import (founder) → Supabase → site
 ```
 
 ### 7.2 Folder layout
@@ -261,11 +270,11 @@ scripts/
 | `external_links` | Name, url, domain, group, rel (nofollow by default), show_logo, active |
 | `profiles` | One row per signed-in user |
 | `plans` | The two paid plans: code, name, price in paise, what it unlocks |
-| `purchases` | User, plan, gateway order id, amount in paise, status, created_at |
+| `purchases` | User, plan, payment order id, amount in paise, status, created_at |
 | `saved_ideas` | User, idea code (a reader's shortlist) |
 
 Rules:
-- Row level security on every table. The public reads categories, subcategories, published ideas and active links. Writes only through the import script (service key, kept by architects only) and the payment webhook.
+- Row level security on every table. The public reads categories, subcategories, published ideas and active links. Writes only through the import script (service key, kept by the founder only) and the payment webhook.
 - Money is stored in paise as whole numbers. ₹199 is `19900`.
 - `ideas.code` and `ideas.slug` are unique. An idea must point at an existing subcategory.
 - `updated_at` changes only when content really changes.
@@ -295,8 +304,8 @@ The free plan has no backups. A scheduled GitHub Action exports the `ideas`, `su
 | About | `/about` | Yes | |
 | Founder / author | `/founder` | Yes | Who stands behind the site. Same as today, wording changed from free to paid |
 | Others building in India | `/building-in-india` | Yes | The external links block (Part 10) |
-| Contact | `/contact` | Yes | Needed for the payment gateway |
-| Terms, Privacy, Refund, Disclaimer, Cookies | `/terms` etc. | Yes | Refund page is mandatory for the gateway |
+| Contact | `/contact` | Yes | |
+| Terms, Privacy, Refund, Disclaimer, Cookies | `/terms` etc. | Yes | Refund page needed once payments start |
 | Blog / articles | `/blog` | Yes | Separate task |
 | Glossary, calculators, guides | as today | Yes for now | Kept for launch. Founder may remove later |
 | HTML sitemap | `/sitemap` | Yes | |
@@ -338,7 +347,7 @@ Keep all sections and animations. Change the words:
 | Starter | ₹199 | Full idea pages for one category of your choice, saved list, lifetime |
 | Full library | ₹399 | Full idea pages for all 100 categories and every idea added later, lifetime |
 
-Validate stays free on both. Prices include GST if registered (decision D6). Shown only in rupees.
+Validate stays free on both. Shown only in rupees.
 
 ### 8.6 Components and hooks to build
 
@@ -360,7 +369,7 @@ Hooks:
 
 Server functions:
 - `getSubcategoryPage(category, subcategory)`, `getIdea(slug)`, `getCatalogCounts()`
-- `createOrder(plan)` and the gateway webhook `confirmPayment`
+- `createOrder(plan)` and `confirmPayment`, wired to a payment provider chosen later
 
 ### 8.7 Search engine settings
 
@@ -385,9 +394,9 @@ A file fails and is not imported if:
 - the same sentence appears in another idea
 - two titles in the same subcategory are too similar
 
-### 9.2 Architect audit (after the fact)
+### 9.2 Founder audit (after the fact)
 
-- Arjun and Bheem read at least one full subcategory from every category.
+- At least one full subcategory from every category is read.
 - Problems are fixed directly when small, or sent back to the writer with the exact file and line.
 - Repeated problems from one writer mean that writer's whole range is re-checked.
 
@@ -463,7 +472,7 @@ Heading idea: **"Others building in India"** with a line like "People and platfo
 
 ## Part 12. Brand and design changes (Nakul)
 
-Nakul works on design only, with an architect reviewing each change before it reaches `main`.
+Nakul works on design only, with the founder approving each change before it reaches `main`.
 
 | Area | Change |
 |---|---|
@@ -487,12 +496,10 @@ Technical notes for whoever edits styles:
 
 - [ ] All 1,000 subcategories have a research note and 10 ideas; flagged list cleared by founder
 - [ ] Validator passes on every file; import complete; counts match (100 / 1,000 / 10,000)
-- [ ] Vercel project upgraded to Pro
-- [ ] businessidea.io and www added in Vercel, DNS records from the domain card set, HTTPS active
+- [ ] Live hosting switched to Cloudflare (free); businessidea.io and www connected, HTTPS active
 - [ ] Site address setting switched to https://businessidea.io (canonicals and sitemaps)
-- [ ] Payment gateway approved; ₹199 and ₹399 test purchase and refund done
 - [ ] Terms, Privacy, Refund, Contact live
-- [ ] Supabase environment variables set in Vercel (build and runtime)
+- [ ] Supabase environment variables set on the live host (build and runtime)
 - [ ] Nightly backup action ran once successfully
 - [ ] Search Console: domain verified, `sitemap-index.xml` submitted
 - [ ] Spot check on a phone: home, browse, 3 categories, 3 subcategories, 3 ideas, pricing, checkout
@@ -508,7 +515,5 @@ Technical notes for whoever edits styles:
 | D2 | Final brand colours and logo | Nakul proposes three directions by 14 Oct |
 | D3 | Public credit line | "Researched and written by BusinessIdea.io" on every page. The old house rule was never to name an AI vendor in public copy, so we suggest not printing the name of the AI tool. |
 | D4 | Which external links are follow instead of nofollow | All nofollow at launch; founder picks follow links later |
-| D5 | Razorpay or Cashfree | Razorpay (simplest onboarding for an individual with PAN); compare Cashfree's new-merchant offer first |
-| D6 | GST registration | Not required below the turnover threshold; decide before pricing copy says "incl. GST" |
 | D7 | Keep or remove glossary, calculators and guides | Keep for launch, review in November |
-| D8 | Writer names | Arjun, Bheem, Nakul, Sahadev, Yudhi, Abhi, as in 5.1; founder may rename |
+| D8 | Writer names | Nakul, Sahadev, Yudhi, Abhi, as in 5.1; founder may rename |
