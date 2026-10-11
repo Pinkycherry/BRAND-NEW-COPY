@@ -1,0 +1,547 @@
+{
+  "subcategory": {
+    "code": "C002-S04",
+    "intro": "You may be the friend who can make a messy notice readable in ten minutes. That skill can earn money in the hours around another job, but a design is useful only when the right person can use it. A salon customer needs to find the service and booking number. A guest at a crowded event needs to know where to stand. A beautiful file with tiny text or the wrong date will fail both of them.\n\nChoose one kind of small client and one deliverable you can finish after work. Ask where it will appear: a phone screen, a shop window, a printed card or a sign seen from across a room. Get the final words, dimensions, logo and approval contact before you begin. Show a rough layout, then a proof with the actual information. Check spelling, prices and dates with the client, and ask them to sign off the print version. If you use photographs or fonts, confirm you have rights for the intended commercial use.\n\nA side service needs a boundary around revisions. Agree on the number of concepts, sizes, correction rounds, editable files and the date by which the client must respond. A last-minute text change can mean more work than the original layout. Price the thinking, test prints, travel and printer coordination if you offer it. Ask for part payment before an event job that cannot be resold if cancelled. Keep a copy of the approved proof so neither side has to rely on memory.\n\nThe ten paths below solve different small problems. Some designs must be understood at a glance; others must survive a wet market table or a small package. Choose the work where you can ask the buyer one more practical question, and where your own evenings can meet the real deadline.",
+    "how_to_choose": "Start with a business whose everyday questions you understand. If you like organising dense information, a menu or timetable may suit you. If you enjoy physical context, visit a venue and design signs at the size people will really see. Ask who supplies final copy and who pays the printer. A digital image, a print-ready file and an editable master are different deliverables. Test the result on a phone or at actual print size. Charge for one clear scope with defined revisions, and refuse a deadline that gives the client no time to check names, dates and prices before printing.",
+    "faq": [
+      {
+        "q": "Do I need professional software?",
+        "a": "You need tools that produce the formats and print quality promised. A simple design tool can handle a first project if you can check dimensions, readability and export. Be honest about the files you can deliver."
+      },
+      {
+        "q": "Who checks the final spelling and prices?",
+        "a": "You should proofread, and the client must approve the final facts before publication or printing. Send a clear proof and record sign-off. A misplaced digit can cost more than another revision round."
+      },
+      {
+        "q": "Should I provide an editable file?",
+        "a": "Agree on that before quoting. A print-ready file and an editable master take different preparation and may use different fonts or assets. Explain what the client will receive and can change later."
+      },
+      {
+        "q": "Can I put client work in my portfolio?",
+        "a": "Ask permission before you post it, especially when a design includes private names, children or an unreleased offer. Agree whether you may show a public image or only describe the work."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C002-S04-I01",
+      "slug": "salon-service-menu-board-design",
+      "title": "Salon Service Menu Board Design",
+      "hook": "You walk into a salon and still have to ask what a basic haircut includes because the wall menu is crowded.",
+      "summary": "You design a readable service menu board for a neighbourhood salon owner, helping a visitor choosing a service find an answer quickly. Test a wall print and phone image at real size. A checked salon menu proof, one approving contact and a revision round keep the evening assignment ready to print or share.",
+      "what_it_is": "You walk into a salon and still have to ask what a basic haircut includes because the wall menu is crowded. You ask a neighbourhood salon owner where the salon menu will appear and what a person must understand first. Then you group services, duration and approved price enquiry notes, arrange the information in a readable order and check salon menu legibility at actual display size. Get final wording, logo and dimensions for the salon menu before polishing. Show a rough salon menu layout, a proof and one point for factual approval. Do not invent a price or service promise to fill a gap. Deliver the agreed salon menu files with names the client can recognise, and keep the approved proof for later corrections.",
+      "who_pays_you": "A neighbourhood salon owner pays you because prices and service names change after the board is ordered. You offer one salon a sketch made from its current menu. Show a small before-and-after example and ask what confuses a visitor choosing a service now. The salon menu buyer may have a printer or staff member, but needs someone to make scattered facts clear. Name one person who can approve the salon menu; conflicting comments can keep a modest job open for weeks.",
+      "how_money_comes": "You charge per approved layout and quote reprints or updates separately. Quote the salon menu dimensions, number of layouts, revisions and file formats before beginning. Take part payment for a salon menu specific to an event or brand. Printing, installation or another salon menu size is separate unless included in the scope. A late salon menu text change after approval is new work; a mistake you introduced is yours to correct. Count the hours spent on the salon menu after your day job.",
+      "what_you_need": "You need final service list, brand colours and print dimensions, rights to the fonts and images, and a tool that exports files for a wall print and phone image. Check salon menu contrast, spelling and type size where a visitor choosing a service will see it. Have a neighbourhood salon owner approve every factual detail in the salon menu. Do not invent a price or service promise to fill a gap. A salon menu test print or phone screenshot can reveal a problem your large design canvas hides.",
+      "first_30_days": [
+        "Stand where a customer reads the present board.",
+        "Ask the owner which services are misunderstood most.",
+        "Make a rough grouping and test type size at real distance.",
+        "Quote a paid layout with one final proof round.",
+        "Get signed approval before sending the print file."
+      ],
+      "what_hurts": "Prices and service names change after the board is ordered. Do not invent a price or service promise to fill a gap. Your salon menu may look balanced on a laptop and fail at real size. A neighbourhood salon owner may send a new service price after delivery. Keep one salon menu approval contact, a change cutoff and a dated proof. If printing changes scale or colour, help identify whether the problem was in your salon menu file or the printer's setup.",
+      "verdict": "Build this if you like making a readable service menu board clear for a visitor choosing a service and can meet a real approval deadline. Walk away if the salon will not approve its real services and prices. A customer should understand the choice before sitting down.",
+      "faq": [
+        {
+          "q": "Should every price appear on the board?",
+          "a": "Follow the salon's approved menu. For variable work, explain how a customer gets a quote rather than placing a misleading fixed amount."
+        },
+        {
+          "q": "What if the owner changes prices next month?",
+          "a": "Offer an update at a defined fee and keep the editable master organised. A reprint is separate from a text correction before approval."
+        },
+        {
+          "q": "Can I use hairstyle photos from the internet?",
+          "a": "Use the salon's own images with permission or assets licensed for this use. A clear text menu may work better than unlicensed generic photos."
+        }
+      ],
+      "validate_prompt": "I want to design a salon service menu board as evening side work in India. How should I scope content approval, print size and updates?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S04-I02",
+      "slug": "coaching-batch-timetable-flyer",
+      "title": "Coaching Batch Timetable Flyer",
+      "hook": "A parent saves the coaching flyer but cannot tell which class meets on which evening.",
+      "summary": "You design a clean batch timetable flyer for a local coaching centre, helping parents comparing schedules find an answer quickly. Test a phone image and one printable size at real size. A checked coaching timetable proof, one approving contact and a revision round keep the evening assignment ready to print or share.",
+      "what_it_is": "A parent saves the coaching flyer but cannot tell which class meets on which evening. You ask a local coaching centre where the coaching timetable will appear and what a person must understand first. Then you separate grade, subject, day, time and contact, arrange the information in a readable order and check coaching timetable legibility at actual display size. Get final wording, logo and dimensions for the coaching timetable before polishing. Show a rough coaching timetable layout, a proof and one point for factual approval. The tutor must confirm every date and available seat. Deliver the agreed coaching timetable files with names the client can recognise, and keep the approved proof for later corrections.",
+      "who_pays_you": "A local coaching centre pays you because a changed slot can leave families arriving on the wrong day. You ask a tutor to show the questions arriving after their current flyer. Show a small before-and-after example and ask what confuses parents comparing schedules now. The coaching timetable buyer may have a printer or staff member, but needs someone to make scattered facts clear. Name one person who can approve the coaching timetable; conflicting comments can keep a modest job open for weeks.",
+      "how_money_comes": "You charge for one flyer and a defined timetable revision. Quote the coaching timetable dimensions, number of layouts, revisions and file formats before beginning. Take part payment for a coaching timetable specific to an event or brand. Printing, installation or another coaching timetable size is separate unless included in the scope. A late coaching timetable text change after approval is new work; a mistake you introduced is yours to correct. Count the hours spent on the coaching timetable after your day job.",
+      "what_you_need": "You need approved batch list, contact details and logo files, rights to the fonts and images, and a tool that exports files for a phone image and one printable size. Check coaching timetable contrast, spelling and type size where parents comparing schedules will see it. Have a local coaching centre approve every factual detail in the coaching timetable. The tutor must confirm every date and available seat. A coaching timetable test print or phone screenshot can reveal a problem your large design canvas hides.",
+      "first_30_days": [
+        "Collect the real batch schedule from one approving tutor.",
+        "Group entries by grade and test the phone view.",
+        "Show a proof to a parent who has never seen the timetable.",
+        "Deliver one paid flyer after factual sign-off.",
+        "Quote later schedule changes as a separate small update."
+      ],
+      "what_hurts": "A changed slot can leave families arriving on the wrong day. The tutor must confirm every date and available seat. Your coaching timetable may look balanced on a laptop and fail at real size. A local coaching centre may send a changed class time after delivery. Keep one coaching timetable approval contact, a change cutoff and a dated proof. If printing changes scale or colour, help identify whether the problem was in your coaching timetable file or the printer's setup.",
+      "verdict": "Build this if you like making a clean batch timetable flyer clear for parents comparing schedules and can meet a real approval deadline. Walk away if the tutor cannot confirm the class timetable before sharing it. A parent may rearrange the week around the time you print.",
+      "faq": [
+        {
+          "q": "Can I advertise a batch that is nearly full?",
+          "a": "Ask the centre to approve availability and wording. A flyer should not send a family to a trial that has no seat."
+        },
+        {
+          "q": "Should I include every tutor's name?",
+          "a": "Only with their permission and if it helps a parent choose. The essentials are level, subject, time, location and contact."
+        },
+        {
+          "q": "What if the flyer is forwarded after a change?",
+          "a": "Add an issue date and a current enquiry contact. The centre should replace its own posts and send an update to families who may rely on the old image."
+        }
+      ],
+      "validate_prompt": "I want to design a phone-friendly coaching batch flyer in India. Which timetable details and approval steps should I require?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S04-I03",
+      "slug": "artisan-product-care-card-design",
+      "title": "Artisan Product Care Card Design",
+      "hook": "You gift a handmade cloth bag and realise nobody told the recipient how to wash it.",
+      "summary": "You design a small product care card for an artisan seller, helping a gift recipient caring for the item find an answer quickly. Test a card that fits a real package at real size. A checked care card proof, one approving contact and a revision round keep the evening assignment ready to print or share.",
+      "what_it_is": "You gift a handmade cloth bag and realise nobody told the recipient how to wash it. You ask an artisan seller where the care card will appear and what a person must understand first. Then you turn maker-tested care steps into plain language, arrange the information in a readable order and check care card legibility at actual display size. Get final wording, logo and dimensions for the care card before polishing. Show a rough care card layout, a proof and one point for factual approval. Do not write a care claim the maker has not tested. Deliver the agreed care card files with names the client can recognise, and keep the approved proof for later corrections.",
+      "who_pays_you": "An artisan seller pays you because a generic wash instruction can damage a handmade item. You show a maker a simple sample beside their product. Show a small before-and-after example and ask what confuses a gift recipient caring for the item now. The care card buyer may have a printer or staff member, but needs someone to make scattered facts clear. Name one person who can approve the care card; conflicting comments can keep a modest job open for weeks.",
+      "how_money_comes": "You charge for design, with print coordination quoted apart. Quote the care card dimensions, number of layouts, revisions and file formats before beginning. Take part payment for a care card specific to an event or brand. Printing, installation or another care card size is separate unless included in the scope. A late care card text change after approval is new work; a mistake you introduced is yours to correct. Count the hours spent on the care card after your day job.",
+      "what_you_need": "You need actual material and care facts approved by the maker, rights to the fonts and images, and a tool that exports files for a card that fits a real package. Check care card contrast, spelling and type size where a gift recipient caring for the item will see it. Have an artisan seller approve every factual detail in the care card. Do not write a care claim the maker has not tested. A care card test print or phone screenshot can reveal a problem your large design canvas hides.",
+      "first_30_days": [
+        "Ask a maker to explain the actual care routine.",
+        "Measure the package and draft a readable card.",
+        "Test the type size with someone receiving the gift.",
+        "Offer a paid design with maker approval.",
+        "Print a sample and check trimming before the full run."
+      ],
+      "what_hurts": "A generic wash instruction can damage a handmade item. Do not write a care claim the maker has not tested. Your care card may look balanced on a laptop and fail at real size. An artisan seller may send revised care wording after delivery. Keep one care card approval contact, a change cutoff and a dated proof. If printing changes scale or colour, help identify whether the problem was in your care card file or the printer's setup.",
+      "verdict": "Build this if you like making a small product care card clear for a gift recipient caring for the item and can meet a real approval deadline. Walk away if the maker has not tested the care instructions. A gift recipient is trying to look after real handmade work.",
+      "faq": [
+        {
+          "q": "Can I make the care card bilingual?",
+          "a": "Yes, if you can write both versions well and arrange a fluent check. Quote that work and test whether the type stays readable at card size."
+        },
+        {
+          "q": "Who owns the care instructions?",
+          "a": "The maker must confirm the product facts. You organise and design them, but should not guess how a fabric or finish reacts to washing."
+        },
+        {
+          "q": "Do I have to print the cards?",
+          "a": "No. Agree whether you supply a print-ready file or coordinate printing. If you do print, include proof, quantity, paper and delivery in the quote."
+        }
+      ],
+      "validate_prompt": "I want to design care cards for Indian handmade products. How should I verify instructions and test the actual print size?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S04-I04",
+      "slug": "wedding-venue-wayfinding-signs",
+      "title": "Wedding Venue Wayfinding Signs",
+      "hook": "Your family reaches the wedding venue and wanders between two entrances with no clue where the ceremony is.",
+      "summary": "You design a coordinated set of venue direction signs for a wedding planner or family organiser, helping guests arriving at a busy venue find an answer quickly. Test large temporary signs for agreed locations at real size. A checked venue sign set proof, one approving contact and a revision round keep the evening assignment ready to print or share.",
+      "what_it_is": "Your family reaches the wedding venue and wanders between two entrances with no clue where the ceremony is. You ask a wedding planner or family organiser where the venue sign set will appear and what a person must understand first. Then you map arrival points, parking, ceremony and facilities, arrange the information in a readable order and check venue sign set legibility at actual display size. Get final wording, logo and dimensions for the venue sign set before polishing. Show a rough venue sign set layout, a proof and one point for factual approval. Do not place signs without venue permission. Deliver the agreed venue sign set files with names the client can recognise, and keep the approved proof for later corrections.",
+      "who_pays_you": "A wedding planner or family organiser pays you because a pretty arrow can send guests to a locked gate. You walk the venue with the planner before drawing arrows. Show a small before-and-after example and ask what confuses guests arriving at a busy venue now. The venue sign set buyer may have a printer or staff member, but needs someone to make scattered facts clear. Name one person who can approve the venue sign set; conflicting comments can keep a modest job open for weeks.",
+      "how_money_comes": "You charge for a defined sign set and separate last-minute changes. Quote the venue sign set dimensions, number of layouts, revisions and file formats before beginning. Take part payment for a venue sign set specific to an event or brand. Printing, installation or another venue sign set size is separate unless included in the scope. A late venue sign set text change after approval is new work; a mistake you introduced is yours to correct. Count the hours spent on the venue sign set after your day job.",
+      "what_you_need": "You need venue map, approved wording and actual mounting sizes, rights to the fonts and images, and a tool that exports files for large temporary signs for agreed locations. Check venue sign set contrast, spelling and type size where guests arriving at a busy venue will see it. Have a wedding planner or family organiser approve every factual detail in the venue sign set. Do not place signs without venue permission. A venue sign set test print or phone screenshot can reveal a problem your large design canvas hides.",
+      "first_30_days": [
+        "Walk the guest arrival route at the actual venue.",
+        "Mark every decision point and get the planner to confirm paths.",
+        "Draft one sign at full-size readability.",
+        "Quote the paid set with print and installation roles.",
+        "Check each installed arrow before guests arrive."
+      ],
+      "what_hurts": "A pretty arrow can send guests to a locked gate. Do not place signs without venue permission. Your venue sign set may look balanced on a laptop and fail at real size. A wedding planner or family organiser may send a different guest entrance after delivery. Keep one venue sign set approval contact, a change cutoff and a dated proof. If printing changes scale or colour, help identify whether the problem was in your venue sign set file or the printer's setup.",
+      "verdict": "Build this if you like making a coordinated set of venue direction signs clear for guests arriving at a busy venue and can meet a real approval deadline. Walk away if you cannot verify arrows at the actual venue. A guest may follow your arrow while carrying bags and children.",
+      "faq": [
+        {
+          "q": "Can I work from a venue map alone?",
+          "a": "A map helps, but a walkthrough catches closed gates, lighting and where people really hesitate. If you cannot visit, ask for current video and planner verification."
+        },
+        {
+          "q": "Who installs the signs?",
+          "a": "Agree whether the venue team, planner or you does it. Installation takes time and permission, and a loose sign can become unsafe."
+        },
+        {
+          "q": "What if the entry changes on the day?",
+          "a": "Name one planner contact who approves a revised route. Keep an editable file and know who can reprint or move signs quickly, without improvising an unapproved arrow."
+        }
+      ],
+      "validate_prompt": "I want to design wedding venue direction signs in India. What site visit, sign-off and installation terms should I set?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S04-I05",
+      "slug": "farmers-market-stall-price-cards",
+      "title": "Farmers Market Stall Price Cards",
+      "hook": "You stop at a vegetable stall but cannot tell whether the written price is for a bunch or a kilo.",
+      "summary": "You design large reusable produce price cards for a weekend produce seller, helping shoppers comparing quantity and price find an answer quickly. Test wipeable cards seen across the table at real size. A checked produce price card proof, one approving contact and a revision round keep the evening assignment ready to print or share.",
+      "what_it_is": "You stop at a vegetable stall but cannot tell whether the written price is for a bunch or a kilo. You ask a weekend produce seller where the produce price card will appear and what a person must understand first. Then you show item, unit, current price and origin only if verified, arrange the information in a readable order and check produce price card legibility at actual display size. Get final wording, logo and dimensions for the produce price card before polishing. Show a rough produce price card layout, a proof and one point for factual approval. The vendor updates prices; your design must make that easy. Deliver the agreed produce price card files with names the client can recognise, and keep the approved proof for later corrections.",
+      "who_pays_you": "A weekend produce seller pays you because prices change during the morning and rain can smear ink. You ask a market vendor which price questions interrupt weighing. Show a small before-and-after example and ask what confuses shoppers comparing quantity and price now. The produce price card buyer may have a printer or staff member, but needs someone to make scattered facts clear. Name one person who can approve the produce price card; conflicting comments can keep a modest job open for weeks.",
+      "how_money_comes": "You charge for a set of card layouts and a print-ready master. Quote the produce price card dimensions, number of layouts, revisions and file formats before beginning. Take part payment for a produce price card specific to an event or brand. Printing, installation or another produce price card size is separate unless included in the scope. A late produce price card text change after approval is new work; a mistake you introduced is yours to correct. Count the hours spent on the produce price card after your day job.",
+      "what_you_need": "You need seller-approved units, legible type and weather-tolerant material, rights to the fonts and images, and a tool that exports files for wipeable cards seen across the table. Check produce price card contrast, spelling and type size where shoppers comparing quantity and price will see it. Have a weekend produce seller approve every factual detail in the produce price card. The vendor updates prices; your design must make that easy. A produce price card test print or phone screenshot can reveal a problem your large design canvas hides.",
+      "first_30_days": [
+        "Watch a stall during a busy market hour.",
+        "List the units buyers misunderstand most.",
+        "Test card readability across a real table.",
+        "Offer a paid reusable card set and writing method.",
+        "Check whether staff can change prices cleanly mid-day."
+      ],
+      "what_hurts": "Prices change during the morning and rain can smear ink. The vendor updates prices; your design must make that easy. Your produce price card may look balanced on a laptop and fail at real size. A weekend produce seller may send a new price unit after delivery. Keep one produce price card approval contact, a change cutoff and a dated proof. If printing changes scale or colour, help identify whether the problem was in your produce price card file or the printer's setup.",
+      "verdict": "Build this if you like making large reusable produce price cards clear for shoppers comparing quantity and price and can meet a real approval deadline. Walk away if the seller cannot change prices without replacing every card. A shopper needs to know the unit before paying.",
+      "faq": [
+        {
+          "q": "Can I print today's price permanently?",
+          "a": "If prices change often, use a replaceable or writable area. The seller should be able to update it without buying a new design every morning."
+        },
+        {
+          "q": "Should the card claim a farm origin?",
+          "a": "Only if the vendor can verify it and wants it shown. The essential buyer details are produce, unit and current price."
+        },
+        {
+          "q": "What material should I use?",
+          "a": "Test a sample in the actual market conditions. Sun, rain and wiping can affect type and surface; the printer can advise on practical stock."
+        }
+      ],
+      "validate_prompt": "I want to design reusable market price cards in India. How should I show units and handle daily price changes?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S04-I06",
+      "slug": "society-waste-sorting-visuals",
+      "title": "Society Waste Sorting Visuals",
+      "hook": "You stand by the apartment bins holding a used carton and cannot tell which label the committee means.",
+      "summary": "You design simple waste sorting signs for an apartment society committee, helping residents disposing everyday items find an answer quickly. Test large bin-side signs and phone reminders at real size. A checked sorting sign proof, one approving contact and a revision round keep the evening assignment ready to print or share.",
+      "what_it_is": "You stand by the apartment bins holding a used carton and cannot tell which label the committee means. You ask an apartment society committee where the sorting sign will appear and what a person must understand first. Then you translate the committee's actual collection rules into examples, arrange the information in a readable order and check sorting sign legibility at actual display size. Get final wording, logo and dimensions for the sorting sign before polishing. Show a rough sorting sign layout, a proof and one point for factual approval. Do not invent a universal rule for every municipality. Deliver the agreed sorting sign files with names the client can recognise, and keep the approved proof for later corrections.",
+      "who_pays_you": "An apartment society committee pays you because the recycler's accepted materials may change. You ask a committee to list the mistakes cleaners correct daily. Show a small before-and-after example and ask what confuses residents disposing everyday items now. The sorting sign buyer may have a printer or staff member, but needs someone to make scattered facts clear. Name one person who can approve the sorting sign; conflicting comments can keep a modest job open for weeks.",
+      "how_money_comes": "You charge for a small sign family and a defined rule update. Quote the sorting sign dimensions, number of layouts, revisions and file formats before beginning. Take part payment for a sorting sign specific to an event or brand. Printing, installation or another sorting sign size is separate unless included in the scope. A late sorting sign text change after approval is new work; a mistake you introduced is yours to correct. Count the hours spent on the sorting sign after your day job.",
+      "what_you_need": "You need approved local collection rules, icons you may use and print sizes, rights to the fonts and images, and a tool that exports files for large bin-side signs and phone reminders. Check sorting sign contrast, spelling and type size where residents disposing everyday items will see it. Have an apartment society committee approve every factual detail in the sorting sign. Do not invent a universal rule for every municipality. A sorting sign test print or phone screenshot can reveal a problem your large design canvas hides.",
+      "first_30_days": [
+        "Ask the committee and collection team what each bin accepts.",
+        "Choose a few common items residents confuse.",
+        "Test signs at the actual bin from standing distance.",
+        "Deliver a paid set after committee and collector approval.",
+        "Review confusion after one collection cycle."
+      ],
+      "what_hurts": "The recycler's accepted materials may change. Do not invent a universal rule for every municipality. Your sorting sign may look balanced on a laptop and fail at real size. An apartment society committee may send a collection rule after delivery. Keep one sorting sign approval contact, a change cutoff and a dated proof. If printing changes scale or colour, help identify whether the problem was in your sorting sign file or the printer's setup.",
+      "verdict": "Build this if you like making simple waste sorting signs clear for residents disposing everyday items and can meet a real approval deadline. Walk away if the committee and collection team disagree on the bin rules. Residents and cleaners need the same clear instruction.",
+      "faq": [
+        {
+          "q": "Can I copy a city poster?",
+          "a": "Check its usage permission. You can make original signs from the local team's approved rules, using icons you have rights to use."
+        },
+        {
+          "q": "What if the collection rules change?",
+          "a": "Name a committee contact who will notify you and quote a small update. An old sign can make residents repeat the wrong habit."
+        },
+        {
+          "q": "Should every possible item be on the sign?",
+          "a": "No. Show the common decisions at the bin and provide a contact for uncertain items. Too much text becomes unreadable while someone is carrying waste."
+        }
+      ],
+      "validate_prompt": "I want to design bin-side waste sorting signs for an Indian apartment society. How should I verify local rules and test readability?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S04-I07",
+      "slug": "regional-shop-window-offer-card",
+      "title": "Regional Language Shop Window Offer",
+      "hook": "Your mother walks past the shop's English poster and misses a useful service she would have asked about.",
+      "summary": "You design a bilingual window offer card for a neighbourhood retailer, helping local passers-by deciding whether to enter find an answer quickly. Test a shop window print and matching phone image at real size. A checked bilingual window card proof, one approving contact and a revision round keep the evening assignment ready to print or share.",
+      "what_it_is": "Your mother walks past the shop's English poster and misses a useful service she would have asked about. You ask a neighbourhood retailer where the bilingual window card will appear and what a person must understand first. Then you explain one real offer in natural local language, arrange the information in a readable order and check bilingual window card legibility at actual display size. Get final wording, logo and dimensions for the bilingual window card before polishing. Show a rough bilingual window card layout, a proof and one point for factual approval. Do not hide exclusions in tiny type or claim fluency you lack. Deliver the agreed bilingual window card files with names the client can recognise, and keep the approved proof for later corrections.",
+      "who_pays_you": "A neighbourhood retailer pays you because a mistranslated condition can create a dispute at the counter. You ask a retailer which questions customers ask at the door. Show a small before-and-after example and ask what confuses local passers-by deciding whether to enter now. The bilingual window card buyer may have a printer or staff member, but needs someone to make scattered facts clear. Name one person who can approve the bilingual window card; conflicting comments can keep a modest job open for weeks.",
+      "how_money_comes": "You charge per offer design with translation review priced in. Quote the bilingual window card dimensions, number of layouts, revisions and file formats before beginning. Take part payment for a bilingual window card specific to an event or brand. Printing, installation or another bilingual window card size is separate unless included in the scope. A late bilingual window card text change after approval is new work; a mistake you introduced is yours to correct. Count the hours spent on the bilingual window card after your day job.",
+      "what_you_need": "You need owner-approved terms, fluent language review and legible type, rights to the fonts and images, and a tool that exports files for a shop window print and matching phone image. Check bilingual window card contrast, spelling and type size where local passers-by deciding whether to enter will see it. Have a neighbourhood retailer approve every factual detail in the bilingual window card. Do not hide exclusions in tiny type or claim fluency you lack. A bilingual window card test print or phone screenshot can reveal a problem your large design canvas hides.",
+      "first_30_days": [
+        "Ask the owner to explain the offer and its conditions aloud.",
+        "Write both language versions from one approved fact sheet.",
+        "Test the poster at walking distance with a fluent reader.",
+        "Deliver one paid proof after owner approval.",
+        "Check the live window and correct any printing error."
+      ],
+      "what_hurts": "A mistranslated condition can create a dispute at the counter. Do not hide exclusions in tiny type or claim fluency you lack. Your bilingual window card may look balanced on a laptop and fail at real size. A neighbourhood retailer may send a new offer expiry after delivery. Keep one bilingual window card approval contact, a change cutoff and a dated proof. If printing changes scale or colour, help identify whether the problem was in your bilingual window card file or the printer's setup.",
+      "verdict": "Build this if you like making a bilingual window offer card clear for local passers-by deciding whether to enter and can meet a real approval deadline. Walk away if you cannot have both languages checked by a fluent reader. A neighbour deserves the same offer in the language they read.",
+      "faq": [
+        {
+          "q": "Can I translate an English poster word for word?",
+          "a": "Adapt the meaning to natural local speech while keeping the same actual terms. Ask a fluent reviewer to catch a changed promise."
+        },
+        {
+          "q": "Who approves the offer conditions?",
+          "a": "The retailer does. Put dates, eligibility and exclusions on the proof in readable type. You design communication, not the commercial policy."
+        },
+        {
+          "q": "Will a bilingual poster be too crowded?",
+          "a": "Keep one offer and one action. Test both language versions at real size; if there is no space, propose separate panels instead of shrinking everything."
+        }
+      ],
+      "validate_prompt": "I want to design a bilingual shop window offer in India. How can I keep both versions accurate and readable?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S04-I08",
+      "slug": "local-sports-event-schedule-board",
+      "title": "Local Sports Event Schedule Board",
+      "hook": "Your child is already in sports shoes, but nobody at the ground knows when their heat begins.",
+      "summary": "You design a clear event schedule board for a local sports organiser, helping families and athletes looking for start times find an answer quickly. Test a ground-side board and phone image at real size. A checked sports schedule proof, one approving contact and a revision round keep the evening assignment ready to print or share.",
+      "what_it_is": "Your child is already in sports shoes, but nobody at the ground knows when their heat begins. You ask a local sports organiser where the sports schedule will appear and what a person must understand first. Then you group events by time, ground and age category, arrange the information in a readable order and check sports schedule legibility at actual display size. Get final wording, logo and dimensions for the sports schedule before polishing. Show a rough sports schedule layout, a proof and one point for factual approval. Do not publish times the organiser has not approved. Deliver the agreed sports schedule files with names the client can recognise, and keep the approved proof for later corrections.",
+      "who_pays_you": "A local sports organiser pays you because rain can shift the entire timetable after printing. You ask an organiser where people queue for timing questions. Show a small before-and-after example and ask what confuses families and athletes looking for start times now. The sports schedule buyer may have a printer or staff member, but needs someone to make scattered facts clear. Name one person who can approve the sports schedule; conflicting comments can keep a modest job open for weeks.",
+      "how_money_comes": "You charge for one schedule layout and an agreed update window. Quote the sports schedule dimensions, number of layouts, revisions and file formats before beginning. Take part payment for a sports schedule specific to an event or brand. Printing, installation or another sports schedule size is separate unless included in the scope. A late sports schedule text change after approval is new work; a mistake you introduced is yours to correct. Count the hours spent on the sports schedule after your day job.",
+      "what_you_need": "You need final event list, large type and a change contact, rights to the fonts and images, and a tool that exports files for a ground-side board and phone image. Check sports schedule contrast, spelling and type size where families and athletes looking for start times will see it. Have a local sports organiser approve every factual detail in the sports schedule. Do not publish times the organiser has not approved. A sports schedule test print or phone screenshot can reveal a problem your large design canvas hides.",
+      "first_30_days": [
+        "Ask the organiser which timing questions repeat most.",
+        "Arrange events into a scannable time and ground grid.",
+        "Test the board at the distance a parent stands.",
+        "Offer a paid design with a change cutoff and contact.",
+        "Prepare a simple update version for weather changes."
+      ],
+      "what_hurts": "Rain can shift the entire timetable after printing. Do not publish times the organiser has not approved. Your sports schedule may look balanced on a laptop and fail at real size. A local sports organiser may send a delayed heat time after delivery. Keep one sports schedule approval contact, a change cutoff and a dated proof. If printing changes scale or colour, help identify whether the problem was in your sports schedule file or the printer's setup.",
+      "verdict": "Build this if you like making a clear event schedule board clear for families and athletes looking for start times and can meet a real approval deadline. Walk away if the organiser will not own weather changes after printing. An athlete should not miss a heat because the board was stale.",
+      "faq": [
+        {
+          "q": "What if an event is delayed?",
+          "a": "Give the organiser a clear update process and mark the board's issue time. A printed schedule cannot silently change, so a visible correction matters."
+        },
+        {
+          "q": "Should I list every athlete's name?",
+          "a": "Only if the organiser has permission and it is necessary. A schedule can often use event and age group without publishing children's details."
+        },
+        {
+          "q": "Can I manage announcements too?",
+          "a": "That is a separate event role. A design assignment should specify who updates the live board and tells families about changes."
+        }
+      ],
+      "validate_prompt": "I want to design a sports ground schedule board in India. What update path and readability checks should I include?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S04-I09",
+      "slug": "clinic-queue-direction-signs",
+      "title": "Clinic Queue Direction Signs",
+      "hook": "You arrive at a clinic with your father and cannot tell whether the registration line is for appointments or walk-ins.",
+      "summary": "You design clear queue and direction signs for a small clinic manager, helping patients finding the right counter find an answer quickly. Test large signs near real decision points at real size. A checked clinic direction sign proof, one approving contact and a revision round keep the evening assignment ready to print or share.",
+      "what_it_is": "You arrive at a clinic with your father and cannot tell whether the registration line is for appointments or walk-ins. You ask a small clinic manager where the clinic direction sign will appear and what a person must understand first. Then you map registration, payment and consultation routes, arrange the information in a readable order and check clinic direction sign legibility at actual display size. Get final wording, logo and dimensions for the clinic direction sign before polishing. Show a rough clinic direction sign layout, a proof and one point for factual approval. Do not imply a medical priority rule the clinic has not set. Deliver the agreed clinic direction sign files with names the client can recognise, and keep the approved proof for later corrections.",
+      "who_pays_you": "A small clinic manager pays you because a changed room or process can misdirect a patient. You walk the route with reception and note repeated questions. Show a small before-and-after example and ask what confuses patients finding the right counter now. The clinic direction sign buyer may have a printer or staff member, but needs someone to make scattered facts clear. Name one person who can approve the clinic direction sign; conflicting comments can keep a modest job open for weeks.",
+      "how_money_comes": "You charge for a defined sign set with updates separately. Quote the clinic direction sign dimensions, number of layouts, revisions and file formats before beginning. Take part payment for a clinic direction sign specific to an event or brand. Printing, installation or another clinic direction sign size is separate unless included in the scope. A late clinic direction sign text change after approval is new work; a mistake you introduced is yours to correct. Count the hours spent on the clinic direction sign after your day job.",
+      "what_you_need": "You need approved process, accessible type and mounting permission, rights to the fonts and images, and a tool that exports files for large signs near real decision points. Check clinic direction sign contrast, spelling and type size where patients finding the right counter will see it. Have a small clinic manager approve every factual detail in the clinic direction sign. Do not imply a medical priority rule the clinic has not set. A clinic direction sign test print or phone screenshot can reveal a problem your large design canvas hides.",
+      "first_30_days": [
+        "Walk from entrance to counter with the clinic manager.",
+        "Mark where a first-time patient hesitates.",
+        "Draft signs using the approved clinic words.",
+        "Test readability at standing and seated heights.",
+        "Deliver paid print files after manager sign-off."
+      ],
+      "what_hurts": "A changed room or process can misdirect a patient. Do not imply a medical priority rule the clinic has not set. Your clinic direction sign may look balanced on a laptop and fail at real size. A small clinic manager may send a room change after delivery. Keep one clinic direction sign approval contact, a change cutoff and a dated proof. If printing changes scale or colour, help identify whether the problem was in your clinic direction sign file or the printer's setup.",
+      "verdict": "Build this if you like making clear queue and direction signs clear for patients finding the right counter and can meet a real approval deadline. Walk away if the clinic cannot approve its queue and room process. A patient may already be anxious when they reach the door.",
+      "faq": [
+        {
+          "q": "Can I decide who has priority?",
+          "a": "No. The clinic must approve its queue policy and any urgent path. Your signs only explain the process it actually follows."
+        },
+        {
+          "q": "What about people who cannot read the sign?",
+          "a": "Use clear placement and simple symbols where helpful, and make sure staff are available for questions. A sign improves wayfinding but cannot replace assistance."
+        },
+        {
+          "q": "Who updates room numbers?",
+          "a": "Agree on a contact and an editable master. A temporary room change needs a visible, clinic-approved notice before patients follow an old arrow."
+        }
+      ],
+      "validate_prompt": "I want to design queue direction signs for an Indian clinic. How should I verify the actual process and test accessibility?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S04-I10",
+      "slug": "bakery-box-care-insert-design",
+      "title": "Bakery Box Care Insert Design",
+      "hook": "You carry a cake home in the heat and wonder whether it should go straight into the fridge.",
+      "summary": "You design a cake box care insert for a small bakery, helping a family transporting a paid cake find an answer quickly. Test a small card inside the box at real size. A checked cake care insert proof, one approving contact and a revision round keep the evening assignment ready to print or share.",
+      "what_it_is": "You carry a cake home in the heat and wonder whether it should go straight into the fridge. You ask a small bakery where the cake care insert will appear and what a person must understand first. Then you explain the baker's tested handling and serving steps, arrange the information in a readable order and check cake care insert legibility at actual display size. Get final wording, logo and dimensions for the cake care insert before polishing. Show a rough cake care insert layout, a proof and one point for factual approval. The baker must approve every food handling instruction. Deliver the agreed cake care insert files with names the client can recognise, and keep the approved proof for later corrections.",
+      "who_pays_you": "A small bakery pays you because generic storage advice may be wrong for a specific cake. You ask bakers which after-pickup mistakes they hear about. Show a small before-and-after example and ask what confuses a family transporting a paid cake now. The cake care insert buyer may have a printer or staff member, but needs someone to make scattered facts clear. Name one person who can approve the cake care insert; conflicting comments can keep a modest job open for weeks.",
+      "how_money_comes": "You charge for one insert layout, with printing and new cake types separate. Quote the cake care insert dimensions, number of layouts, revisions and file formats before beginning. Take part payment for a cake care insert specific to an event or brand. Printing, installation or another cake care insert size is separate unless included in the scope. A late cake care insert text change after approval is new work; a mistake you introduced is yours to correct. Count the hours spent on the cake care insert after your day job.",
+      "what_you_need": "You need baker-approved storage facts, legible type and box dimensions, rights to the fonts and images, and a tool that exports files for a small card inside the box. Check cake care insert contrast, spelling and type size where a family transporting a paid cake will see it. Have a small bakery approve every factual detail in the cake care insert. The baker must approve every food handling instruction. A cake care insert test print or phone screenshot can reveal a problem your large design canvas hides.",
+      "first_30_days": [
+        "Ask the baker about actual cake types and pickup conditions.",
+        "Draft a simple carry, store and serve sequence.",
+        "Test the card at the real box size.",
+        "Offer a paid layout with a baker sign-off step.",
+        "Check whether customers still call with the same question."
+      ],
+      "what_hurts": "Generic storage advice may be wrong for a specific cake. The baker must approve every food handling instruction. Your cake care insert may look balanced on a laptop and fail at real size. A small bakery may send a new storage instruction after delivery. Keep one cake care insert approval contact, a change cutoff and a dated proof. If printing changes scale or colour, help identify whether the problem was in your cake care insert file or the printer's setup.",
+      "verdict": "Build this if you like making a cake box care insert clear for a family transporting a paid cake and can meet a real approval deadline. Walk away if the baker cannot confirm storage advice for each cake type. A family should carry the cake home with confidence.",
+      "faq": [
+        {
+          "q": "Can one card cover every cake?",
+          "a": "Only if the baker confirms the instructions are the same. Cream, frosting and filling may need different handling. Use distinct versions when necessary."
+        },
+        {
+          "q": "Should I print a best-before time?",
+          "a": "The baker must determine and approve any time or storage instruction. Do not invent one from a generic recipe. The bakery must check the particular recipe."
+        },
+        {
+          "q": "Do I need to design the whole box?",
+          "a": "No. Begin with an insert that answers the customer's question. Box artwork, printing and dielines are a larger separate project."
+        }
+      ],
+      "validate_prompt": "I want to design cake box care cards for an Indian bakery. How should I verify storage instructions and price versions?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    }
+  ]
+}
