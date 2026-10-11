@@ -1,0 +1,510 @@
+{
+  "subcategory": {
+    "code": "C010-S09",
+    "intro": "Local Function Support starts with a nearby problem that people already spend time solving. Small ceremonies and community gatherings create many practical tasks around setup, guest movement and cleanup. A local operator can take responsibility for one bounded piece of the event. The useful first question is where a resident currently goes, what the trip or wait costs in time, and whether a small operator can do one task reliably. Walk the intended service area and speak to potential customers before buying equipment. Ask for the last occasion when they needed help, how they found a provider, and what made the experience difficult. A booking that someone is willing to pay for teaches more than a general expression of interest. Keep the opening menu narrow enough to finish, price and explain without confusion. Travel, idle time, supplies, cleaning and returns all consume capacity even when the visible task is short. Set a clear radius and appointment window, and record actual time from first message to final handover. Confirm access to a work area, the customer's instructions, payment responsibility and a practical cancellation rule before committing. Keep names, addresses and other personal details only as needed for the booking. Get venue and organiser permission in writing for work in shared or public places. Make electrical, structural and food work the responsibility of suitably qualified providers. Start with a few paid trials, then decide whether repeat work is frequent enough to support regular hours. Local demand may differ by housing density, transport, seasons and competing providers. A promise of convenience is only valuable when the customer can trust the result and knows what happens if something goes wrong.",
+    "how_to_choose": "Choose a task whose equipment, staff and timing you can control. Compare venue access, weather exposure, transport, helpers, damage risk and the cost of an event that runs late. Compare options by the number of paid bookings you can group within a short route, the tools you already know how to use, and the time a customer can realistically wait. Write down one included task and one excluded task for each option. Check access, hygiene, consent and any applicable local permission before selling. Use a small paid trial to measure travel, preparation, work and follow-up. Choose the service whose quality you can repeat without relying on a perfect day.",
+    "faq": [
+      {
+        "q": "Can I start local function support from home?",
+        "a": "Often the administration can begin at home, but the work site and any storage need to suit the particular service. Check local rules and get permission to use shared space before taking bookings."
+      },
+      {
+        "q": "How should I set the first service area?",
+        "a": "Begin with a compact route you can reach predictably. Measure travel at the hours customers actually want, then expand only when paid demand covers extra time and transport."
+      },
+      {
+        "q": "Should I offer every related service at launch?",
+        "a": "A short menu makes quality, timing and pricing easier to control. Add another task only after you have the necessary skill, equipment and evidence that customers will pay."
+      },
+      {
+        "q": "What should I confirm before an appointment?",
+        "a": "Agree on the task, address or venue, access, time window, complete price and payment contact. Explain cancellation and any limits so a small misunderstanding does not become an unpaid visit."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C010-S09-I01",
+      "slug": "community-hall-chair-layout",
+      "title": "Community Hall Chair Layout",
+      "hook": "Organisers using a local hall for a gathering need chair layout and reset at community halls when local options are slow.",
+      "summary": "You provide chair layout and reset at community halls for organisers using a local hall for a gathering. You agree on a floor plan and count, arrive before guests, arrange venue-approved furniture and restore it after the booking. A hall event often has volunteers but no one assigned to the room layout.",
+      "what_it_is": "For community hall chair layout, confirm the exact request, location and person who may approve the work. You agree on a floor plan and count, arrive before guests, arrange venue-approved furniture and restore it after the booking. At arrival for community hall chair layout, inspect practical conditions and explain anything that changes scope. A floor sketch, protective handling supplies, reliable helpers and hall access are needed. Perform chair layout and reset at community halls in a sequence the customer can follow, check the result together and leave the area or item tidy. Follow venue capacity and fire exit rules; do not block escape routes. Record only the details needed for a receipt about community hall chair layout, and agree on a completion point.",
+      "who_pays_you": "The buyers for community hall chair layout are organisers using a local hall for a gathering. Organisers want clear aisles and a room returned in good order. A hall event often has volunteers but no one assigned to the room layout. Ask prospects how they handled their last need for chair layout and reset at community halls. They may delay chair layout and reset at community halls or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for community hall chair layout before expanding the area.",
+      "how_money_comes": "Charge for setup and reset hours, with an agreed extra-hour rate. Quote the whole chair layout and reset at community halls job before starting, including travel, consumables and any agreed waiting time. Keep additions to community hall chair layout separate and request approval before doing them. Track community hall chair layout bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to chair layout and reset at community halls.",
+      "what_you_need": "A floor sketch, protective handling supplies, reliable helpers and hall access are needed. For community hall chair layout, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise chair layout and reset at community halls before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential community hall chair layout customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse chair layout and reset at community halls while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A late event can collide with the next hall booking. A missed community hall chair layout appointment or unclear promise can cost more trust than a single job earns. Confirm the chair layout and reset at community halls booking shortly beforehand and plan for delays. Follow venue capacity and fire exit rules; do not block escape routes. If a condition falls outside your competence during chair layout and reset at community halls, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish community hall chair layout replace a safe handover.",
+      "verdict": "Build this if organisers want clear aisles and a room returned in good order and you can deliver chair layout and reset at community halls consistently. Walk away if a late event can collide with the next hall booking. Check whether the complete community hall chair layout booking earns after travel and preparation. Prove demand for community hall chair layout with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For community hall chair layout, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that follow venue capacity and fire exit rules; do not block escape routes. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for chair layout and reset at community halls first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try community hall chair layout in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of chair layout and reset at community halls before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S09-I02",
+      "slug": "small-ceremony-welcome-desk",
+      "title": "Small Ceremony Welcome Desk",
+      "hook": "Families hosting a local ceremony need guest check-in and directions at an event when local options are slow.",
+      "summary": "You provide guest check-in and directions at an event for families hosting a local ceremony. You take an approved guest list and seating guide, greet arrivals, direct them and refer exceptions to a named family contact. Hosts may want someone free to welcome relatives rather than manage logistics.",
+      "what_it_is": "For small ceremony welcome desk, confirm the exact request, location and person who may approve the work. You take an approved guest list and seating guide, greet arrivals, direct them and refer exceptions to a named family contact. At arrival for small ceremony welcome desk, inspect practical conditions and explain anything that changes scope. Polite staff, printed directions, a contact list and a privacy plan are necessary. Perform guest check-in and directions at an event in a sequence the customer can follow, check the result together and leave the area or item tidy. Do not deny entry or collect personal information beyond the organiser's authority. Record only the details needed for a receipt about small ceremony welcome desk, and agree on a completion point.",
+      "who_pays_you": "The buyers for small ceremony welcome desk are families hosting a local ceremony. Families need calm directions when several groups arrive together. Hosts may want someone free to welcome relatives rather than manage logistics. Ask prospects how they handled their last need for guest check-in and directions at an event. They may delay guest check-in and directions at an event or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for small ceremony welcome desk before expanding the area.",
+      "how_money_comes": "Quote by staffed hours and number of attendants, with a clear finish time. Quote the whole guest check-in and directions at an event job before starting, including travel, consumables and any agreed waiting time. Keep additions to small ceremony welcome desk separate and request approval before doing them. Track small ceremony welcome desk bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to guest check-in and directions at an event.",
+      "what_you_need": "Polite staff, printed directions, a contact list and a privacy plan are necessary. For small ceremony welcome desk, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise guest check-in and directions at an event before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential small ceremony welcome desk customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse guest check-in and directions at an event while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "An incomplete guest list can cause an awkward argument at the entrance. A missed small ceremony welcome desk appointment or unclear promise can cost more trust than a single job earns. Confirm the guest check-in and directions at an event booking shortly beforehand and plan for delays. Do not deny entry or collect personal information beyond the organiser's authority. If a condition falls outside your competence during guest check-in and directions at an event, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish small ceremony welcome desk replace a safe handover.",
+      "verdict": "Build this if families need calm directions when several groups arrive together and you can deliver guest check-in and directions at an event consistently. Walk away if an incomplete guest list can cause an awkward argument at the entrance. Check whether the complete small ceremony welcome desk booking earns after travel and preparation. Prove demand for small ceremony welcome desk with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For small ceremony welcome desk, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not deny entry or collect personal information beyond the organiser's authority. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for guest check-in and directions at an event first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try small ceremony welcome desk in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of guest check-in and directions at an event before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S09-I03",
+      "slug": "neighbourhood-event-signage-setup",
+      "title": "Neighbourhood Event Signage Setup",
+      "hook": "Clubs running a gathering across several rooms need temporary directional sign placement and removal when local options are slow.",
+      "summary": "You provide temporary directional sign placement and removal for clubs running a gathering across several rooms. You walk the venue with the organiser, prepare approved signs, place them at permitted points and remove everything afterward. Clear directions reduce repeated questions and late arrivals.",
+      "what_it_is": "For neighbourhood event signage setup, confirm the exact request, location and person who may approve the work. You walk the venue with the organiser, prepare approved signs, place them at permitted points and remove everything afterward. At arrival for neighbourhood event signage setup, inspect practical conditions and explain anything that changes scope. Portable stands, removable fixings, readable layouts and venue permission matter. Perform temporary directional sign placement and removal in a sequence the customer can follow, check the result together and leave the area or item tidy. Never obstruct safety notices or attach signs where the venue forbids it. Record only the details needed for a receipt about neighbourhood event signage setup, and agree on a completion point.",
+      "who_pays_you": "The buyers for neighbourhood event signage setup are clubs running a gathering across several rooms. Organisers want guests to find entrances, toilets and programme rooms. Clear directions reduce repeated questions and late arrivals. Ask prospects how they handled their last need for temporary directional sign placement and removal. They may delay temporary directional sign placement and removal or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for neighbourhood event signage setup before expanding the area.",
+      "how_money_comes": "Charge for planning, materials, setup and removal as a defined package. Quote the whole temporary directional sign placement and removal job before starting, including travel, consumables and any agreed waiting time. Keep additions to neighbourhood event signage setup separate and request approval before doing them. Track neighbourhood event signage setup bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to temporary directional sign placement and removal.",
+      "what_you_need": "Portable stands, removable fixings, readable layouts and venue permission matter. For neighbourhood event signage setup, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise temporary directional sign placement and removal before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential neighbourhood event signage setup customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse temporary directional sign placement and removal while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A sign fixed badly may damage a wall or misdirect guests. A missed neighbourhood event signage setup appointment or unclear promise can cost more trust than a single job earns. Confirm the temporary directional sign placement and removal booking shortly beforehand and plan for delays. Never obstruct safety notices or attach signs where the venue forbids it. If a condition falls outside your competence during temporary directional sign placement and removal, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish neighbourhood event signage setup replace a safe handover.",
+      "verdict": "Build this if organisers want guests to find entrances, toilets and programme rooms and you can deliver temporary directional sign placement and removal consistently. Walk away if a sign fixed badly may damage a wall or misdirect guests. Check whether the complete neighbourhood event signage setup booking earns after travel and preparation. Prove demand for neighbourhood event signage setup with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For neighbourhood event signage setup, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that never obstruct safety notices or attach signs where the venue forbids it. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for temporary directional sign placement and removal first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try neighbourhood event signage setup in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of temporary directional sign placement and removal before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S09-I04",
+      "slug": "event-gift-table-management",
+      "title": "Event Gift Table Management",
+      "hook": "Families receiving gifts at a small celebration need supervised gift table logging and handover when local options are slow.",
+      "summary": "You provide supervised gift table logging and handover for families receiving gifts at a small celebration. You agree on a simple label and receipt system, stay with the table and hand every item to an authorised family member. A host can focus on guests while one person watches the handover.",
+      "what_it_is": "For event gift table management, confirm the exact request, location and person who may approve the work. You agree on a simple label and receipt system, stay with the table and hand every item to an authorised family member. At arrival for event gift table management, inspect practical conditions and explain anything that changes scope. Trustworthy staff, labels, a ledger, secure table placement and clear responsibility are needed. Perform supervised gift table logging and handover in a sequence the customer can follow, check the result together and leave the area or item tidy. Do not open gifts, handle cash without an agreed process or promise security beyond your control. Record only the details needed for a receipt about event gift table management, and agree on a completion point.",
+      "who_pays_you": "The buyers for event gift table management are families receiving gifts at a small celebration. Families value an orderly record without public display of contents. A host can focus on guests while one person watches the handover. Ask prospects how they handled their last need for supervised gift table logging and handover. They may delay supervised gift table logging and handover or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for event gift table management before expanding the area.",
+      "how_money_comes": "Charge by staffed hours and any required second attendant. Quote the whole supervised gift table logging and handover job before starting, including travel, consumables and any agreed waiting time. Keep additions to event gift table management separate and request approval before doing them. Track event gift table management bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to supervised gift table logging and handover.",
+      "what_you_need": "Trustworthy staff, labels, a ledger, secure table placement and clear responsibility are needed. For event gift table management, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise supervised gift table logging and handover before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential event gift table management customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse supervised gift table logging and handover while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A missing or unrecorded gift can lead to a serious dispute. A missed event gift table management appointment or unclear promise can cost more trust than a single job earns. Confirm the supervised gift table logging and handover booking shortly beforehand and plan for delays. Do not open gifts, handle cash without an agreed process or promise security beyond your control. If a condition falls outside your competence during supervised gift table logging and handover, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish event gift table management replace a safe handover.",
+      "verdict": "Build this if families value an orderly record without public display of contents and you can deliver supervised gift table logging and handover consistently. Walk away if a missing or unrecorded gift can lead to a serious dispute. Check whether the complete event gift table management booking earns after travel and preparation. Prove demand for event gift table management with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For event gift table management, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not open gifts, handle cash without an agreed process or promise security beyond your control. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for supervised gift table logging and handover first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try event gift table management in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of supervised gift table logging and handover before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S09-I05",
+      "slug": "local-stage-backstage-runner",
+      "title": "Local Stage Backstage Runner",
+      "hook": "School or community organisers staging performances need backstage item and cue support when local options are slow.",
+      "summary": "You provide backstage item and cue support for school or community organisers staging performances. You receive a running order, track props and help performers reach the correct waiting point under the organiser's direction. A volunteer show often needs a dedicated person to keep transitions moving.",
+      "what_it_is": "For local stage backstage runner, confirm the exact request, location and person who may approve the work. You receive a running order, track props and help performers reach the correct waiting point under the organiser's direction. At arrival for local stage backstage runner, inspect practical conditions and explain anything that changes scope. A cue sheet, labelled props, communication device and calm helper are needed. Perform backstage item and cue support in a sequence the customer can follow, check the result together and leave the area or item tidy. For child performers, follow the school's supervision policy and never assume sole care. Record only the details needed for a receipt about local stage backstage runner, and agree on a completion point.",
+      "who_pays_you": "The buyers for local stage backstage runner are school or community organisers staging performances. Organisers want someone who stays at the assigned backstage post. A volunteer show often needs a dedicated person to keep transitions moving. Ask prospects how they handled their last need for backstage item and cue support. They may delay backstage item and cue support or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for local stage backstage runner before expanding the area.",
+      "how_money_comes": "Quote rehearsal and show hours separately, including late finish terms. Quote the whole backstage item and cue support job before starting, including travel, consumables and any agreed waiting time. Keep additions to local stage backstage runner separate and request approval before doing them. Track local stage backstage runner bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to backstage item and cue support.",
+      "what_you_need": "A cue sheet, labelled props, communication device and calm helper are needed. For local stage backstage runner, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise backstage item and cue support before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential local stage backstage runner customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse backstage item and cue support while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A changed order or missing prop can create public delay. A missed local stage backstage runner appointment or unclear promise can cost more trust than a single job earns. Confirm the backstage item and cue support booking shortly beforehand and plan for delays. For child performers, follow the school's supervision policy and never assume sole care. If a condition falls outside your competence during backstage item and cue support, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish local stage backstage runner replace a safe handover.",
+      "verdict": "Build this if organisers want someone who stays at the assigned backstage post and you can deliver backstage item and cue support consistently. Walk away if a changed order or missing prop can create public delay. Check whether the complete local stage backstage runner booking earns after travel and preparation. Prove demand for local stage backstage runner with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For local stage backstage runner, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that for child performers, follow the school's supervision policy and never assume sole care. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for backstage item and cue support first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try local stage backstage runner in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of backstage item and cue support before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "flagged",
+      "writer": "Agent 2",
+      "flag_reason": "Child performers and venue safeguarding procedures require confirmation."
+    },
+    {
+      "code": "C010-S09-I06",
+      "slug": "function-water-station-service",
+      "title": "Function Water Station Service",
+      "hook": "Hosts of a small non-catered gathering need water station setup, refilling and removal when local options are slow.",
+      "summary": "You provide water station setup, refilling and removal for hosts of a small non-catered gathering. You arrange approved drinking water, cups and a staffed refill point, then collect waste at the end. Guests need an accessible place for water throughout a function.",
+      "what_it_is": "For function water station service, confirm the exact request, location and person who may approve the work. You arrange approved drinking water, cups and a staffed refill point, then collect waste at the end. At arrival for function water station service, inspect practical conditions and explain anything that changes scope. Food-safe water handling, containers, cups, waste bags and venue permission are needed. Perform water station setup, refilling and removal in a sequence the customer can follow, check the result together and leave the area or item tidy. Do not claim water purity without verification or obstruct a walkway. Record only the details needed for a receipt about function water station service, and agree on a completion point.",
+      "who_pays_you": "The buyers for function water station service are hosts of a small non-catered gathering. Hosts want a tidy station that does not interrupt other vendors. Guests need an accessible place for water throughout a function. Ask prospects how they handled their last need for water station setup, refilling and removal. They may delay water station setup, refilling and removal or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for function water station service before expanding the area.",
+      "how_money_comes": "Charge for the station, staffed duration, consumables and extra water separately. Quote the whole water station setup, refilling and removal job before starting, including travel, consumables and any agreed waiting time. Keep additions to function water station service separate and request approval before doing them. Track function water station service bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to water station setup, refilling and removal.",
+      "what_you_need": "Food-safe water handling, containers, cups, waste bags and venue permission are needed. For function water station service, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise water station setup, refilling and removal before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential function water station service customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse water station setup, refilling and removal while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Insufficient water or spills near electrical equipment can cause trouble. A missed function water station service appointment or unclear promise can cost more trust than a single job earns. Confirm the water station setup, refilling and removal booking shortly beforehand and plan for delays. Do not claim water purity without verification or obstruct a walkway. If a condition falls outside your competence during water station setup, refilling and removal, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish function water station service replace a safe handover.",
+      "verdict": "Build this if hosts want a tidy station that does not interrupt other vendors and you can deliver water station setup, refilling and removal consistently. Walk away if insufficient water or spills near electrical equipment can cause trouble. Check whether the complete function water station service booking earns after travel and preparation. Prove demand for function water station service with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For function water station service, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not claim water purity without verification or obstruct a walkway. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for water station setup, refilling and removal first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try function water station service in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of water station setup, refilling and removal before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S09-I07",
+      "slug": "post-function-hall-reset",
+      "title": "Post Function Hall Reset",
+      "hook": "Hall renters facing a quick turnover after a celebration need post-event furniture reset and light cleanup when local options are slow.",
+      "summary": "You provide post-event furniture reset and light cleanup for hall renters facing a quick turnover after a celebration. You document the agreed starting layout, remove permitted decorations, collect loose waste and restore furniture before handover. A late evening event may leave organisers too tired to meet venue terms.",
+      "what_it_is": "For post function hall reset, confirm the exact request, location and person who may approve the work. You document the agreed starting layout, remove permitted decorations, collect loose waste and restore furniture before handover. At arrival for post function hall reset, inspect practical conditions and explain anything that changes scope. Gloves, bags, trolley, helpers and a clear venue waste arrangement are required. Perform post-event furniture reset and light cleanup in a sequence the customer can follow, check the result together and leave the area or item tidy. Do not handle hazardous waste or claim to repair venue damage. Record only the details needed for a receipt about post function hall reset, and agree on a completion point.",
+      "who_pays_you": "The buyers for post function hall reset are hall renters facing a quick turnover after a celebration. Renters need the hall ready for inspection at a known time. A late evening event may leave organisers too tired to meet venue terms. Ask prospects how they handled their last need for post-event furniture reset and light cleanup. They may delay post-event furniture reset and light cleanup or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for post function hall reset before expanding the area.",
+      "how_money_comes": "Charge by team size and a defined reset window, with disposal priced separately. Quote the whole post-event furniture reset and light cleanup job before starting, including travel, consumables and any agreed waiting time. Keep additions to post function hall reset separate and request approval before doing them. Track post function hall reset bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to post-event furniture reset and light cleanup.",
+      "what_you_need": "Gloves, bags, trolley, helpers and a clear venue waste arrangement are required. For post function hall reset, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise post-event furniture reset and light cleanup before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential post function hall reset customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse post-event furniture reset and light cleanup while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Hidden damage or waste outside the agreed scope can prolong the job. A missed post function hall reset appointment or unclear promise can cost more trust than a single job earns. Confirm the post-event furniture reset and light cleanup booking shortly beforehand and plan for delays. Do not handle hazardous waste or claim to repair venue damage. If a condition falls outside your competence during post-event furniture reset and light cleanup, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish post function hall reset replace a safe handover.",
+      "verdict": "Build this if renters need the hall ready for inspection at a known time and you can deliver post-event furniture reset and light cleanup consistently. Walk away if hidden damage or waste outside the agreed scope can prolong the job. Check whether the complete post function hall reset booking earns after travel and preparation. Prove demand for post function hall reset with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For post function hall reset, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not handle hazardous waste or claim to repair venue damage. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for post-event furniture reset and light cleanup first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try post function hall reset in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of post-event furniture reset and light cleanup before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S09-I08",
+      "slug": "family-function-parking-guide",
+      "title": "Family Function Parking Guide",
+      "hook": "Hosts expecting cars on a narrow local lane need guest parking directions at an approved venue when local options are slow.",
+      "summary": "You provide guest parking directions at an approved venue for hosts expecting cars on a narrow local lane. You agree on permitted parking areas, share directions and guide arriving drivers without controlling public traffic. Neighbours may be affected when guests arrive at once.",
+      "what_it_is": "For family function parking guide, confirm the exact request, location and person who may approve the work. You agree on permitted parking areas, share directions and guide arriving drivers without controlling public traffic. At arrival for family function parking guide, inspect practical conditions and explain anything that changes scope. Reflective clothing, clear signs, venue permission and a safe standing point matter. Perform guest parking directions at an approved venue in a sequence the customer can follow, check the result together and leave the area or item tidy. Do not direct traffic on a public road or promise space you cannot reserve. Record only the details needed for a receipt about family function parking guide, and agree on a completion point.",
+      "who_pays_you": "The buyers for family function parking guide are hosts expecting cars on a narrow local lane. Hosts value less confusion and fewer neighbour complaints. Neighbours may be affected when guests arrive at once. Ask prospects how they handled their last need for guest parking directions at an approved venue. They may delay guest parking directions at an approved venue or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for family function parking guide before expanding the area.",
+      "how_money_comes": "Quote staffed arrival hours and a separate departure window if required. Quote the whole guest parking directions at an approved venue job before starting, including travel, consumables and any agreed waiting time. Keep additions to family function parking guide separate and request approval before doing them. Track family function parking guide bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to guest parking directions at an approved venue.",
+      "what_you_need": "Reflective clothing, clear signs, venue permission and a safe standing point matter. For family function parking guide, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise guest parking directions at an approved venue before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential family function parking guide customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse guest parking directions at an approved venue while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Drivers may ignore directions or block an emergency access. A missed family function parking guide appointment or unclear promise can cost more trust than a single job earns. Confirm the guest parking directions at an approved venue booking shortly beforehand and plan for delays. Do not direct traffic on a public road or promise space you cannot reserve. If a condition falls outside your competence during guest parking directions at an approved venue, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish family function parking guide replace a safe handover.",
+      "verdict": "Build this if hosts value less confusion and fewer neighbour complaints and you can deliver guest parking directions at an approved venue consistently. Walk away if drivers may ignore directions or block an emergency access. Check whether the complete family function parking guide booking earns after travel and preparation. Prove demand for family function parking guide with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For family function parking guide, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not direct traffic on a public road or promise space you cannot reserve. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for guest parking directions at an approved venue first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try family function parking guide in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of guest parking directions at an approved venue before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "flagged",
+      "writer": "Agent 2",
+      "flag_reason": "Parking and roadside activity depend on venue and local authority rules."
+    },
+    {
+      "code": "C010-S09-I09",
+      "slug": "birthday-activity-corner-helper",
+      "title": "Birthday Activity Corner Helper",
+      "hook": "Parents holding a children's birthday gathering need supervised simple craft activity corner when local options are slow.",
+      "summary": "You provide supervised simple craft activity corner for parents holding a children's birthday gathering. You agree on an age-appropriate craft, prepare safe materials and run short sessions while parents remain responsible for their children. A focused activity can give guests something to do between event moments.",
+      "what_it_is": "For birthday activity corner helper, confirm the exact request, location and person who may approve the work. You agree on an age-appropriate craft, prepare safe materials and run short sessions while parents remain responsible for their children. At arrival for birthday activity corner helper, inspect practical conditions and explain anything that changes scope. Child-friendly supplies, table covering, trained supervision and cleanup plan are needed. Perform supervised simple craft activity corner in a sequence the customer can follow, check the result together and leave the area or item tidy. Confirm parent presence and do not take sole custody of children. Record only the details needed for a receipt about birthday activity corner helper, and agree on a completion point.",
+      "who_pays_you": "The buyers for birthday activity corner helper are parents holding a children's birthday gathering. Parents want a manageable activity rather than a chaotic giveaway. A focused activity can give guests something to do between event moments. Ask prospects how they handled their last need for supervised simple craft activity corner. They may delay supervised simple craft activity corner or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for birthday activity corner helper before expanding the area.",
+      "how_money_comes": "Charge for a set duration, material count and additional helper if needed. Quote the whole supervised simple craft activity corner job before starting, including travel, consumables and any agreed waiting time. Keep additions to birthday activity corner helper separate and request approval before doing them. Track birthday activity corner helper bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to supervised simple craft activity corner.",
+      "what_you_need": "Child-friendly supplies, table covering, trained supervision and cleanup plan are needed. For birthday activity corner helper, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise supervised simple craft activity corner before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential birthday activity corner helper customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse supervised simple craft activity corner while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Small parts, allergies or overcrowding can make an activity unsuitable. A missed birthday activity corner helper appointment or unclear promise can cost more trust than a single job earns. Confirm the supervised simple craft activity corner booking shortly beforehand and plan for delays. Confirm parent presence and do not take sole custody of children. If a condition falls outside your competence during supervised simple craft activity corner, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish birthday activity corner helper replace a safe handover.",
+      "verdict": "Build this if parents want a manageable activity rather than a chaotic giveaway and you can deliver supervised simple craft activity corner consistently. Walk away if small parts, allergies or overcrowding can make an activity unsuitable. Check whether the complete birthday activity corner helper booking earns after travel and preparation. Prove demand for birthday activity corner helper with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For birthday activity corner helper, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that confirm parent presence and do not take sole custody of children. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for supervised simple craft activity corner first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try birthday activity corner helper in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of supervised simple craft activity corner before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "flagged",
+      "writer": "Agent 2",
+      "flag_reason": "Child activity supervision and material safety need venue and guardian confirmation."
+    },
+    {
+      "code": "C010-S09-I10",
+      "slug": "event-vendor-arrival-coordinator",
+      "title": "Event Vendor Arrival Coordinator",
+      "hook": "Hosts booking several independent suppliers need vendor arrival scheduling and venue handover when local options are slow.",
+      "summary": "You provide vendor arrival scheduling and venue handover for hosts booking several independent suppliers. You collect supplier contacts with consent, allocate approved unloading windows and direct them to the organiser's assigned spaces. A tight venue schedule can suffer when suppliers arrive together.",
+      "what_it_is": "For event vendor arrival coordinator, confirm the exact request, location and person who may approve the work. You collect supplier contacts with consent, allocate approved unloading windows and direct them to the organiser's assigned spaces. At arrival for event vendor arrival coordinator, inspect practical conditions and explain anything that changes scope. An event run sheet, venue map, phone and a named decision maker are essential. Perform vendor arrival scheduling and venue handover in a sequence the customer can follow, check the result together and leave the area or item tidy. Do not sign new supplier contracts or authorise extra costs without the host's approval. Record only the details needed for a receipt about event vendor arrival coordinator, and agree on a completion point.",
+      "who_pays_you": "The buyers for event vendor arrival coordinator are hosts booking several independent suppliers. Hosts need one logistical contact while they prepare for guests. A tight venue schedule can suffer when suppliers arrive together. Ask prospects how they handled their last need for vendor arrival scheduling and venue handover. They may delay vendor arrival scheduling and venue handover or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for event vendor arrival coordinator before expanding the area.",
+      "how_money_comes": "Charge a fixed coordination block with extra hours agreed in advance. Quote the whole vendor arrival scheduling and venue handover job before starting, including travel, consumables and any agreed waiting time. Keep additions to event vendor arrival coordinator separate and request approval before doing them. Track event vendor arrival coordinator bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to vendor arrival scheduling and venue handover.",
+      "what_you_need": "An event run sheet, venue map, phone and a named decision maker are essential. For event vendor arrival coordinator, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise vendor arrival scheduling and venue handover before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential event vendor arrival coordinator customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse vendor arrival scheduling and venue handover while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A vendor delay or disputed space can exceed your authority. A missed event vendor arrival coordinator appointment or unclear promise can cost more trust than a single job earns. Confirm the vendor arrival scheduling and venue handover booking shortly beforehand and plan for delays. Do not sign new supplier contracts or authorise extra costs without the host's approval. If a condition falls outside your competence during vendor arrival scheduling and venue handover, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish event vendor arrival coordinator replace a safe handover.",
+      "verdict": "Build this if hosts need one logistical contact while they prepare for guests and you can deliver vendor arrival scheduling and venue handover consistently. Walk away if a vendor delay or disputed space can exceed your authority. Check whether the complete event vendor arrival coordinator booking earns after travel and preparation. Prove demand for event vendor arrival coordinator with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For event vendor arrival coordinator, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not sign new supplier contracts or authorise extra costs without the host's approval. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for vendor arrival scheduling and venue handover first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try event vendor arrival coordinator in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of vendor arrival scheduling and venue handover before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    }
+  ]
+}
