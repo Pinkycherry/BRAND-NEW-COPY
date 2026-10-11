@@ -1,0 +1,511 @@
+{
+  "subcategory": {
+    "code": "C010-S06",
+    "intro": "Nearby Appliance Care starts with a nearby problem that people already spend time solving. Households depend on fans, mixers, coolers and other appliances for ordinary routines. A nearby service can diagnose a narrow class of faults, explain the repair and return a tested item. The useful first question is where a resident currently goes, what the trip or wait costs in time, and whether a small operator can do one task reliably. Walk the intended service area and speak to potential customers before buying equipment. Ask for the last occasion when they needed help, how they found a provider, and what made the experience difficult. A booking that someone is willing to pay for teaches more than a general expression of interest. Keep the opening menu narrow enough to finish, price and explain without confusion. Travel, idle time, supplies, cleaning and returns all consume capacity even when the visible task is short. Set a clear radius and appointment window, and record actual time from first message to final handover. Confirm access to a work area, the customer's instructions, payment responsibility and a practical cancellation rule before committing. Keep names, addresses and other personal details only as needed for the booking. Electrical work and refrigerant systems need suitable training, isolation and safe disposal. Do not open equipment while energised or claim a repair beyond your competence. Start with a few paid trials, then decide whether repeat work is frequent enough to support regular hours. Local demand may differ by housing density, transport, seasons and competing providers. A promise of convenience is only valuable when the customer can trust the result and knows what happens if something goes wrong.",
+    "how_to_choose": "Choose an appliance family you can diagnose safely. Compare the cost of test tools and parts, access to genuine spares, customer expectations for turnaround and the possibility that replacement is better value. Compare options by the number of paid bookings you can group within a short route, the tools you already know how to use, and the time a customer can realistically wait. Write down one included task and one excluded task for each option. Check access, hygiene, consent and any applicable local permission before selling. Use a small paid trial to measure travel, preparation, work and follow-up. Choose the service whose quality you can repeat without relying on a perfect day.",
+    "faq": [
+      {
+        "q": "Can I start nearby appliance care from home?",
+        "a": "Often the administration can begin at home, but the work site and any storage need to suit the particular service. Check local rules and get permission to use shared space before taking bookings."
+      },
+      {
+        "q": "How should I set the first service area?",
+        "a": "Begin with a compact route you can reach predictably. Measure travel at the hours customers actually want, then expand only when paid demand covers extra time and transport."
+      },
+      {
+        "q": "Should I offer every related service at launch?",
+        "a": "A short menu makes quality, timing and pricing easier to control. Add another task only after you have the necessary skill, equipment and evidence that customers will pay."
+      },
+      {
+        "q": "What should I confirm before an appointment?",
+        "a": "Agree on the task, address or venue, access, time window, complete price and payment contact. Explain cancellation and any limits so a small misunderstanding does not become an unpaid visit."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C010-S06-I01",
+      "slug": "ceiling-fan-noise-service",
+      "title": "Ceiling Fan Noise Service",
+      "hook": "Households with a noisy or wobbling fan need inspection and minor ceiling fan servicing when local options are slow.",
+      "summary": "You provide inspection and minor ceiling fan servicing for households with a noisy or wobbling fan. You switch off power, check mounting and accessible parts, explain a safe minor repair and test only after reassembly. Hot weather makes a reliable fan important, especially in rooms used through the night.",
+      "what_it_is": "For ceiling fan noise service, confirm the exact request, location and person who may approve the work. You switch off power, check mounting and accessible parts, explain a safe minor repair and test only after reassembly. At arrival for ceiling fan noise service, inspect practical conditions and explain anything that changes scope. Electrical training, insulated tools, stable ladder, test instrument and genuine parts are required. Perform inspection and minor ceiling fan servicing in a sequence the customer can follow, check the result together and leave the area or item tidy. Do not work on live wiring or damaged structural mounting. Record only the details needed for a receipt about ceiling fan noise service, and agree on a completion point.",
+      "who_pays_you": "The buyers for ceiling fan noise service are households with a noisy or wobbling fan. Residents need a clear answer on whether service or replacement makes sense. Hot weather makes a reliable fan important, especially in rooms used through the night. Ask prospects how they handled their last need for inspection and minor ceiling fan servicing. They may delay inspection and minor ceiling fan servicing or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for ceiling fan noise service before expanding the area.",
+      "how_money_comes": "Charge an inspection visit, then a separate approved labour and parts amount. Quote the whole inspection and minor ceiling fan servicing job before starting, including travel, consumables and any agreed waiting time. Keep additions to ceiling fan noise service separate and request approval before doing them. Track ceiling fan noise service bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to inspection and minor ceiling fan servicing.",
+      "what_you_need": "Electrical training, insulated tools, stable ladder, test instrument and genuine parts are required. For ceiling fan noise service, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise inspection and minor ceiling fan servicing before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential ceiling fan noise service customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse inspection and minor ceiling fan servicing while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Unsafe mounting or hidden wiring can turn a small noise into a dangerous job. A missed ceiling fan noise service appointment or unclear promise can cost more trust than a single job earns. Confirm the inspection and minor ceiling fan servicing booking shortly beforehand and plan for delays. Do not work on live wiring or damaged structural mounting. If a condition falls outside your competence during inspection and minor ceiling fan servicing, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish ceiling fan noise service replace a safe handover.",
+      "verdict": "Build this if residents need a clear answer on whether service or replacement makes sense and you can deliver inspection and minor ceiling fan servicing consistently. Walk away if unsafe mounting or hidden wiring can turn a small noise into a dangerous job. Check whether the complete ceiling fan noise service booking earns after travel and preparation. Prove demand for ceiling fan noise service with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For ceiling fan noise service, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not work on live wiring or damaged structural mounting. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for inspection and minor ceiling fan servicing first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try ceiling fan noise service in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of inspection and minor ceiling fan servicing before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "flagged",
+      "writer": "Agent 2",
+      "flag_reason": "Ceiling electrical work and safe ladder use depend on training and local requirements."
+    },
+    {
+      "code": "C010-S06-I02",
+      "slug": "mixer-grinder-repair-counter",
+      "title": "Mixer Grinder Repair Counter",
+      "hook": "Home cooks with a mixer that stops or leaks need bench diagnosis of mixer grinders when local options are slow.",
+      "summary": "You provide bench diagnosis of mixer grinders for home cooks with a mixer that stops or leaks. You log the unit and accessories, unplug it, inspect common mechanical or electrical faults and get approval before replacing parts. A local repair can be worthwhile when a familiar appliance has a small fixable problem.",
+      "what_it_is": "For mixer grinder repair counter, confirm the exact request, location and person who may approve the work. You log the unit and accessories, unplug it, inspect common mechanical or electrical faults and get approval before replacing parts. At arrival for mixer grinder repair counter, inspect practical conditions and explain anything that changes scope. A safe bench, electrical test tools, cleaning supplies, compatible spares and repair skill are needed. Perform bench diagnosis of mixer grinders in a sequence the customer can follow, check the result together and leave the area or item tidy. Do not bypass a safety switch or fit an unsuitable part. Record only the details needed for a receipt about mixer grinder repair counter, and agree on a completion point.",
+      "who_pays_you": "The buyers for mixer grinder repair counter are home cooks with a mixer that stops or leaks. Customers want a realistic turnaround and their own parts returned. A local repair can be worthwhile when a familiar appliance has a small fixable problem. Ask prospects how they handled their last need for bench diagnosis of mixer grinders. They may delay bench diagnosis of mixer grinders or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for mixer grinder repair counter before expanding the area.",
+      "how_money_comes": "Charge a diagnostic fee and quote labour and parts before proceeding. Quote the whole bench diagnosis of mixer grinders job before starting, including travel, consumables and any agreed waiting time. Keep additions to mixer grinder repair counter separate and request approval before doing them. Track mixer grinder repair counter bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to bench diagnosis of mixer grinders.",
+      "what_you_need": "A safe bench, electrical test tools, cleaning supplies, compatible spares and repair skill are needed. For mixer grinder repair counter, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise bench diagnosis of mixer grinders before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential mixer grinder repair counter customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse bench diagnosis of mixer grinders while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A cracked jar or motor fault may make repair uneconomic. A missed mixer grinder repair counter appointment or unclear promise can cost more trust than a single job earns. Confirm the bench diagnosis of mixer grinders booking shortly beforehand and plan for delays. Do not bypass a safety switch or fit an unsuitable part. If a condition falls outside your competence during bench diagnosis of mixer grinders, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish mixer grinder repair counter replace a safe handover.",
+      "verdict": "Build this if customers want a realistic turnaround and their own parts returned and you can deliver bench diagnosis of mixer grinders consistently. Walk away if a cracked jar or motor fault may make repair uneconomic. Check whether the complete mixer grinder repair counter booking earns after travel and preparation. Prove demand for mixer grinder repair counter with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For mixer grinder repair counter, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not bypass a safety switch or fit an unsuitable part. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for bench diagnosis of mixer grinders first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try mixer grinder repair counter in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of bench diagnosis of mixer grinders before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "shop",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S06-I03",
+      "slug": "water-purifier-filter-visit",
+      "title": "Water Purifier Filter Visit",
+      "hook": "Households due for a scheduled purifier filter change need manufacturer-compatible purifier filter replacement when local options are slow.",
+      "summary": "You provide manufacturer-compatible purifier filter replacement for households due for a scheduled purifier filter change. You identify the exact unit and specified filter, shut off the supply, replace approved components and check for leaks. Families want a known visit time and a clear record of what was fitted.",
+      "what_it_is": "For water purifier filter visit, confirm the exact request, location and person who may approve the work. You identify the exact unit and specified filter, shut off the supply, replace approved components and check for leaks. At arrival for water purifier filter visit, inspect practical conditions and explain anything that changes scope. Model identification, clean tools, genuine compatible filters and knowledge of safe fitting are necessary. Perform manufacturer-compatible purifier filter replacement in a sequence the customer can follow, check the result together and leave the area or item tidy. Do not claim water is safe without appropriate testing or exceed your training. Record only the details needed for a receipt about water purifier filter visit, and agree on a completion point.",
+      "who_pays_you": "The buyers for water purifier filter visit are households due for a scheduled purifier filter change. Customers prefer transparent parts and a simple maintenance record. Families want a known visit time and a clear record of what was fitted. Ask prospects how they handled their last need for manufacturer-compatible purifier filter replacement. They may delay manufacturer-compatible purifier filter replacement or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for water purifier filter visit before expanding the area.",
+      "how_money_comes": "Charge a scheduled visit fee plus approved filter cost, with any extra repair separately quoted. Quote the whole manufacturer-compatible purifier filter replacement job before starting, including travel, consumables and any agreed waiting time. Keep additions to water purifier filter visit separate and request approval before doing them. Track water purifier filter visit bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to manufacturer-compatible purifier filter replacement.",
+      "what_you_need": "Model identification, clean tools, genuine compatible filters and knowledge of safe fitting are necessary. For water purifier filter visit, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise manufacturer-compatible purifier filter replacement before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential water purifier filter visit customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse manufacturer-compatible purifier filter replacement while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A wrong cartridge or poor seal may affect water quality or damage property. A missed water purifier filter visit appointment or unclear promise can cost more trust than a single job earns. Confirm the manufacturer-compatible purifier filter replacement booking shortly beforehand and plan for delays. Do not claim water is safe without appropriate testing or exceed your training. If a condition falls outside your competence during manufacturer-compatible purifier filter replacement, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish water purifier filter visit replace a safe handover.",
+      "verdict": "Build this if customers prefer transparent parts and a simple maintenance record and you can deliver manufacturer-compatible purifier filter replacement consistently. Walk away if a wrong cartridge or poor seal may affect water quality or damage property. Check whether the complete water purifier filter visit booking earns after travel and preparation. Prove demand for water purifier filter visit with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For water purifier filter visit, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not claim water is safe without appropriate testing or exceed your training. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for manufacturer-compatible purifier filter replacement first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try water purifier filter visit in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of manufacturer-compatible purifier filter replacement before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "flagged",
+      "writer": "Agent 2",
+      "flag_reason": "Water quality claims and filter compatibility require careful verification."
+    },
+    {
+      "code": "C010-S06-I04",
+      "slug": "cooler-pump-seasonal-check",
+      "title": "Cooler Pump Seasonal Check",
+      "hook": "Households preparing an evaporative cooler for summer need cooler cleaning and pump check when local options are slow.",
+      "summary": "You provide cooler cleaning and pump check for households preparing an evaporative cooler for summer. You isolate power, drain stagnant water, inspect pads and pump, clean accessible parts and test the unit after assembly. Seasonal demand peaks when stored coolers return to use.",
+      "what_it_is": "For cooler pump seasonal check, confirm the exact request, location and person who may approve the work. You isolate power, drain stagnant water, inspect pads and pump, clean accessible parts and test the unit after assembly. At arrival for cooler pump seasonal check, inspect practical conditions and explain anything that changes scope. Safe electrical practice, cleaning kit, gloves, test tools and model-compatible parts are needed. Perform cooler cleaning and pump check in a sequence the customer can follow, check the result together and leave the area or item tidy. Decline damaged wiring or unsafe access until a qualified repair is arranged. Record only the details needed for a receipt about cooler pump seasonal check, and agree on a completion point.",
+      "who_pays_you": "The buyers for cooler pump seasonal check are households preparing an evaporative cooler for summer. Residents want a cooler ready before the hottest weeks. Seasonal demand peaks when stored coolers return to use. Ask prospects how they handled their last need for cooler cleaning and pump check. They may delay cooler cleaning and pump check or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for cooler pump seasonal check before expanding the area.",
+      "how_money_comes": "Offer a fixed seasonal check, with replacement pump or pads only after approval. Quote the whole cooler cleaning and pump check job before starting, including travel, consumables and any agreed waiting time. Keep additions to cooler pump seasonal check separate and request approval before doing them. Track cooler pump seasonal check bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to cooler cleaning and pump check.",
+      "what_you_need": "Safe electrical practice, cleaning kit, gloves, test tools and model-compatible parts are needed. For cooler pump seasonal check, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise cooler cleaning and pump check before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential cooler pump seasonal check customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse cooler cleaning and pump check while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Stagnant water, cracked wiring and awkward access can extend the job. A missed cooler pump seasonal check appointment or unclear promise can cost more trust than a single job earns. Confirm the cooler cleaning and pump check booking shortly beforehand and plan for delays. Decline damaged wiring or unsafe access until a qualified repair is arranged. If a condition falls outside your competence during cooler cleaning and pump check, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish cooler pump seasonal check replace a safe handover.",
+      "verdict": "Build this if residents want a cooler ready before the hottest weeks and you can deliver cooler cleaning and pump check consistently. Walk away if stagnant water, cracked wiring and awkward access can extend the job. Check whether the complete cooler pump seasonal check booking earns after travel and preparation. Prove demand for cooler pump seasonal check with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For cooler pump seasonal check, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that decline damaged wiring or unsafe access until a qualified repair is arranged. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for cooler cleaning and pump check first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try cooler pump seasonal check in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of cooler cleaning and pump check before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S06-I05",
+      "slug": "induction-cooktop-diagnosis",
+      "title": "Induction Cooktop Diagnosis",
+      "hook": "Renters whose induction cooktop has stopped heating need non-invasive induction cooktop diagnosis when local options are slow.",
+      "summary": "You provide non-invasive induction cooktop diagnosis for renters whose induction cooktop has stopped heating. You check power, cookware compatibility and visible faults, then quote bench repair only when you have suitable training. A portable cooktop is often essential in a small rental kitchen.",
+      "what_it_is": "For induction cooktop diagnosis, confirm the exact request, location and person who may approve the work. You check power, cookware compatibility and visible faults, then quote bench repair only when you have suitable training. At arrival for induction cooktop diagnosis, inspect practical conditions and explain anything that changes scope. An isolated workbench, electrical test skill and access to suitable parts are required. Perform non-invasive induction cooktop diagnosis in a sequence the customer can follow, check the result together and leave the area or item tidy. Do not open high-voltage sections without qualified training. Record only the details needed for a receipt about induction cooktop diagnosis, and agree on a completion point.",
+      "who_pays_you": "The buyers for induction cooktop diagnosis are renters whose induction cooktop has stopped heating. Customers need an honest repair-versus-replace recommendation. A portable cooktop is often essential in a small rental kitchen. Ask prospects how they handled their last need for non-invasive induction cooktop diagnosis. They may delay non-invasive induction cooktop diagnosis or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for induction cooktop diagnosis before expanding the area.",
+      "how_money_comes": "Price diagnosis distinctly from any authorised component repair. Quote the whole non-invasive induction cooktop diagnosis job before starting, including travel, consumables and any agreed waiting time. Keep additions to induction cooktop diagnosis separate and request approval before doing them. Track induction cooktop diagnosis bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to non-invasive induction cooktop diagnosis.",
+      "what_you_need": "An isolated workbench, electrical test skill and access to suitable parts are required. For induction cooktop diagnosis, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise non-invasive induction cooktop diagnosis before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential induction cooktop diagnosis customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse non-invasive induction cooktop diagnosis while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Stored electrical energy and sealed boards create hazards even after unplugging. A missed induction cooktop diagnosis appointment or unclear promise can cost more trust than a single job earns. Confirm the non-invasive induction cooktop diagnosis booking shortly beforehand and plan for delays. Do not open high-voltage sections without qualified training. If a condition falls outside your competence during non-invasive induction cooktop diagnosis, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish induction cooktop diagnosis replace a safe handover.",
+      "verdict": "Build this if customers need an honest repair-versus-replace recommendation and you can deliver non-invasive induction cooktop diagnosis consistently. Walk away if stored electrical energy and sealed boards create hazards even after unplugging. Check whether the complete induction cooktop diagnosis booking earns after travel and preparation. Prove demand for induction cooktop diagnosis with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For induction cooktop diagnosis, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not open high-voltage sections without qualified training. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for non-invasive induction cooktop diagnosis first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try induction cooktop diagnosis in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of non-invasive induction cooktop diagnosis before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "shop",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "flagged",
+      "writer": "Agent 2",
+      "flag_reason": "Induction electronics can retain hazardous energy and require specialist competence."
+    },
+    {
+      "code": "C010-S06-I06",
+      "slug": "washing-machine-inlet-check",
+      "title": "Washing Machine Inlet Check",
+      "hook": "Homes where a washing machine fills poorly need basic washing machine inlet and hose inspection when local options are slow.",
+      "summary": "You provide basic washing machine inlet and hose inspection for homes where a washing machine fills poorly. You turn off supply and power, check accessible hose and filter conditions, then explain any further fault requiring a specialist. A minor blocked inlet can interrupt a household's washing schedule.",
+      "what_it_is": "For washing machine inlet check, confirm the exact request, location and person who may approve the work. You turn off supply and power, check accessible hose and filter conditions, then explain any further fault requiring a specialist. At arrival for washing machine inlet check, inspect practical conditions and explain anything that changes scope. Basic appliance and plumbing skill, towels, safe tools and compatible small parts are useful. Perform basic washing machine inlet and hose inspection in a sequence the customer can follow, check the result together and leave the area or item tidy. Do not open sealed electrical assemblies or leave a leaking connection. Record only the details needed for a receipt about washing machine inlet check, and agree on a completion point.",
+      "who_pays_you": "The buyers for washing machine inlet check are homes where a washing machine fills poorly. Residents value a clean diagnosis that avoids unnecessary replacement. A minor blocked inlet can interrupt a household's washing schedule. Ask prospects how they handled their last need for basic washing machine inlet and hose inspection. They may delay basic washing machine inlet and hose inspection or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for washing machine inlet check before expanding the area.",
+      "how_money_comes": "Charge an inspection visit and quote any approved hose or filter replacement separately. Quote the whole basic washing machine inlet and hose inspection job before starting, including travel, consumables and any agreed waiting time. Keep additions to washing machine inlet check separate and request approval before doing them. Track washing machine inlet check bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to basic washing machine inlet and hose inspection.",
+      "what_you_need": "Basic appliance and plumbing skill, towels, safe tools and compatible small parts are useful. For washing machine inlet check, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise basic washing machine inlet and hose inspection before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential washing machine inlet check customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse basic washing machine inlet and hose inspection while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A hidden leak or internal electrical fault can turn a small visit into a larger repair. A missed washing machine inlet check appointment or unclear promise can cost more trust than a single job earns. Confirm the basic washing machine inlet and hose inspection booking shortly beforehand and plan for delays. Do not open sealed electrical assemblies or leave a leaking connection. If a condition falls outside your competence during basic washing machine inlet and hose inspection, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish washing machine inlet check replace a safe handover.",
+      "verdict": "Build this if residents value a clean diagnosis that avoids unnecessary replacement and you can deliver basic washing machine inlet and hose inspection consistently. Walk away if a hidden leak or internal electrical fault can turn a small visit into a larger repair. Check whether the complete washing machine inlet check booking earns after travel and preparation. Prove demand for washing machine inlet check with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For washing machine inlet check, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not open sealed electrical assemblies or leave a leaking connection. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for basic washing machine inlet and hose inspection first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try washing machine inlet check in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of basic washing machine inlet and hose inspection before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S06-I07",
+      "slug": "appliance-pickup-repair-coordination",
+      "title": "Appliance Pickup Repair Coordination",
+      "hook": "Busy residents who cannot carry a small appliance to a workshop need labelled appliance pickup and repair return when local options are slow.",
+      "summary": "You provide labelled appliance pickup and repair return for busy residents who cannot carry a small appliance to a workshop. You photograph the item's condition with permission, issue a receipt, take it to a named repair partner and return it after customer approval. The convenience lies in transport and clear communication, not pretending to repair everything.",
+      "what_it_is": "For appliance pickup repair coordination, confirm the exact request, location and person who may approve the work. You photograph the item's condition with permission, issue a receipt, take it to a named repair partner and return it after customer approval. At arrival for appliance pickup repair coordination, inspect practical conditions and explain anything that changes scope. Protective packing, reliable transport, a vetted repair shop and tracking records are needed. Perform labelled appliance pickup and repair return in a sequence the customer can follow, check the result together and leave the area or item tidy. Get approval before a partner performs paid work and clarify responsibility for damage. Record only the details needed for a receipt about appliance pickup repair coordination, and agree on a completion point.",
+      "who_pays_you": "The buyers for appliance pickup repair coordination are busy residents who cannot carry a small appliance to a workshop. Residents value a single accountable contact and clear status updates. The convenience lies in transport and clear communication, not pretending to repair everything. Ask prospects how they handled their last need for labelled appliance pickup and repair return. They may delay labelled appliance pickup and repair return or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for appliance pickup repair coordination before expanding the area.",
+      "how_money_comes": "Charge a disclosed pickup and return fee alongside the partner's repair quote. Quote the whole labelled appliance pickup and repair return job before starting, including travel, consumables and any agreed waiting time. Keep additions to appliance pickup repair coordination separate and request approval before doing them. Track appliance pickup repair coordination bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to labelled appliance pickup and repair return.",
+      "what_you_need": "Protective packing, reliable transport, a vetted repair shop and tracking records are needed. For appliance pickup repair coordination, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise labelled appliance pickup and repair return before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential appliance pickup repair coordination customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse labelled appliance pickup and repair return while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Lost accessories or a disputed condition can erase the margin. A missed appliance pickup repair coordination appointment or unclear promise can cost more trust than a single job earns. Confirm the labelled appliance pickup and repair return booking shortly beforehand and plan for delays. Get approval before a partner performs paid work and clarify responsibility for damage. If a condition falls outside your competence during labelled appliance pickup and repair return, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish appliance pickup repair coordination replace a safe handover.",
+      "verdict": "Build this if residents value a single accountable contact and clear status updates and you can deliver labelled appliance pickup and repair return consistently. Walk away if lost accessories or a disputed condition can erase the margin. Check whether the complete appliance pickup repair coordination booking earns after travel and preparation. Prove demand for appliance pickup repair coordination with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For appliance pickup repair coordination, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that get approval before a partner performs paid work and clarify responsibility for damage. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for labelled appliance pickup and repair return first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try appliance pickup repair coordination in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of labelled appliance pickup and repair return before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S06-I08",
+      "slug": "iron-cord-replacement-bench",
+      "title": "Iron Cord Replacement Bench",
+      "hook": "Households with an iron whose cord is damaged need safe iron cord diagnosis and replacement when local options are slow.",
+      "summary": "You provide safe iron cord diagnosis and replacement for households with an iron whose cord is damaged. You receive a disconnected iron, inspect the cord and strain relief, fit a compatible part and test insulation before return. A damaged cord can make a useful appliance unsafe.",
+      "what_it_is": "For iron cord replacement bench, confirm the exact request, location and person who may approve the work. You receive a disconnected iron, inspect the cord and strain relief, fit a compatible part and test insulation before return. At arrival for iron cord replacement bench, inspect practical conditions and explain anything that changes scope. An electrical test bench, insulated tools, compatible cord and repair training are essential. Perform safe iron cord diagnosis and replacement in a sequence the customer can follow, check the result together and leave the area or item tidy. Never tape over exposed wiring or return an untested appliance. Record only the details needed for a receipt about iron cord replacement bench, and agree on a completion point.",
+      "who_pays_you": "The buyers for iron cord replacement bench are households with an iron whose cord is damaged. Customers want a safe explanation and a tested return. A damaged cord can make a useful appliance unsafe. Ask prospects how they handled their last need for safe iron cord diagnosis and replacement. They may delay safe iron cord diagnosis and replacement or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for iron cord replacement bench before expanding the area.",
+      "how_money_comes": "Charge for diagnosis, labour and an approved replacement cord. Quote the whole safe iron cord diagnosis and replacement job before starting, including travel, consumables and any agreed waiting time. Keep additions to iron cord replacement bench separate and request approval before doing them. Track iron cord replacement bench bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to safe iron cord diagnosis and replacement.",
+      "what_you_need": "An electrical test bench, insulated tools, compatible cord and repair training are essential. For iron cord replacement bench, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise safe iron cord diagnosis and replacement before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential iron cord replacement bench customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse safe iron cord diagnosis and replacement while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Heat damage inside the iron may mean a cord alone will not solve the fault. A missed iron cord replacement bench appointment or unclear promise can cost more trust than a single job earns. Confirm the safe iron cord diagnosis and replacement booking shortly beforehand and plan for delays. Never tape over exposed wiring or return an untested appliance. If a condition falls outside your competence during safe iron cord diagnosis and replacement, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish iron cord replacement bench replace a safe handover.",
+      "verdict": "Build this if customers want a safe explanation and a tested return and you can deliver safe iron cord diagnosis and replacement consistently. Walk away if heat damage inside the iron may mean a cord alone will not solve the fault. Check whether the complete iron cord replacement bench booking earns after travel and preparation. Prove demand for iron cord replacement bench with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For iron cord replacement bench, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that never tape over exposed wiring or return an untested appliance. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for safe iron cord diagnosis and replacement first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try iron cord replacement bench in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of safe iron cord diagnosis and replacement before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "shop",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "flagged",
+      "writer": "Agent 2",
+      "flag_reason": "Mains appliance repair requires electrical competence and safe testing."
+    },
+    {
+      "code": "C010-S06-I09",
+      "slug": "refrigerator-gasket-assessment",
+      "title": "Refrigerator Gasket Assessment",
+      "hook": "Households noticing a refrigerator door does not seal need door gasket assessment and compatible replacement when local options are slow.",
+      "summary": "You provide door gasket assessment and compatible replacement for households noticing a refrigerator door does not seal. You check the model, hinge alignment and gasket condition, order the right seal and fit it only if the door can close correctly. Poor sealing is visible to a household, but the cause needs checking.",
+      "what_it_is": "For refrigerator gasket assessment, confirm the exact request, location and person who may approve the work. You check the model, hinge alignment and gasket condition, order the right seal and fit it only if the door can close correctly. At arrival for refrigerator gasket assessment, inspect practical conditions and explain anything that changes scope. Model identification, clean fitting tools and access to genuine compatible seals matter. Perform door gasket assessment and compatible replacement in a sequence the customer can follow, check the result together and leave the area or item tidy. Do not handle refrigerant circuits or promise energy savings without evidence. Record only the details needed for a receipt about refrigerator gasket assessment, and agree on a completion point.",
+      "who_pays_you": "The buyers for refrigerator gasket assessment are households noticing a refrigerator door does not seal. Residents prefer a repair recommendation grounded in the actual fault. Poor sealing is visible to a household, but the cause needs checking. Ask prospects how they handled their last need for door gasket assessment and compatible replacement. They may delay door gasket assessment and compatible replacement or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for refrigerator gasket assessment before expanding the area.",
+      "how_money_comes": "Charge an assessment fee and quote the exact gasket and fitting separately. Quote the whole door gasket assessment and compatible replacement job before starting, including travel, consumables and any agreed waiting time. Keep additions to refrigerator gasket assessment separate and request approval before doing them. Track refrigerator gasket assessment bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to door gasket assessment and compatible replacement.",
+      "what_you_need": "Model identification, clean fitting tools and access to genuine compatible seals matter. For refrigerator gasket assessment, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise door gasket assessment and compatible replacement before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential refrigerator gasket assessment customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse door gasket assessment and compatible replacement while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A damaged door or hinge can make a new seal ineffective. A missed refrigerator gasket assessment appointment or unclear promise can cost more trust than a single job earns. Confirm the door gasket assessment and compatible replacement booking shortly beforehand and plan for delays. Do not handle refrigerant circuits or promise energy savings without evidence. If a condition falls outside your competence during door gasket assessment and compatible replacement, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish refrigerator gasket assessment replace a safe handover.",
+      "verdict": "Build this if residents prefer a repair recommendation grounded in the actual fault and you can deliver door gasket assessment and compatible replacement consistently. Walk away if a damaged door or hinge can make a new seal ineffective. Check whether the complete refrigerator gasket assessment booking earns after travel and preparation. Prove demand for refrigerator gasket assessment with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For refrigerator gasket assessment, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not handle refrigerant circuits or promise energy savings without evidence. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for door gasket assessment and compatible replacement first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try refrigerator gasket assessment in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of door gasket assessment and compatible replacement before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S06-I10",
+      "slug": "shared-building-appliance-maintenance-day",
+      "title": "Shared Building Appliance Maintenance Day",
+      "hook": "Apartment residents with small appliances due for simple checks need scheduled small-appliance check slots at one building when local options are slow.",
+      "summary": "You provide scheduled small-appliance check slots at one building for apartment residents with small appliances due for simple checks. You secure building permission, reserve a safe work area, register each owner's appliance and complete only approved checks. Several residents at one address can reduce travel and make a repair day practical.",
+      "what_it_is": "For shared building appliance maintenance day, confirm the exact request, location and person who may approve the work. You secure building permission, reserve a safe work area, register each owner's appliance and complete only approved checks. At arrival for shared building appliance maintenance day, inspect practical conditions and explain anything that changes scope. Portable test tools, labelled intake records, electrical skill and a safe shared area are needed. Perform scheduled small-appliance check slots at one building in a sequence the customer can follow, check the result together and leave the area or item tidy. Do not leave appliances unattended in common space or perform unsafe live demonstrations. Record only the details needed for a receipt about shared building appliance maintenance day, and agree on a completion point.",
+      "who_pays_you": "The buyers for shared building appliance maintenance day are apartment residents with small appliances due for simple checks. Residents want nearby appointments and a trustworthy return process. Several residents at one address can reduce travel and make a repair day practical. Ask prospects how they handled their last need for scheduled small-appliance check slots at one building. They may delay scheduled small-appliance check slots at one building or choose another provider, so test what they value in your particular offer. Concentrate on reachable paid demand for shared building appliance maintenance day before expanding the area.",
+      "how_money_comes": "Quote an individual inspection fee or a prepaid block with separate part approvals. Quote the whole scheduled small-appliance check slots at one building job before starting, including travel, consumables and any agreed waiting time. Keep additions to shared building appliance maintenance day separate and request approval before doing them. Track shared building appliance maintenance day bookings, cancellations and actual hours so a busy calendar does not hide low earnings. Use Validate to check current local prices and any permissions relevant to scheduled small-appliance check slots at one building.",
+      "what_you_need": "Portable test tools, labelled intake records, electrical skill and a safe shared area are needed. For shared building appliance maintenance day, you also need a reliable phone, a basic booking and payment record, and safe tool storage. Practise scheduled small-appliance check slots at one building before taking a paid booking and decide what to do when a request exceeds your skill.",
+      "first_30_days": [
+        "Speak with potential shared building appliance maintenance day customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse scheduled small-appliance check slots at one building while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A queue may tempt rushed diagnosis or mix up similar items. A missed shared building appliance maintenance day appointment or unclear promise can cost more trust than a single job earns. Confirm the scheduled small-appliance check slots at one building booking shortly beforehand and plan for delays. Do not leave appliances unattended in common space or perform unsafe live demonstrations. If a condition falls outside your competence during scheduled small-appliance check slots at one building, stop, explain the reason and refer the customer to a suitable provider. Do not let pressure to finish shared building appliance maintenance day replace a safe handover.",
+      "verdict": "Build this if residents want nearby appointments and a trustworthy return process and you can deliver scheduled small-appliance check slots at one building consistently. Walk away if a queue may tempt rushed diagnosis or mix up similar items. Check whether the complete shared building appliance maintenance day booking earns after travel and preparation. Prove demand for shared building appliance maintenance day with paid work before committing to fixed costs.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For shared building appliance maintenance day, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not leave appliances unattended in common space or perform unsafe live demonstrations. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for scheduled small-appliance check slots at one building first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try shared building appliance maintenance day in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of scheduled small-appliance check slots at one building before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    }
+  ]
+}
