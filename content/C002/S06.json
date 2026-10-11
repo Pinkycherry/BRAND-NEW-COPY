@@ -1,0 +1,547 @@
+{
+  "subcategory": {
+    "code": "C002-S06",
+    "intro": "A festival week can make the whole neighbourhood feel awake. It also leaves families and small sellers with ten jobs they cannot finish at once. A hurried gift needs wrapping, a garment needs a small alteration, a community event needs someone to manage a photo corner. You can take one of those jobs as seasonal paid work if you choose a clear task and a deadline you can meet. The best offer often sounds modest: you take this one worry off their list.\n\nBegin by watching what people actually ask for before the season, rather than buying a cupboard of decorations. Festivals differ by region, faith and family practice. Ask the customer what the occasion means to them, what they already own and what must be ready by a particular hour. Get permission for the space and any photographs. If you handle food, electricity, ladders or large crowds, check the applicable rules and work only within your training. There is no kindness in offering a service you cannot finish safely.\n\nSeasonal demand feels exciting because many buyers ask at once. Set a booking cutoff, take an appropriate advance for customised materials and write down the exact deliverable. Count setup, travel, cleanup, damaged materials and late changes, not just the visible hour. A useful side job may run for only a few days each year, so keep supplies reusable where possible and do not assume the next festival will need the same colours or menu.\n\nThe ten paths below span household, maker and event needs. Some rely on a craft skill; others rely on organisation and trust. Choose the one that fits your evenings and the community you know, then do a small paid trial before accepting a calendar full of promises.",
+    "how_to_choose": "Look at your real skill, available hours and the festival calendar in your area. If you can work neatly at a table, wrapping or packing may suit you. If you enjoy talking with families, a photo corner or event helper role may be better. Ask the buyer what must be finished, who approves it and whether weather or venue rules can change the plan. Set a final booking date and a cap on jobs. Charge for setup, materials, travel and cleanup. A seasonal extra job is worthwhile when you can finish it well without giving away every hour of your own celebration.",
+    "faq": [
+      {
+        "q": "When should I start taking festival bookings?",
+        "a": "Ask buyers early enough to test materials and plan capacity, then set a clear cutoff. The right timing differs by service and local festival. Do not accept a last-minute job that needs untested supplies."
+      },
+      {
+        "q": "Should I take an advance?",
+        "a": "For customised materials or reserved time, agree on an advance and cancellation rule before buying. Keep the amount and remaining balance in one written message. Simple household jobs may be paid at completion."
+      },
+      {
+        "q": "Can I offer a service for a festival I do not celebrate?",
+        "a": "Yes, if you listen respectfully and let the family or organiser explain its customs. Do not assume one tradition fits every household, and do not claim expertise you lack."
+      },
+      {
+        "q": "What if demand is high for only one week?",
+        "a": "Plan the work as a seasonal project and count the idle months when buying equipment. Reusable tools and a small first schedule reduce risk. Never promise two events at the same hour."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C002-S06-I01",
+      "slug": "festival-gift-wrap-evening-desk",
+      "title": "Festival Gift Wrap Evening Desk",
+      "hook": "You buy three thoughtful gifts after work and realise there is no time left to wrap them before visiting family.",
+      "summary": "You offer neat wrapping of customer-provided gifts for neighbours with a stack of gifts during a busy festival period. You measure each item, offer a small paper choice and label it clearly while the customer handles the rest of the celebration. Set a gift wrapping booking cap and a clear completion time.",
+      "what_it_is": "You buy three thoughtful gifts after work and realise there is no time left to wrap them before visiting family. You ask neighbours with a stack of gifts what must be finished, where it happens and who approves the result. Then you measure each item, offer a small paper choice and label it clearly, with materials and a time window agreed before the rush. Show one gift wrapping sample or short trial, keep a task checklist and tell the customer when a late change is no longer possible. Do not open sealed items or hide damage under paper. The the person opening a present should know exactly what you will return or deliver. Leave the gift wrapping work area clean and keep any names, images or personal details private.",
+      "who_pays_you": "Neighbours with a stack of gifts pays you because a fragile gift can be damaged while you handle it. You show samples at a society notice board with permission. Show a real gift wrapping sample and explain how many jobs fit in one evening. A gift wrapping customer who is already busy wants to know you will arrive, finish and hand the work back without another round of chasing. Ask about their gift wrapping occasion rather than assuming every family follows the same custom.",
+      "how_money_comes": "You charge per item with extra for awkward shapes and materials. Include gift wrapping materials, preparation, travel, setup, cleanup and any damaged or rejected pieces. Take an agreed gift wrapping advance if you must buy customised supplies or reserve an event slot. State the final gift wrapping booking and change cutoff, then collect the balance at the agreed handover. A seasonal gift wrapping crowd can make a full diary look profitable until you count hours spent answering messages and fixing last-minute changes.",
+      "what_you_need": "You need paper, tape, labels, scissors and a clean table, the skill to repeat gift wrapping neatly and a written booking list. Check venue or building permission when the gift wrapping work uses shared space. Keep gift wrapping customer items labelled and handle private information only for the job. Do not open sealed items or hide damage under paper. Try the whole gift wrapping task once at the actual scale and hour before accepting a much larger seasonal order.",
+      "first_30_days": [
+        "Wrap a few shapes and time the work honestly.",
+        "Show clear sample options and the material choices.",
+        "Set a paid trial evening with a booking cutoff.",
+        "Log each gift recipient label before wrapping.",
+        "Check whether supplies and late pickups ate the margin."
+      ],
+      "what_hurts": "A fragile gift can be damaged while you handle it. Do not open sealed items or hide damage under paper. The short gift wrapping window puts several buyers on the same evening. A late gift wrapping material delivery or a changed name can upset the plan, and your own family time may shrink. Say early when a gift wrapping request no longer fits, rather than taking an advance and hoping. Record the approved gift wrapping scope and tell the buyer promptly if something is damaged or delayed.",
+      "verdict": "Build this if you can deliver neat wrapping of customer-provided gifts carefully within a real seasonal deadline. Walk away if you cannot keep each gift labelled and protected. A gift feels personal because you cared about its recipient.",
+      "faq": [
+        {
+          "q": "Should I buy the gifts too?",
+          "a": "Keep the first offer to wrapping customer-provided items. Shopping adds product selection, money handling and returns, and should be quoted separately if you choose to offer it."
+        },
+        {
+          "q": "What if a gift breaks?",
+          "a": "Photograph the item only with permission before handling, use a safe work surface and explain any accident immediately. Agree on a remedy rather than hiding it."
+        },
+        {
+          "q": "Can I wrap food gifts?",
+          "a": "Use suitable outer packaging and avoid direct food contact unless you have the right materials and process. Ask the buyer about storage needs."
+        }
+      ],
+      "validate_prompt": "I want to offer evening gift wrapping during festivals in India. How should I scope item sizes, labels, damage and pickup?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S06-I02",
+      "slug": "onam-pookalam-layout-helper",
+      "title": "Onam Pookalam Layout Helper",
+      "hook": "Your family has flowers for Onam, but everyone is waiting for someone to draw the first circle.",
+      "summary": "You offer a simple pookalam layout and guided setup for families and small community groups during a busy festival period. You sketch an agreed pattern, sort petals and guide placement while the customer handles the rest of the celebration. Set a pookalam setup booking cap and a clear completion time.",
+      "what_it_is": "Your family has flowers for Onam, but everyone is waiting for someone to draw the first circle. You ask families and small community groups what must be finished, where it happens and who approves the result. Then you sketch an agreed pattern, sort petals and guide placement, with materials and a time window agreed before the rush. Show one pookalam setup sample or short trial, keep a task checklist and tell the customer when a late change is no longer possible. Let the family choose a design that fits its own tradition and space. The people making the flower design together should know exactly what you will return or deliver. Leave the pookalam setup work area clean and keep any names, images or personal details private.",
+      "who_pays_you": "Families and small community groups pays you because fresh petals can wilt and a floor may stain. You share a sample with local Onam organisers. Show a real pookalam setup sample and explain how many jobs fit in one evening. A pookalam setup customer who is already busy wants to know you will arrive, finish and hand the work back without another round of chasing. Ask about their pookalam setup occasion rather than assuming every family follows the same custom.",
+      "how_money_comes": "You charge for a defined design and setup time; flowers are separate. Include pookalam setup materials, preparation, travel, setup, cleanup and any damaged or rejected pieces. Take an agreed pookalam setup advance if you must buy customised supplies or reserve an event slot. State the final pookalam setup booking and change cutoff, then collect the balance at the agreed handover. A seasonal pookalam setup crowd can make a full diary look profitable until you count hours spent answering messages and fixing last-minute changes.",
+      "what_you_need": "You need a washable outline, flower count plan and cleanup kit, the skill to repeat pookalam setup neatly and a written booking list. Check venue or building permission when the pookalam setup work uses shared space. Keep pookalam setup customer items labelled and handle private information only for the job. Let the family choose a design that fits its own tradition and space. Try the whole pookalam setup task once at the actual scale and hour before accepting a much larger seasonal order.",
+      "first_30_days": [
+        "Ask an organiser about size, colours and time available.",
+        "Test one pattern with real flowers and note quantities.",
+        "Agree on a paid small layout and who buys flowers.",
+        "Guide a trial setup with a clear cleanup plan.",
+        "Review how long sorting and petal placement actually took."
+      ],
+      "what_hurts": "Fresh petals can wilt and a floor may stain. Let the family choose a design that fits its own tradition and space. The short pookalam setup window puts several buyers on the same evening. A late pookalam setup material delivery or a changed name can upset the plan, and your own family time may shrink. Say early when a pookalam setup request no longer fits, rather than taking an advance and hoping. Record the approved pookalam setup scope and tell the buyer promptly if something is damaged or delayed.",
+      "verdict": "Build this if you can deliver a simple pookalam layout and guided setup carefully within a real seasonal deadline. Walk away if you have not agreed on flowers, floor and the final setup time. The family should still enjoy making the design together.",
+      "faq": [
+        {
+          "q": "Do I have to supply flowers?",
+          "a": "No. You can charge for design and guidance while the buyer supplies them. If you procure flowers, include freshness, travel and unsold material in the quote."
+        },
+        {
+          "q": "Can one design fit every doorway?",
+          "a": "Measure the actual area and ask how people walk through it. A lovely pattern should not block access or stain a surface the owner needs protected."
+        },
+        {
+          "q": "What if flowers arrive late?",
+          "a": "Agree on a simpler backup pattern and a final setup time. Do not guarantee a large detailed design when fresh materials are uncertain."
+        }
+      ],
+      "validate_prompt": "I want to guide small Onam pookalam setups in India. How should I estimate flowers, floor space and setup time?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S06-I03",
+      "slug": "eid-gift-box-assembly-shift",
+      "title": "Eid Gift Box Assembly Shift",
+      "hook": "The family has chosen sweets and cards for Eid, but dozens of boxes still need careful packing tonight.",
+      "summary": "You offer assembly of buyer-supplied gift boxes for families and small sweet sellers during a busy festival period. You check counts, fold boxes and separate each recipient's card while the customer handles the rest of the celebration. Set a gift box assembly booking cap and a clear completion time.",
+      "what_it_is": "The family has chosen sweets and cards for Eid, but dozens of boxes still need careful packing tonight. You ask families and small sweet sellers what must be finished, where it happens and who approves the result. Then you check counts, fold boxes and separate each recipient's card, with materials and a time window agreed before the rush. Show one gift box assembly sample or short trial, keep a task checklist and tell the customer when a late change is no longer possible. Do not handle exposed food without the proper food safety setup. The relatives receiving a tidy gift should know exactly what you will return or deliver. Leave the gift box assembly work area clean and keep any names, images or personal details private.",
+      "who_pays_you": "Families and small sweet sellers pays you because a wrong label or damaged sweet can spoil a personal gift. You ask a seller whether seasonal packing delays orders. Show a real gift box assembly sample and explain how many jobs fit in one evening. A gift box assembly customer who is already busy wants to know you will arrive, finish and hand the work back without another round of chasing. Ask about their gift box assembly occasion rather than assuming every family follows the same custom.",
+      "how_money_comes": "You charge per box or a fixed shift with a clear count. Include gift box assembly materials, preparation, travel, setup, cleanup and any damaged or rejected pieces. Take an agreed gift box assembly advance if you must buy customised supplies or reserve an event slot. State the final gift box assembly booking and change cutoff, then collect the balance at the agreed handover. A seasonal gift box assembly crowd can make a full diary look profitable until you count hours spent answering messages and fixing last-minute changes.",
+      "what_you_need": "You need food-safe outer packaging, labels, clean hands and a count sheet, the skill to repeat gift box assembly neatly and a written booking list. Check venue or building permission when the gift box assembly work uses shared space. Keep gift box assembly customer items labelled and handle private information only for the job. Do not handle exposed food without the proper food safety setup. Try the whole gift box assembly task once at the actual scale and hour before accepting a much larger seasonal order.",
+      "first_30_days": [
+        "Practise assembling one full box and time it.",
+        "Agree on contents, names, count and food-handling role.",
+        "Run a paid small packing shift before a large order.",
+        "Check every finished box against the approved list.",
+        "Count errors and leftover materials before final handover."
+      ],
+      "what_hurts": "A wrong label or damaged sweet can spoil a personal gift. Do not handle exposed food without the proper food safety setup. The short gift box assembly window puts several buyers on the same evening. A late gift box assembly material delivery or a changed name can upset the plan, and your own family time may shrink. Say early when a gift box assembly request no longer fits, rather than taking an advance and hoping. Record the approved gift box assembly scope and tell the buyer promptly if something is damaged or delayed.",
+      "verdict": "Build this if you can deliver assembly of buyer-supplied gift boxes carefully within a real seasonal deadline. Walk away if you cannot separate sealed food packing from exposed food handling. Each relative should receive the intended box.",
+      "faq": [
+        {
+          "q": "Can I repack loose sweets?",
+          "a": "Only within the applicable food business and hygiene requirements. A simpler first role is assembling sealed buyer-supplied packs without opening food."
+        },
+        {
+          "q": "What if the name list changes?",
+          "a": "Ask for a final approved list and a cut-off. Keep a few unlabelled spare boxes where practical, but do not promise unlimited last-minute corrections."
+        },
+        {
+          "q": "Who buys the boxes?",
+          "a": "Decide before quoting. If you supply them, include sample approval, transport and surplus stock; if the buyer supplies them, check that they fit the contents."
+        }
+      ],
+      "validate_prompt": "I want to assemble Eid gift boxes as seasonal side work in India. How should I handle food boundaries, names and per-box pricing?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S06-I04",
+      "slug": "festival-outfit-alteration-slots",
+      "title": "Festival Outfit Alteration Slots",
+      "hook": "You try on an outfit for tomorrow's celebration and the sleeve catches every time you move.",
+      "summary": "You offer small pre-booked garment alterations for families with festive outfits during a busy festival period. You measure, pin and finish one agreed change by a pickup time while the customer handles the rest of the celebration. Set a garment alteration booking cap and a clear completion time.",
+      "what_it_is": "You try on an outfit for tomorrow's celebration and the sleeve catches every time you move. You ask families with festive outfits what must be finished, where it happens and who approves the result. Then you measure, pin and finish one agreed change by a pickup time, with materials and a time window agreed before the rush. Show one garment alteration sample or short trial, keep a task checklist and tell the customer when a late change is no longer possible. Decline structural changes you cannot fit and finish safely. The a wearer hoping to move comfortably should know exactly what you will return or deliver. Leave the garment alteration work area clean and keep any names, images or personal details private.",
+      "who_pays_you": "Families with festive outfits pays you because a rushed cut can permanently spoil an expensive garment. You ask a neighbourhood tailor about overflow or take direct bookings. Show a real garment alteration sample and explain how many jobs fit in one evening. A garment alteration customer who is already busy wants to know you will arrive, finish and hand the work back without another round of chasing. Ask about their garment alteration occasion rather than assuming every family follows the same custom.",
+      "how_money_comes": "You charge per alteration with rush work priced separately. Include garment alteration materials, preparation, travel, setup, cleanup and any damaged or rejected pieces. Take an agreed garment alteration advance if you must buy customised supplies or reserve an event slot. State the final garment alteration booking and change cutoff, then collect the balance at the agreed handover. A seasonal garment alteration crowd can make a full diary look profitable until you count hours spent answering messages and fixing last-minute changes.",
+      "what_you_need": "You need trained sewing skill, a machine, fitting space and thread matches, the skill to repeat garment alteration neatly and a written booking list. Check venue or building permission when the garment alteration work uses shared space. Keep garment alteration customer items labelled and handle private information only for the job. Decline structural changes you cannot fit and finish safely. Try the whole garment alteration task once at the actual scale and hour before accepting a much larger seasonal order.",
+      "first_30_days": [
+        "Choose two alteration types you can repeat well.",
+        "Time a fitting and finish on sample garments.",
+        "Set a booking cutoff and a garment handover receipt.",
+        "Take a small paid run with clear pickup promises.",
+        "Check the fit with the wearer before final payment."
+      ],
+      "what_hurts": "A rushed cut can permanently spoil an expensive garment. Decline structural changes you cannot fit and finish safely. The short garment alteration window puts several buyers on the same evening. A late garment alteration material delivery or a changed name can upset the plan, and your own family time may shrink. Say early when a garment alteration request no longer fits, rather than taking an advance and hoping. Record the approved garment alteration scope and tell the buyer promptly if something is damaged or delayed.",
+      "verdict": "Build this if you can deliver small pre-booked garment alterations carefully within a real seasonal deadline. Walk away if the requested repair is beyond your skill or pickup window. The wearer wants to move comfortably at the celebration.",
+      "faq": [
+        {
+          "q": "Can I accept a garment without a fitting?",
+          "a": "Only for a simple change with reliable measurements and an agreed risk. A festive garment may need a try-on before you cut or stitch."
+        },
+        {
+          "q": "What if the customer needs it tomorrow?",
+          "a": "Quote the rush slot only if your queue allows it. A quick yes that leads to a missed function can damage trust more than a polite refusal."
+        },
+        {
+          "q": "How do I handle an expensive outfit?",
+          "a": "Record its condition and agreed alteration before working. If the fabric or construction is beyond your skill, refer the customer to a specialist."
+        }
+      ],
+      "validate_prompt": "I want to offer small festive outfit alterations after work in India. How should I set booking limits and fitting promises?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "weekends",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S06-I05",
+      "slug": "rangoli-entrance-commission",
+      "title": "Neighbourhood Rangoli Entrance Commission",
+      "hook": "The family wants a welcoming entrance design, but nobody has the time to finish it before guests arrive.",
+      "summary": "You offer a modest rangoli design at an approved entrance for households and small shops during a busy festival period. You agree on size, colours, surface and a safe walking path while the customer handles the rest of the celebration. Set a rangoli design booking cap and a clear completion time.",
+      "what_it_is": "The family wants a welcoming entrance design, but nobody has the time to finish it before guests arrive. You ask households and small shops what must be finished, where it happens and who approves the result. Then you agree on size, colours, surface and a safe walking path, with materials and a time window agreed before the rush. Show one rangoli design sample or short trial, keep a task checklist and tell the customer when a late change is no longer possible. Do not block a shared corridor or use materials the site forbids. The guests arriving at the doorway should know exactly what you will return or deliver. Leave the rangoli design work area clean and keep any names, images or personal details private.",
+      "who_pays_you": "Households and small shops pays you because rain, wind or footsteps may disturb the design quickly. You show local households a few original patterns. Show a real rangoli design sample and explain how many jobs fit in one evening. A rangoli design customer who is already busy wants to know you will arrive, finish and hand the work back without another round of chasing. Ask about their rangoli design occasion rather than assuming every family follows the same custom.",
+      "how_money_comes": "You charge by size and setup time, with materials and travel included. Include rangoli design materials, preparation, travel, setup, cleanup and any damaged or rejected pieces. Take an agreed rangoli design advance if you must buy customised supplies or reserve an event slot. State the final rangoli design booking and change cutoff, then collect the balance at the agreed handover. A seasonal rangoli design crowd can make a full diary look profitable until you count hours spent answering messages and fixing last-minute changes.",
+      "what_you_need": "You need original patterns, safe materials and a cleanup brush, the skill to repeat rangoli design neatly and a written booking list. Check venue or building permission when the rangoli design work uses shared space. Keep rangoli design customer items labelled and handle private information only for the job. Do not block a shared corridor or use materials the site forbids. Try the whole rangoli design task once at the actual scale and hour before accepting a much larger seasonal order.",
+      "first_30_days": [
+        "Ask the household about doorway traffic and weather exposure.",
+        "Test one design at the size you can finish calmly.",
+        "Show an approved sample and quote setup plus cleanup.",
+        "Complete a paid small entrance before taking more bookings.",
+        "Photograph the result only with permission and note durability."
+      ],
+      "what_hurts": "Rain, wind or footsteps may disturb the design quickly. Do not block a shared corridor or use materials the site forbids. The short rangoli design window puts several buyers on the same evening. A late rangoli design material delivery or a changed name can upset the plan, and your own family time may shrink. Say early when a rangoli design request no longer fits, rather than taking an advance and hoping. Record the approved rangoli design scope and tell the buyer promptly if something is damaged or delayed.",
+      "verdict": "Build this if you can deliver a modest rangoli design at an approved entrance carefully within a real seasonal deadline. Walk away if the design would block a shared entrance without permission. Guests need a welcoming path, not an obstacle.",
+      "faq": [
+        {
+          "q": "Can I work in a society corridor?",
+          "a": "Get household and society permission, keep a clear walking route and use materials allowed for the floor. A shared entrance is not a private canvas."
+        },
+        {
+          "q": "Will the design last all day?",
+          "a": "Explain how weather and foot traffic affect it. Set a realistic finish time and do not promise permanence for a temporary decoration."
+        },
+        {
+          "q": "Can I copy a design from someone else's page?",
+          "a": "Create your own pattern or use a design with clear permission. A customer's sample can guide colours, but copying another artist's exact work is not a sound business."
+        }
+      ],
+      "validate_prompt": "I want to offer rangoli entrance designs in India as seasonal work. How should I handle shared-space permission and weather?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S06-I06",
+      "slug": "flower-garland-preparation-help",
+      "title": "Festival Garland Preparation Help",
+      "hook": "Your mother has fresh flowers for the morning puja but the garlands are still loose on the table at midnight.",
+      "summary": "You offer pre-booked garland tying from supplied flowers for households and small puja organisers during a busy festival period. You sort flowers, agree on length and tie a counted set while the customer handles the rest of the celebration. Set a garland tying booking cap and a clear completion time.",
+      "what_it_is": "Your mother has fresh flowers for the morning puja but the garlands are still loose on the table at midnight. You ask households and small puja organisers what must be finished, where it happens and who approves the result. Then you sort flowers, agree on length and tie a counted set, with materials and a time window agreed before the rush. Show one garland tying sample or short trial, keep a task checklist and tell the customer when a late change is no longer possible. Do not promise freshness beyond the handling you can control. The families preparing a ceremony should know exactly what you will return or deliver. Leave the garland tying work area clean and keep any names, images or personal details private.",
+      "who_pays_you": "Households and small puja organisers pays you because flowers may wilt before the agreed pickup. You ask local flower sellers about overflow tying needs. Show a real garland tying sample and explain how many jobs fit in one evening. A garland tying customer who is already busy wants to know you will arrive, finish and hand the work back without another round of chasing. Ask about their garland tying occasion rather than assuming every family follows the same custom.",
+      "how_money_comes": "You charge per defined garland length or preparation shift. Include garland tying materials, preparation, travel, setup, cleanup and any damaged or rejected pieces. Take an agreed garland tying advance if you must buy customised supplies or reserve an event slot. State the final garland tying booking and change cutoff, then collect the balance at the agreed handover. A seasonal garland tying crowd can make a full diary look profitable until you count hours spent answering messages and fixing last-minute changes.",
+      "what_you_need": "You need clean thread, needles, a cool work area and freshness plan, the skill to repeat garland tying neatly and a written booking list. Check venue or building permission when the garland tying work uses shared space. Keep garland tying customer items labelled and handle private information only for the job. Do not promise freshness beyond the handling you can control. Try the whole garland tying task once at the actual scale and hour before accepting a much larger seasonal order.",
+      "first_30_days": [
+        "Practise two garland lengths and record flower counts.",
+        "Ask buyers what flower type and pickup time they need.",
+        "Agree on who supplies fresh flowers and what happens to extras.",
+        "Complete one paid small order with a clear cutoff.",
+        "Track wilting, rejected flowers and actual tying time."
+      ],
+      "what_hurts": "Flowers may wilt before the agreed pickup. Do not promise freshness beyond the handling you can control. The short garland tying window puts several buyers on the same evening. A late garland tying material delivery or a changed name can upset the plan, and your own family time may shrink. Say early when a garland tying request no longer fits, rather than taking an advance and hoping. Record the approved garland tying scope and tell the buyer promptly if something is damaged or delayed.",
+      "verdict": "Build this if you can deliver pre-booked garland tying from supplied flowers carefully within a real seasonal deadline. Walk away if you cannot keep flowers fresh until pickup. Someone may need the garland at dawn.",
+      "faq": [
+        {
+          "q": "Can I buy the flowers for the buyer?",
+          "a": "You can, but quote procurement and freshness risk separately. A first offer can use buyer-supplied flowers and focus on careful tying."
+        },
+        {
+          "q": "How do I set a per-garland price?",
+          "a": "Test how many flowers and minutes each length takes. Include rejected stems, thread, travel and a realistic pickup window. Agree on that before booking."
+        },
+        {
+          "q": "What if the buyer changes the length?",
+          "a": "Confirm the final size before tying. A longer garland needs more flowers and time, and may be impossible once the stock is committed."
+        }
+      ],
+      "validate_prompt": "I want to tie festival garlands for households in India. How should I calculate length, flower counts and freshness?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S06-I07",
+      "slug": "dandiya-costume-fitting-desk",
+      "title": "Dandiya Costume Fitting Desk",
+      "hook": "The dance group has costumes for the evening, but half the ties and hems need attention before practice.",
+      "summary": "You offer quick costume fitting and minor repairs for local dance organisers during a busy festival period. You check movement, pin temporary fixes and sew only agreed repairs while the customer handles the rest of the celebration. Set a costume fitting booking cap and a clear completion time.",
+      "what_it_is": "The dance group has costumes for the evening, but half the ties and hems need attention before practice. You ask local dance organisers what must be finished, where it happens and who approves the result. Then you check movement, pin temporary fixes and sew only agreed repairs, with materials and a time window agreed before the rush. Show one costume fitting sample or short trial, keep a task checklist and tell the customer when a late change is no longer possible. Do not promise a full redesign in a short fitting slot. The participants who need a safe fit should know exactly what you will return or deliver. Leave the costume fitting work area clean and keep any names, images or personal details private.",
+      "who_pays_you": "Local dance organisers pays you because an unsafe pin can catch during a dance. You ask an organiser about the costume handover routine. Show a real costume fitting sample and explain how many jobs fit in one evening. A costume fitting customer who is already busy wants to know you will arrive, finish and hand the work back without another round of chasing. Ask about their costume fitting occasion rather than assuming every family follows the same custom.",
+      "how_money_comes": "You charge for a defined fitting shift and repairs by item. Include costume fitting materials, preparation, travel, setup, cleanup and any damaged or rejected pieces. Take an agreed costume fitting advance if you must buy customised supplies or reserve an event slot. State the final costume fitting booking and change cutoff, then collect the balance at the agreed handover. A seasonal costume fitting crowd can make a full diary look profitable until you count hours spent answering messages and fixing last-minute changes.",
+      "what_you_need": "You need sewing kit, private fitting space and a garment log, the skill to repeat costume fitting neatly and a written booking list. Check venue or building permission when the costume fitting work uses shared space. Keep costume fitting customer items labelled and handle private information only for the job. Do not promise a full redesign in a short fitting slot. Try the whole costume fitting task once at the actual scale and hour before accepting a much larger seasonal order.",
+      "first_30_days": [
+        "Meet the organiser and count garments before the event.",
+        "Test a movement check and common quick repairs.",
+        "Agree on one paid fitting shift and a repair limit.",
+        "Label each garment and get wearer approval.",
+        "Return remaining items with a clear unresolved list."
+      ],
+      "what_hurts": "An unsafe pin can catch during a dance. Do not promise a full redesign in a short fitting slot. The short costume fitting window puts several buyers on the same evening. A late costume fitting material delivery or a changed name can upset the plan, and your own family time may shrink. Say early when a costume fitting request no longer fits, rather than taking an advance and hoping. Record the approved costume fitting scope and tell the buyer promptly if something is damaged or delayed.",
+      "verdict": "Build this if you can deliver quick costume fitting and minor repairs carefully within a real seasonal deadline. Walk away if you cannot make the costume safe for movement. A dancer should not worry about a loose pin.",
+      "faq": [
+        {
+          "q": "Can I pin a costume and send someone onstage?",
+          "a": "Only if the pin is secure and appropriate for movement. A stitched repair may be safer. Decline a fix that could come loose during dance."
+        },
+        {
+          "q": "Who approves fit changes?",
+          "a": "The wearer and organiser should agree on the practical change. Keep privacy in the fitting area and avoid making comfort decisions for someone else."
+        },
+        {
+          "q": "What if many costumes arrive at once?",
+          "a": "Set a final drop-off time and triage small fixes. Do not quietly promise every alteration if the shift is too short."
+        }
+      ],
+      "validate_prompt": "I want to run a minor costume fitting desk for a local dandiya event in India. How should I manage safety and garment handover?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "weekends",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S06-I08",
+      "slug": "festival-family-photo-corner",
+      "title": "Festival Family Photo Corner",
+      "hook": "The whole family is together for once, but every photo has someone missing because they are holding the phone.",
+      "summary": "You offer a simple staffed photo corner for families and society event organisers during a busy festival period. You set a backdrop, take agreed shots and deliver private files while the customer handles the rest of the celebration. Set a photo corner booking cap and a clear completion time.",
+      "what_it_is": "The whole family is together for once, but every photo has someone missing because they are holding the phone. You ask families and society event organisers what must be finished, where it happens and who approves the result. Then you set a backdrop, take agreed shots and deliver private files, with materials and a time window agreed before the rush. Show one photo corner sample or short trial, keep a task checklist and tell the customer when a late change is no longer possible. Do not post family images without explicit permission. The relatives who want one complete group picture should know exactly what you will return or deliver. Leave the photo corner work area clean and keep any names, images or personal details private.",
+      "who_pays_you": "Families and society event organisers pays you because faces may be shared without consent or files may be lost. You ask an organiser about an unused corner and event flow. Show a real photo corner sample and explain how many jobs fit in one evening. A photo corner customer who is already busy wants to know you will arrive, finish and hand the work back without another round of chasing. Ask about their photo corner occasion rather than assuming every family follows the same custom.",
+      "how_money_comes": "You charge per event shift or defined family slot. Include photo corner materials, preparation, travel, setup, cleanup and any damaged or rejected pieces. Take an agreed photo corner advance if you must buy customised supplies or reserve an event slot. State the final photo corner booking and change cutoff, then collect the balance at the agreed handover. A seasonal photo corner crowd can make a full diary look profitable until you count hours spent answering messages and fixing last-minute changes.",
+      "what_you_need": "You need a camera or good phone, lighting and private delivery method, the skill to repeat photo corner neatly and a written booking list. Check venue or building permission when the photo corner work uses shared space. Keep photo corner customer items labelled and handle private information only for the job. Do not post family images without explicit permission. Try the whole photo corner task once at the actual scale and hour before accepting a much larger seasonal order.",
+      "first_30_days": [
+        "Test a small backdrop and lighting at the actual hour.",
+        "Agree with the organiser on space and photo delivery.",
+        "Run a paid pilot with a limited number of family slots.",
+        "Back up files securely and label them without public names.",
+        "Deliver through a private method and remove files as agreed."
+      ],
+      "what_hurts": "Faces may be shared without consent or files may be lost. Do not post family images without explicit permission. The short photo corner window puts several buyers on the same evening. A late photo corner material delivery or a changed name can upset the plan, and your own family time may shrink. Say early when a photo corner request no longer fits, rather than taking an advance and hoping. Record the approved photo corner scope and tell the buyer promptly if something is damaged or delayed.",
+      "verdict": "Build this if you can deliver a simple staffed photo corner carefully within a real seasonal deadline. Walk away if you cannot deliver images privately and with consent. One complete family picture can mean a great deal.",
+      "faq": [
+        {
+          "q": "Can I share the photos on my page?",
+          "a": "Only with explicit permission from the people concerned, especially for children. A private family gallery is the default for a paid event."
+        },
+        {
+          "q": "What if lighting is poor?",
+          "a": "Test the corner at the event hour and bring a suitable simple light if permitted. Be honest if the space cannot give the promised result."
+        },
+        {
+          "q": "Who gets the finished files?",
+          "a": "Agree on one contact per family and a secure delivery method. Do not put everyone in a public link just because it is convenient."
+        }
+      ],
+      "validate_prompt": "I want to run a small family photo corner at a local festival in India. How should I price time and protect photo privacy?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S06-I09",
+      "slug": "reusable-decor-rental-return",
+      "title": "Reusable Decor Rental Return Desk",
+      "hook": "The festival lights and cloth backdrop look lovely, then sit in a cupboard because nobody arranged return.",
+      "summary": "You offer pickup, setup and return of reusable decor for small event organisers and households during a busy festival period. You inventory each item, agree on installation limits and collect it later while the customer handles the rest of the celebration. Set a decor rental booking cap and a clear completion time.",
+      "what_it_is": "The festival lights and cloth backdrop look lovely, then sit in a cupboard because nobody arranged return. You ask small event organisers and households what must be finished, where it happens and who approves the result. Then you inventory each item, agree on installation limits and collect it later, with materials and a time window agreed before the rush. Show one decor rental sample or short trial, keep a task checklist and tell the customer when a late change is no longer possible. Do not install electrical items beyond your training. The hosts who want less post-event work should know exactly what you will return or deliver. Leave the decor rental work area clean and keep any names, images or personal details private.",
+      "who_pays_you": "Small event organisers and households pays you because a missing item or broken light can erase the rental margin. You offer a trial kit to a nearby community organiser. Show a real decor rental sample and explain how many jobs fit in one evening. A decor rental customer who is already busy wants to know you will arrive, finish and hand the work back without another round of chasing. Ask about their decor rental occasion rather than assuming every family follows the same custom.",
+      "how_money_comes": "You charge rental plus setup and return work with a damage rule. Include decor rental materials, preparation, travel, setup, cleanup and any damaged or rejected pieces. Take an agreed decor rental advance if you must buy customised supplies or reserve an event slot. State the final decor rental booking and change cutoff, then collect the balance at the agreed handover. A seasonal decor rental crowd can make a full diary look profitable until you count hours spent answering messages and fixing last-minute changes.",
+      "what_you_need": "You need clean stored decor, numbered pieces and a condition sheet, the skill to repeat decor rental neatly and a written booking list. Check venue or building permission when the decor rental work uses shared space. Keep decor rental customer items labelled and handle private information only for the job. Do not install electrical items beyond your training. Try the whole decor rental task once at the actual scale and hour before accepting a much larger seasonal order.",
+      "first_30_days": [
+        "Choose a small decor kit that stores and travels well.",
+        "Number pieces and photograph condition with permission.",
+        "Agree on pickup, return time and damage terms.",
+        "Rent one paid kit locally before buying more stock.",
+        "Check cleaning and missing pieces after return."
+      ],
+      "what_hurts": "A missing item or broken light can erase the rental margin. Do not install electrical items beyond your training. The short decor rental window puts several buyers on the same evening. A late decor rental material delivery or a changed name can upset the plan, and your own family time may shrink. Say early when a decor rental request no longer fits, rather than taking an advance and hoping. Record the approved decor rental scope and tell the buyer promptly if something is damaged or delayed.",
+      "verdict": "Build this if you can deliver pickup, setup and return of reusable decor carefully within a real seasonal deadline. Walk away if you cannot inventory and recover the kit reliably. A reusable kit works only when it comes home intact.",
+      "faq": [
+        {
+          "q": "Can I rent lights as part of the kit?",
+          "a": "Only with safe, tested equipment and an installation plan within your competence. Electrical work may require a qualified person and venue approval."
+        },
+        {
+          "q": "Who pays for damage?",
+          "a": "Set a fair, written condition and damage rule before the rental. Record the kit at handover and return instead of arguing from memory."
+        },
+        {
+          "q": "Should I include setup?",
+          "a": "Quote it separately or clearly include it with hours and limits. A backdrop that takes two people to install should not be priced like a box left at the door."
+        }
+      ],
+      "validate_prompt": "I want to rent reusable festival decor locally in India. How should I record inventory, returns and damage?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S06-I10",
+      "slug": "festival-seller-dispatch-shift",
+      "title": "Festival Seller Dispatch Shift",
+      "hook": "The maker has finished every festive order, but the parcels are still unlabelled when the courier arrives.",
+      "summary": "You offer a seasonal packing and dispatch shift for small makers with an order rush during a busy festival period. You match each order to product, label and handover receipt while the customer handles the rest of the celebration. Set a parcel dispatch booking cap and a clear completion time.",
+      "what_it_is": "The maker has finished every festive order, but the parcels are still unlabelled when the courier arrives. You ask small makers with an order rush what must be finished, where it happens and who approves the result. Then you match each order to product, label and handover receipt, with materials and a time window agreed before the rush. Show one parcel dispatch sample or short trial, keep a task checklist and tell the customer when a late change is no longer possible. Do not share buyer addresses or take orders outside the maker's system. The buyers waiting for the correct parcel should know exactly what you will return or deliver. Leave the parcel dispatch work area clean and keep any names, images or personal details private.",
+      "who_pays_you": "Small makers with an order rush pays you because one wrong label sends a personal gift to another home. You ask local makers where dispatch errors occur during peaks. Show a real parcel dispatch sample and explain how many jobs fit in one evening. A parcel dispatch customer who is already busy wants to know you will arrive, finish and hand the work back without another round of chasing. Ask about their parcel dispatch occasion rather than assuming every family follows the same custom.",
+      "how_money_comes": "You charge for a defined shift or per checked parcel. Include parcel dispatch materials, preparation, travel, setup, cleanup and any damaged or rejected pieces. Take an agreed parcel dispatch advance if you must buy customised supplies or reserve an event slot. State the final parcel dispatch booking and change cutoff, then collect the balance at the agreed handover. A seasonal parcel dispatch crowd can make a full diary look profitable until you count hours spent answering messages and fixing last-minute changes.",
+      "what_you_need": "You need order list, packing supplies and a double-check method, the skill to repeat parcel dispatch neatly and a written booking list. Check venue or building permission when the parcel dispatch work uses shared space. Keep parcel dispatch customer items labelled and handle private information only for the job. Do not share buyer addresses or take orders outside the maker's system. Try the whole parcel dispatch task once at the actual scale and hour before accepting a much larger seasonal order.",
+      "first_30_days": [
+        "Ask a maker to show the current order-to-parcel process.",
+        "Build a simple double-check with fictional orders.",
+        "Run a paid short shift with one approving contact.",
+        "Record each labelled parcel and courier handover.",
+        "Count mistakes and bottlenecks before the next rush."
+      ],
+      "what_hurts": "One wrong label sends a personal gift to another home. Do not share buyer addresses or take orders outside the maker's system. The short parcel dispatch window puts several buyers on the same evening. A late parcel dispatch material delivery or a changed name can upset the plan, and your own family time may shrink. Say early when a parcel dispatch request no longer fits, rather than taking an advance and hoping. Record the approved parcel dispatch scope and tell the buyer promptly if something is damaged or delayed.",
+      "verdict": "Build this if you can deliver a seasonal packing and dispatch shift carefully within a real seasonal deadline. Walk away if you cannot keep addresses private and match each order. The gift buyer may be waiting in another city.",
+      "faq": [
+        {
+          "q": "Can I print courier labels from my account?",
+          "a": "Prefer the maker's approved shipping process and access. Agree who buys postage and owns tracking. Do not move private buyer data into a personal account casually."
+        },
+        {
+          "q": "What if two customers ordered the same item?",
+          "a": "Check the order number, variant and address separately. Similar products make a label swap easy during a rush. A second check helps."
+        },
+        {
+          "q": "Who handles a lost parcel?",
+          "a": "The seller and courier follow their agreed process. You can provide the packing and handover record, but should not promise a refund without authority."
+        }
+      ],
+      "validate_prompt": "I want to help small Indian makers pack festive orders after work. How should I set a parcel checklist and protect addresses?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    }
+  ]
+}
