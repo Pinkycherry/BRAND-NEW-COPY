@@ -1,0 +1,547 @@
+{
+  "subcategory": {
+    "code": "C002-S02",
+    "intro": "You walk past a weekend market and the smell of something hot makes you stop, even though you planned to go straight home. A small food stall can begin from that moment, but the real work starts before anyone takes a bite. You need a permitted place, safe preparation, enough water and a plan for the food that does not sell. A queue in one good photograph does not tell you whether the morning paid for itself.\n\nChoose one simple dish and one crowd you can observe. Visit the proposed spot on the same day and hour you would trade. Notice when people arrive, what they carry, where they stand and whether there is power, clean water and waste collection. Ask the organiser or local authority about permission for the space. Check the applicable FSSAI registration or licence for your temporary food operation before selling; being open only on weekends does not remove food safety duties. Learn the rules for the particular venue and food you plan to serve.\n\nMake a small batch and measure the whole day: buying ingredients, carrying equipment, keeping food at suitable conditions, serving, cleaning and bringing leftovers home. Tell customers clearly what is in the dish and handle allergy questions honestly. A family with a child should be able to see where their food was made and how it is served. If a crowd arrives suddenly, a narrow menu helps you protect hygiene and give a calm answer.\n\nThe ten paths below have different locations and production rhythms. A morning idli table depends on early preparation; a roasted corn stand depends on weather; a runner's breakfast is tied to an event finish time. Pick a product you can make consistently and a location you can use legitimately. One safe, modest weekend teaches you more than a large launch that exhausts you.",
+    "how_to_choose": "Visit the spot first and count what you would need to carry, store and clean. If you have only a few hours, a prepared item with safe holding may suit you better than a dish assembled for each customer. If a product needs cold storage or constant heat, check whether the venue can support it. Ask the organiser about stall rent, power, water, waste and cancellation. Confirm your food registration or licence path and local permissions before taking money. Price each serving after including ingredients, packaging, travel, unsold food and the whole preparation day. Begin with a small permitted trial and watch where customers wait, ask questions or walk away.",
+    "faq": [
+      {
+        "q": "Does a temporary weekend stall need food registration?",
+        "a": "Yes, temporary food vending falls within food business requirements. Check the applicable FSSAI registration or licence for your operation and the venue's permission before selling. Local site rules may also apply."
+      },
+      {
+        "q": "How do I decide how much to prepare?",
+        "a": "Observe the same venue and time, then start with a modest test batch. Record sales, waste and the hour demand changed. Increase only when your preparation and safe holding can keep up."
+      },
+      {
+        "q": "Can I cook everything at home?",
+        "a": "That depends on the product, your approved food operation and how it travels and is held. Check the applicable requirements. Food that was safe when packed can become unsafe after hours in heat."
+      },
+      {
+        "q": "What if rain cancels the market?",
+        "a": "Ask the organiser about refund or transfer terms before paying for a spot. Choose ingredients and a batch size that limit loss, but do not sell compromised leftovers later to recover money."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C002-S02-I01",
+      "slug": "saturday-idli-commuter-table",
+      "title": "Saturday Idli Commuter Table",
+      "hook": "You leave for the bus early on Saturday and wish there were a warm breakfast you could eat quickly.",
+      "summary": "You offer fresh idli and a small chutney portion at a permitted stall near a weekend bus route for early commuters. A small, safely held batch of idli plates gives somebody a welcome pause in their weekend. Count idli plate ingredients, stall costs and leftovers before deciding whether to repeat the day.",
+      "what_it_is": "You leave for the bus early on Saturday and wish there were a warm breakfast you could eat quickly. You plan the idli plate stall around that moment. Before trading, you start steaming early and pack in small timed batches. Test how to serve a fixed plate quickly without letting chutney sit warm too long. Check who controls the permitted stall near a weekend bus route, which equipment is allowed and where clean water and waste go. Confirm the applicable food registration or licence for the idli plate operation. At your idli plate stall, give a clear portion and ingredient answer without rushing hygiene when a line forms. Do not carry unsold chutney into the next weekend. A first weekend shows what happens to the idli plates in real weather and crowd conditions.",
+      "who_pays_you": "Early commuters pay you when they want fresh idli and a small chutney portion without a long wait or uncertain handling. You observe bus departures and ask the site manager about trading space. Visit the area where you hope to sell idli plate at the same weekend hour and watch where customers pause. One person may buy on impulse, but a return buyer remembers whether the idli plate was consistent and the counter felt clean. Ask the organiser what other food sellers are allowed at the permitted stall near a weekend bus route.",
+      "how_money_comes": "You earn per plate during a short morning window. Include idli plate ingredients, fuel, packaging, stall fee, travel, registration costs and waste in the calculation. Keep a tally of idli plates made and sold each hour. If an organiser buys idli plates in advance, agree on count and leftovers in writing. If customers pay directly for the idli plate, keep the price visible and use your approved payment method.",
+      "what_you_need": "Your setup needs steamer, safe water, clean serving kit and suitable temperature control, a permitted place and the applicable food registration or licence. Practise packing, setting up and cleaning the idli plate stall before inviting buyers. Keep idli plate ingredients traceable, water safe and utensils clean. Do not carry unsold chutney into the next weekend. Ask the organiser whether the permitted stall near a weekend bus route has power, drainage and waste collection before food is prepared.",
+      "first_30_days": [
+        "Observe the Saturday bus crowd before choosing a spot.",
+        "Test a small batch and the travel time from kitchen to stall.",
+        "Confirm the food registration and trading permission needed.",
+        "Sell a limited paid morning batch with a clear menu.",
+        "Record sold plates, waste and the busiest departure times."
+      ],
+      "what_hurts": "A late batch misses the commuter rush and wet chutney spoils faster. Do not carry unsold chutney into the next weekend. The permitted stall near a weekend bus route schedule may change and a sudden queue can make safe handling harder. Unsold idli plates cost money, but selling food outside safe conditions is worse. The idli plate stall also claims shopping, preparation and cleanup time from your week. Begin with a batch you can manage and count the idli plates you discard as honestly as the money collected.",
+      "verdict": "Build this if you can make a safe, consistent idli plate and run the weekend setup without rushing. Walk away if you cannot hold the chutney safely through the morning. A commuter needs a dependable plate before the bus leaves.",
+      "faq": [
+        {
+          "q": "Can I prepare the chutney the night before?",
+          "a": "Use a tested, compliant preparation and holding process. A fresh chutney can spoil quickly in heat. Do not assume the previous night's batch is safe without proper control."
+        },
+        {
+          "q": "How many plate choices should I offer?",
+          "a": "Start with one plain plate and an approved accompaniment. A commuter wants a quick, clear choice. Extra variants slow service and complicate safe holding."
+        },
+        {
+          "q": "What if the bus stand does not allow stalls?",
+          "a": "Find a permitted nearby market or organiser-run space. A busy footpath is not automatically available for trading, and losing the spot can waste prepared food."
+        }
+      ],
+      "validate_prompt": "I want to test a Saturday idli breakfast stall in India. How should I confirm space, food requirements and safe batch size?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "shop",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S02-I02",
+      "slug": "weekend-market-roasted-corn",
+      "title": "Weekend Market Roasted Corn",
+      "hook": "The evening turns cool after rain and a hot bhutta is the one snack you want on the walk home.",
+      "summary": "You offer roasted corn with a simple seasoning choice at a permitted outdoor market edge for families leaving a weekend market. A small, safely held batch of corn cobs gives somebody a welcome pause in their weekend. Count roasted corn ingredients, stall costs and leftovers before deciding whether to repeat the day.",
+      "what_it_is": "The evening turns cool after rain and a hot bhutta is the one snack you want on the walk home. You plan the roasted corn stall around that moment. Before trading, you buy sound cobs, store them cleanly and roast in small batches. Test how to serve hot corn with clean hands and a visible waste bin. Check who controls the permitted outdoor market edge, which equipment is allowed and where clean water and waste go. Confirm the applicable food registration or licence for the roasted corn operation. At your roasted corn stall, give a clear portion and ingredient answer without rushing hygiene when a line forms. Do not light equipment until the venue confirms fire and fuel rules. A first weekend shows what happens to the corn cobs in real weather and crowd conditions.",
+      "who_pays_you": "Families leaving a weekend market pay you when they want roasted corn with a simple seasoning choice without a long wait or uncertain handling. You ask a market organiser about fire rules and permitted locations. Visit the area where you hope to sell roasted corn at the same weekend hour and watch where customers pause. One person may buy on impulse, but a return buyer remembers whether the roasted corn was consistent and the counter felt clean. Ask the organiser what other food sellers are allowed at the permitted outdoor market edge.",
+      "how_money_comes": "You earn per cob with a weather-aware stock plan. Include roasted corn ingredients, fuel, packaging, stall fee, travel, registration costs and waste in the calculation. Keep a tally of corn cobs made and sold each hour. If an organiser buys corn cobs in advance, agree on count and leftovers in writing. If customers pay directly for the roasted corn, keep the price visible and use your approved payment method.",
+      "what_you_need": "Your setup needs safe roasting setup, fuel permission, tongs and waste handling, a permitted place and the applicable food registration or licence. Practise packing, setting up and cleaning the roasted corn stall before inviting buyers. Keep roasted corn ingredients traceable, water safe and utensils clean. Do not light equipment until the venue confirms fire and fuel rules. Ask the organiser whether the permitted outdoor market edge has power, drainage and waste collection before food is prepared.",
+      "first_30_days": [
+        "Visit the market in both dry and rainy conditions.",
+        "Ask the organiser about cooking fire, waste and stall permission.",
+        "Test roasting time and a small seasoning menu.",
+        "Trade one permitted weekend with modest cob stock.",
+        "Count spoilage and observe when the family crowd arrives."
+      ],
+      "what_hurts": "Rain can stop footfall and an open flame may be prohibited. Do not light equipment until the venue confirms fire and fuel rules. The permitted outdoor market edge schedule may change and a sudden queue can make safe handling harder. Unsold corn cobs cost money, but selling food outside safe conditions is worse. The roasted corn stall also claims shopping, preparation and cleanup time from your week. Begin with a batch you can manage and count the corn cobs you discard as honestly as the money collected.",
+      "verdict": "Build this if you can make a safe, consistent roasted corn and run the weekend setup without rushing. Walk away if the venue does not permit your roasting equipment. The family wants a hot snack and a safe place to stand.",
+      "faq": [
+        {
+          "q": "Can I roast anywhere near the market?",
+          "a": "No. Get permission for the spot and the cooking equipment. Open flame, smoke and waste may be restricted even when other food stalls operate nearby."
+        },
+        {
+          "q": "How do I plan for rain?",
+          "a": "Start with a small stock and know the organiser cancellation rule. Weather changes demand quickly; do not carry damaged cobs into another sale."
+        },
+        {
+          "q": "Should I offer many seasonings?",
+          "a": "Begin with a few clear choices and keep utensils clean. A busy line is easier to serve safely when you can repeat a simple process."
+        }
+      ],
+      "validate_prompt": "I want to sell roasted corn at a permitted weekend market in India. What weather, fire and stock checks should I make?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "shop",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S02-I03",
+      "slug": "sports-ground-fruit-cups",
+      "title": "Sports Ground Fruit Cups",
+      "hook": "Your child finishes a morning match hungry, and the only nearby snack has been sitting uncovered in the sun.",
+      "summary": "You offer fresh fruit cups prepared to order at an authorised weekend sports venue for parents and young players. A small, safely held batch of fruit cups gives somebody a welcome pause in their weekend. Count fruit cup ingredients, stall costs and leftovers before deciding whether to repeat the day.",
+      "what_it_is": "Your child finishes a morning match hungry, and the only nearby snack has been sitting uncovered in the sun. You plan the fruit cup stall around that moment. Before trading, you wash and cut fruit under controlled conditions in small batches. Test how to keep portions protected and chilled as needed before serving. Check who controls the authorised weekend sports venue, which equipment is allowed and where clean water and waste go. Confirm the applicable food registration or licence for the fruit cup operation. At your fruit cup stall, give a clear portion and ingredient answer without rushing hygiene when a line forms. Do not sell a cup whose temperature or cleanliness you cannot protect. A first weekend shows what happens to the fruit cups in real weather and crowd conditions.",
+      "who_pays_you": "Parents and young players pay you when they want fresh fruit cups prepared to order without a long wait or uncertain handling. You ask a sports organiser about stall access and match times. Visit the area where you hope to sell fruit cup at the same weekend hour and watch where customers pause. One person may buy on impulse, but a return buyer remembers whether the fruit cup was consistent and the counter felt clean. Ask the organiser what other food sellers are allowed at the authorised weekend sports venue.",
+      "how_money_comes": "You charge per cup and plan around match breaks. Include fruit cup ingredients, fuel, packaging, stall fee, travel, registration costs and waste in the calculation. Keep a tally of fruit cups made and sold each hour. If an organiser buys fruit cups in advance, agree on count and leftovers in writing. If customers pay directly for the fruit cup, keep the price visible and use your approved payment method.",
+      "what_you_need": "Your setup needs safe water, clean cutting tools, protective covers and cold holding, a permitted place and the applicable food registration or licence. Practise packing, setting up and cleaning the fruit cup stall before inviting buyers. Keep fruit cup ingredients traceable, water safe and utensils clean. Do not sell a cup whose temperature or cleanliness you cannot protect. Ask the organiser whether the authorised weekend sports venue has power, drainage and waste collection before food is prepared.",
+      "first_30_days": [
+        "Ask the sports organiser about match breaks and vendor rules.",
+        "Test fruit washing, cutting and safe holding at the venue.",
+        "Confirm registration, water and cold-storage requirements.",
+        "Sell a small batch during one permitted match day.",
+        "Note leftovers and the questions parents ask about ingredients."
+      ],
+      "what_hurts": "Cut fruit can deteriorate quickly in heat and dust. Do not sell a cup whose temperature or cleanliness you cannot protect. The authorised weekend sports venue schedule may change and a sudden queue can make safe handling harder. Unsold fruit cups cost money, but selling food outside safe conditions is worse. The fruit cup stall also claims shopping, preparation and cleanup time from your week. Begin with a batch you can manage and count the fruit cups you discard as honestly as the money collected.",
+      "verdict": "Build this if you can make a safe, consistent fruit cup and run the weekend setup without rushing. Walk away if you cannot protect cut fruit from heat and dust. Parents should see a clean, protected serving process.",
+      "faq": [
+        {
+          "q": "Can I cut fruit hours before the match?",
+          "a": "Plan around safe preparation and cold holding. Cut fruit is perishable; if the venue cannot support the needed conditions, choose another product."
+        },
+        {
+          "q": "Can children serve themselves?",
+          "a": "Keep the serving area controlled and utensils clean. Ask the organiser about venue rules. A parent should be able to see how the fruit is protected."
+        },
+        {
+          "q": "What if matches run late?",
+          "a": "Set a clear safe holding cutoff. A delayed game does not justify selling fruit that has sat too long in heat."
+        }
+      ],
+      "validate_prompt": "I want to sell fruit cups at a weekend sports ground in India. How should I manage permission, water and cold holding?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "shop",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S02-I04",
+      "slug": "craft-fair-regional-snack-packs",
+      "title": "Craft Fair Regional Snack Packs",
+      "hook": "You are browsing a craft fair and want a small savoury bite without leaving your place in the queue.",
+      "summary": "You offer individual regional savoury snack packs at an organiser-approved fair table for craft-fair visitors. A small, safely held batch of savoury snack packs gives somebody a welcome pause in their weekend. Count savoury snack pack ingredients, stall costs and leftovers before deciding whether to repeat the day.",
+      "what_it_is": "You are browsing a craft fair and want a small savoury bite without leaving your place in the queue. You plan the savoury snack pack stall around that moment. Before trading, you prepare a repeatable dry snack and pack each portion cleanly. Test how to offer an easy-to-carry serving with clear ingredients. Check who controls the organiser-approved fair table, which equipment is allowed and where clean water and waste go. Confirm the applicable food registration or licence for the savoury snack pack operation. At your savoury snack pack stall, give a clear portion and ingredient answer without rushing hygiene when a line forms. Do not imply a packaged snack stays fresh indefinitely. A first weekend shows what happens to the savoury snack packs in real weather and crowd conditions.",
+      "who_pays_you": "Craft-fair visitors pay you when they want individual regional savoury snack packs without a long wait or uncertain handling. You ask fair organisers what foods are permitted alongside crafts. Visit the area where you hope to sell savoury snack pack at the same weekend hour and watch where customers pause. One person may buy on impulse, but a return buyer remembers whether the savoury snack pack was consistent and the counter felt clean. Ask the organiser what other food sellers are allowed at the organiser-approved fair table.",
+      "how_money_comes": "You sell portion packs with an agreed fair fee. Include savoury snack pack ingredients, fuel, packaging, stall fee, travel, registration costs and waste in the calculation. Keep a tally of savoury snack packs made and sold each hour. If an organiser buys savoury snack packs in advance, agree on count and leftovers in writing. If customers pay directly for the savoury snack pack, keep the price visible and use your approved payment method.",
+      "what_you_need": "Your setup needs clean packing area, labels and sturdy food-safe sleeves, a permitted place and the applicable food registration or licence. Practise packing, setting up and cleaning the savoury snack pack stall before inviting buyers. Keep savoury snack pack ingredients traceable, water safe and utensils clean. Do not imply a packaged snack stays fresh indefinitely. Ask the organiser whether the organiser-approved fair table has power, drainage and waste collection before food is prepared.",
+      "first_30_days": [
+        "Choose one snack that travels well and test its packaging.",
+        "Ask organisers about food vending and stall conditions.",
+        "Confirm the applicable food registration and label needs.",
+        "Sell one small paid batch at a permitted fair.",
+        "Check breakage, stale returns and unsold packs."
+      ],
+      "what_hurts": "A pack may break or turn stale during a long fair day. Do not imply a packaged snack stays fresh indefinitely. The organiser-approved fair table schedule may change and a sudden queue can make safe handling harder. Unsold savoury snack packs cost money, but selling food outside safe conditions is worse. The savoury snack pack stall also claims shopping, preparation and cleanup time from your week. Begin with a batch you can manage and count the savoury snack packs you discard as honestly as the money collected.",
+      "verdict": "Build this if you can make a safe, consistent savoury snack pack and run the weekend setup without rushing. Walk away if you cannot verify packing conditions or the right to sell at the fair. A broken or stale pack will not win a return visit.",
+      "faq": [
+        {
+          "q": "Can I package snacks at home?",
+          "a": "Confirm the applicable requirements for the food business and preparation place. Test freshness and pack integrity under the fair's actual heat and travel conditions."
+        },
+        {
+          "q": "What ingredients should be listed?",
+          "a": "Give accurate information for your product and follow applicable labelling rules. Be especially careful when a buyer asks about an ingredient they avoid."
+        },
+        {
+          "q": "Will craft buyers also buy food?",
+          "a": "Observe the event rather than assuming. A snack that can be carried while walking may fit, but stall position and timing matter."
+        }
+      ],
+      "validate_prompt": "I want to sell regional snack packs at an Indian craft fair. How should I check food permissions, labels and shelf life?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "shop",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S02-I05",
+      "slug": "sunday-walkers-upma-cups",
+      "title": "Sunday Walkers Upma Cups",
+      "hook": "You finish a long Sunday walk and would gladly sit with a warm breakfast before heading home.",
+      "summary": "You offer a warm upma cup with a simple topping at a permitted market beside a popular walking route for morning walkers and park visitors. A small, safely held batch of upma cups gives somebody a welcome pause in their weekend. Count upma cup ingredients, stall costs and leftovers before deciding whether to repeat the day.",
+      "what_it_is": "You finish a long Sunday walk and would gladly sit with a warm breakfast before heading home. You plan the upma cup stall around that moment. Before trading, you cook close to service time and hold hot portions safely. Test how to serve small cups quickly with clean spoons and a clear allergen note. Check who controls the permitted market beside a popular walking route, which equipment is allowed and where clean water and waste go. Confirm the applicable food registration or licence for the upma cup operation. At your upma cup stall, give a clear portion and ingredient answer without rushing hygiene when a line forms. Do not sell food held without adequate temperature control. A first weekend shows what happens to the upma cups in real weather and crowd conditions.",
+      "who_pays_you": "Morning walkers and park visitors pay you when they want a warm upma cup with a simple topping without a long wait or uncertain handling. You observe when walkers exit and ask the venue about breakfast trade. Visit the area where you hope to sell upma cup at the same weekend hour and watch where customers pause. One person may buy on impulse, but a return buyer remembers whether the upma cup was consistent and the counter felt clean. Ask the organiser what other food sellers are allowed at the permitted market beside a popular walking route.",
+      "how_money_comes": "You earn per cup during a narrow breakfast period. Include upma cup ingredients, fuel, packaging, stall fee, travel, registration costs and waste in the calculation. Keep a tally of upma cups made and sold each hour. If an organiser buys upma cups in advance, agree on count and leftovers in writing. If customers pay directly for the upma cup, keep the price visible and use your approved payment method.",
+      "what_you_need": "Your setup needs hot holding, safe water, handwashing and protected cups, a permitted place and the applicable food registration or licence. Practise packing, setting up and cleaning the upma cup stall before inviting buyers. Keep upma cup ingredients traceable, water safe and utensils clean. Do not sell food held without adequate temperature control. Ask the organiser whether the permitted market beside a popular walking route has power, drainage and waste collection before food is prepared.",
+      "first_30_days": [
+        "Watch one Sunday exit flow before choosing the menu.",
+        "Test cooking and serving a small batch at the same hour.",
+        "Confirm permitted space and food registration.",
+        "Sell a limited hot batch and record serving speed.",
+        "Measure what was left and adjust the following weekend quantity."
+      ],
+      "what_hurts": "A quiet or rainy Sunday leaves cooked food unsold. Do not sell food held without adequate temperature control. The permitted market beside a popular walking route schedule may change and a sudden queue can make safe handling harder. Unsold upma cups cost money, but selling food outside safe conditions is worse. The upma cup stall also claims shopping, preparation and cleanup time from your week. Begin with a batch you can manage and count the upma cups you discard as honestly as the money collected.",
+      "verdict": "Build this if you can make a safe, consistent upma cup and run the weekend setup without rushing. Walk away if you cannot keep the cooked upma safely hot. A walker should not have to gamble on a warm cup.",
+      "faq": [
+        {
+          "q": "Can I cook upma at home and bring it hot?",
+          "a": "Only with a tested transport and holding process that keeps it safe. If you cannot maintain proper conditions, cook at an approved site or change the menu."
+        },
+        {
+          "q": "Should I add several toppings?",
+          "a": "Keep the first menu narrow and list ingredients clearly. More bowls and utensils slow a one-person stall and increase hygiene work."
+        },
+        {
+          "q": "What if the park does not allow vending?",
+          "a": "Look for an approved adjacent market or organised event. A walking crowd does not make park space available for a stall."
+        }
+      ],
+      "validate_prompt": "I want to run a Sunday upma cup stall near a walking route in India. How should I test safe hot holding and demand?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "shop",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S02-I06",
+      "slug": "festival-fair-lemon-water",
+      "title": "Festival Fair Lemon Water Stand",
+      "hook": "The fair is crowded and hot, and you want a simple cool drink whose water you can trust.",
+      "summary": "You offer fresh lemon water mixed in measured batches at an authorised festival refreshment zone for fair visitors in warm weather. A small, safely held batch of lemon water cups gives somebody a welcome pause in their weekend. Count lemon water ingredients, stall costs and leftovers before deciding whether to repeat the day.",
+      "what_it_is": "The fair is crowded and hot, and you want a simple cool drink whose water you can trust. You plan the lemon water stall around that moment. Before trading, you use safe drinking water and prepare small, protected batches. Test how to serve in clean cups with clear ingredients and a waste station. Check who controls the authorised festival refreshment zone, which equipment is allowed and where clean water and waste go. Confirm the applicable food registration or licence for the lemon water operation. At your lemon water stall, give a clear portion and ingredient answer without rushing hygiene when a line forms. Do not use an uncertain water supply to save money. A first weekend shows what happens to the lemon water cups in real weather and crowd conditions.",
+      "who_pays_you": "Fair visitors in warm weather pay you when they want fresh lemon water mixed in measured batches without a long wait or uncertain handling. You ask the fair committee about water and stall access. Visit the area where you hope to sell lemon water at the same weekend hour and watch where customers pause. One person may buy on impulse, but a return buyer remembers whether the lemon water was consistent and the counter felt clean. Ask the organiser what other food sellers are allowed at the authorised festival refreshment zone.",
+      "how_money_comes": "You earn per cup while budgeting ice, water and unused lemons. Include lemon water ingredients, fuel, packaging, stall fee, travel, registration costs and waste in the calculation. Keep a tally of lemon water cups made and sold each hour. If an organiser buys lemon water cups in advance, agree on count and leftovers in writing. If customers pay directly for the lemon water, keep the price visible and use your approved payment method.",
+      "what_you_need": "Your setup needs verified potable water, clean vessels, covered ice and cup disposal, a permitted place and the applicable food registration or licence. Practise packing, setting up and cleaning the lemon water stall before inviting buyers. Keep lemon water ingredients traceable, water safe and utensils clean. Do not use an uncertain water supply to save money. Ask the organiser whether the authorised festival refreshment zone has power, drainage and waste collection before food is prepared.",
+      "first_30_days": [
+        "Check the fair water, waste and stall rules.",
+        "Test a measured recipe and safe batch holding.",
+        "Confirm registration and ingredient handling needs.",
+        "Sell a modest batch at one authorised event.",
+        "Record demand by hour and discard unsuitable leftovers."
+      ],
+      "what_hurts": "Ice and water handling can undo an otherwise simple drink. Do not use an uncertain water supply to save money. The authorised festival refreshment zone schedule may change and a sudden queue can make safe handling harder. Unsold lemon water cups cost money, but selling food outside safe conditions is worse. The lemon water stall also claims shopping, preparation and cleanup time from your week. Begin with a batch you can manage and count the lemon water cups you discard as honestly as the money collected.",
+      "verdict": "Build this if you can make a safe, consistent lemon water and run the weekend setup without rushing. Walk away if you are unsure that the water and ice are suitable for drinking. A thirsty visitor is trusting the water you serve.",
+      "faq": [
+        {
+          "q": "Can I use ice from any nearby vendor?",
+          "a": "Use ice suitable for food and handle it cleanly. Ask the supplier about the water and transport. An unknown supplier is not worth the risk."
+        },
+        {
+          "q": "Should I premix a very large container?",
+          "a": "Start with smaller batches you can protect and serve promptly. A large open vessel in heat and dust makes safe handling harder."
+        },
+        {
+          "q": "What if the organiser supplies water?",
+          "a": "Check that it is suitable for drinking and your preparation process. Do not assume every tap at a fair is meant for food use."
+        }
+      ],
+      "validate_prompt": "I want to sell lemon water at a permitted Indian festival fair. How should I verify drinking water and handle ice?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "shop",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S02-I07",
+      "slug": "farmers-market-millet-breakfast",
+      "title": "Farmers Market Millet Breakfast Bowl",
+      "hook": "You buy vegetables at the Sunday market and wish there were a filling breakfast before the trip home.",
+      "summary": "You offer a small millet breakfast bowl at a permitted food corner in a weekly produce market for farmers-market shoppers. A small, safely held batch of millet bowls gives somebody a welcome pause in their weekend. Count millet bowl ingredients, stall costs and leftovers before deciding whether to repeat the day.",
+      "what_it_is": "You buy vegetables at the Sunday market and wish there were a filling breakfast before the trip home. You plan the millet bowl stall around that moment. Before trading, you cook a consistent batch and prepare a few fresh toppings. Test how to serve one clear portion with ingredient information. Check who controls the permitted food corner in a weekly produce market, which equipment is allowed and where clean water and waste go. Confirm the applicable food registration or licence for the millet bowl operation. At your millet bowl stall, give a clear portion and ingredient answer without rushing hygiene when a line forms. Do not make unsupported health claims about millet. A first weekend shows what happens to the millet bowls in real weather and crowd conditions.",
+      "who_pays_you": "Farmers-market shoppers pay you when they want a small millet breakfast bowl without a long wait or uncertain handling. You ask organisers about food corners and shopper timing. Visit the area where you hope to sell millet bowl at the same weekend hour and watch where customers pause. One person may buy on impulse, but a return buyer remembers whether the millet bowl was consistent and the counter felt clean. Ask the organiser what other food sellers are allowed at the permitted food corner in a weekly produce market.",
+      "how_money_comes": "You charge per bowl and adjust quantity from observed sales. Include millet bowl ingredients, fuel, packaging, stall fee, travel, registration costs and waste in the calculation. Keep a tally of millet bowls made and sold each hour. If an organiser buys millet bowls in advance, agree on count and leftovers in writing. If customers pay directly for the millet bowl, keep the price visible and use your approved payment method.",
+      "what_you_need": "Your setup needs safe cooking, hot holding, clean toppings and washing facilities, a permitted place and the applicable food registration or licence. Practise packing, setting up and cleaning the millet bowl stall before inviting buyers. Keep millet bowl ingredients traceable, water safe and utensils clean. Do not make unsupported health claims about millet. Ask the organiser whether the permitted food corner in a weekly produce market has power, drainage and waste collection before food is prepared.",
+      "first_30_days": [
+        "Taste-test one simple bowl with nearby shoppers.",
+        "Check the market food space and permission terms.",
+        "Plan safe preparation and a small first batch.",
+        "Sell at one market day and note repeat interest.",
+        "Review ingredient cost, leftovers and topping questions."
+      ],
+      "what_hurts": "A niche ingredient story may distract from whether the food tastes good. Do not make unsupported health claims about millet. The permitted food corner in a weekly produce market schedule may change and a sudden queue can make safe handling harder. Unsold millet bowls cost money, but selling food outside safe conditions is worse. The millet bowl stall also claims shopping, preparation and cleanup time from your week. Begin with a batch you can manage and count the millet bowls you discard as honestly as the money collected.",
+      "verdict": "Build this if you can make a safe, consistent millet bowl and run the weekend setup without rushing. Walk away if you need unverified health claims to persuade buyers. Shoppers return for flavour and a clear portion.",
+      "faq": [
+        {
+          "q": "Will shoppers pay for an unfamiliar millet dish?",
+          "a": "Offer a clear description and a small taste where allowed. Let flavour and convenience speak; do not rely on broad health promises."
+        },
+        {
+          "q": "Can I use vegetables from market stalls?",
+          "a": "Yes, if the quality and handling suit the recipe. Wash and store them properly, and keep purchasing records for consistent batches."
+        },
+        {
+          "q": "Should I change the bowl every week?",
+          "a": "Keep a dependable base first. Seasonal variation can come later if you can test each ingredient and still serve a familiar meal efficiently."
+        }
+      ],
+      "validate_prompt": "I want to test a millet breakfast bowl at an Indian farmers market. How should I position the dish without health claims?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "shop",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S02-I08",
+      "slug": "weekend-exhibition-chai-bun",
+      "title": "Exhibition Chai and Bun Counter",
+      "hook": "You have walked the exhibition for an hour and want a quick chai without leaving the hall.",
+      "summary": "You offer chai with a simple bun option at an organiser-approved indoor refreshment counter for exhibition visitors and stallholders. A small, safely held batch of chai cups and buns gives somebody a welcome pause in their weekend. Count chai and bun ingredients, stall costs and leftovers before deciding whether to repeat the day.",
+      "what_it_is": "You have walked the exhibition for an hour and want a quick chai without leaving the hall. You plan the chai and bun stall around that moment. Before trading, you brew in small hot batches and confirm indoor cooking rules. Test how to serve a quick combination with separate plain options. Check who controls the organiser-approved indoor refreshment counter, which equipment is allowed and where clean water and waste go. Confirm the applicable food registration or licence for the chai and bun operation. At your chai and bun stall, give a clear portion and ingredient answer without rushing hygiene when a line forms. Do not bring a burner or kettle where the hall has prohibited it. A first weekend shows what happens to the chai cups and buns in real weather and crowd conditions.",
+      "who_pays_you": "Exhibition visitors and stallholders pay you when they want chai with a simple bun option without a long wait or uncertain handling. You ask exhibition organisers about vendor exclusivity and power. Visit the area where you hope to sell chai and bun at the same weekend hour and watch where customers pause. One person may buy on impulse, but a return buyer remembers whether the chai and bun was consistent and the counter felt clean. Ask the organiser what other food sellers are allowed at the organiser-approved indoor refreshment counter.",
+      "how_money_comes": "You earn per cup or combo after stall rent and supply costs. Include chai and bun ingredients, fuel, packaging, stall fee, travel, registration costs and waste in the calculation. Keep a tally of chai cups and buns made and sold each hour. If an organiser buys chai cups and buns in advance, agree on count and leftovers in writing. If customers pay directly for the chai and bun, keep the price visible and use your approved payment method.",
+      "what_you_need": "Your setup needs safe hot-water equipment, clean cups and approved power, a permitted place and the applicable food registration or licence. Practise packing, setting up and cleaning the chai and bun stall before inviting buyers. Keep chai and bun ingredients traceable, water safe and utensils clean. Do not bring a burner or kettle where the hall has prohibited it. Ask the organiser whether the organiser-approved indoor refreshment counter has power, drainage and waste collection before food is prepared.",
+      "first_30_days": [
+        "Ask the organiser about food exclusivity, power and waste.",
+        "Observe visitor breaks at a similar exhibition.",
+        "Test a small chai batch and fast serving setup.",
+        "Trade one approved event with a narrow menu.",
+        "Check rent, sold cups and leftover milk after closing."
+      ],
+      "what_hurts": "An exclusive caterer contract may block your counter. Do not bring a burner or kettle where the hall has prohibited it. The organiser-approved indoor refreshment counter schedule may change and a sudden queue can make safe handling harder. Unsold chai cups and buns cost money, but selling food outside safe conditions is worse. The chai and bun stall also claims shopping, preparation and cleanup time from your week. Begin with a batch you can manage and count the chai cups and buns you discard as honestly as the money collected.",
+      "verdict": "Build this if you can make a safe, consistent chai and bun and run the weekend setup without rushing. Walk away if the exhibition cannot approve food or power for your counter. A visitor needs a quick cup without a spill in the hall.",
+      "faq": [
+        {
+          "q": "Can I use an electric kettle in any hall?",
+          "a": "Only with organiser approval and a safe power arrangement. Indoor venues may have strict rules about appliances, liquids and fire."
+        },
+        {
+          "q": "What if another caterer has exclusive rights?",
+          "a": "Respect the contract and find a different event. Paying for a counter without checking exclusivity can leave you unable to trade."
+        },
+        {
+          "q": "Should buns be included in every sale?",
+          "a": "Offer the pairing clearly but allow a plain drink if it fits your menu. Track what visitors actually buy before ordering many buns."
+        }
+      ],
+      "validate_prompt": "I want a chai and bun counter at weekend exhibitions in India. Which organiser permissions and costs should I check?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "shop",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S02-I09",
+      "slug": "local-run-finish-line-poha",
+      "title": "Local Run Finish Line Poha",
+      "hook": "You finish a community run hungry, and a familiar breakfast would be welcome before the ride home.",
+      "summary": "You offer poha portions for a run finish area at an approved community-run food zone for runners and their families. A small, safely held batch of poha portions gives somebody a welcome pause in their weekend. Count poha portion ingredients, stall costs and leftovers before deciding whether to repeat the day.",
+      "what_it_is": "You finish a community run hungry, and a familiar breakfast would be welcome before the ride home. You plan the poha portion stall around that moment. Before trading, you time cooking and transport to the actual finish window. Test how to serve small, easy-to-carry portions with ingredients visible. Check who controls the approved community-run food zone, which equipment is allowed and where clean water and waste go. Confirm the applicable food registration or licence for the poha portion operation. At your poha portion stall, give a clear portion and ingredient answer without rushing hygiene when a line forms. Do not market the dish as a medical recovery product. A first weekend shows what happens to the poha portions in real weather and crowd conditions.",
+      "who_pays_you": "Runners and their families pay you when they want poha portions for a run finish area without a long wait or uncertain handling. You ask a run organiser how food vendors are selected. Visit the area where you hope to sell poha portion at the same weekend hour and watch where customers pause. One person may buy on impulse, but a return buyer remembers whether the poha portion was consistent and the counter felt clean. Ask the organiser what other food sellers are allowed at the approved community-run food zone.",
+      "how_money_comes": "You sell prepaid portions to the organiser or per cup with permission. Include poha portion ingredients, fuel, packaging, stall fee, travel, registration costs and waste in the calculation. Keep a tally of poha portions made and sold each hour. If an organiser buys poha portions in advance, agree on count and leftovers in writing. If customers pay directly for the poha portion, keep the price visible and use your approved payment method.",
+      "what_you_need": "Your setup needs safe holding, clear batch count and a fast serving table, a permitted place and the applicable food registration or licence. Practise packing, setting up and cleaning the poha portion stall before inviting buyers. Keep poha portion ingredients traceable, water safe and utensils clean. Do not market the dish as a medical recovery product. Ask the organiser whether the approved community-run food zone has power, drainage and waste collection before food is prepared.",
+      "first_30_days": [
+        "Speak with an organiser about finish times and food rules.",
+        "Test a batch held for the actual travel and serving period.",
+        "Agree on per-portion or direct-sale terms in writing.",
+        "Serve a small approved run and record waste.",
+        "Ask whether runners wanted the portion and timing you offered."
+      ],
+      "what_hurts": "Finish times vary and the first rush may be followed by silence. Do not market the dish as a medical recovery product. The approved community-run food zone schedule may change and a sudden queue can make safe handling harder. Unsold poha portions cost money, but selling food outside safe conditions is worse. The poha portion stall also claims shopping, preparation and cleanup time from your week. Begin with a batch you can manage and count the poha portions you discard as honestly as the money collected.",
+      "verdict": "Build this if you can make a safe, consistent poha portion and run the weekend setup without rushing. Walk away if you cannot hold the food safely until runners finish. The runner should receive the meal at the promised time.",
+      "faq": [
+        {
+          "q": "Can the organiser pay for all portions?",
+          "a": "Yes, if you agree on count, delivery, payment and leftover responsibility. Otherwise direct sales need a permitted spot and clear terms."
+        },
+        {
+          "q": "What if runners finish later than planned?",
+          "a": "Use a safe holding cutoff and communicate it to the organiser. A later finish does not justify serving food outside safe conditions."
+        },
+        {
+          "q": "May I call poha a recovery meal?",
+          "a": "Describe ingredients and the serving honestly. Avoid medical or performance claims unless you have a qualified basis and the relevant approvals."
+        }
+      ],
+      "validate_prompt": "I want to serve poha at a local weekend run in India. How should I contract portions and protect food during variable finish times?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "shop",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S02-I10",
+      "slug": "monsoon-market-soup-cups",
+      "title": "Monsoon Market Soup Cups",
+      "hook": "Your clothes are damp from the rain, and a cup of hot soup sounds better than another cold snack.",
+      "summary": "You offer one hot seasonal soup in covered cups at a covered and authorised market stall for rainy-day market visitors. A small, safely held batch of soup cups gives somebody a welcome pause in their weekend. Count soup cup ingredients, stall costs and leftovers before deciding whether to repeat the day.",
+      "what_it_is": "Your clothes are damp from the rain, and a cup of hot soup sounds better than another cold snack. You plan the soup cup stall around that moment. Before trading, you cook a tested recipe and keep it hot through uncertain footfall. Test how to pour clean single servings with a secure lid. Check who controls the covered and authorised market stall, which equipment is allowed and where clean water and waste go. Confirm the applicable food registration or licence for the soup cup operation. At your soup cup stall, give a clear portion and ingredient answer without rushing hygiene when a line forms. Do not keep a lukewarm batch to sell the next day. A first weekend shows what happens to the soup cups in real weather and crowd conditions.",
+      "who_pays_you": "Rainy-day market visitors pay you when they want one hot seasonal soup in covered cups without a long wait or uncertain handling. You ask the covered market about hot-food equipment and drainage. Visit the area where you hope to sell soup cup at the same weekend hour and watch where customers pause. One person may buy on impulse, but a return buyer remembers whether the soup cup was consistent and the counter felt clean. Ask the organiser what other food sellers are allowed at the covered and authorised market stall.",
+      "how_money_comes": "You earn per cup with a small weather-led batch plan. Include soup cup ingredients, fuel, packaging, stall fee, travel, registration costs and waste in the calculation. Keep a tally of soup cups made and sold each hour. If an organiser buys soup cups in advance, agree on count and leftovers in writing. If customers pay directly for the soup cup, keep the price visible and use your approved payment method.",
+      "what_you_need": "Your setup needs safe hot holding, spill-proof cups and waste handling, a permitted place and the applicable food registration or licence. Practise packing, setting up and cleaning the soup cup stall before inviting buyers. Keep soup cup ingredients traceable, water safe and utensils clean. Do not keep a lukewarm batch to sell the next day. Ask the organiser whether the covered and authorised market stall has power, drainage and waste collection before food is prepared.",
+      "first_30_days": [
+        "Observe a covered market during a real rainy weekend.",
+        "Confirm hot-food, power and waste permissions.",
+        "Test cup lids and safe hot holding during transport.",
+        "Sell a small permitted batch with one soup choice.",
+        "Record spills, leftovers and visitor timing."
+      ],
+      "what_hurts": "Rain helps cravings but can also close access roads. Do not keep a lukewarm batch to sell the next day. The covered and authorised market stall schedule may change and a sudden queue can make safe handling harder. Unsold soup cups cost money, but selling food outside safe conditions is worse. The soup cup stall also claims shopping, preparation and cleanup time from your week. Begin with a batch you can manage and count the soup cups you discard as honestly as the money collected.",
+      "verdict": "Build this if you can make a safe, consistent soup cup and run the weekend setup without rushing. Walk away if you plan to resell a lukewarm batch after the market closes. Rain is a reason to be careful with transport and heat.",
+      "faq": [
+        {
+          "q": "Can I sell soup from a flask?",
+          "a": "Only if the equipment maintains the food safely for the entire serving window. Test temperature and handling, and do not use a household flask as an unexamined shortcut."
+        },
+        {
+          "q": "What if the market closes in heavy rain?",
+          "a": "Know the organiser cancellation terms and keep the first batch small. Do not count on recovering a loss by selling old soup later."
+        },
+        {
+          "q": "Should I offer many flavours?",
+          "a": "One well-tested soup is easier to make, hold and describe. Add another only when your setup can maintain quality and serving speed."
+        }
+      ],
+      "validate_prompt": "I want to sell a hot soup cup at a covered weekend market in India. How should I test lids, hot holding and rain cancellations?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "shop",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    }
+  ]
+}
