@@ -1,0 +1,507 @@
+{
+  "subcategory": {
+    "code": "C012-S08",
+    "intro": "Freelance Coding Project starts with a nearby problem that people already spend time solving. A freelance coder is paid to make one workflow work reliably, then leave the client able to run it. A small clear project can be more valuable than a broad rebuild. The useful first question is where a resident currently goes, what the trip or wait costs in time, and whether a small operator can do one task reliably. Walk the intended service area and speak to potential customers before buying equipment. Ask for the last occasion when they needed help, how they found a provider, and what made the experience difficult. A booking that someone is willing to pay for teaches more than a general expression of interest. Keep the opening menu narrow enough to finish, price and explain without confusion. Travel, idle time, supplies, cleaning and returns all consume capacity even when the visible task is short. Set a clear radius and appointment window, and record actual time from first message to final handover. Confirm access to a work area, the customer's instructions, payment responsibility and a practical cancellation rule before committing. Keep names, addresses and other personal details only as needed for the booking. Use secure credentials, respect data access and test failures. Never promise a system is secure without appropriate review. Start with a few paid trials, then decide whether repeat work is frequent enough to support regular hours. Local demand may differ by housing density, transport, seasons and competing providers. A promise of convenience is only valuable when the customer can trust the result and knows what happens if something goes wrong.",
+    "how_to_choose": "Define inputs, outputs, access and a test that proves completion. Include documentation and a maintenance handover in the quote. Compare options by the number of paid bookings you can group within a short route, the tools you already know how to use, and the time a customer can realistically wait. Write down one included task and one excluded task for each option. Check access, hygiene, consent and any applicable local permission before selling. Use a small paid trial to measure travel, preparation, work and follow-up. Choose the service whose quality you can repeat without relying on a perfect day.",
+    "faq": [
+      {
+        "q": "Can I start freelance coding project from home?",
+        "a": "Often the administration can begin at home, but the work site and any storage need to suit the particular service. Check local rules and get permission to use shared space before taking bookings."
+      },
+      {
+        "q": "How should I set the first service area?",
+        "a": "Begin with a compact route you can reach predictably. Measure travel at the hours customers actually want, then expand only when paid demand covers extra time and transport."
+      },
+      {
+        "q": "Should I offer every related service at launch?",
+        "a": "A short menu makes quality, timing and pricing easier to control. Add another task only after you have the necessary skill, equipment and evidence that customers will pay."
+      },
+      {
+        "q": "What should I confirm before an appointment?",
+        "a": "Agree on the task, address or venue, access, time window, complete price and payment contact. Explain cancellation and any limits so a small misunderstanding does not become an unpaid visit."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C012-S08-I01",
+      "slug": "csv-import-cleanup-script",
+      "title": "CSV Import Cleanup Script",
+      "hook": "A business may have years of useful data in untidy files. You offer validated CSV import scripts.",
+      "summary": "You make validated CSV import scripts available for small firms moving rows into a new system. You map columns, clean a sample file and test duplicate handling before the full import. A business may have years of useful data in untidy files.",
+      "what_it_is": "When someone asks for validated CSV import scripts, your day begins with the details of their request. You map columns, clean a sample file and test duplicate handling before the full import. The customer sees the result of validated CSV import scripts before you finish, which helps the service feel trustworthy. Scripting, backup, schema understanding and test data are needed. With csv import cleanup script, a message about timing, price and what is included saves awkward questions at handover. Do not run an irreversible import without a backup. Once validated CSV import scripts is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving small firms moving rows into a new system. Clients want a repeatable import they can inspect. A business may have years of useful data in untidy files. Someone who handled validated CSV import scripts badly last time is likely to notice a careful handover. You can begin csv import cleanup script with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives csv import cleanup script a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge for mapping and tested import volume. The validated CSV import scripts fee also has to pay for your preparation and the part of the day nobody sees. With validated CSV import scripts, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra validated CSV import scripts request is a separate decision, so the customer knows what they are paying for. Repeat csv import cleanup script bookings show whether the work pays. Tap Validate for current csv import cleanup script prices in your area.",
+      "what_you_need": "Scripting, backup, schema understanding and test data are needed. For csv import cleanup script, you need a way for people to book a clear slot and a safe place for equipment after work. Your first validated CSV import scripts customers will also show where your skill stops. Do not run an irreversible import without a backup.",
+      "first_30_days": [
+        "Speak with potential csv import cleanup script customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse validated CSV import scripts while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A wrong mapping can overwrite good records. You feel it immediately when a customer has arranged their day around validated CSV import scripts. Travel for csv import cleanup script, changing instructions and cancellations can use the time that looked like your margin. Do not run an irreversible import without a backup. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which csv import cleanup script depends. For csv import cleanup script, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if clients want a repeatable import they can inspect and you enjoy the routine behind validated CSV import scripts. Walk away if you cannot manage the risk that a wrong mapping can overwrite good records. With csv import cleanup script, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For csv import cleanup script, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not run an irreversible import without a backup. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for validated CSV import scripts first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try csv import cleanup script in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of validated CSV import scripts before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C012-S08-I02",
+      "slug": "booking-calendar-api-connector",
+      "title": "Booking Calendar API Connector",
+      "hook": "A double booking can ruin a customer's day. You offer small booking calendar integrations.",
+      "summary": "You make small booking calendar integrations available for service firms with two calendars that drift apart. You map event fields, test conflicts and log failures for staff to review. A double booking can ruin a customer's day.",
+      "what_it_is": "When someone asks for small booking calendar integrations, your day begins with the details of their request. You map event fields, test conflicts and log failures for staff to review. The customer sees the result of small booking calendar integrations before you finish, which helps the service feel trustworthy. API skill, credentials management and sandbox tests matter. With booking calendar api connector, a message about timing, price and what is included saves awkward questions at handover. Do not store passwords in code. Once small booking calendar integrations is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving service firms with two calendars that drift apart. Clients want an honest status when a booking fails. A double booking can ruin a customer's day. Someone who handled small booking calendar integrations badly last time is likely to notice a careful handover. You can begin booking calendar api connector with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives booking calendar api connector a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge by integration scope and support window. The small booking calendar integrations fee also has to pay for your preparation and the part of the day nobody sees. With small booking calendar integrations, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra small booking calendar integrations request is a separate decision, so the customer knows what they are paying for. Repeat booking calendar api connector bookings show whether the work pays. Tap Validate for current booking calendar api connector prices in your area.",
+      "what_you_need": "API skill, credentials management and sandbox tests matter. For booking calendar api connector, you need a way for people to book a clear slot and a safe place for equipment after work. Your first small booking calendar integrations customers will also show where your skill stops. Do not store passwords in code.",
+      "first_30_days": [
+        "Speak with potential booking calendar api connector customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse small booking calendar integrations while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "An upstream change may break the sync. You feel it immediately when a customer has arranged their day around small booking calendar integrations. Travel for booking calendar api connector, changing instructions and cancellations can use the time that looked like your margin. Do not store passwords in code. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which booking calendar api connector depends. For booking calendar api connector, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if clients want an honest status when a booking fails and you enjoy the routine behind small booking calendar integrations. Walk away if you cannot manage the risk that an upstream change may break the sync. With booking calendar api connector, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For booking calendar api connector, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not store passwords in code. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for small booking calendar integrations first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try booking calendar api connector in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of small booking calendar integrations before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C012-S08-I03",
+      "slug": "small-shop-checkout-bugfix",
+      "title": "Small Shop Checkout Bugfix",
+      "hook": "A buyer who cannot pay will leave. You offer focused checkout error repairs.",
+      "summary": "You make focused checkout error repairs available for online stores losing orders at a payment step. You reproduce the issue in a safe test environment, fix the cause and verify a full test purchase. A buyer who cannot pay will leave.",
+      "what_it_is": "When someone asks for focused checkout error repairs, your day begins with the details of their request. You reproduce the issue in a safe test environment, fix the cause and verify a full test purchase. The customer sees the result of focused checkout error repairs before you finish, which helps the service feel trustworthy. Web debugging, payment sandbox and rollback skill are needed. With small shop checkout bugfix, a message about timing, price and what is included saves awkward questions at handover. Do not test with a real customer's card. Once focused checkout error repairs is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving online stores losing orders at a payment step. Owners want checkout working without risking existing orders. A buyer who cannot pay will leave. Someone who handled focused checkout error repairs badly last time is likely to notice a careful handover. You can begin small shop checkout bugfix with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives small shop checkout bugfix a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge for diagnosis and an agreed repair cap. The focused checkout error repairs fee also has to pay for your preparation and the part of the day nobody sees. With focused checkout error repairs, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra focused checkout error repairs request is a separate decision, so the customer knows what they are paying for. Repeat small shop checkout bugfix bookings show whether the work pays. Tap Validate for current small shop checkout bugfix prices in your area.",
+      "what_you_need": "Web debugging, payment sandbox and rollback skill are needed. For small shop checkout bugfix, you need a way for people to book a clear slot and a safe place for equipment after work. Your first focused checkout error repairs customers will also show where your skill stops. Do not test with a real customer's card.",
+      "first_30_days": [
+        "Speak with potential small shop checkout bugfix customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse focused checkout error repairs while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A plugin update can reintroduce the fault. You feel it immediately when a customer has arranged their day around focused checkout error repairs. Travel for small shop checkout bugfix, changing instructions and cancellations can use the time that looked like your margin. Do not test with a real customer's card. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which small shop checkout bugfix depends. For small shop checkout bugfix, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if owners want checkout working without risking existing orders and you enjoy the routine behind focused checkout error repairs. Walk away if you cannot manage the risk that a plugin update can reintroduce the fault. With small shop checkout bugfix, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For small shop checkout bugfix, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not test with a real customer's card. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for focused checkout error repairs first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try small shop checkout bugfix in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of focused checkout error repairs before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C012-S08-I04",
+      "slug": "daily-report-automation-script",
+      "title": "Daily Report Automation Script",
+      "hook": "A routine report should not consume a person's morning. You offer scheduled report generation scripts.",
+      "summary": "You make scheduled report generation scripts available for managers copying the same data into a daily report. You define the input files, build checks for missing columns and produce a reviewable report. A routine report should not consume a person's morning.",
+      "what_it_is": "When someone asks for scheduled report generation scripts, your day begins with the details of their request. You define the input files, build checks for missing columns and produce a reviewable report. The customer sees the result of scheduled report generation scripts before you finish, which helps the service feel trustworthy. Scripting, data validation and clear error alerts are needed. With daily report automation script, a message about timing, price and what is included saves awkward questions at handover. Do not hide failed inputs behind a blank chart. Once scheduled report generation scripts is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving managers copying the same data into a daily report. Managers want a report they can verify. A routine report should not consume a person's morning. Someone who handled scheduled report generation scripts badly last time is likely to notice a careful handover. You can begin daily report automation script with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives daily report automation script a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge for setup and a defined maintenance period. The scheduled report generation scripts fee also has to pay for your preparation and the part of the day nobody sees. With scheduled report generation scripts, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra scheduled report generation scripts request is a separate decision, so the customer knows what they are paying for. Repeat daily report automation script bookings show whether the work pays. Tap Validate for current daily report automation script prices in your area.",
+      "what_you_need": "Scripting, data validation and clear error alerts are needed. For daily report automation script, you need a way for people to book a clear slot and a safe place for equipment after work. Your first scheduled report generation scripts customers will also show where your skill stops. Do not hide failed inputs behind a blank chart.",
+      "first_30_days": [
+        "Speak with potential daily report automation script customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse scheduled report generation scripts while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A changed file format can quietly misstate totals. You feel it immediately when a customer has arranged their day around scheduled report generation scripts. Travel for daily report automation script, changing instructions and cancellations can use the time that looked like your margin. Do not hide failed inputs behind a blank chart. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which daily report automation script depends. For daily report automation script, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if managers want a report they can verify and you enjoy the routine behind scheduled report generation scripts. Walk away if you cannot manage the risk that a changed file format can quietly misstate totals. With daily report automation script, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For daily report automation script, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not hide failed inputs behind a blank chart. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for scheduled report generation scripts first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try daily report automation script in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of scheduled report generation scripts before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C012-S08-I05",
+      "slug": "form-validation-component-build",
+      "title": "Form Validation Component Build",
+      "hook": "A customer should know what to correct before sending. You offer accessible form validation components.",
+      "summary": "You make accessible form validation components available for small sites receiving incomplete enquiry forms. You identify required fields, add clear error messages and test keyboard and phone use. A customer should know what to correct before sending.",
+      "what_it_is": "When someone asks for accessible form validation components, your day begins with the details of their request. You identify required fields, add clear error messages and test keyboard and phone use. The customer sees the result of accessible form validation components before you finish, which helps the service feel trustworthy. Front-end coding, accessibility and security awareness matter. With form validation component build, a message about timing, price and what is included saves awkward questions at handover. Do not collect fields the business does not need. Once accessible form validation components is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving small sites receiving incomplete enquiry forms. Owners want useful enquiries without frustrating people. A customer should know what to correct before sending. Someone who handled accessible form validation components badly last time is likely to notice a careful handover. You can begin form validation component build with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives form validation component build a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge for the component and integration tests. The accessible form validation components fee also has to pay for your preparation and the part of the day nobody sees. With accessible form validation components, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra accessible form validation components request is a separate decision, so the customer knows what they are paying for. Repeat form validation component build bookings show whether the work pays. Tap Validate for current form validation component build prices in your area.",
+      "what_you_need": "Front-end coding, accessibility and security awareness matter. For form validation component build, you need a way for people to book a clear slot and a safe place for equipment after work. Your first accessible form validation components customers will also show where your skill stops. Do not collect fields the business does not need.",
+      "first_30_days": [
+        "Speak with potential form validation component build customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse accessible form validation components while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A strict rule may reject a legitimate name or address. You feel it immediately when a customer has arranged their day around accessible form validation components. Travel for form validation component build, changing instructions and cancellations can use the time that looked like your margin. Do not collect fields the business does not need. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which form validation component build depends. For form validation component build, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if owners want useful enquiries without frustrating people and you enjoy the routine behind accessible form validation components. Walk away if you cannot manage the risk that a strict rule may reject a legitimate name or address. With form validation component build, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For form validation component build, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not collect fields the business does not need. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for accessible form validation components first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try form validation component build in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of accessible form validation components before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C012-S08-I06",
+      "slug": "inventory-alert-code-module",
+      "title": "Inventory Alert Code Module",
+      "hook": "A timely reminder can prevent an empty shelf. You offer custom low-stock alert modules.",
+      "summary": "You make custom low-stock alert modules available for retail teams missing a low-stock signal. You define thresholds with the owner, build an alert and test it against sample stock changes. A timely reminder can prevent an empty shelf.",
+      "what_it_is": "When someone asks for custom low-stock alert modules, your day begins with the details of their request. You define thresholds with the owner, build an alert and test it against sample stock changes. The customer sees the result of custom low-stock alert modules before you finish, which helps the service feel trustworthy. Database and notification skill, test records and logs matter. With inventory alert code module, a message about timing, price and what is included saves awkward questions at handover. Do not promise alerts will fix bad inventory entry. Once custom low-stock alert modules is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving retail teams missing a low-stock signal. Staff want a signal they can act on. A timely reminder can prevent an empty shelf. Someone who handled custom low-stock alert modules badly last time is likely to notice a careful handover. You can begin inventory alert code module with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives inventory alert code module a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge for implementation and a support window. The custom low-stock alert modules fee also has to pay for your preparation and the part of the day nobody sees. With custom low-stock alert modules, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra custom low-stock alert modules request is a separate decision, so the customer knows what they are paying for. Repeat inventory alert code module bookings show whether the work pays. Tap Validate for current inventory alert code module prices in your area.",
+      "what_you_need": "Database and notification skill, test records and logs matter. For inventory alert code module, you need a way for people to book a clear slot and a safe place for equipment after work. Your first custom low-stock alert modules customers will also show where your skill stops. Do not promise alerts will fix bad inventory entry.",
+      "first_30_days": [
+        "Speak with potential inventory alert code module customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse custom low-stock alert modules while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Incorrect stock counts make any alert unreliable. You feel it immediately when a customer has arranged their day around custom low-stock alert modules. Travel for inventory alert code module, changing instructions and cancellations can use the time that looked like your margin. Do not promise alerts will fix bad inventory entry. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which inventory alert code module depends. For inventory alert code module, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if staff want a signal they can act on and you enjoy the routine behind custom low-stock alert modules. Walk away if you cannot manage the risk that incorrect stock counts make any alert unreliable. With inventory alert code module, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For inventory alert code module, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not promise alerts will fix bad inventory entry. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for custom low-stock alert modules first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try inventory alert code module in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of custom low-stock alert modules before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C012-S08-I07",
+      "slug": "payment-reconciliation-helper-script",
+      "title": "Payment Reconciliation Helper Script",
+      "hook": "A confusing payment sheet can waste an owner's evening. You offer order-payment matching scripts.",
+      "summary": "You make order-payment matching scripts available for small businesses matching orders with payment exports. You match approved identifiers, flag exceptions and leave unmatched rows for human review. A confusing payment sheet can waste an owner's evening.",
+      "what_it_is": "When someone asks for order-payment matching scripts, your day begins with the details of their request. You match approved identifiers, flag exceptions and leave unmatched rows for human review. The customer sees the result of order-payment matching scripts before you finish, which helps the service feel trustworthy. Data handling, privacy and careful exception logic are needed. With payment reconciliation helper script, a message about timing, price and what is included saves awkward questions at handover. Do not auto-mark ambiguous payments as settled. Once order-payment matching scripts is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving small businesses matching orders with payment exports. Owners want a list of what still needs checking. A confusing payment sheet can waste an owner's evening. Someone who handled order-payment matching scripts badly last time is likely to notice a careful handover. You can begin payment reconciliation helper script with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives payment reconciliation helper script a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge for data mapping, tests and maintenance separately. The order-payment matching scripts fee also has to pay for your preparation and the part of the day nobody sees. With order-payment matching scripts, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra order-payment matching scripts request is a separate decision, so the customer knows what they are paying for. Repeat payment reconciliation helper script bookings show whether the work pays. Tap Validate for current payment reconciliation helper script prices in your area.",
+      "what_you_need": "Data handling, privacy and careful exception logic are needed. For payment reconciliation helper script, you need a way for people to book a clear slot and a safe place for equipment after work. Your first order-payment matching scripts customers will also show where your skill stops. Do not auto-mark ambiguous payments as settled.",
+      "first_30_days": [
+        "Speak with potential payment reconciliation helper script customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse order-payment matching scripts while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Similar amounts may belong to different orders. You feel it immediately when a customer has arranged their day around order-payment matching scripts. Travel for payment reconciliation helper script, changing instructions and cancellations can use the time that looked like your margin. Do not auto-mark ambiguous payments as settled. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which payment reconciliation helper script depends. For payment reconciliation helper script, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if owners want a list of what still needs checking and you enjoy the routine behind order-payment matching scripts. Walk away if you cannot manage the risk that similar amounts may belong to different orders. With payment reconciliation helper script, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For payment reconciliation helper script, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not auto-mark ambiguous payments as settled. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for order-payment matching scripts first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try payment reconciliation helper script in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of order-payment matching scripts before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C012-S08-I08",
+      "slug": "website-speed-fix-project",
+      "title": "Website Speed Fix Project",
+      "hook": "A visitor may leave before a heavy page opens. You offer measured website loading improvements.",
+      "summary": "You make measured website loading improvements available for small sites loading slowly on ordinary phones. You record a baseline, fix oversized assets and test important pages on a slower connection. A visitor may leave before a heavy page opens.",
+      "what_it_is": "When someone asks for measured website loading improvements, your day begins with the details of their request. You record a baseline, fix oversized assets and test important pages on a slower connection. The customer sees the result of measured website loading improvements before you finish, which helps the service feel trustworthy. Web performance skill, backups and deployment access are needed. With website speed fix project, a message about timing, price and what is included saves awkward questions at handover. Do not guarantee one score under every network condition. Once measured website loading improvements is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving small sites loading slowly on ordinary phones. Owners want a practical difference on mobile. A visitor may leave before a heavy page opens. Someone who handled measured website loading improvements badly last time is likely to notice a careful handover. You can begin website speed fix project with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives website speed fix project a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge for a scoped set of fixes and retest. The measured website loading improvements fee also has to pay for your preparation and the part of the day nobody sees. With measured website loading improvements, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra measured website loading improvements request is a separate decision, so the customer knows what they are paying for. Repeat website speed fix project bookings show whether the work pays. Tap Validate for current website speed fix project prices in your area.",
+      "what_you_need": "Web performance skill, backups and deployment access are needed. For website speed fix project, you need a way for people to book a clear slot and a safe place for equipment after work. Your first measured website loading improvements customers will also show where your skill stops. Do not guarantee one score under every network condition.",
+      "first_30_days": [
+        "Speak with potential website speed fix project customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse measured website loading improvements while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A third-party widget may remain slow. You feel it immediately when a customer has arranged their day around measured website loading improvements. Travel for website speed fix project, changing instructions and cancellations can use the time that looked like your margin. Do not guarantee one score under every network condition. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which website speed fix project depends. For website speed fix project, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if owners want a practical difference on mobile and you enjoy the routine behind measured website loading improvements. Walk away if you cannot manage the risk that a third-party widget may remain slow. With website speed fix project, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For website speed fix project, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not guarantee one score under every network condition. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for measured website loading improvements first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try website speed fix project in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of measured website loading improvements before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C012-S08-I09",
+      "slug": "admin-export-button-feature",
+      "title": "Admin Export Button Feature",
+      "hook": "A clean export can save a team a weekly manual task. You offer safe admin data export features.",
+      "summary": "You make safe admin data export features available for internal teams copying rows out by hand. You define permitted fields, add an authenticated export and test a file with real-world edge cases. A clean export can save a team a weekly manual task.",
+      "what_it_is": "When someone asks for safe admin data export features, your day begins with the details of their request. You define permitted fields, add an authenticated export and test a file with real-world edge cases. The customer sees the result of safe admin data export features before you finish, which helps the service feel trustworthy. Backend coding, access control and data format knowledge matter. With admin export button feature, a message about timing, price and what is included saves awkward questions at handover. Do not expose an unauthenticated download link. Once safe admin data export features is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving internal teams copying rows out by hand. Teams want the right rows in a usable file. A clean export can save a team a weekly manual task. Someone who handled safe admin data export features badly last time is likely to notice a careful handover. You can begin admin export button feature with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives admin export button feature a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge for the feature, permissions review and tests. The safe admin data export features fee also has to pay for your preparation and the part of the day nobody sees. With safe admin data export features, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra safe admin data export features request is a separate decision, so the customer knows what they are paying for. Repeat admin export button feature bookings show whether the work pays. Tap Validate for current admin export button feature prices in your area.",
+      "what_you_need": "Backend coding, access control and data format knowledge matter. For admin export button feature, you need a way for people to book a clear slot and a safe place for equipment after work. Your first safe admin data export features customers will also show where your skill stops. Do not expose an unauthenticated download link.",
+      "first_30_days": [
+        "Speak with potential admin export button feature customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse safe admin data export features while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "An export could leak data if permissions are weak. You feel it immediately when a customer has arranged their day around safe admin data export features. Travel for admin export button feature, changing instructions and cancellations can use the time that looked like your margin. Do not expose an unauthenticated download link. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which admin export button feature depends. For admin export button feature, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if teams want the right rows in a usable file and you enjoy the routine behind safe admin data export features. Walk away if you cannot manage the risk that an export could leak data if permissions are weak. With admin export button feature, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For admin export button feature, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not expose an unauthenticated download link. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for safe admin data export features first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try admin export button feature in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of safe admin data export features before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C012-S08-I10",
+      "slug": "mobile-app-accessibility-bugfix",
+      "title": "Mobile App Accessibility Bugfix",
+      "hook": "A user should be able to complete the core action independently. You offer focused mobile accessibility fixes.",
+      "summary": "You make focused mobile accessibility fixes available for app teams with one unusable screen-reader flow. You reproduce the blocked flow, adjust labels and focus order and test with assistive technology. A user should be able to complete the core action independently.",
+      "what_it_is": "When someone asks for focused mobile accessibility fixes, your day begins with the details of their request. You reproduce the blocked flow, adjust labels and focus order and test with assistive technology. The customer sees the result of focused mobile accessibility fixes before you finish, which helps the service feel trustworthy. Mobile coding, accessibility testing and release process knowledge matter. With mobile app accessibility bugfix, a message about timing, price and what is included saves awkward questions at handover. Do not claim whole-app compliance from one repair. Once focused mobile accessibility fixes is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving app teams with one unusable screen-reader flow. Teams want a specific barrier removed. A user should be able to complete the core action independently. Someone who handled focused mobile accessibility fixes badly last time is likely to notice a careful handover. You can begin mobile app accessibility bugfix with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives mobile app accessibility bugfix a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge for a scoped repair and verification. The focused mobile accessibility fixes fee also has to pay for your preparation and the part of the day nobody sees. With focused mobile accessibility fixes, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra focused mobile accessibility fixes request is a separate decision, so the customer knows what they are paying for. Repeat mobile app accessibility bugfix bookings show whether the work pays. Tap Validate for current mobile app accessibility bugfix prices in your area.",
+      "what_you_need": "Mobile coding, accessibility testing and release process knowledge matter. For mobile app accessibility bugfix, you need a way for people to book a clear slot and a safe place for equipment after work. Your first focused mobile accessibility fixes customers will also show where your skill stops. Do not claim whole-app compliance from one repair.",
+      "first_30_days": [
+        "Speak with potential mobile app accessibility bugfix customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse focused mobile accessibility fixes while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A fix can affect other screens if rushed. You feel it immediately when a customer has arranged their day around focused mobile accessibility fixes. Travel for mobile app accessibility bugfix, changing instructions and cancellations can use the time that looked like your margin. Do not claim whole-app compliance from one repair. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which mobile app accessibility bugfix depends. For mobile app accessibility bugfix, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if teams want a specific barrier removed and you enjoy the routine behind focused mobile accessibility fixes. Walk away if you cannot manage the risk that a fix can affect other screens if rushed. With mobile app accessibility bugfix, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For mobile app accessibility bugfix, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not claim whole-app compliance from one repair. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for focused mobile accessibility fixes first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try mobile app accessibility bugfix in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of focused mobile accessibility fixes before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    }
+  ]
+}
