@@ -1,0 +1,507 @@
+{
+  "subcategory": {
+    "code": "C011-S07",
+    "intro": "Digital Skill Client Work starts with a nearby problem that people already spend time solving. A small organisation may have a practical digital mess that a skilled person can put in order. A clear deliverable and handover can be more valuable than promising to transform the whole company. The useful first question is where a resident currently goes, what the trip or wait costs in time, and whether a small operator can do one task reliably. Walk the intended service area and speak to potential customers before buying equipment. Ask for the last occasion when they needed help, how they found a provider, and what made the experience difficult. A booking that someone is willing to pay for teaches more than a general expression of interest. Keep the opening menu narrow enough to finish, price and explain without confusion. Travel, idle time, supplies, cleaning and returns all consume capacity even when the visible task is short. Set a clear radius and appointment window, and record actual time from first message to final handover. Confirm access to a work area, the customer's instructions, payment responsibility and a practical cancellation rule before committing. Keep names, addresses and other personal details only as needed for the booking. Get permission to access files and delete copies after handover. Protect personal data and never request a password in an ordinary message. Start with a few paid trials, then decide whether repeat work is frequent enough to support regular hours. Local demand may differ by housing density, transport, seasons and competing providers. A promise of convenience is only valuable when the customer can trust the result and knows what happens if something goes wrong.",
+    "how_to_choose": "Pick a tool and problem you understand, define the input you need and show a sample output. Count the time spent cleaning unclear data and teaching the client to use the result. Compare options by the number of paid bookings you can group within a short route, the tools you already know how to use, and the time a customer can realistically wait. Write down one included task and one excluded task for each option. Check access, hygiene, consent and any applicable local permission before selling. Use a small paid trial to measure travel, preparation, work and follow-up. Choose the service whose quality you can repeat without relying on a perfect day.",
+    "faq": [
+      {
+        "q": "Can I start digital skill client work from home?",
+        "a": "Often the administration can begin at home, but the work site and any storage need to suit the particular service. Check local rules and get permission to use shared space before taking bookings."
+      },
+      {
+        "q": "How should I set the first service area?",
+        "a": "Begin with a compact route you can reach predictably. Measure travel at the hours customers actually want, then expand only when paid demand covers extra time and transport."
+      },
+      {
+        "q": "Should I offer every related service at launch?",
+        "a": "A short menu makes quality, timing and pricing easier to control. Add another task only after you have the necessary skill, equipment and evidence that customers will pay."
+      },
+      {
+        "q": "What should I confirm before an appointment?",
+        "a": "Agree on the task, address or venue, access, time window, complete price and payment contact. Explain cancellation and any limits so a small misunderstanding does not become an unpaid visit."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C011-S07-I01",
+      "slug": "shop-stock-spreadsheet-setup",
+      "title": "Shop Stock Spreadsheet Setup",
+      "hook": "A shopkeeper can see low stock before a customer asks. You offer simple inventory spreadsheet setup.",
+      "summary": "You make simple inventory spreadsheet setup available for retailers tracking stock in a notebook. You take a sample of item names and units, build a sheet with in and out columns and show the owner how to update it. A shopkeeper can see low stock before a customer asks.",
+      "what_it_is": "When someone asks for simple inventory spreadsheet setup, your day begins with the details of their request. You take a sample of item names and units, build a sheet with in and out columns and show the owner how to update it. The customer sees the result of simple inventory spreadsheet setup before you finish, which helps the service feel trustworthy. Spreadsheet skill, sample data and a clear backup plan are needed. With shop stock spreadsheet setup, a message about timing, price and what is included saves awkward questions at handover. Do not copy private supplier prices outside the agreed work. Once simple inventory spreadsheet setup is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving retailers tracking stock in a notebook. Owners want a sheet they can use without calling you daily. A shopkeeper can see low stock before a customer asks. Someone who handled simple inventory spreadsheet setup badly last time is likely to notice a careful handover. You can begin shop stock spreadsheet setup with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives shop stock spreadsheet setup a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge for initial setup and one training session, with later changes separate. The simple inventory spreadsheet setup fee also has to pay for your preparation and the part of the day nobody sees. With simple inventory spreadsheet setup, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra simple inventory spreadsheet setup request is a separate decision, so the customer knows what they are paying for. Repeat shop stock spreadsheet setup bookings show whether the work pays. Tap Validate for current shop stock spreadsheet setup prices in your area.",
+      "what_you_need": "Spreadsheet skill, sample data and a clear backup plan are needed. For shop stock spreadsheet setup, you need a way for people to book a clear slot and a safe place for equipment after work. Your first simple inventory spreadsheet setup customers will also show where your skill stops. Do not copy private supplier prices outside the agreed work.",
+      "first_30_days": [
+        "Speak with potential shop stock spreadsheet setup customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse simple inventory spreadsheet setup while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Poorly named items can create duplicate rows. You feel it immediately when a customer has arranged their day around simple inventory spreadsheet setup. Travel for shop stock spreadsheet setup, changing instructions and cancellations can use the time that looked like your margin. Do not copy private supplier prices outside the agreed work. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which shop stock spreadsheet setup depends. For shop stock spreadsheet setup, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if owners want a sheet they can use without calling you daily and you enjoy the routine behind simple inventory spreadsheet setup. Walk away if you cannot manage the risk that poorly named items can create duplicate rows. With shop stock spreadsheet setup, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For shop stock spreadsheet setup, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not copy private supplier prices outside the agreed work. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for simple inventory spreadsheet setup first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try shop stock spreadsheet setup in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of simple inventory spreadsheet setup before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C011-S07-I02",
+      "slug": "clinic-appointment-calendar-setup",
+      "title": "Clinic Appointment Calendar Setup",
+      "hook": "A clear calendar can reduce overlapping bookings. You offer digital appointment calendar configuration.",
+      "summary": "You make digital appointment calendar configuration available for small clinics replacing a messy paper appointment book. You map the clinic's hours and staff, configure slots and train reception on cancellations and reminders. A clear calendar can reduce overlapping bookings.",
+      "what_it_is": "When someone asks for digital appointment calendar configuration, your day begins with the details of their request. You map the clinic's hours and staff, configure slots and train reception on cancellations and reminders. The customer sees the result of digital appointment calendar configuration before you finish, which helps the service feel trustworthy. Calendar tool knowledge, privacy settings and a staff handover are needed. With clinic appointment calendar setup, a message about timing, price and what is included saves awkward questions at handover. Do not expose patient names through a public calendar. Once digital appointment calendar configuration is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving small clinics replacing a messy paper appointment book. Receptionists need a simple view during a busy morning. A clear calendar can reduce overlapping bookings. Someone who handled digital appointment calendar configuration badly last time is likely to notice a careful handover. You can begin clinic appointment calendar setup with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives clinic appointment calendar setup a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge a fixed setup and a separate follow-up support block. The digital appointment calendar configuration fee also has to pay for your preparation and the part of the day nobody sees. With digital appointment calendar configuration, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra digital appointment calendar configuration request is a separate decision, so the customer knows what they are paying for. Repeat clinic appointment calendar setup bookings show whether the work pays. Tap Validate for current clinic appointment calendar setup prices in your area.",
+      "what_you_need": "Calendar tool knowledge, privacy settings and a staff handover are needed. For clinic appointment calendar setup, you need a way for people to book a clear slot and a safe place for equipment after work. Your first digital appointment calendar configuration customers will also show where your skill stops. Do not expose patient names through a public calendar.",
+      "first_30_days": [
+        "Speak with potential clinic appointment calendar setup customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse digital appointment calendar configuration while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A wrong slot rule can double-book a consultation. You feel it immediately when a customer has arranged their day around digital appointment calendar configuration. Travel for clinic appointment calendar setup, changing instructions and cancellations can use the time that looked like your margin. Do not expose patient names through a public calendar. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which clinic appointment calendar setup depends. For clinic appointment calendar setup, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if receptionists need a simple view during a busy morning and you enjoy the routine behind digital appointment calendar configuration. Walk away if you cannot manage the risk that a wrong slot rule can double-book a consultation. With clinic appointment calendar setup, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For clinic appointment calendar setup, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not expose patient names through a public calendar. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for digital appointment calendar configuration first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try clinic appointment calendar setup in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of digital appointment calendar configuration before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C011-S07-I03",
+      "slug": "local-seller-product-catalog-data",
+      "title": "Local Seller Product Catalog Data",
+      "hook": "A consistent catalog makes repeat customer queries easier. You offer structured product catalog data entry.",
+      "summary": "You make structured product catalog data entry available for small sellers moving handwritten items into a digital catalog. You agree on names, variants and photo ownership, enter an initial batch and show the seller how to correct it. A consistent catalog makes repeat customer queries easier.",
+      "what_it_is": "When someone asks for structured product catalog data entry, your day begins with the details of their request. You agree on names, variants and photo ownership, enter an initial batch and show the seller how to correct it. The customer sees the result of structured product catalog data entry before you finish, which helps the service feel trustworthy. Accurate data entry, image handling and a review checklist are needed. With local seller product catalog data, a message about timing, price and what is included saves awkward questions at handover. Do not invent stock availability or reuse a customer's photographs. Once structured product catalog data entry is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving small sellers moving handwritten items into a digital catalog. Sellers want product details they can update later. A consistent catalog makes repeat customer queries easier. Someone who handled structured product catalog data entry badly last time is likely to notice a careful handover. You can begin local seller product catalog data with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives local seller product catalog data a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge per verified item band and a one-time structure fee. The structured product catalog data entry fee also has to pay for your preparation and the part of the day nobody sees. With structured product catalog data entry, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra structured product catalog data entry request is a separate decision, so the customer knows what they are paying for. Repeat local seller product catalog data bookings show whether the work pays. Tap Validate for current local seller product catalog data prices in your area.",
+      "what_you_need": "Accurate data entry, image handling and a review checklist are needed. For local seller product catalog data, you need a way for people to book a clear slot and a safe place for equipment after work. Your first structured product catalog data entry customers will also show where your skill stops. Do not invent stock availability or reuse a customer's photographs.",
+      "first_30_days": [
+        "Speak with potential local seller product catalog data customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse structured product catalog data entry while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A wrong size or price can create returns. You feel it immediately when a customer has arranged their day around structured product catalog data entry. Travel for local seller product catalog data, changing instructions and cancellations can use the time that looked like your margin. Do not invent stock availability or reuse a customer's photographs. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which local seller product catalog data depends. For local seller product catalog data, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if sellers want product details they can update later and you enjoy the routine behind structured product catalog data entry. Walk away if you cannot manage the risk that a wrong size or price can create returns. With local seller product catalog data, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For local seller product catalog data, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not invent stock availability or reuse a customer's photographs. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for structured product catalog data entry first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try local seller product catalog data in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of structured product catalog data entry before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C011-S07-I04",
+      "slug": "small-business-receipt-digitising",
+      "title": "Small Business Receipt Digitising",
+      "hook": "A business owner may dread finding one old expense slip. You offer scanned receipt organisation.",
+      "summary": "You make scanned receipt organisation available for sole traders with a box of paper receipts. You collect a counted batch, scan legibly, label by date and return the originals with a secure folder. A business owner may dread finding one old expense slip.",
+      "what_it_is": "When someone asks for scanned receipt organisation, your day begins with the details of their request. You collect a counted batch, scan legibly, label by date and return the originals with a secure folder. The customer sees the result of scanned receipt organisation before you finish, which helps the service feel trustworthy. Scanner, secure storage, naming discipline and confidentiality are essential. With small business receipt digitising, a message about timing, price and what is included saves awkward questions at handover. Do not alter a receipt or claim an expense is tax deductible. Once scanned receipt organisation is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving sole traders with a box of paper receipts. Clients want to find an image without opening every file. A business owner may dread finding one old expense slip. Someone who handled scanned receipt organisation badly last time is likely to notice a careful handover. You can begin small business receipt digitising with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives small business receipt digitising a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge by batch size and sorting difficulty, not by a tax saving promise. The scanned receipt organisation fee also has to pay for your preparation and the part of the day nobody sees. With scanned receipt organisation, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra scanned receipt organisation request is a separate decision, so the customer knows what they are paying for. Repeat small business receipt digitising bookings show whether the work pays. Tap Validate for current small business receipt digitising prices in your area.",
+      "what_you_need": "Scanner, secure storage, naming discipline and confidentiality are essential. For small business receipt digitising, you need a way for people to book a clear slot and a safe place for equipment after work. Your first scanned receipt organisation customers will also show where your skill stops. Do not alter a receipt or claim an expense is tax deductible.",
+      "first_30_days": [
+        "Speak with potential small business receipt digitising customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse scanned receipt organisation while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Faded receipts can be impossible to read clearly. You feel it immediately when a customer has arranged their day around scanned receipt organisation. Travel for small business receipt digitising, changing instructions and cancellations can use the time that looked like your margin. Do not alter a receipt or claim an expense is tax deductible. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which small business receipt digitising depends. For small business receipt digitising, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if clients want to find an image without opening every file and you enjoy the routine behind scanned receipt organisation. Walk away if you cannot manage the risk that faded receipts can be impossible to read clearly. With small business receipt digitising, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For small business receipt digitising, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not alter a receipt or claim an expense is tax deductible. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for scanned receipt organisation first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try small business receipt digitising in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of scanned receipt organisation before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C011-S07-I05",
+      "slug": "survey-form-logic-builder",
+      "title": "Survey Form Logic Builder",
+      "hook": "A group wants useful answers without making respondents fill a long sheet. You offer online survey form configuration.",
+      "summary": "You make online survey form configuration available for community organisations collecting event feedback. You turn approved questions into a short form, test branching and export a sample response for the organiser. A group wants useful answers without making respondents fill a long sheet.",
+      "what_it_is": "When someone asks for online survey form configuration, your day begins with the details of their request. You turn approved questions into a short form, test branching and export a sample response for the organiser. The customer sees the result of online survey form configuration before you finish, which helps the service feel trustworthy. Form logic skill, consent wording and a response access plan matter. With survey form logic builder, a message about timing, price and what is included saves awkward questions at handover. Do not collect sensitive information the organiser does not need. Once online survey form configuration is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving community organisations collecting event feedback. Organisers value a form that works on an ordinary phone. A group wants useful answers without making respondents fill a long sheet. Someone who handled online survey form configuration badly last time is likely to notice a careful handover. You can begin survey form logic builder with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives survey form logic builder a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge for form setup, testing and a defined revision round. The online survey form configuration fee also has to pay for your preparation and the part of the day nobody sees. With online survey form configuration, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra online survey form configuration request is a separate decision, so the customer knows what they are paying for. Repeat survey form logic builder bookings show whether the work pays. Tap Validate for current survey form logic builder prices in your area.",
+      "what_you_need": "Form logic skill, consent wording and a response access plan matter. For survey form logic builder, you need a way for people to book a clear slot and a safe place for equipment after work. Your first online survey form configuration customers will also show where your skill stops. Do not collect sensitive information the organiser does not need.",
+      "first_30_days": [
+        "Speak with potential survey form logic builder customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse online survey form configuration while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A broken required field can block every submission. You feel it immediately when a customer has arranged their day around online survey form configuration. Travel for survey form logic builder, changing instructions and cancellations can use the time that looked like your margin. Do not collect sensitive information the organiser does not need. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which survey form logic builder depends. For survey form logic builder, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if organisers value a form that works on an ordinary phone and you enjoy the routine behind online survey form configuration. Walk away if you cannot manage the risk that a broken required field can block every submission. With survey form logic builder, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For survey form logic builder, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not collect sensitive information the organiser does not need. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for online survey form configuration first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try survey form logic builder in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of online survey form configuration before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C011-S07-I06",
+      "slug": "spreadsheet-formula-repair-service",
+      "title": "Spreadsheet Formula Repair Service",
+      "hook": "A broken total can make a useful workbook untrustworthy. You offer diagnosis and repair of spreadsheet formulas.",
+      "summary": "You make diagnosis and repair of spreadsheet formulas available for small businesses with a broken calculation sheet. You copy the file, find failing formulas, test with sample entries and explain the correction in plain language. A broken total can make a useful workbook untrustworthy.",
+      "what_it_is": "When someone asks for diagnosis and repair of spreadsheet formulas, your day begins with the details of their request. You copy the file, find failing formulas, test with sample entries and explain the correction in plain language. The customer sees the result of diagnosis and repair of spreadsheet formulas before you finish, which helps the service feel trustworthy. Formula skill, versioned backup and a test case are needed. With spreadsheet formula repair service, a message about timing, price and what is included saves awkward questions at handover. Do not overwrite the only original or guarantee audited accounts. Once diagnosis and repair of spreadsheet formulas is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving small businesses with a broken calculation sheet. Clients want a trustworthy sheet and a way to spot future errors. A broken total can make a useful workbook untrustworthy. Someone who handled diagnosis and repair of spreadsheet formulas badly last time is likely to notice a careful handover. You can begin spreadsheet formula repair service with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives spreadsheet formula repair service a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge a diagnostic minimum and a quoted repair scope. The diagnosis and repair of spreadsheet formulas fee also has to pay for your preparation and the part of the day nobody sees. With diagnosis and repair of spreadsheet formulas, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra diagnosis and repair of spreadsheet formulas request is a separate decision, so the customer knows what they are paying for. Repeat spreadsheet formula repair service bookings show whether the work pays. Tap Validate for current spreadsheet formula repair service prices in your area.",
+      "what_you_need": "Formula skill, versioned backup and a test case are needed. For spreadsheet formula repair service, you need a way for people to book a clear slot and a safe place for equipment after work. Your first diagnosis and repair of spreadsheet formulas customers will also show where your skill stops. Do not overwrite the only original or guarantee audited accounts.",
+      "first_30_days": [
+        "Speak with potential spreadsheet formula repair service customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse diagnosis and repair of spreadsheet formulas while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A hidden manual entry can still corrupt the result. You feel it immediately when a customer has arranged their day around diagnosis and repair of spreadsheet formulas. Travel for spreadsheet formula repair service, changing instructions and cancellations can use the time that looked like your margin. Do not overwrite the only original or guarantee audited accounts. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which spreadsheet formula repair service depends. For spreadsheet formula repair service, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if clients want a trustworthy sheet and a way to spot future errors and you enjoy the routine behind diagnosis and repair of spreadsheet formulas. Walk away if you cannot manage the risk that a hidden manual entry can still corrupt the result. With spreadsheet formula repair service, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For spreadsheet formula repair service, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not overwrite the only original or guarantee audited accounts. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for diagnosis and repair of spreadsheet formulas first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try spreadsheet formula repair service in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of diagnosis and repair of spreadsheet formulas before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C011-S07-I07",
+      "slug": "event-registration-list-cleanup",
+      "title": "Event Registration List Cleanup",
+      "hook": "A crowded registration desk suffers from repeated or missing names. You offer registration list deduplication and handover.",
+      "summary": "You make registration list deduplication and handover available for event organisers with duplicate sign-up records. You agree on matching rules, mark likely duplicates for review and return a clean list with an exception tab. A crowded registration desk suffers from repeated or missing names.",
+      "what_it_is": "When someone asks for registration list deduplication and handover, your day begins with the details of their request. You agree on matching rules, mark likely duplicates for review and return a clean list with an exception tab. The customer sees the result of registration list deduplication and handover before you finish, which helps the service feel trustworthy. Data cleaning skill, secure transfer and careful exception handling are needed. With event registration list cleanup, a message about timing, price and what is included saves awkward questions at handover. Do not delete a record without an agreed review rule. Once registration list deduplication and handover is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving event organisers with duplicate sign-up records. Organisers want an accurate list before event day. A crowded registration desk suffers from repeated or missing names. Someone who handled registration list deduplication and handover badly last time is likely to notice a careful handover. You can begin event registration list cleanup with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives event registration list cleanup a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge for a defined record batch and manual review time. The registration list deduplication and handover fee also has to pay for your preparation and the part of the day nobody sees. With registration list deduplication and handover, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra registration list deduplication and handover request is a separate decision, so the customer knows what they are paying for. Repeat event registration list cleanup bookings show whether the work pays. Tap Validate for current event registration list cleanup prices in your area.",
+      "what_you_need": "Data cleaning skill, secure transfer and careful exception handling are needed. For event registration list cleanup, you need a way for people to book a clear slot and a safe place for equipment after work. Your first registration list deduplication and handover customers will also show where your skill stops. Do not delete a record without an agreed review rule.",
+      "first_30_days": [
+        "Speak with potential event registration list cleanup customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse registration list deduplication and handover while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Two people can share a name without being duplicates. You feel it immediately when a customer has arranged their day around registration list deduplication and handover. Travel for event registration list cleanup, changing instructions and cancellations can use the time that looked like your margin. Do not delete a record without an agreed review rule. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which event registration list cleanup depends. For event registration list cleanup, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if organisers want an accurate list before event day and you enjoy the routine behind registration list deduplication and handover. Walk away if you cannot manage the risk that two people can share a name without being duplicates. With event registration list cleanup, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For event registration list cleanup, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not delete a record without an agreed review rule. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for registration list deduplication and handover first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try event registration list cleanup in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of registration list deduplication and handover before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C011-S07-I08",
+      "slug": "microbusiness-cashflow-dashboard",
+      "title": "Microbusiness Cashflow Dashboard",
+      "hook": "A business can be busy yet short of cash before supplier day. You offer simple cashflow dashboard setup.",
+      "summary": "You make simple cashflow dashboard setup available for owners who enter sales but cannot see payment timing. You use the owner's approved categories, connect a clean input sheet and explain what each chart can and cannot tell them. A business can be busy yet short of cash before supplier day.",
+      "what_it_is": "When someone asks for simple cashflow dashboard setup, your day begins with the details of their request. You use the owner's approved categories, connect a clean input sheet and explain what each chart can and cannot tell them. The customer sees the result of simple cashflow dashboard setup before you finish, which helps the service feel trustworthy. Spreadsheet dashboard skill, financial caution and a sample dataset matter. With microbusiness cashflow dashboard, a message about timing, price and what is included saves awkward questions at handover. Do not present a dashboard as financial advice or audited numbers. Once simple cashflow dashboard setup is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving owners who enter sales but cannot see payment timing. Owners want a quick view they can maintain themselves. A business can be busy yet short of cash before supplier day. Someone who handled simple cashflow dashboard setup badly last time is likely to notice a careful handover. You can begin microbusiness cashflow dashboard with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives microbusiness cashflow dashboard a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge for setup and a defined handover, with monthly data entry separate. The simple cashflow dashboard setup fee also has to pay for your preparation and the part of the day nobody sees. With simple cashflow dashboard setup, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra simple cashflow dashboard setup request is a separate decision, so the customer knows what they are paying for. Repeat microbusiness cashflow dashboard bookings show whether the work pays. Tap Validate for current microbusiness cashflow dashboard prices in your area.",
+      "what_you_need": "Spreadsheet dashboard skill, financial caution and a sample dataset matter. For microbusiness cashflow dashboard, you need a way for people to book a clear slot and a safe place for equipment after work. Your first simple cashflow dashboard setup customers will also show where your skill stops. Do not present a dashboard as financial advice or audited numbers.",
+      "first_30_days": [
+        "Speak with potential microbusiness cashflow dashboard customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse simple cashflow dashboard setup while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A chart is misleading when transactions are incomplete. You feel it immediately when a customer has arranged their day around simple cashflow dashboard setup. Travel for microbusiness cashflow dashboard, changing instructions and cancellations can use the time that looked like your margin. Do not present a dashboard as financial advice or audited numbers. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which microbusiness cashflow dashboard depends. For microbusiness cashflow dashboard, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if owners want a quick view they can maintain themselves and you enjoy the routine behind simple cashflow dashboard setup. Walk away if you cannot manage the risk that a chart is misleading when transactions are incomplete. With microbusiness cashflow dashboard, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For microbusiness cashflow dashboard, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not present a dashboard as financial advice or audited numbers. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for simple cashflow dashboard setup first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try microbusiness cashflow dashboard in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of simple cashflow dashboard setup before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C011-S07-I09",
+      "slug": "accessible-document-formatting",
+      "title": "Accessible Document Formatting Service",
+      "hook": "A reader should not struggle through a poorly structured notice. You offer readable digital document formatting.",
+      "summary": "You make readable digital document formatting available for local organisations sharing hard-to-read documents. You adjust headings, contrast, reading order and text descriptions, then test the file with appropriate tools. A reader should not struggle through a poorly structured notice.",
+      "what_it_is": "When someone asks for readable digital document formatting, your day begins with the details of their request. You adjust headings, contrast, reading order and text descriptions, then test the file with appropriate tools. The customer sees the result of readable digital document formatting before you finish, which helps the service feel trustworthy. Document accessibility skill, testing software and client proofing are needed. With accessible document formatting service, a message about timing, price and what is included saves awkward questions at handover. Do not claim formal compliance without a proper assessment. Once readable digital document formatting is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving local organisations sharing hard-to-read documents. Organisations want a file more people can use. A reader should not struggle through a poorly structured notice. Someone who handled readable digital document formatting badly last time is likely to notice a careful handover. You can begin accessible document formatting service with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives accessible document formatting service a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge per document length and complexity with revisions defined. The readable digital document formatting fee also has to pay for your preparation and the part of the day nobody sees. With readable digital document formatting, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra readable digital document formatting request is a separate decision, so the customer knows what they are paying for. Repeat accessible document formatting service bookings show whether the work pays. Tap Validate for current accessible document formatting service prices in your area.",
+      "what_you_need": "Document accessibility skill, testing software and client proofing are needed. For accessible document formatting service, you need a way for people to book a clear slot and a safe place for equipment after work. Your first readable digital document formatting customers will also show where your skill stops. Do not claim formal compliance without a proper assessment.",
+      "first_30_days": [
+        "Speak with potential accessible document formatting service customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse readable digital document formatting while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A scanned image may require additional transcription. You feel it immediately when a customer has arranged their day around readable digital document formatting. Travel for accessible document formatting service, changing instructions and cancellations can use the time that looked like your margin. Do not claim formal compliance without a proper assessment. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which accessible document formatting service depends. For accessible document formatting service, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if organisations want a file more people can use and you enjoy the routine behind readable digital document formatting. Walk away if you cannot manage the risk that a scanned image may require additional transcription. With accessible document formatting service, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For accessible document formatting service, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not claim formal compliance without a proper assessment. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for readable digital document formatting first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try accessible document formatting service in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of readable digital document formatting before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C011-S07-I10",
+      "slug": "restaurant-qr-menu-maintenance",
+      "title": "Restaurant QR Menu Maintenance",
+      "hook": "An old QR menu can upset a diner before food arrives. You offer digital menu data updates and QR link care.",
+      "summary": "You make digital menu data updates and QR link care available for small eateries changing dishes frequently. You build an editable menu, check it on ordinary phones and update approved dish names and prices as they change. An old QR menu can upset a diner before food arrives.",
+      "what_it_is": "When someone asks for digital menu data updates and QR link care, your day begins with the details of their request. You build an editable menu, check it on ordinary phones and update approved dish names and prices as they change. The customer sees the result of digital menu data updates and QR link care before you finish, which helps the service feel trustworthy. Mobile testing, menu layout, backup access and owner approval are needed. With restaurant qr menu maintenance, a message about timing, price and what is included saves awkward questions at handover. Do not change prices or ingredient claims without written owner approval. Once digital menu data updates and QR link care is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving small eateries changing dishes frequently. Eateries want a menu their staff can verify quickly. An old QR menu can upset a diner before food arrives. Someone who handled digital menu data updates and QR link care badly last time is likely to notice a careful handover. You can begin restaurant qr menu maintenance with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives restaurant qr menu maintenance a better start than a broad promise to everyone.",
+      "how_money_comes": "Charge setup and a capped monthly update block. The digital menu data updates and QR link care fee also has to pay for your preparation and the part of the day nobody sees. With digital menu data updates and QR link care, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra digital menu data updates and QR link care request is a separate decision, so the customer knows what they are paying for. Repeat restaurant qr menu maintenance bookings show whether the work pays. Tap Validate for current restaurant qr menu maintenance prices in your area.",
+      "what_you_need": "Mobile testing, menu layout, backup access and owner approval are needed. For restaurant qr menu maintenance, you need a way for people to book a clear slot and a safe place for equipment after work. Your first digital menu data updates and QR link care customers will also show where your skill stops. Do not change prices or ingredient claims without written owner approval.",
+      "first_30_days": [
+        "Speak with potential restaurant qr menu maintenance customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse digital menu data updates and QR link care while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A broken link or wrong allergen detail can cause complaints. You feel it immediately when a customer has arranged their day around digital menu data updates and QR link care. Travel for restaurant qr menu maintenance, changing instructions and cancellations can use the time that looked like your margin. Do not change prices or ingredient claims without written owner approval. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which restaurant qr menu maintenance depends. For restaurant qr menu maintenance, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if eateries want a menu their staff can verify quickly and you enjoy the routine behind digital menu data updates and QR link care. Walk away if you cannot manage the risk that a broken link or wrong allergen detail can cause complaints. With restaurant qr menu maintenance, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For restaurant qr menu maintenance, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not change prices or ingredient claims without written owner approval. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for digital menu data updates and QR link care first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try restaurant qr menu maintenance in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of digital menu data updates and QR link care before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "online",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    }
+  ]
+}
