@@ -1,0 +1,547 @@
+{
+  "subcategory": {
+    "code": "C001-S06",
+    "intro": "You know the little shop down the lane. The owner remembers everyone's face, but the phone keeps buzzing while customers wait at the counter. One person asks whether an item is in stock. Another wants tomorrow's pickup time. A third sends an order in the middle of lunch. Handling a shop's page from home means helping the owner answer these people without making promises the shop cannot keep. You are trusted with a real conversation, not just a collection of pretty posts.\n\nStart by choosing one shop and one repeated problem. Watch how staff answer questions when it is busy. Are prices written down? Who checks stock? Can a customer reserve an item, and for how long? Ask the owner to approve replies before you take over an inbox. A clear reply can save a wasted trip for the customer and an awkward apology for the shopkeeper.\n\nKeep your first agreement small: perhaps a daily availability update or a fixed hour for booking replies. Agree on who receives payment, who settles complaints and what happens when your phone is off. You should never quietly accept money into your personal account for the shop's goods. Protect customer numbers and addresses. A home routine can make this work practical, but a real shop's closing time and staff schedule still shape your day.\n\nThe ten ideas below focus on different shop moments. The bakery needs a cutoff for tomorrow's orders; the tailor needs fitting dates; the florist may face a sudden festival rush. Choose the rhythm you can live with and the owner who will share accurate information.",
+    "how_to_choose": "If you enjoy quick conversations, choose a shop with repeated booking questions and a manager who can answer exceptions. If you prefer tidy lists, stock or catalogue updates may suit you better. Visit the shop before promising remote work. Ask how often details change, who can confirm them and whether customers already use WhatsApp or a social page. Begin with a paid trial at agreed hours. Count the minutes spent chasing missing details, because that hidden work can swallow a low fee. Keep the owner's payment process and your service fee completely separate, and pick a niche whose busiest season fits your own routine.",
+    "faq": [
+      {
+        "q": "Can I do this entirely from home?",
+        "a": "You can handle many replies from home once the owner has a reliable way to share stock, hours and changes. Visit or call first to understand the counter routine. Remote access alone does not give you accurate facts."
+      },
+      {
+        "q": "Should I accept customer payments?",
+        "a": "Have customers pay the shop through its approved method. Your fee comes from the owner under a separate agreement. Avoid taking product money into your personal account or improvising refund decisions."
+      },
+      {
+        "q": "How do I get the first shop owner to trust me?",
+        "a": "Offer one clearly defined trial, show sample replies and let the owner approve them. Explain your hours, privacy habits and escalation rule. Trust grows when you admit a detail is unconfirmed instead of guessing."
+      },
+      {
+        "q": "What if customers message at night?",
+        "a": "Set visible reply hours and an approved after-hours message. Ask the owner which urgent cases they will handle. If the shop needs evening coverage, include those hours in the fee rather than promising constant availability."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C001-S06-I01",
+      "slug": "kirana-daily-stock-replies",
+      "title": "Kirana Daily Stock Reply Desk",
+      "hook": "A neighbour walks to the kirana after work and finds the needed atta brand gone.",
+      "summary": "You send checked availability replies and pickup instructions for a busy kirana owner. A tired neighbour gets help with a real decision while the owner works at the counter. Begin with a narrow promise around stock checks and pickup holds and a routine you can keep on a busy day.",
+      "what_it_is": "A neighbour walks to the kirana after work and finds the needed atta brand gone. You sit with the owner, learn how they handle stock checks and pickup holds, and agree on a simple way to send checked availability replies and pickup instructions. A tired neighbour should know when you will reply, what the shop has confirmed and which decision still belongs to its staff. Before you send an answer about stock checks and pickup holds, check the real stock or schedule; a polished message cannot make an uncertain detail true. Try the stock checks and pickup holds journey yourself on a phone and review the first week of replies with the owner before taking on more work.",
+      "who_pays_you": "A busy kirana owner pays you because repeated questions interrupt the counter. Fast-moving items sell between your check and the customer's arrival. Ask the owner to show you how the shop handles stock checks and pickup holds on an ordinary day. Explain how a clear reply would help a tired neighbour, then offer a small paid trial around stock checks and pickup holds. You serve a busy kirana owner, but the person waiting for an answer deserves your full attention too.",
+      "how_money_comes": "Agree on a fixed weekly or monthly fee for one daily check and a fixed reply window, with working hours and a limit on the number of messages you handle. If the owner wants more help with stock checks and pickup holds, discuss the extra work before it arrives. Keep a record of stock checks and pickup holds corrections and calls, then review your time together on an agreed payment date. A friendly trial with a busy kirana owner should not quietly grow into unlimited free help. A tired neighbour pays the shop for goods; your service fee comes from the owner.",
+      "what_you_need": "You need a shared stock list and approved product names, a phone and the patience to check a detail before replying. Ask the owner for approved answers on stock checks and pickup holds, a contact for exceptions and safe account access. Keep the details of a tired neighbour private and log each change you make to the shop's page. Only the counter staff can confirm a final hold. Handling stock checks and pickup holds from home is possible once staff share updates reliably, but your agreed hours still matter.",
+      "first_30_days": [
+        "Watch how a busy kirana owner handles stock checks and pickup holds on an ordinary day.",
+        "Ask a tired neighbour what answer they need before choosing or booking.",
+        "Set up one small paid trial for send checked availability replies and pickup instructions, with owner approval.",
+        "Log every correction and the time it takes during the first week.",
+        "Review missed pickups and repeat questions together before agreeing on a repeating arrangement."
+      ],
+      "what_hurts": "Fast-moving items sell between your check and the customer's arrival. A friendly message about stock checks and pickup holds can become an argument if you answer from yesterday's information. Only the counter staff can confirm a final hold. You may be blamed when a detail in stock checks and pickup holds changes without notice, so record who confirmed each promise and tell the owner promptly. The rush around one daily check and a fixed reply window can arrive just when you have family work to do. Agree on a real stock checks and pickup holds reply window and hand urgent disputes to the person who can settle them.",
+      "verdict": "Build this if you like helping a tired neighbour and can keep stock checks and pickup holds accurate through a busy week. Walk away if the counter cannot confirm holds before you reply. A neighbour should not carry an empty bag home because you guessed.",
+      "faq": [
+        {
+          "q": "Can I guarantee an item is there?",
+          "a": "Only when a staff member confirms a hold and its expiry. Otherwise give the latest checked availability and invite the customer to confirm before travelling."
+        },
+        {
+          "q": "How often should stock be updated?",
+          "a": "Begin with the handful of items customers ask about most. Ask staff when deliveries arrive and when the list can be checked without disrupting the counter."
+        },
+        {
+          "q": "What if a customer wants a substitute?",
+          "a": "Offer only alternatives the owner approves and explain differences honestly. For a dietary or allergy question, ask the customer to check the product label or contact the shop."
+        }
+      ],
+      "validate_prompt": "I want to manage stock enquiries for a neighbourhood kirana in India. What approval routine and pickup promise should I agree with the owner?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S06-I02",
+      "slug": "boutique-size-enquiry-desk",
+      "title": "Boutique Size Enquiry Desk",
+      "hook": "Your cousin loves a kurta on a boutique page but cannot tell whether her size is available.",
+      "summary": "You answer size and fabric questions with approved measurements for a small boutique owner. A shopper choosing clothes gets help with a real decision while the owner works at the counter. Begin with a narrow promise around size charts, fabric notes and trial rules and a routine you can keep on a busy day.",
+      "what_it_is": "Your cousin loves a kurta on a boutique page but cannot tell whether her size is available. You sit with the owner, learn how they handle size charts, fabric notes and trial rules, and agree on a simple way to answer size and fabric questions with approved measurements. A shopper choosing clothes should know when you will reply, what the shop has confirmed and which decision still belongs to its staff. Before you send an answer about size charts, fabric notes and trial rules, check the real stock or schedule; a polished message cannot make an uncertain detail true. Try the size charts, fabric notes and trial rules journey yourself on a phone and review the first week of replies with the owner before taking on more work.",
+      "who_pays_you": "A small boutique owner pays you because repeated questions interrupt the counter. A labelled size can fit differently across designs. Ask the owner to show you how the shop handles size charts, fabric notes and trial rules on an ordinary day. Explain how a clear reply would help a shopper choosing clothes, then offer a small paid trial around size charts, fabric notes and trial rules. You serve a small boutique owner, but the person waiting for an answer deserves your full attention too.",
+      "how_money_comes": "Agree on a fixed weekly or monthly fee for a set number of product enquiries each week, with working hours and a limit on the number of messages you handle. If the owner wants more help with size charts, fabric notes and trial rules, discuss the extra work before it arrives. Keep a record of size charts, fabric notes and trial rules corrections and calls, then review your time together on an agreed payment date. A friendly trial with a small boutique owner should not quietly grow into unlimited free help. A shopper choosing clothes pays the shop for goods; your service fee comes from the owner.",
+      "what_you_need": "You need a measured garment chart and current stock photos, a phone and the patience to check a detail before replying. Ask the owner for approved answers on size charts, fabric notes and trial rules, a contact for exceptions and safe account access. Keep the details of a shopper choosing clothes private and log each change you make to the shop's page. Do not promise a fit you have not seen or measured. Handling size charts, fabric notes and trial rules from home is possible once staff share updates reliably, but your agreed hours still matter.",
+      "first_30_days": [
+        "Watch how a small boutique owner handles size charts, fabric notes and trial rules on an ordinary day.",
+        "Ask a shopper choosing clothes what answer they need before choosing or booking.",
+        "Set up one small paid trial for answer size and fabric questions with approved measurements, with owner approval.",
+        "Log every correction and the time it takes during the first week.",
+        "Review returns caused by unclear sizing together before agreeing on a repeating arrangement."
+      ],
+      "what_hurts": "A labelled size can fit differently across designs. A friendly message about size charts, fabric notes and trial rules can become an argument if you answer from yesterday's information. Do not promise a fit you have not seen or measured. You may be blamed when a detail in size charts, fabric notes and trial rules changes without notice, so record who confirmed each promise and tell the owner promptly. The rush around a set number of product enquiries each week can arrive just when you have family work to do. Agree on a real size charts, fabric notes and trial rules reply window and hand urgent disputes to the person who can settle them.",
+      "verdict": "Build this if you like helping a shopper choosing clothes and can keep size charts, fabric notes and trial rules accurate through a busy week. Walk away if the boutique has no measured size chart or clear exchange rule. A shopper should be able to ask about fit without feeling rushed.",
+      "faq": [
+        {
+          "q": "Can I recommend a size from a photo?",
+          "a": "Ask for the garment measurements and explain the shop's approved size guidance. A photo alone cannot confirm fit. Encourage the shopper to compare a garment they own."
+        },
+        {
+          "q": "Should I handle returns?",
+          "a": "Explain the written shop policy and pass exceptions to the owner. Do not invent an exchange promise to close a sale; that conversation will return as a complaint."
+        },
+        {
+          "q": "How do I get product details?",
+          "a": "Use a shared sheet with measurements, fabric and availability checked by staff. Mark when an item is sold, and pause replies on an uncertain listing until confirmed."
+        }
+      ],
+      "validate_prompt": "I want to handle a small boutique's product enquiries from home in India. How should I collect sizes and set boundaries on fit claims?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S06-I03",
+      "slug": "bakery-preorder-inbox",
+      "title": "Bakery Tomorrow Preorder Inbox",
+      "hook": "You remember a birthday cake at bedtime and the bakery page does not say whether tomorrow is still possible.",
+      "summary": "You organise preorder questions and confirmed pickup slots for a home bakery or small bakery owner. A family planning a celebration gets help with a real decision while the owner works at the counter. Begin with a narrow promise around flavours, lead times and order cutoffs and a routine you can keep on a busy day.",
+      "what_it_is": "You remember a birthday cake at bedtime and the bakery page does not say whether tomorrow is still possible. You sit with the owner, learn how they handle flavours, lead times and order cutoffs, and agree on a simple way to organise preorder questions and confirmed pickup slots. A family planning a celebration should know when you will reply, what the shop has confirmed and which decision still belongs to its staff. Before you send an answer about flavours, lead times and order cutoffs, check the real stock or schedule; a polished message cannot make an uncertain detail true. Try the flavours, lead times and order cutoffs journey yourself on a phone and review the first week of replies with the owner before taking on more work.",
+      "who_pays_you": "A home bakery or small bakery owner pays you because repeated questions interrupt the counter. An extra cake request can exceed the oven's real capacity. Ask the owner to show you how the shop handles flavours, lead times and order cutoffs on an ordinary day. Explain how a clear reply would help a family planning a celebration, then offer a small paid trial around flavours, lead times and order cutoffs. You serve a home bakery or small bakery owner, but the person waiting for an answer deserves your full attention too.",
+      "how_money_comes": "Agree on a fixed weekly or monthly fee for a daily preorder window and order log, with working hours and a limit on the number of messages you handle. If the owner wants more help with flavours, lead times and order cutoffs, discuss the extra work before it arrives. Keep a record of flavours, lead times and order cutoffs corrections and calls, then review your time together on an agreed payment date. A friendly trial with a home bakery or small bakery owner should not quietly grow into unlimited free help. A family planning a celebration pays the shop for goods; your service fee comes from the owner.",
+      "what_you_need": "You need a capacity calendar and allergy information approved by the baker, a phone and the patience to check a detail before replying. Ask the owner for approved answers on flavours, lead times and order cutoffs, a contact for exceptions and safe account access. Keep the details of a family planning a celebration private and log each change you make to the shop's page. The baker alone confirms custom designs and dietary safety. Handling flavours, lead times and order cutoffs from home is possible once staff share updates reliably, but your agreed hours still matter.",
+      "first_30_days": [
+        "Watch how a home bakery or small bakery owner handles flavours, lead times and order cutoffs on an ordinary day.",
+        "Ask a family planning a celebration what answer they need before choosing or booking.",
+        "Set up one small paid trial for organise preorder questions and confirmed pickup slots, with owner approval.",
+        "Log every correction and the time it takes during the first week.",
+        "Review orders missed or accepted too late together before agreeing on a repeating arrangement."
+      ],
+      "what_hurts": "An extra cake request can exceed the oven's real capacity. A friendly message about flavours, lead times and order cutoffs can become an argument if you answer from yesterday's information. The baker alone confirms custom designs and dietary safety. You may be blamed when a detail in flavours, lead times and order cutoffs changes without notice, so record who confirmed each promise and tell the owner promptly. The rush around a daily preorder window and order log can arrive just when you have family work to do. Agree on a real flavours, lead times and order cutoffs reply window and hand urgent disputes to the person who can settle them.",
+      "verdict": "Build this if you like helping a family planning a celebration and can keep flavours, lead times and order cutoffs accurate through a busy week. Walk away if the baker asks you to confirm cakes without checking oven capacity. A family celebration deserves a promise the baker can actually keep.",
+      "faq": [
+        {
+          "q": "Can I confirm a custom cake instantly?",
+          "a": "Collect the date, size, design and budget, then let the baker confirm capacity and final terms. Send the customer a clear next step rather than treating an enquiry as a booking."
+        },
+        {
+          "q": "What about allergy questions?",
+          "a": "Use only ingredient and kitchen information the baker has approved. Do not assure someone that a cake is safe for a specific allergy unless the baker has a verified process."
+        },
+        {
+          "q": "How should I record orders?",
+          "a": "Keep an owner-approved log with contact, date, item, status and payment confirmation. Review it with the baker daily so a message does not get mistaken for a confirmed order."
+        }
+      ],
+      "validate_prompt": "I want to manage bakery preorders through WhatsApp in India. How do I set a cutoff, capacity approval and clear order confirmation?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S06-I04",
+      "slug": "salon-slot-page-handling",
+      "title": "Salon Appointment Slot Page Handling",
+      "hook": "Your aunt wants a haircut before a family function but cannot tell which salon slot is real.",
+      "summary": "You reply with checked appointment choices and service preparation notes for a neighbourhood salon manager. A customer arranging a visit gets help with a real decision while the owner works at the counter. Begin with a narrow promise around staff shifts, service duration and booking slots and a routine you can keep on a busy day.",
+      "what_it_is": "Your aunt wants a haircut before a family function but cannot tell which salon slot is real. You sit with the owner, learn how they handle staff shifts, service duration and booking slots, and agree on a simple way to reply with checked appointment choices and service preparation notes. A customer arranging a visit should know when you will reply, what the shop has confirmed and which decision still belongs to its staff. Before you send an answer about staff shifts, service duration and booking slots, check the real stock or schedule; a polished message cannot make an uncertain detail true. Try the staff shifts, service duration and booking slots journey yourself on a phone and review the first week of replies with the owner before taking on more work.",
+      "who_pays_you": "A neighbourhood salon manager pays you because repeated questions interrupt the counter. Walk-ins and delayed treatments can disrupt the visible calendar. Ask the owner to show you how the shop handles staff shifts, service duration and booking slots on an ordinary day. Explain how a clear reply would help a customer arranging a visit, then offer a small paid trial around staff shifts, service duration and booking slots. You serve a neighbourhood salon manager, but the person waiting for an answer deserves your full attention too.",
+      "how_money_comes": "Agree on a fixed weekly or monthly fee for a defined booking shift and calendar update, with working hours and a limit on the number of messages you handle. If the owner wants more help with staff shifts, service duration and booking slots, discuss the extra work before it arrives. Keep a record of staff shifts, service duration and booking slots corrections and calls, then review your time together on an agreed payment date. A friendly trial with a neighbourhood salon manager should not quietly grow into unlimited free help. A customer arranging a visit pays the shop for goods; your service fee comes from the owner.",
+      "what_you_need": "You need a shared calendar and a service menu approved by the salon, a phone and the patience to check a detail before replying. Ask the owner for approved answers on staff shifts, service duration and booking slots, a contact for exceptions and safe account access. Keep the details of a customer arranging a visit private and log each change you make to the shop's page. Only the salon confirms specialist availability and service suitability. Handling staff shifts, service duration and booking slots from home is possible once staff share updates reliably, but your agreed hours still matter.",
+      "first_30_days": [
+        "Watch how a neighbourhood salon manager handles staff shifts, service duration and booking slots on an ordinary day.",
+        "Ask a customer arranging a visit what answer they need before choosing or booking.",
+        "Set up one small paid trial for reply with checked appointment choices and service preparation notes, with owner approval.",
+        "Log every correction and the time it takes during the first week.",
+        "Review double bookings and unanswered requests together before agreeing on a repeating arrangement."
+      ],
+      "what_hurts": "Walk-ins and delayed treatments can disrupt the visible calendar. A friendly message about staff shifts, service duration and booking slots can become an argument if you answer from yesterday's information. Only the salon confirms specialist availability and service suitability. You may be blamed when a detail in staff shifts, service duration and booking slots changes without notice, so record who confirmed each promise and tell the owner promptly. The rush around a defined booking shift and calendar update can arrive just when you have family work to do. Agree on a real staff shifts, service duration and booking slots reply window and hand urgent disputes to the person who can settle them.",
+      "verdict": "Build this if you like helping a customer arranging a visit and can keep staff shifts, service duration and booking slots accurate through a busy week. Walk away if the salon will not keep its staff calendar current. Your kind reply cannot create an appointment that is already taken.",
+      "faq": [
+        {
+          "q": "Can I book a treatment without discussing it?",
+          "a": "Collect the customer's preferred service and time, then follow the salon's approval rule for treatments needing consultation. Do not judge suitability from a message."
+        },
+        {
+          "q": "What if a walk-in takes the last slot?",
+          "a": "Ask staff to update the calendar promptly. If a slot has changed, apologise plainly, offer confirmed alternatives and escalate any dispute to the manager."
+        },
+        {
+          "q": "Should I request an advance?",
+          "a": "Use only the salon's approved payment method and policy. Explain when a booking becomes confirmed and pass refund questions to the manager rather than holding money yourself."
+        }
+      ],
+      "validate_prompt": "I want to handle appointment messages for a local salon in India. What shared calendar and confirmation rules should I set up?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S06-I05",
+      "slug": "tailor-fitting-status-messages",
+      "title": "Tailor Fitting Status Messages",
+      "hook": "Your trousers are due for a fitting, but you have no idea whether the tailor has finished the alteration.",
+      "summary": "You send checked fitting and collection updates for a local tailoring shop owner. A customer planning a fitting gets help with a real decision while the owner works at the counter. Begin with a narrow promise around job slips, fitting dates and collection promises and a routine you can keep on a busy day.",
+      "what_it_is": "Your trousers are due for a fitting, but you have no idea whether the tailor has finished the alteration. You sit with the owner, learn how they handle job slips, fitting dates and collection promises, and agree on a simple way to send checked fitting and collection updates. A customer planning a fitting should know when you will reply, what the shop has confirmed and which decision still belongs to its staff. Before you send an answer about job slips, fitting dates and collection promises, check the real stock or schedule; a polished message cannot make an uncertain detail true. Try the job slips, fitting dates and collection promises journey yourself on a phone and review the first week of replies with the owner before taking on more work.",
+      "who_pays_you": "A local tailoring shop owner pays you because repeated questions interrupt the counter. A rushed alteration can push several promised dates back. Ask the owner to show you how the shop handles job slips, fitting dates and collection promises on an ordinary day. Explain how a clear reply would help a customer planning a fitting, then offer a small paid trial around job slips, fitting dates and collection promises. You serve a local tailoring shop owner, but the person waiting for an answer deserves your full attention too.",
+      "how_money_comes": "Agree on a fixed weekly or monthly fee for a fixed batch of daily status updates, with working hours and a limit on the number of messages you handle. If the owner wants more help with job slips, fitting dates and collection promises, discuss the extra work before it arrives. Keep a record of job slips, fitting dates and collection promises corrections and calls, then review your time together on an agreed payment date. A friendly trial with a local tailoring shop owner should not quietly grow into unlimited free help. A customer planning a fitting pays the shop for goods; your service fee comes from the owner.",
+      "what_you_need": "You need a private job-number log and staff-approved dates, a phone and the patience to check a detail before replying. Ask the owner for approved answers on job slips, fitting dates and collection promises, a contact for exceptions and safe account access. Keep the details of a customer planning a fitting private and log each change you make to the shop's page. Do not share garment photos or measurements with the wrong person. Handling job slips, fitting dates and collection promises from home is possible once staff share updates reliably, but your agreed hours still matter.",
+      "first_30_days": [
+        "Watch how a local tailoring shop owner handles job slips, fitting dates and collection promises on an ordinary day.",
+        "Ask a customer planning a fitting what answer they need before choosing or booking.",
+        "Set up one small paid trial for send checked fitting and collection updates, with owner approval.",
+        "Log every correction and the time it takes during the first week.",
+        "Review late fittings and repeated status calls together before agreeing on a repeating arrangement."
+      ],
+      "what_hurts": "A rushed alteration can push several promised dates back. A friendly message about job slips, fitting dates and collection promises can become an argument if you answer from yesterday's information. Do not share garment photos or measurements with the wrong person. You may be blamed when a detail in job slips, fitting dates and collection promises changes without notice, so record who confirmed each promise and tell the owner promptly. The rush around a fixed batch of daily status updates can arrive just when you have family work to do. Agree on a real job slips, fitting dates and collection promises reply window and hand urgent disputes to the person who can settle them.",
+      "verdict": "Build this if you like helping a customer planning a fitting and can keep job slips, fitting dates and collection promises accurate through a busy week. Walk away if the tailor will not share reliable job updates. Someone may arrange a trip around the collection time you send.",
+      "faq": [
+        {
+          "q": "Can I tell someone their garment is ready?",
+          "a": "Only after the tailor or staff marks the job complete and the collection process is clear. A due date on a slip is not proof that the work is finished."
+        },
+        {
+          "q": "How do I protect measurements?",
+          "a": "Use only the approved job number and necessary contact details. Keep photos and measurements in the shop's system, with access limited to people who need them."
+        },
+        {
+          "q": "What if the promised date slips?",
+          "a": "Tell the owner immediately and ask for an honest revised time. The customer deserves a prompt update and a choice, not silence until they arrive."
+        }
+      ],
+      "validate_prompt": "I want to manage fitting updates for a local tailoring shop in India. How should I track job status and handle a delayed collection?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S06-I06",
+      "slug": "florist-festival-order-page",
+      "title": "Florist Festival Order Page",
+      "hook": "You need flowers for a puja tomorrow morning, but the florist's page shows yesterday's bunches.",
+      "summary": "You post verified seasonal options and collect pickup enquiries for a neighbourhood florist. A household planning a puja gets help with a real decision while the owner works at the counter. Begin with a narrow promise around fresh stock, festival cutoffs and pickup windows and a routine you can keep on a busy day.",
+      "what_it_is": "You need flowers for a puja tomorrow morning, but the florist's page shows yesterday's bunches. You sit with the owner, learn how they handle fresh stock, festival cutoffs and pickup windows, and agree on a simple way to post verified seasonal options and collect pickup enquiries. A household planning a puja should know when you will reply, what the shop has confirmed and which decision still belongs to its staff. Before you send an answer about fresh stock, festival cutoffs and pickup windows, check the real stock or schedule; a polished message cannot make an uncertain detail true. Try the fresh stock, festival cutoffs and pickup windows journey yourself on a phone and review the first week of replies with the owner before taking on more work.",
+      "who_pays_you": "A neighbourhood florist pays you because repeated questions interrupt the counter. Fresh flowers can sell out or wilt before a late pickup. Ask the owner to show you how the shop handles fresh stock, festival cutoffs and pickup windows on an ordinary day. Explain how a clear reply would help a household planning a puja, then offer a small paid trial around fresh stock, festival cutoffs and pickup windows. You serve a neighbourhood florist, but the person waiting for an answer deserves your full attention too.",
+      "how_money_comes": "Agree on a fixed weekly or monthly fee for a seasonal page update and reply shift, with working hours and a limit on the number of messages you handle. If the owner wants more help with fresh stock, festival cutoffs and pickup windows, discuss the extra work before it arrives. Keep a record of fresh stock, festival cutoffs and pickup windows corrections and calls, then review your time together on an agreed payment date. A friendly trial with a neighbourhood florist should not quietly grow into unlimited free help. A household planning a puja pays the shop for goods; your service fee comes from the owner.",
+      "what_you_need": "You need morning stock photos and a simple order board, a phone and the patience to check a detail before replying. Ask the owner for approved answers on fresh stock, festival cutoffs and pickup windows, a contact for exceptions and safe account access. Keep the details of a household planning a puja private and log each change you make to the shop's page. The florist must approve substitutions and freshness claims. Handling fresh stock, festival cutoffs and pickup windows from home is possible once staff share updates reliably, but your agreed hours still matter.",
+      "first_30_days": [
+        "Watch how a neighbourhood florist handles fresh stock, festival cutoffs and pickup windows on an ordinary day.",
+        "Ask a household planning a puja what answer they need before choosing or booking.",
+        "Set up one small paid trial for post verified seasonal options and collect pickup enquiries, with owner approval.",
+        "Log every correction and the time it takes during the first week.",
+        "Review unfilled festival orders together before agreeing on a repeating arrangement."
+      ],
+      "what_hurts": "Fresh flowers can sell out or wilt before a late pickup. A friendly message about fresh stock, festival cutoffs and pickup windows can become an argument if you answer from yesterday's information. The florist must approve substitutions and freshness claims. You may be blamed when a detail in fresh stock, festival cutoffs and pickup windows changes without notice, so record who confirmed each promise and tell the owner promptly. The rush around a seasonal page update and reply shift can arrive just when you have family work to do. Agree on a real fresh stock, festival cutoffs and pickup windows reply window and hand urgent disputes to the person who can settle them.",
+      "verdict": "Build this if you like helping a household planning a puja and can keep fresh stock, festival cutoffs and pickup windows accurate through a busy week. Walk away if the florist expects you to sell flowers that have not arrived. Freshness and timing mean more to the household than a lovely old photograph.",
+      "faq": [
+        {
+          "q": "Can I promise the same flowers in every bunch?",
+          "a": "Only if the florist has confirmed enough stock. Show approved alternatives and ask the customer before substituting, especially for a ceremony with specific needs."
+        },
+        {
+          "q": "When should orders close?",
+          "a": "Set the cutoff around the florist's buying and preparation routine. A late message should receive an honest availability check, not an automatic confirmation."
+        },
+        {
+          "q": "Should I post old photos?",
+          "a": "Use current or clearly illustrative images with the florist's permission. A festival buyer needs to know what is available now, not what the shop made last year."
+        }
+      ],
+      "validate_prompt": "I want to handle a florist's festival orders online in India. How should I manage fresh stock changes and pickup cutoffs?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "weekends",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S06-I07",
+      "slug": "stationery-school-list-help",
+      "title": "Stationery School List Help Page",
+      "hook": "The school sends a materials list at night, and a parent cannot tell which notebook the stationery shop stocks.",
+      "summary": "You turn school lists into checked availability and pickup bundles for a stationery store owner. A parent buying school supplies gets help with a real decision while the owner works at the counter. Begin with a narrow promise around school lists, notebook sizes and bundle pickup and a routine you can keep on a busy day.",
+      "what_it_is": "The school sends a materials list at night, and a parent cannot tell which notebook the stationery shop stocks. You sit with the owner, learn how they handle school lists, notebook sizes and bundle pickup, and agree on a simple way to turn school lists into checked availability and pickup bundles. A parent buying school supplies should know when you will reply, what the shop has confirmed and which decision still belongs to its staff. Before you send an answer about school lists, notebook sizes and bundle pickup, check the real stock or schedule; a polished message cannot make an uncertain detail true. Try the school lists, notebook sizes and bundle pickup journey yourself on a phone and review the first week of replies with the owner before taking on more work.",
+      "who_pays_you": "A stationery store owner pays you because repeated questions interrupt the counter. A similar looking notebook may have the wrong ruling or page count. Ask the owner to show you how the shop handles school lists, notebook sizes and bundle pickup on an ordinary day. Explain how a clear reply would help a parent buying school supplies, then offer a small paid trial around school lists, notebook sizes and bundle pickup. You serve a stationery store owner, but the person waiting for an answer deserves your full attention too.",
+      "how_money_comes": "Agree on a fixed weekly or monthly fee for a seasonal list update and enquiry window, with working hours and a limit on the number of messages you handle. If the owner wants more help with school lists, notebook sizes and bundle pickup, discuss the extra work before it arrives. Keep a record of school lists, notebook sizes and bundle pickup corrections and calls, then review your time together on an agreed payment date. A friendly trial with a stationery store owner should not quietly grow into unlimited free help. A parent buying school supplies pays the shop for goods; your service fee comes from the owner.",
+      "what_you_need": "You need current school lists and a product equivalence sheet, a phone and the patience to check a detail before replying. Ask the owner for approved answers on school lists, notebook sizes and bundle pickup, a contact for exceptions and safe account access. Keep the details of a parent buying school supplies private and log each change you make to the shop's page. The parent must approve substitutions for a child's school list. Handling school lists, notebook sizes and bundle pickup from home is possible once staff share updates reliably, but your agreed hours still matter.",
+      "first_30_days": [
+        "Watch how a stationery store owner handles school lists, notebook sizes and bundle pickup on an ordinary day.",
+        "Ask a parent buying school supplies what answer they need before choosing or booking.",
+        "Set up one small paid trial for turn school lists into checked availability and pickup bundles, with owner approval.",
+        "Log every correction and the time it takes during the first week.",
+        "Review wrong-item returns during school opening together before agreeing on a repeating arrangement."
+      ],
+      "what_hurts": "A similar looking notebook may have the wrong ruling or page count. A friendly message about school lists, notebook sizes and bundle pickup can become an argument if you answer from yesterday's information. The parent must approve substitutions for a child's school list. You may be blamed when a detail in school lists, notebook sizes and bundle pickup changes without notice, so record who confirmed each promise and tell the owner promptly. The rush around a seasonal list update and enquiry window can arrive just when you have family work to do. Agree on a real school lists, notebook sizes and bundle pickup reply window and hand urgent disputes to the person who can settle them.",
+      "verdict": "Build this if you like helping a parent buying school supplies and can keep school lists, notebook sizes and bundle pickup accurate through a busy week. Walk away if the shop wants you to approve school substitutions on your own. A child needs the correct notebook on the first morning.",
+      "faq": [
+        {
+          "q": "Can I copy a school's list onto the page?",
+          "a": "Ask the shop to use a list it received legitimately and verify the current version. Present it as a shopping aid, not as an official school notice."
+        },
+        {
+          "q": "Can I offer a substitute notebook?",
+          "a": "Explain the exact difference in size, ruling or pages and ask the parent to decide. A cheap substitute is no help if the teacher rejects it."
+        },
+        {
+          "q": "How do I handle a sudden list change?",
+          "a": "Date each version, ask the owner to confirm new stock and correct the page quickly. Tell customers with pending bundles when a needed item changes."
+        }
+      ],
+      "validate_prompt": "I want to help a stationery shop handle school supply list enquiries in India. What product checks and substitution rules matter?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S06-I08",
+      "slug": "pet-shop-repeat-order-desk",
+      "title": "Pet Shop Repeat Order Desk",
+      "hook": "Your dog's regular food is nearly finished, and the pet shop has not replied about the next bag.",
+      "summary": "You track repeat product requests and confirmed pickup dates for a small pet supply shop owner. A pet owner planning a refill gets help with a real decision while the owner works at the counter. Begin with a narrow promise around brand variants, pack sizes and reorder timing and a routine you can keep on a busy day.",
+      "what_it_is": "Your dog's regular food is nearly finished, and the pet shop has not replied about the next bag. You sit with the owner, learn how they handle brand variants, pack sizes and reorder timing, and agree on a simple way to track repeat product requests and confirmed pickup dates. A pet owner planning a refill should know when you will reply, what the shop has confirmed and which decision still belongs to its staff. Before you send an answer about brand variants, pack sizes and reorder timing, check the real stock or schedule; a polished message cannot make an uncertain detail true. Try the brand variants, pack sizes and reorder timing journey yourself on a phone and review the first week of replies with the owner before taking on more work.",
+      "who_pays_you": "A small pet supply shop owner pays you because repeated questions interrupt the counter. A wrong variant can upset a pet's feeding routine. Ask the owner to show you how the shop handles brand variants, pack sizes and reorder timing on an ordinary day. Explain how a clear reply would help a pet owner planning a refill, then offer a small paid trial around brand variants, pack sizes and reorder timing. You serve a small pet supply shop owner, but the person waiting for an answer deserves your full attention too.",
+      "how_money_comes": "Agree on a fixed weekly or monthly fee for a weekly reorder reminder and reply window, with working hours and a limit on the number of messages you handle. If the owner wants more help with brand variants, pack sizes and reorder timing, discuss the extra work before it arrives. Keep a record of brand variants, pack sizes and reorder timing corrections and calls, then review your time together on an agreed payment date. A friendly trial with a small pet supply shop owner should not quietly grow into unlimited free help. A pet owner planning a refill pays the shop for goods; your service fee comes from the owner.",
+      "what_you_need": "You need a customer opt-in list and checked product labels, a phone and the patience to check a detail before replying. Ask the owner for approved answers on brand variants, pack sizes and reorder timing, a contact for exceptions and safe account access. Keep the details of a pet owner planning a refill private and log each change you make to the shop's page. Never recommend a diet or medicine in place of a veterinarian. Handling brand variants, pack sizes and reorder timing from home is possible once staff share updates reliably, but your agreed hours still matter.",
+      "first_30_days": [
+        "Watch how a small pet supply shop owner handles brand variants, pack sizes and reorder timing on an ordinary day.",
+        "Ask a pet owner planning a refill what answer they need before choosing or booking.",
+        "Set up one small paid trial for track repeat product requests and confirmed pickup dates, with owner approval.",
+        "Log every correction and the time it takes during the first week.",
+        "Review missed refills and incorrect variants together before agreeing on a repeating arrangement."
+      ],
+      "what_hurts": "A wrong variant can upset a pet's feeding routine. A friendly message about brand variants, pack sizes and reorder timing can become an argument if you answer from yesterday's information. Never recommend a diet or medicine in place of a veterinarian. You may be blamed when a detail in brand variants, pack sizes and reorder timing changes without notice, so record who confirmed each promise and tell the owner promptly. The rush around a weekly reorder reminder and reply window can arrive just when you have family work to do. Agree on a real brand variants, pack sizes and reorder timing reply window and hand urgent disputes to the person who can settle them.",
+      "verdict": "Build this if you like helping a pet owner planning a refill and can keep brand variants, pack sizes and reorder timing accurate through a busy week. Walk away if the shop asks you to give veterinary advice or use contacts without consent. A pet owner trusts you with a familiar routine and private number.",
+      "faq": [
+        {
+          "q": "Can I suggest another pet food?",
+          "a": "Only share shop-approved product facts and ask the owner to check availability. For a medical diet or health issue, direct the customer to their veterinarian."
+        },
+        {
+          "q": "Can I send automatic reminders?",
+          "a": "Ask customers to opt in and choose a reasonable interval. Make stopping reminders easy. A pet owner should not feel that the shop is watching their purchases without permission."
+        },
+        {
+          "q": "What details go in the order log?",
+          "a": "Record only what is needed: customer contact, exact product variant, pack size, status and pickup choice. Keep the list with the shop, not your personal contacts."
+        }
+      ],
+      "validate_prompt": "I want to manage repeat pet supply orders for a small Indian shop. How should I record variants and ask for reminder consent?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S06-I09",
+      "slug": "hardware-availability-question-desk",
+      "title": "Hardware Item Availability Question Desk",
+      "hook": "You take a broken tap part to the hardware market and realise nobody checked the size before you left.",
+      "summary": "You collect part details and arrange a staff-checked availability answer for a neighbourhood hardware shop owner. A household fixing a small problem gets help with a real decision while the owner works at the counter. Begin with a narrow promise around part sizes, photos and counter confirmation and a routine you can keep on a busy day.",
+      "what_it_is": "You take a broken tap part to the hardware market and realise nobody checked the size before you left. You sit with the owner, learn how they handle part sizes, photos and counter confirmation, and agree on a simple way to collect part details and arrange a staff-checked availability answer. A household fixing a small problem should know when you will reply, what the shop has confirmed and which decision still belongs to its staff. Before you send an answer about part sizes, photos and counter confirmation, check the real stock or schedule; a polished message cannot make an uncertain detail true. Try the part sizes, photos and counter confirmation journey yourself on a phone and review the first week of replies with the owner before taking on more work.",
+      "who_pays_you": "A neighbourhood hardware shop owner pays you because repeated questions interrupt the counter. Two parts can look identical in a phone photograph. Ask the owner to show you how the shop handles part sizes, photos and counter confirmation on an ordinary day. Explain how a clear reply would help a household fixing a small problem, then offer a small paid trial around part sizes, photos and counter confirmation. You serve a neighbourhood hardware shop owner, but the person waiting for an answer deserves your full attention too.",
+      "how_money_comes": "Agree on a fixed weekly or monthly fee for a set number of enquiry replies and checks, with working hours and a limit on the number of messages you handle. If the owner wants more help with part sizes, photos and counter confirmation, discuss the extra work before it arrives. Keep a record of part sizes, photos and counter confirmation corrections and calls, then review your time together on an agreed payment date. A friendly trial with a neighbourhood hardware shop owner should not quietly grow into unlimited free help. A household fixing a small problem pays the shop for goods; your service fee comes from the owner.",
+      "what_you_need": "You need a labelled catalogue and a staff contact for uncertain parts, a phone and the patience to check a detail before replying. Ask the owner for approved answers on part sizes, photos and counter confirmation, a contact for exceptions and safe account access. Keep the details of a household fixing a small problem private and log each change you make to the shop's page. A technician or counter expert must confirm compatibility. Handling part sizes, photos and counter confirmation from home is possible once staff share updates reliably, but your agreed hours still matter.",
+      "first_30_days": [
+        "Watch how a neighbourhood hardware shop owner handles part sizes, photos and counter confirmation on an ordinary day.",
+        "Ask a household fixing a small problem what answer they need before choosing or booking.",
+        "Set up one small paid trial for collect part details and arrange a staff-checked availability answer, with owner approval.",
+        "Log every correction and the time it takes during the first week.",
+        "Review wasted visits for the wrong part together before agreeing on a repeating arrangement."
+      ],
+      "what_hurts": "Two parts can look identical in a phone photograph. A friendly message about part sizes, photos and counter confirmation can become an argument if you answer from yesterday's information. A technician or counter expert must confirm compatibility. You may be blamed when a detail in part sizes, photos and counter confirmation changes without notice, so record who confirmed each promise and tell the owner promptly. The rush around a set number of enquiry replies and checks can arrive just when you have family work to do. Agree on a real part sizes, photos and counter confirmation reply window and hand urgent disputes to the person who can settle them.",
+      "verdict": "Build this if you like helping a household fixing a small problem and can keep part sizes, photos and counter confirmation accurate through a busy week. Walk away if the counter expert cannot check compatibility before you promise a part. The customer may have carried a broken fitting across town.",
+      "faq": [
+        {
+          "q": "Can I identify a part from a photo?",
+          "a": "Use the photo to collect questions, not to promise a match. Ask for measurements and model details where relevant, then have the counter expert check before the customer travels."
+        },
+        {
+          "q": "What if the shop stocks many variants?",
+          "a": "Begin with frequently requested parts and a clear process for unusual items. A partial accurate catalogue helps more than a complete list full of guesses."
+        },
+        {
+          "q": "Can I quote a final price?",
+          "a": "Use the owner's current approved price and clarify when inspection may change the choice. If the part is uncertain, invite a counter check before payment."
+        }
+      ],
+      "validate_prompt": "I want to answer hardware shop enquiries from home in India. How can I avoid promising that a photographed part will fit?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S06-I10",
+      "slug": "bookshop-reading-order-page",
+      "title": "Bookshop Reading Order Page",
+      "hook": "Your child wants the next book in a series, and the shop's social page never says which volume is on the shelf.",
+      "summary": "You organise series availability and reservation replies for an independent bookshop owner. A parent or reader choosing a book gets help with a real decision while the owner works at the counter. Begin with a narrow promise around titles, editions and reservation periods and a routine you can keep on a busy day.",
+      "what_it_is": "Your child wants the next book in a series, and the shop's social page never says which volume is on the shelf. You sit with the owner, learn how they handle titles, editions and reservation periods, and agree on a simple way to organise series availability and reservation replies. A parent or reader choosing a book should know when you will reply, what the shop has confirmed and which decision still belongs to its staff. Before you send an answer about titles, editions and reservation periods, check the real stock or schedule; a polished message cannot make an uncertain detail true. Try the titles, editions and reservation periods journey yourself on a phone and review the first week of replies with the owner before taking on more work.",
+      "who_pays_you": "An independent bookshop owner pays you because repeated questions interrupt the counter. Similar covers can hide different editions or languages. Ask the owner to show you how the shop handles titles, editions and reservation periods on an ordinary day. Explain how a clear reply would help a parent or reader choosing a book, then offer a small paid trial around titles, editions and reservation periods. You serve an independent bookshop owner, but the person waiting for an answer deserves your full attention too.",
+      "how_money_comes": "Agree on a fixed weekly or monthly fee for a weekly reading list and reservation inbox, with working hours and a limit on the number of messages you handle. If the owner wants more help with titles, editions and reservation periods, discuss the extra work before it arrives. Keep a record of titles, editions and reservation periods corrections and calls, then review your time together on an agreed payment date. A friendly trial with an independent bookshop owner should not quietly grow into unlimited free help. A parent or reader choosing a book pays the shop for goods; your service fee comes from the owner.",
+      "what_you_need": "You need an edition-aware catalogue and confirmed shelf checks, a phone and the patience to check a detail before replying. Ask the owner for approved answers on titles, editions and reservation periods, a contact for exceptions and safe account access. Keep the details of a parent or reader choosing a book private and log each change you make to the shop's page. Only the shop can confirm a copy is reserved and for how long. Handling titles, editions and reservation periods from home is possible once staff share updates reliably, but your agreed hours still matter.",
+      "first_30_days": [
+        "Watch how an independent bookshop owner handles titles, editions and reservation periods on an ordinary day.",
+        "Ask a parent or reader choosing a book what answer they need before choosing or booking.",
+        "Set up one small paid trial for organise series availability and reservation replies, with owner approval.",
+        "Log every correction and the time it takes during the first week.",
+        "Review wrong-edition pickups and expired holds together before agreeing on a repeating arrangement."
+      ],
+      "what_hurts": "Similar covers can hide different editions or languages. A friendly message about titles, editions and reservation periods can become an argument if you answer from yesterday's information. Only the shop can confirm a copy is reserved and for how long. You may be blamed when a detail in titles, editions and reservation periods changes without notice, so record who confirmed each promise and tell the owner promptly. The rush around a weekly reading list and reservation inbox can arrive just when you have family work to do. Agree on a real titles, editions and reservation periods reply window and hand urgent disputes to the person who can settle them.",
+      "verdict": "Build this if you like helping a parent or reader choosing a book and can keep titles, editions and reservation periods accurate through a busy week. Walk away if the shop cannot tell you which edition is actually on the shelf. A reader should go home with the book they came to collect.",
+      "faq": [
+        {
+          "q": "Can I recommend a book for a child's age?",
+          "a": "Ask about reading interest and share factual descriptions, then leave the choice with the family. Avoid claiming one book suits every child of a certain age."
+        },
+        {
+          "q": "How do I track a series?",
+          "a": "Record title, author, volume, language and edition where it matters. Ask staff to check the physical copy before confirming a hold."
+        },
+        {
+          "q": "What if a reservation expires?",
+          "a": "Tell the customer the hold period clearly when confirming. Ask the shop to release or extend the copy under its own policy and update the log promptly."
+        }
+      ],
+      "validate_prompt": "I want to manage a small bookshop's online availability and reservations in India. Which edition details and hold rules should I track?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    }
+  ]
+}
