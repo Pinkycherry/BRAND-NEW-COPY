@@ -227,6 +227,61 @@ for (const path of every.concat(named.filter((p) => !every.includes(p)))) {
         err(file, `ideas ${a + 1} and ${b + 1}: titles too alike ("${ideas[a].title}" / "${ideas[b].title}")`);
 }
 
+// ---------------------------------------------------------------- templates
+// Ideas filled into one sentence pattern pass every check above because the
+// slot words change. These catch the pattern itself.
+const PROSE = ["hook", "summary", "what_it_is", "who_pays_you", "how_money_comes", "what_you_need", "what_hurts", "verdict"];
+const ALLOWED = /^(build this if you|walk away if you|this if you can|tap validate for today|validate for today s)/;
+const grams = (text, n) => {
+  const t = String(text).toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter(Boolean);
+  const out = [];
+  for (let k = 0; k + n <= t.length; k += 1) out.push(t.slice(k, k + n).join(" "));
+  return out;
+};
+const ideaText = (i) => PROSE.map((f) => i?.[f] ?? "").join(" ");
+const siteGrams = new Map();
+let siteIdeas = 0;
+const perFile = [];
+for (const path of every.concat(named.filter((p) => !every.includes(p)))) {
+  const file = rel(path);
+  let data;
+  try { data = JSON.parse(readFileSync(path, "utf8")); } catch { continue; }
+  const ideas = Array.isArray(data.ideas) ? data.ideas : [];
+  const fileGrams = new Map();
+  ideas.forEach((idea, i) => {
+    siteIdeas += 1;
+    const g5 = new Set(grams(ideaText(idea), 5));
+    for (const g of g5) {
+      if (ALLOWED.test(g)) continue;
+      fileGrams.set(g, (fileGrams.get(g) || 0) + 1);
+      siteGrams.set(g, (siteGrams.get(g) || 0) + 1);
+    }
+    if (!targetSet.has(file)) return;
+    // The same phrase stuffed into one idea again and again.
+    const counts = new Map();
+    for (const g of grams(ideaText(idea), 4)) counts.set(g, (counts.get(g) || 0) + 1);
+    const stuffed = [...counts].filter(([g, n]) => n >= 3 && !/^(you|your|the|a|and|to|of|in|for) /.test(g) && g.split(" ").filter((w) => w.length > 3).length >= 2);
+    if (stuffed.length) err(file, `idea ${i + 1}: repeats "${stuffed[0][0]}" ${stuffed[0][1]} times; write it as normal prose`);
+    // Hook pasted again as the start of another field.
+    const hook = String(idea?.hook ?? "").trim().slice(0, 60).toLowerCase();
+    if (hook.length > 30) for (const f of PROSE.slice(1)) if (String(idea?.[f] ?? "").toLowerCase().includes(hook)) err(file, `idea ${i + 1}: ${f} repeats the hook`);
+  });
+  if (targetSet.has(file)) perFile.push([file, fileGrams, ideas.length]);
+}
+for (const [file, fileGrams] of perFile) {
+  const shared = [...fileGrams].filter(([, n]) => n >= 4).sort((a, b) => b[1] - a[1]);
+  if (shared.length) err(file, `${shared.length} phrase(s) repeated across 4+ ideas, e.g. "${shared[0][0]}" in ${shared[0][1]}; each idea must be written on its own`);
+}
+const limit = Math.max(15, Math.ceil(siteIdeas * 0.05));
+const common = [...siteGrams].filter(([, n]) => n > limit).sort((a, b) => b[1] - a[1]);
+if (common.length && perFile.length) {
+  const hits = new Set(common.slice(0, 50).map(([g]) => g));
+  for (const [file, fileGrams] of perFile) {
+    const mine = [...fileGrams.keys()].filter((g) => hits.has(g));
+    if (mine.length) err(file, `uses site-wide template phrase(s), e.g. "${mine[0]}" (in ${siteGrams.get(mine[0])} ideas across the site)`);
+  }
+}
+
 for (const w of warnings) console.log(`warning  ${w}`);
 for (const e of errors) console.log(`ERROR    ${e}`);
 const checked = targets.length;
