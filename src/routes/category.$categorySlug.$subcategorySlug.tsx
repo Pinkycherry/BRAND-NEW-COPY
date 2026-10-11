@@ -77,7 +77,9 @@ function SubcategoryPage() {
   const categoryPath = `/category/${categorySlug}`;
   const subcategoryPath = `${categoryPath}/${subcategorySlug}`;
   const featured = categoryImage(categorySlug);
-  const siblings = category.subcategories.filter((s) => s.slug !== subcategorySlug);
+  const siblings = category.subcategories
+    .map((s, i) => ({ ...s, position: i + 1 }))
+    .filter((s) => s.slug !== subcategorySlug);
   const topic = topicOf(subcategory.name);
 
   const headingRef = useTextReveal<HTMLHeadingElement>();
@@ -128,7 +130,7 @@ function SubcategoryPage() {
             >
               {subcategory.name}
             </h1>
-            <p className="mt-2 text-sm text-muted-foreground">Ideas are being added</p>
+            <p className="mt-2 text-sm text-muted-foreground">0 of 10 ideas published</p>
             <figure className="mo-media glass relative mt-6 aspect-[21/9] w-full overflow-hidden">
               <img
                 ref={hideImgIfBroken}
@@ -171,15 +173,14 @@ function SubcategoryPage() {
               )}
               <section
                 aria-labelledby="ideas-heading"
-                className="glass rounded-xl border border-dashed border-border/70 p-6"
+                className="rounded-xl border border-dashed border-border/70 p-6 text-center"
               >
-                <h2 id="ideas-heading" className="text-lg font-semibold tracking-tight">
-                  {subcategory.name}
+                <p className="ins-legend">Ideas in this subcategory</p>
+                <h2 id="ideas-heading" className="mt-2 text-4xl font-bold tabular-nums">
+                  0 <span className="text-lg font-semibold text-muted-foreground">of 10</span>
                 </h2>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  No ideas are published here yet. Researched {topic} ideas will appear on this page
-                  as they are written. Until then, the other {category.short.toLowerCase()}{" "}
-                  subcategories below are one click away.
+                <p className="mt-2 text-sm text-muted-foreground">
+                  The ten {topic} ideas are being written and will appear here.
                 </p>
               </section>
             </div>
@@ -202,26 +203,12 @@ function SubcategoryPage() {
                   </ul>
                 </section>
               )}
-              {detail && detail.keywords.length > 0 && (
-                <section aria-labelledby="keywords-heading">
-                  <h2 id="keywords-heading" className="ins-legend">
-                    What people search for
-                  </h2>
-                  <ul className="mt-3 grid gap-1.5">
-                    {detail.keywords.map((keyword) => (
-                      <li key={keyword} className="text-sm text-muted-foreground">
-                        {keyword}
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
             </aside>
           </div>
 
           <section className="bbi-depth-front mt-14" aria-labelledby="siblings-heading">
             <h2 id="siblings-heading" className="text-xl font-semibold tracking-tight">
-              More in {category.name}
+              Other {category.short} subcategories
             </h2>
             <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {siblings.map((s) => (
@@ -229,9 +216,14 @@ function SubcategoryPage() {
                   key={s.slug}
                   to="/category/$categorySlug/$subcategorySlug"
                   params={{ categorySlug, subcategorySlug: s.slug }}
-                  className="glass block rounded-xl border border-border/50 p-4 text-sm font-semibold transition-colors hover:border-primary/60"
+                  className="glass block rounded-xl border border-border/50 p-4 transition-colors hover:border-primary/60"
                 >
-                  {s.name}
+                  <span className="block text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
+                    Subcategory {s.position}
+                  </span>
+                  <span className="mt-1 block text-sm font-semibold">
+                    {s.name.replace(/ Business Ideas$/, "")}
+                  </span>
                 </Link>
               ))}
             </div>

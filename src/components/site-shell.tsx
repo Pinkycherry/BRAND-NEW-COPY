@@ -256,6 +256,9 @@ function useSiteResources() {
   const { resources } = useLoaderData({ from: "__root__" });
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const normalised = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
+  // Category and subcategory pages carry only their own content: the old
+  // site's guides and glossary there read as if they were this page's ideas.
+  if (normalised.startsWith("/category/")) return null;
   return NO_RESOURCE_HUB.has(normalised) ? null : resources;
 }
 
