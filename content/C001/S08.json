@@ -1,0 +1,557 @@
+{
+  "subcategory": {
+    "code": "C001-S08",
+    "intro": "You may be the person in the family who remembers every appointment, finds the missing form and follows up without making anyone feel foolish. Those are useful skills for a small business too. A doctor can care for patients but still lose an hour looking for a booking. A tutor can teach well and forget to send the next batch's timings. Remote admin support means you take a defined piece of that quiet work from home, keep it orderly and tell the business owner what needs their decision.\n\nThe word remote can sound easy until someone sends you a private document at midnight. Start with a named task, working hours and a safe way to receive information. Ask who can approve a schedule change or a payment reminder. You may arrange an appointment, but you should not give health advice. You may prepare an invoice list, but you should not change an amount you cannot verify. A written handover at the end of a day is a kindness to the owner and protection for you.\n\nLook for a client who already has a repeating routine and a real bottleneck. Offer a short paid trial: a small calendar, a tidy enquiry log or a weekly document checklist. Choose tools the client can continue using if you are away. Count the time spent asking for missing details, because chasing one approval can take longer than entering ten clean records. Keep access limited to what you need and agree on how documents are stored or deleted.\n\nThe ten paths below serve different people and rhythms. A property manager handles urgent repairs, while a tutor's admissions peak follows the school calendar. Pick a task you can do carefully at its busiest hour, and leave decisions that require professional judgement with the person qualified to make them.",
+    "how_to_choose": "Choose a client whose repeated admin task you can describe in one sentence. If you like short calls, appointment coordination may fit; if you like tidy files, document tracking may feel calmer. Ask what information is sensitive, who owns each decision and how many requests arrive in a busy week. A monthly fee should cover a defined amount of work and a clear response window. Try one paid week before offering to handle an entire inbox. The right client will share accurate information and accept a simple handover process, so you can help without becoming responsible for every unresolved problem in their business.",
+    "faq": [
+      {
+        "q": "Do I need to be available all day?",
+        "a": "No. Agree on a response window that fits the client's real routine and say who handles urgent issues outside it. If the work truly needs full-day coverage, price and schedule that honestly."
+      },
+      {
+        "q": "Can I use my personal WhatsApp account?",
+        "a": "It is better to use a client-approved account or a clearly separated work process. Agree on access, message history and handover before you begin. Customer details should remain with the business."
+      },
+      {
+        "q": "How do I price remote admin work?",
+        "a": "Define the task, estimated volume, hours, approval path and exception handling first. Charge for the real time, including follow-ups and reporting. Review the fee after a trial shows how much work arrives."
+      },
+      {
+        "q": "What if I make a scheduling mistake?",
+        "a": "Tell the client promptly, correct the record and contact affected people through the agreed process. Keep a change log and a second check for high-impact details. Hiding a mistake makes the next one harder to repair."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C001-S08-I01",
+      "slug": "clinic-appointment-confirmation-desk",
+      "title": "Clinic Appointment Confirmation Desk",
+      "hook": "Your father leaves for a clinic appointment, then learns the doctor changed the consultation hour.",
+      "summary": "You confirm bookings and send approved timing changes for a small clinic administrator. A patient arranging transport gets a clearer next step while the client attends to their own work. A reception's appointment calendar and clinician availability log and handover show what was confirmed and who should answer next.",
+      "what_it_is": "Your father leaves for a clinic appointment, then learns the doctor changed the consultation hour. You learn the client's real reception's appointment calendar and clinician availability before touching their inbox. Agree on which reception's appointment calendar and clinician availability details you may enter, which message you may send and which decision needs the client's approval. Then you confirm bookings and send approved timing changes, keeping a dated record that another person can understand. When information about reception's appointment calendar and clinician availability is missing, ask rather than filling the gap with a guess. Try the reception's appointment calendar and clinician availability process on a test case and review the first real week with the client. Do not give clinical advice or promise the doctor will be available without confirmation.",
+      "who_pays_you": "A small clinic administrator pays you because a changed clinic schedule can affect a patient's journey. You ask a local clinic which calls are repeated at reception. Show a sample of the reception's appointment calendar and clinician availability record with invented details until you have permission for real ones. This buyer will value someone who closes the reception's appointment calendar and clinician availability loop reliably. A patient arranging transport benefits from that care, but should not have to pay your admin fee directly.",
+      "how_money_comes": "Charge for a weekly shift with a capped number of confirmations, with a defined number of requests and reply hours. Review the actual time spent on reception's appointment calendar and clinician availability, including calls to confirm a change. If a small clinic administrator adds another task or asks you to cover evenings, agree on a new fee first. Keep your invoice for reception's appointment calendar and clinician availability separate from any customer payment the client collects. After a short paid trial, settle a predictable payment date and a clear rule for extra reception's appointment calendar and clinician availability work.",
+      "what_you_need": "You need an approved calendar, secure access and a clinician contact, dependable internet and a quiet period for careful checks. Ask for the least access needed for reception's appointment calendar and clinician availability and use the client's approved storage. Keep a reception's appointment calendar and clinician availability change log with dates, status and the person who authorised an exception. Do not give clinical advice or promise the doctor will be available without confirmation. Before starting, practise a reception's appointment calendar and clinician availability handover with a fictional case so the client can see what you will share.",
+      "first_30_days": [
+        "Observe how the clinic books and changes an appointment.",
+        "Write a confirmation message the administrator approves.",
+        "Run a paid trial for one defined booking window.",
+        "Check each changed slot with reception before contacting patients.",
+        "Report missed calls and corrections at the end of the week."
+      ],
+      "what_hurts": "A changed clinic schedule can affect a patient's journey. A tidy reception's appointment calendar and clinician availability record cannot repair an unconfirmed promise. Do not give clinical advice or promise the doctor will be available without confirmation. You may wait for a small clinic administrator to approve one small change, and then several requests arrive together. Tell a patient arranging transport when you can reply and escalate the cases that cannot wait. Keep a dated reception's appointment calendar and clinician availability approval record so a mistake can be corrected plainly, without blaming the person who asked for help.",
+      "verdict": "Build this if you enjoy keeping reception's appointment calendar and clinician availability orderly and can give a patient arranging transport a calm answer on time. Walk away if the clinic expects you to make clinical decisions or use unsecured patient details. A patient needs an appointment answer that is checked, not improvised.",
+      "faq": [
+        {
+          "q": "Can I answer a patient's medical question?",
+          "a": "No. Pass clinical questions to the clinic's qualified staff. You can explain approved booking logistics, but a patient needs a clinician for advice about symptoms or treatment."
+        },
+        {
+          "q": "What if the doctor is delayed?",
+          "a": "Wait for an administrator to confirm a revised time, then notify patients through the agreed channel. Keep a record of who received the change and who needs another call."
+        },
+        {
+          "q": "Should I keep patient details on my phone?",
+          "a": "Use only approved systems and the minimum information needed for scheduling. Ask the clinic how access is granted, revoked and reviewed before you start."
+        }
+      ],
+      "validate_prompt": "I want to manage appointment confirmations for a small Indian clinic remotely. How should I protect patient details and handle changed schedules?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S08-I02",
+      "slug": "tutor-batch-admission-admin",
+      "title": "Tutor Batch Admission Admin",
+      "hook": "A parent asks the tutor about a new maths batch while the tutor is teaching and gets no reply.",
+      "summary": "You organise batch enquiries and trial class bookings for an independent tutor. A parent choosing a class gets a clearer next step while the client attends to their own work. A batch capacity, timings and the tutor's trial process log and handover show what was confirmed and who should answer next.",
+      "what_it_is": "A parent asks the tutor about a new maths batch while the tutor is teaching and gets no reply. You learn the client's real batch capacity, timings and the tutor's trial process before touching their inbox. Agree on which batch capacity, timings and the tutor's trial process details you may enter, which message you may send and which decision needs the client's approval. Then you organise batch enquiries and trial class bookings, keeping a dated record that another person can understand. When information about batch capacity, timings and the tutor's trial process is missing, ask rather than filling the gap with a guess. Try the batch capacity, timings and the tutor's trial process process on a test case and review the first real week with the client. The tutor must decide placement and learning suitability.",
+      "who_pays_you": "An independent tutor pays you because seats can fill while an old message still offers a trial. You speak to tutors who lose enquiries during class hours. Show a sample of the batch capacity, timings and the tutor's trial process record with invented details until you have permission for real ones. This buyer will value someone who closes the batch capacity, timings and the tutor's trial process loop reliably. A parent choosing a class benefits from that care, but should not have to pay your admin fee directly.",
+      "how_money_comes": "Charge for a monthly enquiry log and fixed reply window, with a defined number of requests and reply hours. Review the actual time spent on batch capacity, timings and the tutor's trial process, including calls to confirm a change. If an independent tutor adds another task or asks you to cover evenings, agree on a new fee first. Keep your invoice for batch capacity, timings and the tutor's trial process separate from any customer payment the client collects. After a short paid trial, settle a predictable payment date and a clear rule for extra batch capacity, timings and the tutor's trial process work.",
+      "what_you_need": "You need a batch timetable, approved fee information and a consent-based contact list, dependable internet and a quiet period for careful checks. Ask for the least access needed for batch capacity, timings and the tutor's trial process and use the client's approved storage. Keep a batch capacity, timings and the tutor's trial process change log with dates, status and the person who authorised an exception. The tutor must decide placement and learning suitability. Before starting, practise a batch capacity, timings and the tutor's trial process handover with a fictional case so the client can see what you will share.",
+      "first_30_days": [
+        "Ask a tutor which enquiries interrupt lessons most.",
+        "Create an approved reply for timings and trial steps.",
+        "Test a paid week of enquiry logging and follow-ups.",
+        "Confirm each trial seat against the live batch list.",
+        "Review which parent questions need the tutor directly."
+      ],
+      "what_hurts": "Seats can fill while an old message still offers a trial. A tidy batch capacity, timings and the tutor's trial process record cannot repair an unconfirmed promise. The tutor must decide placement and learning suitability. You may wait for an independent tutor to approve one small change, and then several requests arrive together. Tell a parent choosing a class when you can reply and escalate the cases that cannot wait. Keep a dated batch capacity, timings and the tutor's trial process approval record so a mistake can be corrected plainly, without blaming the person who asked for help.",
+      "verdict": "Build this if you enjoy keeping batch capacity, timings and the tutor's trial process orderly and can give a parent choosing a class a calm answer on time. Walk away if the tutor cannot keep batch availability current. A parent may have rearranged the evening around a trial seat.",
+      "faq": [
+        {
+          "q": "Can I promise a child's progress?",
+          "a": "No. Explain the tutor's actual teaching approach and trial process. The tutor should answer questions about suitability and learning needs after meeting the student."
+        },
+        {
+          "q": "Who collects fees?",
+          "a": "The tutor or their approved business process should collect class fees. Your admin fee is separate. Share only the current approved payment instructions."
+        },
+        {
+          "q": "What if a batch fills?",
+          "a": "Update the availability list at once and offer only options the tutor confirms. A parent may arrange travel around a trial, so do not leave a stale invitation open."
+        }
+      ],
+      "validate_prompt": "I want to handle admissions enquiries for a tutor from home in India. What batch capacity, follow-up and fee boundaries should I set?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S08-I03",
+      "slug": "freelancer-invoice-follow-up",
+      "title": "Freelancer Invoice Follow Up Desk",
+      "hook": "You delivered the design weeks ago and still cannot tell whether the client saw the invoice.",
+      "summary": "You track invoices and send polite approved reminders for a solo designer or photographer. A client who needs a clear payment record gets a clearer next step while the client attends to their own work. A invoice issue dates, due dates and payment confirmations log and handover show what was confirmed and who should answer next.",
+      "what_it_is": "You delivered the design weeks ago and still cannot tell whether the client saw the invoice. You learn the client's real invoice issue dates, due dates and payment confirmations before touching their inbox. Agree on which invoice issue dates, due dates and payment confirmations details you may enter, which message you may send and which decision needs the client's approval. Then you track invoices and send polite approved reminders, keeping a dated record that another person can understand. When information about invoice issue dates, due dates and payment confirmations is missing, ask rather than filling the gap with a guess. Try the invoice issue dates, due dates and payment confirmations process on a test case and review the first real week with the client. Do not alter amounts, bank details or settlement terms yourself.",
+      "who_pays_you": "A solo designer or photographer pays you because a disputed invoice needs the freelancer's judgement, not another reminder. You show a freelancer a simple overdue list without exposing other clients. Show a sample of the invoice issue dates, due dates and payment confirmations record with invented details until you have permission for real ones. This buyer will value someone who closes the invoice issue dates, due dates and payment confirmations loop reliably. A client who needs a clear payment record benefits from that care, but should not have to pay your admin fee directly.",
+      "how_money_comes": "Charge for a monthly invoice log and agreed reminder cycle, with a defined number of requests and reply hours. Review the actual time spent on invoice issue dates, due dates and payment confirmations, including calls to confirm a change. If a solo designer or photographer adds another task or asks you to cover evenings, agree on a new fee first. Keep your invoice for invoice issue dates, due dates and payment confirmations separate from any customer payment the client collects. After a short paid trial, settle a predictable payment date and a clear rule for extra invoice issue dates, due dates and payment confirmations work.",
+      "what_you_need": "You need a private ledger, invoice copies and payment-status access, dependable internet and a quiet period for careful checks. Ask for the least access needed for invoice issue dates, due dates and payment confirmations and use the client's approved storage. Keep a invoice issue dates, due dates and payment confirmations change log with dates, status and the person who authorised an exception. Do not alter amounts, bank details or settlement terms yourself. Before starting, practise a invoice issue dates, due dates and payment confirmations handover with a fictional case so the client can see what you will share.",
+      "first_30_days": [
+        "Map the freelancer’s invoice and payment confirmation routine.",
+        "Draft a respectful reminder for their approval.",
+        "Run a paid trial on a small group of invoices.",
+        "Mark replies and disputed items without guessing a settlement.",
+        "Reconcile the reminder list with the owner every week."
+      ],
+      "what_hurts": "A disputed invoice needs the freelancer's judgement, not another reminder. A tidy invoice issue dates, due dates and payment confirmations record cannot repair an unconfirmed promise. Do not alter amounts, bank details or settlement terms yourself. You may wait for a solo designer or photographer to approve one small change, and then several requests arrive together. Tell a client who needs a clear payment record when you can reply and escalate the cases that cannot wait. Keep a dated invoice issue dates, due dates and payment confirmations approval record so a mistake can be corrected plainly, without blaming the person who asked for help.",
+      "verdict": "Build this if you enjoy keeping invoice issue dates, due dates and payment confirmations orderly and can give a client who needs a clear payment record a calm answer on time. Walk away if the freelancer asks you to change invoice terms without approval. A payment conversation deserves a reliable record and respectful tone.",
+      "faq": [
+        {
+          "q": "Can I negotiate a discount for late payment?",
+          "a": "No, unless the freelancer has explicitly authorised a specific option. Escalate a dispute to them and record what the client says without making a new commercial promise."
+        },
+        {
+          "q": "How do I handle bank details?",
+          "a": "Use the approved invoice and secure system. Never send changed payment instructions from an unverified message. Ask the freelancer to handle any requested bank change directly."
+        },
+        {
+          "q": "What if a client says they already paid?",
+          "a": "Thank them and ask the freelancer to confirm receipt before sending another reminder. Keep the conversation calm; a bookkeeping delay is possible."
+        }
+      ],
+      "validate_prompt": "I want to offer invoice reminder support to Indian freelancers. How can I scope the work and avoid changing payment terms?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S08-I04",
+      "slug": "rental-repair-request-log",
+      "title": "Rental Repair Request Log",
+      "hook": "The tenant reports a leaking tap for the third time, and nobody remembers who called the plumber.",
+      "summary": "You log maintenance requests and coordinate approved visit windows for a small property manager. A tenant waiting for a repair gets a clearer next step while the client attends to their own work. A tenant reports, contractor availability and owner approval log and handover show what was confirmed and who should answer next.",
+      "what_it_is": "The tenant reports a leaking tap for the third time, and nobody remembers who called the plumber. You learn the client's real tenant reports, contractor availability and owner approval before touching their inbox. Agree on which tenant reports, contractor availability and owner approval details you may enter, which message you may send and which decision needs the client's approval. Then you log maintenance requests and coordinate approved visit windows, keeping a dated record that another person can understand. When information about tenant reports, contractor availability and owner approval is missing, ask rather than filling the gap with a guess. Try the tenant reports, contractor availability and owner approval process on a test case and review the first real week with the client. Do not authorise repair cost or enter a tenant's home without the proper approval.",
+      "who_pays_you": "A small property manager pays you because a minor leak may become urgent before the owner replies. You ask managers of a few flats how they track repair requests. Show a sample of the tenant reports, contractor availability and owner approval record with invented details until you have permission for real ones. This buyer will value someone who closes the tenant reports, contractor availability and owner approval loop reliably. A tenant waiting for a repair benefits from that care, but should not have to pay your admin fee directly.",
+      "how_money_comes": "Charge for a monthly request log with a defined reply shift, with a defined number of requests and reply hours. Review the actual time spent on tenant reports, contractor availability and owner approval, including calls to confirm a change. If a small property manager adds another task or asks you to cover evenings, agree on a new fee first. Keep your invoice for tenant reports, contractor availability and owner approval separate from any customer payment the client collects. After a short paid trial, settle a predictable payment date and a clear rule for extra tenant reports, contractor availability and owner approval work.",
+      "what_you_need": "You need a secure tenant contact list and shared maintenance tracker, dependable internet and a quiet period for careful checks. Ask for the least access needed for tenant reports, contractor availability and owner approval and use the client's approved storage. Keep a tenant reports, contractor availability and owner approval change log with dates, status and the person who authorised an exception. Do not authorise repair cost or enter a tenant's home without the proper approval. Before starting, practise a tenant reports, contractor availability and owner approval handover with a fictional case so the client can see what you will share.",
+      "first_30_days": [
+        "Ask a manager to show the current repair escalation path.",
+        "Make a status log with request, approval and visit time.",
+        "Run a paid trial for a few properties only.",
+        "Confirm each contractor slot with tenant and manager.",
+        "Review unresolved issues and emergency handover each week."
+      ],
+      "what_hurts": "A minor leak may become urgent before the owner replies. A tidy tenant reports, contractor availability and owner approval record cannot repair an unconfirmed promise. Do not authorise repair cost or enter a tenant's home without the proper approval. You may wait for a small property manager to approve one small change, and then several requests arrive together. Tell a tenant waiting for a repair when you can reply and escalate the cases that cannot wait. Keep a dated tenant reports, contractor availability and owner approval approval record so a mistake can be corrected plainly, without blaming the person who asked for help.",
+      "verdict": "Build this if you enjoy keeping tenant reports, contractor availability and owner approval orderly and can give a tenant waiting for a repair a calm answer on time. Walk away if the manager leaves urgent repairs without an escalation contact. A tenant should know who is actually taking responsibility.",
+      "faq": [
+        {
+          "q": "Can I approve a plumber's quote?",
+          "a": "Only within a written authority the property manager gives you, if any. Otherwise pass the quote and options to the person who can decide. Do not leave the tenant thinking it is approved."
+        },
+        {
+          "q": "What counts as an emergency?",
+          "a": "Agree on an escalation list with the manager before a request arrives. For an immediate safety concern, direct people to the appropriate urgent help and contact the responsible person promptly."
+        },
+        {
+          "q": "How do I protect tenant privacy?",
+          "a": "Share a number and address only with the approved contractor for that job. Keep records in the manager's system and remove your access when the agreement ends."
+        }
+      ],
+      "validate_prompt": "I want to coordinate rental maintenance requests remotely in India. What approval and urgent escalation rules should I establish?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S08-I05",
+      "slug": "event-registration-list-support",
+      "title": "Event Registration List Support",
+      "hook": "Your name is on a workshop payment receipt, but the organiser cannot find you on the attendance list.",
+      "summary": "You reconcile registrations, payment status and check-in lists for a small event organiser. An attendee planning a visit gets a clearer next step while the client attends to their own work. A booking forms, payment reports and venue capacity log and handover show what was confirmed and who should answer next.",
+      "what_it_is": "Your name is on a workshop payment receipt, but the organiser cannot find you on the attendance list. You learn the client's real booking forms, payment reports and venue capacity before touching their inbox. Agree on which booking forms, payment reports and venue capacity details you may enter, which message you may send and which decision needs the client's approval. Then you reconcile registrations, payment status and check-in lists, keeping a dated record that another person can understand. When information about booking forms, payment reports and venue capacity is missing, ask rather than filling the gap with a guess. Try the booking forms, payment reports and venue capacity process on a test case and review the first real week with the client. Only the organiser decides refunds, extra seats and venue exceptions.",
+      "who_pays_you": "A small event organiser pays you because duplicate names and last-minute payments can confuse entry. You offer a local organiser a clear list before a small event. Show a sample of the booking forms, payment reports and venue capacity record with invented details until you have permission for real ones. This buyer will value someone who closes the booking forms, payment reports and venue capacity loop reliably. An attendee planning a visit benefits from that care, but should not have to pay your admin fee directly.",
+      "how_money_comes": "Charge for a per-event registration and final reconciliation fee, with a defined number of requests and reply hours. Review the actual time spent on booking forms, payment reports and venue capacity, including calls to confirm a change. If a small event organiser adds another task or asks you to cover evenings, agree on a new fee first. Keep your invoice for booking forms, payment reports and venue capacity separate from any customer payment the client collects. After a short paid trial, settle a predictable payment date and a clear rule for extra booking forms, payment reports and venue capacity work.",
+      "what_you_need": "You need a protected participant sheet and approved confirmation messages, dependable internet and a quiet period for careful checks. Ask for the least access needed for booking forms, payment reports and venue capacity and use the client's approved storage. Keep a booking forms, payment reports and venue capacity change log with dates, status and the person who authorised an exception. Only the organiser decides refunds, extra seats and venue exceptions. Before starting, practise a booking forms, payment reports and venue capacity handover with a fictional case so the client can see what you will share.",
+      "first_30_days": [
+        "Map the organiser’s form-to-payment-to-entry process on one event.",
+        "Build a small sample list with status and unique booking code.",
+        "Take a paid trial event with a final cutoff.",
+        "Reconcile pending payments with the organiser before confirmation.",
+        "Hand over a clean check-in sheet and unresolved cases."
+      ],
+      "what_hurts": "Duplicate names and last-minute payments can confuse entry. A tidy booking forms, payment reports and venue capacity record cannot repair an unconfirmed promise. Only the organiser decides refunds, extra seats and venue exceptions. You may wait for a small event organiser to approve one small change, and then several requests arrive together. Tell an attendee planning a visit when you can reply and escalate the cases that cannot wait. Keep a dated booking forms, payment reports and venue capacity approval record so a mistake can be corrected plainly, without blaming the person who asked for help.",
+      "verdict": "Build this if you enjoy keeping booking forms, payment reports and venue capacity orderly and can give an attendee planning a visit a calm answer on time. Walk away if the organiser cannot verify payments or venue capacity. An attendee should not arrive holding a false confirmation.",
+      "faq": [
+        {
+          "q": "Can I mark a person paid from a screenshot?",
+          "a": "Use the organiser's verified payment report or an explicit approval. A screenshot can be incomplete or misleading, and an attendee deserves a clear confirmation process."
+        },
+        {
+          "q": "What if the venue is full?",
+          "a": "Stop offering a confirmed seat and ask the organiser to decide whether to waitlist or refund. Do not add names past agreed capacity on your own."
+        },
+        {
+          "q": "Who sends event changes?",
+          "a": "Agree on the approved message and channel. Keep a record of who was notified and which contacts failed, especially if the time or venue changes."
+        }
+      ],
+      "validate_prompt": "I want to support registration for small Indian events remotely. How should I reconcile payments and handle a full venue?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S08-I06",
+      "slug": "tour-operator-document-checklist",
+      "title": "Tour Operator Document Checklist",
+      "hook": "The family is packing for a domestic trip and discovers the operator never asked about a required ID.",
+      "summary": "You send approved pre-trip checklists and track missing documents for a small tour operator. A traveller getting ready to leave gets a clearer next step while the client attends to their own work. A booking stage, itinerary and operator-approved requirements log and handover show what was confirmed and who should answer next.",
+      "what_it_is": "The family is packing for a domestic trip and discovers the operator never asked about a required ID. You learn the client's real booking stage, itinerary and operator-approved requirements before touching their inbox. Agree on which booking stage, itinerary and operator-approved requirements details you may enter, which message you may send and which decision needs the client's approval. Then you send approved pre-trip checklists and track missing documents, keeping a dated record that another person can understand. When information about booking stage, itinerary and operator-approved requirements is missing, ask rather than filling the gap with a guess. Try the booking stage, itinerary and operator-approved requirements process on a test case and review the first real week with the client. Do not hold original IDs or invent travel document rules.",
+      "who_pays_you": "A small tour operator pays you because requirements may differ by transport, age and destination. You speak to a tour operator who repeats packing calls. Show a sample of the booking stage, itinerary and operator-approved requirements record with invented details until you have permission for real ones. This buyer will value someone who closes the booking stage, itinerary and operator-approved requirements loop reliably. A traveller getting ready to leave benefits from that care, but should not have to pay your admin fee directly.",
+      "how_money_comes": "Charge for a per-departure checklist and reminder fee, with a defined number of requests and reply hours. Review the actual time spent on booking stage, itinerary and operator-approved requirements, including calls to confirm a change. If a small tour operator adds another task or asks you to cover evenings, agree on a new fee first. Keep your invoice for booking stage, itinerary and operator-approved requirements separate from any customer payment the client collects. After a short paid trial, settle a predictable payment date and a clear rule for extra booking stage, itinerary and operator-approved requirements work.",
+      "what_you_need": "You need a secure document tracker and current itinerary, dependable internet and a quiet period for careful checks. Ask for the least access needed for booking stage, itinerary and operator-approved requirements and use the client's approved storage. Keep a booking stage, itinerary and operator-approved requirements change log with dates, status and the person who authorised an exception. Do not hold original IDs or invent travel document rules. Before starting, practise a booking stage, itinerary and operator-approved requirements handover with a fictional case so the client can see what you will share.",
+      "first_30_days": [
+        "Ask an operator how their domestic trips are confirmed.",
+        "Draft one itinerary-specific checklist for approval.",
+        "Test a paid group departure with a secure status log.",
+        "Remind travellers of missing items without collecting unnecessary copies.",
+        "Hand unresolved cases to the operator before departure."
+      ],
+      "what_hurts": "Requirements may differ by transport, age and destination. A tidy booking stage, itinerary and operator-approved requirements record cannot repair an unconfirmed promise. Do not hold original IDs or invent travel document rules. You may wait for a small tour operator to approve one small change, and then several requests arrive together. Tell a traveller getting ready to leave when you can reply and escalate the cases that cannot wait. Keep a dated booking stage, itinerary and operator-approved requirements approval record so a mistake can be corrected plainly, without blaming the person who asked for help.",
+      "verdict": "Build this if you enjoy keeping booking stage, itinerary and operator-approved requirements orderly and can give a traveller getting ready to leave a calm answer on time. Walk away if the operator will not check changing document requirements. A traveller should not discover a missing ID at departure.",
+      "faq": [
+        {
+          "q": "Can I tell travellers which ID is accepted?",
+          "a": "Use only the operator's current, verified guidance and ask them to confirm any uncertain case with the transport provider. Travel rules can change; do not make a guess."
+        },
+        {
+          "q": "Should I store ID scans?",
+          "a": "Collect only what the operator truly requires, using an approved secure method. Avoid saving copies on a personal device and agree when records are deleted."
+        },
+        {
+          "q": "What if someone misses the checklist deadline?",
+          "a": "Tell the operator promptly and let them decide the booking consequence. You can send a clear reminder but should not promise boarding or a refund."
+        }
+      ],
+      "validate_prompt": "I want to prepare pre-trip checklists for an Indian tour operator. What information and privacy boundaries should the operator approve?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S08-I07",
+      "slug": "ngo-volunteer-shift-coordination",
+      "title": "NGO Volunteer Shift Coordination",
+      "hook": "You turn up to volunteer on Sunday and find three people assigned to the same desk.",
+      "summary": "You confirm volunteer shifts and send role instructions for a small local nonprofit team. A volunteer giving up weekend time gets a clearer next step while the client attends to their own work. A shift capacity, location and team leader availability log and handover show what was confirmed and who should answer next.",
+      "what_it_is": "You turn up to volunteer on Sunday and find three people assigned to the same desk. You learn the client's real shift capacity, location and team leader availability before touching their inbox. Agree on which shift capacity, location and team leader availability details you may enter, which message you may send and which decision needs the client's approval. Then you confirm volunteer shifts and send role instructions, keeping a dated record that another person can understand. When information about shift capacity, location and team leader availability is missing, ask rather than filling the gap with a guess. Try the shift capacity, location and team leader availability process on a test case and review the first real week with the client. The nonprofit decides screening and sensitive assignments.",
+      "who_pays_you": "A small local nonprofit team pays you because volunteers may cancel at the last moment. You ask a nonprofit about its recurring volunteer day. Show a sample of the shift capacity, location and team leader availability record with invented details until you have permission for real ones. This buyer will value someone who closes the shift capacity, location and team leader availability loop reliably. A volunteer giving up weekend time benefits from that care, but should not have to pay your admin fee directly.",
+      "how_money_comes": "Charge for a monthly roster and defined confirmation cycle, with a defined number of requests and reply hours. Review the actual time spent on shift capacity, location and team leader availability, including calls to confirm a change. If a small local nonprofit team adds another task or asks you to cover evenings, agree on a new fee first. Keep your invoice for shift capacity, location and team leader availability separate from any customer payment the client collects. After a short paid trial, settle a predictable payment date and a clear rule for extra shift capacity, location and team leader availability work.",
+      "what_you_need": "You need a private contact list, role notes and a backup leader, dependable internet and a quiet period for careful checks. Ask for the least access needed for shift capacity, location and team leader availability and use the client's approved storage. Keep a shift capacity, location and team leader availability change log with dates, status and the person who authorised an exception. The nonprofit decides screening and sensitive assignments. Before starting, practise a shift capacity, location and team leader availability handover with a fictional case so the client can see what you will share.",
+      "first_30_days": [
+        "Observe how volunteers are currently assigned to roles.",
+        "Draft a shift confirmation with location and leader contact.",
+        "Run a paid or funded trial for one recurring activity.",
+        "Ask volunteers to confirm attendance before the roster closes.",
+        "Send the team leader a final list and gaps."
+      ],
+      "what_hurts": "Volunteers may cancel at the last moment. A tidy shift capacity, location and team leader availability record cannot repair an unconfirmed promise. The nonprofit decides screening and sensitive assignments. You may wait for a small local nonprofit team to approve one small change, and then several requests arrive together. Tell a volunteer giving up weekend time when you can reply and escalate the cases that cannot wait. Keep a dated shift capacity, location and team leader availability approval record so a mistake can be corrected plainly, without blaming the person who asked for help.",
+      "verdict": "Build this if you enjoy keeping shift capacity, location and team leader availability orderly and can give a volunteer giving up weekend time a calm answer on time. Walk away if the team cannot tell you who is cleared for sensitive roles. A volunteer deserves a clear shift and a safe assignment.",
+      "faq": [
+        {
+          "q": "Can a nonprofit pay for admin support?",
+          "a": "Some have a budget for reliable coordination and others do not. Discuss a small paid scope openly; never assume volunteer work will later become paid."
+        },
+        {
+          "q": "Can I assign anyone to work with children?",
+          "a": "No. The organisation must manage its own screening, supervision and safeguarding. You can track its approved roster, not decide who is cleared."
+        },
+        {
+          "q": "What if volunteers cancel late?",
+          "a": "Keep an agreed backup list and notify the leader. Do not shame a volunteer publicly; a clear status update helps the team reorganise."
+        }
+      ],
+      "validate_prompt": "I want to coordinate volunteer shifts for a local Indian nonprofit from home. How should I scope a paid trial and protect contact information?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S08-I08",
+      "slug": "architect-project-document-index",
+      "title": "Architect Project Document Index",
+      "hook": "The contractor asks for the latest drawing, and the architect finds three files with almost the same name.",
+      "summary": "You organise drawing versions and approved document handovers for a small architecture studio. A project team waiting for the right file gets a clearer next step while the client attends to their own work. A drawing revisions, client approval and contractor distribution log and handover show what was confirmed and who should answer next.",
+      "what_it_is": "The contractor asks for the latest drawing, and the architect finds three files with almost the same name. You learn the client's real drawing revisions, client approval and contractor distribution before touching their inbox. Agree on which drawing revisions, client approval and contractor distribution details you may enter, which message you may send and which decision needs the client's approval. Then you organise drawing versions and approved document handovers, keeping a dated record that another person can understand. When information about drawing revisions, client approval and contractor distribution is missing, ask rather than filling the gap with a guess. Try the drawing revisions, client approval and contractor distribution process on a test case and review the first real week with the client. The architect alone approves technical drawings for issue.",
+      "who_pays_you": "A small architecture studio pays you because an outdated drawing can cause expensive work on site. You show a studio a sample version index with fake project files. Show a sample of the drawing revisions, client approval and contractor distribution record with invented details until you have permission for real ones. This buyer will value someone who closes the drawing revisions, client approval and contractor distribution loop reliably. A project team waiting for the right file benefits from that care, but should not have to pay your admin fee directly.",
+      "how_money_comes": "Charge for a defined project folder setup and weekly update fee, with a defined number of requests and reply hours. Review the actual time spent on drawing revisions, client approval and contractor distribution, including calls to confirm a change. If a small architecture studio adds another task or asks you to cover evenings, agree on a new fee first. Keep your invoice for drawing revisions, client approval and contractor distribution separate from any customer payment the client collects. After a short paid trial, settle a predictable payment date and a clear rule for extra drawing revisions, client approval and contractor distribution work.",
+      "what_you_need": "You need secure shared storage, naming rules and an approval log, dependable internet and a quiet period for careful checks. Ask for the least access needed for drawing revisions, client approval and contractor distribution and use the client's approved storage. Keep a drawing revisions, client approval and contractor distribution change log with dates, status and the person who authorised an exception. The architect alone approves technical drawings for issue. Before starting, practise a drawing revisions, client approval and contractor distribution handover with a fictional case so the client can see what you will share.",
+      "first_30_days": [
+        "Ask the architect how a drawing becomes approved for issue.",
+        "Build a sample index with version and recipient fields.",
+        "Take a paid trial for one active project folder.",
+        "Confirm each outgoing file with the architect before sharing.",
+        "Audit who received the current version at the end of the week."
+      ],
+      "what_hurts": "An outdated drawing can cause expensive work on site. A tidy drawing revisions, client approval and contractor distribution record cannot repair an unconfirmed promise. The architect alone approves technical drawings for issue. You may wait for a small architecture studio to approve one small change, and then several requests arrive together. Tell a project team waiting for the right file when you can reply and escalate the cases that cannot wait. Keep a dated drawing revisions, client approval and contractor distribution approval record so a mistake can be corrected plainly, without blaming the person who asked for help.",
+      "verdict": "Build this if you enjoy keeping drawing revisions, client approval and contractor distribution orderly and can give a project team waiting for the right file a calm answer on time. Walk away if the architect wants you to choose technical revisions independently. A contractor may build from the file you send.",
+      "faq": [
+        {
+          "q": "Can I decide which drawing is final?",
+          "a": "No. The architect names the approved issue and recipient. Your role is to track that decision and prevent an older file from being mistaken for it."
+        },
+        {
+          "q": "What if a contractor requests a file directly?",
+          "a": "Check the studio's permission and issue log before sending anything. A request from site does not by itself authorise release of an unapproved revision."
+        },
+        {
+          "q": "How should files be named?",
+          "a": "Agree on project, drawing number, revision and date conventions with the studio. Use one index so a person can find the right issue without relying on memory."
+        }
+      ],
+      "validate_prompt": "I want to organise document versions for a small architecture studio in India. What technical approval and file access boundaries should I set?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S08-I09",
+      "slug": "wholesale-reorder-admin-desk",
+      "title": "Wholesale Reorder Admin Desk",
+      "hook": "The shop needs its usual cartons next week, and the wholesaler cannot find the last order details.",
+      "summary": "You track repeat enquiries and send owner-approved order confirmations for a small wholesale distributor. A retailer planning shelf stock gets a clearer next step while the client attends to their own work. A product codes, pack sizes and dispatch dates log and handover show what was confirmed and who should answer next.",
+      "what_it_is": "The shop needs its usual cartons next week, and the wholesaler cannot find the last order details. You learn the client's real product codes, pack sizes and dispatch dates before touching their inbox. Agree on which product codes, pack sizes and dispatch dates details you may enter, which message you may send and which decision needs the client's approval. Then you track repeat enquiries and send owner-approved order confirmations, keeping a dated record that another person can understand. When information about product codes, pack sizes and dispatch dates is missing, ask rather than filling the gap with a guess. Try the product codes, pack sizes and dispatch dates process on a test case and review the first real week with the client. The distributor confirms credit terms and final availability.",
+      "who_pays_you": "A small wholesale distributor pays you because a pack-size mistake can leave the retailer with excess stock. You ask a wholesaler which repeat orders get lost in messages. Show a sample of the product codes, pack sizes and dispatch dates record with invented details until you have permission for real ones. This buyer will value someone who closes the product codes, pack sizes and dispatch dates loop reliably. A retailer planning shelf stock benefits from that care, but should not have to pay your admin fee directly.",
+      "how_money_comes": "Charge for a weekly reorder list and fixed confirmation window, with a defined number of requests and reply hours. Review the actual time spent on product codes, pack sizes and dispatch dates, including calls to confirm a change. If a small wholesale distributor adds another task or asks you to cover evenings, agree on a new fee first. Keep your invoice for product codes, pack sizes and dispatch dates separate from any customer payment the client collects. After a short paid trial, settle a predictable payment date and a clear rule for extra product codes, pack sizes and dispatch dates work.",
+      "what_you_need": "You need a current catalogue, inventory contact and dispatch tracker, dependable internet and a quiet period for careful checks. Ask for the least access needed for product codes, pack sizes and dispatch dates and use the client's approved storage. Keep a product codes, pack sizes and dispatch dates change log with dates, status and the person who authorised an exception. The distributor confirms credit terms and final availability. Before starting, practise a product codes, pack sizes and dispatch dates handover with a fictional case so the client can see what you will share.",
+      "first_30_days": [
+        "Map one retailer’s usual reorder from request to dispatch.",
+        "Create an approved product-code and pack-size sheet.",
+        "Test a paid week of reorder logging.",
+        "Check availability and credit approval before confirming.",
+        "Review substitutions and missed dispatches with the owner."
+      ],
+      "what_hurts": "A pack-size mistake can leave the retailer with excess stock. A tidy product codes, pack sizes and dispatch dates record cannot repair an unconfirmed promise. The distributor confirms credit terms and final availability. You may wait for a small wholesale distributor to approve one small change, and then several requests arrive together. Tell a retailer planning shelf stock when you can reply and escalate the cases that cannot wait. Keep a dated product codes, pack sizes and dispatch dates approval record so a mistake can be corrected plainly, without blaming the person who asked for help.",
+      "verdict": "Build this if you enjoy keeping product codes, pack sizes and dispatch dates orderly and can give a retailer planning shelf stock a calm answer on time. Walk away if the distributor will not confirm pack sizes and credit decisions. A retailer needs the cartons actually ordered.",
+      "faq": [
+        {
+          "q": "Can I offer credit to a repeat retailer?",
+          "a": "Only the distributor can approve credit and terms. You can collect the request and share the authorised answer, but do not make an exception based on familiarity."
+        },
+        {
+          "q": "How do I avoid a pack-size mistake?",
+          "a": "Repeat product code, unit and carton quantity in the confirmation. Ask the retailer to check the summary before the owner dispatches the order."
+        },
+        {
+          "q": "What if stock is unavailable?",
+          "a": "Give the latest owner-confirmed availability and ask whether the retailer wants an approved alternative. Do not quietly substitute a different product or promise a dispatch date."
+        }
+      ],
+      "validate_prompt": "I want to manage repeat orders for a small Indian wholesaler from home. What checks prevent a wrong pack size or unapproved credit promise?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S08-I10",
+      "slug": "consultant-meeting-brief-admin",
+      "title": "Consultant Meeting Brief Admin",
+      "hook": "You join a paid consultation and spend the first half explaining details you had already emailed.",
+      "summary": "You collect agreed intake details and send a tidy meeting brief for an independent career or business consultant. A client preparing for a meeting gets a clearer next step while the client attends to their own work. A booking confirmation, intake form and consultant review log and handover show what was confirmed and who should answer next.",
+      "what_it_is": "You join a paid consultation and spend the first half explaining details you had already emailed. You learn the client's real booking confirmation, intake form and consultant review before touching their inbox. Agree on which booking confirmation, intake form and consultant review details you may enter, which message you may send and which decision needs the client's approval. Then you collect agreed intake details and send a tidy meeting brief, keeping a dated record that another person can understand. When information about booking confirmation, intake form and consultant review is missing, ask rather than filling the gap with a guess. Try the booking confirmation, intake form and consultant review process on a test case and review the first real week with the client. The consultant must review the brief and give all professional advice.",
+      "who_pays_you": "An independent career or business consultant pays you because a personal story can be sensitive even when it arrives casually. You offer one consultant a sample brief based on fictional information. Show a sample of the booking confirmation, intake form and consultant review record with invented details until you have permission for real ones. This buyer will value someone who closes the booking confirmation, intake form and consultant review loop reliably. A client preparing for a meeting benefits from that care, but should not have to pay your admin fee directly.",
+      "how_money_comes": "Charge for a per-booking intake and reminder fee, with a defined number of requests and reply hours. Review the actual time spent on booking confirmation, intake form and consultant review, including calls to confirm a change. If an independent career or business consultant adds another task or asks you to cover evenings, agree on a new fee first. Keep your invoice for booking confirmation, intake form and consultant review separate from any customer payment the client collects. After a short paid trial, settle a predictable payment date and a clear rule for extra booking confirmation, intake form and consultant review work.",
+      "what_you_need": "You need a secure form, calendar and written retention rule, dependable internet and a quiet period for careful checks. Ask for the least access needed for booking confirmation, intake form and consultant review and use the client's approved storage. Keep a booking confirmation, intake form and consultant review change log with dates, status and the person who authorised an exception. The consultant must review the brief and give all professional advice. Before starting, practise a booking confirmation, intake form and consultant review handover with a fictional case so the client can see what you will share.",
+      "first_30_days": [
+        "Ask a consultant what they need before a first call.",
+        "Draft a short intake form that requests only necessary details.",
+        "Run a paid trial on a few bookings with secure access.",
+        "Send the consultant an approved brief before each call.",
+        "Ask whether clients felt better prepared without sharing their stories."
+      ],
+      "what_hurts": "A personal story can be sensitive even when it arrives casually. A tidy booking confirmation, intake form and consultant review record cannot repair an unconfirmed promise. The consultant must review the brief and give all professional advice. You may wait for an independent career or business consultant to approve one small change, and then several requests arrive together. Tell a client preparing for a meeting when you can reply and escalate the cases that cannot wait. Keep a dated booking confirmation, intake form and consultant review approval record so a mistake can be corrected plainly, without blaming the person who asked for help.",
+      "verdict": "Build this if you enjoy keeping booking confirmation, intake form and consultant review orderly and can give a client preparing for a meeting a calm answer on time. Walk away if the consultant wants you to collect private stories without a secure process. A client should feel their trust is handled carefully.",
+      "faq": [
+        {
+          "q": "Can I answer a client's career question?",
+          "a": "Not as the consultant. You can explain how the meeting works and collect questions for them to answer. Do not imply your reply is professional advice."
+        },
+        {
+          "q": "How long should I keep intake forms?",
+          "a": "Agree on a retention and deletion rule with the consultant before collecting anything. Keep access limited and use the consultant's approved system."
+        },
+        {
+          "q": "What if a client skips the form?",
+          "a": "Send a gentle reminder, then tell the consultant what is missing. The consultation can still proceed if the consultant chooses, but do not invent a brief."
+        }
+      ],
+      "validate_prompt": "I want to prepare meeting briefs for an Indian independent consultant. How should I limit intake questions and protect client stories?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    }
+  ]
+}
