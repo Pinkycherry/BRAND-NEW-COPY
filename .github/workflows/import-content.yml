@@ -1,0 +1,28 @@
+name: Import content
+
+# Founder-only button: Actions tab, "Import content", Run workflow.
+# Uses the encrypted repository secrets; nothing secret is ever in a file.
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Folder or file to import (blank = everything), e.g. content/C001"
+        required: false
+        default: ""
+      taxonomy:
+        description: "Also load audience, keywords and search intent for all subcategories"
+        type: boolean
+        default: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - name: Import
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node scripts/import-content.mjs ${{ inputs.taxonomy && '--taxonomy' || '' }} ${{ inputs.only }}

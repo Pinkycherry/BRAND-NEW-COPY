@@ -122,14 +122,14 @@ These were verified on the official pages on 10 October 2026. Re-check before sp
 |---|---|---|---|
 | 0. Foundation | 10 to 11 Oct | This master plan. Names given to every worker. New Supabase project created by the founder. | Founder |
 | 1. Core build | 11 to 16 Oct | Database tables and import pipeline. Idea page template. Subcategory page with idea cards and compare table. Validate button. Pricing ₹199 / ₹399, sign-in, paywall. External links block. Validator script. | Founder |
-| 1b. Look and feel | 12 to 18 Oct | Brand: name, logo, colours, mobile layout fixes, interactivity. | Nakul (founder approves) |
+| 1b. Look and feel | 12 to 18 Oct | Brand: name, logo, colours, mobile layout fixes, interactivity. | Design agent (founder approves) |
 | 2. Subcategory research | 13 to 15 Oct | One research note per subcategory (1,000 notes). This is the only research we do. | Writers, by category range |
 | 3. Idea writing | 14 to 22 Oct | 10,000 ideas, 10 per subcategory, as JSON files through GitHub. | Writers |
 | 4. Audit | 18 to 24 Oct | Every category sampled, fixed or sent back. Flagged ideas decided. | Founder |
 | 5. Launch prep | 23 to 25 Oct | Switch live hosting to Cloudflare (free). Domain businessidea.io. Search Console, sitemaps. Code freeze 25 Oct night. | Founder |
 | 6. Live | 26 Oct | Switch on. Watch errors, payments and indexing. | Everyone |
 
-Daily rhythm: each writer finishes its day by pushing its files and updating its line in `docs/agents/STATUS.md`. The founder reads STATUS every morning.
+Daily rhythm: each writer commits after every subcategory and opens one pull request per finished category. Progress is simply the files in `content/`.
 
 ---
 
@@ -137,26 +137,23 @@ Daily rhythm: each writer finishes its day by pushing its files and updating its
 
 ### 5.1 The team
 
-| Name | Role | Does | Does not |
+| Name | Role |
+|---|---|
+| Krishna (the founder) | Owner and final word: structure, database, imports, audits, flagged ideas, domain and accounts |
+| Agent 1, Agent 2, ... | Writers. Each gets its own assignment file in `docs/agents/AGENT_N.md` |
+
+Writers are named Agent 1, Agent 2 and so on. Platforms are never named.
+
+### 5.2 Writing in batches
+
+| Batch | Categories | Ideas | Writers |
 |---|---|---|---|
-| Krishna (the founder) | Owner and final word | Site structure, database, templates, imports, audits, flagged ideas, domain and accounts | |
-| Nakul | Designer and writer | Brand, colours, mobile layout, interactivity, then writing | Touch data or pipeline code |
-| Sahadev | Writer | Research notes and ideas for its range | Edit site code |
-| Yudhi | Writer | Research notes and ideas for its range | Edit site code |
-| Abhi | Writer | Research notes and ideas for its range | Edit site code |
+| 1 | C001 to C010 | 1,000 | Agent 1: C001 (S02 to S10) to C008. Agent 2: C009 and C010 |
+| 2 | C011 to C030 | 2,000 | Assigned after batch 1 audit |
+| 3 | C031 to C060 | 3,000 | Assigned after batch 2 audit |
+| 4 | C061 to C100 | 4,000 | Assigned after batch 3 audit |
 
-The founder tells each account its name once. Accounts refer to each other only by these names.
-
-### 5.2 Category split for writing
-
-| Writer | Categories | Subcategories | Ideas |
-|---|---|---|---|
-| Sahadev | C001 to C030 | 300 | 3,000 |
-| Yudhi | C031 to C060 | 300 | 3,000 |
-| Abhi | C061 to C090 | 300 | 3,000 |
-| Nakul | C091 to C100 (after design work) | 100 | 1,000 |
-
-If a writer runs out of capacity, the founder moves whole categories, never half a subcategory. Every change of ownership is written in `docs/agents/STATUS.md`.
+Each batch is audited once, at its end, then imported. If a writer runs out of capacity, the founder moves whole categories, never half a subcategory.
 
 ### 5.3 Ownership rule
 
@@ -179,20 +176,20 @@ Every idea has a fixed address: `C016-S03-I07` means category 16, subcategory 3 
 | `title` | The business, plainly named. Ends without "Business Idea". | 3 to 9 words |
 | `hook` | One sentence a person would say to a friend: why this one | 12 to 25 words |
 | `summary` | Card text on the subcategory page | 35 to 60 words |
-| `what_it_is` | What you actually do day to day | 80 to 140 words |
-| `who_pays_you` | Who the buyers are, specifically, in India | 60 to 120 words |
-| `how_money_comes` | How money changes hands, repeat business, pricing approach in words | 60 to 120 words |
-| `what_you_need` | Skills, space, tools, licences in plain words | 50 to 100 words |
+| `what_it_is` | What you actually do day to day | 70 to 140 words |
+| `who_pays_you` | Who the buyers are, specifically, in India | 45 to 120 words |
+| `how_money_comes` | How money changes hands, repeat business, pricing approach in words | 50 to 120 words |
+| `what_you_need` | Skills, space, tools, licences in plain words | 40 to 100 words |
 | `first_30_days` | 4 to 6 concrete steps | list |
-| `what_hurts` | Honest year-one pain | 60 to 120 words |
-| `verdict` | Build it if... / Walk away if... | 40 to 80 words |
+| `what_hurts` | Honest year-one pain | 50 to 120 words |
+| `verdict` | Build it if... / Walk away if... | 30 to 80 words |
 | `faq` | 3 questions a real reader would ask, with answers | 3 items |
 | `validate_prompt` | The question the Validate button sends, specific to this idea | 1 to 3 sentences |
 | tags | See 6.3 | fixed values |
 | `investment_band` | See 6.4 | fixed value |
 | `confidence` | `confident` or `flagged` | fixed |
 | `flag_reason` | One line, only when flagged | short |
-| `writer` | Writer name, e.g. `Sahadev` | fixed |
+| `writer` | Writer name, e.g. `Agent 1` | fixed |
 
 Total visible text per idea: about 500 to 800 words. Every idea is different. No two ideas in the same subcategory may describe the same business with different words.
 
@@ -241,24 +238,27 @@ Before writing a subcategory's ten ideas, the writer writes one research note fo
 Writers never get database keys. They write JSON files into the repository. An import script, run by the founder, checks every file and loads it into Supabase. This keeps four platforms away from the database, gives us a full history and a free backup.
 
 ```
-writer → content/ideas/C016/S03.json → validator (automatic) → import (founder) → Supabase → site
+writer → content/C016/S03.json → validator (automatic) → import (founder) → Supabase → site
 ```
 
 ### 7.2 Folder layout
 
 ```
 content/
-  subcategories/C016/S03.json     research note for one subcategory
-  ideas/C016/S03.json             the 10 ideas of that subcategory
-  external-links/links.json       the external links block (Part 10)
+  C016/S03.json                   one subcategory: research note + its 10 ideas
 docs/
   MASTER_PLAN.md                  this file
-  agents/STATUS.md                one line per writer, updated daily
-  agents/WRITER_BRIEF.md          Part 11, copied for writers
+  WRITER_GUIDE.md                 format, lengths, voice and rules for writers
+  DATABASE.md                     database setup and where values live
+  agents/AGENT_N.md               each writer's assignment
 scripts/
-  validate-content.mjs            checks every JSON file
+  validate-content.mjs            the checker (also runs automatically on GitHub)
   import-content.mjs              loads checked files into Supabase
+supabase/
+  001_schema.sql, 002_seed_taxonomy.sql
 ```
+
+The finished example every writer copies is `content/C001/S01.json`.
 
 ### 7.3 Tables (new Supabase project, built from zero)
 
@@ -427,17 +427,16 @@ Heading idea: **"Others building in India"** with a line like "People and platfo
 
 ---
 
-## Part 11. Writer brief (copy this to every writer)
+## Part 11. Writer brief (the full version is docs/WRITER_GUIDE.md and docs/agents/AGENT_N.md)
 
 > You are **{NAME}**, a writer for BusinessIdea.io. Read `docs/MASTER_PLAN.md` first. Your categories: **{RANGE}**.
 >
 > For each subcategory in your range, in order:
 > 1. Read its row in `src/data/taxonomy.ts` and `src/data/taxonomy-details.json` (audience, keywords, search intent).
-> 2. Write the research note to `content/subcategories/{C}/{S}.json` (Part 6.5). Plan 10 different idea titles first and check none overlap.
-> 3. Write the 10 ideas to `content/ideas/{C}/{S}.json` using exactly the fields in Part 6.2, tags in 6.3, band in 6.4.
-> 4. Run `node scripts/validate-content.mjs content/ideas/{C}/{S}.json`. Fix every error.
+> 2. Plan 10 different idea titles first and check none overlap.
+> 3. Write the research note and the 10 ideas to `content/{C}/{S}.json` (one file), using exactly the fields in Part 6.2, tags in 6.3, band in 6.4.
+> 4. Run `node scripts/validate-content.mjs content/{C}/{S}.json`. Fix every error.
 > 5. Commit with message `{NAME}: {C}-{S} 10 ideas`. Push.
-> 6. Update your line in `docs/agents/STATUS.md`.
 >
 > Voice: you are talking to one Indian person who wants to start something. Say "you". Be warm, polite and honest. Say what will hurt. Give a straight verdict. Never write as if you run the business. Never cite, credit or link anything. Never write a statistic. Money only in ₹ with Indian grouping.
 >
@@ -464,21 +463,21 @@ Heading idea: **"Others building in India"** with a line like "People and platfo
   "time_needed": "part_time",
   "skill_level": "basic",
   "confidence": "confident",
-  "writer": "Sahadev"
+  "writer": "Agent 1"
 }
 ```
 
 ---
 
-## Part 12. Brand and design changes (Nakul)
+## Part 12. Brand and design changes
 
-Nakul works on design only, with the founder approving each change before it reaches `main`.
+The design agent works on design only, with the founder approving each change before it reaches `main`.
 
 | Area | Change |
 |---|---|
 | Name | BusinessIdea.io everywhere. Remove "BBI", "Bro Business Ideas" and "B Business" from the new site. |
 | Logo | New wordmark and icon for BusinessIdea.io. Favicon set (48, 192, 512, Apple touch). Founder approves. |
-| Colours | New brand palette proposed by Nakul, approved by founder. Applied through the base colour tokens in `src/styles.css`. |
+| Colours | New brand palette proposed by the design agent, approved by founder. Applied through the base colour tokens in `src/styles.css`. |
 | Typography | Keep Poppins unless the founder chooses otherwise. |
 | Mobile | Fix every layout issue at 360 to 430 px width. No sideways scrolling. Tap targets at least 44 px. |
 | Interactivity | Idea filters, compare table, save and share, smooth navigation between subcategories. |
@@ -512,8 +511,8 @@ Technical notes for whoever edits styles:
 | # | Question | Proposal |
 |---|---|---|
 | D1 | What exactly does ₹199 unlock and what does ₹399 unlock? One-time or yearly? | ₹199: one category, lifetime. ₹399: everything, lifetime. Validate free for all. |
-| D2 | Final brand colours and logo | Nakul proposes three directions by 14 Oct |
+| D2 | Final brand colours and logo | Design agent proposes three directions by 14 Oct |
 | D3 | Public credit line | "Researched and written by BusinessIdea.io" on every page. The old house rule was never to name an AI vendor in public copy, so we suggest not printing the name of the AI tool. |
 | D4 | Which external links are follow instead of nofollow | All nofollow at launch; founder picks follow links later |
 | D7 | Keep or remove glossary, calculators and guides | Keep for launch, review in November |
-| D8 | Writer names | Nakul, Sahadev, Yudhi, Abhi, as in 5.1; founder may rename |
+| D8 | Writer names | Agent 1, Agent 2, ... as in 5.1 |

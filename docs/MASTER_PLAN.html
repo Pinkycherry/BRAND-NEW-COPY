@@ -28,7 +28,7 @@ blockquote{margin:16px 0;padding:14px 18px;background:var(--panel);border:1px so
 blockquote p{margin:8px 0}
 @media (max-width:760px){.wrap{grid-template-columns:minmax(0,1fr);gap:16px;padding-block:24px 60px}nav{position:static;flex-direction:row;flex-wrap:wrap;gap:6px 14px;padding-bottom:14px;border-bottom:1px solid var(--rule)}nav b{width:100%}h1{font-size:2rem}}
 </style>
-<div class="wrap"><nav aria-label="Contents"><b>Contents</b><a href="#part-1-why-we-are-building-this">Part 1. Why we are building this</a><a href="#part-2-the-oath-rules-nobody-breaks">Part 2. The oath (rules nobody breaks)</a><a href="#part-3-facts-we-checked-10-october-2026">Part 3. Facts we checked (10 October 2026)</a><a href="#part-4-roadmap-10-to-26-october">Part 4. Roadmap (10 to 26 October)</a><a href="#part-5-team-and-work-distribution">Part 5. Team and work distribution</a><a href="#part-6-the-idea-format">Part 6. The idea format</a><a href="#part-7-database-and-pipeline">Part 7. Database and pipeline</a><a href="#part-8-the-website">Part 8. The website</a><a href="#part-9-quality-without-ceremony">Part 9. Quality without ceremony</a><a href="#part-10-external-links-block">Part 10. External links block</a><a href="#part-11-writer-brief-copy-this-to-every-writer">Part 11. Writer brief (copy this to every writer)</a><a href="#part-12-brand-and-design-changes-nakul">Part 12. Brand and design changes (Nakul)</a><a href="#part-13-launch-checklist-25-and-26-october">Part 13. Launch checklist (25 and 26 October)</a><a href="#part-14-decisions-waiting-for-the-founder">Part 14. Decisions waiting for the founder</a></nav><main><h1 id="businessideaio-master-plan">BusinessIdea.io Master Plan</h1>
+<div class="wrap"><nav aria-label="Contents"><b>Contents</b><a href="#part-1-why-we-are-building-this">Part 1. Why we are building this</a><a href="#part-2-the-oath-rules-nobody-breaks">Part 2. The oath (rules nobody breaks)</a><a href="#part-3-facts-we-checked-10-october-2026">Part 3. Facts we checked (10 October 2026)</a><a href="#part-4-roadmap-10-to-26-october">Part 4. Roadmap (10 to 26 October)</a><a href="#part-5-team-and-work-distribution">Part 5. Team and work distribution</a><a href="#part-6-the-idea-format">Part 6. The idea format</a><a href="#part-7-database-and-pipeline">Part 7. Database and pipeline</a><a href="#part-8-the-website">Part 8. The website</a><a href="#part-9-quality-without-ceremony">Part 9. Quality without ceremony</a><a href="#part-10-external-links-block">Part 10. External links block</a><a href="#part-11-writer-brief-the-full-version-is-docswriter_guidemd-and-docsagentsagent_nmd">Part 11. Writer brief (the full version is docs/WRITER_GUIDE.md and docs/agents/AGENT_N.md)</a><a href="#part-12-brand-and-design-changes">Part 12. Brand and design changes</a><a href="#part-13-launch-checklist-25-and-26-october">Part 13. Launch checklist (25 and 26 October)</a><a href="#part-14-decisions-waiting-for-the-founder">Part 14. Decisions waiting for the founder</a></nav><main><h1 id="businessideaio-master-plan">BusinessIdea.io Master Plan</h1>
 <p>The user manual for everyone who works on BusinessIdea.io. If a chat, a memory or an older document disagrees with this file, this file wins. Only the founder changes it.</p>
 <ul>
 <li>Version: 1.0, written 10 October 2026</li>
@@ -208,7 +208,7 @@ blockquote p{margin:8px 0}
 <td>1b. Look and feel</td>
 <td>12 to 18 Oct</td>
 <td>Brand: name, logo, colours, mobile layout fixes, interactivity.</td>
-<td>Nakul (founder approves)</td>
+<td>Design agent (founder approves)</td>
 </tr>
 <tr>
 <td>2. Subcategory research</td>
@@ -242,7 +242,7 @@ blockquote p{margin:8px 0}
 </tr>
 </tbody>
 </table></div>
-<p>Daily rhythm: each writer finishes its day by pushing its files and updating its line in <code>docs/agents/STATUS.md</code>. The founder reads STATUS every morning.</p>
+<p>Daily rhythm: each writer commits after every subcategory and opens one pull request per finished category. Progress is simply the files in <code>content/</code>.</p>
 <hr />
 <h2 id="part-5-team-and-work-distribution">Part 5. Team and work distribution</h2>
 <h3 id="51-the-team">5.1 The team</h3>
@@ -251,82 +251,58 @@ blockquote p{margin:8px 0}
 <tr>
 <th>Name</th>
 <th>Role</th>
-<th>Does</th>
-<th>Does not</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Krishna (the founder)</td>
-<td>Owner and final word</td>
-<td>Site structure, database, templates, imports, audits, flagged ideas, domain and accounts</td>
-<td></td>
+<td>Owner and final word: structure, database, imports, audits, flagged ideas, domain and accounts</td>
 </tr>
 <tr>
-<td>Nakul</td>
-<td>Designer and writer</td>
-<td>Brand, colours, mobile layout, interactivity, then writing</td>
-<td>Touch data or pipeline code</td>
-</tr>
-<tr>
-<td>Sahadev</td>
-<td>Writer</td>
-<td>Research notes and ideas for its range</td>
-<td>Edit site code</td>
-</tr>
-<tr>
-<td>Yudhi</td>
-<td>Writer</td>
-<td>Research notes and ideas for its range</td>
-<td>Edit site code</td>
-</tr>
-<tr>
-<td>Abhi</td>
-<td>Writer</td>
-<td>Research notes and ideas for its range</td>
-<td>Edit site code</td>
+<td>Agent 1, Agent 2, ...</td>
+<td>Writers. Each gets its own assignment file in <code>docs/agents/AGENT_N.md</code></td>
 </tr>
 </tbody>
 </table></div>
-<p>The founder tells each account its name once. Accounts refer to each other only by these names.</p>
-<h3 id="52-category-split-for-writing">5.2 Category split for writing</h3>
+<p>Writers are named Agent 1, Agent 2 and so on. Platforms are never named.</p>
+<h3 id="52-writing-in-batches">5.2 Writing in batches</h3>
 <div class="tw"><table>
 <thead>
 <tr>
-<th>Writer</th>
+<th>Batch</th>
 <th>Categories</th>
-<th>Subcategories</th>
 <th>Ideas</th>
+<th>Writers</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Sahadev</td>
-<td>C001 to C030</td>
-<td>300</td>
-<td>3,000</td>
-</tr>
-<tr>
-<td>Yudhi</td>
-<td>C031 to C060</td>
-<td>300</td>
-<td>3,000</td>
-</tr>
-<tr>
-<td>Abhi</td>
-<td>C061 to C090</td>
-<td>300</td>
-<td>3,000</td>
-</tr>
-<tr>
-<td>Nakul</td>
-<td>C091 to C100 (after design work)</td>
-<td>100</td>
+<td>1</td>
+<td>C001 to C010</td>
 <td>1,000</td>
+<td>Agent 1: C001 (S02 to S10) to C008. Agent 2: C009 and C010</td>
+</tr>
+<tr>
+<td>2</td>
+<td>C011 to C030</td>
+<td>2,000</td>
+<td>Assigned after batch 1 audit</td>
+</tr>
+<tr>
+<td>3</td>
+<td>C031 to C060</td>
+<td>3,000</td>
+<td>Assigned after batch 2 audit</td>
+</tr>
+<tr>
+<td>4</td>
+<td>C061 to C100</td>
+<td>4,000</td>
+<td>Assigned after batch 3 audit</td>
 </tr>
 </tbody>
 </table></div>
-<p>If a writer runs out of capacity, the founder moves whole categories, never half a subcategory. Every change of ownership is written in <code>docs/agents/STATUS.md</code>.</p>
+<p>Each batch is audited once, at its end, then imported. If a writer runs out of capacity, the founder moves whole categories, never half a subcategory.</p>
 <h3 id="53-ownership-rule">5.3 Ownership rule</h3>
 <p>One category belongs to one writer at a time. Nobody writes into another writer's category. This is how we avoid duplicate ideas and overwritten files.</p>
 <hr />
@@ -371,22 +347,22 @@ blockquote p{margin:8px 0}
 <tr>
 <td><code>what_it_is</code></td>
 <td>What you actually do day to day</td>
-<td>80 to 140 words</td>
+<td>70 to 140 words</td>
 </tr>
 <tr>
 <td><code>who_pays_you</code></td>
 <td>Who the buyers are, specifically, in India</td>
-<td>60 to 120 words</td>
+<td>45 to 120 words</td>
 </tr>
 <tr>
 <td><code>how_money_comes</code></td>
 <td>How money changes hands, repeat business, pricing approach in words</td>
-<td>60 to 120 words</td>
+<td>50 to 120 words</td>
 </tr>
 <tr>
 <td><code>what_you_need</code></td>
 <td>Skills, space, tools, licences in plain words</td>
-<td>50 to 100 words</td>
+<td>40 to 100 words</td>
 </tr>
 <tr>
 <td><code>first_30_days</code></td>
@@ -396,12 +372,12 @@ blockquote p{margin:8px 0}
 <tr>
 <td><code>what_hurts</code></td>
 <td>Honest year-one pain</td>
-<td>60 to 120 words</td>
+<td>50 to 120 words</td>
 </tr>
 <tr>
 <td><code>verdict</code></td>
 <td>Build it if... / Walk away if...</td>
-<td>40 to 80 words</td>
+<td>30 to 80 words</td>
 </tr>
 <tr>
 <td><code>faq</code></td>
@@ -435,7 +411,7 @@ blockquote p{margin:8px 0}
 </tr>
 <tr>
 <td><code>writer</code></td>
-<td>Writer name, e.g. <code>Sahadev</code></td>
+<td>Writer name, e.g. <code>Agent 1</code></td>
 <td>fixed</td>
 </tr>
 </tbody>
@@ -522,21 +498,23 @@ blockquote p{margin:8px 0}
 <h2 id="part-7-database-and-pipeline">Part 7. Database and pipeline</h2>
 <h3 id="71-why-ideas-travel-through-github">7.1 Why ideas travel through GitHub</h3>
 <p>Writers never get database keys. They write JSON files into the repository. An import script, run by the founder, checks every file and loads it into Supabase. This keeps four platforms away from the database, gives us a full history and a free backup.</p>
-<pre><code>writer → content/ideas/C016/S03.json → validator (automatic) → import (founder) → Supabase → site
+<pre><code>writer → content/C016/S03.json → validator (automatic) → import (founder) → Supabase → site
 </code></pre>
 <h3 id="72-folder-layout">7.2 Folder layout</h3>
 <pre><code>content/
-  subcategories/C016/S03.json     research note for one subcategory
-  ideas/C016/S03.json             the 10 ideas of that subcategory
-  external-links/links.json       the external links block (Part 10)
+  C016/S03.json                   one subcategory: research note + its 10 ideas
 docs/
   MASTER_PLAN.md                  this file
-  agents/STATUS.md                one line per writer, updated daily
-  agents/WRITER_BRIEF.md          Part 11, copied for writers
+  WRITER_GUIDE.md                 format, lengths, voice and rules for writers
+  DATABASE.md                     database setup and where values live
+  agents/AGENT_N.md               each writer's assignment
 scripts/
-  validate-content.mjs            checks every JSON file
+  validate-content.mjs            the checker (also runs automatically on GitHub)
   import-content.mjs              loads checked files into Supabase
+supabase/
+  001_schema.sql, 002_seed_taxonomy.sql
 </code></pre>
+<p>The finished example every writer copies is <code>content/C001/S01.json</code>.</p>
 <h3 id="73-tables-new-supabase-project-built-from-zero">7.3 Tables (new Supabase project, built from zero)</h3>
 <div class="tw"><table>
 <thead>
@@ -819,16 +797,15 @@ scripts/
 <li>Up to about 1,000 links, stored in <code>content/external-links/links.json</code> and the <code>external_links</code> table. A monthly check removes dead links.</li>
 </ol>
 <hr />
-<h2 id="part-11-writer-brief-copy-this-to-every-writer">Part 11. Writer brief (copy this to every writer)</h2>
+<h2 id="part-11-writer-brief-the-full-version-is-docswriter_guidemd-and-docsagentsagent_nmd">Part 11. Writer brief (the full version is docs/WRITER_GUIDE.md and docs/agents/AGENT_N.md)</h2>
 <blockquote>
 <p>You are <strong>{NAME}</strong>, a writer for BusinessIdea.io. Read <code>docs/MASTER_PLAN.md</code> first. Your categories: <strong>{RANGE}</strong>.</p>
 <p>For each subcategory in your range, in order:
 1. Read its row in <code>src/data/taxonomy.ts</code> and <code>src/data/taxonomy-details.json</code> (audience, keywords, search intent).
-2. Write the research note to <code>content/subcategories/{C}/{S}.json</code> (Part 6.5). Plan 10 different idea titles first and check none overlap.
-3. Write the 10 ideas to <code>content/ideas/{C}/{S}.json</code> using exactly the fields in Part 6.2, tags in 6.3, band in 6.4.
-4. Run <code>node scripts/validate-content.mjs content/ideas/{C}/{S}.json</code>. Fix every error.
-5. Commit with message <code>{NAME}: {C}-{S} 10 ideas</code>. Push.
-6. Update your line in <code>docs/agents/STATUS.md</code>.</p>
+2. Plan 10 different idea titles first and check none overlap.
+3. Write the research note and the 10 ideas to <code>content/{C}/{S}.json</code> (one file), using exactly the fields in Part 6.2, tags in 6.3, band in 6.4.
+4. Run <code>node scripts/validate-content.mjs content/{C}/{S}.json</code>. Fix every error.
+5. Commit with message <code>{NAME}: {C}-{S} 10 ideas</code>. Push.</p>
 <p>Voice: you are talking to one Indian person who wants to start something. Say "you". Be warm, polite and honest. Say what will hurt. Give a straight verdict. Never write as if you run the business. Never cite, credit or link anything. Never write a statistic. Money only in ₹ with Indian grouping.</p>
 <p>Confidence: if you are sure the idea is good, real and useful in India, set <code>confidence: "confident"</code>. If not, set <code>"flagged"</code> and write one line in <code>flag_reason</code>. Do not hold back a whole subcategory for one doubtful idea.</p>
 <p>Never touch: site code, other writers' categories, the taxonomy files.</p>
@@ -850,12 +827,12 @@ scripts/
   &quot;time_needed&quot;: &quot;part_time&quot;,
   &quot;skill_level&quot;: &quot;basic&quot;,
   &quot;confidence&quot;: &quot;confident&quot;,
-  &quot;writer&quot;: &quot;Sahadev&quot;
+  &quot;writer&quot;: &quot;Agent 1&quot;
 }
 </code></pre>
 <hr />
-<h2 id="part-12-brand-and-design-changes-nakul">Part 12. Brand and design changes (Nakul)</h2>
-<p>Nakul works on design only, with the founder approving each change before it reaches <code>main</code>.</p>
+<h2 id="part-12-brand-and-design-changes">Part 12. Brand and design changes</h2>
+<p>The design agent works on design only, with the founder approving each change before it reaches <code>main</code>.</p>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -874,7 +851,7 @@ scripts/
 </tr>
 <tr>
 <td>Colours</td>
-<td>New brand palette proposed by Nakul, approved by founder. Applied through the base colour tokens in <code>src/styles.css</code>.</td>
+<td>New brand palette proposed by the design agent, approved by founder. Applied through the base colour tokens in <code>src/styles.css</code>.</td>
 </tr>
 <tr>
 <td>Typography</td>
@@ -932,7 +909,7 @@ scripts/
 <tr>
 <td>D2</td>
 <td>Final brand colours and logo</td>
-<td>Nakul proposes three directions by 14 Oct</td>
+<td>Design agent proposes three directions by 14 Oct</td>
 </tr>
 <tr>
 <td>D3</td>
@@ -952,7 +929,7 @@ scripts/
 <tr>
 <td>D8</td>
 <td>Writer names</td>
-<td>Nakul, Sahadev, Yudhi, Abhi, as in 5.1; founder may rename</td>
+<td>Agent 1, Agent 2, ... as in 5.1</td>
 </tr>
 </tbody>
 </table></div></main></div></html>

@@ -1,0 +1,19 @@
+name: Check content
+
+# Runs the checker on every push that touches content/, so a bad file shows a
+# red cross on GitHub straight away.
+on:
+  push:
+    paths: ["content/**", "scripts/validate-content.mjs"]
+  pull_request:
+    paths: ["content/**", "scripts/validate-content.mjs"]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/validate-content.mjs
