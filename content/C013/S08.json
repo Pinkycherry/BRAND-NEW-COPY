@@ -1,0 +1,507 @@
+{
+  "subcategory": {
+    "code": "C013-S08",
+    "intro": "Festival Goods Reselling can start small when you know exactly whom you serve. Festival shopping is concentrated in a short window, so a reseller must choose stock carefully and finish deliveries before the celebration. A useful item can return year after year if it stores well. Look at the way people currently solve this problem. A neighbour may go across town, wait for a delivery, or buy the wrong item because nobody explains the difference. You do not need a grand launch to learn whether they will pay you. A few real transactions with people near you reveal more than praise for an idea. The early work is listening carefully, testing a dependable supplier or process, and setting a price that includes your time. A buyer remembers whether the item matched its description, arrived when promised and could be exchanged when something went wrong. Those ordinary details are the foundation of repeat business. Keep a record of enquiries, completed orders, returns and the hours spent travelling or answering messages. If you hold stock, protect it from damage and check what happens when a design or season changes. If a supplier dispatches directly, agree on tracking and complaints before taking a customer's money. Check electrical, food and fire safety where relevant. Do not make environmental claims about materials without evidence. You can grow the range after the first group of buyers returns, but a smaller promise delivered well is a good start. Your area, climate, festivals and transport will affect what moves. Treat the first month as a paid lesson in what your own customers actually value.",
+    "how_to_choose": "Choose a festival need you understand and start with preorders. Consider weather, venue rules, unsold goods and the exact date by which the buyer needs them. You may find that one narrow customer group asks better questions than a crowd browsing everything. Compare products or services by reliable supply, honest margin after delivery and returns, and how confidently you can explain the choice. A sample, a clear order message and one paid trial can show what needs changing. Pick the option that fits your available time and can still be handled kindly when a buyer has a complaint.",
+    "faq": [
+      {
+        "q": "How do I find my first paying customer?",
+        "a": "Start with someone whose recent purchase or problem you understand. Show the exact offer and full price, take a normal paid order, then ask what felt easy or frustrating. A real transaction is a better test than casual interest."
+      },
+      {
+        "q": "Should I buy a lot of stock at the start?",
+        "a": "Keep the first range small enough that a slow week will not trap your money. Test a sample and confirm replacement or return terms with the supplier. Expand after buyers have shown what they reorder."
+      },
+      {
+        "q": "How should I set the price?",
+        "a": "Include the item or service cost, packing, travel, payment and return handling, and your own time. Tap Validate for current numbers in your area. A price that only covers the supplier bill is not a business."
+      },
+      {
+        "q": "What if the customer complains?",
+        "a": "Listen to the exact problem and compare it with what you promised. Keep the order details and supplier terms close at hand, then offer the remedy you can actually deliver. A calm response protects trust."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C013-S08-I01",
+      "slug": "reusable-festival-gift-wrap",
+      "title": "Reusable Festival Gift Wrap",
+      "hook": "Gift wrapping can be useful again next year. You can help with fabric gift wrap resale in a way that feels personal.",
+      "summary": "You offer fabric gift wrap resale to families wrapping several small gifts. You show washable sizes and tie methods, then supply a counted colour set. Gift wrapping can be useful again next year. Your first reusable festival gift wrap order is a paid job you can handle carefully from question to handover.",
+      "what_it_is": "A customer comes to you because they need fabric gift wrap resale. You show washable sizes and tie methods, then supply a counted colour set. Before paying for reusable festival gift wrap, they know what is included, what choices they have and when it will arrive. Fabric quality, clean storage and size samples matter. You can show a real fabric gift wrap resale sample or a clear description, so the buyer chooses the actual thing rather than a vague picture. Do not claim a fabric has a certification it lacks. At handover you check the reusable festival gift wrap details together. That small moment can bring the next fabric gift wrap resale order.",
+      "who_pays_you": "Your likely buyers are families wrapping several small gifts. Families want attractive wrapping without waste. Gift wrapping can be useful again next year. The first reusable festival gift wrap buyers may come through a neighbour, colleague or permitted local group. They can buy fabric gift wrap resale elsewhere, so you earn their trust by knowing the item well and answering a fit or usage question honestly.",
+      "how_money_comes": "Earn a margin on sets with custom tags separate. Your margin on fabric gift wrap resale has to cover more than the supplier or material bill: packing, delivery, returns and the time you spend with each buyer all count. A repeat reusable festival gift wrap buyer is valuable when you can serve them without starting the whole conversation again. Keep a reusable festival gift wrap order record and tap Validate for today's costs in your area before fixing the price.",
+      "what_you_need": "Fabric quality, clean storage and size samples matter. For reusable festival gift wrap, you also need a clear order record, a way to collect payment and a plan for a defect or a changed mind. Knowing when to say that fabric gift wrap resale is unsuitable matters as much as having it ready to sell.",
+      "first_30_days": [
+        "Talk with potential reusable festival gift wrap buyers about their last purchase and what went wrong.",
+        "Inspect a sample and calculate the full cost of fabric gift wrap resale including delivery and returns.",
+        "Take a few paid orders within one small area and record every handover clearly.",
+        "Review the margin, complaints and repeat requests before expanding the reusable festival gift wrap range."
+      ],
+      "what_hurts": "An awkward size may not cover the chosen gift. When this happens in reusable festival gift wrap, the buyer remembers your promise rather than the supplier behind it. Do not claim a fabric has a certification it lacks. A fabric gift wrap resale return, delay or mismatch can use up the margin from several smooth orders. You need room in the price and your week to put a reusable festival gift wrap problem right. If you cannot stand behind the fabric gift wrap resale product or delivery, the trust is hard to rebuild.",
+      "verdict": "Build this if families want attractive wrapping without waste and you like helping someone choose fabric gift wrap resale with care. Walk away if you cannot handle the risk that an awkward size may not cover the chosen gift. The first paid reusable festival gift wrap orders will show whether your margin survives delivery and returns.",
+      "faq": [
+        {
+          "q": "How should I describe the first order?",
+          "a": "For reusable festival gift wrap, share the actual choice, full price, delivery timing and return terms before taking payment. A small written order note keeps you and the buyer clear about what was selected."
+        },
+        {
+          "q": "What if the buyer asks for something else?",
+          "a": "You can listen, but do not claim a fabric has a certification it lacks. If the requested variation is available, give a separate price and timing. A confident no is better than a promise you cannot fulfil."
+        },
+        {
+          "q": "Can I make repeat sales?",
+          "a": "Yes, if fabric gift wrap resale suits a recurring need and the first delivery went well. Ask permission before sending future offers and keep a simple note of what the customer actually liked."
+        }
+      ],
+      "validate_prompt": "I want to offer fabric gift wrap resale to families wrapping several small gifts in India. What current local supplier costs, customer demand, return terms and permissions should I check before taking orders?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C013-S08-I02",
+      "slug": "paper-lantern-festival-curator",
+      "title": "Paper Lantern Festival Curator",
+      "hook": "A folding lantern stores easily after a celebration. You can help with folding paper lantern resale in a way that feels personal.",
+      "summary": "You offer folding paper lantern resale to families decorating an indoor gathering. You show assembly and safe hanging points with the buyer's room in mind. A folding lantern stores easily after a celebration. Your first paper lantern festival curator order is a paid job you can handle carefully from question to handover.",
+      "what_it_is": "A customer comes to you because they need folding paper lantern resale. You show assembly and safe hanging points with the buyer's room in mind. Before paying for paper lantern festival curator, they know what is included, what choices they have and when it will arrive. Sturdy paper, safe fixings and clear dimensions matter. You can show a real folding paper lantern resale sample or a clear description, so the buyer chooses the actual thing rather than a vague picture. Keep paper away from flame or hot bulbs. At handover you check the paper lantern festival curator details together. That small moment can bring the next folding paper lantern resale order.",
+      "who_pays_you": "Your likely buyers are families decorating an indoor gathering. Buyers want a decoration that arrives intact. A folding lantern stores easily after a celebration. The first paper lantern festival curator buyers may come through a neighbour, colleague or permitted local group. They can buy folding paper lantern resale elsewhere, so you earn their trust by knowing the item well and answering a fit or usage question honestly.",
+      "how_money_comes": "Earn a margin per set and optional delivery. Your margin on folding paper lantern resale has to cover more than the supplier or material bill: packing, delivery, returns and the time you spend with each buyer all count. A repeat paper lantern festival curator buyer is valuable when you can serve them without starting the whole conversation again. Keep a paper lantern festival curator order record and tap Validate for today's costs in your area before fixing the price.",
+      "what_you_need": "Sturdy paper, safe fixings and clear dimensions matter. For paper lantern festival curator, you also need a clear order record, a way to collect payment and a plan for a defect or a changed mind. Knowing when to say that folding paper lantern resale is unsuitable matters as much as having it ready to sell.",
+      "first_30_days": [
+        "Talk with potential paper lantern festival curator buyers about their last purchase and what went wrong.",
+        "Inspect a sample and calculate the full cost of folding paper lantern resale including delivery and returns.",
+        "Take a few paid orders within one small area and record every handover clearly.",
+        "Review the margin, complaints and repeat requests before expanding the paper lantern festival curator range."
+      ],
+      "what_hurts": "Humidity can warp a lantern. When this happens in paper lantern festival curator, the buyer remembers your promise rather than the supplier behind it. Keep paper away from flame or hot bulbs. A folding paper lantern resale return, delay or mismatch can use up the margin from several smooth orders. You need room in the price and your week to put a paper lantern festival curator problem right. If you cannot stand behind the folding paper lantern resale product or delivery, the trust is hard to rebuild.",
+      "verdict": "Build this if buyers want a decoration that arrives intact and you like helping someone choose folding paper lantern resale with care. Walk away if you cannot handle the risk that humidity can warp a lantern. The first paid paper lantern festival curator orders will show whether your margin survives delivery and returns.",
+      "faq": [
+        {
+          "q": "How should I describe the first order?",
+          "a": "For paper lantern festival curator, share the actual choice, full price, delivery timing and return terms before taking payment. A small written order note keeps you and the buyer clear about what was selected."
+        },
+        {
+          "q": "What if the buyer asks for something else?",
+          "a": "You can listen, but keep paper away from flame or hot bulbs. If the requested variation is available, give a separate price and timing. A confident no is better than a promise you cannot fulfil."
+        },
+        {
+          "q": "Can I make repeat sales?",
+          "a": "Yes, if folding paper lantern resale suits a recurring need and the first delivery went well. Ask permission before sending future offers and keep a simple note of what the customer actually liked."
+        }
+      ],
+      "validate_prompt": "I want to offer folding paper lantern resale to families decorating an indoor gathering in India. What current local supplier costs, customer demand, return terms and permissions should I check before taking orders?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C013-S08-I03",
+      "slug": "rangoli-stencil-resale-kit",
+      "title": "Rangoli Stencil Resale Kit",
+      "hook": "A busy household can make a neat design quickly. You can help with washable rangoli stencil sets in a way that feels personal.",
+      "summary": "You offer washable rangoli stencil sets to families wanting a repeatable floor pattern. You demonstrate one small pattern and show how to clean and store the stencil. A busy household can make a neat design quickly. Your first rangoli stencil resale kit order is a paid job you can handle carefully from question to handover.",
+      "what_it_is": "A customer comes to you because they need washable rangoli stencil sets. You demonstrate one small pattern and show how to clean and store the stencil. Before paying for rangoli stencil resale kit, they know what is included, what choices they have and when it will arrive. Durable stencil material, samples and safe pigment details matter. You can show a real washable rangoli stencil sets sample or a clear description, so the buyer chooses the actual thing rather than a vague picture. Do not claim loose powder is safe for every child or pet. At handover you check the rangoli stencil resale kit details together. That small moment can bring the next washable rangoli stencil sets order.",
+      "who_pays_you": "Your likely buyers are families wanting a repeatable floor pattern. Customers want a pattern they can repeat. A busy household can make a neat design quickly. The first rangoli stencil resale kit buyers may come through a neighbour, colleague or permitted local group. They can buy washable rangoli stencil sets elsewhere, so you earn their trust by knowing the item well and answering a fit or usage question honestly.",
+      "how_money_comes": "Earn a margin on sets and refill colours separately. Your margin on washable rangoli stencil sets has to cover more than the supplier or material bill: packing, delivery, returns and the time you spend with each buyer all count. A repeat rangoli stencil resale kit buyer is valuable when you can serve them without starting the whole conversation again. Keep a rangoli stencil resale kit order record and tap Validate for today's costs in your area before fixing the price.",
+      "what_you_need": "Durable stencil material, samples and safe pigment details matter. For rangoli stencil resale kit, you also need a clear order record, a way to collect payment and a plan for a defect or a changed mind. Knowing when to say that washable rangoli stencil sets is unsuitable matters as much as having it ready to sell.",
+      "first_30_days": [
+        "Talk with potential rangoli stencil resale kit buyers about their last purchase and what went wrong.",
+        "Inspect a sample and calculate the full cost of washable rangoli stencil sets including delivery and returns.",
+        "Take a few paid orders within one small area and record every handover clearly.",
+        "Review the margin, complaints and repeat requests before expanding the rangoli stencil resale kit range."
+      ],
+      "what_hurts": "A thin stencil can tear on rough floors. When this happens in rangoli stencil resale kit, the buyer remembers your promise rather than the supplier behind it. Do not claim loose powder is safe for every child or pet. A washable rangoli stencil sets return, delay or mismatch can use up the margin from several smooth orders. You need room in the price and your week to put a rangoli stencil resale kit problem right. If you cannot stand behind the washable rangoli stencil sets product or delivery, the trust is hard to rebuild.",
+      "verdict": "Build this if customers want a pattern they can repeat and you like helping someone choose washable rangoli stencil sets with care. Walk away if you cannot handle the risk that a thin stencil can tear on rough floors. The first paid rangoli stencil resale kit orders will show whether your margin survives delivery and returns.",
+      "faq": [
+        {
+          "q": "How should I describe the first order?",
+          "a": "For rangoli stencil resale kit, share the actual choice, full price, delivery timing and return terms before taking payment. A small written order note keeps you and the buyer clear about what was selected."
+        },
+        {
+          "q": "What if the buyer asks for something else?",
+          "a": "You can listen, but do not claim loose powder is safe for every child or pet. If the requested variation is available, give a separate price and timing. A confident no is better than a promise you cannot fulfil."
+        },
+        {
+          "q": "Can I make repeat sales?",
+          "a": "Yes, if washable rangoli stencil sets suits a recurring need and the first delivery went well. Ask permission before sending future offers and keep a simple note of what the customer actually liked."
+        }
+      ],
+      "validate_prompt": "I want to offer washable rangoli stencil sets to families wanting a repeatable floor pattern in India. What current local supplier costs, customer demand, return terms and permissions should I check before taking orders?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C013-S08-I04",
+      "slug": "festival-tableware-rental-resale-box",
+      "title": "Festival Tableware Sale Box",
+      "hook": "A family may want pieces they can use at other gatherings. You can help with reusable festival tableware resale in a way that feels personal.",
+      "summary": "You offer reusable festival tableware resale to hosts buying reusable serving pieces. You show a coordinated set and check how many guests it really serves. A family may want pieces they can use at other gatherings. Your first festival tableware sale box order is a paid job you can handle carefully from question to handover.",
+      "what_it_is": "A customer comes to you because they need reusable festival tableware resale. You show a coordinated set and check how many guests it really serves. Before paying for festival tableware sale box, they know what is included, what choices they have and when it will arrive. Food-contact safe stock, packing and piece counts matter. You can show a real reusable festival tableware resale sample or a clear description, so the buyer chooses the actual thing rather than a vague picture. Do not sell damaged food-contact items. At handover you check the festival tableware sale box details together. That small moment can bring the next reusable festival tableware resale order.",
+      "who_pays_you": "Your likely buyers are hosts buying reusable serving pieces. Hosts want useful pieces, not just matching colours. A family may want pieces they can use at other gatherings. The first festival tableware sale box buyers may come through a neighbour, colleague or permitted local group. They can buy reusable festival tableware resale elsewhere, so you earn their trust by knowing the item well and answering a fit or usage question honestly.",
+      "how_money_comes": "Earn a margin per set with breakage policy. Your margin on reusable festival tableware resale has to cover more than the supplier or material bill: packing, delivery, returns and the time you spend with each buyer all count. A repeat festival tableware sale box buyer is valuable when you can serve them without starting the whole conversation again. Keep a festival tableware sale box order record and tap Validate for today's costs in your area before fixing the price.",
+      "what_you_need": "Food-contact safe stock, packing and piece counts matter. For festival tableware sale box, you also need a clear order record, a way to collect payment and a plan for a defect or a changed mind. Knowing when to say that reusable festival tableware resale is unsuitable matters as much as having it ready to sell.",
+      "first_30_days": [
+        "Talk with potential festival tableware sale box buyers about their last purchase and what went wrong.",
+        "Inspect a sample and calculate the full cost of reusable festival tableware resale including delivery and returns.",
+        "Take a few paid orders within one small area and record every handover clearly.",
+        "Review the margin, complaints and repeat requests before expanding the festival tableware sale box range."
+      ],
+      "what_hurts": "A chipped plate can spoil the set. When this happens in festival tableware sale box, the buyer remembers your promise rather than the supplier behind it. Do not sell damaged food-contact items. A reusable festival tableware resale return, delay or mismatch can use up the margin from several smooth orders. You need room in the price and your week to put a festival tableware sale box problem right. If you cannot stand behind the reusable festival tableware resale product or delivery, the trust is hard to rebuild.",
+      "verdict": "Build this if hosts want useful pieces, not just matching colours and you like helping someone choose reusable festival tableware resale with care. Walk away if you cannot handle the risk that a chipped plate can spoil the set. The first paid festival tableware sale box orders will show whether your margin survives delivery and returns.",
+      "faq": [
+        {
+          "q": "How should I describe the first order?",
+          "a": "For festival tableware sale box, share the actual choice, full price, delivery timing and return terms before taking payment. A small written order note keeps you and the buyer clear about what was selected."
+        },
+        {
+          "q": "What if the buyer asks for something else?",
+          "a": "You can listen, but do not sell damaged food-contact items. If the requested variation is available, give a separate price and timing. A confident no is better than a promise you cannot fulfil."
+        },
+        {
+          "q": "Can I make repeat sales?",
+          "a": "Yes, if reusable festival tableware resale suits a recurring need and the first delivery went well. Ask permission before sending future offers and keep a simple note of what the customer actually liked."
+        }
+      ],
+      "validate_prompt": "I want to offer reusable festival tableware resale to hosts buying reusable serving pieces in India. What current local supplier costs, customer demand, return terms and permissions should I check before taking orders?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C013-S08-I05",
+      "slug": "decorative-door-hanging-reseller",
+      "title": "Decorative Door Hanging Reseller",
+      "hook": "A small entrance decoration can change the mood of a home. You can help locally.",
+      "summary": "You offer reusable fabric door hanging resale to households decorating an entrance. You show width and attachment options and supply a piece suited to the doorway. A small entrance decoration can change the mood of a home. Your first decorative door hanging reseller order is a paid job you can handle carefully from question to handover.",
+      "what_it_is": "A customer comes to you because they need reusable fabric door hanging resale. You show width and attachment options and supply a piece suited to the doorway. Before paying for decorative door hanging reseller, they know what is included, what choices they have and when it will arrive. Secure stitching, colourfast fabric and measurements matter. You can show a real reusable fabric door hanging resale sample or a clear description, so the buyer chooses the actual thing rather than a vague picture. Do not drill or mark a rented door without permission. At handover you check the decorative door hanging reseller details together. That small moment can bring the next reusable fabric door hanging resale order.",
+      "who_pays_you": "Your likely buyers are households decorating an entrance. Buyers want an easy installation. A small entrance decoration can change the mood of a home. The first decorative door hanging reseller buyers may come through a neighbour, colleague or permitted local group. They can buy reusable fabric door hanging resale elsewhere, so you earn their trust by knowing the item well and answering a fit or usage question honestly.",
+      "how_money_comes": "Earn a margin on designs with custom length separate. Your margin on reusable fabric door hanging resale has to cover more than the supplier or material bill: packing, delivery, returns and the time you spend with each buyer all count. A repeat decorative door hanging reseller buyer is valuable when you can serve them without starting the whole conversation again. Keep a decorative door hanging reseller order record and tap Validate for today's costs in your area before fixing the price.",
+      "what_you_need": "Secure stitching, colourfast fabric and measurements matter. For decorative door hanging reseller, you also need a clear order record, a way to collect payment and a plan for a defect or a changed mind. Knowing when to say that reusable fabric door hanging resale is unsuitable matters as much as having it ready to sell.",
+      "first_30_days": [
+        "Talk with potential decorative door hanging reseller buyers about their last purchase and what went wrong.",
+        "Inspect a sample and calculate the full cost of reusable fabric door hanging resale including delivery and returns.",
+        "Take a few paid orders within one small area and record every handover clearly.",
+        "Review the margin, complaints and repeat requests before expanding the decorative door hanging reseller range."
+      ],
+      "what_hurts": "A weak hook can let the hanging fall. When this happens in decorative door hanging reseller, the buyer remembers your promise rather than the supplier behind it. Do not drill or mark a rented door without permission. A reusable fabric door hanging resale return, delay or mismatch can use up the margin from several smooth orders. You need room in the price and your week to put a decorative door hanging reseller problem right. If you cannot stand behind the reusable fabric door hanging resale product or delivery, the trust is hard to rebuild.",
+      "verdict": "Build this if buyers want an easy installation and you like helping someone choose reusable fabric door hanging resale with care. Walk away if you cannot handle the risk that a weak hook can let the hanging fall. The first paid decorative door hanging reseller orders will show whether your margin survives delivery and returns.",
+      "faq": [
+        {
+          "q": "How should I describe the first order?",
+          "a": "For decorative door hanging reseller, share the actual choice, full price, delivery timing and return terms before taking payment. A small written order note keeps you and the buyer clear about what was selected."
+        },
+        {
+          "q": "What if the buyer asks for something else?",
+          "a": "You can listen, but do not drill or mark a rented door without permission. If the requested variation is available, give a separate price and timing. A confident no is better than a promise you cannot fulfil."
+        },
+        {
+          "q": "Can I make repeat sales?",
+          "a": "Yes, if reusable fabric door hanging resale suits a recurring need and the first delivery went well. Ask permission before sending future offers and keep a simple note of what the customer actually liked."
+        }
+      ],
+      "validate_prompt": "I want to offer reusable fabric door hanging resale to households decorating an entrance in India. What current local supplier costs, customer demand, return terms and permissions should I check before taking orders?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C013-S08-I06",
+      "slug": "festival-return-gift-stationery",
+      "title": "Festival Return Gift Stationery",
+      "hook": "A practical gift may be used after the event. You can help with notebook and pen return gift bundles in a way that feels personal.",
+      "summary": "You offer notebook and pen return gift bundles to hosts giving small useful gifts to guests. You agree on guest count and wrap sealed matching sets before the function. A practical gift may be used after the event. Your first festival return gift stationery order is a paid job you can handle carefully from question to handover.",
+      "what_it_is": "A customer comes to you because they need notebook and pen return gift bundles. You agree on guest count and wrap sealed matching sets before the function. Before paying for festival return gift stationery, they know what is included, what choices they have and when it will arrive. Quality notebooks, count checks and timely packing are needed. You can show a real notebook and pen return gift bundles sample or a clear description, so the buyer chooses the actual thing rather than a vague picture. Do not promise delivery after the event date. At handover you check the festival return gift stationery details together. That small moment can bring the next notebook and pen return gift bundles order.",
+      "who_pays_you": "Your likely buyers are hosts giving small useful gifts to guests. Hosts want a neat handover. A practical gift may be used after the event. The first festival return gift stationery buyers may come through a neighbour, colleague or permitted local group. They can buy notebook and pen return gift bundles elsewhere, so you earn their trust by knowing the item well and answering a fit or usage question honestly.",
+      "how_money_comes": "Earn a margin per bundle with custom message extra. Your margin on notebook and pen return gift bundles has to cover more than the supplier or material bill: packing, delivery, returns and the time you spend with each buyer all count. A repeat festival return gift stationery buyer is valuable when you can serve them without starting the whole conversation again. Keep a festival return gift stationery order record and tap Validate for today's costs in your area before fixing the price.",
+      "what_you_need": "Quality notebooks, count checks and timely packing are needed. For festival return gift stationery, you also need a clear order record, a way to collect payment and a plan for a defect or a changed mind. Knowing when to say that notebook and pen return gift bundles is unsuitable matters as much as having it ready to sell.",
+      "first_30_days": [
+        "Talk with potential festival return gift stationery buyers about their last purchase and what went wrong.",
+        "Inspect a sample and calculate the full cost of notebook and pen return gift bundles including delivery and returns.",
+        "Take a few paid orders within one small area and record every handover clearly.",
+        "Review the margin, complaints and repeat requests before expanding the festival return gift stationery range."
+      ],
+      "what_hurts": "A late guest count can leave too few bundles. When this happens in festival return gift stationery, the buyer remembers your promise rather than the supplier behind it. Do not promise delivery after the event date. A notebook and pen return gift bundles return, delay or mismatch can use up the margin from several smooth orders. You need room in the price and your week to put a festival return gift stationery problem right. If you cannot stand behind the notebook and pen return gift bundles product or delivery, the trust is hard to rebuild.",
+      "verdict": "Build this if hosts want a neat handover and you like helping someone choose notebook and pen return gift bundles with care. Walk away if you cannot handle the risk that a late guest count can leave too few bundles. The first paid festival return gift stationery orders will show whether your margin survives delivery and returns.",
+      "faq": [
+        {
+          "q": "How should I describe the first order?",
+          "a": "For festival return gift stationery, share the actual choice, full price, delivery timing and return terms before taking payment. A small written order note keeps you and the buyer clear about what was selected."
+        },
+        {
+          "q": "What if the buyer asks for something else?",
+          "a": "You can listen, but do not promise delivery after the event date. If the requested variation is available, give a separate price and timing. A confident no is better than a promise you cannot fulfil."
+        },
+        {
+          "q": "Can I make repeat sales?",
+          "a": "Yes, if notebook and pen return gift bundles suits a recurring need and the first delivery went well. Ask permission before sending future offers and keep a simple note of what the customer actually liked."
+        }
+      ],
+      "validate_prompt": "I want to offer notebook and pen return gift bundles to hosts giving small useful gifts to guests in India. What current local supplier costs, customer demand, return terms and permissions should I check before taking orders?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C013-S08-I07",
+      "slug": "seasonal-flower-vase-reseller",
+      "title": "Seasonal Flower Vase Reseller",
+      "hook": "Flowers look better when the vessel does not tip. You can help with small reusable flower vase resale in a way that feels personal.",
+      "summary": "You offer small reusable flower vase resale to families displaying flowers during a celebration. You offer stable vase sizes and show the buyer how each sits on a table. Flowers look better when the vessel does not tip. Your first seasonal flower vase reseller order is a paid job you can handle carefully from question to handover.",
+      "what_it_is": "A customer comes to you because they need small reusable flower vase resale. You offer stable vase sizes and show the buyer how each sits on a table. Before paying for seasonal flower vase reseller, they know what is included, what choices they have and when it will arrive. Breakage-safe packing and stability checks matter. You can show a real small reusable flower vase resale sample or a clear description, so the buyer chooses the actual thing rather than a vague picture. Do not call an untested vessel food-safe. At handover you check the seasonal flower vase reseller details together. That small moment can bring the next small reusable flower vase resale order.",
+      "who_pays_you": "Your likely buyers are families displaying flowers during a celebration. Buyers want a vase usable beyond one day. Flowers look better when the vessel does not tip. The first seasonal flower vase reseller buyers may come through a neighbour, colleague or permitted local group. They can buy small reusable flower vase resale elsewhere, so you earn their trust by knowing the item well and answering a fit or usage question honestly.",
+      "how_money_comes": "Earn a margin on each vase, with flowers separate. Your margin on small reusable flower vase resale has to cover more than the supplier or material bill: packing, delivery, returns and the time you spend with each buyer all count. A repeat seasonal flower vase reseller buyer is valuable when you can serve them without starting the whole conversation again. Keep a seasonal flower vase reseller order record and tap Validate for today's costs in your area before fixing the price.",
+      "what_you_need": "Breakage-safe packing and stability checks matter. For seasonal flower vase reseller, you also need a clear order record, a way to collect payment and a plan for a defect or a changed mind. Knowing when to say that small reusable flower vase resale is unsuitable matters as much as having it ready to sell.",
+      "first_30_days": [
+        "Talk with potential seasonal flower vase reseller buyers about their last purchase and what went wrong.",
+        "Inspect a sample and calculate the full cost of small reusable flower vase resale including delivery and returns.",
+        "Take a few paid orders within one small area and record every handover clearly.",
+        "Review the margin, complaints and repeat requests before expanding the seasonal flower vase reseller range."
+      ],
+      "what_hurts": "A narrow base can spill water. When this happens in seasonal flower vase reseller, the buyer remembers your promise rather than the supplier behind it. Do not call an untested vessel food-safe. A small reusable flower vase resale return, delay or mismatch can use up the margin from several smooth orders. You need room in the price and your week to put a seasonal flower vase reseller problem right. If you cannot stand behind the small reusable flower vase resale product or delivery, the trust is hard to rebuild.",
+      "verdict": "Build this if buyers want a vase usable beyond one day and you like helping someone choose small reusable flower vase resale with care. Walk away if you cannot handle the risk that a narrow base can spill water. The first paid seasonal flower vase reseller orders will show whether your margin survives delivery and returns.",
+      "faq": [
+        {
+          "q": "How should I describe the first order?",
+          "a": "For seasonal flower vase reseller, share the actual choice, full price, delivery timing and return terms before taking payment. A small written order note keeps you and the buyer clear about what was selected."
+        },
+        {
+          "q": "What if the buyer asks for something else?",
+          "a": "You can listen, but do not call an untested vessel food-safe. If the requested variation is available, give a separate price and timing. A confident no is better than a promise you cannot fulfil."
+        },
+        {
+          "q": "Can I make repeat sales?",
+          "a": "Yes, if small reusable flower vase resale suits a recurring need and the first delivery went well. Ask permission before sending future offers and keep a simple note of what the customer actually liked."
+        }
+      ],
+      "validate_prompt": "I want to offer small reusable flower vase resale to families displaying flowers during a celebration in India. What current local supplier costs, customer demand, return terms and permissions should I check before taking orders?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C013-S08-I08",
+      "slug": "festival-home-light-timer-reseller",
+      "title": "Festival Home Light Timer Reseller",
+      "hook": "A timer saves someone from remembering a switch. You can help with certified plug-in timer resale in a way that feels personal.",
+      "summary": "You offer certified plug-in timer resale to families switching decorative lights each evening. You explain compatible load and let the buyer check the plug type. A timer saves someone from remembering a switch. Your first festival home light timer reseller order is a paid job you can handle carefully from question to handover.",
+      "what_it_is": "A customer comes to you because they need certified plug-in timer resale. You explain compatible load and let the buyer check the plug type. Before paying for festival home light timer reseller, they know what is included, what choices they have and when it will arrive. Electrical safety marks, instructions and authentic supply matter. You can show a real certified plug-in timer resale sample or a clear description, so the buyer chooses the actual thing rather than a vague picture. Do not use an indoor timer outdoors. At handover you check the festival home light timer reseller details together. That small moment can bring the next certified plug-in timer resale order.",
+      "who_pays_you": "Your likely buyers are families switching decorative lights each evening. Households want predictable lighting. A timer saves someone from remembering a switch. The first festival home light timer reseller buyers may come through a neighbour, colleague or permitted local group. They can buy certified plug-in timer resale elsewhere, so you earn their trust by knowing the item well and answering a fit or usage question honestly.",
+      "how_money_comes": "Earn a margin on sealed devices and handle warranty. Your margin on certified plug-in timer resale has to cover more than the supplier or material bill: packing, delivery, returns and the time you spend with each buyer all count. A repeat festival home light timer reseller buyer is valuable when you can serve them without starting the whole conversation again. Keep a festival home light timer reseller order record and tap Validate for today's costs in your area before fixing the price.",
+      "what_you_need": "Electrical safety marks, instructions and authentic supply matter. For festival home light timer reseller, you also need a clear order record, a way to collect payment and a plan for a defect or a changed mind. Knowing when to say that certified plug-in timer resale is unsuitable matters as much as having it ready to sell.",
+      "first_30_days": [
+        "Talk with potential festival home light timer reseller buyers about their last purchase and what went wrong.",
+        "Inspect a sample and calculate the full cost of certified plug-in timer resale including delivery and returns.",
+        "Take a few paid orders within one small area and record every handover clearly.",
+        "Review the margin, complaints and repeat requests before expanding the festival home light timer reseller range."
+      ],
+      "what_hurts": "A wrong load can overheat a device. When this happens in festival home light timer reseller, the buyer remembers your promise rather than the supplier behind it. Do not use an indoor timer outdoors. A certified plug-in timer resale return, delay or mismatch can use up the margin from several smooth orders. You need room in the price and your week to put a festival home light timer reseller problem right. If you cannot stand behind the certified plug-in timer resale product or delivery, the trust is hard to rebuild.",
+      "verdict": "Build this if households want predictable lighting and you like helping someone choose certified plug-in timer resale with care. Walk away if you cannot handle the risk that a wrong load can overheat a device. The first paid festival home light timer reseller orders will show whether your margin survives delivery and returns.",
+      "faq": [
+        {
+          "q": "How should I describe the first order?",
+          "a": "For festival home light timer reseller, share the actual choice, full price, delivery timing and return terms before taking payment. A small written order note keeps you and the buyer clear about what was selected."
+        },
+        {
+          "q": "What if the buyer asks for something else?",
+          "a": "You can listen, but do not use an indoor timer outdoors. If the requested variation is available, give a separate price and timing. A confident no is better than a promise you cannot fulfil."
+        },
+        {
+          "q": "Can I make repeat sales?",
+          "a": "Yes, if certified plug-in timer resale suits a recurring need and the first delivery went well. Ask permission before sending future offers and keep a simple note of what the customer actually liked."
+        }
+      ],
+      "validate_prompt": "I want to offer certified plug-in timer resale to families switching decorative lights each evening in India. What current local supplier costs, customer demand, return terms and permissions should I check before taking orders?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C013-S08-I09",
+      "slug": "celebration-photo-prop-kit",
+      "title": "Celebration Photo Prop Kit",
+      "hook": "A few props can make a family photo more playful. You can help with reusable family photo prop resale in a way that feels personal.",
+      "summary": "You offer reusable family photo prop resale to families taking group pictures at home. You select a small nonpersonalised set that fits the event space. A few props can make a family photo more playful. Your first celebration photo prop kit order is a paid job you can handle carefully from question to handover.",
+      "what_it_is": "A customer comes to you because they need reusable family photo prop resale. You select a small nonpersonalised set that fits the event space. Before paying for celebration photo prop kit, they know what is included, what choices they have and when it will arrive. Sturdy materials, clean edges and storage matter. You can show a real reusable family photo prop resale sample or a clear description, so the buyer chooses the actual thing rather than a vague picture. Do not include sharp pieces for young children. At handover you check the celebration photo prop kit details together. That small moment can bring the next reusable family photo prop resale order.",
+      "who_pays_you": "Your likely buyers are families taking group pictures at home. Buyers want props that survive handling. A few props can make a family photo more playful. The first celebration photo prop kit buyers may come through a neighbour, colleague or permitted local group. They can buy reusable family photo prop resale elsewhere, so you earn their trust by knowing the item well and answering a fit or usage question honestly.",
+      "how_money_comes": "Earn a margin per boxed kit. Your margin on reusable family photo prop resale has to cover more than the supplier or material bill: packing, delivery, returns and the time you spend with each buyer all count. A repeat celebration photo prop kit buyer is valuable when you can serve them without starting the whole conversation again. Keep a celebration photo prop kit order record and tap Validate for today's costs in your area before fixing the price.",
+      "what_you_need": "Sturdy materials, clean edges and storage matter. For celebration photo prop kit, you also need a clear order record, a way to collect payment and a plan for a defect or a changed mind. Knowing when to say that reusable family photo prop resale is unsuitable matters as much as having it ready to sell.",
+      "first_30_days": [
+        "Talk with potential celebration photo prop kit buyers about their last purchase and what went wrong.",
+        "Inspect a sample and calculate the full cost of reusable family photo prop resale including delivery and returns.",
+        "Take a few paid orders within one small area and record every handover clearly.",
+        "Review the margin, complaints and repeat requests before expanding the celebration photo prop kit range."
+      ],
+      "what_hurts": "Flimsy pieces may break before the first photo. When this happens in celebration photo prop kit, the buyer remembers your promise rather than the supplier behind it. Do not include sharp pieces for young children. A reusable family photo prop resale return, delay or mismatch can use up the margin from several smooth orders. You need room in the price and your week to put a celebration photo prop kit problem right. If you cannot stand behind the reusable family photo prop resale product or delivery, the trust is hard to rebuild.",
+      "verdict": "Build this if buyers want props that survive handling and you like helping someone choose reusable family photo prop resale with care. Walk away if you cannot handle the risk that flimsy pieces may break before the first photo. The first paid celebration photo prop kit orders will show whether your margin survives delivery and returns.",
+      "faq": [
+        {
+          "q": "How should I describe the first order?",
+          "a": "For celebration photo prop kit, share the actual choice, full price, delivery timing and return terms before taking payment. A small written order note keeps you and the buyer clear about what was selected."
+        },
+        {
+          "q": "What if the buyer asks for something else?",
+          "a": "You can listen, but do not include sharp pieces for young children. If the requested variation is available, give a separate price and timing. A confident no is better than a promise you cannot fulfil."
+        },
+        {
+          "q": "Can I make repeat sales?",
+          "a": "Yes, if reusable family photo prop resale suits a recurring need and the first delivery went well. Ask permission before sending future offers and keep a simple note of what the customer actually liked."
+        }
+      ],
+      "validate_prompt": "I want to offer reusable family photo prop resale to families taking group pictures at home in India. What current local supplier costs, customer demand, return terms and permissions should I check before taking orders?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C013-S08-I10",
+      "slug": "festival-garland-storage-reseller",
+      "title": "Festival Garland Storage Reseller",
+      "hook": "A reused garland needs a place to wait until next year. You can help locally.",
+      "summary": "You offer protective garland storage bag resale to families preserving reusable decorations. You demonstrate a breathable bag length and show how decorations fit without crushing. A reused garland needs a place to wait until next year. Your first festival garland storage reseller order is a paid job you can handle carefully from question to handover.",
+      "what_it_is": "A customer comes to you because they need protective garland storage bag resale. You demonstrate a breathable bag length and show how decorations fit without crushing. Before paying for festival garland storage reseller, they know what is included, what choices they have and when it will arrive. Durable fabric, size checks and clean storage matter. You can show a real protective garland storage bag resale sample or a clear description, so the buyer chooses the actual thing rather than a vague picture. Do not store a wet garland in a closed bag. At handover you check the festival garland storage reseller details together. That small moment can bring the next protective garland storage bag resale order.",
+      "who_pays_you": "Your likely buyers are families preserving reusable decorations. Buyers want their decoration to stay usable. A reused garland needs a place to wait until next year. The first festival garland storage reseller buyers may come through a neighbour, colleague or permitted local group. They can buy protective garland storage bag resale elsewhere, so you earn their trust by knowing the item well and answering a fit or usage question honestly.",
+      "how_money_comes": "Earn a margin on sizes with labels separate. Your margin on protective garland storage bag resale has to cover more than the supplier or material bill: packing, delivery, returns and the time you spend with each buyer all count. A repeat festival garland storage reseller buyer is valuable when you can serve them without starting the whole conversation again. Keep a festival garland storage reseller order record and tap Validate for today's costs in your area before fixing the price.",
+      "what_you_need": "Durable fabric, size checks and clean storage matter. For festival garland storage reseller, you also need a clear order record, a way to collect payment and a plan for a defect or a changed mind. Knowing when to say that protective garland storage bag resale is unsuitable matters as much as having it ready to sell.",
+      "first_30_days": [
+        "Talk with potential festival garland storage reseller buyers about their last purchase and what went wrong.",
+        "Inspect a sample and calculate the full cost of protective garland storage bag resale including delivery and returns.",
+        "Take a few paid orders within one small area and record every handover clearly.",
+        "Review the margin, complaints and repeat requests before expanding the festival garland storage reseller range."
+      ],
+      "what_hurts": "A sealed damp bag can grow mildew. When this happens in festival garland storage reseller, the buyer remembers your promise rather than the supplier behind it. Do not store a wet garland in a closed bag. A protective garland storage bag resale return, delay or mismatch can use up the margin from several smooth orders. You need room in the price and your week to put a festival garland storage reseller problem right. If you cannot stand behind the protective garland storage bag resale product or delivery, the trust is hard to rebuild.",
+      "verdict": "Build this if buyers want their decoration to stay usable and you like helping someone choose protective garland storage bag resale with care. Walk away if you cannot handle the risk that a sealed damp bag can grow mildew. The first paid festival garland storage reseller orders will show whether your margin survives delivery and returns.",
+      "faq": [
+        {
+          "q": "How should I describe the first order?",
+          "a": "For festival garland storage reseller, share the actual choice, full price, delivery timing and return terms before taking payment. A small written order note keeps you and the buyer clear about what was selected."
+        },
+        {
+          "q": "What if the buyer asks for something else?",
+          "a": "You can listen, but do not store a wet garland in a closed bag. If the requested variation is available, give a separate price and timing. A confident no is better than a promise you cannot fulfil."
+        },
+        {
+          "q": "Can I make repeat sales?",
+          "a": "Yes, if protective garland storage bag resale suits a recurring need and the first delivery went well. Ask permission before sending future offers and keep a simple note of what the customer actually liked."
+        }
+      ],
+      "validate_prompt": "I want to offer protective garland storage bag resale to families preserving reusable decorations in India. What current local supplier costs, customer demand, return terms and permissions should I check before taking orders?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    }
+  ]
+}
