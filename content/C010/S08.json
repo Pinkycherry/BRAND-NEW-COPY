@@ -1,0 +1,507 @@
+{
+  "subcategory": {
+    "code": "C010-S08",
+    "intro": "Area Meal Delivery Kitchen starts with a nearby problem that people already spend time solving. A compact meal delivery kitchen can serve nearby people who need a dependable meal at a known time. Repeat orders matter more than a very broad menu that is hard to prepare and transport. The useful first question is where a resident currently goes, what the trip or wait costs in time, and whether a small operator can do one task reliably. Walk the intended service area and speak to potential customers before buying equipment. Ask for the last occasion when they needed help, how they found a provider, and what made the experience difficult. A booking that someone is willing to pay for teaches more than a general expression of interest. Keep the opening menu narrow enough to finish, price and explain without confusion. Travel, idle time, supplies, cleaning and returns all consume capacity even when the visible task is short. Set a clear radius and appointment window, and record actual time from first message to final handover. Confirm access to a work area, the customer's instructions, payment responsibility and a practical cancellation rule before committing. Keep names, addresses and other personal details only as needed for the booking. Food preparation and delivery must meet applicable registration, hygiene and labelling requirements. Disclose ingredients and allergens accurately, and do not make health claims without a sound basis. Start with a few paid trials, then decide whether repeat work is frequent enough to support regular hours. Local demand may differ by housing density, transport, seasons and competing providers. A promise of convenience is only valuable when the customer can trust the result and knows what happens if something goes wrong.",
+    "how_to_choose": "Choose one meal occasion, a route and a realistic production capacity. Compare ingredient supply, preparation time, packaging, food temperature, delivery reliability and the cost of missed or returned orders. Compare options by the number of paid bookings you can group within a short route, the tools you already know how to use, and the time a customer can realistically wait. Write down one included task and one excluded task for each option. Check access, hygiene, consent and any applicable local permission before selling. Use a small paid trial to measure travel, preparation, work and follow-up. Choose the service whose quality you can repeat without relying on a perfect day.",
+    "faq": [
+      {
+        "q": "Can I start area meal delivery kitchen from home?",
+        "a": "Often the administration can begin at home, but the work site and any storage need to suit the particular service. Check local rules and get permission to use shared space before taking bookings."
+      },
+      {
+        "q": "How should I set the first service area?",
+        "a": "Begin with a compact route you can reach predictably. Measure travel at the hours customers actually want, then expand only when paid demand covers extra time and transport."
+      },
+      {
+        "q": "Should I offer every related service at launch?",
+        "a": "A short menu makes quality, timing and pricing easier to control. Add another task only after you have the necessary skill, equipment and evidence that customers will pay."
+      },
+      {
+        "q": "What should I confirm before an appointment?",
+        "a": "Agree on the task, address or venue, access, time window, complete price and payment contact. Explain cancellation and any limits so a small misunderstanding does not become an unpaid visit."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C010-S08-I01",
+      "slug": "office-meeting-tea-break-trays",
+      "title": "Office Meeting Tea Break Trays",
+      "hook": "An office meeting pauses for tea, and someone needs the snacks ready without leaving the discussion to chase a delivery.",
+      "summary": "You prepare a labelled tray of tea break snacks for small office meetings, with the guest count and break time agreed beforehand. One contact approves the selection and receives the tray before people leave the room. It is a compact group order for an event, rather than a daily lunch subscription.",
+      "what_it_is": "An office contact tells you how many people will attend, when the break is planned and whether there are food restrictions. You offer a short selection of savoury and sweet items that travel well, then confirm the final count before preparing them in a clean kitchen. At the agreed time, a covered tray reaches reception or the named meeting room contact with the items clearly labelled. The office serves them as it prefers, and you collect any reusable vessels under an agreed arrangement. You do not promise hot tea service if your offer is only food. A neat delivery that does not interrupt the meeting is the point.",
+      "who_pays_you": "Small offices, training teams and local associations holding a short meeting can buy one tray at a time. The organiser may place the order while an administrator pays, so you should have one person authorised to confirm count and invoice details. You may find early buyers in nearby workspaces that do not run a canteen. They value a known arrival time and food that is easy to share, particularly when a guest is coming from outside.",
+      "how_money_comes": "You quote for the agreed number of servings and delivery, with reusable vessels or an extra setup priced clearly. An advance can cover ingredients for a custom selection. The margin depends on a simple menu, sensible batch size and a short route, not on calling every tray premium. A late request or revised guest count after preparation may need a separate charge. Tap Validate for current ingredient and packaging costs in your area before setting a tray price.",
+      "what_you_need": "You need a clean food preparation space, reliable ingredients, covered trays, ingredient labels and a way to reach the office before its break. Food safety registration and suitable handling practices belong in your setup. Keep the menu small enough to prepare consistently and ask about allergies before confirming. A named reception contact helps you avoid waiting in a lobby with perishable food. Your containers should be easy for office staff to return or dispose of as agreed.",
+      "first_30_days": [
+        "Speak with potential office meeting tea break trays customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse one-time tea break snack trays while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A meeting may move after you have already made the snacks, and a last minute extra guest can leave the tray looking short. Traffic or reception delays can spoil the promised break time. Allergens and temperature sensitive food need careful handling, even for a small order. You should agree on a count cutoff and explain what can still change afterward. A tray that arrives beautifully packed but after everyone has gone back to work will not earn another booking.",
+      "verdict": "Build this if offices near your kitchen hold small meetings and you can deliver before a precise break. Walk away if last minute schedule changes or food handling would regularly be beyond your capacity. The best repeat order comes from a contact who hardly had to think about the snacks once they booked you.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For office meeting tea break trays, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not promise an unlimited buffet or leave food unrefrigerated for long. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for one-time tea break snack trays first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try office meeting tea break trays in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of one-time tea break snack trays before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S08-I02",
+      "slug": "senior-club-shared-lunch-pot",
+      "title": "Senior Club Shared Lunch Pot",
+      "hook": "A senior club gathers around one table, and a familiar shared lunch can make the afternoon feel like an occasion.",
+      "summary": "You cook one simple batch for a senior club lunch and deliver it in covered serving vessels. The organiser agrees on a headcount, menu and dietary limits before you shop. Members serve themselves together, making this a booked group meal rather than a daily soft meal route to individual homes.",
+      "what_it_is": "A club organiser tells you the gathering date, expected members and the kind of food they can comfortably share. You agree on one menu, perhaps a dal, vegetables and rice, with clear ingredients and portions for the group. In your registered kitchen you cook the batch, pack it safely and reach the club before serving time. A club volunteer handles the table while you explain the contents and collection of any vessels. You do not make medical claims about a meal or guess at a member’s restrictions. Afterward, you hear which dish was liked and whether the count matched attendance before taking another booking.",
+      "who_pays_you": "Senior clubs, resident groups and community centres with a regular lunch gathering may pay from a shared budget or collect from members. The organiser is your booking contact, though the people eating the food should be comfortable with the menu. You can introduce your work through one known group and a tasting at the normal paid rate. They value gentle seasoning, a warm arrival and the ease of serving one pot without organising several individual orders.",
+      "how_money_comes": "The club pays for the confirmed headcount and serving arrangement, usually with an advance that lets you buy ingredients. Transport, fuel, packaging and time cleaning reusable vessels must fit the quote. A reliable recurring gathering can help you plan shopping, but a low turnout after cooking should not become your loss without agreed terms. You can price a special occasion menu separately. Tap Validate for today’s ingredient and delivery costs before proposing a group rate.",
+      "what_you_need": "Your food preparation space needs cleanliness and the applicable registration, large vessels, safe covered transport, serving labels and a contact at the club who can receive the meal. Ask for dietary restrictions and allergies early, and avoid claiming the food treats any condition. A written count cutoff and a sensible way to return vessels make the day calmer. You should be able to hold and serve the food safely through the agreed lunch period.",
+      "first_30_days": [
+        "Speak with potential senior club shared lunch pot customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse one shared lunch pot for a club gathering while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Attendance can fall after ingredients have been bought, while a surprise group of visitors can make portions too small. Some members may prefer very soft or low spice food while others expect a hearty lunch. You cannot meet every personal medical diet from one pot, so the organiser must know the menu beforehand. Delays in the club room or transport can also affect serving temperature. A kind conversation about limits prevents more disappointment than an overly broad promise.",
+      "verdict": "Build this if you enjoy cooking for a group and can work with a club organiser on a clear menu and count. Walk away if you are expected to meet many individual medical diets from one shared pot. A pleasant lunch and an honest headcount are the foundation of the repeat booking.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For senior club shared lunch pot, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not provide a medical diet or leave hot food at an unstaffed venue. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for one shared lunch pot for a club gathering first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try senior club shared lunch pot in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of one shared lunch pot for a club gathering before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S08-I03",
+      "slug": "film-crew-location-meal-batch",
+      "title": "Film Crew Location Meal Batch",
+      "hook": "A film crew moves between takes, and its one meal break needs food that reaches the location when the day allows.",
+      "summary": "You cook a portable meal batch for a small film or video crew at a permitted location. One production contact confirms headcount, access and the likely break window. You deliver labelled portions or covered group vessels, with the schedule and safe serving time discussed before the shoot begins.",
+      "what_it_is": "A production coordinator gives you the location, crew count, dietary notes and a contact who can actually receive the food. You choose a menu that packs well and does not require a delicate final step on a dusty set. In the kitchen, portions are labelled before the batch leaves, then delivered to the agreed access point. You check whether the break has moved and follow the safe holding window you can support. The crew handles distribution unless you have quoted for staff on site. After pickup of any reusable containers, you reconcile the final order with the coordinator. The service is one scheduled crew batch, not an open ended promise to feed anyone who appears.",
+      "who_pays_you": "Independent production teams, local advertising shoots and small crews filming an event may pay for this. The coordinator places the order, while the production company or organiser settles the invoice. You need one person who can authorise changes when the schedule shifts. Crews value food that can be eaten in a short break without several trips to nearby shops. A successful first shoot may lead to another booking through the same production contact.",
+      "how_money_comes": "You quote for the confirmed crew count, menu, delivery distance and any on site waiting or serving. An advance helps cover a batch made only for that shoot. Extra portions requested after the cutoff depend on what you can make safely, and a delayed break may require a different holding arrangement. Travel to a remote location can swallow the meal margin, so price the full journey. Tap Validate for current ingredients, packing and route costs before agreeing to a crew rate.",
+      "what_you_need": "A clean registered kitchen, a portable menu, food safe packaging and dependable transport are essential. You need permission to enter the location and a phone contact who will answer during the shoot. Label ingredients and dietary portions carefully. Agree in advance where food can be handed over and how long it can be kept safely before serving. A backup route or driver helps when a location is far from your kitchen.",
+      "first_30_days": [
+        "Speak with potential film crew location meal batch customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse preordered location meal batches while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A shoot may run late and push lunch beyond the window in which your food can be held safely. The location can change or access may be blocked by equipment. A coordinator may add people after the batch is packed. You should discuss these possibilities while there is still time to adjust, not leave perishable meals on a set indefinitely. One poorly labelled special meal can also leave a crew member without food. Your clear scope protects the crew and your reputation.",
+      "verdict": "Build this if you can deliver to production locations reliably and handle one contact’s changing schedule calmly. Walk away if you have no safe plan when a meal break moves. A portable menu and clear handover matter more than a showy dish that cannot wait.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For film crew location meal batch, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not enter a closed set without permission or accept an unsafe holding time. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for preordered location meal batches first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try film crew location meal batch in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of preordered location meal batches before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S08-I04",
+      "slug": "student-hostel-breakfast-packs",
+      "title": "Student Hostel Breakfast Packs",
+      "hook": "Hostel students leave early for class, and a fresh breakfast pack at one pickup point saves a morning detour.",
+      "summary": "You make preordered breakfast packs for students in a hostel that permits a shared handover. A simple menu and fixed pickup window keep preparation manageable. Each named pack goes to its buyer, and students pay for the days they confirm rather than expecting a canteen to guess who will turn up.",
+      "what_it_is": "With the hostel’s permission, you agree on a pickup place and time that does not disturb residents. Students choose from a short menu before a cutoff, and you make only the confirmed number in a clean kitchen. A pack might hold idli or poha with a separately sealed accompaniment, labelled for the person collecting it. You deliver together, check names as students take their breakfast and close the handover on time so the food is eaten fresh. A missed pickup follows the terms students saw when ordering. You are selling a morning meal at one place, not entering rooms or promising to find each student on campus.",
+      "who_pays_you": "Hostel students with early lectures, trainees living away from home and sometimes their parents may pay for a planned breakfast. The hostel manager grants access but need not be the buyer. Your first customers may be a small group on one floor who can tell you whether the time and portions work. They value a familiar meal ready before class, with clear ingredients and no daily scramble to place an order.",
+      "how_money_comes": "Students can pay per confirmed day or buy a short prepaid block, with a pause and no show rule agreed upfront. Cooking one simple batch for a single handover keeps travel economical. Packaging, fresh ingredients and unsold food still cost money, so the cutoff matters. You can add a second dish only when the first route is steady. Tap Validate for today’s local food and packing costs before setting a student price.",
+      "what_you_need": "A clean kitchen with suitable food registration is essential, a food safe pack, an order list and permission for the hostel handover point. Know which foods stay suitable through the short trip and label allergens or special choices clearly. A way to take UPI payments and record pauses reduces confusion. The pickup should be easy for students but must respect building access rules. Have a plan for a cooking or transport delay before it happens.",
+      "first_30_days": [
+        "Speak with potential student hostel breakfast packs customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse preordered simple breakfast packs while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A timetable change or a student who sleeps through pickup can leave fresh food unused. Exam breaks can empty a building for days. A crowded doorway makes named packs easy to mix up, while a late arrival is little help to someone already in class. You need a clear order cutoff and a short safe serving window. Do not grow across several hostels until one pickup works without rushed cooking or food waste.",
+      "verdict": "Build this if a hostel near you permits a sensible pickup and students will order before you cook. Walk away if the morning timetable and your kitchen cannot meet consistently. The business is the reliable handover as much as the breakfast itself.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For student hostel breakfast packs, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not enter a hostel or use common space without authorised permission. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for preordered simple breakfast packs first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try student hostel breakfast packs in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of preordered simple breakfast packs before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S08-I05",
+      "slug": "apartment-block-family-dinner",
+      "title": "Apartment Block Family Dinner",
+      "hook": "Several families in one apartment block want dinner ready on a busy evening, but each still wants to know what is in the pot.",
+      "summary": "You cook a preordered family dinner menu for households in one apartment block on chosen evenings. Each home confirms portion count and preferences before your cutoff, then collects or receives its labelled food at an approved point. This is an occasional family order, separate from an individual daily tiffin subscription.",
+      "what_it_is": "You share a short evening menu with families in a building you can reach easily. They tell you how many people will eat and note any allergies or strong dislikes before you buy ingredients. In your clean kitchen, you cook the confirmed batch and portion each household’s order separately. A named resident collects it at the agreed time or receives it through a permitted delivery process. You show the contents clearly and keep notes on what portion size worked for each family. If the building asks for a shared lobby pickup, you get permission and keep the food attended. The idea works because one cooking round serves several homes without losing each order.",
+      "who_pays_you": "Working households, parents dealing with a late evening and neighbours who occasionally want a break from cooking are likely buyers. A building group may introduce you, but individual families decide and pay for their own meals. You can begin with a small paid dinner round where people already know your cooking. They return when the portions feel fair, the food arrives at the promised hour and their stated restrictions are remembered.",
+      "how_money_comes": "Each household pays for its confirmed portions, with delivery or special additions priced clearly. A compact building route saves travel, but separate packing and preference tracking take time. Buying for a fixed menu helps control waste; a cancellation after preparation needs an agreed rule. You do not have to underprice a family pot merely because several orders share a lift. Tap Validate for current local ingredients and packaging before choosing a dinner price.",
+      "what_you_need": "Your food preparation space needs cleanliness and the applicable registration, vessels for a small batch, labelled food safe containers and a clear order cutoff. Keep allergy information tied to the right home and decide which variations you can actually manage. Building permission matters for any common area handover. A phone list and reliable pickup time are enough to start small. You also need an honest plan for a day when you are ill or the cooker fails.",
+      "first_30_days": [
+        "Speak with potential apartment block family dinner customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse scheduled family dinner portions while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Families can disagree about what counts as a serving, especially when children eat differently. A late pickup may leave food cooling in a lobby, and several personal changes can turn one menu into many separate dishes. Ingredient prices and building access can also change. You should describe portions, contents and timing before payment, then listen to what came back uneaten. The route stops paying if every home expects a custom dinner at a group price.",
+      "verdict": "Build this if one nearby building has enough confirmed family orders and you enjoy a predictable evening batch. Walk away if you cannot keep portions and restrictions clear for each home. A few satisfied households on one floor are better than a scattered route full of special cases.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For apartment block family dinner, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not promise bespoke diets or unlimited substitutions at the standard price. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for scheduled family dinner portions first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try apartment block family dinner in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of scheduled family dinner portions before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S08-I06",
+      "slug": "market-vendor-midday-meal-run",
+      "title": "Market Vendor Midday Meal Run",
+      "hook": "A market vendor cannot leave the stall at lunch, and a simple meal brought to the right aisle can be a relief.",
+      "summary": "You take preorders from vendors in one market and deliver a compact lunch menu during a fixed midday round. Each stall receives its named meal without the seller leaving customers unattended. The route works when the food, handover time and payment are agreed before the market gets busy.",
+      "what_it_is": "Before market opens, you collect orders from sellers on a small set of aisles. You cook a limited menu that can travel safely and pack each meal with the stall name and any agreed variation. On your midday round, you find the named vendor, hand over the pack and mark it delivered. A seller can pay by UPI in advance or at handover under your terms. You do not leave food at an unattended stall or claim that a busy vendor can always stop to inspect it immediately. After the round, you note which stops delayed you and adjust the next day’s route so later lunches still arrive on time.",
+      "who_pays_you": "Vegetable sellers, flower vendors and other people who must stay at a market stall through lunch may pay for this. A few neighbouring stalls can refer you when the first meals arrive reliably. Some sellers bring food from home and will not need the service, so you should listen before cooking a large batch. Buyers value a filling familiar meal at the stall without losing a sale to walk to a distant eatery.",
+      "how_money_comes": "Vendors pay per ordered lunch or for a short prepaid sequence of market days. One tight aisle route keeps delivery effort manageable; scattered markets do not. Ingredients, food safe packing and time spent locating a stall all reduce the margin. A named preorder lets you cook close to demand and agree how late cancellations work. Tap Validate for current food and travel costs in your market before setting a price.",
+      "what_you_need": "A registered kitchen that you keep clean supports this work, suitable containers, a clear order list and a way to navigate the market without obstructing trade. Know the vendors’ stall numbers and which items must stay at a safe temperature during the round. UPI records or a simple ledger help when the handover is hurried. Permission or market rules may govern delivery access, so check them before promising a route. The lunch should be easy to eat in a cramped stall.",
+      "first_30_days": [
+        "Speak with potential market vendor midday meal run customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse preordered market stall lunch delivery while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A crowded aisle can delay you while food cools and the next vendor waits. A stall may move for the day, or its owner may be away when you arrive. Rain can make the route slow and packing difficult. You need a narrow service window and a clear contact number rather than carrying meals around indefinitely. One forgotten stall can damage trust quickly because the seller cannot easily leave to find another lunch.",
+      "verdict": "Build this if several vendors in one compact market will preorder and you can reach them safely at midday. Walk away if the route is too scattered or food cannot stay suitable to eat. The best lunch is one a vendor can accept without abandoning the stall.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For market vendor midday meal run, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that confirm market access and keep cash handling away from food. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for preordered market stall lunch delivery first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try market vendor midday meal run in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of preordered market stall lunch delivery before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S08-I07",
+      "slug": "weekend-shared-house-brunch",
+      "title": "Weekend Shared House Brunch",
+      "hook": "A shared house finally has a free Sunday morning, and nobody wants to spend it making breakfast for the whole group.",
+      "summary": "You make a preordered brunch tray for shared homes on weekends, with one contact confirming portions and collection time. The house serves the food together instead of placing several separate cafe orders. Your limited tray menu keeps preparation realistic and lets everyone know what they will eat.",
+      "what_it_is": "A housemate chooses from a short weekend menu and confirms the group count by your cutoff. You cook the batch in a clean kitchen, pack dishes so they travel well and label any ingredients the group asked about. The contact collects the tray or receives it in a booked delivery slot, then serves everyone at home. You provide any utensils or reusable vessels only if that was part of the order. When people want different breakfasts, you help them choose a tray that works for most rather than quietly making several custom menus. Afterward, you hear whether the portion size matched the group before planning another weekend.",
+      "who_pays_you": "Housemates, small groups celebrating a relaxed morning and friends staying together for a weekend may pay for a shared brunch. One person books and pays while the group decides the food, so you need a clear point of contact. You can meet customers through nearby rental homes and word of mouth from a well served gathering. They value the saved cooking and cleaning time and a table that feels ready without a restaurant trip.",
+      "how_money_comes": "You charge for a defined tray size, chosen menu and delivery if requested. An advance covers ingredients bought for that group, and changes after the cutoff have a clear limit. Large trays can use your kitchen efficiently, but packaging, transport and returnable vessels still cost money. A weekend slot has value because you can prepare only so many batches before brunch time. Tap Validate for today’s ingredient and local delivery costs before advertising a group price.",
+      "what_you_need": "A clean kitchen with suitable food registration is essential, reliable weekend helpers if the volume grows, sturdy trays and a menu that remains good after travel. Record the group count, serving time and allergy information with the contact person. Agree who washes and returns reusable dishes. A realistic cooking schedule matters when several households want the same late morning slot. Keep the pickup place and phone number clear.",
+      "first_30_days": [
+        "Speak with potential weekend shared house brunch customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse advance-booked group brunch trays while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A group may add guests after you bought ingredients or delay collection while the cooked food waits. Housemates can disagree about spice or portion size, leaving the booker to speak for everyone. Weekend traffic and fragile trays bring delivery risk. You should describe the serving count and contents plainly and keep hot and cold foods in suitable conditions. Too many special variations can turn a simple shared tray into several separate meals at one price.",
+      "verdict": "Build this if you can cook a limited brunch menu well and have nearby groups willing to order ahead. Walk away if late changes would make your weekend kitchen unmanageable. The buyer should feel that the tray made their morning easier, not that they had to manage your delivery.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For weekend shared house brunch, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not leave a perishable tray at a doorway without an agreed recipient. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for advance-booked group brunch trays first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try weekend shared house brunch in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of advance-booked group brunch trays before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S08-I08",
+      "slug": "clinic-attendant-meal-pickup",
+      "title": "Clinic Attendant Meal Pickup",
+      "hook": "A hospital attendant has only a short break and wants a plain meal without leaving the patient for long.",
+      "summary": "You prepare everyday meals for attendants and arrange a pickup outside clinical areas at an agreed time. Each person orders directly and knows the ingredients and portion. The service respects hospital access rules and the customer’s uncertain schedule, without presenting the food as a medical diet.",
+      "what_it_is": "An attendant contacts you before the order cutoff with a meal choice and a reachable phone number. You cook a simple batch in a clean kitchen, pack it safely and label it for the person collecting. Handover happens at a permitted gate or other public point, not in a ward where food or outside visitors may be restricted. A quick message tells the customer you have arrived, and you follow the agreed waiting window. You do not ask for patient information to sell a meal or claim that the dish treats an illness. After a missed pickup, you apply the terms kindly and improve the timing if the pattern is common.",
+      "who_pays_you": "Relatives staying beside a patient, home carers accompanying appointments and other attendants may buy a meal when they cannot take a long break. Their day can change suddenly, so they need one clear pickup location and food that is easy to carry. You may become known through nearby residents or a permitted notice outside the facility. The hospital is not your customer unless it has separately contracted with you, and individual attendants choose for themselves.",
+      "how_money_comes": "Customers pay per confirmed meal, often by UPI before pickup. A short route and small menu keep costs under control, while waiting too long for one order can consume the margin. Packaging needs to be secure enough for someone carrying bags and paperwork. You can offer a repeat order to an attendant who asks, but their circumstances may change each day. Tap Validate for local ingredient and transport costs before setting a pickup price.",
+      "what_you_need": "Your food preparation space needs cleanliness and the applicable registration, leak resistant packs, ingredient labels and knowledge of the facility’s permitted handover points. A phone number for the buyer and a clear waiting limit help when appointments run late. Handle food at safe temperatures and keep personal medical details out of the order record. A plain menu is useful, but you must not make therapeutic promises. Check local access rules before planning any regular pickup round.",
+      "first_30_days": [
+        "Speak with potential clinic attendant meal pickup customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse simple preordered meals at a permitted pickup point while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "An appointment may run long just as you arrive, and the attendant may be unable to answer a call. Food left waiting can become unsuitable, while a delivery worker trying to enter a clinical area may be turned away. Customers may ask for a medical diet you cannot safely provide. You can be compassionate about a changed day while keeping a clear cutoff and safe handover rule. A missed pickup should not become a reason to compromise food handling.",
+      "verdict": "Build this if you can reach a permitted pickup point reliably and serve a simple meal with care. Walk away if the model depends on ward access or promises about a patient’s health. The attendant is buying a brief, dependable break in a difficult day.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For clinic attendant meal pickup, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not enter treatment areas or describe food as a clinical diet. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for simple preordered meals at a permitted pickup point first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try clinic attendant meal pickup in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of simple preordered meals at a permitted pickup point before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S08-I09",
+      "slug": "construction-site-lunch-batch",
+      "title": "Construction Site Lunch Batch",
+      "hook": "A small construction crew pauses together, and one planned lunch batch is easier than everyone leaving the site.",
+      "summary": "You cook and deliver a labelled lunch batch for a small construction site after one contact confirms count and handover place. Workers receive familiar filling food during their break. The order succeeds when access, timing and food safety are planned around the site rather than assumed.",
+      "what_it_is": "A site supervisor or designated worker gives you the expected lunch count, break time and a safe point outside active work areas. You agree on a simple menu and ask about any dietary restrictions before shopping. In your clean kitchen, you cook the batch and pack portions so they can be handed out without confusion. The site contact receives and checks the count at the agreed place; you do not wander among machines looking for individual workers. Any reusable vessels have a clear return plan. After the first job, you compare actual attendance with the order and adjust the next batch together.",
+      "who_pays_you": "Small contractors, work crews pooling their lunch money or a site manager arranging meals may pay. You need to know whether the employer or each worker is responsible for the bill before cooking. Workers value a meal that fits a short break and is substantial enough for physical work. A reliable site contact can bring repeat orders as a project continues, but the project itself may end or move without much notice.",
+      "how_money_comes": "You quote per confirmed portion plus delivery, with an advance for a larger batch and a cutoff for count changes. One group handover saves travel compared with ten individual deliveries. Ingredients, sturdy packaging, a possible site wait and the route still need to fit the price. Do not give unlimited credit to an unclear payer. Tap Validate for current local food and travel costs before agreeing to a long running site rate.",
+      "what_you_need": "A registered kitchen that you keep clean supports this work, safe transport, labelled portions and a phone contact who can receive the batch. Confirm the permitted gate and a place to stop without entering a hazardous work zone. A menu that can be eaten during a short break matters more than delicate presentation. Keep a record of count, payer and delivery time. You should know how you will respond if the site closes suddenly that morning.",
+      "first_30_days": [
+        "Speak with potential construction site lunch batch customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse preordered group lunch batch delivery while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Attendance can change with weather, materials or a work stoppage after you have cooked. Security may refuse an unexpected vehicle, and the lunch break may move while food waits. A worker can also have a dietary need that a single pot cannot meet. You should agree on the count and safe handover procedure with one responsible contact. The route stops working if every change is passed to your kitchen without notice or payment.",
+      "verdict": "Build this if a nearby site has a dependable contact and confirmed batch demand. Walk away if access is unsafe or nobody will take responsibility for count and payment. A modest, on time meal that reaches the crew together is the real service.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For construction site lunch batch, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that get permission for the handover area and do not enter hazardous work zones. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for preordered group lunch batch delivery first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try construction site lunch batch in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of preordered group lunch batch delivery before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S08-I10",
+      "slug": "neighbourhood-soup-evening-round",
+      "title": "Neighbourhood Soup Evening Round",
+      "hook": "On a cool evening, a neighbour wants a warm bowl of soup without making a whole pot at home.",
+      "summary": "You prepare a small rotating soup selection and deliver preordered portions on a short evening route. Each container is labelled and sealed for a safe handover. The business suits nearby homes when the soup reaches them warm and intact, with ingredients they understand.",
+      "what_it_is": "Earlier in the day, you share the evening’s limited soup choices and close orders before cooking. Customers tell you the quantity and any ingredients they must avoid. In your clean kitchen, you make the confirmed batch, portion it into leak resistant containers and label each one. A short route reaches homes while the food remains suitable to eat, with a message before arrival if needed. You hand it to the customer rather than leaving it outside a door. A small bread or garnish add on can be agreed separately. You learn which soups travel well by testing your own route before taking more distant bookings.",
+      "who_pays_you": "Older neighbours, people returning late from work and households wanting a light evening meal may pay for a bowl or two. Some customers will prefer to cook their own soup, so the route needs real repeat demand nearby. Your first orders may come from people who have tasted your cooking at home or at a small paid trial. They value a clear ingredient list, a comforting portion and a delivery that does not arrive spilled or cold.",
+      "how_money_comes": "Customers pay per preordered container, with delivery included for a compact area or shown separately for farther homes. Ingredients, lids, heat safe packaging and unsold portions all affect the margin. A rotating menu gives interest without forcing you to cook many soups every night. You can offer a weekly bundle after the single evening round works reliably. Tap Validate for current local vegetable, fuel and container costs before setting a bowl price.",
+      "what_you_need": "A clean kitchen with suitable food registration is essential, safe storage and transport, sturdy leak resistant containers and labels for ingredients and order names. Check how long your soup remains safe and pleasant on the intended route. A way to carry several upright containers matters as much as the recipe. Keep a clear cutoff and payment record so you cook the right quantity. You should be able to tell a customer honestly when a soup contains an allergen.",
+      "first_30_days": [
+        "Speak with potential neighbourhood soup evening round customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse preordered soup and bread evening delivery while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A loose lid can spill into the whole delivery bag, and a long route can leave the last bowl cold. Customers may have very different ideas of a filling portion, while a delicate garnish may not survive travel. You need to describe quantity and serve within safe time limits, rather than stretching the route because a new address looks close on a map. Too many menu options can also create waste. A small evening round is easier to keep dependable.",
+      "verdict": "Build this if you enjoy a focused evening cook and have enough nearby households to make one short round. Walk away if your packaging leaks or travel makes safe delivery uncertain. The comforting part of the business is the bowl that arrives exactly as the neighbour expected.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For neighbourhood soup evening round, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not present soup as treatment for illness or ignore allergen questions. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for preordered soup and bread evening delivery first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try neighbourhood soup evening round in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of preordered soup and bread evening delivery before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    }
+  ]
+}

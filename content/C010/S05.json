@@ -1,0 +1,507 @@
+{
+  "subcategory": {
+    "code": "C010-S05",
+    "intro": "Local Print and Copy Shop starts with a nearby problem that people already spend time solving. A print counter serves documents that people need in physical form, often under a deadline. Nearby schools, offices and small traders bring different page sizes, volumes and finishing expectations. The useful first question is where a resident currently goes, what the trip or wait costs in time, and whether a small operator can do one task reliably. Walk the intended service area and speak to potential customers before buying equipment. Ask for the last occasion when they needed help, how they found a provider, and what made the experience difficult. A booking that someone is willing to pay for teaches more than a general expression of interest. Keep the opening menu narrow enough to finish, price and explain without confusion. Travel, idle time, supplies, cleaning and returns all consume capacity even when the visible task is short. Set a clear radius and appointment window, and record actual time from first message to final handover. Confirm access to a work area, the customer's instructions, payment responsibility and a practical cancellation rule before committing. Keep names, addresses and other personal details only as needed for the booking. Treat certificates, identity papers and examination materials as sensitive. Do not alter a document or promise an official acceptance you cannot verify. Start with a few paid trials, then decide whether repeat work is frequent enough to support regular hours. Local demand may differ by housing density, transport, seasons and competing providers. A promise of convenience is only valuable when the customer can trust the result and knows what happens if something goes wrong.",
+    "how_to_choose": "A copier counter needs predictable footfall, while a collection and print service can begin with an existing partner machine. Examine paper wastage, printer downtime, electricity and the handling of private documents. Compare options by the number of paid bookings you can group within a short route, the tools you already know how to use, and the time a customer can realistically wait. Write down one included task and one excluded task for each option. Check access, hygiene, consent and any applicable local permission before selling. Use a small paid trial to measure travel, preparation, work and follow-up. Choose the service whose quality you can repeat without relying on a perfect day.",
+    "faq": [
+      {
+        "q": "Can I start local print and copy shop from home?",
+        "a": "Often the administration can begin at home, but the work site and any storage need to suit the particular service. Check local rules and get permission to use shared space before taking bookings."
+      },
+      {
+        "q": "How should I set the first service area?",
+        "a": "Begin with a compact route you can reach predictably. Measure travel at the hours customers actually want, then expand only when paid demand covers extra time and transport."
+      },
+      {
+        "q": "Should I offer every related service at launch?",
+        "a": "A short menu makes quality, timing and pricing easier to control. Add another task only after you have the necessary skill, equipment and evidence that customers will pay."
+      },
+      {
+        "q": "What should I confirm before an appointment?",
+        "a": "Agree on the task, address or venue, access, time window, complete price and payment contact. Explain cancellation and any limits so a small misunderstanding does not become an unpaid visit."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C010-S05-I01",
+      "slug": "school-project-print-and-bind",
+      "title": "School Project Print and Bind",
+      "hook": "When school projects are due, parents want a clean print and a sturdy binding before the last bus home.",
+      "summary": "You print and bind finished school projects for families who would rather collect one neat copy than queue at several counters. A parent sends the file, you check the pages together, and the child takes home a project that opens flat and reads clearly. The deadline makes timing part of the service.",
+      "what_it_is": "A parent sends you the completed file and tells you the school’s paper and binding requirements. You count the pages, show a proof if the layout looks uncertain, and print only after the family approves it. The pages are trimmed and bound so the child can actually turn them without losing a sheet. After classes, the family collects the finished copy, checks the name and pays by UPI or cash. You are doing the printing and finishing, while the child remains responsible for the schoolwork itself. A small order book keeps the deadline, file version and pickup name together.",
+      "who_pays_you": "Parents with children in nearby schools are your regular buyers. Older students may come to the counter themselves when a teacher wants a particular cover or binding. A family pays because a home printer cannot always handle colour pages, thick paper or a rush before submission day. You can become known through one school community without claiming any link to the school. Clear pickup times matter to parents fitting the errand between work and tuition.",
+      "how_money_comes": "You charge for the actual pages, colour use, cover and binding, with an agreed extra fee for an urgent slot. Paper, ink, damaged prints and the time spent sorting a file all come out of that payment. A single school deadline can bring several small orders, but it can also empty your supplies quickly. You keep the approved page count beside the bill so a parent understands what changed. Tap Validate for current supply costs and local prices before you set your own rate.",
+      "what_you_need": "You need a dependable printer, paper in the sizes families ask for, a binding machine, spare consumables and a dry place for finished copies. You also need a way to open common file formats without altering a student’s work. The family should know when you will delete its file and how you will handle a misprint. A small proof on the actual printer is worth more than a promise about an unfamiliar layout.",
+      "first_30_days": [
+        "Speak with potential school project print and bind customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse printing and binding school projects while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A file that looks fine on a phone may shift when printed, especially when fonts or margins change. A parent can send a new version after you have already bound the first. School deadlines leave little room for a broken printer or a missing cover sheet, so you need a realistic cutoff and a backup supplier for materials. You cannot quietly fix the child’s answers or claim that you checked the academic content. If the family approved one version, keep that record when a dispute arrives.",
+      "verdict": "Build this if you live near schools, enjoy precise small jobs and can finish them at the time you promise. Walk away if a missed deadline would be routine with your equipment or other work. One neatly handled project is a better advertisement than a pile of rushed pages.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For school project print and bind, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not rewrite an assignment or claim to verify its academic content. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for printing and binding school projects first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try school project print and bind in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of printing and binding school projects before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "shop",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S05-I02",
+      "slug": "neighbourhood-document-copy-desk",
+      "title": "Neighbourhood Document Copy Desk",
+      "hook": "A neighbour with an important original needs a readable copy and the reassurance that the paper comes straight back.",
+      "summary": "You run a small copying desk for everyday household documents, with the customer present while you handle each original. People bring forms, receipts and identity papers that need legible copies for an appointment. Your service is quick, but the real trust comes from keeping pages in order and returning every original before anyone leaves.",
+      "what_it_is": "A customer arrives with a form or a small bundle of papers and tells you the number of copies needed. You check the size and whether both sides matter, then make one test copy if a stamp or faint line may not show. The customer sees the page before you produce the rest. You count copies together, hand back the originals and take payment. Some people need a simple scan sent to their own phone, but you do that only with permission and remove the file afterward. You are a copying service, not a document adviser or a keeper of private records.",
+      "who_pays_you": "Neighbours preparing applications, tenants collecting paperwork and small shop owners keeping invoice copies will pay for this. An older resident may prefer your patient counter to a hurried shop where papers get mixed with somebody else’s. You may earn the first customers through a visible local desk and a clear opening time. People come back when their documents remain in their sight and the copy is sharp enough for the office receiving it.",
+      "how_money_comes": "Customers pay per side or page, with scanning or larger paper priced separately. The payment looks small, so a jammed page, wasted toner or long conversation can erase the margin. You keep a simple count and tell the customer the total before making a large batch. Nearby repeat buyers can make the desk steady, but you should judge it by paid pages after supplies and rent, not by foot traffic alone. Tap Validate to compare current paper and printing costs nearby.",
+      "what_you_need": "A reliable copier or printer, clean paper, toner and a counter where originals cannot be confused with other orders are essential. You need enough light to check faint stamps and a tray for the one customer you are serving. A short privacy routine matters: you ask before scanning, send only to the address the owner gives you and clear stored files. Keep receipts and know when a machine needs service.",
+      "first_30_days": [
+        "Speak with potential neighbourhood document copy desk customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse clear photocopies of everyday documents while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "An original left under the scanner glass can become a serious problem for the person who needs it at an office that afternoon. Faint copies may be refused and have to be printed again. Toner shortages and power cuts are frustrating when a customer is already late. You must not copy private papers for someone who has no authority to show them. A patient final count, with the customer watching, prevents more trouble than rushing the next order.",
+      "verdict": "Build this if your area has regular paperwork errands and you can treat every original with care. Walk away if you cannot protect private documents or keep the machine reliable. The small fees make sense only when your counter serves enough nearby people without losing their trust.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For neighbourhood document copy desk, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that never retain identity documents or make extra copies without the owner's instruction. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for clear photocopies of everyday documents first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try neighbourhood document copy desk in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of clear photocopies of everyday documents before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "shop",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S05-I03",
+      "slug": "small-shop-price-card-printing",
+      "title": "Small Shop Price Card Printing",
+      "hook": "A kirana owner changes a price, and the handwritten card beside the shelf no longer matches the bill.",
+      "summary": "You make legible price cards for small shops that change displays more often than they order large signs. The owner sends the item names and approved prices, and you print a batch in the right sizes for their shelves. It is a modest repeat job when the shop trusts you to follow its latest list exactly.",
+      "what_it_is": "You visit a kirana, bakery or stationery shop and look at the spaces where customers actually read prices. The owner gives you the current item list and decides the wording. You set the type large enough to read, print a small proof and check the numbers with the owner before cutting the batch. A card may slide into an existing holder or be laminated for a damp counter. On a later visit, you replace only the changed cards and remove the old ones together. You provide clear printing, while the shop remains responsible for its prices and any mandatory information.",
+      "who_pays_you": "Independent shopkeepers with many small shelves and frequent changes are your buyers. A market stall may also need waterproof cards that stay readable in a crowded aisle. They pay because a mismatch at the counter leads to arguments and a staff member cannot keep rewriting signs all day. You can show one sample to shops on a compact route, then let a neat first batch speak for the next order.",
+      "how_money_comes": "You charge for design setup and a printed batch, with replacement cards or lamination listed separately. The first layout takes longer than a reprint, so the price should reflect that work. Paper, ink, cutting, travel and discarded proofs belong in your costs. A shop with changing stock may order again, but you cannot assume it will pay a monthly fee for cards it rarely changes. Tap Validate for current local print inputs before quoting a large run.",
+      "what_you_need": "You need a printer or print partner, a simple layout tool, durable paper choices and a cutter that leaves tidy edges. A shop owner should approve the list and final proof, particularly when prices look similar. Keep the dated approved file so a replacement matches the right batch. For food or regulated goods, the owner supplies any required wording; you are not inventing product claims.",
+      "first_30_days": [
+        "Speak with potential small shop price card printing customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse short runs of printed price cards while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "One wrong digit can start arguments at the till, even if the owner sent an old list. Sunlight, splashes and frequent handling can make a cheap card unreadable much sooner than expected. A tiny revision may take another trip and eat your earnings. You need an approval trail and a clear policy for changes after printing. If a shop wants you to guess prices or conceal required information, you cannot stand behind the job.",
+      "verdict": "Build this if you like precise layout work and can reach several shops without long travel between them. Walk away if the owners will not approve their own prices before printing. Repeat orders are useful only when the cards remain accurate and the small batches still pay for your time.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For small shop price card printing, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not invent prices or promotional claims; the retailer must approve all customer-facing text. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for short runs of printed price cards first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try small shop price card printing in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of short runs of printed price cards before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "shop",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S05-I04",
+      "slug": "community-event-poster-batch",
+      "title": "Community Event Poster Batch",
+      "hook": "A community event is close, and its organiser needs posters people can read from the road and the noticeboard.",
+      "summary": "You print a small poster batch for local organisers who already know the event details but need help making them visible. They approve the wording and proof before you run the copies. Your work is in layout, readable print and timely handover, with a separate agreement if they want help placing posters.",
+      "what_it_is": "An organiser brings the event name, date, venue and contact information. You turn those details into a poster sized for the places where the group has permission to display it. One proof goes back to the organiser, who checks every number and spelling before the batch is printed. You trim or roll the copies and arrange a collection time that leaves room for the group to put them up. If placement is part of the job, you agree on permitted locations first and keep a count. You are helping neighbours hear about a real event, not deciding what the event promises.",
+      "who_pays_you": "Cultural groups, local clubs and small event organisers pay for this when a notice on a phone will not reach everyone. A volunteer may coordinate the order while a committee pays the bill, so you need one person authorised to approve the final artwork. Your first buyers may come through a community hall or someone who saw a previous poster. They value clear type, correct directions and a batch ready before the event, not an elaborate design that arrives late.",
+      "how_money_comes": "You quote for layout time, paper, print quantity and size, with delivery or permitted placement priced separately. A change after proof approval can mean another print run, so the organiser needs to know that cost in advance. Group decisions may take longer than the actual printing, and a modest order can absorb an afternoon of revisions. You keep the approved proof beside the invoice and collect an advance for a batch you cannot resell. Tap Validate for local print input costs.",
+      "what_you_need": "You need a layout tool, readable type choices, a suitable printer or print partner and a way to protect posters from rain before handover. The organiser must supply and approve the event facts, including any permission needed for displays. A clear proof process keeps a date or address error from spreading through a whole batch. Know what quantities you can finish on time before promising an urgent event job.",
+      "first_30_days": [
+        "Speak with potential community event poster batch customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse small poster runs for neighbourhood events while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Committees can disagree about wording after the posters are already printed. An event may move, or a rainstorm can damage paper before volunteers collect it. Unauthorized placement can bring trouble for the organiser and for you if you offered to put posters up. You need written approval of the final version, a clear cutoff for changes and care around where the copies will be displayed. A beautiful poster with the wrong venue is still a failed job.",
+      "verdict": "Build this if local organisers need small, readable batches and you can get a proof approved without delay. Walk away if nobody can take responsibility for the event details or permitted display locations. The deadline is real, so your calm handling of changes matters as much as the print itself.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For community event poster batch, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that obtain permission for images and confirm placement rules before promising to put posters in public spaces. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for small poster runs for neighbourhood events first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try community event poster batch in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of small poster runs for neighbourhood events before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "shop",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S05-I05",
+      "slug": "local-menu-reprint-counter",
+      "title": "Local Menu Reprint Counter",
+      "hook": "A small eatery changes a dish or a price, and the old menu keeps creating awkward conversations at the table.",
+      "summary": "You reprint short menus for local eateries that change their offerings without ordering a big branded run. The owner supplies the final dishes and prices, and you make a clear proof before printing table copies or takeaway sheets. A quick, accurate replacement lets staff spend less time explaining what is unavailable.",
+      "what_it_is": "At a cafe or snack counter, you compare the owner’s new list with the menu customers currently see. You lay out the dishes so the eye can find sections easily, while the owner decides descriptions and prices. After one printed proof is approved, you run the agreed number of copies and finish them for table use or takeaway. A later change can be a small replacement batch rather than an entire redesign. You return the approved file to the owner and keep only the version needed for an agreed reprint. The meal still has to match the kitchen’s promise.",
+      "who_pays_you": "Independent cafes, mess counters and small restaurants pay when their menu changes too often for a large print order. The owner or manager must approve the final text, though a cook may help clarify what is actually served. You can show a legible sample to nearby eateries during a quiet hour. They will come back if their staff can read the print in the dining light and a price change does not take several days to appear.",
+      "how_money_comes": "You charge for the first layout, the chosen paper and finish, and the number of menus printed. Later updates can cost less if the structure stays the same, but changes to many sections still take real time. Spoiled sheets, colour coverage and travel affect what you earn from a small batch. You ask for approval and an advance before producing copies with one restaurant’s prices. Tap Validate for current paper and printing costs before offering a repeat rate.",
+      "what_you_need": "You need a printer or reliable print partner, readable layout skills, paper samples and a way to keep the owner’s approved menu version separate from older files. A wipeable finish may suit a table, while a plain sheet may be enough for takeaway orders. The eatery supplies its own food claims and any required information. Your role is to present it accurately and flag a hard to read line before the batch is made.",
+      "first_30_days": [
+        "Speak with potential local menu reprint counter customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse short runs of updated takeaway menus while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "An owner may revise a price after printing or forget that a dish is off the menu. A glossy finish can look lovely at the desk yet be difficult to read under a dim bulb. Grease and frequent handling wear through flimsy sheets. You cannot take responsibility for kitchen availability, but you can document the approved version and show a physical proof. If every tiny change requires a free new batch, the work will not pay.",
+      "verdict": "Build this if several nearby eateries update menus and you enjoy careful, readable layout. Walk away if owners expect you to guess their prices or promise free reprints after approval. Their staff should find the finished menu easier to use, and your bill should cover every batch honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For local menu reprint counter, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that the food business remains responsible for accurate claims and allergen wording. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for short runs of updated takeaway menus first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try local menu reprint counter in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of short runs of updated takeaway menus before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "shop",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S05-I06",
+      "slug": "resume-print-and-format-visit",
+      "title": "Resume Print and Format Visit",
+      "hook": "A job applicant has the experience, but a badly spaced resume can be hard to read before an interview.",
+      "summary": "You help applicants format and print the resume they have written, keeping their experience in their own words. You check page breaks, type size and the number of copies, then show a proof before printing. The result is a clean document they can carry to an interview without a last minute print scramble.",
+      "what_it_is": "Someone arrives with a resume file or a draft on their phone. You ask what needs formatting and which details they have already checked. The work may be as small as fixing a broken page break, aligning dates or printing copies on good paper. You show the applicant a proof and let them confirm the spelling, phone number and claims before making the final set. If they want writing help, that is a separately agreed service within your skill. You return their file, delete private copies after the agreed period and never invent a qualification to make the page look stronger.",
+      "who_pays_you": "Students applying for their first role, workers changing jobs and people travelling to a walk in interview can all use this service. They pay for a readable document and a reliable pickup time, especially when they have no printer at home. You may find your first buyers through a training centre or a neighbour, without promising that a printed resume will win a job. The applicant remains the person who can verify every line.",
+      "how_money_comes": "You charge for formatting time and for printed copies, with a clear difference between a quick adjustment and a full rebuild. Paper, ink, corrections and time spent opening unfamiliar files belong in the quote. You can take payment after the proof is approved and the copies are ready, or agree an advance for substantial layout work. A repeat applicant may need a new version later. Tap Validate to compare local print costs before you set a rush fee.",
+      "what_you_need": "You need a computer that can open common document formats, a printer with dependable output and a quiet place to check the page with the applicant. A simple, restrained layout is often easier to read than decoration. Keep files private, ask before sending anything to an email address and delete drafts as agreed. You also need the patience to explain what you can fix without rewriting a person’s work history.",
+      "first_30_days": [
+        "Speak with potential resume print and format visit customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse simple resume formatting and clean printouts while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A resume can contain an old number or an unsupported claim that the applicant did not notice until after printing. Fonts may shift between devices, and a rushed correction can create a second error. Job seekers are often anxious, so an unclear pickup promise causes unnecessary stress. You can show the final proof and ask the applicant to confirm the facts, but you cannot guarantee an interview. Privacy mistakes can do more harm than a crooked margin.",
+      "verdict": "Build this if you enjoy precise document work and can be kind to applicants under pressure. Walk away if you are tempted to add qualifications they cannot support or cannot keep personal files private. The useful service is a clear, accurate page ready when the person needs it.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For resume print and format visit, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not invent credentials, guarantee employment or reuse a customer's personal details. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for simple resume formatting and clean printouts first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try resume print and format visit in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of simple resume formatting and clean printouts before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S05-I07",
+      "slug": "housing-society-notice-print",
+      "title": "Housing Society Notice Print",
+      "hook": "A housing society needs its latest notice on the board before residents act on last month’s information.",
+      "summary": "You print approved notices for housing societies and prepare copies for their common boards or letterboxes. The committee supplies the wording and signs off on a proof. You make dates, contact details and type easy to read, then deliver the agreed count so a volunteer does not have to handle every small print errand.",
+      "what_it_is": "A committee member sends the notice and tells you where it will appear. You check the page size, count the boards or homes and make a proof that shows the exact wording at readable scale. The authorised member approves it before the copies are printed. You can trim, sort and deliver a bundle for each building, with posting included only if the society has given permission. Old notices come down through the society’s own process. You keep a dated version record because a maintenance change or meeting notice can be confusing when an earlier sheet stays in circulation.",
+      "who_pays_you": "Housing society committees, property managers and smaller apartment associations pay for repeat printing. They value a dependable person who can handle an ordinary notice without turning it into a large design project. The treasurer may pay while the secretary approves the words, so the roles need to be clear. You can start with one society where a resident already knows your work, then build a compact route if other buildings want the same service.",
+      "how_money_comes": "You charge for preparation, copies and delivery, with a different quote for an urgent second version after sign off. Small monthly arrangements can work when the society has predictable notices, but a quiet month should not require you to invent work. Paper, ink and multiple approval rounds take time. You keep the final authorised file beside the bill and collect through the society’s normal payment process. Tap Validate for current print input costs before committing to a flat rate.",
+      "what_you_need": "A dependable printer or partner, paper, a clear proof process and a contact who is allowed to approve the notice are enough for a small start. You need to keep versions separate and count copies before handover. If residents’ private details appear, you handle them only on the society’s authority and protect the file. For posting work, get access permission and a safe way to reach the approved boards.",
+      "first_30_days": [
+        "Speak with potential housing society notice print customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse printed meeting notices and circular copies while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A date changed in committee chat may never reach the person who approved the printed proof. Residents may blame you when two different notices are displayed at once. Urgent requests can clash with another promised job, and many tiny deliveries eat up a flat fee. A dated approval and a clear handover count help settle questions. You should not publish a resident’s personal information because someone casually forwarded it to you.",
+      "verdict": "Build this if societies near you need regular, accurate notices and have one person who can approve each version. Walk away if nobody owns the wording or the travel makes every small bundle a loss. Trust grows when the sheet on the board is the one everyone agreed to print.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For housing society notice print, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not present an unofficial message as a society decision or post it without permission. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for printed meeting notices and circular copies first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try housing society notice print in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of printed meeting notices and circular copies before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S05-I08",
+      "slug": "photo-print-and-document-size",
+      "title": "Photo Print and Document Size",
+      "hook": "An application asks for a particular photo size, and the applicant wants a usable print before the counter closes.",
+      "summary": "You prepare photo prints to the dimensions a customer brings for an application, card or personal use. They approve the crop and number of copies, and you print a clean sheet for collection. It is a careful small job because a cut face or wrong size can waste the applicant’s trip.",
+      "what_it_is": "The customer shows you the original photograph and the size required by the receiving office. You check the image quality, crop without changing the person’s appearance and show how the face will sit inside the final frame. Once they approve, you print the requested copies, cut them evenly and return the original digital file or physical photo. Some documents have rules beyond dimensions; you do not promise acceptance by an office you do not control. With consent, you keep a short term file for a reprint and delete it on the agreed date.",
+      "who_pays_you": "Applicants preparing forms, students needing card photos and families replacing a small portrait are your buyers. A nearby office can create demand for the right print size, but its staff do not decide your business terms. People pay for a quick, legible result and a patient check of the crop. An older customer may need help transferring a photo from a phone. You can explain that assistance without claiming to verify the underlying application.",
+      "how_money_comes": "You charge for the sheet, print quality and cutting, with any image cleanup discussed before the work begins. Test prints, photo paper and ink use some of the fee. A customer who needs only a few small pictures still takes time to show the crop and count the copies. You keep a menu of common sizes while confirming each person’s exact requirement. Tap Validate for current consumable costs and nearby prices before advertising a rush service.",
+      "what_you_need": "You need a printer suited to photos or a dependable print partner, proper paper, a cutter and a screen on which the customer can approve the crop. Ask for the required dimensions instead of assuming every application uses the same one. A private way to transfer and delete images matters, especially for children’s pictures. Keep a sample print so customers understand the finish they are buying.",
+      "first_30_days": [
+        "Speak with potential photo print and document size customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse customer-approved passport-size photo printing while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A low quality phone image may look acceptable on screen and print poorly. Requirements may vary by office, and a customer can return after being told the background or dimensions are wrong. You cannot guarantee another organisation’s acceptance, but you can show the agreed crop and size on the receipt. Misplaced image files create a privacy risk. Fast turnaround is useful only when the paper, ink and cutter are ready on that day.",
+      "verdict": "Build this if you have reliable photo output and can check sizes with each person calmly. Walk away if you cannot protect customer images or keep the print quality consistent. One careful crop is worth more to an applicant than a stack of unsuitable copies.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For photo print and document size, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that ask for the specific form requirements; never guarantee acceptance by an authority. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for customer-approved passport-size photo printing first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try photo print and document size in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of customer-approved passport-size photo printing before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "shop",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S05-I09",
+      "slug": "market-stall-signage-quickprint",
+      "title": "Market Stall Signage Quickprint",
+      "hook": "At a crowded market, a stall has only a moment to tell passing buyers what it sells and where the queue begins.",
+      "summary": "You print simple signs for market vendors who need their stall name, product or price visible from the aisle. A vendor approves the wording and you choose a size and material for the actual display space. The job can be collected before market day, with replacements when weather or prices change.",
+      "what_it_is": "You meet a vendor at the stall or look at a clear photograph of the setup. The usable space, viewing distance and exposure to rain tell you whether a card, board or flexible sheet will work. The vendor provides the wording and any prices, while you make a legible proof for approval. You print, finish and hand over the sign with a simple way to attach it safely. You can also replace a damaged price panel without remaking the whole stall display. The vendor remains responsible for accurate claims about goods and for permission to place signs in the market.",
+      "who_pays_you": "Vegetable sellers, snack stalls and small makers at weekly markets can pay for this. A stall holder may have money for one durable sign but no interest in a full branding package. You win the first order by showing a sample that is readable in a busy aisle. Market organisers may set display limits, so the buyer needs to know where a sign can go. A vendor returns when the sheet survives handling and customers can spot the stall more easily.",
+      "how_money_comes": "You quote by material, size, print coverage and finishing, with a separate price for a new proof after approval. Travel to measure a single stall can cost more than expected, so grouping nearby enquiries helps. A sign damaged by your finishing is your cost, while a later price change is a new order. You take an advance for custom wording that nobody else can use. Tap Validate for current material and local printing costs before setting a market day offer.",
+      "what_you_need": "You need readable layout skills, samples of weather suitable material, a print partner or equipment, and a way to cut and finish edges safely. Ask how the stall is assembled before choosing an attachment method. The vendor should approve every price and claim. You also need to know any market rules about sign size or where a board may hang. A photograph of the approved placement helps prevent confusion at handover.",
+      "first_30_days": [
+        "Speak with potential market stall signage quickprint customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse durable small signs for temporary stalls while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Wind and rain can ruin a flimsy sign, while an oversized board may be refused by the market organiser. A wrong price printed in large letters will be noticed by every customer. Last minute orders arrive when your printer is already busy. You should agree on a realistic collection time, keep the approved proof and explain material limits honestly. If the vendor cannot show where the sign is allowed, avoid promising that it will be displayed there.",
+      "verdict": "Build this if you understand how market stalls are put together and can produce signs that remain readable outside. Walk away if you cannot get clear approval of prices and placement. The useful result is a sturdy, accurate display that the vendor can put up without a struggle.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For market stall signage quickprint, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that confirm any stall or market signage rules before promising installation. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for durable small signs for temporary stalls first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try market stall signage quickprint in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of durable small signs for temporary stalls before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S05-I10",
+      "slug": "print-order-collection-route",
+      "title": "Print Order Collection Route",
+      "hook": "A small neighbourhood has orders for printing, but no one wants to travel across town for a few pages.",
+      "summary": "You collect approved print jobs from homes or shops and take them to a reliable printer in one planned round. Customers see a proof or clear specification before paying for the final work. You earn for coordination and delivery, while the print partner handles the machine and the actual production.",
+      "what_it_is": "On a set collection day, customers send their files or give you originals that you record carefully. You note paper size, copies, colour, finish and the promised return time. A trusted print shop confirms what it can produce, and the customer approves the cost before you place the job. You collect the completed batch, check each order against its label and return it in a compact route. Originals go back to their owners, and digital files are deleted as agreed. Your business is a dependable link for people who need a small print errand handled without losing their paperwork.",
+      "who_pays_you": "Older residents, home workers and small shops far from a print counter are likely buyers. They pay for saved travel and a careful handover, rather than for exclusive access to a printer. A housing society or a cluster of shops can give you several orders in one round. You need to be clear that the print shop is making the copies and that you are responsible for collecting, checking and returning what was agreed.",
+      "how_money_comes": "You charge a visible service and delivery fee on top of the printer’s quoted cost, or agree a disclosed margin with the partner. The customer should understand the total before work starts. Fuel, a second trip, errors and time spent confirming unusual files all reduce that fee. A fixed route helps small orders share the travel cost. Tap Validate for current local printing and transport costs before promising that a single distant order will be worthwhile.",
+      "what_you_need": "You need a dependable print partner, labelled order sleeves, a phone for approvals and a vehicle or walking route that fits your area. Keep each original document separate and record who handed it to you. A clear cutoff for the day lets the printer plan production and gives buyers an honest return time. You also need a simple privacy agreement for files that contain personal details.",
+      "first_30_days": [
+        "Speak with potential print order collection route customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse collected files and returned print orders while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A shop can be late or print the wrong finish, but the customer will call you because you took the order. A misplaced original can cause real harm. Rain and scattered addresses may turn a small fee into an expensive afternoon. You should inspect the finished stack before leaving the printer and tell buyers promptly about any delay. If the partner cannot meet the quality or timing you promised, the route will lose trust quickly.",
+      "verdict": "Build this if you have a reliable print partner and several nearby customers who value the saved trip. Walk away if orders are too scattered or you cannot keep originals safe. The coordination fee must cover the whole round, including the awkward job that needs a second visit.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For print order collection route, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that get consent before sharing a private file with the printing partner and delete copies after completion. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for collected files and returned print orders first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try print order collection route in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of collected files and returned print orders before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    }
+  ]
+}

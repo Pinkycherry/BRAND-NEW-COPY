@@ -1,0 +1,529 @@
+{
+  "subcategory": {
+    "code": "C010-S01",
+    "intro": "Neighbourhood home help starts with an ordinary problem that repeats in nearby homes. A working parent needs morning support, an older resident wants help carrying supplies inside, or a family leaving town needs someone to water plants. These are not all the same business. Each task has a different level of trust, physical effort and responsibility. Decide exactly what you will do, how long a visit lasts and which requests you will decline. A home is a private space, so introduce yourself properly, agree on access and never share what you see there. Use written booking notes, receipts and a clear cancellation rule. If a task involves children, medicines, personal care, electrical repairs or financial accounts, do not assume an ordinary home helper can take it on. Training, permissions and safeguards may be needed, and some jobs should go to a qualified person. Start with one narrow service in a few streets you can reach easily. Travel between scattered small jobs can consume a whole day without paying for it. A fixed visit window and repeat clients make the schedule more workable. Ask each customer what successful help looks like and document what was completed. Some people want to be present; others may give a key only after trust grows. The ten ideas below range from kitchen preparation to plant visits, household organisation and nonmedical support. Match them to your skill and comfort, not merely to what a neighbour asks in a hurry. Keep photos and personal information private. You can grow by training another helper and checking their work, but the first promise must be one you can personally deliver reliably. In local services, a quiet, respectful visit that ends exactly as agreed earns more referrals than a broad list of tasks you cannot manage.",
+    "how_to_choose": "List the household tasks neighbours repeatedly postpone, then separate those you can do safely from those needing specialist care. If you like a fixed early routine, kitchen prep or morning reset visits may fit. If you need flexible hours, plant care and organisation jobs can be booked ahead. Nonmedical elder support requires patience and a clear emergency contact, while pet visits need animal handling confidence. Choose a compact service radius and write an exact task list, visit length and price. Trial a few paid bookings, time the travel and work, then keep only the model that people request again and you can perform without crossing a responsibility boundary.",
+    "faq": [
+      {
+        "q": "Do you need to offer every kind of household task?",
+        "a": "No. A narrow list helps customers understand what they are buying and helps you price time and materials. Say clearly when a job needs a trained technician, caregiver or other qualified worker."
+      },
+      {
+        "q": "How do you build trust before entering a home?",
+        "a": "Share your identity and service terms, meet the customer first and record the agreed access method. Keep keys and private information secure. Ask for permission before photographing a room or bringing another worker."
+      },
+      {
+        "q": "Should customers pay per visit or monthly?",
+        "a": "A one time job can be priced by visit or project. Repeated work may suit a monthly schedule with exact days, tasks, absence and cancellation terms. Include travel time so a busy calendar still pays."
+      },
+      {
+        "q": "What if a customer asks for an unsafe extra task?",
+        "a": "Explain the boundary politely and refer the job to someone properly trained. A quick request to repair wiring, administer medicine or lift a person can carry far more risk than the original home help booking."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C010-S01-I01",
+      "slug": "working-family-morning-home-reset",
+      "title": "Working Family Morning Home Reset",
+      "hook": "When everyone leaves for school and work at once, a short dependable visit can put the house back in order.",
+      "summary": "You visit nearby homes after the morning rush to handle a defined set of light chores: dishes, surfaces and basic tidying. Families buy predictable time rather than a full day domestic worker. Clear task boundaries and fixed arrival hours allow a compact route.",
+      "what_it_is": "On a usual day, you meet the household to agree on a small checklist, such as clearing breakfast dishes, wiping counters and putting common areas back in order. You set a fixed visit duration and clarify which supplies and equipment the family provides. On arrival, follow the agreed access process and work only in authorised rooms. In this business, you mark completed tasks in a simple message, then lock up as instructed. You avoid adding deep cleaning, child supervision or repairs during the same short slot. A reliable reset should leave the family able to return to an orderly space without wondering who entered or what was done.",
+      "who_pays_you": "Working parents, couples with overlapping shifts and households without a full time helper may pay. They often want the same weekday time, so cluster homes in one lane or society. A customer who needs several hours of deep cleaning is better served by a different package. In this business, you ask about actual morning patterns before promising a slot that conflicts with school or office departures.",
+      "how_money_comes": "In this business, you charge a weekly or monthly fee for exact days and visit length, with extra tasks quoted before they begin. Recurring homes make travel efficient, but missed visits need a clear make up or credit policy. You keep cleaning supplies and transport in your cost calculation when you provide them. You do not fill every minute on the schedule; leave room for a late household handover. You use Validate for current local service rates.",
+      "what_you_need": "Basic cleaning and organisation skills, a compact service radius, identity and access process, reliable clock and a task checklist. You need safe handling of household products and privacy discipline. You check local business or worker requirements if you hire help. You do not accept a key without a secure storage and return plan.",
+      "first_30_days": [
+        "Ask working families which morning tasks remain after they leave and how long those tasks really take.",
+        "Write a short included checklist and a separate list of work outside the service.",
+        "Trial paid visits in one lane and measure travel, access and completion time.",
+        "Offer recurring slots only after the trial tasks fit comfortably within the agreed visit."
+      ],
+      "what_hurts": "A family may leave a sink full of extra work and expect the same short fee, while a locked door can waste your planned slot. Keys and private rooms create trust risks. You may also encounter pets or products you did not expect. In this business, you confirm access and supplies before each visit, document changes and say no when an extra task would make you late for the next home.",
+      "verdict": "Build this if you can keep a punctual route and respect household boundaries. Walk away if the only available clients are far apart or expect an unlimited list inside a short visit.",
+      "faq": [
+        {
+          "q": "Who supplies cleaning products?",
+          "a": "Agree on this before pricing. If you bring products, learn where each is safe to use and include replacement cost in the fee."
+        },
+        {
+          "q": "Can a client add a room on the day?",
+          "a": "Only if time remains and you agree on any extra charge. Otherwise book a longer visit so the original checklist and next customer are not rushed."
+        },
+        {
+          "q": "What if nobody is home?",
+          "a": "Use the agreed key or access process, or apply the stated missed access policy. Never enter through an unapproved route or ask a neighbour for a key."
+        }
+      ],
+      "validate_prompt": "I want to offer short morning home reset visits in an Indian neighbourhood. What local prices, access safeguards and realistic route costs should I validate?",
+      "investment_band": "zero",
+      "life_stage": [
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S01-I02",
+      "slug": "elder-nonmedical-home-check-in-visit",
+      "title": "Elder Nonmedical Home Check In Visit",
+      "hook": "A family living in another part of town may want someone trusted to visit an older parent and report simple needs.",
+      "summary": "You make scheduled nonmedical visits to older neighbours, checking in, helping with small household tasks and sending a permitted update to family. You do not administer medicine or provide nursing care. The service depends on consent, patience and a clear emergency plan.",
+      "what_it_is": "On a usual day, you meet the older person and their family to agree on visit time, tasks and who receives updates. During a visit, ask what practical help is wanted: placing groceries on a shelf, reading a bill aloud or arranging a known service call. Respect the person's decisions and privacy rather than treating a paying relative as the only voice. In this business, you send a brief factual message with consent and note any concern under the agreed escalation process. If the person seems unwell, contact the family or appropriate emergency service rather than diagnosing or administering treatment. You keep keys and contact details secure.",
+      "who_pays_you": "Adult children in another neighbourhood or city may pay, while the older resident receives the visits. Some older couples pay directly for company with limited practical help. You do not accept a booking when the resident does not want you there. A few nearby homes with similar visit times are easier to serve than many distant promises that leave little actual time with each person.",
+      "how_money_comes": "In this business, you charge for a defined visit length and frequency, paid weekly or monthly under written terms. Extra errands or extended waits require approval before charging. Recurring visits bring steady work but also an obligation to arrange a reliable substitute for your absence. You do not sell a medical monitoring promise at an ordinary home help price. Validate current local service rates and travel before quoting.",
+      "what_you_need": "Patient communication, identity verification, emergency contacts, a clear nonmedical task list and a secure visit log. Basic first aid awareness can help you respond, but it does not make you a clinician. You check local caregiver or service rules for any expansion. You need a respectful method for reporting without exposing private conversations to unrelated relatives.",
+      "first_30_days": [
+        "Speak with older residents about the kind of visit they would actually welcome.",
+        "Agree on consent, allowed tasks and emergency contacts with the resident and payer.",
+        "Trial a few paid visits and practise concise factual updates with permission.",
+        "Review whether travel and visit length allow you to keep every promised slot."
+      ],
+      "what_hurts": "A resident's health can change quickly and you may be the first visitor to notice. Relatives can disagree about updates or expect you to control personal decisions. Emotional work may extend visits beyond paid time. In this business, you keep the boundary and emergency plan clear, involve the older person in decisions and refuse tasks requiring nursing training.",
+      "verdict": "Build this if you are patient and can keep a reliable nonmedical visit promise. Walk away if the family expects medical care or the older person does not consent to visits.",
+      "faq": [
+        {
+          "q": "Can you remind someone about medicine?",
+          "a": "Discuss the precise request and local rules, but do not administer, dose or alter medicines without appropriate qualification and authority. Keep your nonmedical boundary clear."
+        },
+        {
+          "q": "What if the resident does not answer the door?",
+          "a": "Follow the preagreed contact and escalation steps rather than entering without permission. Tell the designated family contact promptly and seek emergency help when warranted."
+        },
+        {
+          "q": "Should you send photos after each visit?",
+          "a": "Only with the older person's informed consent. A short factual update is often enough, and private home images should never be a default requirement."
+        }
+      ],
+      "validate_prompt": "I want to provide nonmedical check in visits to older neighbours in India. What consent, emergency procedures, local rules and fair visit fees should I validate?",
+      "investment_band": "zero",
+      "life_stage": [
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S01-I03",
+      "slug": "neighbourhood-kitchen-preparation-helper",
+      "title": "Neighbourhood Kitchen Preparation Helper",
+      "hook": "A family may enjoy cooking dinner but lack time to wash, cut and organise ingredients after work.",
+      "summary": "You visit homes for a planned kitchen preparation slot, handling washing, chopping and basic setup while the household cooks later. The family chooses ingredients and menu. You clean handling, task limits and a compact route make it a repeat service.",
+      "what_it_is": "On a usual day, you agree on the day's preparation list before arriving: vegetables to wash and cut, dough ingredients to measure or pantry items to organise. You use the household's clean tools and follow its food preferences and allergy instructions. You keep raw and ready to eat materials separate and store prepared ingredients as the family directs. In this business, you clean the work surface and leave a note on what is ready. You do not promise a finished meal, nutrition advice or safe long storage when your booked role is preparation. A regular afternoon slot can help several families when homes are close together.",
+      "who_pays_you": "Working couples, older cooks who still want to prepare their own dishes and families with a heavy evening routine may pay. Some already employ a full time cook and will not need a separate prep visit. You ask which tasks actually consume their time and how they want ingredients cut. Consistency can turn a first trial into a recurring appointment.",
+      "how_money_comes": "In this business, you charge by a defined visit or weekly schedule, with a clear allowance for the quantity and kind of preparation. A large festival batch is a separately quoted job. Travel and cleanup time must be included, even though the chopping itself seems simple. If customers provide all ingredients and tools, your inventory stays small. You record missed access and holiday pauses under fair terms, and check local rates with Validate.",
+      "what_you_need": "Good food hygiene, knife skills, awareness of cross contact, punctuality and a safe way to work in another person's kitchen. You confirm whether the household provides gloves or cleaning materials. You check applicable local rules if you begin cooking for sale later; this service alone should remain clearly described. Respect every family's kitchen customs and privacy.",
+      "first_30_days": [
+        "Ask nearby households whether preparation or actual cooking is the recurring problem.",
+        "Write a sample task list and food handling questions for a first visit.",
+        "Trial paid prep slots in neighbouring homes and time washing and cleanup.",
+        "Set recurring hours only after quantities and access prove predictable."
+      ],
+      "what_hurts": "A household may leave far more vegetables than the slot covers or ask you to cook when you are due elsewhere. Allergy and hygiene mistakes can affect a family meal. Some kitchens have unsafe dull tools or little clean water. In this business, you inspect the setup, agree on quantities and decline work when you cannot prepare food safely.",
+      "verdict": "Build this if you work neatly in different kitchens and can maintain a practical afternoon route. Walk away if customers expect unlimited cooking inside a short preparation fee. Clean handling is part of the service.",
+      "faq": [
+        {
+          "q": "Who chooses the menu?",
+          "a": "The household does. You agree on preparation tasks and follow their instructions, rather than substituting ingredients or deciding what they should eat."
+        },
+        {
+          "q": "Can you prepare food for the next week?",
+          "a": "Only with a safe handling and storage plan suited to the ingredients. Do not promise that all cut vegetables will remain fresh for days."
+        },
+        {
+          "q": "What if a family has an allergy?",
+          "a": "Ask for instructions before touching ingredients and assess whether you can prevent cross contact. Decline a severe requirement you cannot reliably manage."
+        }
+      ],
+      "validate_prompt": "I want to offer home kitchen preparation visits in an Indian neighbourhood. What food hygiene, visit scope, travel costs and local rates should I check?",
+      "investment_band": "zero",
+      "life_stage": [
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S01-I04",
+      "slug": "travel-period-home-plant-care-visits",
+      "title": "Travel Period Home Plant Care Visits",
+      "hook": "A family leaving town may have a balcony full of plants that cannot wait until the return train arrives.",
+      "summary": "You make scheduled plant watering and basic care visits while neighbours travel, using an agreed access and photo update process. The service is limited to plants and listed tasks. A compact area lets you serve several homes without spending the fee on travel.",
+      "what_it_is": "Visit before the trip to identify plants, watering amounts, drainage and any that must be left dry. You agree on access, dates, emergency contact and whether the customer wants a brief photo update. During each visit, follow the written care list, check for obvious leaks and leave doors and taps as found. Report a problem rather than applying an unknown chemical or repotting without permission. You keep keys labelled by a private code, never by the owner's address, and return them promptly after the final visit. Plant survival depends on conditions beyond a watering visit, so describe the exact work rather than promising every leaf will stay green.",
+      "who_pays_you": "Apartment residents, families visiting relatives during holidays and people with balcony gardens may pay. Someone with a single hardy plant may prefer a neighbour's help, while a serious home gardener values a reliable schedule. You ask whether the building permits access for a service provider and whether security needs a visitor entry before accepting a key.",
+      "how_money_comes": "In this business, you charge per visit or a trip package with exact dates, plants and access arrangements. A larger terrace takes longer than a small balcony and should have a different quote. Holiday demand can cluster, so map homes into a compact route and leave time for building entry delays. An extra visit for heat or travel extension needs prior approval. Validate local visit rates before publishing packages.",
+      "what_you_need": "Basic plant care knowledge, a secure key system, phone for permitted updates, punctual route and respect for building access rules. You should recognise when a pot is waterlogged without claiming to treat disease. You keep customer addresses confidential and do not take a friend into a home without consent. A written checklist prevents mistakes across several balconies.",
+      "first_30_days": [
+        "Ask neighbours who travel how they currently arrange watering and what went wrong before.",
+        "Create a plant list, access consent and key return form for every booking.",
+        "Trial a paid short absence with exact visit records and approved updates.",
+        "Measure building entry time and limit overlapping holiday bookings accordingly."
+      ],
+      "what_hurts": "A key can be lost, building security may refuse entry and a plant may deteriorate despite correct watering. Summer heat changes needs, while a customer may extend travel at the last minute. You set a backup access contact and describe exactly what you can control. You never overwater every pot merely to prove you visited.",
+      "verdict": "Build this if you enjoy plant care and can protect keys and follow individual instructions. Walk away if access is informal or customers expect a guarantee against every plant problem.",
+      "faq": [
+        {
+          "q": "Should you water every plant equally?",
+          "a": "No. Record each plant's instructions during the initial visit. Some need very little water, and a uniform jug can do more harm than a missed day."
+        },
+        {
+          "q": "What if building security refuses entry?",
+          "a": "Arrange approved visitor access before the trip and keep a customer or manager contact. Do not use an unauthorised shortcut into the building."
+        },
+        {
+          "q": "Can you share photos in a group chat?",
+          "a": "Only with the customer's permission. Send updates privately and avoid showing personal details or interiors beyond the agreed plants. Keep the update private."
+        }
+      ],
+      "validate_prompt": "I want to provide plant care visits for travelling households in India. What key safeguards, building access, local pricing and route capacity should I validate?",
+      "investment_band": "zero",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "metro",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S01-I05",
+      "slug": "home-declutter-and-storage-session",
+      "title": "Home Declutter and Storage Session",
+      "hook": "A crowded cupboard can feel impossible to tackle alone, even when the family wants to keep only useful things.",
+      "summary": "You guide a booked home organisation session for one room or storage area, sorting with the owner's decisions and setting up simple labels. Customers pay for focused help, not pressure to discard possessions. Privacy and an agreed scope make the project manageable.",
+      "what_it_is": "Visit or view the target space with consent and agree on the exact cupboard or room, time and whether containers are included. You work beside the owner to sort items into keep, relocate, donate and undecided groups. You never discard, photograph or open private papers without explicit permission. In this business, you clean accessible shelves, arrange kept items so the household can find them and label boxes in a way the family understands. Leave the undecided group for the owner to review rather than making emotional decisions for them. You arrange disposal or donation only as a separately approved task.",
+      "who_pays_you": "Families after a move, working people whose storage has accumulated over years and older residents who want help reaching cupboards may pay. The owner must be ready to decide what stays; a service cannot secretly clear a relative's belongings. Begin with one room and a realistic time estimate, since a sentimental trunk is very different from a pantry shelf.",
+      "how_money_comes": "In this business, you charge per defined session or project after inspecting the space, with storage boxes and disposal trips itemised separately. A repeat booking may cover another room, but the first should deliver a usable result. Travel and preparation count, while buying decorative organisers before measuring shelves wastes cash. In this business, you take a deposit for a longer day if the terms are clear. Validate local project rates and material costs before quoting.",
+      "what_you_need": "Organisation skill, patience, basic cleaning supplies, labels, measuring tape and a privacy agreement. You need safe lifting limits and a way to stop when mould, sharp waste or hazardous material is found. You check local service requirements and do not offer valuables appraisal or document disposal without expertise and consent.",
+      "first_30_days": [
+        "Ask households which storage area frustrates them and whether they can make decisions during the session.",
+        "Create a scope form for one cupboard or room, including what must not be touched.",
+        "Complete a paid small project using existing containers where possible.",
+        "Review time, lifting and customer decisions before quoting a larger home."
+      ],
+      "what_hurts": "A family member may ask you to throw away someone else's possessions, or a small cupboard may contain emotionally difficult items. Heavy boxes and dusty lofts create physical risk. A customer may expect an entire home cleared in one short session. In this business, you keep the owner involved, set limits and leave sensitive or unsafe material untouched until the right person decides.",
+      "verdict": "Build this if you can organise patiently without taking control of another person's possessions. Walk away if the job requires unsafe lifting or secret disposal to meet the promised time.",
+      "faq": [
+        {
+          "q": "Do you decide what gets donated?",
+          "a": "No. Present options and let the owner decide. A helper should not remove sentimental or valuable belongings based on an outsider's preference."
+        },
+        {
+          "q": "Must customers buy new storage boxes?",
+          "a": "Usually not at first. Sort and measure existing space before suggesting a purchase, and quote any materials separately with the owner's approval."
+        },
+        {
+          "q": "What if you find important documents?",
+          "a": "Stop, show the owner and follow their instructions. Do not photograph, copy or discard private papers during an organisation session."
+        }
+      ],
+      "validate_prompt": "I want to offer home decluttering sessions in an Indian neighbourhood. What project scope, privacy practices, lifting limits and current fees should I validate?",
+      "investment_band": "zero",
+      "life_stage": [
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S01-I06",
+      "slug": "neighbourhood-pet-home-visit-care",
+      "title": "Neighbourhood Pet Home Visit Care",
+      "hook": "A pet owner away for a day needs someone who can feed the animal without turning a brief visit into a boarding move.",
+      "summary": "You make prearranged visits to feed and check familiar household pets in their own homes. Owners give written routines and emergency contacts. The service suits trained, comfortable animal handlers and requires secure access, honest updates and clear limits.",
+      "what_it_is": "On a usual day, you meet the pet and owner before accepting a booking, learning feeding quantities, behaviour, cleaning tasks and any warning signs the owner wants reported. You agree on visit times, access and emergency veterinary contact. During the visit, follow the routine, refresh water, clean the agreed area and secure doors and gates before leaving. In this business, you send a factual update with permission. You do not administer treatment outside your training or accept an animal you cannot safely handle. A brief visit is not a substitute for continuous care when the pet's condition requires someone present.",
+      "who_pays_you": "Dog and cat owners working long shifts or travelling briefly may pay. An owner who needs overnight supervision or complex medical care requires a different arrangement. You start with pets you have met and a compact route so you can keep feeding windows. A calm first trial while the owner is nearby helps both the animal and family decide whether the service fits.",
+      "how_money_comes": "In this business, you charge per visit with a clearly defined duration, tasks and travel radius. Holiday bookings can cluster, so do not take more pets than you can visit at the agreed times. Extra cleaning, longer play or a second daily visit should be quoted separately. In this business, you collect a booking advance under fair cancellation terms for a multi day trip. Validate current local pet care rates and travel costs.",
+      "what_you_need": "Animal handling knowledge, a secure key process, written feeding notes, emergency veterinary contact, reliable transport and a visit log. You check local pet service rules and insurance options. You need to recognise when an animal is distressed and call the owner rather than guessing a remedy. You never bring another pet or unapproved person into a client's home.",
+      "first_30_days": [
+        "Meet local owners and pets before promising an unattended visit.",
+        "Create a feeding, behaviour, access and veterinary contact form.",
+        "Run paid short trials while owners can still respond promptly.",
+        "Review route timing and animal comfort before accepting holiday bookings."
+      ],
+      "what_hurts": "A pet may hide, escape or refuse food, and an unfamiliar dog may react differently when its owner is away. A lost key creates both household and animal risk. Owners may expect you to handle medication without training. In this business, you set a clear scope, secure gates carefully and decline a booking when the pet needs a level of care you cannot provide.",
+      "verdict": "Build this if you understand animals and can keep a calm reliable visit routine. Walk away if you are uncomfortable with the pet or cannot protect keys and gates. The animal's comfort matters first.",
+      "faq": [
+        {
+          "q": "Should you meet the pet first?",
+          "a": "Yes. A supervised introduction shows how the animal responds and lets you learn the home routine. Decline a booking when safe handling is uncertain."
+        },
+        {
+          "q": "Can you give medicine during a visit?",
+          "a": "Only within your training and applicable rules, with clear owner instructions. A pet needing skilled medical care may require a veterinary professional or trained carer."
+        },
+        {
+          "q": "What if a pet escapes?",
+          "a": "Have an agreed emergency plan and contact the owner immediately. Prevention starts with checking gates, leads and doors before every entry and exit."
+        }
+      ],
+      "validate_prompt": "I want to offer pet feeding and home check visits in an Indian neighbourhood. What animal handling, access safeguards, local rules and rates should I verify?",
+      "investment_band": "zero",
+      "life_stage": [
+        "student",
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "metro",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S01-I07",
+      "slug": "post-discharge-household-setup-helper",
+      "title": "Post Discharge Household Setup Helper",
+      "hook": "A family bringing someone home from hospital may need the room prepared and ordinary supplies organised before arrival.",
+      "summary": "You set up a home for a planned hospital discharge: clean space, accessible everyday items and confirmed deliveries under family direction. You do not provide nursing or medical equipment advice. A defined preparation visit saves relatives practical work during a stressful day.",
+      "what_it_is": "On a usual day, you ask the family for a written list of ordinary household tasks: clearing a path, making a bed with their supplied linen, placing water within reach or receiving a grocery delivery. Visit before the person returns and work only in authorised areas. You do not move a patient, install medical devices or change a clinician's instructions. Report any task you could not complete and leave the room clean and accessible under the family's plan. If the family wants a grab rail or electrical change, refer a qualified installer. The service is household preparation, not post hospital care.",
+      "who_pays_you": "Adult children, spouses and other relatives coordinating a discharge may pay. They may be busy with transport and paperwork, so one designated contact should approve the task list. Some families already have help at home, while others need a short one time visit. In this business, you offer calm practical coordination without suggesting that a tidy room replaces clinical support.",
+      "how_money_comes": "In this business, you quote a defined preparation session by time and task list, with any shopping or delivery coordination charged transparently. You take approval before buying household supplies and return receipts and change. A one time job can lead to referrals, but avoid turning a vulnerable moment into pressure for an unnecessary subscription. Travel and waiting for a delivery should be in the agreed fee. You check current local rates with Validate.",
+      "what_you_need": "Basic home organisation and cleaning skill, a task checklist, family contact, safe lifting boundaries and privacy discipline. You need a clear refusal for medical care, patient transfer and installation work. You check local service or caregiver rules if expanding. You do not hold cash or keys without a written record and agreed return process.",
+      "first_30_days": [
+        "Ask families which ordinary home preparation tasks create stress before a planned discharge.",
+        "Write a narrow nonmedical checklist and an escalation contact method.",
+        "Trial a paid setup visit with family provided supplies and a clear handover note.",
+        "Review time spent waiting for deliveries before setting a standard price."
+      ],
+      "what_hurts": "Discharge time can change suddenly, leaving your visit too early or too late. A family may ask you to lift the patient or adjust equipment once you are at the house. Private health details can be overheard or shared accidentally. In this business, you keep a flexible but priced rescheduling policy and repeat the nonmedical boundary, even when relatives are tired and asking for help.",
+      "verdict": "Build this if you can organise a household calmly within a clear nonmedical scope. Walk away if the family expects nursing, patient lifting or unqualified equipment installation. That boundary protects the family.",
+      "faq": [
+        {
+          "q": "Can you arrange a hospital bed?",
+          "a": "You may receive a delivery under family instructions, but assembly and suitability belong to qualified suppliers or clinicians. Do not make medical equipment decisions yourself."
+        },
+        {
+          "q": "What if discharge is postponed?",
+          "a": "Use a fair written rescheduling rule and confirm a new time with the family. Avoid buying perishable supplies before the date is stable."
+        },
+        {
+          "q": "Can you stay to care for the patient?",
+          "a": "That is a different service requiring appropriate training and scope. The setup visit ends after the agreed household tasks and handover."
+        }
+      ],
+      "validate_prompt": "I want to offer nonmedical household setup before hospital discharge in India. What task limits, consent, local rules and visit fees should I validate?",
+      "investment_band": "zero",
+      "life_stage": [
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S01-I08",
+      "slug": "new-renter-first-day-home-setup",
+      "title": "New Renter First Day Home Setup",
+      "hook": "A person arriving in a new town may have keys but no basic household setup and little time before starting work.",
+      "summary": "You prepare a rented home for arrival by checking an approved task list, receiving deliveries and arranging ordinary essentials. The renter chooses and pays for goods separately. Clear access and inventory records keep the service useful without taking over property decisions.",
+      "what_it_is": "On a usual day, you meet the renter remotely or in person to list practical tasks: verifying the keys work, noting visible issues, placing ordered bedding, setting up a basic kitchen shelf and accepting scheduled deliveries. Get the landlord's permission where required before entry or changes. You photograph the initial condition only with consent and share it privately with the renter. You do not sign a lease, negotiate deposits or hire an unapproved repairer on their behalf. Leave receipts, packaging and keys in the agreed place. Your job is to make arrival easier, not guarantee the property's condition or legal terms.",
+      "who_pays_you": "New employees, students and families relocating to a small town may pay. A parent may book for a student, but the adult occupant should approve access and purchases. Estate agents may refer newcomers, with any referral arrangement disclosed. Focus on places close enough to visit twice if a delivery is late, rather than promising instant setups across an entire city.",
+      "how_money_comes": "In this business, you charge a fixed setup session covering a stated number of visits or hours, with shopping and delivery waits itemised. You ask for advance funds only against a written purchase list, return every bill and keep the service fee separate. Extra trips after a missed delivery have a clear price. Seasonal student arrivals can bring a rush, but do not build permanent overhead on that one window. Validate local rates and travel cost.",
+      "what_you_need": "Organisation skill, secure key handling, inventory checklist, transport, communication and respect for landlord and tenant permissions. You need a way to document money spent without mixing it with personal cash. You check local business rules. Electrical, plumbing or appliance installation must be handled by qualified workers, not improvised during your visit.",
+      "first_30_days": [
+        "Ask recent renters what was missing on their first day and which deliveries were difficult to coordinate.",
+        "Create an access and purchase approval form with a clear limit on your authority.",
+        "Trial a paid simple setup near your home and document each delivery and receipt.",
+        "Review waiting time and key handover before advertising a broader radius."
+      ],
+      "what_hurts": "A landlord may object to entry, a delivery can miss its slot and a new renter may assume you checked hidden defects. Handling keys and purchase funds creates trust risk. You keep written permissions and a narrow checklist, and refuse to certify that a home is legally or technically sound. A quick practical setup should not become a dispute about the lease.",
+      "verdict": "Build this if you can coordinate deliveries and access carefully for nearby renters. Walk away if customers expect you to decide lease terms or enter homes without clear permission. Permissions must be explicit.",
+      "faq": [
+        {
+          "q": "Can you sign the rental agreement for a customer?",
+          "a": "That is outside an ordinary setup service. The renter should handle legal commitments with appropriate advice rather than delegating them to a home helper."
+        },
+        {
+          "q": "Who pays for household goods?",
+          "a": "The renter approves and funds a written list. Keep itemised receipts and return unused money, with your service fee charged separately."
+        },
+        {
+          "q": "What if the landlord refuses access?",
+          "a": "Pause work and ask the renter to resolve permission. Do not use a spare key or a neighbour's invitation to bypass an objection."
+        }
+      ],
+      "validate_prompt": "I want to prepare rented homes for newcomers in an Indian town. What access permission, purchase records, visit pricing and service limits should I check?",
+      "investment_band": "zero",
+      "life_stage": [
+        "student",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S01-I09",
+      "slug": "laundry-folding-wardrobe-reset-visit",
+      "title": "Laundry Folding Wardrobe Reset Visit",
+      "hook": "Clean clothes can pile up for days when a family has time to wash but never time to fold and put them away.",
+      "summary": "You visit homes to fold clean laundry and arrange the agreed wardrobe space, without washing or taking garments away. Families buy a regular light household task that is easy to define. Privacy, garment handling and a realistic pile limit keep visits predictable.",
+      "what_it_is": "On a usual day, you agree on the amount of clean dry laundry and the wardrobes you are allowed to open. You sort by person or drawer as the family directs, fold carefully and place items in labelled or familiar locations. You set aside stained, damp or damaged garments and tell the customer rather than hiding them in a stack. You do not handle private documents or valuables found in pockets without immediate notice. You keep your hands and work surface clean. A weekly slot can prevent the pile from growing, but a large seasonal wardrobe change is a separate project with a different quote.",
+      "who_pays_you": "Working families, new parents and people with limited time for repetitive household work may pay. Some want the task done while they are home; others give access after trust develops. You ask how much laundry typically accumulates, not how many people live there, because habits vary. A compact society route can make short visits worthwhile.",
+      "how_money_comes": "In this business, you charge per visit for a defined basket or time allowance, with extra loads approved before starting. Regular weekly bookings provide steadier income, but travel and cupboard access still take time. A rushed low fee can leave you sorting an enormous family pile for little return. In this business, you keep a missed access policy and a clear holiday pause. You use Validate for local household service rates.",
+      "what_you_need": "Careful garment handling, basic organisation, clean workspace and respect for personal storage areas. You need a task boundary and a private way to note clothing preferences without photographing wardrobes. You check local service requirements if you hire helpers. In this business, you avoid lifting large wet loads or using products on delicate fabrics without permission.",
+      "first_30_days": [
+        "Ask families whether clean laundry folding is a repeated problem and how large a normal pile is.",
+        "Create a clear basket or time based service limit and wardrobe access agreement.",
+        "Trial paid visits and note sorting, folding and placement time separately.",
+        "Offer a recurring slot only after the ordinary weekly volume is understood."
+      ],
+      "what_hurts": "A large pile can hide damp clothes, delicate garments and items a family does not want a visitor to handle. Someone may later say a garment is missing from a drawer. You work with a clear starting area and report unusual items immediately. You do not promise a whole wardrobe transformation as part of a quick folding visit, and never take clothing off site without a separate agreement.",
+      "verdict": "Build this if you enjoy precise repetitive work and can respect private storage boundaries. Walk away if customers will not define a normal load or expect a full wardrobe overhaul at the same fee.",
+      "faq": [
+        {
+          "q": "Do you also wash or iron the clothes?",
+          "a": "Not in the basic service. Quote those separately only if you have the equipment, skill and time. Clear boundaries prevent damaged fabric disputes."
+        },
+        {
+          "q": "What if you find cash in a pocket?",
+          "a": "Stop and show the customer or follow the agreed immediate contact procedure. Do not put it elsewhere and hope the family notices later."
+        },
+        {
+          "q": "Can you fold while nobody is home?",
+          "a": "Only with a trusted access arrangement and clear wardrobe permission. Begin with supervised visits if either side is uncomfortable with unattended access."
+        }
+      ],
+      "validate_prompt": "I want to offer clean laundry folding and wardrobe reset visits in India. What visit limits, privacy practices, travel costs and local fees should I validate?",
+      "investment_band": "zero",
+      "life_stage": [
+        "homemaker",
+        "student",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S01-I10",
+      "slug": "household-appointment-and-errand-coordinator",
+      "title": "Household Appointment and Errand Coordinator",
+      "hook": "A busy household may know what needs doing but lose hours calling providers and waiting for routine deliveries.",
+      "summary": "You coordinate a defined list of home appointments and local errands, confirming times, receiving permitted deliveries and updating the family. You do not perform technical repairs or control financial accounts. The service is valuable when communication and access are reliable.",
+      "what_it_is": "On a usual day, you take a written task list from the household, including which providers they have approved and what you may spend. Book or confirm appointments, wait at the property when authorised, record arrival and completion, and report any change before agreeing to extra work. For local errands, keep itemised receipts and return change promptly. You do not sign for high value goods or authorise a technician's new quote without permission. You keep keys and phone numbers secure. A weekly coordination slot can gather several small jobs, but each customer must know when you are acting and when you are only passing along information.",
+      "who_pays_you": "Working families managing repairs, deliveries and household errands, or adult children coordinating help for parents, may pay. The home owner should specify who can approve a provider and expense. A household with only one occasional delivery may use its building desk instead, so look for repeated coordination trouble rather than a one time inconvenience.",
+      "how_money_comes": "In this business, you charge for an agreed block of time or recurring coordination hours, with travel and long waiting separately defined. Pass through actual purchases at cost with receipts and charge your service fee visibly. A monthly package works only when tasks and response windows are bounded; unlimited calls can consume the whole day. In this business, you keep a small client list until you can answer promptly, and validate local rates before setting a retainer.",
+      "what_you_need": "Organised scheduling, a secure task and access log, reliable phone, clear spending authority and basic knowledge of trustworthy local providers. You need privacy discipline and a way to verify a delivery person's identity. You check local service rules and avoid legal, financial or technical decisions outside your role. A backup for an appointment clash protects customers.",
+      "first_30_days": [
+        "Ask households which missed home appointments or errands cost them the most time.",
+        "Create a task approval form with spending limits and named contacts.",
+        "Trial a few paid appointment windows and document every provider handover.",
+        "Review waiting time and overlapping requests before offering a monthly package."
+      ],
+      "what_hurts": "A repairer can propose costly extra work while the family is unreachable, and a delivery can arrive outside your paid window. Customers may assume you guaranteed a provider's quality when you only coordinated access. You keep authority narrow, call for approval and document what the provider said. You never use a household's bank login or make a payment from their account.",
+      "verdict": "Build this if you are dependable with schedules, access and itemised receipts. Walk away if clients expect you to approve expensive work or manage private financial accounts on their behalf.",
+      "faq": [
+        {
+          "q": "Can you authorise a technician's extra repair?",
+          "a": "Only within a written spending and approval limit. For anything outside it, ask the customer to decide directly before the technician proceeds."
+        },
+        {
+          "q": "Should you hold customer money?",
+          "a": "Use a small documented advance only for approved purchases, with receipts and prompt change return. Your service fee should remain separate and visible."
+        },
+        {
+          "q": "What if two appointments clash?",
+          "a": "Tell both households early and follow the agreed rescheduling or backup process. Do not claim to be present at both homes at once."
+        }
+      ],
+      "validate_prompt": "I want to coordinate home appointments and errands for nearby Indian households. What authority limits, privacy, spending records and local rates should I validate?",
+      "investment_band": "zero",
+      "life_stage": [
+        "working_professional",
+        "homemaker"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    }
+  ]
+}
