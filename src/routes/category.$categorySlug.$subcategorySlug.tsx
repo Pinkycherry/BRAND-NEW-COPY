@@ -7,6 +7,7 @@ import { ExploreRail } from "@/components/explore-rail";
 import { categoryImage } from "@/config/category-imagery";
 import { findSubcategory } from "@/lib/catalog";
 import { getSubcategoryDetail } from "@/lib/taxonomy.functions";
+import { BAND_LABEL, TIME_LABEL, getSubcategoryIdeas } from "@/lib/ideas.functions";
 import { JsonLd, absoluteUrl, breadcrumbSchema, collectionPageSchema } from "@/lib/schema";
 import { hideImgIfBroken } from "@/lib/utils";
 import { useDepthScene, useScrollProgress, useTextReveal } from "@/motion";
@@ -16,6 +17,16 @@ const detailQuery = (categorySlug: string, subcategorySlug: string) =>
     queryKey: ["subcategory-detail", categorySlug, subcategorySlug],
     queryFn: () => getSubcategoryDetail({ data: { categorySlug, subcategorySlug } }),
     staleTime: Infinity,
+  });
+
+const pad = (n: number, w: number) => String(n).padStart(w, "0");
+const subCode = (categoryN: number, index: number) => `C${pad(categoryN, 3)}-S${pad(index + 1, 2)}`;
+
+const ideasQuery = (code: string) =>
+  queryOptions({
+    queryKey: ["subcategory-ideas", code],
+    queryFn: () => getSubcategoryIdeas({ data: { code } }),
+    staleTime: 60_000,
   });
 
 /** "Home Cooked Meal Subscription Business Ideas" -> "home cooked meal subscription". */
@@ -31,9 +42,10 @@ export const Route = createFileRoute("/category/$categorySlug/$subcategorySlug")
   loader: async ({ context, params }) => {
     const found = findSubcategory(params.categorySlug, params.subcategorySlug);
     if (!found) throw notFound();
-    await context.queryClient.ensureQueryData(
-      detailQuery(params.categorySlug, params.subcategorySlug),
-    );
+    await Promise.all([
+      context.queryClient.ensureQueryData(detailQuery(params.categorySlug, params.subcategorySlug)),
+      context.queryClient.ensureQueryData(ideasQuery(subCode(found.category.n, found.index))),
+    ]);
     return { name: found.subcategory.name, categoryName: found.category.name };
   },
   head: ({ loaderData, params }) => {
@@ -74,6 +86,7 @@ function SubcategoryPage() {
   const { categorySlug, subcategorySlug } = Route.useParams();
   const { category, subcategory, index } = findSubcategory(categorySlug, subcategorySlug)!;
   const { data: detail } = useSuspenseQuery(detailQuery(categorySlug, subcategorySlug));
+  const { data: ideas } = useSuspenseQuery(ideasQuery(subCode(category.n, index)));
   const categoryPath = `/category/${categorySlug}`;
   const subcategoryPath = `${categoryPath}/${subcategorySlug}`;
   const featured = categoryImage(categorySlug);
@@ -94,7 +107,7 @@ function SubcategoryPage() {
             path: subcategoryPath,
             name: subcategory.name,
             description: describe(subcategory.name, category.name),
-            itemCount: 0,
+            itemCount: ideas.length,
             image: featured.src,
           }),
           breadcrumbSchema([
@@ -130,7 +143,9 @@ function SubcategoryPage() {
             >
               {subcategory.name}
             </h1>
-            <p className="mt-2 text-sm text-muted-foreground">0 of 10 ideas published</p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {ideas.length} of 10 ideas published
+            </p>
             <figure className="mo-media glass relative mt-6 aspect-[21/9] w-full overflow-hidden">
               <img
                 ref={hideImgIfBroken}
@@ -171,17 +186,39 @@ function SubcategoryPage() {
                   </p>
                 </section>
               )}
-              <section
-                aria-labelledby="ideas-heading"
-                className="rounded-xl border border-dashed border-border/70 p-6 text-center"
-              >
-                <p className="ins-legend">Ideas in this subcategory</p>
-                <h2 id="ideas-heading" className="mt-2 text-4xl font-bold tabular-nums">
-                  0 <span className="text-lg font-semibold text-muted-foreground">of 10</span>
+              <section aria-labelledby="ideas-heading">
+                <h2 id="ideas-heading" className="text-xl font-semibold tracking-tight">
+                  {ideas.length ? `${ideas.length} ${topic} ideas` : `${topic} ideas`}
                 </h2>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  The ten {topic} ideas are being written and will appear here.
-                </p>
+                {ideas.length === 0 ? (
+                  <p className="mt-3 rounded-xl border border-dashed border-border/70 p-6 text-center text-sm text-muted-foreground">
+                    The ten {topic} ideas are being written and will appear here.
+                  </p>
+                ) : (
+                  <ol className="mt-4 grid gap-3">
+                    {ideas.map((idea, i) => (
+                      <li key={idea.code}>
+                        <Link
+                          to="/idea/$slug"
+                          params={{ slug: idea.slug }}
+                          className="glass block rounded-xl border border-border/50 p-4 transition-colors hover:border-primary/60"
+                        >
+                          <span className="block text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
+                            Idea {i + 1} · {BAND_LABEL[idea.investment_band] ?? ""} ·{" "}
+                            {TIME_LABEL[idea.time_needed] ?? ""}
+                          </span>
+                          <span className="mt-1 block text-base font-semibold">{idea.title}</span>
+                          <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">
+                            {idea.hook}
+                          </span>
+                          <span className="mt-2 block text-sm font-medium text-primary">
+                            Read the full idea →
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ol>
+                )}
               </section>
             </div>
 

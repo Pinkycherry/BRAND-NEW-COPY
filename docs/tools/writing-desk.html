@@ -399,7 +399,7 @@ function analyse(txt){
   if(txt.trim()){
     if(!cur.length) html='<span class="pill p-todo">No idea lines found yet</span>';
     else html='<span class="pill p-done">'+ic('check')+good.length+' ready</span>'+(fixed.length?'<span class="pill p-prog">'+ic('wand')+fixed.length+' auto-fixed</span>':'')+(bad.length?'<span class="pill p-todo">'+ic('x')+bad.length+' need a rewrite</span>':'')+
-      Object.keys(groups).sort().map(function(k){return '<span class="dest">'+ic('arrow')+'goes to '+k+' · '+esc(sub(k).s[0])+' ('+groups[k]+')</span>';}).join('');
+      Object.keys(groups).sort().map(function(k){var dn=state(k).s==='done'; return '<span class="dest">'+ic('arrow')+'goes to '+k+' · '+esc(sub(k).s[0])+' ('+groups[k]+')</span>'+(dn?'<span class="pill p-todo">'+k+' is already done: saving replaces those ideas</span>':'');}).join('');
   }
   var redo='';
   if(bad.length){

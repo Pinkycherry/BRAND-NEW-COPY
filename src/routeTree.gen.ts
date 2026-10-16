@@ -38,6 +38,7 @@ import { Route as CalculatorSlugRouteImport } from './routes/calculator.$slug'
 import { Route as FounderGlossaryIndexRouteImport } from './routes/founder-glossary.index'
 import { Route as FounderStoriesIndexRouteImport } from './routes/founder-stories.index'
 import { Route as FounderStoriesSlugRouteImport } from './routes/founder-stories.$slug'
+import { Route as IdeaSlugRouteImport } from './routes/idea.$slug'
 import { Route as LearningResourcesIndexRouteImport } from './routes/learning-resources.index'
 import { Route as StartupGuidesIndexRouteImport } from './routes/startup-guides.index'
 import { Route as StartupGuidesSlugRouteImport } from './routes/startup-guides.$slug'
@@ -190,6 +191,11 @@ const FounderStoriesSlugRoute = FounderStoriesSlugRouteImport.update({
   path: '/founder-stories/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IdeaSlugRoute = IdeaSlugRouteImport.update({
+  id: '/idea/$slug',
+  path: '/idea/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LearningResourcesIndexRoute = LearningResourcesIndexRouteImport.update({
   id: '/learning-resources/',
   path: '/learning-resources/',
@@ -249,6 +255,7 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/calculator/$slug': typeof CalculatorSlugRoute
   '/founder-stories/$slug': typeof FounderStoriesSlugRoute
+  '/idea/$slug': typeof IdeaSlugRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/calculator/': typeof CalculatorIndexRoute
@@ -286,6 +293,7 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/calculator/$slug': typeof CalculatorSlugRoute
   '/founder-stories/$slug': typeof FounderStoriesSlugRoute
+  '/idea/$slug': typeof IdeaSlugRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
   '/blog': typeof BlogIndexRoute
   '/calculator': typeof CalculatorIndexRoute
@@ -324,6 +332,7 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/calculator/$slug': typeof CalculatorSlugRoute
   '/founder-stories/$slug': typeof FounderStoriesSlugRoute
+  '/idea/$slug': typeof IdeaSlugRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/calculator/': typeof CalculatorIndexRoute
@@ -363,6 +372,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/calculator/$slug'
     | '/founder-stories/$slug'
+    | '/idea/$slug'
     | '/startup-guides/$slug'
     | '/blog/'
     | '/calculator/'
@@ -400,6 +410,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/calculator/$slug'
     | '/founder-stories/$slug'
+    | '/idea/$slug'
     | '/startup-guides/$slug'
     | '/blog'
     | '/calculator'
@@ -437,6 +448,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/calculator/$slug'
     | '/founder-stories/$slug'
+    | '/idea/$slug'
     | '/startup-guides/$slug'
     | '/blog/'
     | '/calculator/'
@@ -475,6 +487,7 @@ export interface RootRouteChildren {
   BlogSlugRoute: typeof BlogSlugRoute
   CalculatorSlugRoute: typeof CalculatorSlugRoute
   FounderStoriesSlugRoute: typeof FounderStoriesSlugRoute
+  IdeaSlugRoute: typeof IdeaSlugRoute
   StartupGuidesSlugRoute: typeof StartupGuidesSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
   CalculatorIndexRoute: typeof CalculatorIndexRoute
@@ -692,6 +705,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FounderStoriesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/idea/$slug': {
+      id: '/idea/$slug'
+      path: '/idea/$slug'
+      fullPath: '/idea/$slug'
+      preLoaderRoute: typeof IdeaSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/learning-resources/': {
       id: '/learning-resources/'
       path: '/learning-resources'
@@ -763,6 +783,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogSlugRoute: BlogSlugRoute,
   CalculatorSlugRoute: CalculatorSlugRoute,
   FounderStoriesSlugRoute: FounderStoriesSlugRoute,
+  IdeaSlugRoute: IdeaSlugRoute,
   StartupGuidesSlugRoute: StartupGuidesSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
   CalculatorIndexRoute: CalculatorIndexRoute,
