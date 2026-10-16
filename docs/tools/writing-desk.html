@@ -91,7 +91,7 @@ textarea{width:100%;min-height:130px;resize:vertical;border:1.5px dashed var(--l
 textarea:focus{outline:none;border-color:var(--navy);border-style:solid}
 .sum{display:flex;gap:6px;flex-wrap:wrap}
 .lines{display:grid;gap:2px;max-height:200px;overflow:auto;background:var(--raised);border-radius:10px;padding:4px}
-.ln{display:grid;grid-template-columns:18px 50px minmax(0,1fr) auto;gap:8px;align-items:center;padding:5px 8px;font-size:13px}
+.ln{display:grid;grid-template-columns:18px 76px minmax(0,1fr) auto;gap:8px;align-items:center;padding:5px 8px;font-size:13px}
 .ln code{font:600 11.5px var(--mono);color:var(--muted)}
 .ln .t{min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .ln .w{font:500 11.5px var(--mono);color:var(--muted)}
@@ -100,6 +100,10 @@ textarea:focus{outline:none;border-color:var(--navy);border-style:solid}
 .msg.warn{background:var(--pink);color:var(--ink)}
 .redo{display:grid;gap:8px;background:var(--pink);border-radius:12px;padding:12px}
 .redo textarea{min-height:60px;background:var(--surface);border-style:solid}
+.qp{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:16px 18px;display:grid;gap:10px}
+.qhint{margin:0;font-size:13px;color:var(--muted)}
+.qp textarea{min-height:90px}
+.dest{display:inline-flex;align-items:center;gap:6px;font:600 12px var(--mono);border-radius:99px;padding:4px 10px;background:var(--navy-soft);color:var(--ink)}
 .done-box{display:grid;gap:10px;justify-items:start}
 </style>
 
@@ -135,6 +139,15 @@ textarea:focus{outline:none;border-color:var(--navy);border-style:solid}
     <div class="tabs" role="tablist" id="tabs"></div>
     <input class="search" id="q" type="search" placeholder="Search a category or code" aria-label="Search">
   </div>
+  <section class="qp" aria-labelledby="qpH">
+    <div class="sh" id="qpH"><span class="num"><svg class="i"><use href="#i-spark"/></svg></span>Paste any reply here</div>
+    <p class="qhint">No need to find the tile. Every idea line carries its own code, so the reply is saved to the right subcategory by itself, even if you have lost track of which prompt it came from.</p>
+    <textarea id="qpaste" aria-label="Paste any reply" placeholder="Paste a reply from any chat."></textarea>
+    <div class="sum" id="qsum"></div>
+    <div class="redo" id="qredo" hidden><b id="qredoT"></b><textarea id="qredoX" readonly aria-label="Message to send back"></textarea><div><button class="btn sm" id="qredoC" type="button"><svg class="i"><use href="#i-copy"/></svg>Copy message</button></div></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn main" id="qsave" type="button" disabled><svg class="i"><use href="#i-save"/></svg><span id="qsaveT">Save</span></button><button class="btn sm" id="qclear" type="button">Clear</button></div>
+    <div id="qmsg" hidden></div>
+  </section>
   <div class="legend">
     <span><i class="sw" style="background:var(--pink)"></i>To write</span>
     <span><i class="sw" style="background:var(--pink-strong)"></i>Copied, paste pending</span>
@@ -379,18 +392,44 @@ function refreshPanelStatus(){
   if(!openCode||!$('pst')) return; var s=state(openCode);
   $('pst').innerHTML=s.s==='done'?'<span class="pill p-done">'+ic('check')+(s.repo?'Done · on GitHub':'Done · 10 ideas saved')+'</span>':(s.s==='prog'?'<span class="pill p-prog">'+(s.n?s.n+'/10 saved':'Copied')+(s.w?' · '+esc(s.w):'')+'</span>':'<span class="pill p-todo">To write</span>');
 }
+function analyse(txt){
+  var cur=parse(txt), good=cur.filter(function(x){return x.ok;}), fixed=good.filter(function(x){return x.fixes&&x.fixes.length;}), bad=cur.filter(function(x){return !x.ok;});
+  var groups={}; good.forEach(function(x){var k=x.code.slice(0,8); groups[k]=(groups[k]||0)+1;});
+  var html='';
+  if(txt.trim()){
+    if(!cur.length) html='<span class="pill p-todo">No idea lines found yet</span>';
+    else html='<span class="pill p-done">'+ic('check')+good.length+' ready</span>'+(fixed.length?'<span class="pill p-prog">'+ic('wand')+fixed.length+' auto-fixed</span>':'')+(bad.length?'<span class="pill p-todo">'+ic('x')+bad.length+' need a rewrite</span>':'')+
+      Object.keys(groups).sort().map(function(k){return '<span class="dest">'+ic('arrow')+'goes to '+k+' · '+esc(sub(k).s[0])+' ('+groups[k]+')</span>';}).join('');
+  }
+  var redo='';
+  if(bad.length){
+    var sh=bad.filter(function(x){return x.kind==='short';}).map(function(x){return x.code;}), ot=bad.filter(function(x){return x.kind!=='short';}).map(function(x){return x.code;}), p=[];
+    if(sh.length) p.push('These ideas are too short. Rewrite them fuller, 700 to 1,500 words each, with real detail in every field: '+sh.join(', ')+'.');
+    if(ot.length) p.push('These lines were broken or cut off. Rewrite them completely: '+ot.join(', ')+'.');
+    p.push('Same format: one line per idea, fields separated by " | ", ending with | END, inside one code block and nothing else.');
+    redo=p.join(' ');
+  }
+  return {cur:cur,good:good,bad:bad,groups:groups,html:html,redo:redo};
+}
+function saveRows(good){
+  return sql(insertSql(good,writer())).then(function(r){ var res=(r||[])[0]||{}; return load().then(function(){
+    var keys={}; good.forEach(function(x){keys[x.code.slice(0,8)]=1;});
+    var parts=Object.keys(keys).sort().map(function(k){var s=state(k); return k+(s.s==='done'?' is done (10/10)':' now has '+s.n+' of 10');});
+    return {moved:res.moved!=null?res.moved:good.length, parts:parts, keys:Object.keys(keys)};
+  }); });
+}
 var cur=[];
 function check(){
   if(!openCode) return; var code=openCode, txt=$('ppaste').value;
   cur=parse(txt); var good=cur.filter(function(x){return x.ok;}), fixed=good.filter(function(x){return x.fixes&&x.fixes.length;}), bad=cur.filter(function(x){return !x.ok;});
-  var other=cur.filter(function(x){return x.code.slice(0,8)!==code;});
+  var A=analyse(txt);
   var S=$('psum'), L=$('plines'); L.innerHTML='';
   if(!txt.trim()){ S.innerHTML=''; L.hidden=true; $('predo').hidden=true; $('psave').disabled=true; $('psaveT').textContent='Save'; return; }
   if(!cur.length){ S.innerHTML='<span class="pill p-todo">No idea lines found yet</span>'; L.hidden=true; $('psave').disabled=true; $('predo').hidden=true; return; }
-  S.innerHTML='<span class="pill p-done">'+ic('check')+good.length+' ready</span>'+(fixed.length?'<span class="pill p-prog">'+ic('wand')+fixed.length+' auto-fixed</span>':'')+(bad.length?'<span class="pill p-todo">'+ic('x')+bad.length+' need a rewrite</span>':'')+(other.length?'<span class="pill p-todo">'+other.length+' belong to another subcategory</span>':'');
+  S.innerHTML=A.html;
   L.hidden=false;
   cur.forEach(function(x){ var d=document.createElement('div'); d.className='ln'+(x.ok?'':' bad');
-    d.innerHTML=(x.ok?ic('check'):ic('x'))+'<code>'+esc(x.code.slice(9))+'</code><span class="t"></span><span class="w">'+(x.words?x.words+'w':'')+'</span>';
+    d.innerHTML=(x.ok?ic('check'):ic('x'))+'<code>'+esc(x.code.slice(5))+'</code><span class="t"></span><span class="w">'+(x.words?x.words+'w':'')+'</span>';
     d.querySelector('.t').textContent=x.ok?x.row.title:((x.title?x.title+' · ':'')+x.why); L.appendChild(d); });
   $('psave').disabled=!good.length; $('psaveT').textContent=good.length?'Save '+good.length+' ideas':'Save';
   if(bad.length){
@@ -405,21 +444,37 @@ function pmsg(kind,html){ var m=$('pmsg'); if(!m) return; m.hidden=false; m.clas
 function doSave(){
   var code=openCode, good=cur.filter(function(x){return x.ok;}).map(function(x){return x.row;});
   if(!good.length) return; $('psave').disabled=true; pmsg('', 'Saving '+good.length+' ideas…');
-  sql(insertSql(good,writer())).then(function(r){
-    var res=(r||[])[0]||{};
+  saveRows(good).then(function(r){
     try{ localStorage.removeItem('draft-'+code); }catch(e){}
-    return load().then(function(){
-      if(openCode!==code) return;
-      var s=state(code);
-      $('ppaste').value=''; check();
-      if(s.s==='done'){
-        var nx=nextTodo(code);
-        pmsg('', '<div class="done-box"><b>'+ic('check')+' '+code+' is done. '+(res.moved||good.length)+' ideas saved.</b>'+(nx?'<button class="btn main sm" id="pnext" type="button">Next: '+nx+ic('arrow')+'</button>':'')+'</div>');
-        if(nx) $('pnext').addEventListener('click',function(){openPanel(nx);});
-      } else pmsg('warn','Saved '+(res.moved||good.length)+'. This subcategory has '+s.n+' of 10. Ask the same chat for the missing ideas and paste them here.');
-    });
+    if(openCode!==code) return;
+    $('ppaste').value=''; check();
+    var target=r.keys.length===1?r.keys[0]:code, s=state(target), nx=nextTodo(target);
+    var wrong=r.keys.indexOf(code)<0?' (this reply belonged to '+r.keys.join(', ')+', so it was saved there)':'';
+    if(s.s==='done') pmsg('', '<div class="done-box"><b>'+ic('check')+' Saved: '+esc(r.parts.join('; '))+wrong+'.</b>'+(nx?'<button class="btn main sm" id="pnext" type="button">Next: '+nx+ic('arrow')+'</button>':'')+'</div>');
+    else pmsg('warn','Saved: '+esc(r.parts.join('; '))+wrong+'. Ask the same chat for the missing ideas and paste them here.');
+    if(nx&&$('pnext')) $('pnext').addEventListener('click',function(){openPanel(nx);});
+    refreshPanelStatus();
   },function(e){ pmsg('warn',errText(e)); $('psave').disabled=false; });
 }
+// quick paste on the board: no tile needed
+var qcur=null;
+function qcheck(){
+  var t=$('qpaste').value; try{localStorage.setItem('draft-quick',t);}catch(e){}
+  qcur=analyse(t); $('qsum').innerHTML=qcur.html;
+  $('qsave').disabled=!qcur.good.length; $('qsaveT').textContent=qcur.good.length?'Save '+qcur.good.length+' ideas':'Save';
+  if(qcur.redo){ $('qredoX').value=qcur.redo; $('qredoT').textContent=qcur.bad.length+' to rewrite: send this to the same chat'; $('qredo').hidden=false; } else $('qredo').hidden=true;
+}
+function qmsg(kind,html){ var m=$('qmsg'); m.hidden=false; m.className='msg'+(kind==='warn'?' warn':''); m.innerHTML=html; }
+$('qpaste').addEventListener('input',function(){ $('qmsg').hidden=true; qcheck(); });
+$('qclear').addEventListener('click',function(){ $('qpaste').value=''; $('qmsg').hidden=true; qcheck(); });
+$('qredoC').addEventListener('click',function(){ var v=$('qredoX').value; if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(v).catch(function(){$('qredoX').select();}); else $('qredoX').select(); });
+$('qsave').addEventListener('click',function(){
+  var good=(qcur&&qcur.good||[]).map(function(x){return x.row;}); if(!good.length) return;
+  $('qsave').disabled=true; qmsg('','Saving '+good.length+' ideas…');
+  saveRows(good).then(function(r){ $('qpaste').value=''; qcheck(); qmsg('', ic('check')+' <b>Saved '+r.moved+' ideas.</b> '+esc(r.parts.join('; '))+'.'); },
+    function(e){ qmsg('warn',errText(e)); $('qsave').disabled=false; });
+});
+try{ $('qpaste').value=localStorage.getItem('draft-quick')||''; }catch(e){}
 function nextTodo(from){
   var list=[]; D.cats.forEach(function(c){ c[2].forEach(function(s,i){ list.push(c[0]+'-S'+('0'+(i+1)).slice(-2)); }); });
   var k=list.indexOf(from); for(var j=1;j<=list.length;j++){ var c=list[(k+j)%list.length]; if(state(c).s==='todo') return c; } return null;
@@ -428,6 +483,6 @@ function tick(){ if(lastOk){ var s=Math.round((Date.now()-lastOk)/1000); $('live
 setInterval(tick,5000);
 setInterval(function(){ if(document.visibilityState==='visible') load(); },30000);
 document.addEventListener('visibilitychange',function(){ if(document.visibilityState==='visible') load(); });
-drawTools(); stats(); board(); load();
+drawTools(); stats(); board(); qcheck(); load();
 })();
 </script>
