@@ -24,7 +24,7 @@ RIGHT (a picture of the reader's day): Before you take a wedding, you meet the b
 RULES
 1. India only. Indian customers, towns, festivals, habits. Money only in rupees with the ₹ sign and Indian grouping (₹1,00,000). Never $, USD or "Rs".
 2. No statistics, percentages, market sizes, exact prices or exact earnings stated as fact. Where a number matters, tell the reader to tap the Validate button for today's numbers in their area.
-3. No sources, links, website names, brand names of apps other than UPI and WhatsApp, and no names of AI tools.
+3. Name the real tools and apps a beginner would use when they help (for example WhatsApp, UPI, Instagram, Canva, Tally, Excel, Google Maps, Meesho, Swiggy, Zomato), in plain words. Never name AI tools or chatbots. No sources, no links, no website addresses.
 4. Every one of the 10 ideas in a subcategory is a genuinely different business: a different customer, place, time, skill or way of delivering. Never the same business described twice.
 5. Write every idea fresh. Never reuse a sentence or a phrase of four or more words from another idea. Never copy the hook into other fields. Do not open fields the same way across ideas.
 6. Never use these openers or phrases: "Imagine", "Picture this", "In today's", "In India,", "If you are passionate", "This business", "Your day begins", "Are you looking", "Look no further", "game changer", "unlock", "thriving", "landscape", "navigate".
