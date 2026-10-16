@@ -1,0 +1,567 @@
+{
+  "subcategory": {
+    "code": "C001-S09",
+    "intro": "A useful file can save somebody a small, frustrating hour. A parent has school notices in three chat threads. A bride has guest names on scraps of paper. A shopkeeper counts stock at closing and loses the number by morning. You can turn one of those messy moments into a printable sheet or a digital file that the buyer can use without calling you for help. That is the business, not decorating a page with more boxes than anyone needs.\n\nBegin with a real person's task. Sit beside them while they try to finish it, and notice where they pause. Decide whether they need a page to print and write on, an editable spreadsheet, or a file for a phone. Those formats are not interchangeable. A colourful chart that looks fine on your laptop may be unreadable from a cheap printer. A spreadsheet with hidden formulas may break when a buyer enters a name in the wrong column. Test the finished file the way the buyer will use it.\n\nSell a file you made yourself or have clear rights to use. Do not copy a school book, a branded planner or someone else's template and change its colours. Tell customers exactly what they receive, whether they can edit it and how to print it. State the limits of a budget or health-related tracker; a file helps organise decisions but does not replace professional advice. Make delivery and support terms simple enough that a buyer with an older phone can understand them.\n\nThe ten paths below answer different Indian household and small business questions. Some sell once to many buyers; others benefit from a custom version for one client. Choose a task you understand, make a small first version and watch someone use it before spending weeks building a giant bundle.",
+    "how_to_choose": "Choose the situation you have seen in real life. Ask whether the buyer will print at a local shop, open a spreadsheet on a phone or send a file to family members. Test that exact path. A reusable general file can be sold repeatedly, but it needs clear instructions and support for confused buyers. A custom sheet earns more per order but uses your time each time. Avoid building a large catalogue before one file sells and helps someone. Count design, testing, delivery and customer questions in your price; a cheap download is not effortless when every buyer needs a personal tutorial.",
+    "faq": [
+      {
+        "q": "Do I need expensive design software?",
+        "a": "No. A simple document or spreadsheet tool can make a useful first file. Spend your effort on the buyer's task, readable type and a format that works on their device or printer."
+      },
+      {
+        "q": "Can I sell a file I found online after editing it?",
+        "a": "Only if its licence clearly permits your intended commercial use. Making small visual changes does not make copied work yours. Create your own structure and examples, and keep proof of rights for any included assets."
+      },
+      {
+        "q": "How do I deliver a digital file?",
+        "a": "Use a method the buyer can open, with a clear file name and short instructions. Test delivery on a basic phone. Agree on whether later updates and personal help are included."
+      },
+      {
+        "q": "What if someone shares my file with friends?",
+        "a": "Set a plain usage rule and price for the real buyer you serve. Technical locks can frustrate paying customers. Improve the file and customer experience rather than relying only on restrictions."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C001-S09-I01",
+      "slug": "school-term-homework-planner",
+      "title": "School Term Homework Planner",
+      "hook": "Your child says there is a project due tomorrow, and the notice was buried in the class chat.",
+      "summary": "You make a weekly homework and project planner for parents of school children. It helps them put assignments, materials and due dates in one place. Offer a printable sheet with a phone-friendly editable version they can open and use. A sample of weekly homework and project planner shows editing, printing and included help before anyone pays.",
+      "what_it_is": "Your child says there is a project due tomorrow, and the notice was buried in the class chat. You design a weekly homework and project planner around this moment and watch someone try it. The buyer needs to put assignments, materials and due dates in one place, so keep the main action visible. Build a printable sheet with a phone-friendly editable version, test it on an ordinary phone or local printer and include one filled example with made-up details. Show how to change a date, name or quantity in the weekly homework and project planner without breaking the layout. Do not imply that you speak for the school or have copied its notices. Keep the first weekly homework and project planner version small; the questions buyers ask after using it will show you what deserves an update.",
+      "who_pays_you": "Parents of school children pay you when a dense layout makes another chore for a tired parent. You ask parents which class notices they repeatedly miss. Show a sample of weekly homework and project planner with no private information from another buyer. Some buyers will want the ready weekly homework and project planner; others will ask you to set it up for them. Keep those two weekly homework and project planner offers clear so a simple purchase does not turn into hours of personal support.",
+      "how_money_comes": "You sell a reusable file with an optional personalised school-term setup. Set one price for the finished weekly homework and project planner and a separate fee if you enter a buyer's details or teach them how to use it. Count the design, testing and delivery time for weekly homework and project planner, including support messages. State whether later versions are included. This weekly homework and project planner can sell again, but a confused buyer still takes your time; improve the instructions before accepting unlimited custom requests at the original price.",
+      "what_you_need": "You need legible type, a test print and simple update instructions, an original design and a way to test a printable sheet with a phone-friendly editable version as a buyer would. Name the weekly homework and project planner clearly and include short opening and print instructions. Use only text, images and fonts you have the right to sell in weekly homework and project planner. Keep real details belonging to parents of school children out of public samples. Do not imply that you speak for the school or have copied its notices.",
+      "first_30_days": [
+        "Ask parents how they currently track assignments and projects.",
+        "Make a one-week sheet with only the fields they actually use.",
+        "Print it cheaply and ask a family to try it at home.",
+        "Offer the tested file with a simple sample image and instructions.",
+        "Record which columns families ignore before adding another page."
+      ],
+      "what_hurts": "A dense layout makes another chore for a tired parent. Do not imply that you speak for the school or have copied its notices. Your weekly homework and project planner may look tidy on screen but print badly or break when edited. Some parents of school children may expect personal setup for the price of a ready download. Be clear about the limits of weekly homework and project planner, test common mistakes and offer a fair correction process. If a buyer cannot open weekly homework and project planner, a beautiful design will not solve the task they came with.",
+      "verdict": "Build this if you enjoy making a weekly homework and project planner and can test it with parents of school children before selling widely. Walk away if you have not tested a cheap print and a real family routine. A parent needs room to correct a date without redrawing the whole page.",
+      "faq": [
+        {
+          "q": "Should I include a school calendar?",
+          "a": "Use only dates you have permission to share and label the origin of any public dates outside the product copy if needed. A general planner can leave space for a family to enter its own term."
+        },
+        {
+          "q": "Will children fill this in themselves?",
+          "a": "Some will, while younger children may need a parent. Design a space that can be used together and test it with the age group you serve."
+        },
+        {
+          "q": "What if the school changes a deadline?",
+          "a": "The family should be able to edit or write a new date easily. Do not make a static design so pretty that correcting it feels difficult."
+        }
+      ],
+      "validate_prompt": "I want to sell a printable homework planner to Indian families. How do I test the layout and make deadline changes easy?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "village",
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S09-I02",
+      "slug": "wedding-family-guest-list-file",
+      "title": "Wedding Family Guest List File",
+      "hook": "Three relatives have different guest counts, and the caterer needs a final number this evening.",
+      "summary": "You make a shared guest list and RSVP tracker for families planning a wedding. It helps them reconcile names, households, meal counts and invitations. Offer an editable spreadsheet with a print view they can open and use. A sample of shared guest list and RSVP tracker shows editing, printing and included help before anyone pays.",
+      "what_it_is": "Three relatives have different guest counts, and the caterer needs a final number this evening. You design a shared guest list and RSVP tracker around this moment and watch someone try it. The buyer needs to reconcile names, households, meal counts and invitations, so keep the main action visible. Build an editable spreadsheet with a print view, test it on an ordinary phone or local printer and include one filled example with made-up details. Show how to change a date, name or quantity in the shared guest list and RSVP tracker without breaking the layout. The family owns invitations and personal contact data, not you. Keep the first shared guest list and RSVP tracker version small; the questions buyers ask after using it will show you what deserves an update.",
+      "who_pays_you": "Families planning a wedding pay you when too many editors can overwrite a confirmed response. You ask a family organiser where duplicate names appear. Show a sample of shared guest list and RSVP tracker with no private information from another buyer. Some buyers will want the ready shared guest list and RSVP tracker; others will ask you to set it up for them. Keep those two shared guest list and RSVP tracker offers clear so a simple purchase does not turn into hours of personal support.",
+      "how_money_comes": "You sell a general template or charge for one guided setup. Set one price for the finished shared guest list and RSVP tracker and a separate fee if you enter a buyer's details or teach them how to use it. Count the design, testing and delivery time for shared guest list and RSVP tracker, including support messages. State whether later versions are included. This shared guest list and RSVP tracker can sell again, but a confused buyer still takes your time; improve the instructions before accepting unlimited custom requests at the original price.",
+      "what_you_need": "You need clear status labels, protected formulas and a sample with fictional names, an original design and a way to test an editable spreadsheet with a print view as a buyer would. Name the shared guest list and RSVP tracker clearly and include short opening and print instructions. Use only text, images and fonts you have the right to sell in shared guest list and RSVP tracker. Keep real details belonging to families planning a wedding out of public samples. The family owns invitations and personal contact data, not you.",
+      "first_30_days": [
+        "Map how one family collects names and RSVPs.",
+        "Build a sample with households, status and meal count.",
+        "Test duplicate names and changed attendance in a copy.",
+        "Show a paid template or a separately priced setup session.",
+        "Check that a printed final list matches the live count."
+      ],
+      "what_hurts": "Too many editors can overwrite a confirmed response. The family owns invitations and personal contact data, not you. Your shared guest list and RSVP tracker may look tidy on screen but print badly or break when edited. Some families planning a wedding may expect personal setup for the price of a ready download. Be clear about the limits of shared guest list and RSVP tracker, test common mistakes and offer a fair correction process. If a buyer cannot open shared guest list and RSVP tracker, a beautiful design will not solve the task they came with.",
+      "verdict": "Build this if you enjoy making a shared guest list and RSVP tracker and can test it with families planning a wedding before selling widely. Walk away if you cannot keep guest names private or control final edits. A family may make a catering decision from the count you help them see.",
+      "faq": [
+        {
+          "q": "Can everyone in the family edit it?",
+          "a": "Decide who can change the master list and who can only view it. Several unrestricted editors can undo a confirmed response during a busy week."
+        },
+        {
+          "q": "Can I enter guest phone numbers?",
+          "a": "Only with the family's permission and a clear reason. Store the file in their account where possible and remove your access when setup is finished."
+        },
+        {
+          "q": "Does this replace the caterer's final confirmation?",
+          "a": "No. The family must approve the final count and communicate it under the caterer's terms. The tracker makes the decision easier to check."
+        }
+      ],
+      "validate_prompt": "I want to sell a wedding guest list spreadsheet to Indian families. How should it handle duplicate households and final meal counts?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "village",
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S09-I03",
+      "slug": "kirana-evening-stock-sheet",
+      "title": "Kirana Evening Stock Sheet",
+      "hook": "The shopkeeper knows a product ran out yesterday but cannot find the note when the supplier calls.",
+      "summary": "You make a simple stock count and reorder sheet for small kirana shop owners. It helps them count fast-moving items and mark what needs ordering. Offer a printable tally with an optional spreadsheet they can open and use. A sample of simple stock count and reorder sheet shows editing, printing and included help before anyone pays.",
+      "what_it_is": "The shopkeeper knows a product ran out yesterday but cannot find the note when the supplier calls. You design a simple stock count and reorder sheet around this moment and watch someone try it. The buyer needs to count fast-moving items and mark what needs ordering, so keep the main action visible. Build a printable tally with an optional spreadsheet, test it on an ordinary phone or local printer and include one filled example with made-up details. Show how to change a date, name or quantity in the simple stock count and reorder sheet without breaking the layout. The owner chooses reorder quantities and verifies stock. Keep the first simple stock count and reorder sheet version small; the questions buyers ask after using it will show you what deserves an update.",
+      "who_pays_you": "Small kirana shop owners pay you when a wrong unit turns one carton into one loose packet. You watch a shopkeeper close the counter and note their counting routine. Show a sample of simple stock count and reorder sheet with no private information from another buyer. Some buyers will want the ready simple stock count and reorder sheet; others will ask you to set it up for them. Keep those two simple stock count and reorder sheet offers clear so a simple purchase does not turn into hours of personal support.",
+      "how_money_comes": "You sell a one-time file or custom product-code setup. Set one price for the finished simple stock count and reorder sheet and a separate fee if you enter a buyer's details or teach them how to use it. Count the design, testing and delivery time for simple stock count and reorder sheet, including support messages. State whether later versions are included. This simple stock count and reorder sheet can sell again, but a confused buyer still takes your time; improve the instructions before accepting unlimited custom requests at the original price.",
+      "what_you_need": "You need large printable rows, clear units and an example filled by hand, an original design and a way to test a printable tally with an optional spreadsheet as a buyer would. Name the simple stock count and reorder sheet clearly and include short opening and print instructions. Use only text, images and fonts you have the right to sell in simple stock count and reorder sheet. Keep real details belonging to small kirana shop owners out of public samples. The owner chooses reorder quantities and verifies stock.",
+      "first_30_days": [
+        "Watch a small shop count a few everyday items.",
+        "Draft one sheet with unit, count and reorder note.",
+        "Test it at a busy closing time with the owner.",
+        "Offer the file and quote custom item setup separately.",
+        "Revise confusing units before a second shop uses it."
+      ],
+      "what_hurts": "A wrong unit turns one carton into one loose packet. The owner chooses reorder quantities and verifies stock. Your simple stock count and reorder sheet may look tidy on screen but print badly or break when edited. Some small kirana shop owners may expect personal setup for the price of a ready download. Be clear about the limits of simple stock count and reorder sheet, test common mistakes and offer a fair correction process. If a buyer cannot open simple stock count and reorder sheet, a beautiful design will not solve the task they came with.",
+      "verdict": "Build this if you enjoy making a simple stock count and reorder sheet and can test it with small kirana shop owners before selling widely. Walk away if you cannot distinguish a loose item from a carton. One wrong unit can leave a shelf bare for days.",
+      "faq": [
+        {
+          "q": "Should I add automatic stock formulas?",
+          "a": "Only if the buyer uses a spreadsheet comfortably. A plain printable tally can be more reliable than a fragile formula in a shop that writes counts by hand."
+        },
+        {
+          "q": "Can one sheet fit every kirana?",
+          "a": "Use a general structure, then let the owner add local items and units. A custom product list is a separate service because each shop stocks different packs."
+        },
+        {
+          "q": "What if a count is wrong?",
+          "a": "The owner must check physical stock and decide what to order. Put an obvious unit field and a space for the count date to reduce confusion."
+        }
+      ],
+      "validate_prompt": "I want to make a printable stock sheet for Indian kirana owners. Which fields and unit checks matter most in a first version?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "village",
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S09-I04",
+      "slug": "monthly-household-bill-calendar",
+      "title": "Monthly Household Bill Calendar",
+      "hook": "A bill arrives after its due date because the reminder sat in one person's phone.",
+      "summary": "You make a household bill and due-date calendar for families sharing monthly expenses. It helps them see recurring due dates and mark what has been paid. Offer a printable wall page and editable phone file they can open and use. A sample of household bill and due-date calendar shows editing, printing and included help before anyone pays.",
+      "what_it_is": "A bill arrives after its due date because the reminder sat in one person's phone. You design a household bill and due-date calendar around this moment and watch someone try it. The buyer needs to see recurring due dates and mark what has been paid, so keep the main action visible. Build a printable wall page and editable phone file, test it on an ordinary phone or local printer and include one filled example with made-up details. Show how to change a date, name or quantity in the household bill and due-date calendar without breaking the layout. Do not ask buyers to enter passwords or account credentials. Keep the first household bill and due-date calendar version small; the questions buyers ask after using it will show you what deserves an update.",
+      "who_pays_you": "Families sharing monthly expenses pay you when a template cannot guarantee a payment or prevent a late fee. You ask households how they remember rent, utilities and school fees. Show a sample of household bill and due-date calendar with no private information from another buyer. Some buyers will want the ready household bill and due-date calendar; others will ask you to set it up for them. Keep those two household bill and due-date calendar offers clear so a simple purchase does not turn into hours of personal support.",
+      "how_money_comes": "You sell a reusable monthly template with a separate custom setup option. Set one price for the finished household bill and due-date calendar and a separate fee if you enter a buyer's details or teach them how to use it. Count the design, testing and delivery time for household bill and due-date calendar, including support messages. State whether later versions are included. This household bill and due-date calendar can sell again, but a confused buyer still takes your time; improve the instructions before accepting unlimited custom requests at the original price.",
+      "what_you_need": "You need large date boxes, a simple status key and no bank login fields, an original design and a way to test a printable wall page and editable phone file as a buyer would. Name the household bill and due-date calendar clearly and include short opening and print instructions. Use only text, images and fonts you have the right to sell in household bill and due-date calendar. Keep real details belonging to families sharing monthly expenses out of public samples. Do not ask buyers to enter passwords or account credentials.",
+      "first_30_days": [
+        "Ask families which due dates slip through the cracks.",
+        "Make a one-page calendar with bill, date and paid status.",
+        "Test it with a family using only fictional amounts.",
+        "Sell the file with a clear privacy and update note.",
+        "Ask whether the reminders were visible in an ordinary week."
+      ],
+      "what_hurts": "A template cannot guarantee a payment or prevent a late fee. Do not ask buyers to enter passwords or account credentials. Your household bill and due-date calendar may look tidy on screen but print badly or break when edited. Some families sharing monthly expenses may expect personal setup for the price of a ready download. Be clear about the limits of household bill and due-date calendar, test common mistakes and offer a fair correction process. If a buyer cannot open household bill and due-date calendar, a beautiful design will not solve the task they came with.",
+      "verdict": "Build this if you enjoy making a household bill and due-date calendar and can test it with families sharing monthly expenses before selling widely. Walk away if you are asked to store account passwords or promise payments. A visible reminder is useful only when the household can maintain it.",
+      "faq": [
+        {
+          "q": "Should it include actual bill amounts?",
+          "a": "Make amount optional. Some households may want the due date only, especially if the page hangs in a shared space. Never require credentials or account access."
+        },
+        {
+          "q": "Can I call this financial advice?",
+          "a": "No. It is an organisation tool. Buyers remain responsible for checking bills, paying them and choosing what to prioritise. It leaves those choices with the household."
+        },
+        {
+          "q": "Will a printable page be enough?",
+          "a": "Some families prefer a visible wall page; others need phone reminders. Test both and explain what each version can and cannot do."
+        }
+      ],
+      "validate_prompt": "I want to sell a household bill calendar in India. How should I design it for shared use without collecting sensitive account details?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "village",
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S09-I05",
+      "slug": "meal-preparation-shopping-board",
+      "title": "Weekly Meal Shopping Board",
+      "hook": "It is six in the evening and nobody remembers whether there is enough dal for tomorrow.",
+      "summary": "You make a meal plan and shopping board for busy households and flatmates. It helps them plan a few meals and turn missing ingredients into one shop list. Offer a fridge-friendly printable with an editable copy they can open and use. A sample of meal plan and shopping board shows editing, printing and included help before anyone pays.",
+      "what_it_is": "It is six in the evening and nobody remembers whether there is enough dal for tomorrow. You design a meal plan and shopping board around this moment and watch someone try it. The buyer needs to plan a few meals and turn missing ingredients into one shop list, so keep the main action visible. Build a fridge-friendly printable with an editable copy, test it on an ordinary phone or local printer and include one filled example with made-up details. Show how to change a date, name or quantity in the meal plan and shopping board without breaking the layout. Do not present the board as a medical diet plan. Keep the first meal plan and shopping board version small; the questions buyers ask after using it will show you what deserves an update.",
+      "who_pays_you": "Busy households and flatmates pay you when a rigid plan can feel like more work than cooking. You ask home cooks which ingredients they buy twice or forget. Show a sample of meal plan and shopping board with no private information from another buyer. Some buyers will want the ready meal plan and shopping board; others will ask you to set it up for them. Keep those two meal plan and shopping board offers clear so a simple purchase does not turn into hours of personal support.",
+      "how_money_comes": "You sell a small reusable file, not an elaborate diet programme. Set one price for the finished meal plan and shopping board and a separate fee if you enter a buyer's details or teach them how to use it. Count the design, testing and delivery time for meal plan and shopping board, including support messages. State whether later versions are included. This meal plan and shopping board can sell again, but a confused buyer still takes your time; improve the instructions before accepting unlimited custom requests at the original price.",
+      "what_you_need": "You need large writing space, a test print and familiar food examples, an original design and a way to test a fridge-friendly printable with an editable copy as a buyer would. Name the meal plan and shopping board clearly and include short opening and print instructions. Use only text, images and fonts you have the right to sell in meal plan and shopping board. Keep real details belonging to busy households and flatmates out of public samples. Do not present the board as a medical diet plan.",
+      "first_30_days": [
+        "Ask a cook to show how they decide meals for three days.",
+        "Build a small board with meals, pantry check and list.",
+        "Test it on a fridge and in a phone file.",
+        "Offer the file with a sample week using ordinary dishes.",
+        "Remove fields that people leave blank repeatedly."
+      ],
+      "what_hurts": "A rigid plan can feel like more work than cooking. Do not present the board as a medical diet plan. Your meal plan and shopping board may look tidy on screen but print badly or break when edited. Some busy households and flatmates may expect personal setup for the price of a ready download. Be clear about the limits of meal plan and shopping board, test common mistakes and offer a fair correction process. If a buyer cannot open meal plan and shopping board, a beautiful design will not solve the task they came with.",
+      "verdict": "Build this if you enjoy making a meal plan and shopping board and can test it with busy households and flatmates before selling widely. Walk away if you want to prescribe a medical diet without qualifications. The board should help dinner, not add another burden.",
+      "faq": [
+        {
+          "q": "Can I include recipes?",
+          "a": "You can add your own simple examples with clear quantities, but a shopping board need not become a cookbook. Avoid copying someone else's recipes or photographs."
+        },
+        {
+          "q": "Will it suit special diets?",
+          "a": "Keep the board flexible and let the household choose meals. Do not make medical nutrition claims. A dietitian or clinician should advise on health conditions."
+        },
+        {
+          "q": "Should I sell a weekly new version?",
+          "a": "First see whether buyers need one reusable sheet. Regular content takes ongoing work and should be offered only when there is a clear reason to renew."
+        }
+      ],
+      "validate_prompt": "I want to sell a printable weekly meal and shopping board for Indian households. How can I test it during a real grocery trip?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "village",
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S09-I06",
+      "slug": "apartment-repair-log-template",
+      "title": "Apartment Repair Log Template",
+      "hook": "The society committee hears the lift complaint again, but nobody can see who called the technician.",
+      "summary": "You make a repair request and follow-up log for apartment society committees. It helps them record issue, urgency, assigned person and resolution. Offer a shared spreadsheet with a printable weekly view they can open and use. A sample of repair request and follow-up log shows editing, printing and included help before anyone pays.",
+      "what_it_is": "The society committee hears the lift complaint again, but nobody can see who called the technician. You design a repair request and follow-up log around this moment and watch someone try it. The buyer needs to record issue, urgency, assigned person and resolution, so keep the main action visible. Build a shared spreadsheet with a printable weekly view, test it on an ordinary phone or local printer and include one filled example with made-up details. Show how to change a date, name or quantity in the repair request and follow-up log without breaking the layout. The committee decides spending and emergency escalation. Keep the first repair request and follow-up log version small; the questions buyers ask after using it will show you what deserves an update.",
+      "who_pays_you": "Apartment society committees pay you when private resident details can leak through an open shared link. You ask a committee how complaints arrive and who approves repairs. Show a sample of repair request and follow-up log with no private information from another buyer. Some buyers will want the ready repair request and follow-up log; others will ask you to set it up for them. Keep those two repair request and follow-up log offers clear so a simple purchase does not turn into hours of personal support.",
+      "how_money_comes": "You sell a reusable file or a paid setup for one society. Set one price for the finished repair request and follow-up log and a separate fee if you enter a buyer's details or teach them how to use it. Count the design, testing and delivery time for repair request and follow-up log, including support messages. State whether later versions are included. This repair request and follow-up log can sell again, but a confused buyer still takes your time; improve the instructions before accepting unlimited custom requests at the original price.",
+      "what_you_need": "You need status definitions, protected contact fields and a simple handover guide, an original design and a way to test a shared spreadsheet with a printable weekly view as a buyer would. Name the repair request and follow-up log clearly and include short opening and print instructions. Use only text, images and fonts you have the right to sell in repair request and follow-up log. Keep real details belonging to apartment society committees out of public samples. The committee decides spending and emergency escalation.",
+      "first_30_days": [
+        "Ask a committee to map one repair from report to closure.",
+        "Create a test log with fictional flats and status changes.",
+        "Check who may edit and who may only view the file.",
+        "Offer a paid setup with a short handover session.",
+        "Review whether unresolved items remain visible after a week."
+      ],
+      "what_hurts": "Private resident details can leak through an open shared link. The committee decides spending and emergency escalation. Your repair request and follow-up log may look tidy on screen but print badly or break when edited. Some apartment society committees may expect personal setup for the price of a ready download. Be clear about the limits of repair request and follow-up log, test common mistakes and offer a fair correction process. If a buyer cannot open repair request and follow-up log, a beautiful design will not solve the task they came with.",
+      "verdict": "Build this if you enjoy making a repair request and follow-up log and can test it with apartment society committees before selling widely. Walk away if the committee cannot protect resident details in a shared file. A neighbour deserves an answer without exposing a private complaint.",
+      "faq": [
+        {
+          "q": "Can residents edit the log directly?",
+          "a": "A separate intake form may be safer than open editing. Let the committee decide access and avoid exposing resident numbers or private descriptions to everyone."
+        },
+        {
+          "q": "Does this replace emergency calls?",
+          "a": "No. Show an urgent contact and escalation path outside the ordinary log. The file helps track work but does not respond to a dangerous failure by itself."
+        },
+        {
+          "q": "Can I manage the requests too?",
+          "a": "That is a separate service with defined hours and authority. Selling the template alone does not mean you will monitor it every day."
+        }
+      ],
+      "validate_prompt": "I want to sell a society repair tracking sheet in India. What access controls and urgent escalation note should it include?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "village",
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S09-I07",
+      "slug": "interview-practice-answer-cards",
+      "title": "Interview Practice Answer Cards",
+      "hook": "Your younger brother knows his work but freezes when someone asks him to explain a project.",
+      "summary": "You make editable interview practice cards for students and first-job applicants. It helps them prepare honest stories about their own work and questions to ask. Offer printable prompt cards with a fillable phone version they can open and use. A sample of editable interview practice cards shows editing, printing and included help before anyone pays.",
+      "what_it_is": "Your younger brother knows his work but freezes when someone asks him to explain a project. You design editable interview practice cards around this moment and watch someone try it. The buyer needs to prepare honest stories about their own work and questions to ask, so keep the main action visible. Build printable prompt cards with a fillable phone version, test it on an ordinary phone or local printer and include one filled example with made-up details. Show how to change a date, name or quantity in the editable interview practice cards without breaking the layout. Do not promise a job or write false experience for a candidate. Keep the first editable interview practice cards version small; the questions buyers ask after using it will show you what deserves an update.",
+      "who_pays_you": "Students and first-job applicants pay you when a buyer may memorise a polished answer that sounds unlike them. You test with graduates preparing for entry-level interviews. Show a sample of editable interview practice cards with no private information from another buyer. Some buyers will want the ready editable interview practice cards; others will ask you to set it up for them. Keep those two editable interview practice cards offers clear so a simple purchase does not turn into hours of personal support.",
+      "how_money_comes": "You sell a general prompt set with optional feedback as a separate service. Set one price for the finished editable interview practice cards and a separate fee if you enter a buyer's details or teach them how to use it. Count the design, testing and delivery time for editable interview practice cards, including support messages. State whether later versions are included. This editable interview practice cards can sell again, but a confused buyer still takes your time; improve the instructions before accepting unlimited custom requests at the original price.",
+      "what_you_need": "You need plain language, readable cards and examples that do not invent experience, an original design and a way to test printable prompt cards with a fillable phone version as a buyer would. Name the editable interview practice cards clearly and include short opening and print instructions. Use only text, images and fonts you have the right to sell in editable interview practice cards. Keep real details belonging to students and first-job applicants out of public samples. Do not promise a job or write false experience for a candidate.",
+      "first_30_days": [
+        "Ask job seekers which questions make them pause.",
+        "Write prompts that draw out real projects and choices.",
+        "Test a small set aloud with one willing student.",
+        "Offer the cards with clear examples and usage rights.",
+        "Observe which prompts help without making answers sound scripted."
+      ],
+      "what_hurts": "A buyer may memorise a polished answer that sounds unlike them. Do not promise a job or write false experience for a candidate. Your editable interview practice cards may look tidy on screen but print badly or break when edited. Some students and first-job applicants may expect personal setup for the price of a ready download. Be clear about the limits of editable interview practice cards, test common mistakes and offer a fair correction process. If a buyer cannot open editable interview practice cards, a beautiful design will not solve the task they came with.",
+      "verdict": "Build this if you enjoy making editable interview practice cards and can test it with students and first-job applicants before selling widely. Walk away if you plan to write a candidate a false work story. The candidate still has to sound like themselves.",
+      "faq": [
+        {
+          "q": "Should I include model answers?",
+          "a": "Use short examples that show structure, not words a candidate should copy. The useful answer comes from their own project, decision and learning."
+        },
+        {
+          "q": "Can I guarantee interview success?",
+          "a": "No. The cards help preparation and clear recall. Hiring depends on skills, role fit and the interview process, so promise only the practice tool you deliver."
+        },
+        {
+          "q": "Can teachers reuse the cards?",
+          "a": "State whether the purchase is for one person or a class. You can offer a separate classroom licence or group pack if teachers ask for it."
+        }
+      ],
+      "validate_prompt": "I want to sell interview practice cards to Indian students. How can they help honest answers without becoming scripts?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "village",
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S09-I08",
+      "slug": "teacher-reading-flashcard-printables",
+      "title": "Early Reading Flashcard Printables",
+      "hook": "A teacher wants one more reading game, but the downloaded cards are tiny and confusing when printed.",
+      "summary": "You make large, simple reading flashcards for early-grade teachers and parents. It helps them practise a small set of familiar words through play. Offer printer-friendly pages with cutting and use notes they can open and use. A sample of large, simple reading flashcards shows editing, printing and included help before anyone pays.",
+      "what_it_is": "A teacher wants one more reading game, but the downloaded cards are tiny and confusing when printed. You design large, simple reading flashcards around this moment and watch someone try it. The buyer needs to practise a small set of familiar words through play, so keep the main action visible. Build printer-friendly pages with cutting and use notes, test it on an ordinary phone or local printer and include one filled example with made-up details. Show how to change a date, name or quantity in the large, simple reading flashcards without breaking the layout. Do not copy textbook pages or claim a learning outcome for every child. Keep the first large, simple reading flashcards version small; the questions buyers ask after using it will show you what deserves an update.",
+      "who_pays_you": "Early-grade teachers and parents pay you when small text and busy images can frustrate a new reader. You ask teachers which word groups their pupils need. Show a sample of large, simple reading flashcards with no private information from another buyer. Some buyers will want the ready large, simple reading flashcards; others will ask you to set it up for them. Keep those two large, simple reading flashcards offers clear so a simple purchase does not turn into hours of personal support.",
+      "how_money_comes": "You sell a tested printable set with separate classroom-use terms. Set one price for the finished large, simple reading flashcards and a separate fee if you enter a buyer's details or teach them how to use it. Count the design, testing and delivery time for large, simple reading flashcards, including support messages. State whether later versions are included. This large, simple reading flashcards can sell again, but a confused buyer still takes your time; improve the instructions before accepting unlimited custom requests at the original price.",
+      "what_you_need": "You need legible type, child-safe use directions and a cheap print test, an original design and a way to test printer-friendly pages with cutting and use notes as a buyer would. Name the large, simple reading flashcards clearly and include short opening and print instructions. Use only text, images and fonts you have the right to sell in large, simple reading flashcards. Keep real details belonging to early-grade teachers and parents out of public samples. Do not copy textbook pages or claim a learning outcome for every child.",
+      "first_30_days": [
+        "Ask an early-grade teacher about one reading difficulty.",
+        "Make a small original word set with a clear print scale.",
+        "Print it at a local shop and cut out the cards.",
+        "Test a game with a teacher and revise unclear prompts.",
+        "Sell the set with classroom usage and print instructions."
+      ],
+      "what_hurts": "Small text and busy images can frustrate a new reader. Do not copy textbook pages or claim a learning outcome for every child. Your large, simple reading flashcards may look tidy on screen but print badly or break when edited. Some early-grade teachers and parents may expect personal setup for the price of a ready download. Be clear about the limits of large, simple reading flashcards, test common mistakes and offer a fair correction process. If a buyer cannot open large, simple reading flashcards, a beautiful design will not solve the task they came with.",
+      "verdict": "Build this if you enjoy making large, simple reading flashcards and can test it with early-grade teachers and parents before selling widely. Walk away if you rely on copied textbook images or untested print size. A child needs a card they can actually read.",
+      "faq": [
+        {
+          "q": "Can I use pictures from a textbook?",
+          "a": "Create your own images or use assets with clear commercial rights. A small edit to a textbook illustration does not make it yours."
+        },
+        {
+          "q": "Will every child learn from the same set?",
+          "a": "No. Teachers and parents can choose cards that suit the learner and pace. Make the activity flexible and avoid a guaranteed learning claim."
+        },
+        {
+          "q": "What paper should buyers use?",
+          "a": "Give practical print guidance and test an ordinary inexpensive print. Do not make a file that works only with special materials unavailable to many families."
+        }
+      ],
+      "validate_prompt": "I want to sell early reading flashcard printables in India. How should I test print size, originality and classroom use?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "village",
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S09-I09",
+      "slug": "festival-family-task-checklist",
+      "title": "Festival Family Task Checklist",
+      "hook": "Relatives arrive tonight, and the one person organising everything cannot remember who is bringing plates.",
+      "summary": "You make a shared festival preparation checklist for families hosting at home. It helps them divide shopping, cooking and guest tasks without repeated calls. Offer a printable page plus a simple editable list they can open and use. A sample of shared festival preparation checklist shows editing, printing and included help before anyone pays.",
+      "what_it_is": "Relatives arrive tonight, and the one person organising everything cannot remember who is bringing plates. You design a shared festival preparation checklist around this moment and watch someone try it. The buyer needs to divide shopping, cooking and guest tasks without repeated calls, so keep the main action visible. Build a printable page plus a simple editable list, test it on an ordinary phone or local printer and include one filled example with made-up details. Show how to change a date, name or quantity in the shared festival preparation checklist without breaking the layout. Let each family adapt the tasks to its own customs and budget. Keep the first shared festival preparation checklist version small; the questions buyers ask after using it will show you what deserves an update.",
+      "who_pays_you": "Families hosting at home pay you when a long list can make a celebration feel like an office project. You ask families what gets forgotten before a gathering. Show a sample of shared festival preparation checklist with no private information from another buyer. Some buyers will want the ready shared festival preparation checklist; others will ask you to set it up for them. Keep those two shared festival preparation checklist offers clear so a simple purchase does not turn into hours of personal support.",
+      "how_money_comes": "You sell a seasonal template with optional language variants. Set one price for the finished shared festival preparation checklist and a separate fee if you enter a buyer's details or teach them how to use it. Count the design, testing and delivery time for shared festival preparation checklist, including support messages. State whether later versions are included. This shared festival preparation checklist can sell again, but a confused buyer still takes your time; improve the instructions before accepting unlimited custom requests at the original price.",
+      "what_you_need": "You need clear roles, large print and an example with familiar errands, an original design and a way to test a printable page plus a simple editable list as a buyer would. Name the shared festival preparation checklist clearly and include short opening and print instructions. Use only text, images and fonts you have the right to sell in shared festival preparation checklist. Keep real details belonging to families hosting at home out of public samples. Let each family adapt the tasks to its own customs and budget.",
+      "first_30_days": [
+        "Ask a host which last-day errands are often missed.",
+        "Build a one-page list with task, person and due time.",
+        "Try it during a small gathering before a major festival.",
+        "Offer a printable and phone version with clear instructions.",
+        "Remove tasks that impose a particular household traditions."
+      ],
+      "what_hurts": "A long list can make a celebration feel like an office project. Let each family adapt the tasks to its own customs and budget. Your shared festival preparation checklist may look tidy on screen but print badly or break when edited. Some families hosting at home may expect personal setup for the price of a ready download. Be clear about the limits of shared festival preparation checklist, test common mistakes and offer a fair correction process. If a buyer cannot open shared festival preparation checklist, a beautiful design will not solve the task they came with.",
+      "verdict": "Build this if you enjoy making a shared festival preparation checklist and can test it with families hosting at home before selling widely. Walk away if you cannot leave room for different household customs. The host should feel helped rather than judged.",
+      "faq": [
+        {
+          "q": "Can it work for every festival?",
+          "a": "Make the core list flexible and let families add their own rituals and food. A generic checklist should not pretend one household's practice fits everyone."
+        },
+        {
+          "q": "Should I include a budget column?",
+          "a": "Make it optional. Some hosts want to track spending, while others only need responsibility and timing. A shared sheet may be visible to relatives."
+        },
+        {
+          "q": "Can buyers share the file with their whole family?",
+          "a": "Yes, if your licence allows household use; say so plainly. A file meant for a family should be easy to share among the people doing the work."
+        }
+      ],
+      "validate_prompt": "I want to sell a festival preparation checklist for Indian households. How can I make it useful without prescribing one family's customs?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "village",
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C001-S09-I10",
+      "slug": "freelance-project-handover-template",
+      "title": "Freelance Project Handover Template",
+      "hook": "The client asks where the final logo file is, and the freelancer is searching through weeks of messages.",
+      "summary": "You make a client project handover file for solo designers and writers. It helps them list deliverables, approved versions and next steps. Offer an editable document with a clear folder index they can open and use. A sample of client project handover file shows editing, printing and included help before anyone pays.",
+      "what_it_is": "The client asks where the final logo file is, and the freelancer is searching through weeks of messages. You design a client project handover file around this moment and watch someone try it. The buyer needs to list deliverables, approved versions and next steps, so keep the main action visible. Build an editable document with a clear folder index, test it on an ordinary phone or local printer and include one filled example with made-up details. Show how to change a date, name or quantity in the client project handover file without breaking the layout. The freelancer must state their own usage and ownership terms. Keep the first client project handover file version small; the questions buyers ask after using it will show you what deserves an update.",
+      "who_pays_you": "Solo designers and writers pay you when an unclear licence or missing file can reopen a finished project. You ask freelancers what clients request after delivery. Show a sample of client project handover file with no private information from another buyer. Some buyers will want the ready client project handover file; others will ask you to set it up for them. Keep those two client project handover file offers clear so a simple purchase does not turn into hours of personal support.",
+      "how_money_comes": "You sell a reusable template or customise it for one studio. Set one price for the finished client project handover file and a separate fee if you enter a buyer's details or teach them how to use it. Count the design, testing and delivery time for client project handover file, including support messages. State whether later versions are included. This client project handover file can sell again, but a confused buyer still takes your time; improve the instructions before accepting unlimited custom requests at the original price.",
+      "what_you_need": "You need version labels, simple instructions and a sample with fictional work, an original design and a way to test an editable document with a clear folder index as a buyer would. Name the client project handover file clearly and include short opening and print instructions. Use only text, images and fonts you have the right to sell in client project handover file. Keep real details belonging to solo designers and writers out of public samples. The freelancer must state their own usage and ownership terms.",
+      "first_30_days": [
+        "Ask freelancers which handover questions return after payment.",
+        "Make a sample index of files, versions and approved uses.",
+        "Test whether a new client can locate the final deliverable.",
+        "Offer the template with a separate custom setup quote.",
+        "Improve the guide using real follow-up questions."
+      ],
+      "what_hurts": "An unclear licence or missing file can reopen a finished project. The freelancer must state their own usage and ownership terms. Your client project handover file may look tidy on screen but print badly or break when edited. Some solo designers and writers may expect personal setup for the price of a ready download. Be clear about the limits of client project handover file, test common mistakes and offer a fair correction process. If a buyer cannot open client project handover file, a beautiful design will not solve the task they came with.",
+      "verdict": "Build this if you enjoy making a client project handover file and can test it with solo designers and writers before selling widely. Walk away if you intend to state a licence the freelancer has not approved. A client should know exactly which finished file belongs to them.",
+      "faq": [
+        {
+          "q": "Can I include a standard copyright clause?",
+          "a": "The freelancer should choose terms suited to their work and get advice if needed. Your file can leave a clear place for their approved licence, not invent one."
+        },
+        {
+          "q": "Should the template include all working files?",
+          "a": "No. It should help the freelancer list what the contract actually includes. Final files, editable files and working drafts may have different agreed treatment."
+        },
+        {
+          "q": "Can a client edit the handover document?",
+          "a": "Decide who owns the final copy and whether changes are tracked. A read-only final version can help preserve the record of what was delivered."
+        }
+      ],
+      "validate_prompt": "I want to sell a project handover template to Indian freelancers. How should it clarify deliverables and avoid inventing usage rights?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "village",
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    }
+  ]
+}
