@@ -196,7 +196,7 @@ textarea:focus{outline:none;border-color:var(--navy);border-style:solid;box-shad
     <p class="qhint">No need to find the tile. Every idea line carries its own code, so the reply is saved to the right subcategory by itself, even if you lost track of which prompt it came from.</p>
     <textarea id="qpaste" aria-label="Paste any reply" placeholder="Paste a reply from any chat."></textarea>
     <div class="sum" id="qsum"></div>
-    <div class="redo" id="qredo" hidden><b id="qredoT"></b><textarea id="qredoX" readonly aria-label="Message to send back"></textarea><div><button class="btn sm" id="qredoC" type="button"><svg class="i"><use href="#i-copy"/></svg>Copy message</button></div></div>
+    <div class="redo" id="qredo" hidden><b id="qredoT"></b><textarea id="qredoX" readonly aria-label="Prompt to copy"></textarea><div><button class="btn sm" id="qredoC" type="button"><svg class="i"><use href="#i-copy"/></svg>Copy message</button></div></div>
     <div class="row"><button class="btn main" id="qsave" type="button" disabled><svg class="i"><use href="#i-save"/></svg><span id="qsaveT">Save</span></button><button class="btn sm" id="qnext" type="button"><svg class="i"><use href="#i-copy"/></svg>Copy "next" message</button><button class="btn sm" id="qclear" type="button">Clear</button></div>
     <div id="qmsg" hidden></div>
   </section>
@@ -418,11 +418,22 @@ $('q').addEventListener('input',function(){query=this.value;board();});
 
 // prompt for one subcategory
 function sub(code){ var c=D.cats[+code.slice(1,4)-1], i=+code.slice(6,8)-1; return {cat:c, s:c[2][i]}; }
-function promptFor(code){
-  var x=sub(code);
-  var block=['YOUR TASK','Category '+x.cat[0]+': '+x.cat[1]+' Business Ideas','Subcategory: '+code+' '+x.s[0]+' Business Ideas','Idea codes: '+code+'-I01 to '+code+'-I10','Who looks for this: '+x.s[1],'What they type in search: '+x.s[2],''].concat(state(code).s==='redo'?['REWRITE: the earlier versions of these ideas were too short and are being replaced. Write all 10 completely fresh. Every idea must be 700 to 1,500 words, with real detail in every field. Do not shorten the later ideas.','']:[]).concat(['Write the ideas now. Reply with the code block only.']).join('\n');
-  return D.rules.replace('{{BATCH}}',block);
-}
+// Each subcategory gets its own writing style, so the 1,000 pages do not read alike.
+var TONE=['calm and practical, like a mentor who has seen many beginners start','lively and encouraging, with short punchy sentences','story-led: small, real-looking scenes from the work','frank and a little blunt, warm underneath','neighbourly, full of local street and market flavour','curious: raise the questions a beginner would ask, then answer them','patient, like a teacher explaining to someone completely new','street-smart, like an experienced trader sharing what actually works','gentle and reassuring, for someone nervous about starting','energetic and ambitious, for someone who wants to grow fast'];
+var INTRO=['open what_it_is with an ordinary hour of the working day','open what_it_is with the customer\'s problem in their own words','open what_it_is with the place where the work happens: a room, a street, a stall, a phone','open what_it_is with the first order and how it reaches the reader','open what_it_is with what the customer gets in their hands at the end','open what_it_is with the one skill that matters most here','open what_it_is with how this differs from the usual way people solve this today','open what_it_is with the season, festival or time of month when the need is sharpest','open what_it_is with the tools laid out before work starts','open what_it_is with the reader\'s own situation: free hours, home, phone'];
+var OUTRO=['end the verdict on the kind of person who should not start this','end the verdict on the one habit that decides success','end the verdict on a small first test the reader can run this week','end the verdict on how this grows in a second year','end the verdict on the honest trade-off the reader is accepting','end the verdict on who this suits best, in one clear picture','end the verdict on what to watch in the first month to know if it is working','end the verdict on a plain yes, no or maybe and why','end the verdict on the mistake most beginners make here','end the verdict on how it fits around family, studies or a job'];
+var BODY=['use concrete examples of real customer types in every section','show cause and effect: if you do this, that happens','give each section one vivid detail nobody else would think of','compare two ways of doing it in the money and customer sections','write the hard parts as situations the reader will meet, not as a list','keep sentences short and add one practical tip in every section','follow one imaginary first customer through the money section','mention the local words people actually use for this work','show the week rhythm: busy days, quiet days, how money moves','speak to two kinds of readers (for example a student and a homemaker) where it fits'];
+// The four mixes give all 1,000 subcategories a different combination, and side-by-side subcategories differ on every line.
+function styleFor(code){ var c=+code.slice(1,4), k=+code.slice(6,8), t=Math.floor(c/10), u=Math.floor(c/7);
+  return ['WRITING STYLE FOR THIS SUBCATEGORY (it must read differently from other subcategories)','- Tone: '+TONE[(7*c+k+6*t+6*u)%10]+'.','- Intros: '+INTRO[(6*c+k+2*t)%10]+'.','- Body: '+BODY[(5*c+9*k+3*t+3*u)%10]+'.','- Outro: '+OUTRO[(c+9*k+9*t+5*u)%10]+'.','- Keep this style for all ideas here, but never repeat a sentence pattern from one idea to the next.'].join('\n'); }
+function taskBlock(code,only){ var x=sub(code);
+  return ['YOUR TASK','Category '+x.cat[0]+': '+x.cat[1]+' Business Ideas','Subcategory: '+code+' '+x.s[0]+' Business Ideas',
+    only?'Write ONLY these ideas, each a different business: '+only.join(', '):'Idea codes: '+code+'-I01 to '+code+'-I10',
+    'Who looks for this: '+x.s[1],'What they type in search: '+x.s[2],'',styleFor(code)].join('\n'); }
+function promptFor(code,only){ return D.rules.replace('{{BATCH}}',taskBlock(code,only)+'\n\nWrite the ideas now. Reply with the code block only.'); }
+// A full standalone prompt for ideas that came back short or broken: works in any chat or account.
+function fixPrompt(codes){ var g={}; codes.forEach(function(c){ var k=c.slice(0,8); (g[k]=g[k]||[]).push(c); });
+  return D.rules.replace('{{BATCH}}',Object.keys(g).sort().map(function(k){return taskBlock(k,g[k]);}).join('\n\n')+'\n\nWrite the ideas now. Reply with the code block only.'); }
 
 // panel
 function openPanel(code){
@@ -430,12 +441,12 @@ function openPanel(code){
   var root=$('panelRoot');
   root.innerHTML='<div class="scrim" id="scrim"><div class="panel" role="dialog" aria-modal="true" aria-labelledby="pt">'+
     '<div class="ph"><code>'+code+'</code><h2 id="pt">'+esc(x.s[0])+'</h2><span class="cn">'+esc(x.cat[1])+'</span><span id="pst"></span><button class="x" id="px" type="button" aria-label="Close">'+ic('x')+'</button></div>'+
-    (s.s==='redo'?'<div class="step"><div class="rnote"><b>'+ic('redo')+' Rewrite: '+s.sh.length+' live ideas here are under 700 words</b><span>Copy the prompt below into a new chat. When you save the new reply, it replaces the short ideas on the site. Ideas still under 700 words are refused, so nothing short gets through.</span></div></div>':'')+
+    (s.s==='redo'?'<div class="step"><div class="rnote"><b>'+ic('redo')+' Rewrite: '+s.sh.length+' live ideas here are under 700 words</b><span>Write all 10 from scratch. The prompt below is the same full prompt as every other tile, so use any chat, any account, any tool. Saving the new reply replaces the short ideas on the site. Ideas under 700 words are refused.</span></div></div>':'')+
     '<div class="step"><div class="sh"><span class="num">1</span>Copy the prompt</div>'+
       '<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><button class="btn main" id="pcopy" type="button">'+ic('copy')+'Copy prompt</button><span style="font-size:13px;color:var(--muted)">Writing with <b id="pw"></b></span></div>'+
       '<div class="links">'+TOOLS.map(function(t){return '<a href="'+t[1]+'" target="_blank" rel="noopener">'+esc(t[0])+ic('ext')+'</a>';}).join('')+'</div></div>'+
-    '<div class="step"><div class="sh"><span class="num">2</span>Paste the reply</div><div class="row"><button class="btn sm" id="pnextmsg" type="button">'+ic('copy')+'Copy "next" message</button><span class="hint">Send it to the same chat for the next ideas. It repeats the 700-word rule.</span></div><textarea id="ppaste" aria-label="Paste the reply" placeholder="Paste the whole reply here."></textarea><div class="sum" id="psum"></div><div class="lines" id="plines" hidden></div>'+
-      '<div class="redo" id="predo" hidden><b id="predoT"></b><textarea id="predoX" readonly aria-label="Message to send back"></textarea><div><button class="btn sm" id="predoC" type="button">'+ic('copy')+'Copy message</button></div></div></div>'+
+    '<div class="step"><div class="sh"><span class="num">2</span>Paste the reply</div><div class="row"><button class="btn sm" id="pnextmsg" type="button">'+ic('copy')+'Copy "next" message</button><span class="hint">Send it in the chat you are writing in, for the next ideas. It repeats the 700-word rule.</span></div><textarea id="ppaste" aria-label="Paste the reply" placeholder="Paste the whole reply here."></textarea><div class="sum" id="psum"></div><div class="lines" id="plines" hidden></div>'+
+      '<div class="redo" id="predo" hidden><b id="predoT"></b><textarea id="predoX" readonly aria-label="Prompt to copy"></textarea><div><button class="btn sm" id="predoC" type="button">'+ic('copy')+'Copy message</button></div></div></div>'+
     '<div class="step"><div class="sh"><span class="num">3</span>Save</div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn main" id="psave" type="button" disabled>'+ic('save')+'<span id="psaveT">Save</span></button></div><div id="pmsg" hidden></div></div>'+
   '</div></div>';
   $('pw').textContent=writer();
@@ -477,11 +488,7 @@ function analyse(txt){
   }
   var redo='';
   if(bad.length){
-    var sh=bad.filter(function(x){return x.kind==='short';}).map(function(x){return x.code;}), ot=bad.filter(function(x){return x.kind!=='short';}).map(function(x){return x.code;}), p=[];
-    if(sh.length) p.push('These ideas are too short. Rewrite them fuller, 700 to 1,500 words each, with real detail in every field: '+sh.join(', ')+'.');
-    if(ot.length) p.push('These lines were broken or cut off. Rewrite them completely: '+ot.join(', ')+'.');
-    p.push('Same format: one line per idea, fields separated by " | ", ending with | END, inside one code block and nothing else.');
-    redo=p.join(' ');
+    redo=fixPrompt(bad.map(function(x){return x.code;}));
   }
   return {cur:cur,good:good,bad:bad,groups:groups,html:html,redo:redo};
 }
@@ -507,11 +514,7 @@ function check(){
     d.querySelector('.t').textContent=x.ok?x.row.title:((x.title?x.title+' · ':'')+x.why); L.appendChild(d); });
   $('psave').disabled=!good.length; $('psaveT').textContent=good.length?'Save '+good.length+' ideas':'Save';
   if(bad.length){
-    var sh=bad.filter(function(x){return x.kind==='short';}).map(function(x){return x.code;}), ot=bad.filter(function(x){return x.kind!=='short';}).map(function(x){return x.code;}), p=[];
-    if(sh.length) p.push('These ideas are too short. Rewrite them fuller, 700 to 1,500 words each, with real detail in every field: '+sh.join(', ')+'.');
-    if(ot.length) p.push('These lines were broken or cut off. Rewrite them completely: '+ot.join(', ')+'.');
-    p.push('Same format: one line per idea, fields separated by " | ", ending with | END, inside one code block and nothing else.');
-    $('predoX').value=p.join(' '); $('predoT').textContent=bad.length+' to rewrite: send this to the same chat'; $('predo').hidden=false;
+    $('predoX').value=A.redo; $('predoT').textContent=bad.length+' short or broken: copy this full prompt into any chat, then paste the reply here'; $('predo').hidden=false;
   } else $('predo').hidden=true;
 }
 function pmsg(kind,html){ var m=$('pmsg'); if(!m) return; m.hidden=false; m.className='msg'+(kind==='warn'?' warn':''); m.innerHTML=html; }
@@ -525,8 +528,8 @@ function doSave(){
     var target=r.keys.length===1?r.keys[0]:code, s=state(target), nx=nextTodo(target);
     var wrong=r.keys.indexOf(code)<0?' (this reply belonged to '+r.keys.join(', ')+', so it was saved there)':'';
     if(s.s==='done') pmsg('', '<div class="done-box"><b>'+ic('check')+' Saved: '+esc(r.parts.join('; '))+wrong+'.</b>'+(nx?'<button class="btn main sm" id="pnext" type="button">Next: '+nx+ic('arrow')+'</button>':'')+'</div>');
-    else if(s.s==='redo') pmsg('warn','Saved: '+esc(r.parts.join('; '))+wrong+'. '+s.sh.length+' short ideas still to replace here. Copy the "next" message to the same chat and paste the reply.');
-    else pmsg('warn','Saved: '+esc(r.parts.join('; '))+wrong+'. Copy the "next" message to the same chat for the missing ideas and paste them here.');
+    else if(s.s==='redo') pmsg('warn','Saved: '+esc(r.parts.join('; '))+wrong+'. '+s.sh.length+' short ideas still to replace here. Copy the "next" message into the chat you are using, or copy the prompt again into any chat.');
+    else pmsg('warn','Saved: '+esc(r.parts.join('; '))+wrong+'. Copy the "next" message into the chat you are using, or copy the prompt again into any chat, and paste the reply here.');
     if(nx&&$('pnext')) $('pnext').addEventListener('click',function(){openPanel(nx);});
     refreshPanelStatus();
   },function(e){ pmsg('warn',errText(e)); $('psave').disabled=false; });
@@ -537,7 +540,7 @@ function qcheck(){
   var t=$('qpaste').value; try{localStorage.setItem('draft-quick',t);}catch(e){}
   qcur=analyse(t); $('qsum').innerHTML=qcur.html;
   $('qsave').disabled=!qcur.good.length; $('qsaveT').textContent=qcur.good.length?'Save '+qcur.good.length+' ideas':'Save';
-  if(qcur.redo){ $('qredoX').value=qcur.redo; $('qredoT').textContent=qcur.bad.length+' to rewrite: send this to the same chat'; $('qredo').hidden=false; } else $('qredo').hidden=true;
+  if(qcur.redo){ $('qredoX').value=qcur.redo; $('qredoT').textContent=qcur.bad.length+' short or broken: copy this full prompt into any chat, then paste the reply here'; $('qredo').hidden=false; } else $('qredo').hidden=true;
 }
 function qmsg(kind,html){ var m=$('qmsg'); m.hidden=false; m.className='msg'+(kind==='warn'?' warn':''); m.innerHTML=html; }
 $('qpaste').addEventListener('input',function(){ $('qmsg').hidden=true; qcheck(); });
