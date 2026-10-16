@@ -2,135 +2,233 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
 <style>
-/* Layout: one working column. Account + paste box on top, the check result under it, then the 100-category progress grid. */
+/* Layout: one calm column. 1) three stat tiles, 2) the paste card, 3) the batch map with filter tabs. Status is shown by colour + icon, never by numbers alone. */
 :root{
-  --bg:#f5f6f8; --surface:#ffffff; --fg:#16212c; --muted:#5a6672; --line:#d9dee4;
-  --accent:#b36a00; --accent-fg:#ffffff; --teal:#0d7372; --good:#1f7a3a; --good-soft:#e2f3e7; --bad:#b4232c; --bad-soft:#fbe4e5; --warn-soft:#fdf1d8;
-  --display:"Archivo","Helvetica Neue",Arial,sans-serif; --body:"IBM Plex Sans","Segoe UI",Roboto,Arial,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --bg:#f4f6f8; --surface:#ffffff; --sunk:#eef1f4; --fg:#111a22; --muted:#5d6b78; --line:#dde3e9;
+  --brand:#0f766e; --brand-fg:#ffffff; --brand-soft:#e0f2ef;
+  --ok:#15803d; --ok-soft:#dcfce7; --warn:#b45309; --warn-soft:#fef3c7; --bad:#b91c1c; --bad-soft:#fee2e2; --idle:#94a3b8; --idle-soft:#eef2f6;
+  --sans:"Plus Jakarta Sans","Segoe UI",Roboto,Arial,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#10161c;--surface:#18212a;--fg:#e7ecf1;--muted:#9aa7b3;--line:#2c3843;--accent:#f0a33a;--accent-fg:#1a1205;--teal:#5cc8c4;--good:#6fd08c;--good-soft:#163222;--bad:#ff8088;--bad-soft:#3d1a1d;--warn-soft:#3a2e12;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#10161c;--surface:#18212a;--fg:#e7ecf1;--muted:#9aa7b3;--line:#2c3843;--accent:#f0a33a;--accent-fg:#1a1205;--teal:#5cc8c4;--good:#6fd08c;--good-soft:#163222;--bad:#ff8088;--bad-soft:#3d1a1d;--warn-soft:#3a2e12;color-scheme:dark}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0d1216;--surface:#151c22;--sunk:#10161b;--fg:#e8eef3;--muted:#93a1ad;--line:#26313a;--brand:#2dd4bf;--brand-fg:#062420;--brand-soft:#123430;--ok:#4ade80;--ok-soft:#14301f;--warn:#fbbf24;--warn-soft:#3a2c0c;--bad:#f87171;--bad-soft:#3b1717;--idle:#64748b;--idle-soft:#1a232b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1216;--surface:#151c22;--sunk:#10161b;--fg:#e8eef3;--muted:#93a1ad;--line:#26313a;--brand:#2dd4bf;--brand-fg:#062420;--brand-soft:#123430;--ok:#4ade80;--ok-soft:#14301f;--warn:#fbbf24;--warn-soft:#3a2c0c;--bad:#f87171;--bad-soft:#3b1717;--idle:#64748b;--idle-soft:#1a232b;color-scheme:dark}
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--body);margin:0}
-.wrap{max-width:900px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:20px}
-h1{font:800 clamp(26px,5vw,36px)/1.1 var(--display);margin:0}
-h2{font:700 18px/1.2 var(--display);margin:0}
-.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:12px}
-.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-label{font-weight:600;font-size:14px}
-select,textarea{font:14px var(--body);border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);padding:10px}
-textarea{width:100%;min-height:180px;font:13px/1.45 var(--mono);resize:vertical}
-button{font:600 14px var(--body);border-radius:8px;padding:10px 14px;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--fg)}
-button.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
-button:disabled{opacity:.5;cursor:not-allowed}
-button:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
-.sum{display:flex;gap:8px;flex-wrap:wrap}
-.pill{font:500 13px/1 var(--mono);padding:6px 10px;border-radius:999px}
-.ok{background:var(--good-soft);color:var(--good)} .no{background:var(--bad-soft);color:var(--bad)} .info{background:var(--warn-soft);color:var(--fg)}
-.list{display:grid;gap:4px;max-height:280px;overflow:auto;font-size:13px}
-.item{display:grid;grid-template-columns:120px minmax(0,1fr);gap:8px;padding:4px 0;border-bottom:1px solid var(--line)}
-.item .c{font-family:var(--mono)}
-.item.bad .t{color:var(--bad)}
-.msg{font-size:14px;padding:10px 12px;border-radius:8px;background:var(--bg);border:1px solid var(--line)}
-.msg.good{border-color:var(--good)} .msg.badm{border-color:var(--bad)}
-.grid{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px}
-.cell{aspect-ratio:1/1;max-width:100%;border-radius:4px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:500 10px var(--mono);position:relative;overflow:hidden;background:var(--bg)}
-.cell span{position:relative;z-index:1}
-.cell i{position:absolute;left:0;right:0;bottom:0;background:var(--good-soft)}
-.cell.full{border-color:var(--good)}
-.stats{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
-.stats b{font:800 22px var(--display);font-variant-numeric:tabular-nums;display:block}
-.small{font-size:13px;color:var(--muted)}
-ol{margin:0;padding-left:20px;display:grid;gap:4px}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--sans);margin:0}
+.wrap{max-width:860px;margin:0 auto;padding-block:24px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+h1{font-size:clamp(24px,4.5vw,30px);font-weight:800;margin:0;letter-spacing:-.01em}
+h2{font-size:17px;font-weight:700;margin:0;display:flex;align-items:center;gap:8px}
+.sub{color:var(--muted);font-size:14px;margin:0}
+svg.i{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:6px;min-width:0}
+.tile .v{font-size:24px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+.tile .k{font-size:12.5px;color:var(--muted)}
+.bar{height:6px;border-radius:99px;background:var(--sunk);overflow:hidden}.bar i{display:block;height:100%;background:var(--brand);width:0}
+@media (max-width:520px){.tiles{grid-template-columns:1fr 1fr}.tiles .tile:first-child{grid-column:1/-1}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:grid;gap:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:600 13px var(--sans);border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:99px;padding:6px 12px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--brand-fg)}
+textarea{width:100%;min-height:150px;resize:vertical;border:1.5px dashed var(--line);border-radius:12px;background:var(--sunk);color:var(--fg);padding:14px;font:13px/1.5 var(--mono)}
+textarea:focus{outline:none;border-color:var(--brand);border-style:solid}
+.btn{display:inline-flex;align-items:center;gap:8px;font:700 15px var(--sans);border-radius:12px;padding:12px 18px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+.btn.main{background:var(--brand);border-color:var(--brand);color:var(--brand-fg)}
+.btn.small{font-size:13px;padding:8px 12px;border-radius:10px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn:focus-visible,.chip:focus-visible,.tab:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.counts{display:flex;flex-wrap:wrap;gap:8px}
+.cnt{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14px;padding:7px 12px;border-radius:10px}
+.ok-c{background:var(--ok-soft);color:var(--ok)} .warn-c{background:var(--warn-soft);color:var(--warn)} .bad-c{background:var(--bad-soft);color:var(--bad)} .idle-c{background:var(--idle-soft);color:var(--muted)}
+.lines{display:grid;gap:2px;max-height:260px;overflow:auto;border-radius:10px;background:var(--sunk);padding:6px}
+.ln{display:grid;grid-template-columns:22px 108px minmax(0,1fr) auto;gap:8px;align-items:center;padding:6px 8px;border-radius:8px;font-size:13.5px}
+.ln .c{font:500 12px var(--mono);color:var(--muted)}
+.ln .t{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ln .w{font:500 12px var(--mono);color:var(--muted)}
+.ln.bad .t{color:var(--bad)} .ln.fix .w{color:var(--warn)}
+.ok-t{color:var(--ok)} .bad-t{color:var(--bad)} .warn-t{color:var(--warn)}
+.note{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;font-size:14px}
+.note.good{background:var(--ok-soft)} .note.badn{background:var(--bad-soft)} .note.info{background:var(--brand-soft)}
+.note b{font-weight:700}
+.redo{display:grid;gap:8px;padding:14px;border-radius:12px;background:var(--bad-soft)}
+.redo textarea{min-height:64px;background:var(--surface);border-style:solid}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tab{font:600 13px var(--sans);border:none;background:var(--sunk);color:var(--muted);border-radius:99px;padding:7px 12px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--fg);color:var(--bg)}
+.map{display:grid;gap:8px}
+.bt{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;align-items:center;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface)}
+.bt.need{border-left:4px solid var(--bad)} .bt.done{border-left:4px solid var(--ok)} .bt.idle{border-left:4px solid var(--line)}
+.bt .name{font-weight:700;font-size:14.5px;min-width:0}
+.bt .name span{font:500 12px var(--mono);color:var(--muted);margin-right:6px}
+.dots{display:flex;gap:5px}
+.dot{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font:500 10.5px var(--mono)}
+.dot.ok{background:var(--ok-soft);color:var(--ok)} .dot.part{background:var(--warn-soft);color:var(--warn)} .dot.miss{background:var(--bad-soft);color:var(--bad)} .dot.none{background:var(--idle-soft);color:var(--idle)}
+.bt .todo{grid-column:1/-1;font-size:13.5px;display:flex;gap:6px;align-items:center}
+.empty{color:var(--muted);font-size:14px;padding:8px}
+details.help{font-size:14px;color:var(--muted)} details.help summary{cursor:pointer;font-weight:600;color:var(--fg)}
+details.help ol{margin:8px 0 0;padding-left:20px;display:grid;gap:4px}
 </style>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></symbol>
+  <symbol id="i-wand" viewBox="0 0 24 24"><path d="m15 4 5 5M3 21l12-12M14 3l1 2 2 1-2 1-1 2-1-2-2-1 2-1zM19 13l.7 1.3L21 15l-1.3.7L19 17l-.7-1.3L17 15l1.3-.7z"/></symbol>
+  <symbol id="i-save" viewBox="0 0 24 24"><path d="M5 21h14a2 2 0 0 0 2-2V8l-5-5H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2z"/><path d="M17 21v-8H7v8M7 3v5h8"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="i-paste" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+</svg>
+
 <div class="wrap">
-<header style="display:grid;gap:8px">
-  <div class="eyebrow">Paste · check · save to the database</div>
-  <h1>BusinessIdea Idea Inbox</h1>
-  <ol class="small">
-    <li>Pick the account you used.</li>
-    <li>Paste the tool's whole answer below. Extra words, headings or numbering do not matter.</li>
-    <li>Press <b>Save good ideas</b>. Good ones go straight to the database. Broken ones are listed with a ready message to ask the tool to redo them.</li>
-  </ol>
-</header>
+  <header style="display:grid;gap:6px">
+    <h1>Idea Inbox</h1>
+    <p class="sub">Paste a reply, press Save. The map below shows which chats still need <b>next</b>.</p>
+  </header>
 
-<section class="card">
-  <div class="row">
-    <label for="acct">Account</label>
-    <select id="acct">
-      <option>G1</option><option>G2</option><option>G3</option><option>G4</option><option>G5</option><option>G6</option><option>G7</option>
-      <option>ChatGPT</option><option>DeepSeek</option><option>Grok</option><option>Perplexity</option><option>Meta</option><option>Codex</option><option>Other</option>
-    </select>
+  <div class="tiles">
+    <div class="tile"><span class="v" id="tIdeas">–</span><span class="k">ideas saved of 10,000</span><div class="bar"><i id="tBar"></i></div></div>
+    <div class="tile"><span class="v" id="tCats">–</span><span class="k">categories complete of 100</span></div>
+    <div class="tile"><span class="v" id="tNeed">–</span><span class="k">chats waiting for “next”</span></div>
   </div>
-  <label for="paste">Paste the answer here</label>
-  <textarea id="paste" placeholder="Paste everything the tool replied. Lines starting with an idea code like C012-S03-I01 are picked out automatically."></textarea>
-  <div class="sum" id="sum"></div>
-  <div class="list" id="list"></div>
-  <div class="row">
-    <button class="primary" id="save" type="button" disabled>Save good ideas</button>
-    <button id="clear" type="button">Clear</button>
-    <button id="csv" type="button" hidden>Download this paste as CSV</button>
-  </div>
-  <div id="redo" hidden class="card" style="background:var(--bg)">
-    <h2>Ask the tool to redo these</h2>
-    <textarea id="redoText" style="min-height:70px" readonly></textarea>
-    <div class="row"><button id="copyRedo" type="button">Copy message</button></div>
-  </div>
-  <div id="msg" class="msg" hidden></div>
-  <div id="batch" hidden style="display:grid;gap:8px"></div>
-</section>
 
-<section class="card">
-  <div class="row" style="justify-content:space-between"><h2>Progress</h2><button id="refresh" type="button">Refresh</button></div>
-  <div class="stats" id="stats"><div><b>–</b>ideas saved</div></div>
-  <div class="grid" id="grid" aria-label="Ideas per category, C001 to C100"></div>
-  <div id="unfinished" class="small" hidden></div>
-  <p class="small" id="pmsg">Each square is one category (C001 to C100); it fills as its 100 ideas arrive.</p>
-</section>
+  <section class="card" aria-labelledby="pasteH">
+    <h2 id="pasteH"><svg class="i"><use href="#i-paste"/></svg>Paste a reply</h2>
+    <div class="chips" id="acct" role="group" aria-label="Account you used"></div>
+    <textarea id="paste" aria-label="Paste the reply here" placeholder="Paste the whole reply here. Extra words around it don't matter."></textarea>
+    <div class="counts" id="counts"></div>
+    <div class="lines" id="lines" hidden></div>
+    <div class="row">
+      <button class="btn main" id="save" type="button" disabled><svg class="i"><use href="#i-save"/></svg><span id="saveT">Save</span></button>
+      <button class="btn small" id="clear" type="button">Clear</button>
+      <button class="btn small" id="csv" type="button" hidden>Backup as CSV</button>
+    </div>
+    <div class="redo" id="redo" hidden>
+      <div class="row" style="gap:6px"><svg class="i bad-t"><use href="#i-x"/></svg><b id="redoTitle">Send this to the same chat</b></div>
+      <textarea id="redoText" readonly aria-label="Message to send back"></textarea>
+      <div><button class="btn small" id="copyRedo" type="button"><svg class="i"><use href="#i-copy"/></svg>Copy message</button></div>
+    </div>
+    <div id="msg" class="note" hidden></div>
+    <details class="help">
+      <summary>Old chat giving short ideas?</summary>
+      <p style="margin:8px 0">Chats started before the 700-word rule still write short ideas. Before typing next in an old chat, send this once:</p>
+      <div class="row"><button class="btn small" id="copyUp" type="button"><svg class="i"><use href="#i-copy"/></svg>Copy “write longer” message</button></div>
+    </details>
+  </section>
+
+  <section class="card" aria-labelledby="mapH">
+    <div class="row" style="justify-content:space-between">
+      <h2 id="mapH"><svg class="i"><use href="#i-map"/></svg>Batch map</h2>
+      <button class="btn small" id="refresh" type="button"><svg class="i"><use href="#i-refresh"/></svg>Refresh</button>
+    </div>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="map" id="map"><div class="empty">Loading…</div></div>
+    <p class="sub" style="font-size:13px">Each square is one subcategory of 10 ideas. <span class="ok-t">Green</span> = done, <span class="warn-t">amber</span> = some ideas missing, <span class="bad-t">red</span> = still to write in that chat.</p>
+  </section>
 </div>
 
+<script id="mapdata" type="application/json">[["B001","C001","Work From Home",["Home Cooked Meal Subscription","After School Online Tuition","Catalog Reselling From Home","Home Visit Beauty Service","Website and Blog Writing"]],["B002","C001","Work From Home",["Small Shop Page Handling","Homemade Candle and Soap","Remote Admin Support","Printable and Digital File Selling","Live Online Workshop"]],["B003","C002","Side Hustle",["Evening Tuition Side Work","Weekend Food Stall","Social App Product Reselling","Spare Time Design Service","Society Service Side Work"]],["B004","C002","Side Hustle",["Festival Season Extra Work","Delivery Shift Side Work","Spare Time Content Service","Home Baking Order Side Work","Local Shop Support Side Work"]],["B005","C003","Part Time",["Morning Meal Round","After Office Coaching Batch","Weekend Market Stall","Part Time Shop Accounts Help","Evening Hobby Batch"]],["B006","C003","Part Time",["Part Time Event Photography","Weekend Catering Order","Part Time Online Selling","School Gate Help Service","Part Time Repair Visit"]],["B007","C004","Online",["Own Brand Online Store","Marketplace Seller Account","Online Course Selling","Niche Information Website","Remote Client Service"]],["B008","C004","Online",["WhatsApp and Instagram Shop","Print on Demand Product","Paid Online Community","Digital Download Shop","Online Booking Service"]],["B009","C005","Home Based",["Home Tailoring Work","Home Pickle and Papad","Home Beauty Studio","Home Tuition Batch","Home Garment Making"]],["B010","C005","Home Based",["Home Packed Food Brand","Home Child Care","Home Jewellery Making","Home Computer Class","Home Wash and Iron"]],["B011","C006","Women Friendly",["Women Led Home Food","Women Led Beauty Work","Women Led Stitching Work","Homemaker Reselling","Women Led Teaching From Home"]],["B012","C006","Women Friendly",["Women Led Craft Brand","Women Group Catering","Women Wellness Service","Women Led Kids Class","Homemaker Online Service"]],["B013","C007","Student",["Study Notes Selling","Student Freelance Skill","College Event Coverage","Student Social Selling","Peer Tutoring by Students"]],["B014","C007","Student",["Campus Snack Selling","Student Creator Channel","College Fest Stall","Student Page Handling","Campus Print and Design Service"]],["B015","C008","Senior Citizen",["Retired Teacher Class","Experience Based Advice Service","Senior Home Kitchen Brand","Retired Society Service","Hobby Teaching by Seniors"]],["B016","C008","Senior Citizen",["Senior Plant Nursery","Retired Accounts Help","Senior Writing and Editing","Senior Led Local Walks","Career Mentoring by Seniors"]],["B017","C009","Village and Small Town",["Village Daily Needs Shop","Small Town Tuition Centre","Village Milk Collection","Small Town Beauty Parlour","Farm Input Retail Shop"]],["B018","C009","Village and Small Town",["Village Spice and Flour Mill","Small Town Phone Repair","Village Function Catering","Town Two Wheeler Workshop","Small Town Passenger Transport"]],["B019","C010","Local Service",["Neighbourhood Home Help","Building Upkeep Service","Local Parcel Movement","Doorstep Grooming Service","Local Print and Copy Shop"]],["B020","C010","Local Service",["Nearby Appliance Care","Local Tutor Network","Area Meal Delivery Kitchen","Local Function Support","Market Day Service"]],["B021","C011","Skill Based",["Trade Skill Site Work","Paid Skill Teaching","Maker Skill Product","Repair Skill Visit","Beauty Skill Booking"]],["B022","C011","Skill Based",["Cooking Skill Order","Digital Skill Client Work","Language Skill Class","Fitness Skill Session","Craft Skill Product"]],["B023","C012","Freelance",["Freelance Article Client","Freelance Design Project","Freelance Video Edit","Freelance Website Project","Freelance Marketing Retainer"]],["B024","C012","Freelance",["Freelance Translation Work","Freelance Voice Over","Freelance Coding Project","Freelance Remote Support","Freelance Advice Call"]],["B025","C013","Reselling",["Fashion Catalog Reselling","Beauty Item Reselling","Home Utility Reselling","Kids Item Reselling","WhatsApp Group Reselling"]],["B026","C013","Reselling",["Closet and Thrift Reselling","Wholesale Lot to Local Sale","Festival Goods Reselling","Hostel Needs Reselling","Daily Needs Basket Reselling"]],["B027","C014","Childcare and Parenting Support",["Home Daycare Group","After School Child Watch","Baby Care Visit Service","Parent Child Activity Batch","Kids Birthday Support"]],["B028","C014","Childcare and Parenting Support",["School Van Route","Tuition With Child Watch","New Mother Home Support","Kids Hobby Group","Parent Learning Kit"]],["B029","C015","Printing and Signage",["Copy and Print Shop","Wedding Card Print","Banner and Flex Print","Custom Apparel Print","Label and Sticker Print"]],["B030","C015","Printing and Signage",["Name Plate and Stamp Shop","Photo Book Print","School Print Job","Vehicle Sticker and Graphics","Pack Print for Small Brands"]],["B031","C016","Food",["Daily Dabba Supply","Namkeen Making and Packing","Regional Thali Meal","Office Lunch Contract","Festival Food Order"]],["B032","C016","Food",["Special Diet Meal Kitchen","Night Eatery Food","House Party Food Order","Travel Stop Food","Hostel and Canteen Meal"]],["B033","C017","Home Kitchen Food",["Homemade Pickle Brand","Papad Making at Home","Home Spice Mix Brand","Homemade Sweet Box","Batter and Ready Mix"]],["B034","C017","Home Kitchen Food",["Home Chocolate Making","Dry Snack Packing at Home","Chutney and Sauce Making","Festival Food Hamper","Single Dish Home Kitchen"]],["B035","C018","Street Food",["Chaat and Snack Cart","Momos and Dumpling Stall","Roll and Wrap Stall","South Indian Tiffin Stall","Juice and Shake Cart"]],["B036","C018","Street Food",["Tea Stall","Indo Chinese Stall","Evening Fry Snack Stall","Egg and Non Veg Street Stall","Seasonal Street Snack"]],["B037","C019","Bakery and Confectionery",["Custom Celebration Cake","Bread and Bun Bakery","Cookie and Biscuit Batch","Eggless Bake House","Dessert Box Bakery"]],["B038","C019","Bakery and Confectionery",["Bakery Supply to Cafes","Wedding Dessert Table","Millet and Healthy Bake","Shop Counter Bakery","Festival Gift Bake"]],["B039","C020","Catering",["Wedding Meal Catering","Small House Party Catering","Office Gathering Catering","Religious Function Meal","Live Food Counter"]],["B040","C020","Catering",["Pure Vegetarian Catering","Regional Cuisine Catering","Reception Snack Catering","Outdoor Function Meal","Bulk Meal Contract"]],["B041","C021","Cloud Kitchen",["Single Cuisine Delivery Kitchen","Biryani Delivery Kitchen","Grain Bowl Delivery Kitchen","Breakfast Delivery Kitchen","Late Night Delivery Kitchen"]],["B042","C021","Cloud Kitchen",["Combo Plate Delivery Kitchen","Thali Delivery Kitchen","Dessert Delivery Kitchen","Shared Kitchen Multi Brand","Society Area Delivery Kitchen"]],["B043","C022","Packaged Snack",["Classic Namkeen Brand","Roasted Nut and Seed Pack","Millet Snack Brand","Fried and Baked Chip","School Snack Pack"]],["B044","C022","Packaged Snack",["Office Pantry Snack Supply","Regional Dry Snack Brand","Protein Munch Pack","Festival Snack Gift Pack","Savoury Mixture Brand"]],["B045","C023","Beverage Stall and Drink Brand",["Fresh Juice and Shake Bar","Tea Stall and Chai Brand","Coffee Counter","Traditional Indian Cool Drink","Packaged Health Drink Mix"]],["B046","C023","Beverage Stall and Drink Brand",["Office Beverage Supply","Summer Drink Cart","Party Mocktail Service","Regional Drink Brand","Drink Base and Syrup Supply"]],["B047","C024","Sweet Shop and Mithai",["Neighbourhood Mithai Shop","Festival Sweet Order","Regional Sweet Speciality","Dry Fruit Sweet Box","Milk Based Sweet Making"]],["B048","C024","Sweet Shop and Mithai",["Low Sugar Sweet Option","Sweet Gift Hamper","Wedding Sweet Box","Sweet and Snack Shop","Seasonal Sweet Calendar"]],["B049","C025","Restaurant and Eatery",["Small Family Eatery","Quick Service Counter","Dhaba Style Meal Stop","South Indian Meals Hotel","North Indian Thali House"]],["B050","C025","Restaurant and Eatery",["Casual Cafe","Pure Veg Eating House","Non Veg Speciality Eatery","Highway Meal Stop","Food Court Stall"]],["B051","C026","Regional Specialty Food",["South Indian Food Brand","Gujarati Thali Food","Bengali Home Food Order","Punjabi Meal Joint","Kerala Meal and Snack"]],["B052","C026","Regional Specialty Food",["Maharashtrian Food Speciality","Hyderabadi Food Brand","North East Food Kitchen","Coastal Fish Meal","Regional Street Snack Brand"]],["B053","C027","Beauty",["Skin Facial Service","Hair Care Service","Bridal Makeup Artist","Mehendi Design Service","Nail Studio Service"]],["B054","C027","Beauty",["Basic Salon Grooming","Beauty at Client Home","Beauty Product Resale","Makeup Skill Class","Party Makeup Booking"]],["B055","C028","Salon and Grooming",["Women Beauty Parlour","Men Hair Salon","Unisex Local Salon","Kids Haircut Chair","Classic Barber Shop"]],["B056","C028","Salon and Grooming",["Skin and Body Care Room","Salon Studio at Home","Salon Retail Shelf","Grooming Membership Plan","Salon Assistant Training"]],["B057","C029","Bridal and Wedding Beauty",["Full Bridal Makeup Booking","Bridal Mehendi Team","Family Function Makeup","Groom Wedding Grooming","Outstation Wedding Beauty"]],["B058","C029","Bridal and Wedding Beauty",["Pre Wedding Skin Care","Wedding Hair Draping","Bridesmaid Makeup Set","Makeup Trial Studio","Guest and Festive Makeup"]],["B059","C030","Fashion and Apparel",["Ethnic Wear for Women","Daily Western Wear Selling","Kids Wear Label","Men Casual Wear Selling","Saree Selling"]],["B060","C030","Fashion and Apparel",["Inclusive Size Clothing","Campus Wear Label","Workwear and Uniform Supply","Seasonal Clothing Drop","Preowned Clothing Trade"]],["B061","C031","Tailoring and Boutique",["Ladies Tailoring Shop","Blouse and Ethnic Stitching","Alteration Desk","Small Designer Boutique","Men Formal Stitching"]],["B062","C031","Tailoring and Boutique",["Children Dress Stitching","Home Visiting Tailor","Embroidery Work Add On","Outfit Hire Boutique","Bulk Stitching Order"]],["B063","C032","Jewellery and Accessories",["Fashion Jewellery Selling","Handmade Jewellery Bench","Silver Ornament Shop","Bridal Jewellery Set","Daily Wear Accessory"]],["B064","C032","Jewellery and Accessories",["Men Accessory Counter","Temple Jewellery Line","Name and Custom Jewel","Home Based Jewel Order","Boutique Counter Accessory"]],["B065","C033","Footwear and Bag",["Women Footwear Shop","School Shoe Supply","Men Daily Shoe Shop","Handbag Selling","Travel Bag Shop"]],["B066","C033","Footwear and Bag",["Ethnic Footwear Line","Shoe Repair Desk","Children Footwear Shop","Office Bag Selling","Footwear Selling Online"]],["B067","C034","Handmade Product",["Scented Candle Studio","Cold Process Soap Studio","Resin Gift Studio","Wall Hanging Craft","Handmade Paper Gift"]],["B068","C034","Handmade Product",["Clay and Pottery Studio","Cloth Doll and Soft Toy","Dried Flower Craft","Custom Commission Craft","Craft Market Selling"]],["B069","C035","Personal Care Product",["Herbal Hair Oil Brand","Simple Skin Product Brand","Incense Stick Making","Lip Balm and Salve Making","Baby Care Herbal Line"]],["B070","C035","Personal Care Product",["Men Grooming Product Line","Bath Product Making","Herbal Face Pack Mix","Salon Use Product Supply","Personal Care Gift Kit"]],["B071","C036","Home Textile",["Bed Linen Selling","Curtain Making","Cushion Cover Making","Quilt and Blanket Making","Kitchen Textile Making"]],["B072","C036","Home Textile",["Baby Bedding Making","Named Textile Gift","Handloom Fabric Selling","Stitching Cloth Supply","Made to Order Home Linen"]],["B073","C037","Education",["School Subject Class","College Subject Support","Spoken English Batch","Short Skill Course","Early Learner Class"]],["B074","C037","Education",["Adult Learning Batch","Study Guide Selling","Course and College Guidance","Catch Up Learning Batch","Small Group Class"]],["B075","C038","Tuition and Coaching",["Board Exam Tuition","Primary Grade Tuition","Maths Tuition Batch","Science Tuition Batch","Commerce Tuition Batch"]],["B076","C038","Tuition and Coaching",["Tutor at Student Home","Local Tuition Centre","Live Online Tuition","Weekly Test Batch","Holiday Revision Batch"]],["B077","C039","Competitive Exam Coaching",["SSC Coaching Batch","Bank Exam Coaching","Railway Exam Coaching","Medical Entrance Support","Engineering Entrance Support"]],["B078","C039","Competitive Exam Coaching",["State Service Exam Coaching","Defence Exam Coaching","Teacher Eligibility Coaching","University Entrance Coaching","Daily Current Affairs Batch"]],["B079","C040","Language and Communication Training",["Spoken English Centre","Hindi for New Residents","Overseas English Test Prep","Workplace Speaking Class","Regional Language Class"]],["B080","C040","Language and Communication Training",["Interview Practice Batch","Children Spoken English","Fluency Practice Group","Office Language Batch","Online Speaking Partner"]],["B081","C041","Skill Training and Vocational",["Stitching Training Batch","Beauty Trade Training","Phone Repair Training","Basic Computer Training","Electric Trade Helper Training"]],["B082","C041","Skill Training and Vocational",["Bakery Skill Class","Driving School","Appliance Repair Training","Fashion Cutting Course","Job Ready Soft Skill Batch"]],["B083","C042","Kids Learning and Activity",["Playgroup and Preschool","After School Activity Hub","Mental Maths Class","Children Drawing Class","Children Dance Class"]],["B084","C042","Kids Learning and Activity",["Early Reading Class","Children Coding Play","Drama and Story Class","Summer Activity Camp","Children Robotics Batch"]],["B085","C043","Hobby and Creative Class",["Adult Art Batch","Instrument Learning Class","Singing Group Class","Dance Batch for Adults","Weekend Cooking Class"]],["B086","C043","Hobby and Creative Class",["Craft Workshop Series","Photo Hobby Workshop","Mehendi Learning Batch","Home Baking Class","Lettering Art Class"]],["B087","C044","Computer and Digital Skill Training",["Beginner Computer Centre","Accounts Software Class","Design Software Course","Video Edit Course","Beginner Coding Batch"]],["B088","C044","Computer and Digital Skill Training",["Spreadsheet Skill Class","Marketing Skill Course","Certificate Computer Course","Children Computer Batch","Freelance Skill Course"]],["B089","C045","Test Preparation and Study Support",["Doubt Solving Session","Homework Help Batch","Practice Test Centre","Chapter Notes Shop","Parent Update Tuition"]],["B090","C045","Test Preparation and Study Support",["Weak Topic Repair Batch","Early Study Batch","Guided Study Room","Board Practical Prep","Scholarship Test Prep"]],["B091","C046","Teacher Led",["Teacher Owned Tuition Brand","Recorded Class Selling","Teacher Worksheet Shop","Teacher Video Class","School Linked Tuition"]],["B092","C046","Teacher Led",["Teacher Made Learning Kit","Holiday Class by Teachers","Subject Update for Students","Teacher Support to Schools","Two Language Teaching"]],["B093","C047","Digital Marketing",["Local Search Visibility Service","Map Listing Management","Ad Account Handling for Shops","Social Posting Service","WhatsApp Broadcast Service"]],["B094","C047","Digital Marketing",["Review and Reply Handling","Product Listing Improvement","Monthly Content Plan Service","Home Based Marketing Desk","Festival Campaign Creative"]],["B095","C048","Content Creation",["Short Video Making Service","Article Production Service","Audio Show Production Help","Email Letter Writing Service","Product Photo Set Service"]],["B096","C048","Content Creation",["Hindi and Regional Content","Lesson Content Making","Brand Story Piece","Local Page Content","Old Content Refresh Service"]],["B097","C049","Social Media Service",["Clinic Page Handling","Shop Page Handling","Restaurant Reel Service","Channel Upload Support","Professional Profile Refresh"]],["B098","C049","Social Media Service",["Festival Post Design Service","Creator Collab Support","Customer Group Care","Property Agent Page Service","Monthly Posting Plan"]],["B099","C050","Graphic Design and Branding",["Logo and Brand Starter Kit","Social Creative Design","Menu Card Design","Pack Design for Makers","Wedding Paper Design"]],["B100","C050","Graphic Design and Branding",["Shop Board Design","Profile Document Design","Food Label Design","Slide Deck Design","Local Brand Look Service"]],["B101","C051","Video and Reel Making",["Shop Promo Reel","Wedding Short Film","Channel Video Edit","Product Demo Clip","Property Walkthrough Video"]],["B102","C051","Video and Reel Making",["Coaching Promo Video","Kitchen Food Reel","Function Highlight Video","Talking Video Edit","Regional Language Video Edit"]],["B103","C052","Photography",["Wedding Photo Coverage","Seller Product Photo","Neighbourhood Photo Studio","Family and Baby Shoot","Menu and Food Photo"]],["B104","C052","Photography",["Property Photo Shoot","Function Photo Coverage","Portfolio Shoot for Models","Outdoor Festival Shoot","Photo Print and Frame Add On"]],["B105","C053","YouTube and Online Creator",["School Subject Channel","Home Recipe Channel","City Guide Channel","Money Basics Explainer Channel","Hindi Tech Explainer Channel"]],["B106","C053","YouTube and Online Creator",["Farm and Village Channel","Beauty How To Channel","Exam Study Channel","Daily Life Niche Channel","Short Clip Creator"]],["B107","C054","Writing and Editing",["Website Page Writing","Hindi Article Writing","Book Manuscript Edit","Short Script Writing","Application Essay Help"]],["B108","C054","Writing and Editing",["Product Text Writing","Proposal Writing Help","Newsletter Writing Service","Proofreading Desk","Manual and Guide Writing"]],["B109","C055","Web and App Service",["Shop Website Setup","Site Care and Update","Single Page Site Build","Simple Booking App Setup","Slow Site Repair Service"]],["B110","C055","Web and App Service",["Clinic Booking Site","Boutique Catalog Site","School Information Site","Site Care Retainer","Local Listing Website"]],["B111","C056","E-commerce Selling",["Large Marketplace Seller","Fashion Marketplace Seller","Supplier Catalog Selling","Own Domain Shop","Social Checkout Selling"]],["B112","C056","E-commerce Selling",["Narrow Product Online Brand","Regional Goods to All India","Gift Box Online Brand","Repeat Delivery Box","Listing and Dispatch Help"]],["B113","C057","Affiliate and Content Site",["Product Review Website","Offer and Deal Page","Buyer Comparison Article","Regional How To Site","Video Product Mention"]],["B114","C057","Affiliate and Content Site",["Deal Sharing Group","Email Product Pick Letter","Image Pin Product Page","Exam Resource Referral Site","Local Service Referral Page"]],["B115","C058","AI and Automation Service",["Shop Chat Reply Setup","AI Assisted Content Desk","Auto Reply on Chat Apps","Clinic Reminder Automation","AI Assist for Photo and Reel"]],["B116","C058","AI and Automation Service",["Coach Workflow Automation","Customer Reply Draft Service","Sheet and Report Automation","Indian Language AI Content","Tool Use Training for Staff"]],["B117","C059","Health and Wellness",["Home Nurse Visit","Home Physiotherapy Visit","Wellness Goods Shop","Health Camp Organising","Elder Wellness Visit"]],["B118","C059","Health and Wellness",["Women Health Support Service","Habit Coaching for Health","Medical Gear on Hire","Sample Pickup for Labs","Wellness Class Series"]],["B119","C060","Fitness and Gym",["Lane Gym in a Locality","Women Fitness Batch","Trainer at Client Home","Park Group Workout","Dance Fitness Batch"]],["B120","C060","Fitness and Gym",["Fat Loss Group Plan","Office Stretch Session","Teen Fitness Group","Strength Studio","Online Trainee Follow Up"]],["B121","C061","Yoga and Mind Body",["Dawn Yoga Group","Women Yoga Batch","Prenatal Movement Class","Office Yoga Slot","Children Yoga Play"]],["B122","C061","Yoga and Mind Body",["Quiet Sitting Group","Online Yoga Membership","Back Care Yoga Batch","One Day Yoga Gathering","Terrace Yoga in Societies"]],["B123","C062","Ayurveda and Herbal Product",["Herbal Powder Brand","Ayurvedic Hair Oil","Herbal Infusion Blend","Classical Product Resale","Herbal Skin Balm"]],["B124","C062","Ayurveda and Herbal Product",["Home Kadha Mix Brand","Herbal Body Balm","Ayurvedic Food Advice","Village Herb Brand","Ayurvedic Therapy Support"]],["B125","C063","Nutrition and Diet Service",["Indian Plate Diet Plan","Women Health Diet Support","Weight Change Meal Plan","Sugar Control Meal Guidance","Child Meal Guidance"]],["B126","C063","Nutrition and Diet Service",["Sport Player Meal Plan","Family Weekly Meal Plan","Online Diet Check In","Clinic Linked Diet Desk","Millet Meal Coaching"]],["B127","C064","Home Healthcare Service",["Elder Companion Care","Recovery Care at Home","Dressing and Basic Visit","Mother and Newborn Visit","Physio Session at Home"]],["B128","C064","Home Healthcare Service",["Home Use Medical Gear","Daily Health Check Visit","Memory Care Companion","Discharge to Home Support","Night Care Attendant"]],["B129","C065","Pharmacy and Wellness Retail",["Neighbourhood Chemist Shop","Generic Medicine Counter","Wellness Shelf Inside Shop","Surgical Supply Counter","Mother and Baby Care Shelf"]],["B130","C065","Pharmacy and Wellness Retail",["Ayurvedic Medicine Counter","Chemist With Cosmetic Shelf","Village Medicine Shop","Shop Near Hospitals","Medicine Home Delivery Desk"]],["B131","C066","Mental Wellness Support",["Talk Support Practice","Student Stress Group","Career Worry Workshop","Parent Support Circle","Workplace Calm Session"]],["B132","C066","Mental Wellness Support",["Life Change Support Group","Adult Mindfulness Batch","School Emotional Support Tie Up","Online Talk Session Practice","Community Wellbeing Talk"]],["B133","C067","Agriculture and Farming",["Vegetable Plot and Sale","Grain Crop Field","Mixed Smallholding","Net House Vegetable","Fruit Tree Farm"]],["B134","C067","Agriculture and Farming",["Fodder Crop Growing","Seed Plot Growing","Farm Box to Homes","Buyer Contract Vegetable","Multi Season Crop Plan"]],["B135","C068","Organic Farming",["Organic Vegetable Farm","Organic Grain Field","On Farm Natural Input","Organic Fruit Garden","Shift to Organic Method"]],["B136","C068","Organic Farming",["Organic Terrace Setup Service","Organic Box Subscription","Saved Seed Exchange","City Terrace Organic Plot","Farm Visit Day"]],["B137","C069","Dairy and Milk Product",["Morning Milk Route","Fresh Paneer Making","Curd and Buttermilk Making","Ghee Making Batch","Flavoured Milk Drink"]],["B138","C069","Dairy and Milk Product",["Village Milk Collection Point","Khoa for Sweet Shops","Small Dairy Herd","Speciality Milk Supply","Fresh Cheese Making"]],["B139","C070","Poultry and Small Livestock",["Country Bird Rearing","Meat Bird Batch","Egg Layer Supply","Goat Herd Rearing","Small Bird Unit"]],["B140","C070","Poultry and Small Livestock",["Backyard Bird Keeping","Animal Feed Mix","Direct Bird Meat Sale","Breeding Stock Sale","Livestock Care Service"]],["B141","C071","Nursery and Plant",["Decorative Plant Nursery","Fruit Sapling Nursery","Indoor Plant Shop","Terrace Garden Setup","Seasonal Flower Grower"]],["B142","C071","Nursery and Plant",["Vegetable Seedling Tray","Office Plant Supply","Pot and Plant Combo","Society Garden Care","Plant Delivery in Cities"]],["B143","C072","Agri Input and Farm Service",["Seed and Nutrient Shop","Crop Protection Retail","Farm Implement Hire","Tractor Hire With Driver","Soil Check Service"]],["B144","C072","Agri Input and Farm Service",["Spray Service for Fields","Drip and Pipe Setup","Harvest Crew Supply","Crop Advice Visit","Produce Van to Market"]],["B145","C073","Food Processing",["Atta and Grain Mill","Masala Grind and Pack","Small Oil Press","Rice Clean and Pack","Dal Clean and Pack"]],["B146","C073","Food Processing",["Fruit Pulp Unit","Dried Food Unit","Bakery Input Supply","Cold Press Food Product","Instant Mix Packing"]],["B147","C074","Fisheries and Aquaculture",["Pond Fish Growing","Fish Seed Nursery","Ornamental Fish Breeding","Pond Care Service","Fish Feed Supply"]],["B148","C074","Fisheries and Aquaculture",["Dried Fish Processing","Home Aquarium Setup","Live Fish Shop","Coastal Pond Culture","Village Pond Fishery"]],["B149","C075","Home Services",["Booked Home Cleaning","Home Cook Introduction Service","House Help Staffing","Handyman Visit Service","Sofa and Furnishing Clean"]],["B150","C075","Home Services",["Chimney and Kitchen Clean","Overhead Tank Clean","New Home Handover Clean","Elder House Help","Building Housekeeping Contract"]],["B151","C076","Cleaning and Housekeeping",["Full Home Deep Clean","Washroom Cleaning Visit","Office Daily Clean","After Worksite Clean","Kitchen Degrease Service"]],["B152","C076","Cleaning and Housekeeping",["Sofa Shampoo Visit","Empty House Clean","Glass and Front Clean","Hostel Clean Contract","Repeat Cleaning Plan"]],["B153","C077","Repair and Maintenance",["Phone Repair Counter","Computer Repair Desk","Bike Repair Garage","Home Machine Repair Visit","Furniture Fix and Polish"]],["B154","C077","Repair and Maintenance",["Small Gadget Repair","Power Backup Repair","Water Pump Repair","Lock and Door Hardware Repair","Yearly Upkeep Contract"]],["B155","C078","Appliance Repair",["Washing Machine Repair Visit","Fridge Repair Service","Air Conditioner Care","Oven and Microwave Repair","Water Purifier Care"]],["B156","C078","Appliance Repair",["Small Kitchen Appliance Repair","Television Repair Service","Water Heater Repair","Kitchen Chimney Repair","Multi Machine Home Visit"]],["B157","C079","Electrical and Plumbing",["Home Wiring Work","Switchboard and Fitting Work","Power Backup Fitment","Leak and Block Fix","Bathroom Fitting Work"]],["B158","C079","Electrical and Plumbing",["Water Pump Fitment","New House Electrical Work","Common Area Electrical Care","Pipe and Tap Work","Urgent Electrician Call"]],["B159","C080","Painting and Home Renovation",["Single Room Paint Work","Full House Paint Contract","Leak Proofing Coat Work","Feature Wall Finish","Wood Finish Touch Up"]],["B160","C080","Painting and Home Renovation",["Rental Home Paint Refresh","Outer Wall Paint Work","Small Civil Repair Job","Bathroom Refresh Work","Festival Home Paint Touch"]],["B161","C081","Carpentry and Furniture",["Made to Measure Furniture","Kitchen Woodwork","Broken Furniture Repair","Bed and Seating Making","Door and Window Woodwork"]],["B162","C081","Carpentry and Furniture",["Work Desk Fit Out","Renewed Old Furniture","Carpenter on Call","Furniture Finish Service","Town Furniture Workshop"]],["B163","C082","Interior and Home Decor",["Room Look Advice","Curtain and Cover Decor","Wall Decor Selling","Festival Home Styling","Rented Home Setup Service"]],["B164","C082","Interior and Home Decor",["Traditional Layout Advice","Simple Room Refresh Service","Light Plan for Rooms","Children Room Styling","Shop Floor Styling"]],["B165","C083","Laundry and Garment Care",["Wash and Fold Route","Steam Iron Visit","Dry Clean Collection Counter","Society Laundry Pickup","Heavy Linen Wash"]],["B166","C083","Laundry and Garment Care",["Saree Press Service","Shoe Clean Add On","Lodge Linen Wash Contract","Same Day Iron Service","Weekly Laundry Route"]],["B167","C084","Pest Control and Hygiene",["Home Insect Control","Wood Pest Treatment","Society Outdoor Pest Care","Eatery Pest Contract","Store Room Pest Care"]],["B168","C084","Pest Control and Hygiene",["Pre Build Wood Protection","Fabric Pest Treatment","Rodent Control Visit","Mosquito Season Service","Yearly Pest Care Plan"]],["B169","C085","Home Organization",["Kitchen Reset Service","Clothes Storage Reset","Shifting Day Organising","Study Corner Setup","Festival Storage Setup"]],["B170","C085","Home Organization",["Small Home Space Plan","Home Item Sorting Service","Prayer Room Setup","Rental Home Organising","Senior Home Simplify Service"]],["B171","C086","Security and Safety Service",["Camera Fitment Service","Door Video Phone Setup","Guard Staff Supply","Fire Safety Gear Supply","Attendance Device Setup"]],["B172","C086","Security and Safety Service",["Shutter and Lock Upgrade","Vehicle Track Device Fitment","Home Alert Device Setup","Function Security Team","Small Premises Safety Check"]],["B173","C087","Event and Celebration",["Birthday Setup Service","Society Event Support","Office Celebration Service","School Function Support","Religious Event Setup"]],["B174","C087","Event and Celebration",["Anniversary Setup Service","Children Theme Party","Sound and Light Hire","Event Host Booking","End to End Event Desk"]],["B175","C088","Wedding Service",["Wedding Day Coordination","Wedding Flower Decor","Wedding Photo and Film","Wedding Food Coordination","Stage and Entry Setup"]],["B176","C088","Wedding Service",["Wedding Card and Favour","Guest Movement on Wedding Day","Pre Wedding Shoot Help","Vendor Shortlist Service","Home Wedding Planning"]],["B177","C089","Retail Shop",["Kirana Daily Shop","Cosmetic and Fancy Shop","Books and Stationery Shop","Phone and Accessory Shop","Clothing Retail Shop"]],["B178","C089","Retail Shop",["Shoe Retail Shop","Hardware and Electric Shop","Chemist Retail Shop","Toy Shop","Small Format Grocery Shop"]],["B179","C090","Trading and Wholesale",["Daily Goods Wholesale Route","Garment Lot Wholesale","Stationery Wholesale Desk","Building Goods Trading","Grain Trading Desk"]],["B180","C090","Trading and Wholesale",["Cosmetic Wholesale Lot","Phone Accessory Wholesale","Packing Goods Wholesale","Regional Goods Trading","Shop Supply Van Route"]],["B181","C091","Automobile and Two Wheeler Service",["Bike Periodic Service","Car Wash and Cabin Clean","Tyre and Puncture Care","Vehicle Battery Swap","Spare Part Counter"]],["B182","C091","Automobile and Two Wheeler Service",["Panel Paint and Dent Work","Vehicle Accessory Fitment","Pickup Drop Workshop","Used Bike Dealing","Vehicle Fleet Care Contract"]],["B183","C092","Transport and Delivery",["City Parcel Round","Meal Delivery Rider Team","School Cab Route","Staff Cab Contract","Light Goods Vehicle"]],["B184","C092","Transport and Delivery",["Bike Courier Round","Local Shifting Transport","Market Goods Transport","City to City Parcel","Sample and Paper Dispatch"]],["B185","C093","Travel and Tourism",["City Tour Desk","Pilgrim Travel Planning","Weekend Group Trip","Homestay Host","Outstation Cab Trip"]],["B186","C093","Travel and Tourism",["Ticket and Plan Desk","Village Stay Experience","Student Tour Group","Senior Travel Support","Travel Page With Booking Help"]],["B187","C094","Pet Care",["Pet Bath and Coat Care","Dog Walk and Sit Service","Pet Supply Shop","Home Pet Stay","Fish Tank Care Service"]],["B188","C094","Pet Care",["Pet Manner Class","Van Based Pet Grooming","Clinic Side Pet Retail","Pet Treat Baking","Society Pet Help Service"]],["B189","C095","Hostel and PG Accommodation",["Men Student PG","Women Only PG","Working People PG","Hostel Meal Plan","Private Room Stay"]],["B190","C095","Hostel and PG Accommodation",["PG Near Colleges","Short Guest Stay","PG Food and Clean Add On","Shared Flat Running","Town Student Hostel"]],["B191","C096","Rental and Hiring",["Home Furniture on Hire","Function Tent and Chair Hire","Outfit on Hire","Tool Hire Counter","Vehicle on Hire"]],["B192","C096","Rental and Hiring",["Party Utensil Hire","Projector and Speaker Hire","Worksite Machine Hire","Kids Party Item Hire","Home Appliance on Hire"]],["B193","C097","Sports Coaching",["Cricket Net Academy","Football Age Group Coaching","Badminton Coaching Batch","Skating Class","Chess Coaching Group"]],["B194","C097","Sports Coaching",["Swim Skill Coaching","Local Contact Sport Coaching","Morning Track Batch","Self Defence Batch","School Games Coaching Tie Up"]],["B195","C098","Career and Recruitment",["Local Job Consultancy","Resume and Interview Practice","Campus Drive Support","Shop and Site Staff Supply","Home Staff Placement"]],["B196","C098","Career and Recruitment",["Skilled Person Matching","Hiring Day Event","Skill to First Job Batch","Small Firm People Process Help","Walk In Hiring Desk"]],["B197","C099","Accounting and Compliance Service",["GST Filing Desk","Shop Daily Accounts","Income Tax Return Help","Accounts Software Entry","Small Team Payroll"]],["B198","C099","Accounting and Compliance Service",["Licence and Registration Help","Bill and Invoice Setup","Society Accounts Keeping","Books Ready for Audit","Monthly Compliance Desk"]],["B199","C100","Small Manufacturing",["Paper Plate Making","Floor Cleaner Liquid Making","Incense Making Unit","Carton Box Making","Bulk Candle Making"]],["B200","C100","Small Manufacturing",["Washing Product Making","Disposable Table Item Making","Notebook Making Unit","Household Plastic Item Making","Simple Garment Stitching Unit"]]]</script>
 <script>
-// Shared parsing logic for the Idea Inbox page (also unit-tested in node).
+// Idea Inbox core: parse any pasted answer into idea rows, auto-fixing what can be fixed.
 var COLS=["code","title","slug","hook","summary","what_it_is","who_pays_you","how_money_comes","what_you_need","step1","step2","step3","step4","step5","what_hurts","verdict","faq1_q","faq1_a","faq2_q","faq2_a","faq3_q","faq3_a","validate_prompt","investment_band","gender_fit","life_stage","place","work_mode","time_needed","skill_level"];
+var BODY=["hook","summary","what_it_is","who_pays_you","how_money_comes","what_you_need"];
+var ENUMS={investment_band:["zero","under_25k","25k_1l","1l_5l","above_5l"],gender_fit:["any","women","men"],work_mode:["home","shop","online","field","mixed"],time_needed:["part_time","full_time","weekends"],skill_level:["none","basic","trained"]};
+var LIFE=["any","student","homemaker","working_professional","senior_citizen"], PLACE=["any","village","small_town","city","metro"];
+var MIN_WORDS=700, MAX_WORDS=1500;
 var CODE_RE=/C\d{3}-S\d{2}-I\d{2}/;
+
 function cleanText(t){
-  t=String(t||'').replace(/\r/g,'').replace(/ /g,' ');
+  t=String(t||'').replace(/\r/g,'').replace(/ /g,' ').replace(/[“”]/g,'"').replace(/[‘’]/g,"'");
   t=t.split('\n').filter(function(l){return !/^\s*```/.test(l);}).map(function(l){
     return l.replace(/^\s*(?:[-*•]\s+|\d+[.)]\s+)(?=\**C\d{3}-S\d{2}-I\d{2})/,'').replace(/\*\*/g,'');
   }).join('\n');
-  // A tool that used tabs instead of bars
   if((t.match(/\|/g)||[]).length<10 && (t.match(/\t/g)||[]).length>=10) t=t.replace(/\t/g,' | ');
   return t;
 }
+function words(s){ s=String(s||'').trim(); return s?s.split(/\s+/).length:0; }
+function isEnumVal(v){ v=String(v).toLowerCase().trim(); for(var k in ENUMS) if(ENUMS[k].indexOf(v)>=0) return true; return false; }
+function isList(v,allowed){ var p=String(v).toLowerCase().split(/[,\s]+/).filter(Boolean); return p.length>0 && p.every(function(x){return allowed.indexOf(x)>=0;}); }
+function isQuestion(v){ return /\?\s*$/.test(v) && words(v)<=30; }
+function mergeTo(arr,n){ // merge extra pieces (a "|" inside text) into the previous piece until arr has n items
+  arr=arr.slice(); while(arr.length>n){ var bi=1,bl=1e9; for(var i=1;i<arr.length;i++){var l=arr[i].length; if(l<bl){bl=l;bi=i;}} arr.splice(bi-1,2,arr[bi-1]+' '+arr[bi]); } return arr;
+}
+function padTo(arr,n){ arr=arr.slice(); while(arr.length<n) arr.push(''); return arr; }
+
+// Turn one idea's fields (after the code, before END) into a row, fixing count problems.
+function align(code,f){
+  var fixes=[];
+  // 1. title, slug
+  var title=f[0]||'', slug=f[1]||'', rest=f.slice(2);
+  if(slug && /\s/.test(slug.trim()) && !/^[a-z0-9-]+$/.test(slug.trim())){ rest.unshift(slug); slug=''; fixes.push('slug made from title'); }
+  // 2. tag tail: find the investment band from the end
+  var bi=-1; for(var i=rest.length-1;i>=Math.max(0,rest.length-10);i--){ if(ENUMS.investment_band.indexOf(rest[i].toLowerCase().trim())>=0){bi=i;break;} }
+  var tail=[]; if(bi>=0){ tail=rest.slice(bi); rest=rest.slice(0,bi); } else fixes.push('tags missing, defaults used');
+  // a stray "|" inside a sentence: glue a piece that starts in lower case onto an unfinished previous piece
+  for(var g=1;g<rest.length;g++){ if(/^[a-z]/.test(rest[g]) && !/[.?!"')]$/.test(rest[g-1])){ rest.splice(g-1,2,rest[g-1]+' '+rest[g]); g--; if(fixes.indexOf('broken line joined')<0) fixes.push('broken line joined'); } }
+  // 3. split body around the first FAQ question
+  var qi=-1; for(var j=8;j<rest.length;j++){ if(isQuestion(rest[j])){qi=j;break;} }
+  var pre=qi>=0?rest.slice(0,qi):rest.slice(0,Math.min(rest.length,13)), post=qi>=0?rest.slice(qi):rest.slice(13);
+  // pre = 6 body fields, steps, what_hurts, verdict
+  if(pre.length<9) return {ok:false,why:'too few fields (missing whole sections)'};
+  var body=pre.slice(0,6), steps=pre.slice(6,pre.length-2), hurts=pre[pre.length-2], verdict=pre[pre.length-1];
+  if(steps.length!==5){ fixes.push('first 30 days had '+steps.length+' steps'); steps=steps.length>5?mergeTo(steps,5):padTo(steps,5); }
+  // post = q,a,q,a,q,a,validate
+  var validate=post.length>1?post.pop():'';
+  var faq=[]; for(var k=0;k<post.length;k++){ if(isQuestion(post[k])) faq.push([post[k],'']); else if(faq.length) faq[faq.length-1][1]=(faq[faq.length-1][1]+' '+post[k]).trim(); }
+  if(faq.length!==3) fixes.push(faq.length+' FAQ questions');
+  while(faq.length<3) faq.push(['','']); faq=faq.slice(0,3);
+  if(!validate) fixes.push('validate prompt missing');
+  // tags
+  var t={investment_band:'',gender_fit:'',life_stage:'',place:'',work_mode:'',time_needed:'',skill_level:''};
+  var order=['investment_band','gender_fit','life_stage','place','work_mode','time_needed','skill_level'];
+  if(tail.length===7) order.forEach(function(k,x){t[k]=tail[x];});
+  else tail.forEach(function(v){ var lv=v.toLowerCase().trim();
+    for(var k in ENUMS){ if(!t[k] && ENUMS[k].indexOf(lv)>=0){t[k]=lv;return;} }
+    if(!t.life_stage && isList(lv,LIFE)){t.life_stage=lv;return;} if(!t.place && isList(lv,PLACE)){t.place=lv;return;} });
+  var row={code:code,title:title,slug:slug||title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''),
+    hook:body[0],summary:body[1],what_it_is:body[2],who_pays_you:body[3],how_money_comes:body[4],what_you_need:body[5],
+    step1:steps[0],step2:steps[1],step3:steps[2],step4:steps[3],step5:steps[4],what_hurts:hurts,verdict:verdict,
+    faq1_q:faq[0][0],faq1_a:faq[0][1],faq2_q:faq[1][0],faq2_a:faq[1][1],faq3_q:faq[2][0],faq3_a:faq[2][1],validate_prompt:validate};
+  for(var kk in t) row[kk]=t[kk];
+  var miss=['title','hook','summary','what_it_is','who_pays_you','how_money_comes','what_you_need','what_hurts','verdict'].filter(function(c){return !row[c];});
+  if(miss.length) return {ok:false,why:'empty: '+miss.join(', ')};
+  return {ok:true,row:row,fixes:fixes};
+}
+function ideaWords(r){ return ['title','hook','summary','what_it_is','who_pays_you','how_money_comes','what_you_need','step1','step2','step3','step4','step5','what_hurts','verdict','faq1_q','faq1_a','faq2_q','faq2_a','faq3_q','faq3_a','validate_prompt'].reduce(function(n,c){return n+words(r[c]);},0); }
+
 function parse(raw){
   var t=cleanText(raw), out=[], re=/C\d{3}-S\d{2}-I\d{2}\s*\|/g, starts=[], m;
   while((m=re.exec(t))) starts.push(m.index);
   for(var i=0;i<starts.length;i++){
     var chunk=t.slice(starts[i], i+1<starts.length?starts[i+1]:t.length);
     var code=chunk.match(CODE_RE)[0];
-    var endM=chunk.match(/^([\s\S]*)\|\s*END\b/);
-    if(!endM){ out.push({code:code,ok:false,why:'cut off (no END)'}); continue; }
-    var f=endM[1].split('|').map(function(x){return x.replace(/\s+/g,' ').trim();});
-    if(f.length && f[f.length-1]==='') f.pop();
-    if(f.length!==30){ out.push({code:code,ok:false,why:(f.length+1)+' fields, need 31'}); continue; }
-    var row={}; COLS.forEach(function(c,k){row[c]=f[k];}); row.code=code;
-    if(!row.title||!row.what_it_is||!row.verdict){ out.push({code:code,ok:false,why:'empty main field'}); continue; }
-    out.push({code:code,ok:true,row:row});
+    var endM=chunk.match(/^([\s\S]*)\|\s*END\b/), body, fixes=[];
+    if(endM) body=endM[1];
+    else { // no END: accept only if the line clearly reaches the tags
+      var tm=chunk.match(/^([\s\S]*?\|\s*(?:zero|under_25k|25k_1l|1l_5l|above_5l)\s*\|[^\n]*)/);
+      if(!tm || (tm[1].split('|').length<28)){ out.push({code:code,ok:false,kind:'cut',why:'answer was cut off'}); continue; }
+      body=tm[1]; fixes.push('END added');
+    }
+    var f=body.split('|').map(function(x){return x.replace(/\s+/g,' ').trim();});
+    f.shift(); // code
+    while(f.length && f[f.length-1]==='') f.pop();
+    var a=align(code,f);
+    if(!a.ok){ out.push({code:code,ok:false,kind:'broken',why:a.why}); continue; }
+    a.fixes=fixes.concat(a.fixes);
+    var w=ideaWords(a.row);
+    if(w<MIN_WORDS){ out.push({code:code,ok:false,kind:'short',why:'only '+w+' words (need 700)',words:w,title:a.row.title}); continue; }
+    if(w>MAX_WORDS){ out.push({code:code,ok:false,kind:'long',why:w+' words (max 1,500)',words:w,title:a.row.title}); continue; }
+    out.push({code:code,ok:true,row:a.row,fixes:a.fixes,words:w});
   }
-  // a later copy of the same code wins
   var seen={}, res=[];
   for(var j=out.length-1;j>=0;j--){ if(seen[out[j].code]) continue; seen[out[j].code]=1; res.unshift(out[j]); }
   return res;
 }
-function dollarTag(rows){
-  var all=JSON.stringify(rows), tag;
-  do{ tag='$b'+Math.random().toString(36).slice(2,8)+'$'; }while(all.indexOf(tag)>=0);
-  return tag;
-}
+function dollarTag(rows){ var all=JSON.stringify(rows), tag; do{ tag='$b'+Math.random().toString(36).slice(2,8).replace(/[^a-z0-9]/g,'x')+'$'; }while(all.indexOf(tag)>=0); return tag; }
 function insertSql(rows, writer){
   var tag=dollarTag(rows.concat([writer]));
   var q=function(v){return tag+String(v==null?'':v)+tag;};
@@ -152,127 +250,153 @@ function sqlResult(payload){
   var m=s.match(/<untrusted-data-[^>]*>\s*(\[[\s\S]*\])\s*<\/untrusted-data/);
   try{ var v=JSON.parse(m?m[1]:s); return (v && !Array.isArray(v) && typeof v==='object') ? sqlResult(v) : v; }catch(e){ return null; }
 }
-if(typeof module!=='undefined') module.exports={parse:parse,insertSql:insertSql,toCsv:toCsv,sqlResult:sqlResult,COLS:COLS};
+if(typeof module!=='undefined') module.exports={parse:parse,insertSql:insertSql,toCsv:toCsv,sqlResult:sqlResult,COLS:COLS,ideaWords:ideaWords};
 
 (function(){
 var PROJECT='ubuavzcuwvvedojsrmux', SERVER='Supabase';
+var ACCOUNTS=['G1','G2','G3','G4','G5','G6','G7','ChatGPT','DeepSeek','Grok','Perplexity','Meta','Codex'];
+var IN_REPO={B001:1,B017:1,B018:1};
+var MAP=JSON.parse(document.getElementById('mapdata').textContent);
 var $=function(id){return document.getElementById(id);};
-var paste=$('paste'),acct=$('acct'),sum=$('sum'),list=$('list'),save=$('save'),msg=$('msg'),redo=$('redo'),redoText=$('redoText'),csvB=$('csv');
-var parsed=[], mcpP=null, dlP=null;
-try{var a=localStorage.getItem('bbi-acct');if(a)acct.value=a;}catch(e){}
-acct.addEventListener('change',function(){try{localStorage.setItem('bbi-acct',acct.value);}catch(e){}});
+var paste=$('paste'),save=$('save'),msg=$('msg');
+var parsed=[], counts={}, tab='need', mcpP=null, dlP=null, account='G1';
+var UPGRADE='From now on, every idea must be 700 to 1,500 words in total. Write every field fuller, with real detail about that business, in the same voice. Keep exactly the same one-line format with " | " between fields and END at the end. Now continue with the next subcategory.';
+function ic(n,cls){return '<svg class="i '+(cls||'')+'"><use href="#i-'+n+'"/></svg>';}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function getMcp(){ if(!mcpP) mcpP=(window.claude&&window.claude.use)?window.claude.use('mcp'):Promise.resolve(null); return mcpP; }
 function getDl(){ if(!dlP) dlP=(window.claude&&window.claude.use)?window.claude.use('downloads'):Promise.resolve(null); return dlP; }
-function show(t,kind){msg.hidden=false;msg.className='msg '+(kind||'');msg.textContent=t;}
+function note(kind,icon,html){msg.hidden=false;msg.className='note '+kind;msg.innerHTML=ic(icon)+'<div>'+html+'</div>';}
+function copy(text,el){
+  var done=function(){note('info','check','Copied. Paste it into the same chat.');};
+  if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done,function(){if(el){el.select();} note('info','copy','Selected. Copy it with your keyboard.');});
+  else { if(el) el.select(); note('info','copy','Selected. Copy it with your keyboard.'); }
+}
 function errText(e){
   var c=e&&e.code;
-  if(c==='server_not_connected') return 'The Supabase connector is not connected for you. Add it in claude.ai Settings, Connectors, and pick the businessidea organization.';
-  if(c==='needs_reauth') return 'Supabase needs reconnecting: claude.ai Settings, Connectors, Supabase.';
+  if(c==='server_not_connected') return 'Supabase is not connected. Add it in claude.ai Settings → Connectors (businessidea organization).';
+  if(c==='needs_reauth') return 'Supabase needs reconnecting: claude.ai Settings → Connectors → Supabase.';
   if(c==='not_in_manifest'||c==='approval_required'||c==='consent_required') return 'This page needs your OK to use Supabase. Press Save again and choose Allow.';
-  if(c==='selection_required') return 'You have more than one Supabase connector. Choose one when claude.ai asks, then press Save again.';
-  if(c==='tool_error') return 'The database refused it: '+(e.message||'').slice(0,300);
-  if(c==='server_unavailable'||c==='upstream_error') return 'Supabase did not answer. Some rows may or may not be saved. Press Refresh to check the count before saving again (saving twice is safe: the same code is replaced, never doubled).';
-  return 'Could not reach the database ('+(c||'unknown')+'). Your paste is still here. You can download it as CSV as a backup.';
+  if(c==='selection_required') return 'Choose which Supabase connector to use when claude.ai asks, then press Save again.';
+  if(c==='tool_error') return 'The database refused it: '+esc((e.message||'').slice(0,200));
+  if(c==='server_unavailable'||c==='upstream_error') return 'Supabase did not answer. Press Refresh to see if it saved. Saving again is safe: the same idea is replaced, never doubled.';
+  return 'Could not reach the database ('+esc(c||'unknown')+'). Your paste is still here; use Backup as CSV.';
 }
+// accounts
+try{var a=localStorage.getItem('bbi-acct'); if(a&&ACCOUNTS.indexOf(a)>=0) account=a;}catch(e){}
+ACCOUNTS.forEach(function(n){var b=document.createElement('button');b.type='button';b.className='chip';b.textContent=n;b.setAttribute('aria-pressed',n===account);
+  b.addEventListener('click',function(){account=n;try{localStorage.setItem('bbi-acct',n);}catch(e){} Array.prototype.forEach.call($('acct').children,function(x){x.setAttribute('aria-pressed',x.textContent===n);});});
+  $('acct').appendChild(b);});
+
 function render(){
   parsed=parse(paste.value);
-  var good=parsed.filter(function(x){return x.ok;}), bad=parsed.filter(function(x){return !x.ok;});
-  sum.innerHTML='';
-  if(!paste.value.trim()){list.innerHTML='';save.disabled=true;redo.hidden=true;csvB.hidden=true;return;}
-  var p=function(cls,t){var s=document.createElement('span');s.className='pill '+cls;s.textContent=t;sum.appendChild(s);};
-  p('ok',good.length+' good');
-  if(bad.length) p('no',bad.length+' to redo');
-  if(!parsed.length) p('info','No idea lines found. Check you pasted the answer that has codes like C012-S03-I01.');
-  list.innerHTML='';
-  parsed.forEach(function(x){var d=document.createElement('div');d.className='item'+(x.ok?'':' bad');
-    var c=document.createElement('span');c.className='c';c.textContent=x.code;var t=document.createElement('span');t.className='t';t.textContent=x.ok?x.row.title:x.why;d.appendChild(c);d.appendChild(t);list.appendChild(d);});
-  save.disabled=!good.length; csvB.hidden=!good.length;
-  if(bad.length){redo.hidden=false;redoText.value='Some lines were broken. Rewrite only these ideas, in exactly the same format: one line each, 31 fields separated by " | ", ending with | END, inside one code block and nothing else: '+bad.map(function(x){return x.code;}).join(', ');}
-  else redo.hidden=true;
+  var good=parsed.filter(function(x){return x.ok;}), fixed=good.filter(function(x){return x.fixes&&x.fixes.length;}), bad=parsed.filter(function(x){return !x.ok;});
+  var c=$('counts'); c.innerHTML='';
+  var L=$('lines'); L.innerHTML=''; L.hidden=!parsed.length;
+  if(!paste.value.trim()){ save.disabled=true; $('saveT').textContent='Save'; $('redo').hidden=true; $('csv').hidden=true; return; }
+  if(!parsed.length){ c.innerHTML='<span class="cnt idle-c">'+ic('alert')+'No idea lines found in this paste</span>'; save.disabled=true; $('redo').hidden=true; return; }
+  c.innerHTML='<span class="cnt ok-c">'+ic('check')+good.length+' ready</span>'+(fixed.length?'<span class="cnt warn-c">'+ic('wand')+fixed.length+' auto-fixed</span>':'')+(bad.length?'<span class="cnt bad-c">'+ic('x')+bad.length+' need a rewrite</span>':'');
+  parsed.forEach(function(x){
+    var d=document.createElement('div'); d.className='ln'+(x.ok?(x.fixes&&x.fixes.length?' fix':''):' bad');
+    var icon=x.ok?(x.fixes&&x.fixes.length?ic('wand','warn-t'):ic('check','ok-t')):ic('x','bad-t');
+    d.innerHTML=icon+'<span class="c">'+esc(x.code)+'</span><span class="t"></span><span class="w"></span>';
+    d.querySelector('.t').textContent=x.ok?x.row.title:(x.title?x.title+' · ':'')+x.why;
+    d.querySelector('.w').textContent=x.words?x.words+' words':'';
+    if(x.ok&&x.fixes&&x.fixes.length) d.title='Fixed: '+x.fixes.join(', ');
+    L.appendChild(d);
+  });
+  save.disabled=!good.length; $('saveT').textContent=good.length?('Save '+good.length+' ideas'):'Save'; $('csv').hidden=!good.length;
+  if(bad.length){
+    var short=bad.filter(function(x){return x.kind==='short';}).map(function(x){return x.code;});
+    var other=bad.filter(function(x){return x.kind!=='short';}).map(function(x){return x.code;});
+    var parts=[];
+    if(short.length) parts.push('These ideas are too short. Rewrite them fuller, 700 to 1,500 words each, with real detail in every field: '+short.join(', ')+'.');
+    if(other.length) parts.push('These lines were broken or cut off. Rewrite them completely: '+other.join(', ')+'.');
+    parts.push('Same format: one line per idea, fields separated by " | ", ending with | END, inside one code block and nothing else.');
+    $('redoText').value=parts.join(' '); $('redo').hidden=false;
+    $('redoTitle').textContent=bad.length+(bad.length===1?' idea needs':' ideas need')+' a rewrite: send this to the same chat';
+  } else $('redo').hidden=true;
 }
-paste.addEventListener('input',render);
+paste.addEventListener('input',function(){msg.hidden=true;render();});
 $('clear').addEventListener('click',function(){paste.value='';msg.hidden=true;render();paste.focus();});
-$('copyRedo').addEventListener('click',function(){var v=redoText.value;
-  if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(v).then(function(){show('Copied. Paste it into the same chat.');},function(){redoText.select();show('Selected. Copy it with your keyboard.');});
-  else {redoText.select();show('Selected. Copy it with your keyboard.');}});
-csvB.addEventListener('click',function(){
+$('copyRedo').addEventListener('click',function(){copy($('redoText').value,$('redoText'));});
+$('copyUp').addEventListener('click',function(){copy(UPGRADE);});
+$('csv').addEventListener('click',function(){
   var good=parsed.filter(function(x){return x.ok;}).map(function(x){return x.row;});
-  getDl().then(function(dl){ if(!dl){show('Downloads are not available in this view.');return;}
-    return dl.save({filename:'ideas-'+(good[0]?good[0].code.slice(0,8):'paste')+'-'+acct.value+'.csv',data:toCsv(good)}).then(function(){show('CSV saved.','good');},function(e){ if(e&&e.code!=='declined') show('Could not save the file ('+e.code+').','badm');});
+  getDl().then(function(dl){ if(!dl){note('badn','alert','Downloads are not available in this view.');return;}
+    dl.save({filename:'ideas-'+(good[0]?good[0].code.slice(0,8):'paste')+'-'+account+'.csv',data:toCsv(good)}).then(function(){note('good','check','Backup saved.');},function(e){ if(e&&e.code!=='declined') note('badn','alert','Could not save the file.');});
   });
 });
+
+function batchOf(code){ var cn=+code.slice(1,4), s=+code.slice(6,8); return (cn-1)*2+(s<=5?0:1); }
 save.addEventListener('click',function(){
   var good=parsed.filter(function(x){return x.ok;}).map(function(x){return x.row;});
   if(!good.length) return;
-  save.disabled=true; show('Saving '+good.length+' ideas…');
+  save.disabled=true; note('info','clock','Saving '+good.length+' ideas…');
   getMcp().then(function(mcp){
-    if(!mcp){ show('This view cannot reach Supabase. Open the page in claude.ai. Your paste is still here; you can download it as CSV.','badm'); save.disabled=false; return; }
-    return mcp.callTool(SERVER,'execute_sql',{project_id:PROJECT,query:insertSql(good,acct.value)},{cache:false}).then(function(res){
-      var r=sqlResult(res.payload); r=r&&r[0]||{};
-      var t='Saved: '+(r.moved!=null?r.moved:good.length)+' ideas are in the database.';
-      if(r.rejected) t+=' '+r.rejected+' were refused by the database checks (bad code or empty fields); redo those.';
-      show(t,'good'); paste.value=''; render(); loadProgress(); batchStatus(mcp,good);
-    },function(e){ show(errText(e),'badm'); save.disabled=false; });
+    if(!mcp){ note('badn','alert','This page cannot reach Supabase here. Open it in claude.ai. Your paste is still here.'); save.disabled=false; return; }
+    return mcp.callTool(SERVER,'execute_sql',{project_id:PROJECT,query:insertSql(good,account)},{cache:false}).then(function(res){
+      var r=(sqlResult(res.payload)||[])[0]||{}, n=r.moved!=null?r.moved:good.length;
+      var bi=batchOf(good[0].code); paste.value=''; render();
+      loadMap().then(function(){
+        var b=MAP[bi], st=batchState(bi), html='<b>Saved '+n+' ideas.</b> ';
+        if(st.state==='done') html+='Batch '+b[0]+' ('+b[1]+') is complete. Go to the next button.';
+        else html+='Batch '+b[0]+' ('+b[1]+'): '+st.have+' of 5 done. '+st.todo;
+        note('good','check',html);
+      });
+    },function(e){ note('badn','alert',errText(e)); save.disabled=false; });
   });
 });
-function loadProgress(){
-  getMcp().then(function(mcp){
-    if(!mcp){$('pmsg').textContent='Progress needs the Supabase connector, available when this page is open in claude.ai.';return;}
-    var q="select json_build_object('total',(select count(*) from public.ideas),'bad',(select count(*) from public.ideas_inbox where status='rejected'),'cats',(select coalesce(json_object_agg(category_code,n),'{}'::json) from (select category_code,count(*) n from public.ideas group by 1) x)) as p";
-    mcp.callTool(SERVER,'execute_sql',{project_id:PROJECT,query:q},{cache:false}).then(function(res){
-      var r=sqlResult(res.payload); var p=r&&r[0]&&r[0].p; if(typeof p==='string') p=JSON.parse(p); if(!p) return;
-      var cats=p.cats||{}, done=0; Object.keys(cats).forEach(function(k){if(cats[k]>=100)done++;});
-      $('stats').innerHTML='';
-      [[p.total,'ideas saved of 10,000'],[done,'categories complete of 100'],[p.bad,'refused rows to redo']].forEach(function(s){var d=document.createElement('div');var b=document.createElement('b');b.textContent=Number(s[0]).toLocaleString('en-IN');d.appendChild(b);d.appendChild(document.createTextNode(s[1]));$('stats').appendChild(d);});
-      drawGrid(cats); unfinished(mcp); $('pmsg').textContent='Updated just now. Each square is one category; it fills as its 100 ideas arrive.';
-    },function(e){$('pmsg').textContent=errText(e);});
+
+// batch map
+function batchState(i){
+  var b=MAP[i], h=i%2, have=0, part=[], miss=[], any=false;
+  var subs=[]; for(var k=1;k<=5;k++){ var sc=b[1]+'-S'+('0'+(h*5+k)).slice(-2), n=counts[sc]||0; subs.push({code:sc,n:n}); if(n>=10) have++; else if(n>0) part.push(sc); else miss.push(sc); if(n>0) any=true; }
+  if(IN_REPO[b[0]]) return {state:'done',have:5,subs:subs.map(function(s){return {code:s.code,n:10};}),todo:'Already written.',repo:true};
+  if(have===5) return {state:'done',have:5,subs:subs,todo:'Done.'};
+  if(!any) return {state:'idle',have:0,subs:subs,todo:'Not started. Copy '+b[0]+' from the Batch Prompts page.'};
+  var todo=[];
+  if(miss.length) todo.push('In that chat type next '+(miss.length===1?'once':miss.length+' more times')+' ('+miss.map(function(s){return s.slice(5);}).join(', ')+').');
+  if(part.length) todo.push('Ask it to finish '+part.join(', ')+'.');
+  return {state:'need',have:have,subs:subs,todo:todo.join(' ')};
+}
+function loadMap(){
+  return getMcp().then(function(mcp){
+    if(!mcp){ $('map').innerHTML='<div class="empty">The map needs the Supabase connector. Open this page in claude.ai.</div>'; return; }
+    return mcp.callTool(SERVER,'execute_sql',{project_id:PROJECT,query:"select subcategory_code s, count(*)::int n from public.ideas group by 1"},{cache:false}).then(function(res){
+      var r=sqlResult(res.payload); if(!r){ $('map').innerHTML='<div class="empty">Could not read the database reply. Press Refresh.</div>'; return; }
+      counts={}; var total=0; r.forEach(function(x){counts[x.s]=x.n; total+=x.n;});
+      drawTiles(total); drawMap();
+    },function(e){ $('map').innerHTML='<div class="empty">'+errText(e)+'</div>'; });
   });
 }
-function drawGrid(cats){
-  var g=$('grid'); g.innerHTML='';
-  for(var i=1;i<=100;i++){var k='C'+('00'+i).slice(-3), n=(cats&&cats[k])||0;
-    var c=document.createElement('div');c.className='cell'+(n>=100?' full':'');c.title=k+': '+n+' of 100';
-    var f=document.createElement('i');f.style.height=Math.min(100,n)+'%';c.appendChild(f);
-    var s=document.createElement('span');s.textContent=n?n:k.slice(1);c.appendChild(s);g.appendChild(c);}
+function drawTiles(total){
+  var cats=0, need=0;
+  for(var c=1;c<=100;c++){ var ok=true; for(var s=1;s<=10;s++){ if((counts['C'+('00'+c).slice(-3)+'-S'+('0'+s).slice(-2)]||0)<10 && !IN_REPO[MAP[(c-1)*2+(s<=5?0:1)][0]]) ok=false; } if(ok) cats++; }
+  MAP.forEach(function(b,i){ if(batchState(i).state==='need') need++; });
+  $('tIdeas').textContent=total.toLocaleString('en-IN'); $('tBar').style.width=Math.min(100,total/100)+'%';
+  $('tCats').textContent=cats; $('tNeed').textContent=need;
 }
-function unfinished(mcp){
-  mcp.callTool(SERVER,'execute_sql',{project_id:PROJECT,query:"select subcategory_code s, count(*)::int n from public.ideas group by 1"},{cache:false}).then(function(res){
-    var r=sqlResult(res.payload)||[], n={}, b={}; r.forEach(function(x){n[x.s]=x.n; var c=x.s.slice(0,4), h=+x.s.slice(6,8)<=5?0:1; b[c+'|'+h]=1;});
-    var out=[];
-    Object.keys(b).sort().forEach(function(k){var c=k.split('|')[0], h=+k.split('|')[1], cn=+c.slice(1), miss=[];
-      for(var i=1;i<=5;i++){var sc=c+'-S'+('0'+(h*5+i)).slice(-2); if((n[sc]||0)<10) miss.push(sc.slice(5)+((n[sc]||0)?' ('+n[sc]+'/10)':''));}
-      if(miss.length) out.push('B'+('00'+((cn-1)*2+h+1)).slice(-3)+' '+c+': missing '+miss.join(', '));});
-    var el=$('unfinished');
-    if(!out.length){el.hidden=true;return;}
-    el.hidden=false; el.innerHTML='';
-    var h=document.createElement('b'); h.textContent='Unfinished batches ('+out.length+'). Go back to that chat and type next:'; el.appendChild(h);
-    var ul=document.createElement('ul'); ul.style.margin='4px 0 0'; ul.style.paddingLeft='18px';
-    out.forEach(function(t){var li=document.createElement('li'); li.textContent=t; ul.appendChild(li);}); el.appendChild(ul);
-  },function(){});
+var TABS=[['need','Waiting for next'],['done','Done'],['idle','Not started'],['all','All']];
+function drawMap(){
+  var groups={need:[],done:[],idle:[]};
+  MAP.forEach(function(b,i){ groups[batchState(i).state].push(i); });
+  var t=$('tabs'); t.innerHTML='';
+  TABS.forEach(function(x){ var n=x[0]==='all'?MAP.length:groups[x[0]].length;
+    var b=document.createElement('button'); b.type='button'; b.className='tab'; b.setAttribute('role','tab'); b.setAttribute('aria-selected',tab===x[0]); b.textContent=x[1]+' · '+n;
+    b.addEventListener('click',function(){tab=x[0];drawMap();}); t.appendChild(b); });
+  var list=tab==='all'?MAP.map(function(b,i){return i;}):groups[tab];
+  var m=$('map'); m.innerHTML='';
+  if(!list.length){ m.innerHTML='<div class="empty">'+(tab==='need'?'Nothing waiting. Every started batch is complete.':'Nothing here yet.')+'</div>'; return; }
+  list.slice(0,tab==='idle'||tab==='all'?60:200).forEach(function(i){
+    var b=MAP[i], st=batchState(i), d=document.createElement('div'); d.className='bt '+st.state;
+    var dots=st.subs.map(function(s){ var cls=s.n>=10?'ok':(s.n>0?'part':(st.state==='need'?'miss':'none')); return '<span class="dot '+cls+'" title="'+s.code+': '+s.n+' of 10">'+s.code.slice(5)+'</span>'; }).join('');
+    var icon=st.state==='done'?ic('check','ok-t'):(st.state==='need'?ic('arrow','bad-t'):ic('clock'));
+    d.innerHTML='<div class="name"><span>'+b[0]+' · '+b[1]+'</span>'+esc(b[2])+'</div><div class="dots">'+dots+'</div><div class="todo">'+icon+'<span>'+esc(st.todo)+'</span></div>';
+    m.appendChild(d);
+  });
+  if((tab==='idle'||tab==='all')&&list.length>60){ var e=document.createElement('div'); e.className='empty'; e.textContent='Showing the first 60 of '+list.length+'.'; m.appendChild(e); }
 }
-function batchStatus(mcp,rows){
-  var keys={}; rows.forEach(function(r){var s=+r.code.slice(6,8); keys[r.code.slice(0,4)+'|'+(s<=5?0:1)]=1;});
-  var cats={}; Object.keys(keys).forEach(function(k){cats[k.split('|')[0]]=1;});
-  var list=Object.keys(cats).filter(function(c){return /^C[0-9]{3}$/.test(c);});
-  if(!list.length) return;
-  var q="select subcategory_code s, count(*)::int n from public.ideas where category_code in ('"+list.join("','")+"') group by 1";
-  mcp.callTool(SERVER,'execute_sql',{project_id:PROJECT,query:q},{cache:false}).then(function(res){
-    var r=sqlResult(res.payload)||[], n={}; r.forEach(function(x){n[x.s]=x.n;});
-    var box=$('batch'); box.innerHTML=''; box.hidden=false;
-    Object.keys(keys).sort().forEach(function(k){
-      var c=k.split('|')[0], h=+k.split('|')[1], cn=+c.slice(1);
-      var bid='B'+('00'+((cn-1)*2+h+1)).slice(-3), have=0, next=null;
-      var row=document.createElement('div'); row.className='card'; row.style.background='var(--bg)';
-      var cells=document.createElement('div'); cells.className='sum';
-      for(var i=1;i<=5;i++){var sc=c+'-S'+('0'+(h*5+i)).slice(-2), v=n[sc]||0; if(v>=10) have++; else if(!next) next=sc;
-        var p=document.createElement('span'); p.className='pill '+(v>=10?'ok':(v?'info':'no')); p.textContent=sc.slice(5)+' '+v+'/10'; cells.appendChild(p);}
-      var t=document.createElement('div'); t.style.fontWeight='600';
-      t.textContent=have===5?('Batch '+bid+' ('+c+') is complete.'):('Batch '+bid+' ('+c+'): '+have+' of 5 subcategories in. In the same chat type next to get '+next+'.');
-      row.appendChild(t); row.appendChild(cells); box.appendChild(row);
-    });
-  },function(){});
-}
-$('refresh').addEventListener('click',loadProgress);
-drawGrid({}); render(); loadProgress();
+$('refresh').addEventListener('click',function(){ $('map').innerHTML='<div class="empty">Loading…</div>'; loadMap(); });
+render(); drawMap(); loadMap();
 })();
 </script>

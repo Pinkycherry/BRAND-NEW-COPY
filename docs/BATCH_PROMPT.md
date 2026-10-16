@@ -28,7 +28,7 @@ RULES
 4. Every one of the 10 ideas in a subcategory is a genuinely different business: a different customer, place, time, skill or way of delivering. Never the same business described twice.
 5. Write every idea fresh. Never reuse a sentence or a phrase of four or more words from another idea. Never copy the hook into other fields. Do not open fields the same way across ideas.
 6. Never use these openers or phrases: "Imagine", "Picture this", "In today's", "In India,", "If you are passionate", "This business", "Your day begins", "Are you looking", "Look no further", "game changer", "unlock", "thriving", "landscape", "navigate".
-7. Each idea totals about 600 to 800 words across its fields. No filler.
+7. LENGTH IS STRICT: every idea totals 700 to 1,500 words across its fields. Under 700 words is rejected and must be rewritten, so write every field fully, with real detail about this business. No filler and no repeating yourself to reach the count.
 8. Mention licences, registrations or safety training plainly where they apply (FSSAI, trade licence, GST and so on) inside what_you_need or what_hurts. Say it once per idea, in words that fit that business; do not repeat the same licence sentence in every idea or every FAQ.
 9. Vary how you open things across the 10 ideas. The five steps must not follow a fixed time pattern such as "In the first few days / In week one / In week two / In week three / By day thirty"; write each step as the action itself, and mention a time only where it matters. The validate_prompt must not always begin with "I want to start": vary it ("Is there demand for...", "How much would it cost to...", "My town has... could I..."). The three FAQ questions must differ in kind from idea to idea, not the same three questions reworded.
 
@@ -36,26 +36,26 @@ THE 31 FIELDS OF ONE IDEA, IN THIS ORDER
 1 code: the idea code given below, for example C012-S03-I07
 2 title: 3 to 9 words, a specific business name, never ending in "Business Idea"
 3 slug: the title in lowercase words joined by hyphens, 3 to 8 words, never ending in "business-idea"
-4 hook: one or two sentences, 12 to 25 words, why this is worth a look
-5 summary: 35 to 60 words, what the business is, who pays, what makes it work
-6 what_it_is: 70 to 140 words, a picture of how the reader actually runs it day to day
-7 who_pays_you: 45 to 120 words, the specific people or businesses who pay, and where the first ones come from
-8 how_money_comes: 50 to 120 words, how and when the reader gets paid and what keeps money coming back
-9 what_you_need: 40 to 100 words, skills, tools, space, licences, the habit it takes
-10 step1: first 30 days, step 1, one sentence of 6 to 35 words
+4 hook: one or two sentences, 15 to 30 words, why this is worth a look
+5 summary: 45 to 80 words, what the business is, who pays, what makes it work
+6 what_it_is: 130 to 220 words, a picture of how the reader actually runs it day to day
+7 who_pays_you: 90 to 160 words, the specific people or businesses who pay, and where the first ones come from
+8 how_money_comes: 90 to 160 words, how and when the reader gets paid and what keeps money coming back
+9 what_you_need: 70 to 130 words, skills, tools, space, licences, the habit it takes
+10 step1: first 30 days, step 1, one or two sentences of 15 to 40 words
 11 step2: step 2
 12 step3: step 3
 13 step4: step 4
 14 step5: step 5
-15 what_hurts: 50 to 120 words, the honest hard parts of year one
-16 verdict: 30 to 80 words, in your own words who should build this and who should walk away
+15 what_hurts: 90 to 160 words, the honest hard parts of year one
+16 verdict: 45 to 90 words, in your own words who should build this and who should walk away
 17 faq1_q: a question a real reader would ask about this idea
-18 faq1_a: 20 to 90 words
+18 faq1_a: 45 to 100 words
 19 faq2_q
 20 faq2_a
 21 faq3_q
 22 faq3_a
-23 validate_prompt: 1 to 3 sentences, 12 to 70 words, the reader asking a research assistant about this exact idea in their own city in India
+23 validate_prompt: 1 to 3 sentences, 20 to 70 words, the reader asking a research assistant about this exact idea in their own city in India
 24 investment_band: one of zero, under_25k, 25k_1l, 1l_5l, above_5l
 25 gender_fit: one of any, women, men (use any unless the idea clearly suits one group)
 26 life_stage: one or more of any, student, homemaker, working_professional, senior_citizen, joined by commas
