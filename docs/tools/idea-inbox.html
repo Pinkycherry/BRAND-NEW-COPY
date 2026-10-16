@@ -1,0 +1,234 @@
+<title>BusinessIdea Idea Inbox</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one working column. Account + paste box on top, the check result under it, then the 100-category progress grid. */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#16212c; --muted:#5a6672; --line:#d9dee4;
+  --accent:#b36a00; --accent-fg:#ffffff; --teal:#0d7372; --good:#1f7a3a; --good-soft:#e2f3e7; --bad:#b4232c; --bad-soft:#fbe4e5; --warn-soft:#fdf1d8;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif; --body:"IBM Plex Sans","Segoe UI",Roboto,Arial,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#10161c;--surface:#18212a;--fg:#e7ecf1;--muted:#9aa7b3;--line:#2c3843;--accent:#f0a33a;--accent-fg:#1a1205;--teal:#5cc8c4;--good:#6fd08c;--good-soft:#163222;--bad:#ff8088;--bad-soft:#3d1a1d;--warn-soft:#3a2e12;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10161c;--surface:#18212a;--fg:#e7ecf1;--muted:#9aa7b3;--line:#2c3843;--accent:#f0a33a;--accent-fg:#1a1205;--teal:#5cc8c4;--good:#6fd08c;--good-soft:#163222;--bad:#ff8088;--bad-soft:#3d1a1d;--warn-soft:#3a2e12;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--body);margin:0}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:20px}
+h1{font:800 clamp(26px,5vw,36px)/1.1 var(--display);margin:0}
+h2{font:700 18px/1.2 var(--display);margin:0}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:12px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+label{font-weight:600;font-size:14px}
+select,textarea{font:14px var(--body);border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);padding:10px}
+textarea{width:100%;min-height:180px;font:13px/1.45 var(--mono);resize:vertical}
+button{font:600 14px var(--body);border-radius:8px;padding:10px 14px;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--fg)}
+button.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+button:disabled{opacity:.5;cursor:not-allowed}
+button:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.sum{display:flex;gap:8px;flex-wrap:wrap}
+.pill{font:500 13px/1 var(--mono);padding:6px 10px;border-radius:999px}
+.ok{background:var(--good-soft);color:var(--good)} .no{background:var(--bad-soft);color:var(--bad)} .info{background:var(--warn-soft);color:var(--fg)}
+.list{display:grid;gap:4px;max-height:280px;overflow:auto;font-size:13px}
+.item{display:grid;grid-template-columns:120px minmax(0,1fr);gap:8px;padding:4px 0;border-bottom:1px solid var(--line)}
+.item .c{font-family:var(--mono)}
+.item.bad .t{color:var(--bad)}
+.msg{font-size:14px;padding:10px 12px;border-radius:8px;background:var(--bg);border:1px solid var(--line)}
+.msg.good{border-color:var(--good)} .msg.badm{border-color:var(--bad)}
+.grid{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px}
+.cell{aspect-ratio:1/1;max-width:100%;border-radius:4px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:500 10px var(--mono);position:relative;overflow:hidden;background:var(--bg)}
+.cell span{position:relative;z-index:1}
+.cell i{position:absolute;left:0;right:0;bottom:0;background:var(--good-soft)}
+.cell.full{border-color:var(--good)}
+.stats{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+.stats b{font:800 22px var(--display);font-variant-numeric:tabular-nums;display:block}
+.small{font-size:13px;color:var(--muted)}
+ol{margin:0;padding-left:20px;display:grid;gap:4px}
+</style>
+
+<div class="wrap">
+<header style="display:grid;gap:8px">
+  <div class="eyebrow">Paste · check · save to the database</div>
+  <h1>BusinessIdea Idea Inbox</h1>
+  <ol class="small">
+    <li>Pick the account you used.</li>
+    <li>Paste the tool's whole answer below. Extra words, headings or numbering do not matter.</li>
+    <li>Press <b>Save good ideas</b>. Good ones go straight to the database. Broken ones are listed with a ready message to ask the tool to redo them.</li>
+  </ol>
+</header>
+
+<section class="card">
+  <div class="row">
+    <label for="acct">Account</label>
+    <select id="acct">
+      <option>G1</option><option>G2</option><option>G3</option><option>G4</option><option>G5</option><option>G6</option><option>G7</option>
+      <option>ChatGPT</option><option>DeepSeek</option><option>Grok</option><option>Perplexity</option><option>Meta</option><option>Codex</option><option>Other</option>
+    </select>
+  </div>
+  <label for="paste">Paste the answer here</label>
+  <textarea id="paste" placeholder="Paste everything the tool replied. Lines starting with an idea code like C012-S03-I01 are picked out automatically."></textarea>
+  <div class="sum" id="sum"></div>
+  <div class="list" id="list"></div>
+  <div class="row">
+    <button class="primary" id="save" type="button" disabled>Save good ideas</button>
+    <button id="clear" type="button">Clear</button>
+    <button id="csv" type="button" hidden>Download this paste as CSV</button>
+  </div>
+  <div id="redo" hidden class="card" style="background:var(--bg)">
+    <h2>Ask the tool to redo these</h2>
+    <textarea id="redoText" style="min-height:70px" readonly></textarea>
+    <div class="row"><button id="copyRedo" type="button">Copy message</button></div>
+  </div>
+  <div id="msg" class="msg" hidden></div>
+</section>
+
+<section class="card">
+  <div class="row" style="justify-content:space-between"><h2>Progress</h2><button id="refresh" type="button">Refresh</button></div>
+  <div class="stats" id="stats"><div><b>–</b>ideas saved</div></div>
+  <div class="grid" id="grid" aria-label="Ideas per category, C001 to C100"></div>
+  <p class="small" id="pmsg">Each square is one category (C001 to C100); it fills as its 100 ideas arrive.</p>
+</section>
+</div>
+
+<script>
+// Shared parsing logic for the Idea Inbox page (also unit-tested in node).
+var COLS=["code","title","slug","hook","summary","what_it_is","who_pays_you","how_money_comes","what_you_need","step1","step2","step3","step4","step5","what_hurts","verdict","faq1_q","faq1_a","faq2_q","faq2_a","faq3_q","faq3_a","validate_prompt","investment_band","gender_fit","life_stage","place","work_mode","time_needed","skill_level"];
+var CODE_RE=/C\d{3}-S\d{2}-I\d{2}/;
+function cleanText(t){
+  t=String(t||'').replace(/\r/g,'').replace(/ /g,' ');
+  t=t.split('\n').filter(function(l){return !/^\s*```/.test(l);}).map(function(l){
+    return l.replace(/^\s*(?:[-*•]\s+|\d+[.)]\s+)(?=\**C\d{3}-S\d{2}-I\d{2})/,'').replace(/\*\*/g,'');
+  }).join('\n');
+  // A tool that used tabs instead of bars
+  if((t.match(/\|/g)||[]).length<10 && (t.match(/\t/g)||[]).length>=10) t=t.replace(/\t/g,' | ');
+  return t;
+}
+function parse(raw){
+  var t=cleanText(raw), out=[], re=/C\d{3}-S\d{2}-I\d{2}\s*\|/g, starts=[], m;
+  while((m=re.exec(t))) starts.push(m.index);
+  for(var i=0;i<starts.length;i++){
+    var chunk=t.slice(starts[i], i+1<starts.length?starts[i+1]:t.length);
+    var code=chunk.match(CODE_RE)[0];
+    var endM=chunk.match(/^([\s\S]*)\|\s*END\b/);
+    if(!endM){ out.push({code:code,ok:false,why:'cut off (no END)'}); continue; }
+    var f=endM[1].split('|').map(function(x){return x.replace(/\s+/g,' ').trim();});
+    if(f.length && f[f.length-1]==='') f.pop();
+    if(f.length!==30){ out.push({code:code,ok:false,why:(f.length+1)+' fields, need 31'}); continue; }
+    var row={}; COLS.forEach(function(c,k){row[c]=f[k];}); row.code=code;
+    if(!row.title||!row.what_it_is||!row.verdict){ out.push({code:code,ok:false,why:'empty main field'}); continue; }
+    out.push({code:code,ok:true,row:row});
+  }
+  // a later copy of the same code wins
+  var seen={}, res=[];
+  for(var j=out.length-1;j>=0;j--){ if(seen[out[j].code]) continue; seen[out[j].code]=1; res.unshift(out[j]); }
+  return res;
+}
+function dollarTag(rows){
+  var all=JSON.stringify(rows), tag;
+  do{ tag='$b'+Math.random().toString(36).slice(2,8)+'$'; }while(all.indexOf(tag)>=0);
+  return tag;
+}
+function insertSql(rows, writer){
+  var tag=dollarTag(rows.concat([writer]));
+  var q=function(v){return tag+String(v==null?'':v)+tag;};
+  var vals=rows.map(function(r){return '('+COLS.map(function(c){return q(r[c]);}).join(',')+','+q('END')+','+q(writer)+')';});
+  return 'insert into public.ideas_inbox ('+COLS.join(',')+',end_marker,writer) values\n'+vals.join(',\n')+';\nselect * from public.promote_ideas_inbox();';
+}
+function toCsv(rows){
+  var esc=function(v){v=String(v==null?'':v);return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;};
+  return [COLS.concat(['end_marker']).join(',')].concat(rows.map(function(r){return COLS.map(function(c){return esc(r[c]);}).concat(['END']).join(',');})).join('\n');
+}
+function sqlResult(payload){
+  var s = typeof payload==='string' ? payload : (payload && (payload.result||payload.text)) || JSON.stringify(payload);
+  if(Array.isArray(payload)) return payload;
+  var m=String(s).match(/<untrusted-data-[^>]*>\s*([\s\S]*?)\s*<\/untrusted-data/);
+  try{ return JSON.parse(m?m[1]:s); }catch(e){ return null; }
+}
+if(typeof module!=='undefined') module.exports={parse:parse,insertSql:insertSql,toCsv:toCsv,sqlResult:sqlResult,COLS:COLS};
+
+(function(){
+var PROJECT='ubuavzcuwvvedojsrmux', SERVER='Supabase';
+var $=function(id){return document.getElementById(id);};
+var paste=$('paste'),acct=$('acct'),sum=$('sum'),list=$('list'),save=$('save'),msg=$('msg'),redo=$('redo'),redoText=$('redoText'),csvB=$('csv');
+var parsed=[], mcpP=null, dlP=null;
+try{var a=localStorage.getItem('bbi-acct');if(a)acct.value=a;}catch(e){}
+acct.addEventListener('change',function(){try{localStorage.setItem('bbi-acct',acct.value);}catch(e){}});
+function getMcp(){ if(!mcpP) mcpP=(window.claude&&window.claude.use)?window.claude.use('mcp'):Promise.resolve(null); return mcpP; }
+function getDl(){ if(!dlP) dlP=(window.claude&&window.claude.use)?window.claude.use('downloads'):Promise.resolve(null); return dlP; }
+function show(t,kind){msg.hidden=false;msg.className='msg '+(kind||'');msg.textContent=t;}
+function errText(e){
+  var c=e&&e.code;
+  if(c==='server_not_connected') return 'The Supabase connector is not connected for you. Add it in claude.ai Settings, Connectors, and pick the businessidea organization.';
+  if(c==='needs_reauth') return 'Supabase needs reconnecting: claude.ai Settings, Connectors, Supabase.';
+  if(c==='not_in_manifest'||c==='approval_required'||c==='consent_required') return 'This page needs your OK to use Supabase. Press Save again and choose Allow.';
+  if(c==='selection_required') return 'You have more than one Supabase connector. Choose one when claude.ai asks, then press Save again.';
+  if(c==='tool_error') return 'The database refused it: '+(e.message||'').slice(0,300);
+  if(c==='server_unavailable'||c==='upstream_error') return 'Supabase did not answer. Some rows may or may not be saved. Press Refresh to check the count before saving again (saving twice is safe: the same code is replaced, never doubled).';
+  return 'Could not reach the database ('+(c||'unknown')+'). Your paste is still here. You can download it as CSV as a backup.';
+}
+function render(){
+  parsed=parse(paste.value);
+  var good=parsed.filter(function(x){return x.ok;}), bad=parsed.filter(function(x){return !x.ok;});
+  sum.innerHTML='';
+  if(!paste.value.trim()){list.innerHTML='';save.disabled=true;redo.hidden=true;csvB.hidden=true;return;}
+  var p=function(cls,t){var s=document.createElement('span');s.className='pill '+cls;s.textContent=t;sum.appendChild(s);};
+  p('ok',good.length+' good');
+  if(bad.length) p('no',bad.length+' to redo');
+  if(!parsed.length) p('info','No idea lines found. Check you pasted the answer that has codes like C012-S03-I01.');
+  list.innerHTML='';
+  parsed.forEach(function(x){var d=document.createElement('div');d.className='item'+(x.ok?'':' bad');
+    var c=document.createElement('span');c.className='c';c.textContent=x.code;var t=document.createElement('span');t.className='t';t.textContent=x.ok?x.row.title:x.why;d.appendChild(c);d.appendChild(t);list.appendChild(d);});
+  save.disabled=!good.length; csvB.hidden=!good.length;
+  if(bad.length){redo.hidden=false;redoText.value='Some lines were broken. Rewrite only these ideas, in exactly the same format: one line each, 31 fields separated by " | ", ending with | END, inside one code block and nothing else: '+bad.map(function(x){return x.code;}).join(', ');}
+  else redo.hidden=true;
+}
+paste.addEventListener('input',render);
+$('clear').addEventListener('click',function(){paste.value='';msg.hidden=true;render();paste.focus();});
+$('copyRedo').addEventListener('click',function(){var v=redoText.value;
+  if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(v).then(function(){show('Copied. Paste it into the same chat.');},function(){redoText.select();show('Selected. Copy it with your keyboard.');});
+  else {redoText.select();show('Selected. Copy it with your keyboard.');}});
+csvB.addEventListener('click',function(){
+  var good=parsed.filter(function(x){return x.ok;}).map(function(x){return x.row;});
+  getDl().then(function(dl){ if(!dl){show('Downloads are not available in this view.');return;}
+    return dl.save({filename:'ideas-'+(good[0]?good[0].code.slice(0,8):'paste')+'-'+acct.value+'.csv',data:toCsv(good)}).then(function(){show('CSV saved.','good');},function(e){ if(e&&e.code!=='declined') show('Could not save the file ('+e.code+').','badm');});
+  });
+});
+save.addEventListener('click',function(){
+  var good=parsed.filter(function(x){return x.ok;}).map(function(x){return x.row;});
+  if(!good.length) return;
+  save.disabled=true; show('Saving '+good.length+' ideas…');
+  getMcp().then(function(mcp){
+    if(!mcp){ show('This view cannot reach Supabase. Open the page in claude.ai. Your paste is still here; you can download it as CSV.','badm'); save.disabled=false; return; }
+    return mcp.callTool(SERVER,'execute_sql',{project_id:PROJECT,query:insertSql(good,acct.value)},{cache:false}).then(function(res){
+      var r=sqlResult(res.payload); r=r&&r[0]||{};
+      var t='Saved: '+(r.moved!=null?r.moved:good.length)+' ideas are in the database.';
+      if(r.rejected) t+=' '+r.rejected+' were refused by the database checks (bad code or empty fields); redo those.';
+      show(t,'good'); paste.value=''; render(); loadProgress();
+    },function(e){ show(errText(e),'badm'); save.disabled=false; });
+  });
+});
+function loadProgress(){
+  getMcp().then(function(mcp){
+    if(!mcp){$('pmsg').textContent='Progress needs the Supabase connector, available when this page is open in claude.ai.';return;}
+    var q="select json_build_object('total',(select count(*) from public.ideas),'bad',(select count(*) from public.ideas_inbox where status='rejected'),'cats',(select coalesce(json_object_agg(category_code,n),'{}'::json) from (select category_code,count(*) n from public.ideas group by 1) x)) as p";
+    mcp.callTool(SERVER,'execute_sql',{project_id:PROJECT,query:q},{cache:false}).then(function(res){
+      var r=sqlResult(res.payload); var p=r&&r[0]&&r[0].p; if(typeof p==='string') p=JSON.parse(p); if(!p) return;
+      var cats=p.cats||{}, done=0; Object.keys(cats).forEach(function(k){if(cats[k]>=100)done++;});
+      $('stats').innerHTML='';
+      [[p.total,'ideas saved of 10,000'],[done,'categories complete of 100'],[p.bad,'refused rows to redo']].forEach(function(s){var d=document.createElement('div');var b=document.createElement('b');b.textContent=Number(s[0]).toLocaleString('en-IN');d.appendChild(b);d.appendChild(document.createTextNode(s[1]));$('stats').appendChild(d);});
+      drawGrid(cats); $('pmsg').textContent='Updated just now. Each square is one category; it fills as its 100 ideas arrive.';
+    },function(e){$('pmsg').textContent=errText(e);});
+  });
+}
+function drawGrid(cats){
+  var g=$('grid'); g.innerHTML='';
+  for(var i=1;i<=100;i++){var k='C'+('00'+i).slice(-3), n=(cats&&cats[k])||0;
+    var c=document.createElement('div');c.className='cell'+(n>=100?' full':'');c.title=k+': '+n+' of 100';
+    var f=document.createElement('i');f.style.height=Math.min(100,n)+'%';c.appendChild(f);
+    var s=document.createElement('span');s.textContent=n?n:k.slice(1);c.appendChild(s);g.appendChild(c);}
+}
+$('refresh').addEventListener('click',loadProgress);
+drawGrid({}); render(); loadProgress();
+})();
+</script>
