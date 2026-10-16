@@ -81,12 +81,14 @@ ol{margin:0;padding-left:20px;display:grid;gap:4px}
     <div class="row"><button id="copyRedo" type="button">Copy message</button></div>
   </div>
   <div id="msg" class="msg" hidden></div>
+  <div id="batch" hidden style="display:grid;gap:8px"></div>
 </section>
 
 <section class="card">
   <div class="row" style="justify-content:space-between"><h2>Progress</h2><button id="refresh" type="button">Refresh</button></div>
   <div class="stats" id="stats"><div><b>–</b>ideas saved</div></div>
   <div class="grid" id="grid" aria-label="Ideas per category, C001 to C100"></div>
+  <div id="unfinished" class="small" hidden></div>
   <p class="small" id="pmsg">Each square is one category (C001 to C100); it fills as its 100 ideas arrive.</p>
 </section>
 </div>
@@ -204,7 +206,7 @@ save.addEventListener('click',function(){
       var r=sqlResult(res.payload); r=r&&r[0]||{};
       var t='Saved: '+(r.moved!=null?r.moved:good.length)+' ideas are in the database.';
       if(r.rejected) t+=' '+r.rejected+' were refused by the database checks (bad code or empty fields); redo those.';
-      show(t,'good'); paste.value=''; render(); loadProgress();
+      show(t,'good'); paste.value=''; render(); loadProgress(); batchStatus(mcp,good);
     },function(e){ show(errText(e),'badm'); save.disabled=false; });
   });
 });
@@ -217,7 +219,7 @@ function loadProgress(){
       var cats=p.cats||{}, done=0; Object.keys(cats).forEach(function(k){if(cats[k]>=100)done++;});
       $('stats').innerHTML='';
       [[p.total,'ideas saved of 10,000'],[done,'categories complete of 100'],[p.bad,'refused rows to redo']].forEach(function(s){var d=document.createElement('div');var b=document.createElement('b');b.textContent=Number(s[0]).toLocaleString('en-IN');d.appendChild(b);d.appendChild(document.createTextNode(s[1]));$('stats').appendChild(d);});
-      drawGrid(cats); $('pmsg').textContent='Updated just now. Each square is one category; it fills as its 100 ideas arrive.';
+      drawGrid(cats); unfinished(mcp); $('pmsg').textContent='Updated just now. Each square is one category; it fills as its 100 ideas arrive.';
     },function(e){$('pmsg').textContent=errText(e);});
   });
 }
@@ -227,6 +229,43 @@ function drawGrid(cats){
     var c=document.createElement('div');c.className='cell'+(n>=100?' full':'');c.title=k+': '+n+' of 100';
     var f=document.createElement('i');f.style.height=Math.min(100,n)+'%';c.appendChild(f);
     var s=document.createElement('span');s.textContent=n?n:k.slice(1);c.appendChild(s);g.appendChild(c);}
+}
+function unfinished(mcp){
+  mcp.callTool(SERVER,'execute_sql',{project_id:PROJECT,query:"select subcategory_code s, count(*)::int n from public.ideas group by 1"},{cache:false}).then(function(res){
+    var r=sqlResult(res.payload)||[], n={}, b={}; r.forEach(function(x){n[x.s]=x.n; var c=x.s.slice(0,4), h=+x.s.slice(6,8)<=5?0:1; b[c+'|'+h]=1;});
+    var out=[];
+    Object.keys(b).sort().forEach(function(k){var c=k.split('|')[0], h=+k.split('|')[1], cn=+c.slice(1), miss=[];
+      for(var i=1;i<=5;i++){var sc=c+'-S'+('0'+(h*5+i)).slice(-2); if((n[sc]||0)<10) miss.push(sc.slice(5)+((n[sc]||0)?' ('+n[sc]+'/10)':''));}
+      if(miss.length) out.push('B'+('00'+((cn-1)*2+h+1)).slice(-3)+' '+c+': missing '+miss.join(', '));});
+    var el=$('unfinished');
+    if(!out.length){el.hidden=true;return;}
+    el.hidden=false; el.innerHTML='';
+    var h=document.createElement('b'); h.textContent='Unfinished batches ('+out.length+'). Go back to that chat and type next:'; el.appendChild(h);
+    var ul=document.createElement('ul'); ul.style.margin='4px 0 0'; ul.style.paddingLeft='18px';
+    out.forEach(function(t){var li=document.createElement('li'); li.textContent=t; ul.appendChild(li);}); el.appendChild(ul);
+  },function(){});
+}
+function batchStatus(mcp,rows){
+  var keys={}; rows.forEach(function(r){var s=+r.code.slice(6,8); keys[r.code.slice(0,4)+'|'+(s<=5?0:1)]=1;});
+  var cats={}; Object.keys(keys).forEach(function(k){cats[k.split('|')[0]]=1;});
+  var list=Object.keys(cats).filter(function(c){return /^C[0-9]{3}$/.test(c);});
+  if(!list.length) return;
+  var q="select subcategory_code s, count(*)::int n from public.ideas where category_code in ('"+list.join("','")+"') group by 1";
+  mcp.callTool(SERVER,'execute_sql',{project_id:PROJECT,query:q},{cache:false}).then(function(res){
+    var r=sqlResult(res.payload)||[], n={}; r.forEach(function(x){n[x.s]=x.n;});
+    var box=$('batch'); box.innerHTML=''; box.hidden=false;
+    Object.keys(keys).sort().forEach(function(k){
+      var c=k.split('|')[0], h=+k.split('|')[1], cn=+c.slice(1);
+      var bid='B'+('00'+((cn-1)*2+h+1)).slice(-3), have=0, next=null;
+      var row=document.createElement('div'); row.className='card'; row.style.background='var(--bg)';
+      var cells=document.createElement('div'); cells.className='sum';
+      for(var i=1;i<=5;i++){var sc=c+'-S'+('0'+(h*5+i)).slice(-2), v=n[sc]||0; if(v>=10) have++; else if(!next) next=sc;
+        var p=document.createElement('span'); p.className='pill '+(v>=10?'ok':(v?'info':'no')); p.textContent=sc.slice(5)+' '+v+'/10'; cells.appendChild(p);}
+      var t=document.createElement('div'); t.style.fontWeight='600';
+      t.textContent=have===5?('Batch '+bid+' ('+c+') is complete.'):('Batch '+bid+' ('+c+'): '+have+' of 5 subcategories in. In the same chat type next to get '+next+'.');
+      row.appendChild(t); row.appendChild(cells); box.appendChild(row);
+    });
+  },function(){});
 }
 $('refresh').addEventListener('click',loadProgress);
 drawGrid({}); render(); loadProgress();
