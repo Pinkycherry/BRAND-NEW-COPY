@@ -142,10 +142,15 @@ function toCsv(rows){
   return [COLS.concat(['end_marker']).join(',')].concat(rows.map(function(r){return COLS.map(function(c){return esc(r[c]);}).concat(['END']).join(',');})).join('\n');
 }
 function sqlResult(payload){
-  var s = typeof payload==='string' ? payload : (payload && (payload.result||payload.text)) || JSON.stringify(payload);
   if(Array.isArray(payload)) return payload;
-  var m=String(s).match(/<untrusted-data-[^>]*>\s*([\s\S]*?)\s*<\/untrusted-data/);
-  try{ return JSON.parse(m?m[1]:s); }catch(e){ return null; }
+  if(payload && typeof payload==='object'){
+    if(payload.result!=null) return sqlResult(payload.result);
+    if(payload.text!=null) return sqlResult(payload.text);
+    return null;
+  }
+  var s=String(payload==null?'':payload);
+  var m=s.match(/<untrusted-data-[^>]*>\s*(\[[\s\S]*\])\s*<\/untrusted-data/);
+  try{ var v=JSON.parse(m?m[1]:s); return (v && !Array.isArray(v) && typeof v==='object') ? sqlResult(v) : v; }catch(e){ return null; }
 }
 if(typeof module!=='undefined') module.exports={parse:parse,insertSql:insertSql,toCsv:toCsv,sqlResult:sqlResult,COLS:COLS};
 
