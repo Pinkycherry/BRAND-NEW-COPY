@@ -436,6 +436,8 @@ function promptFor(code,only){ return D.rules.replace('{{BATCH}}',taskBlock(code
 // A full standalone prompt for ideas that came back short or broken: works in any chat or account.
 function fixPrompt(codes,good){ var g={}, kn={}; codes.forEach(function(c){ var k=c.slice(0,8); (g[k]=g[k]||[]).push(c); });
   (good||[]).forEach(function(x){ var k=x.code.slice(0,8); (kn[k]=kn[k]||[]).push(x.row.title); });
+  // Also the titles already saved in the database for the other ideas of these subcategories.
+  Object.keys(KNOWN_T).forEach(function(c){ var k=c.slice(0,8); if(g[k]&&g[k].indexOf(c)<0){ kn[k]=kn[k]||[]; if(kn[k].indexOf(KNOWN_T[c])<0) kn[k].push(KNOWN_T[c]); } });
   return D.rules.replace('{{BATCH}}',Object.keys(g).sort().map(function(k){return taskBlock(k,g[k],kn[k]);}).join('\n\n')+'\n\nWrite the ideas now. Reply with the code block only.'); }
 
 // panel
@@ -479,12 +481,12 @@ function refreshPanelStatus(){
   $('pst').innerHTML=s.s==='redo'?'<span class="pill p-redo">'+ic('redo')+'Rewrite · all 10</span>':s.s==='done'?'<span class="pill p-done">'+ic('check')+(s.repo?'Done · on GitHub':'Done · 10 ideas saved')+'</span>':(s.s==='prog'?'<span class="pill p-prog">'+(s.n?s.n+'/10 saved':'Copied')+(s.w?' · '+esc(s.w):'')+'</span>':'<span class="pill p-todo">To write</span>');
 }
 // Titles already in the database, per subcategory, to catch ideas pasted twice.
-var KNOWN={}, KNOWN_SUB={}, onKnown=null;
+var KNOWN={}, KNOWN_T={}, KNOWN_SUB={}, onKnown=null;
 function normT(t){ return String(t||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(); }
 function ensureKnown(keys){ var need=keys.filter(function(k){ return /^C\d{3}-S\d{2}$/.test(k)&&!KNOWN_SUB[k]; }); if(!need.length) return;
   need.forEach(function(k){ KNOWN_SUB[k]=1; });
   sql("select code c, title t from public.ideas where subcategory_code in ('"+need.join("','")+"')").then(function(rows){
-    (rows||[]).forEach(function(r){ KNOWN[r.c]=normT(r.t); }); if(onKnown) onKnown(); },function(){ need.forEach(function(k){ delete KNOWN_SUB[k]; }); }); }
+    (rows||[]).forEach(function(r){ KNOWN[r.c]=normT(r.t); KNOWN_T[r.c]=r.t; }); if(onKnown) onKnown(); },function(){ need.forEach(function(k){ delete KNOWN_SUB[k]; }); }); }
 function forgetKnown(keys){ keys.forEach(function(k){ delete KNOWN_SUB[k]; Object.keys(KNOWN).forEach(function(c){ if(c.slice(0,8)===k) delete KNOWN[c]; }); }); }
 function analyse(txt){
   var cur=parse(txt), all=cur.filter(function(x){return x.ok;}), fixed=all.filter(function(x){return x.fixes&&x.fixes.length;}), bad=cur.filter(function(x){return !x.ok;});
@@ -505,7 +507,7 @@ function analyse(txt){
       Object.keys(groups).sort().map(function(k){var sk=state(k).s; return '<span class="dest">'+ic('arrow')+'goes to '+k+' · '+esc(sub(k).s[0])+' ('+groups[k]+')</span>'+(sk==='redo'?'<span class="pill p-redo">'+ic('redo')+'replaces '+k+'</span>':'');}).join('');
   }
   // A rewrite subcategory is replaced only as a full set of 10, so its ideas share one tone.
-  var held={}; Object.keys(groups).forEach(function(k){ if(state(k).s==='redo'&&groups[k]<10) held[k]=groups[k]; });
+  var held={};
   var save=good.filter(function(x){ return !held[x.code.slice(0,8)]; });
   if(txt.trim()) html+=Object.keys(held).sort().map(function(k){ return '<span class="pill p-redo">'+ic('redo')+k+' '+held[k]+'/10 · not saved</span>'; }).join('');
   var redo='';
@@ -572,17 +574,17 @@ $('qclear').addEventListener('click',function(){ $('qpaste').value=''; $('qmsg')
 // a reply that stopped early (cut-off line or missing ideas) -> a "continue" message from the first missing idea.
 function contMsg(k,from){ var c=k+'-I'+('0'+from).slice(-2);
   return 'continue. Your reply stopped at '+c+'. Write '+c+' again from its first field, then every remaining idea up to '+k+'-I10. Same format: one line per idea, the 31 fields separated by " | ", every line ending with | END, every idea at least 700 words and as full as the first ones, all inside one code block and nothing else.'; }
-function renderActions(id,A){ var box=$(id), ks={};
+var lastGood=[];
+function renderActions(id,A){ var box=$(id), ks={}; lastGood=A.good;
   A.cur.forEach(function(x){ ks[x.code.slice(0,8)]=1; });
   var btns=[];
-  Object.keys(ks).sort().forEach(function(k){ var st=state(k).s; if(st==='done') return;
-    var mine=A.cur.filter(function(x){ return x.code.slice(0,8)===k; });
-    if(mine.some(function(x){ return !x.ok&&x.kind!=='cut'; })){ btns.push('<button class="btn redo-btn" type="button" data-k="'+k+'" data-m="r">'+ic('redo')+'<span>Copy full rewrite prompt · '+k+' · all 10 ideas</span></button>'); return; }
-    var have={}; mine.forEach(function(x){ if(x.ok) have[+x.code.slice(10)]=1; });
-    for(var n=1;n<=10;n++) if(!have[n]){ btns.push('<button class="btn redo-btn cont-btn" type="button" data-k="'+k+'" data-m="c" data-f="'+n+'">'+ic('arrow')+'<span>Copy "continue" message · '+k+' from I'+('0'+n).slice(-2)+'</span></button>'); return; } });
-  box.innerHTML=btns.join('')+'<textarea readonly hidden aria-label="Message"></textarea>'; box.hidden=!btns.length; }
+  Object.keys(ks).sort().forEach(function(k){ if(state(k).s==='done') return;
+    var have={}; A.cur.forEach(function(x){ if(x.ok&&x.code.slice(0,8)===k) have[+x.code.slice(10)]=1; });
+    var need=[]; for(var n=1;n<=10;n++) if(!have[n]) need.push(k+'-I'+('0'+n).slice(-2));
+    if(need.length) btns.push('<button class="btn redo-btn" type="button" data-k="'+k+'" data-c="'+need.join(',')+'">'+ic('redo')+'<span>Copy rewrite prompt · '+k+' · '+need.map(function(c){return c.slice(9);}).join(', ')+'</span></button>'); });
+  box.innerHTML=btns.join('')+'<textarea readonly hidden aria-label="Prompt"></textarea>'; box.hidden=!btns.length; }
 function copyRedo(b){ var k=b.getAttribute('data-k'), t=b.querySelector('span'), x=b.parentNode.querySelector('textarea'), lbl=t.textContent;
-  var txt=b.getAttribute('data-m')==='c'?contMsg(k,+b.getAttribute('data-f')):promptFor(k);
+  var cs=(b.getAttribute('data-c')||'').split(',').filter(Boolean), txt=cs.length?fixPrompt(cs,lastGood):promptFor(k);
   var fail=function(){ x.value=txt; x.hidden=false; x.select(); };
   if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(function(){ t.textContent='Copied'; setTimeout(function(){t.textContent=lbl;},1600); },fail); else fail(); }
 document.addEventListener('click',function(e){ var b=e.target.closest&&e.target.closest('.redo-btn[data-k]'); if(b) copyRedo(b); });
