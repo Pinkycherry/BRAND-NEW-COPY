@@ -374,7 +374,7 @@ function drawTools(){
 // state of one subcategory
 function state(code){ if(REPO[code]) return {s:'done',n:10,repo:true}; var x=st[code]||{n:0}; if(x.sh&&x.sh.length) return {s:'redo',n:x.n,sh:x.sh,w:x.w}; if(x.n>=10) return {s:'done',n:x.n,w:x.w}; if(x.w) return {s:'prog',n:x.n,w:x.w,t:x.t}; return {s:x.n?'prog':'todo',n:x.n}; }
 function load(){
-  var q="select s.code c, coalesce(i.n,0)::int n, i.sh, cl.writer w, extract(epoch from cl.claimed_at)::bigint t from public.subcategories s left join (select subcategory_code, count(*) n, string_agg(code, ',' order by code) filter (where wc<700) sh from (select subcategory_code, code, coalesce(array_length(regexp_split_to_array(trim(concat_ws(' ',title,hook,summary,what_it_is,who_pays_you,how_money_comes,what_you_need,(select string_agg(x,' ') from jsonb_array_elements_text(case when jsonb_typeof(first_30_days)='array' then first_30_days else '[]' end) x),what_hurts,verdict,(select string_agg(concat_ws(' ',e->>'q',e->>'a'),' ') from jsonb_array_elements(case when jsonb_typeof(faq)='array' then faq else '[]' end) e),validate_prompt)),'\\s+'),1),0) wc from public.ideas) z group by 1) i on i.subcategory_code=s.code left join public.subcategory_claims cl on cl.subcategory_code=s.code where i.n>0 or cl.writer is not null";
+  var q="select s.code c, coalesce(i.n,0)::int n, i.sh, cl.writer w, extract(epoch from cl.claimed_at)::bigint t from public.subcategories s left join (select subcategory_code, count(*) n, string_agg(code, ',' order by code) filter (where wc<700 and code not in (select code from public.approved_ideas)) sh from (select subcategory_code, code, coalesce(array_length(regexp_split_to_array(trim(concat_ws(' ',title,hook,summary,what_it_is,who_pays_you,how_money_comes,what_you_need,(select string_agg(x,' ') from jsonb_array_elements_text(case when jsonb_typeof(first_30_days)='array' then first_30_days else '[]' end) x),what_hurts,verdict,(select string_agg(concat_ws(' ',e->>'q',e->>'a'),' ') from jsonb_array_elements(case when jsonb_typeof(faq)='array' then faq else '[]' end) e),validate_prompt)),'\\s+'),1),0) wc from public.ideas) z group by 1) i on i.subcategory_code=s.code left join public.subcategory_claims cl on cl.subcategory_code=s.code where i.n>0 or cl.writer is not null";
   return sql(q).then(function(rows){ if(!rows) throw {code:'parse'}; st={}; rows.forEach(function(r){st[r.c]={n:r.n,w:r.w,t:r.t,sh:r.sh?String(r.sh).split(','):null};}); lastOk=Date.now(); stats(); board(); if(openCode) refreshPanelStatus(); },
     function(e){ $('live').textContent=errText(e); if(!lastOk) $('board').innerHTML='<div class="empty">'+errText(e)+'</div>'; });
 }
@@ -520,8 +520,11 @@ function analyse(txt){
   }
   return {cur:cur,good:good,bad:bad,groups:groups,html:html,redo:redo,save:save,held:held,dups:dups};
 }
-function saveRows(good){
-  return sql(insertSql(good,writer())).then(function(r){ var res=(r||[])[0]||{}; return load().then(function(){
+// "Save anyway" also marks the ideas as approved, so the too-short check stops asking for a rewrite.
+function approve(rows){ var cs=rows.map(function(r){return r.code;}).filter(function(c){return /^C\d{3}-S\d{2}-I\d{2}$/.test(c);});
+  return cs.length?sql("insert into public.approved_ideas (code) values ('"+cs.join("'),('")+"') on conflict (code) do update set approved_at=now(); select 1 as ok"):Promise.resolve(); }
+function saveRows(good,any){
+  return (any?approve(good):Promise.resolve()).then(function(){ return sql(insertSql(good,writer())); }).then(function(r){ var res=(r||[])[0]||{}; return load().then(function(){
     var keys={}; good.forEach(function(x){keys[x.code.slice(0,8)]=1;}); forgetKnown(Object.keys(keys));
     var parts=Object.keys(keys).sort().map(function(k){var s=state(k); return k+' '+Math.min(10,s.n||0)+'/10';});
     return {moved:res.moved!=null?res.moved:good.length, parts:parts, keys:Object.keys(keys)};
@@ -547,7 +550,7 @@ function pmsg(kind,html){ var m=$('pmsg'); if(!m) return; m.hidden=false; m.clas
 function doSave(any){
   var code=openCode, good=lastA?(any?anyRows(lastA):lastA.save.map(function(x){return x.row;})):[];
   if(!good.length) return; $('psave').disabled=true; pmsg('', 'Saving '+good.length+' ideas…');
-  saveRows(good).then(function(r){
+  saveRows(good,any).then(function(r){
     try{ localStorage.removeItem('draft-'+code); }catch(e){}
     if(openCode!==code) return;
     $('ppaste').value=''; check();
@@ -610,7 +613,7 @@ $('qsave').addEventListener('click',function(){ qsaveRun(false); });
 function qsaveRun(any){
   var good=qcur?(any?anyRows(qcur):qcur.save.map(function(x){return x.row;})):[]; if(!good.length) return;
   $('qsave').disabled=true; qmsg('','Saving '+good.length+' ideas…');
-  saveRows(good).then(function(r){ $('qpaste').value=''; qcheck(); qmsg('', ic('check')+' <b>'+r.moved+' saved</b> · '+esc(r.parts.join(' · '))); },
+  saveRows(good,any).then(function(r){ $('qpaste').value=''; qcheck(); qmsg('', ic('check')+' <b>'+r.moved+' saved</b> · '+esc(r.parts.join(' · '))); },
     function(e){ qmsg('warn',errText(e)); $('qsave').disabled=false; });
 }
 try{ $('qpaste').value=localStorage.getItem('draft-quick')||''; }catch(e){}
