@@ -21,6 +21,7 @@
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0f0f19;--surface:#181826;--raised:#1d1d2e;--ink:#eeedf7;--muted:#a19fb8;--line:#29283c;--navy:#6a7de6;--navy-fg:#0f0f19;--navy-soft:#212645;--pink:#3a2131;--pink-ink:#f5a9c9;--pink-strong:#6e3152;--mono:#f4f4f4;--mono-fg:#121212;--mono-stripe:#d6d6d6;--mono-soft:#26262f;--glass:rgba(24,24,38,.8);--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);--lift:0 6px 18px rgba(0,0,0,.5);color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#0f0f19;--surface:#181826;--raised:#1d1d2e;--ink:#eeedf7;--muted:#a19fb8;--line:#29283c;--navy:#6a7de6;--navy-fg:#0f0f19;--navy-soft:#212645;--pink:#3a2131;--pink-ink:#f5a9c9;--pink-strong:#6e3152;--mono:#f4f4f4;--mono-fg:#121212;--mono-stripe:#d6d6d6;--mono-soft:#26262f;--glass:rgba(24,24,38,.8);--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);--lift:0 6px 18px rgba(0,0,0,.5);color-scheme:dark}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html,body{background:var(--bg)}
 body{color:var(--ink);font:15px/1.5 var(--sans);margin:0}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
@@ -146,6 +147,7 @@ textarea:focus{outline:none;border-color:var(--navy);border-style:solid;box-shad
 .msg.warn{background:var(--pink);color:var(--ink)}
 .redo{display:flex;flex-wrap:wrap;gap:8px}
 .redo textarea{flex-basis:100%}
+.any-btn{background:var(--pink-strong);border-color:var(--pink-strong);color:var(--pink-ink)}
 .cont-btn{background:var(--navy);border-color:var(--navy);color:var(--navy-fg)}
 .redo-btn{background:var(--mono);border-color:var(--mono);color:var(--mono-fg);justify-self:start;font-size:15px;padding:13px 18px}
 .redo textarea{min-height:60px;background:var(--surface);border-style:solid}
@@ -200,7 +202,7 @@ textarea:focus{outline:none;border-color:var(--navy);border-style:solid;box-shad
     <textarea id="qpaste" aria-label="Paste any reply" placeholder="Paste a reply from any chat."></textarea>
     <div class="sum" id="qsum"></div>
     <div class="redo" id="qredo" hidden></div>
-    <div class="row"><button class="btn main" id="qsave" type="button" disabled><svg class="i"><use href="#i-save"/></svg><span id="qsaveT">Save</span></button><button class="btn sm" id="qnext" type="button"><svg class="i"><use href="#i-copy"/></svg>Copy "next" message</button><button class="btn sm" id="qclear" type="button">Clear</button></div>
+    <div class="row"><button class="btn main" id="qsave" type="button" disabled><svg class="i"><use href="#i-save"/></svg><span id="qsaveT">Save</span></button><button class="btn any-btn" id="qsaveAny" type="button" hidden><svg class="i"><use href="#i-save"/></svg><span id="qsaveAnyT">Save anyway</span></button><button class="btn sm" id="qnext" type="button"><svg class="i"><use href="#i-copy"/></svg>Copy "next" message</button><button class="btn sm" id="qclear" type="button">Clear</button></div>
     <div id="qmsg" hidden></div>
   </section>
   <div class="legend">
@@ -303,7 +305,7 @@ function parse(raw){
     if(!a.ok){ out.push({code:code,ok:false,kind:'broken',why:a.why}); continue; }
     a.fixes=fixes.concat(a.fixes);
     var w=ideaWords(a.row);
-    if(w<MIN_WORDS){ out.push({code:code,ok:false,kind:'short',why:'only '+w+' words (need 700)',words:w,title:a.row.title}); continue; }
+    if(w<MIN_WORDS){ out.push({code:code,ok:false,kind:'short',why:'only '+w+' words (need 700)',words:w,title:a.row.title,row:a.row}); continue; }
     out.push({code:code,ok:true,row:a.row,fixes:a.fixes,words:w});
   }
   var seen={}, res=[];
@@ -451,7 +453,7 @@ function openPanel(code){
       '<div class="links">'+TOOLS.map(function(t){return '<a href="'+t[1]+'" target="_blank" rel="noopener">'+esc(t[0])+ic('ext')+'</a>';}).join('')+'</div></div>'+
     '<div class="step"><div class="sh"><span class="num">2</span>Paste the reply</div><div class="row"><button class="btn sm" id="pnextmsg" type="button">'+ic('copy')+'Copy "next" message</button></div><textarea id="ppaste" aria-label="Paste the reply" placeholder="Paste the whole reply here."></textarea><div class="sum" id="psum"></div><div class="lines" id="plines" hidden></div>'+
       '<div class="redo" id="predo" hidden></div></div>'+
-    '<div class="step"><div class="sh"><span class="num">3</span>Save</div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn main" id="psave" type="button" disabled>'+ic('save')+'<span id="psaveT">Save</span></button></div><div id="pmsg" hidden></div></div>'+
+    '<div class="step"><div class="sh"><span class="num">3</span>Save</div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn main" id="psave" type="button" disabled>'+ic('save')+'<span id="psaveT">Save</span></button><button class="btn any-btn" id="psaveAny" type="button" hidden>'+ic('save')+'<span id="psaveAnyT">Save anyway</span></button><button class="btn sm" id="pclear" type="button">Clear</button></div><div id="pmsg" hidden></div></div>'+
   '</div></div>';
   $('pw').textContent=writer();
   refreshPanelStatus();
@@ -468,7 +470,9 @@ function openPanel(code){
     sql("insert into public.subcategory_claims (subcategory_code, writer) values ('"+code+"', $w$"+w+"$w$) on conflict (subcategory_code) do update set writer=excluded.writer, claimed_at=now(); select 1 as ok").catch(function(){});
   });
   $('pnextmsg').addEventListener('click',function(){ copyText(NEXT_MSG,this); });
-  $('psave').addEventListener('click',doSave);
+  $('psave').addEventListener('click',function(){ doSave(false); });
+  $('psaveAny').addEventListener('click',function(){ doSave(true); });
+  $('pclear').addEventListener('click',function(){ $('ppaste').value=''; try{localStorage.removeItem('draft-'+code);}catch(e){} $('pmsg').hidden=true; check(); });
   document.addEventListener('keydown',escClose);
   check();
 }
@@ -530,19 +534,20 @@ function check(){
   cur=parse(txt); var good=cur.filter(function(x){return x.ok;}), fixed=good.filter(function(x){return x.fixes&&x.fixes.length;}), bad=cur.filter(function(x){return !x.ok;});
   var A=analyse(txt);
   var S=$('psum'), L=$('plines'); L.innerHTML='';
-  if(!txt.trim()){ S.innerHTML=''; L.hidden=true; $('predo').hidden=true; $('psave').disabled=true; $('psaveT').textContent='Save'; return; }
-  if(!cur.length){ S.innerHTML='<span class="pill p-todo">No idea lines found yet</span>'; L.hidden=true; $('psave').disabled=true; $('predo').hidden=true; return; }
+  if(!txt.trim()){ S.innerHTML=''; L.hidden=true; $('predo').hidden=true; $('psaveAny').hidden=true; $('psave').disabled=true; $('psaveT').textContent='Save'; return; }
+  if(!cur.length){ S.innerHTML='<span class="pill p-todo">No idea lines found yet</span>'; L.hidden=true; $('psave').disabled=true; $('psaveAny').hidden=true; $('predo').hidden=true; return; }
   S.innerHTML=A.html;
   L.hidden=false;
   cur.forEach(function(x){ var d=document.createElement('div'); d.className='ln'+(x.ok?(x.dup?' dup':''):' bad');
     d.innerHTML=(x.dup?ic('copy'):x.ok?ic('check'):ic('x'))+'<code>'+esc(x.code.slice(5))+'</code><span class="t"></span><span class="w">'+(x.words?x.words+'w':'')+'</span>';
     d.querySelector('.t').textContent=x.ok?(x.dup?'Duplicate · ':'')+x.row.title:((x.title?x.title+' · ':'')+x.why); L.appendChild(d); });
   lastA=A; $('psave').disabled=!A.save.length; $('psaveT').textContent=A.save.length?'Save '+A.save.length+' ideas':'Save';
+  var an=anyRows(A).length; $('psaveAny').hidden=an<=A.save.length; $('psaveAnyT').textContent='Save anyway · '+an+' ideas';
   renderActions('predo',A);
 }
 function pmsg(kind,html){ var m=$('pmsg'); if(!m) return; m.hidden=false; m.className='msg'+(kind==='warn'?' warn':''); m.innerHTML=html; }
-function doSave(){
-  var code=openCode, good=(lastA?lastA.save:[]).map(function(x){return x.row;});
+function doSave(any){
+  var code=openCode, good=lastA?(any?anyRows(lastA):lastA.save.map(function(x){return x.row;})):[];
   if(!good.length) return; $('psave').disabled=true; pmsg('', 'Saving '+good.length+' ideas…');
   saveRows(good).then(function(r){
     try{ localStorage.removeItem('draft-'+code); }catch(e){}
@@ -563,6 +568,7 @@ function qcheck(){
   var t=$('qpaste').value; try{localStorage.setItem('draft-quick',t);}catch(e){}
   qcur=analyse(t); $('qsum').innerHTML=qcur.html;
   $('qsave').disabled=!qcur.save.length; $('qsaveT').textContent=qcur.save.length?'Save '+qcur.save.length+' ideas':'Save';
+  var an=anyRows(qcur).length; $('qsaveAny').hidden=an<=qcur.save.length; $('qsaveAnyT').textContent='Save anyway · '+an+' ideas';
   renderActions('qredo',qcur);
 }
 function qmsg(kind,html){ var m=$('qmsg'); m.hidden=false; m.className='msg'+(kind==='warn'?' warn':''); m.innerHTML=html; }
@@ -579,21 +585,30 @@ function renderActions(id,A){ var box=$(id), ks={}; lastGood=A.good;
   A.cur.forEach(function(x){ ks[x.code.slice(0,8)]=1; });
   var btns=[];
   Object.keys(ks).sort().forEach(function(k){ if(state(k).s==='done') return;
-    var have={}; A.cur.forEach(function(x){ if(x.ok&&x.code.slice(0,8)===k) have[+x.code.slice(10)]=1; });
-    var need=[]; for(var n=1;n<=10;n++) if(!have[n]) need.push(k+'-I'+('0'+n).slice(-2));
+    var mine=A.cur.filter(function(x){ return x.code.slice(0,8)===k; }), need=[];
+    // Only the ideas that failed in this paste; if a line was cut off, also the ideas after it that never arrived.
+    mine.forEach(function(x){ if(!x.ok) need.push(x.code); });
+    var cut=mine.filter(function(x){ return x.kind==='cut'; }).map(function(x){ return +x.code.slice(10); });
+    if(cut.length){ var from=Math.max.apply(null,cut)+1, have={}; mine.forEach(function(x){ have[+x.code.slice(10)]=1; });
+      for(var n=from;n<=10;n++) if(!have[n]) need.push(k+'-I'+('0'+n).slice(-2)); }
+    need.sort();
     if(need.length) btns.push('<button class="btn redo-btn" type="button" data-k="'+k+'" data-c="'+need.join(',')+'">'+ic('redo')+'<span>Copy rewrite prompt · '+k+' · '+need.map(function(c){return c.slice(9);}).join(', ')+'</span></button>'); });
   box.innerHTML=btns.join('')+'<textarea readonly hidden aria-label="Prompt"></textarea>'; box.hidden=!btns.length; }
+// "Save anyway": every idea that has all its fields, including short ones and duplicates.
+function anyRows(A){ var seen={}, out=[]; A.cur.forEach(function(x){ if(x.row&&!seen[x.code]){ seen[x.code]=1; out.push(x.row); } }); return out; }
 function copyRedo(b){ var k=b.getAttribute('data-k'), t=b.querySelector('span'), x=b.parentNode.querySelector('textarea'), lbl=t.textContent;
   var cs=(b.getAttribute('data-c')||'').split(',').filter(Boolean), txt=cs.length?fixPrompt(cs,lastGood):promptFor(k);
   var fail=function(){ x.value=txt; x.hidden=false; x.select(); };
   if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(function(){ t.textContent='Copied'; setTimeout(function(){t.textContent=lbl;},1600); },fail); else fail(); }
 document.addEventListener('click',function(e){ var b=e.target.closest&&e.target.closest('.redo-btn[data-k]'); if(b) copyRedo(b); });
-$('qsave').addEventListener('click',function(){
-  var good=(qcur&&qcur.save||[]).map(function(x){return x.row;}); if(!good.length) return;
+$('qsaveAny').addEventListener('click',function(){ qsaveRun(true); });
+$('qsave').addEventListener('click',function(){ qsaveRun(false); });
+function qsaveRun(any){
+  var good=qcur?(any?anyRows(qcur):qcur.save.map(function(x){return x.row;})):[]; if(!good.length) return;
   $('qsave').disabled=true; qmsg('','Saving '+good.length+' ideas…');
   saveRows(good).then(function(r){ $('qpaste').value=''; qcheck(); qmsg('', ic('check')+' <b>'+r.moved+' saved</b> · '+esc(r.parts.join(' · '))); },
     function(e){ qmsg('warn',errText(e)); $('qsave').disabled=false; });
-});
+}
 try{ $('qpaste').value=localStorage.getItem('draft-quick')||''; }catch(e){}
 function nextTodo(from){
   var list=[]; D.cats.forEach(function(c){ c[2].forEach(function(s,i){ list.push(c[0]+'-S'+('0'+(i+1)).slice(-2)); }); });
