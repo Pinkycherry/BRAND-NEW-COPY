@@ -113,7 +113,7 @@ main.in{padding-block:20px 72px;display:grid;gap:16px}
 .x{grid-row:1/4;grid-column:2;align-self:start;border:0;background:var(--raised);color:var(--ink);width:36px;height:36px;border-radius:12px;cursor:pointer;display:grid;place-items:center;transition:transform .35s var(--spring),background .2s}
 .x:hover{transform:rotate(90deg);background:var(--pink)}
 .pill{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;border-radius:99px;padding:4px 10px;width:max-content;max-width:100%}
-.p-todo{background:var(--pink);color:var(--pink-ink)} .p-prog{background:var(--pink-strong);color:var(--pink-ink)} .p-done{background:var(--navy);color:var(--navy-fg)} .p-redo{background:var(--mono);color:var(--mono-fg)}
+.p-todo{background:var(--pink);color:var(--pink-ink)} .p-dup{background:var(--raised);color:var(--muted);border:1px dashed var(--muted)} .p-prog{background:var(--pink-strong);color:var(--pink-ink)} .p-done{background:var(--navy);color:var(--navy-fg)} .p-redo{background:var(--mono);color:var(--mono-fg)}
 .rnote{display:grid;gap:4px;background:var(--mono);color:var(--mono-fg);border-radius:14px;padding:12px 14px;font-size:13.5px}
 .rnote b{font-family:var(--display);font-size:15px}
 .step{padding:16px 20px;display:grid;gap:10px;border-bottom:1px solid var(--line)}
@@ -141,6 +141,7 @@ textarea:focus{outline:none;border-color:var(--navy);border-style:solid;box-shad
 .ln .t{min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .ln .w{font:500 11.5px var(--code);color:var(--muted)}
 .ln.bad .t{color:var(--pink-ink)}
+.ln.dup .t{color:var(--muted);text-decoration:line-through}
 .msg{display:flex;gap:8px;align-items:flex-start;padding:10px 12px;border-radius:12px;font-size:13.5px;background:var(--navy-soft)}
 .msg.warn{background:var(--pink);color:var(--ink)}
 .redo{display:grid;gap:8px}
@@ -475,14 +476,31 @@ function refreshPanelStatus(){
   if(!openCode||!$('pst')) return; var s=state(openCode);
   $('pst').innerHTML=s.s==='redo'?'<span class="pill p-redo">'+ic('redo')+'Rewrite · all 10</span>':s.s==='done'?'<span class="pill p-done">'+ic('check')+(s.repo?'Done · on GitHub':'Done · 10 ideas saved')+'</span>':(s.s==='prog'?'<span class="pill p-prog">'+(s.n?s.n+'/10 saved':'Copied')+(s.w?' · '+esc(s.w):'')+'</span>':'<span class="pill p-todo">To write</span>');
 }
+// Titles already in the database, per subcategory, to catch ideas pasted twice.
+var KNOWN={}, KNOWN_SUB={}, onKnown=null;
+function normT(t){ return String(t||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(); }
+function ensureKnown(keys){ var need=keys.filter(function(k){ return /^C\d{3}-S\d{2}$/.test(k)&&!KNOWN_SUB[k]; }); if(!need.length) return;
+  need.forEach(function(k){ KNOWN_SUB[k]=1; });
+  sql("select code c, title t from public.ideas where subcategory_code in ('"+need.join("','")+"')").then(function(rows){
+    (rows||[]).forEach(function(r){ KNOWN[r.c]=normT(r.t); }); if(onKnown) onKnown(); },function(){ need.forEach(function(k){ delete KNOWN_SUB[k]; }); }); }
+function forgetKnown(keys){ keys.forEach(function(k){ delete KNOWN_SUB[k]; Object.keys(KNOWN).forEach(function(c){ if(c.slice(0,8)===k) delete KNOWN[c]; }); }); }
 function analyse(txt){
-  var cur=parse(txt), good=cur.filter(function(x){return x.ok;}), fixed=good.filter(function(x){return x.fixes&&x.fixes.length;}), bad=cur.filter(function(x){return !x.ok;});
+  var cur=parse(txt), all=cur.filter(function(x){return x.ok;}), fixed=all.filter(function(x){return x.fixes&&x.fixes.length;}), bad=cur.filter(function(x){return !x.ok;});
+  ensureKnown(Object.keys(all.reduce(function(o,x){ o[x.code.slice(0,8)]=1; return o; },{})));
+  // Duplicate: the subcategory is already done, or this title is already saved in the subcategory.
+  var dupSub={}, dups=[];
+  all.forEach(function(x){ var k=x.code.slice(0,8), t=normT(x.row.title), st=state(k).s, same=false;
+    if(st==='done') { dupSub[k]=1; x.dup=1; }
+    else if(st!=='redo'){ for(var c in KNOWN){ if(c.slice(0,8)===k&&KNOWN[c]===t){ same=true; break; } } if(same) x.dup=1; }
+    else x.dup=0;
+    if(x.dup) dups.push(x); });
+  var good=all.filter(function(x){ return !x.dup; });
   var groups={}; good.forEach(function(x){var k=x.code.slice(0,8); groups[k]=(groups[k]||0)+1;});
   var html='';
   if(txt.trim()){
     if(!cur.length) html='<span class="pill p-todo">No idea lines found yet</span>';
-    else html='<span class="pill p-done">'+ic('check')+good.length+' ready</span>'+(fixed.length?'<span class="pill p-prog">'+ic('wand')+fixed.length+' auto-fixed</span>':'')+(bad.length?'<span class="pill p-todo">'+ic('x')+bad.length+' need a rewrite</span>':'')+
-      Object.keys(groups).sort().map(function(k){var sk=state(k).s; return '<span class="dest">'+ic('arrow')+'goes to '+k+' · '+esc(sub(k).s[0])+' ('+groups[k]+')</span>'+(sk==='done'?'<span class="pill p-todo">'+'replaces '+k+'</span>':sk==='redo'?'<span class="pill p-redo">'+ic('redo')+'replaces '+k+'</span>':'');}).join('');
+    else html='<span class="pill p-done">'+ic('check')+good.length+' ready</span>'+(dups.length?'<span class="pill p-dup">'+ic('copy')+dups.length+' duplicate · not saved'+(Object.keys(dupSub).length?' · '+Object.keys(dupSub).sort().join(', ')+' already done':'')+'</span>':'')+(fixed.length?'<span class="pill p-prog">'+ic('wand')+fixed.length+' auto-fixed</span>':'')+(bad.length?'<span class="pill p-todo">'+ic('x')+bad.length+' need a rewrite</span>':'')+
+      Object.keys(groups).sort().map(function(k){var sk=state(k).s; return '<span class="dest">'+ic('arrow')+'goes to '+k+' · '+esc(sub(k).s[0])+' ('+groups[k]+')</span>'+(sk==='redo'?'<span class="pill p-redo">'+ic('redo')+'replaces '+k+'</span>':'');}).join('');
   }
   // A rewrite subcategory is replaced only as a full set of 10, so its ideas share one tone.
   var held={}; Object.keys(groups).forEach(function(k){ if(state(k).s==='redo'&&groups[k]<10) held[k]=groups[k]; });
@@ -492,11 +510,11 @@ function analyse(txt){
   if(bad.length){
     redo=fixPrompt(bad.map(function(x){return x.code;}),good);
   }
-  return {cur:cur,good:good,bad:bad,groups:groups,html:html,redo:redo,save:save,held:held};
+  return {cur:cur,good:good,bad:bad,groups:groups,html:html,redo:redo,save:save,held:held,dups:dups};
 }
 function saveRows(good){
   return sql(insertSql(good,writer())).then(function(r){ var res=(r||[])[0]||{}; return load().then(function(){
-    var keys={}; good.forEach(function(x){keys[x.code.slice(0,8)]=1;});
+    var keys={}; good.forEach(function(x){keys[x.code.slice(0,8)]=1;}); forgetKnown(Object.keys(keys));
     var parts=Object.keys(keys).sort().map(function(k){var s=state(k); return k+' '+Math.min(10,s.n||0)+'/10';});
     return {moved:res.moved!=null?res.moved:good.length, parts:parts, keys:Object.keys(keys)};
   }); });
@@ -512,9 +530,9 @@ function check(){
   if(!cur.length){ S.innerHTML='<span class="pill p-todo">No idea lines found yet</span>'; L.hidden=true; $('psave').disabled=true; $('predo').hidden=true; return; }
   S.innerHTML=A.html;
   L.hidden=false;
-  cur.forEach(function(x){ var d=document.createElement('div'); d.className='ln'+(x.ok?'':' bad');
-    d.innerHTML=(x.ok?ic('check'):ic('x'))+'<code>'+esc(x.code.slice(5))+'</code><span class="t"></span><span class="w">'+(x.words?x.words+'w':'')+'</span>';
-    d.querySelector('.t').textContent=x.ok?x.row.title:((x.title?x.title+' · ':'')+x.why); L.appendChild(d); });
+  cur.forEach(function(x){ var d=document.createElement('div'); d.className='ln'+(x.ok?(x.dup?' dup':''):' bad');
+    d.innerHTML=(x.dup?ic('copy'):x.ok?ic('check'):ic('x'))+'<code>'+esc(x.code.slice(5))+'</code><span class="t"></span><span class="w">'+(x.words?x.words+'w':'')+'</span>';
+    d.querySelector('.t').textContent=x.ok?(x.dup?'Duplicate · ':'')+x.row.title:((x.title?x.title+' · ':'')+x.why); L.appendChild(d); });
   lastA=A; $('psave').disabled=!A.save.length; $('psaveT').textContent=A.save.length?'Save '+A.save.length+' ideas':'Save';
   var rb=bad.concat(Object.keys(A.held).map(function(k){return {code:k+'-I01'};}));
   if(rb.length){
@@ -539,6 +557,7 @@ function doSave(){
 }
 // quick paste on the board: no tile needed
 var qcur=null;
+onKnown=function(){ qcheck(); if(openCode) check(); };
 function qcheck(){
   var t=$('qpaste').value; try{localStorage.setItem('draft-quick',t);}catch(e){}
   qcur=analyse(t); $('qsum').innerHTML=qcur.html;
