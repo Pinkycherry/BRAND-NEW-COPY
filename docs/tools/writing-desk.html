@@ -144,7 +144,9 @@ textarea:focus{outline:none;border-color:var(--navy);border-style:solid;box-shad
 .ln.dup .t{color:var(--muted);text-decoration:line-through}
 .msg{display:flex;gap:8px;align-items:flex-start;padding:10px 12px;border-radius:12px;font-size:13.5px;background:var(--navy-soft)}
 .msg.warn{background:var(--pink);color:var(--ink)}
-.redo{display:grid;gap:8px}
+.redo{display:flex;flex-wrap:wrap;gap:8px}
+.redo textarea{flex-basis:100%}
+.cont-btn{background:var(--navy);border-color:var(--navy);color:var(--navy-fg)}
 .redo-btn{background:var(--mono);border-color:var(--mono);color:var(--mono-fg);justify-self:start;font-size:15px;padding:13px 18px}
 .redo textarea{min-height:60px;background:var(--surface);border-style:solid}
 .qp{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:16px 18px;display:grid;gap:10px}
@@ -499,7 +501,7 @@ function analyse(txt){
   var html='';
   if(txt.trim()){
     if(!cur.length) html='<span class="pill p-todo">No idea lines found yet</span>';
-    else html='<span class="pill p-done">'+ic('check')+good.length+' ready</span>'+(dups.length?'<span class="pill p-dup">'+ic('copy')+dups.length+' duplicate · not saved'+(Object.keys(dupSub).length?' · '+Object.keys(dupSub).sort().join(', ')+' already done':'')+'</span>':'')+(fixed.length?'<span class="pill p-prog">'+ic('wand')+fixed.length+' auto-fixed</span>':'')+(bad.length?'<span class="pill p-todo">'+ic('x')+bad.length+' need a rewrite</span>':'')+
+    else html='<span class="pill p-done">'+ic('check')+good.length+' ready</span>'+(dups.length?'<span class="pill p-dup">'+ic('copy')+dups.length+' duplicate · not saved'+(Object.keys(dupSub).length?' · '+Object.keys(dupSub).sort().join(', ')+' already done':'')+'</span>':'')+(fixed.length?'<span class="pill p-prog">'+ic('wand')+fixed.length+' auto-fixed</span>':'')+(function(){ var c=bad.filter(function(x){return x.kind==='cut';}).length, o=bad.length-c; return (o?'<span class="pill p-todo">'+ic('x')+o+' too short</span>':'')+(c?'<span class="pill p-prog">'+ic('x')+c+' cut off</span>':''); })()+
       Object.keys(groups).sort().map(function(k){var sk=state(k).s; return '<span class="dest">'+ic('arrow')+'goes to '+k+' · '+esc(sub(k).s[0])+' ('+groups[k]+')</span>'+(sk==='redo'?'<span class="pill p-redo">'+ic('redo')+'replaces '+k+'</span>':'');}).join('');
   }
   // A rewrite subcategory is replaced only as a full set of 10, so its ideas share one tone.
@@ -534,10 +536,7 @@ function check(){
     d.innerHTML=(x.dup?ic('copy'):x.ok?ic('check'):ic('x'))+'<code>'+esc(x.code.slice(5))+'</code><span class="t"></span><span class="w">'+(x.words?x.words+'w':'')+'</span>';
     d.querySelector('.t').textContent=x.ok?(x.dup?'Duplicate · ':'')+x.row.title:((x.title?x.title+' · ':'')+x.why); L.appendChild(d); });
   lastA=A; $('psave').disabled=!A.save.length; $('psaveT').textContent=A.save.length?'Save '+A.save.length+' ideas':'Save';
-  var rb=bad.concat(Object.keys(A.held).map(function(k){return {code:k+'-I01'};}));
-  if(rb.length){
-    renderRedo('predo',rb);
-  } else $('predo').hidden=true;
+  renderActions('predo',A);
 }
 function pmsg(kind,html){ var m=$('pmsg'); if(!m) return; m.hidden=false; m.className='msg'+(kind==='warn'?' warn':''); m.innerHTML=html; }
 function doSave(){
@@ -562,18 +561,28 @@ function qcheck(){
   var t=$('qpaste').value; try{localStorage.setItem('draft-quick',t);}catch(e){}
   qcur=analyse(t); $('qsum').innerHTML=qcur.html;
   $('qsave').disabled=!qcur.save.length; $('qsaveT').textContent=qcur.save.length?'Save '+qcur.save.length+' ideas':'Save';
-  var rb=qcur.bad.concat(Object.keys(qcur.held).map(function(k){return {code:k+'-I01'};}));
-  if(rb.length) renderRedo('qredo',rb); else $('qredo').hidden=true;
+  renderActions('qredo',qcur);
 }
 function qmsg(kind,html){ var m=$('qmsg'); m.hidden=false; m.className='msg'+(kind==='warn'?' warn':''); m.innerHTML=html; }
 $('qpaste').addEventListener('input',function(){ $('qmsg').hidden=true; qcheck(); });
 $('qnext').addEventListener('click',function(){ copyText(NEXT_MSG,this); });
 $('qclear').addEventListener('click',function(){ $('qpaste').value=''; $('qmsg').hidden=true; qcheck(); });
 // One button per subcategory with short or broken ideas: it copies the full prompt for all 10 ideas, so the set is rewritten together.
-function renderRedo(id,bad){ var box=$(id), ks={}; bad.forEach(function(x){ ks[x.code.slice(0,8)]=1; });
-  box.innerHTML=Object.keys(ks).sort().map(function(k){ return '<button class="btn redo-btn" type="button" data-k="'+k+'">'+ic('redo')+'<span>Copy full rewrite prompt · '+k+' · all 10 ideas</span></button>'; }).join('')+'<textarea readonly hidden aria-label="Rewrite prompt"></textarea>';
-  box.hidden=false; }
-function copyRedo(b){ var k=b.getAttribute('data-k'), t=b.querySelector('span'), x=b.parentNode.querySelector('textarea'), lbl=t.textContent, txt=promptFor(k);
+// Per subcategory in the paste: an idea under 700 words or broken -> full 10-idea rewrite prompt;
+// a reply that stopped early (cut-off line or missing ideas) -> a "continue" message from the first missing idea.
+function contMsg(k,from){ var c=k+'-I'+('0'+from).slice(-2);
+  return 'continue. Your reply stopped at '+c+'. Write '+c+' again from its first field, then every remaining idea up to '+k+'-I10. Same format: one line per idea, the 31 fields separated by " | ", every line ending with | END, every idea at least 700 words and as full as the first ones, all inside one code block and nothing else.'; }
+function renderActions(id,A){ var box=$(id), ks={};
+  A.cur.forEach(function(x){ ks[x.code.slice(0,8)]=1; });
+  var btns=[];
+  Object.keys(ks).sort().forEach(function(k){ var st=state(k).s; if(st==='done') return;
+    var mine=A.cur.filter(function(x){ return x.code.slice(0,8)===k; });
+    if(mine.some(function(x){ return !x.ok&&x.kind!=='cut'; })){ btns.push('<button class="btn redo-btn" type="button" data-k="'+k+'" data-m="r">'+ic('redo')+'<span>Copy full rewrite prompt · '+k+' · all 10 ideas</span></button>'); return; }
+    var have={}; mine.forEach(function(x){ if(x.ok) have[+x.code.slice(10)]=1; });
+    for(var n=1;n<=10;n++) if(!have[n]){ btns.push('<button class="btn redo-btn cont-btn" type="button" data-k="'+k+'" data-m="c" data-f="'+n+'">'+ic('arrow')+'<span>Copy "continue" message · '+k+' from I'+('0'+n).slice(-2)+'</span></button>'); return; } });
+  box.innerHTML=btns.join('')+'<textarea readonly hidden aria-label="Message"></textarea>'; box.hidden=!btns.length; }
+function copyRedo(b){ var k=b.getAttribute('data-k'), t=b.querySelector('span'), x=b.parentNode.querySelector('textarea'), lbl=t.textContent;
+  var txt=b.getAttribute('data-m')==='c'?contMsg(k,+b.getAttribute('data-f')):promptFor(k);
   var fail=function(){ x.value=txt; x.hidden=false; x.select(); };
   if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(function(){ t.textContent='Copied'; setTimeout(function(){t.textContent=lbl;},1600); },fail); else fail(); }
 document.addEventListener('click',function(e){ var b=e.target.closest&&e.target.closest('.redo-btn[data-k]'); if(b) copyRedo(b); });
