@@ -200,7 +200,7 @@ textarea:focus{outline:none;border-color:var(--navy);border-style:solid;box-shad
   <section class="qp" aria-labelledby="qpH">
     <div class="sh" id="qpH"><span class="num"><svg class="i"><use href="#i-spark"/></svg></span>Paste any reply here</div>
     <textarea id="qpaste" aria-label="Paste any reply" placeholder="Paste a reply from any chat."></textarea>
-    <div class="sum" id="qsum"></div>
+    <div class="sum" id="qsum"></div><div class="lines" id="qlines" hidden></div>
     <div class="redo" id="qredo" hidden></div>
     <div class="row"><button class="btn main" id="qsave" type="button" disabled><svg class="i"><use href="#i-save"/></svg><span id="qsaveT">Save</span></button><button class="btn any-btn" id="qsaveAny" type="button" hidden><svg class="i"><use href="#i-save"/></svg><span id="qsaveAnyT">Save anyway</span></button><button class="btn sm" id="qnext" type="button"><svg class="i"><use href="#i-copy"/></svg>Copy "next" message</button><button class="btn sm" id="qclear" type="button">Clear</button></div>
     <div id="qmsg" hidden></div>
@@ -538,9 +538,7 @@ function check(){
   if(!cur.length){ S.innerHTML='<span class="pill p-todo">No idea lines found yet</span>'; L.hidden=true; $('psave').disabled=true; $('psaveAny').hidden=true; $('predo').hidden=true; return; }
   S.innerHTML=A.html;
   L.hidden=false;
-  cur.forEach(function(x){ var d=document.createElement('div'); d.className='ln'+(x.ok?(x.dup?' dup':''):' bad');
-    d.innerHTML=(x.dup?ic('copy'):x.ok?ic('check'):ic('x'))+'<code>'+esc(x.code.slice(5))+'</code><span class="t"></span><span class="w">'+(x.words?x.words+'w':'')+'</span>';
-    d.querySelector('.t').textContent=x.ok?(x.dup?'Duplicate · ':'')+x.row.title:((x.title?x.title+' · ':'')+x.why); L.appendChild(d); });
+  renderLines(L,cur);
   lastA=A; $('psave').disabled=!A.save.length; $('psaveT').textContent=A.save.length?'Save '+A.save.length+' ideas':'Save';
   var an=anyRows(A).length; $('psaveAny').hidden=an<=A.save.length; $('psaveAnyT').textContent='Save anyway · '+an+' ideas';
   renderActions('predo',A);
@@ -564,9 +562,15 @@ function doSave(any){
 // quick paste on the board: no tile needed
 var qcur=null;
 onKnown=function(){ qcheck(); if(openCode) check(); };
+function renderLines(L,list){ L.innerHTML='';
+  list.forEach(function(x){ var d=document.createElement('div'); d.className='ln'+(x.ok?(x.dup?' dup':''):' bad');
+    d.innerHTML=(x.dup?ic('copy'):x.ok?ic('check'):ic('x'))+'<code>'+esc(x.code.slice(5))+'</code><span class="t"></span><span class="w">'+(x.words?x.words+'w':'')+'</span>';
+    d.querySelector('.t').textContent=x.ok?(x.dup?'Duplicate · ':'')+x.row.title:((x.title?x.title+' · ':'')+x.why); L.appendChild(d); });
+  L.hidden=!list.length; }
 function qcheck(){
   var t=$('qpaste').value; try{localStorage.setItem('draft-quick',t);}catch(e){}
   qcur=analyse(t); $('qsum').innerHTML=qcur.html;
+  if(t.trim()) renderLines($('qlines'),qcur.cur); else $('qlines').hidden=true;
   $('qsave').disabled=!qcur.save.length; $('qsaveT').textContent=qcur.save.length?'Save '+qcur.save.length+' ideas':'Save';
   var an=anyRows(qcur).length; $('qsaveAny').hidden=an<=qcur.save.length; $('qsaveAnyT').textContent='Save anyway · '+an+' ideas';
   renderActions('qredo',qcur);
