@@ -196,7 +196,7 @@ textarea:focus{outline:none;border-color:var(--navy);border-style:solid;box-shad
     <div class="sh" id="qpH"><span class="num"><svg class="i"><use href="#i-spark"/></svg></span>Paste any reply here</div>
     <textarea id="qpaste" aria-label="Paste any reply" placeholder="Paste a reply from any chat."></textarea>
     <div class="sum" id="qsum"></div>
-    <div class="redo" id="qredo" hidden><button class="btn redo-btn" id="qredoC" type="button"><svg class="i"><use href="#i-redo"/></svg><span id="qredoT"></span></button><textarea id="qredoX" readonly hidden aria-label="Rewrite prompt"></textarea></div>
+    <div class="redo" id="qredo" hidden></div>
     <div class="row"><button class="btn main" id="qsave" type="button" disabled><svg class="i"><use href="#i-save"/></svg><span id="qsaveT">Save</span></button><button class="btn sm" id="qnext" type="button"><svg class="i"><use href="#i-copy"/></svg>Copy "next" message</button><button class="btn sm" id="qclear" type="button">Clear</button></div>
     <div id="qmsg" hidden></div>
   </section>
@@ -445,7 +445,7 @@ function openPanel(code){
       '<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><button class="btn main" id="pcopy" type="button">'+ic('copy')+'Copy prompt</button><span style="font-size:13px;color:var(--muted)">Writing with <b id="pw"></b></span></div>'+
       '<div class="links">'+TOOLS.map(function(t){return '<a href="'+t[1]+'" target="_blank" rel="noopener">'+esc(t[0])+ic('ext')+'</a>';}).join('')+'</div></div>'+
     '<div class="step"><div class="sh"><span class="num">2</span>Paste the reply</div><div class="row"><button class="btn sm" id="pnextmsg" type="button">'+ic('copy')+'Copy "next" message</button></div><textarea id="ppaste" aria-label="Paste the reply" placeholder="Paste the whole reply here."></textarea><div class="sum" id="psum"></div><div class="lines" id="plines" hidden></div>'+
-      '<div class="redo" id="predo" hidden><button class="btn redo-btn" id="predoC" type="button">'+ic('redo')+'<span id="predoT"></span></button><textarea id="predoX" readonly hidden aria-label="Rewrite prompt"></textarea></div></div>'+
+      '<div class="redo" id="predo" hidden></div></div>'+
     '<div class="step"><div class="sh"><span class="num">3</span>Save</div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn main" id="psave" type="button" disabled>'+ic('save')+'<span id="psaveT">Save</span></button></div><div id="pmsg" hidden></div></div>'+
   '</div></div>';
   $('pw').textContent=writer();
@@ -463,7 +463,6 @@ function openPanel(code){
     sql("insert into public.subcategory_claims (subcategory_code, writer) values ('"+code+"', $w$"+w+"$w$) on conflict (subcategory_code) do update set writer=excluded.writer, claimed_at=now(); select 1 as ok").catch(function(){});
   });
   $('pnextmsg').addEventListener('click',function(){ copyText(NEXT_MSG,this); });
-  $('predoC').addEventListener('click',function(){ copyRedo('predo'); });
   $('psave').addEventListener('click',doSave);
   document.addEventListener('keydown',escClose);
   check();
@@ -513,7 +512,7 @@ function check(){
     d.querySelector('.t').textContent=x.ok?x.row.title:((x.title?x.title+' · ':'')+x.why); L.appendChild(d); });
   $('psave').disabled=!good.length; $('psaveT').textContent=good.length?'Save '+good.length+' ideas':'Save';
   if(bad.length){
-    $('predoX').value=A.redo; $('predoT').textContent='Copy rewrite prompt · '+bad.length+' ideas'; $('predoX').hidden=true; $('predo').hidden=false;
+    renderRedo('predo',bad);
   } else $('predo').hidden=true;
 }
 function pmsg(kind,html){ var m=$('pmsg'); if(!m) return; m.hidden=false; m.className='msg'+(kind==='warn'?' warn':''); m.innerHTML=html; }
@@ -538,16 +537,20 @@ function qcheck(){
   var t=$('qpaste').value; try{localStorage.setItem('draft-quick',t);}catch(e){}
   qcur=analyse(t); $('qsum').innerHTML=qcur.html;
   $('qsave').disabled=!qcur.good.length; $('qsaveT').textContent=qcur.good.length?'Save '+qcur.good.length+' ideas':'Save';
-  if(qcur.redo){ $('qredoX').value=qcur.redo; $('qredoT').textContent='Copy rewrite prompt · '+qcur.bad.length+' ideas'; $('qredoX').hidden=true; $('qredo').hidden=false; } else $('qredo').hidden=true;
+  if(qcur.bad.length) renderRedo('qredo',qcur.bad); else $('qredo').hidden=true;
 }
 function qmsg(kind,html){ var m=$('qmsg'); m.hidden=false; m.className='msg'+(kind==='warn'?' warn':''); m.innerHTML=html; }
 $('qpaste').addEventListener('input',function(){ $('qmsg').hidden=true; qcheck(); });
 $('qnext').addEventListener('click',function(){ copyText(NEXT_MSG,this); });
 $('qclear').addEventListener('click',function(){ $('qpaste').value=''; $('qmsg').hidden=true; qcheck(); });
-$('qredoC').addEventListener('click',function(){ copyRedo('qredo'); });
-function copyRedo(id){ var b=$(id+'C'), t=$(id+'T'), x=$(id+'X'), lbl=t.textContent;
-  var fail=function(){ x.hidden=false; x.select(); };
-  if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(x.value).then(function(){ t.textContent='Copied'; setTimeout(function(){t.textContent=lbl;},1600); },fail); else fail(); }
+// One button per subcategory with short or broken ideas: it copies the full prompt for all 10 ideas, so the set is rewritten together.
+function renderRedo(id,bad){ var box=$(id), ks={}; bad.forEach(function(x){ ks[x.code.slice(0,8)]=1; });
+  box.innerHTML=Object.keys(ks).sort().map(function(k){ return '<button class="btn redo-btn" type="button" data-k="'+k+'">'+ic('redo')+'<span>Copy full rewrite prompt · '+k+' · all 10 ideas</span></button>'; }).join('')+'<textarea readonly hidden aria-label="Rewrite prompt"></textarea>';
+  box.hidden=false; }
+function copyRedo(b){ var k=b.getAttribute('data-k'), t=b.querySelector('span'), x=b.parentNode.querySelector('textarea'), lbl=t.textContent, txt=promptFor(k);
+  var fail=function(){ x.value=txt; x.hidden=false; x.select(); };
+  if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(function(){ t.textContent='Copied'; setTimeout(function(){t.textContent=lbl;},1600); },fail); else fail(); }
+document.addEventListener('click',function(e){ var b=e.target.closest&&e.target.closest('.redo-btn[data-k]'); if(b) copyRedo(b); });
 $('qsave').addEventListener('click',function(){
   var good=(qcur&&qcur.good||[]).map(function(x){return x.row;}); if(!good.length) return;
   $('qsave').disabled=true; qmsg('','Saving '+good.length+' ideas…');
