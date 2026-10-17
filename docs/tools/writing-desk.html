@@ -394,8 +394,8 @@ function board(){
     var tiles=[], has=false, dn=0;
     c[2].forEach(function(s,i){ var code=c[0]+'-S'+('0'+(i+1)).slice(-2), x=state(code); if(x.s==='done') dn++;
       if(tab==='all'||tab===x.s) has=true;
-      var label=x.s==='redo'?'<span>'+x.sh.length+'</span>':(x.s==='done'?ic('check'):(x.n&&x.n<10?x.n+'/10':('0'+(i+1)).slice(-2)));
-      var tipTxt=x.s==='redo'?x.sh.length+' short ideas · rewrite':x.s==='done'?(x.repo?'Done · from GitHub':'Done · 10 ideas'):x.s==='prog'?(x.n?x.n+'/10 saved':'Copied')+(x.w?' with '+x.w:''):'To write';
+      var label=x.s==='redo'?'<span>'+ic('redo')+'</span>':(x.s==='done'?ic('check'):(x.n&&x.n<10?x.n+'/10':('0'+(i+1)).slice(-2)));
+      var tipTxt=x.s==='redo'?'Rewrite all 10':x.s==='done'?(x.repo?'Done · from GitHub':'Done · 10 ideas'):x.s==='prog'?(x.n?x.n+'/10 saved':'Copied')+(x.w?' with '+x.w:''):'To write';
       tiles.push('<button type="button" class="tile t-'+x.s+'" data-c="'+code+'" data-tip="'+esc(s[0])+'" data-st="'+esc(tipTxt)+'" aria-label="'+esc(code+' '+s[0]+', '+tipTxt)+'">'+label+'</button>'); });
     if(!has) return;
     html.push('<div class="cat"><div class="nm"><i class="ring" style="--p:'+(dn*10)+'" aria-hidden="true"></i><code>'+c[0]+'</code><span>'+esc(c[1])+'</span><em>'+dn+'/10</em></div><div class="tiles">'+tiles.join('')+'</div></div>');
@@ -473,7 +473,7 @@ function escClose(e){ if(e.key==='Escape') closePanel(); }
 function closePanel(){ openCode=null; $('panelRoot').innerHTML=''; document.removeEventListener('keydown',escClose); }
 function refreshPanelStatus(){
   if(!openCode||!$('pst')) return; var s=state(openCode);
-  $('pst').innerHTML=s.s==='redo'?'<span class="pill p-redo">'+ic('redo')+'Rewrite · '+s.sh.length+' short</span>':s.s==='done'?'<span class="pill p-done">'+ic('check')+(s.repo?'Done · on GitHub':'Done · 10 ideas saved')+'</span>':(s.s==='prog'?'<span class="pill p-prog">'+(s.n?s.n+'/10 saved':'Copied')+(s.w?' · '+esc(s.w):'')+'</span>':'<span class="pill p-todo">To write</span>');
+  $('pst').innerHTML=s.s==='redo'?'<span class="pill p-redo">'+ic('redo')+'Rewrite · all 10</span>':s.s==='done'?'<span class="pill p-done">'+ic('check')+(s.repo?'Done · on GitHub':'Done · 10 ideas saved')+'</span>':(s.s==='prog'?'<span class="pill p-prog">'+(s.n?s.n+'/10 saved':'Copied')+(s.w?' · '+esc(s.w):'')+'</span>':'<span class="pill p-todo">To write</span>');
 }
 function analyse(txt){
   var cur=parse(txt), good=cur.filter(function(x){return x.ok;}), fixed=good.filter(function(x){return x.fixes&&x.fixes.length;}), bad=cur.filter(function(x){return !x.ok;});
@@ -484,11 +484,15 @@ function analyse(txt){
     else html='<span class="pill p-done">'+ic('check')+good.length+' ready</span>'+(fixed.length?'<span class="pill p-prog">'+ic('wand')+fixed.length+' auto-fixed</span>':'')+(bad.length?'<span class="pill p-todo">'+ic('x')+bad.length+' need a rewrite</span>':'')+
       Object.keys(groups).sort().map(function(k){var sk=state(k).s; return '<span class="dest">'+ic('arrow')+'goes to '+k+' · '+esc(sub(k).s[0])+' ('+groups[k]+')</span>'+(sk==='done'?'<span class="pill p-todo">'+'replaces '+k+'</span>':sk==='redo'?'<span class="pill p-redo">'+ic('redo')+'replaces '+k+'</span>':'');}).join('');
   }
+  // A rewrite subcategory is replaced only as a full set of 10, so its ideas share one tone.
+  var held={}; Object.keys(groups).forEach(function(k){ if(state(k).s==='redo'&&groups[k]<10) held[k]=groups[k]; });
+  var save=good.filter(function(x){ return !held[x.code.slice(0,8)]; });
+  if(txt.trim()) html+=Object.keys(held).sort().map(function(k){ return '<span class="pill p-redo">'+ic('redo')+k+' '+held[k]+'/10 · not saved</span>'; }).join('');
   var redo='';
   if(bad.length){
     redo=fixPrompt(bad.map(function(x){return x.code;}),good);
   }
-  return {cur:cur,good:good,bad:bad,groups:groups,html:html,redo:redo};
+  return {cur:cur,good:good,bad:bad,groups:groups,html:html,redo:redo,save:save,held:held};
 }
 function saveRows(good){
   return sql(insertSql(good,writer())).then(function(r){ var res=(r||[])[0]||{}; return load().then(function(){
@@ -498,6 +502,7 @@ function saveRows(good){
   }); });
 }
 var cur=[];
+var lastA=null;
 function check(){
   if(!openCode) return; var code=openCode, txt=$('ppaste').value;
   cur=parse(txt); var good=cur.filter(function(x){return x.ok;}), fixed=good.filter(function(x){return x.fixes&&x.fixes.length;}), bad=cur.filter(function(x){return !x.ok;});
@@ -510,14 +515,15 @@ function check(){
   cur.forEach(function(x){ var d=document.createElement('div'); d.className='ln'+(x.ok?'':' bad');
     d.innerHTML=(x.ok?ic('check'):ic('x'))+'<code>'+esc(x.code.slice(5))+'</code><span class="t"></span><span class="w">'+(x.words?x.words+'w':'')+'</span>';
     d.querySelector('.t').textContent=x.ok?x.row.title:((x.title?x.title+' · ':'')+x.why); L.appendChild(d); });
-  $('psave').disabled=!good.length; $('psaveT').textContent=good.length?'Save '+good.length+' ideas':'Save';
-  if(bad.length){
-    renderRedo('predo',bad);
+  lastA=A; $('psave').disabled=!A.save.length; $('psaveT').textContent=A.save.length?'Save '+A.save.length+' ideas':'Save';
+  var rb=bad.concat(Object.keys(A.held).map(function(k){return {code:k+'-I01'};}));
+  if(rb.length){
+    renderRedo('predo',rb);
   } else $('predo').hidden=true;
 }
 function pmsg(kind,html){ var m=$('pmsg'); if(!m) return; m.hidden=false; m.className='msg'+(kind==='warn'?' warn':''); m.innerHTML=html; }
 function doSave(){
-  var code=openCode, good=cur.filter(function(x){return x.ok;}).map(function(x){return x.row;});
+  var code=openCode, good=(lastA?lastA.save:[]).map(function(x){return x.row;});
   if(!good.length) return; $('psave').disabled=true; pmsg('', 'Saving '+good.length+' ideas…');
   saveRows(good).then(function(r){
     try{ localStorage.removeItem('draft-'+code); }catch(e){}
@@ -536,8 +542,9 @@ var qcur=null;
 function qcheck(){
   var t=$('qpaste').value; try{localStorage.setItem('draft-quick',t);}catch(e){}
   qcur=analyse(t); $('qsum').innerHTML=qcur.html;
-  $('qsave').disabled=!qcur.good.length; $('qsaveT').textContent=qcur.good.length?'Save '+qcur.good.length+' ideas':'Save';
-  if(qcur.bad.length) renderRedo('qredo',qcur.bad); else $('qredo').hidden=true;
+  $('qsave').disabled=!qcur.save.length; $('qsaveT').textContent=qcur.save.length?'Save '+qcur.save.length+' ideas':'Save';
+  var rb=qcur.bad.concat(Object.keys(qcur.held).map(function(k){return {code:k+'-I01'};}));
+  if(rb.length) renderRedo('qredo',rb); else $('qredo').hidden=true;
 }
 function qmsg(kind,html){ var m=$('qmsg'); m.hidden=false; m.className='msg'+(kind==='warn'?' warn':''); m.innerHTML=html; }
 $('qpaste').addEventListener('input',function(){ $('qmsg').hidden=true; qcheck(); });
@@ -552,7 +559,7 @@ function copyRedo(b){ var k=b.getAttribute('data-k'), t=b.querySelector('span'),
   if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(function(){ t.textContent='Copied'; setTimeout(function(){t.textContent=lbl;},1600); },fail); else fail(); }
 document.addEventListener('click',function(e){ var b=e.target.closest&&e.target.closest('.redo-btn[data-k]'); if(b) copyRedo(b); });
 $('qsave').addEventListener('click',function(){
-  var good=(qcur&&qcur.good||[]).map(function(x){return x.row;}); if(!good.length) return;
+  var good=(qcur&&qcur.save||[]).map(function(x){return x.row;}); if(!good.length) return;
   $('qsave').disabled=true; qmsg('','Saving '+good.length+' ideas…');
   saveRows(good).then(function(r){ $('qpaste').value=''; qcheck(); qmsg('', ic('check')+' <b>'+r.moved+' saved</b> · '+esc(r.parts.join(' · '))); },
     function(e){ qmsg('warn',errText(e)); $('qsave').disabled=false; });
