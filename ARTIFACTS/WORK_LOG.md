@@ -221,3 +221,8 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 ## 2026-10-23 00:16 IST — Founder route passed, isolate two policy imports
 - **Verified:** 3a9832ff80d55ec70110b30254a6723270cf40e7 passed Vercel; / and /founders returned HTTP 200 with sitewide X-Robots-Tag noindex,nofollow,noarchive,noimageindex. Preview /robots.txt now allows fetch so crawlers can read noindex; empty XML sitemap remains.
 - **Next diagnostic change:** Reintroduce only /gdpr and /refund-policy imports from glass-editorial with original legal text unchanged. Keep sitemap and Services rolled back until this pair passes live SSR. Scoped CSS already deployed.
+
+
+## 2026-10-23 00:18 IST — Policy pair passed; isolate sitemap
+- **Verified:** 98234df595f904ac70f6ecaf0f456359b317bbf2 passed Vercel; /, /gdpr and /refund-policy returned HTTP 200 with noindex X-Robots-Tag. Founders import also passed. The 500 must be in the remaining sitemap or rewritten Services route, or an interaction between them.
+- **Next diagnostic change:** Reintroduce only /sitemap glass import and the published blueprint link/accurate intro. Keep Services unchanged; check both homepage and sitemap SSR. If successful, rewritten Services is isolated as cause. No source or schema mutation.
