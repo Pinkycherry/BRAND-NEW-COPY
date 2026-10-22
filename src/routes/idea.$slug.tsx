@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ArrowUpRight, Check, Copy } from "lucide-react";
 
 import { GlassShell } from "@/components/glass-shell";
+import { ValidateButton } from "@/components/validate-button";
 import { TAXONOMY } from "@/data/taxonomy";
 import { BAND_LABEL, MODE_LABEL, SKILL_LABEL, TIME_LABEL, getIdea, type Idea } from "@/lib/ideas.functions";
 import "@/components/glass-library.css";
@@ -59,14 +60,14 @@ function IdeaPage() {
     idea.what_hurts && { id: "risks", label: "The hard parts" },
     idea.verdict && { id: "verdict", label: "Verdict" },
     idea.faq?.length && { id: "faq", label: "Questions" },
-    idea.validate_prompt && { id: "validate", label: "Validate locally" },
+    { id: "validate", label: "Validate" },
   ].filter((section): section is { id: string; label: string } => Boolean(section));
   const share = async () => {
     try { await navigator.clipboard.writeText(window.location.href); setCopied(true); window.setTimeout(() => setCopied(false), 2500); } catch { setCopied(false); }
   };
   return <GlassShell><div className="gl-page gl-idea-page">
     <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/browse">Explore</Link>{where && <><span>/</span><Link to="/category/$categorySlug" params={{ categorySlug: where.category.slug }}>{where.category.short}</Link><span>/</span><Link to="/category/$categorySlug/$subcategorySlug" params={{ categorySlug: where.category.slug, subcategorySlug: where.subcategory.slug }}>{where.subcategory.name.replace(/ Business Ideas$/i, "")}</Link></>}<span>/</span><span>Idea</span></nav>
-    <header className="gl-idea-hero"><div><p className="gh-eyebrow">A PUBLISHED IDEA · {idea.code}</p><h1>{idea.title}</h1><p className="gl-idea-hook">{idea.hook}</p><ul className="gl-chips">{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul><p className="gl-idea-summary">{idea.summary}</p><div className="gl-idea-actions"><a href="#what" className="gh-button gh-button-primary">Read the blueprint <ArrowUpRight size={17} /></a><button type="button" className="gh-button gh-button-secondary" onClick={share}>{copied ? <Check size={17} /> : <Copy size={17} />}{copied ? "Link copied" : "Copy link"}</button></div></div><div className="gl-hero-art" aria-hidden="true"><span className="gl-art-orbit gl-art-orbit-one" /><span className="gl-art-orbit gl-art-orbit-two" /><span className="gl-art-core">✦</span></div></header>
+    <header className="gl-idea-hero"><div><p className="gh-eyebrow">A PUBLISHED IDEA · {idea.code}</p><h1>{idea.title}</h1><p className="gl-idea-hook">{idea.hook}</p><ul className="gl-chips">{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul><p className="gl-idea-summary">{idea.summary}</p><div className="gl-idea-actions"><a href="#validate" className="gh-button gh-button-primary">Validate this idea <ArrowUpRight size={17} /></a><a href="#what" className="gh-button gh-button-secondary">Read the blueprint</a><button type="button" className="gh-button gh-button-secondary" onClick={share}>{copied ? <Check size={17} /> : <Copy size={17} />}{copied ? "Link copied" : "Copy link"}</button></div></div><div className="gl-hero-art" aria-hidden="true"><span className="gl-art-orbit gl-art-orbit-one" /><span className="gl-art-orbit gl-art-orbit-two" /><span className="gl-art-core">✦</span></div></header>
     <div className="gl-idea-layout"><article className="gl-idea-body">
       {idea.what_it_is && <IdeaSection id="what" eyebrow="01 / THE IDEA" title="What this business is"><p>{idea.what_it_is}</p></IdeaSection>}
       {idea.who_pays_you && <IdeaSection id="buyers" eyebrow="02 / CUSTOMER" title="Who pays you"><p>{idea.who_pays_you}</p></IdeaSection>}
@@ -76,7 +77,7 @@ function IdeaPage() {
       {idea.what_hurts && <IdeaSection id="risks" eyebrow="06 / REALITY CHECK" title="What can hurt in year one"><p>{idea.what_hurts}</p></IdeaSection>}
       {idea.verdict && <IdeaSection id="verdict" eyebrow="07 / THE STRAIGHT VERDICT" title="Is this worth a closer look?"><p className="gl-verdict">{idea.verdict}</p></IdeaSection>}
       {idea.faq?.length > 0 && <IdeaSection id="faq" eyebrow="08 / QUESTIONS" title="What people ask"><div className="gl-faq">{idea.faq.map((item) => <details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></IdeaSection>}
-      {idea.validate_prompt && <IdeaSection id="validate" eyebrow="09 / VALIDATE LOCALLY" title="Check today's facts before you start"><p>Prices, licensing and demand vary by place and time. Use this research question as a starting point, then confirm it with local sources and potential buyers.</p><blockquote>{idea.validate_prompt}</blockquote><Link to="/calculator" className="gl-inline-link">Test your own numbers <ArrowUpRight size={17} /></Link></IdeaSection>}
+      <IdeaSection id="validate" eyebrow="09 / VALIDATE THE IDEA" title="Run the research before you commit"><ValidateButton slug={idea.slug} /><p className="gl-validation-caution">AI research is a starting point. Confirm prices, licensing and demand with local sources and potential buyers.</p><Link to="/calculator" className="gl-inline-link">Test your own numbers <ArrowUpRight size={17} /></Link></IdeaSection>
       {where && <div className="gl-back-path"><p>Want to compare another direction?</p><Link to="/category/$categorySlug/$subcategorySlug" params={{ categorySlug: where.category.slug, subcategorySlug: where.subcategory.slug }}>See more in {where.subcategory.name.replace(/ Business Ideas$/i, "")} <ArrowUpRight size={17} /></Link></div>}
     </article><aside className="gl-idea-sidebar"><div><p className="gh-eyebrow">ON THIS PAGE</p><nav aria-label="Idea sections">{sections.map((section) => <a key={section.id} href={`#${section.id}`}>{section.label}</a>)}</nav></div><div><p className="gh-eyebrow">PUT IT TO A TEST</p><p>Use the calculator with your own assumptions. The figures on this page are a starting frame, not a promise of returns.</p><Link to="/calculator">Open calculators <ArrowUpRight size={16} /></Link></div></aside></div>
   </div></GlassShell>;
