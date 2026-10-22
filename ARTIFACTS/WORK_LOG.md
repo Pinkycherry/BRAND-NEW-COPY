@@ -226,3 +226,8 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 ## 2026-10-23 00:18 IST — Policy pair passed; isolate sitemap
 - **Verified:** 98234df595f904ac70f6ecaf0f456359b317bbf2 passed Vercel; /, /gdpr and /refund-policy returned HTTP 200 with noindex X-Robots-Tag. Founders import also passed. The 500 must be in the remaining sitemap or rewritten Services route, or an interaction between them.
 - **Next diagnostic change:** Reintroduce only /sitemap glass import and the published blueprint link/accurate intro. Keep Services unchanged; check both homepage and sitemap SSR. If successful, rewritten Services is isolated as cause. No source or schema mutation.
+
+
+## 2026-10-23 00:21 IST — Sitemap route identified as SSR failure
+- **Live test:** 2dc8dc3c5705a8e0bbd1ed1a680843d190afa923 passed build but / and /sitemap both returned HTTP 500, while the preceding Founders/GDPR/Refund commits had returned 200. The isolated sitemap change therefore triggers the failure. Static SEO headers remain noindex.
+- **Recovery:** Restore /sitemap's prior page-layout import while retaining its new link to /blueprints and accurate intro. This tests whether the shared glass import/large sitemap render is the cause; if it still fails, revert the remaining sitemap edits. Do not let a green build stand in for a healthy deployment. Delay further page deployment until / and /sitemap return 200.
