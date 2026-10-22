@@ -4,6 +4,7 @@ import { ArrowUpRight, Clock } from "lucide-react";
 
 import { GlassShell } from "@/components/glass-shell";
 import { ReadingPaths } from "@/components/reading-paths";
+import { ReaderCompanion } from "@/components/reader-companion";
 import { JsonLd, articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { getBlogPost } from "@/lib/blog.functions";
 import { formatDate } from "@/lib/blog-shared";
@@ -55,8 +56,14 @@ function BlogArticle() {
   const { data } = useSuspenseQuery(postQuery(slug));
   if (!data) return null;
   const { post, related } = data;
-  const headings = Array.from(post.html.matchAll(/<h2(?:\s[^>]*)?>/gi), (match) => match.index ?? 0);
-  const breakAt = headings.length > 1 ? headings[Math.floor(headings.length / 2)] : post.html.length;
+  const sections = Array.from(post.html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/gi), (match, index) => ({
+    id: `article-section-${index + 1}`,
+    label: match[1].replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").trim(),
+  }));
+  let headingNumber = 0;
+  const anchoredHtml = post.html.replace(/<h2[^>]*>/gi, (tag) => `<span id="article-section-${++headingNumber}" class="gl-section-anchor"></span>${tag}`);
+  const middleId = sections.length > 1 ? sections[Math.floor(sections.length / 2)].id : "";
+  const breakAt = middleId ? anchoredHtml.indexOf(`<span id="${middleId}"`) : anchoredHtml.length;
   return <>
     <JsonLd schema={[
       articleSchema({
@@ -81,9 +88,14 @@ function BlogArticle() {
           <img src={post.image} alt={post.imageAlt ?? post.title} width={post.imageWidth ?? 1672} height={post.imageHeight ?? 941} loading="eager" fetchPriority="high" decoding="async" ref={hideImgIfBroken} />
           {post.imageCaption && <figcaption>{post.imageCaption}</figcaption>}
         </figure>}
-        <div className="gl-prose" dangerouslySetInnerHTML={{ __html: post.html.slice(0, breakAt) }} />
-        <ReadingPaths />
-        {breakAt < post.html.length && <div className="gl-prose" dangerouslySetInnerHTML={{ __html: post.html.slice(breakAt) }} />}
+        <div className="gl-reading-layout">
+          <div className="gl-reading-main">
+            <div className="gl-prose" dangerouslySetInnerHTML={{ __html: anchoredHtml.slice(0, breakAt) }} />
+            <ReadingPaths />
+            {breakAt < anchoredHtml.length && <div className="gl-prose" dangerouslySetInnerHTML={{ __html: anchoredHtml.slice(breakAt) }} />}
+          </div>
+          <ReaderCompanion sections={sections} label="Article sections" />
+        </div>
       </article>
       {related.length > 0 && <section className="gl-related-articles" aria-labelledby="more-articles">
         <p className="gh-eyebrow">KEEP READING</p><h2 id="more-articles">More from the journal.</h2>
