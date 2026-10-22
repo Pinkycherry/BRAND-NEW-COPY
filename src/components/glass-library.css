@@ -347,3 +347,21 @@
 .glass-home .gl-blueprint-pagination a { display:inline-flex; gap:.3rem; align-items:center; min-height:44px; padding:.6rem 1rem; border:1px solid #dcd8f4; border-radius:12px; color:#5e4eba; background:#fff; font-weight:750; }
 @media(max-width:920px) { .glass-home .gl-blueprint-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:680px) { .glass-home .gl-blueprint-grid { grid-template-columns:1fr; }.glass-home .gl-blueprint-invite { display:block; padding:2rem 1.35rem; }.glass-home .gl-blueprint-invite .gh-button { margin-top:1.2rem; } }
+/* Shared glass editorials: About, Contact, people, policies and utility pages. */
+.glass-home .gl-page.gl-editorial { width:min(100% - 2rem,980px); max-width:980px; padding:0 0 6rem; border:0; border-radius:0; background:transparent; box-shadow:none; }
+.glass-home .gl-editorial-hero { padding:clamp(2rem,5vw,4rem); border:1px solid #fff; border-radius:34px; background:radial-gradient(circle at 85% 25%,#ded8ff 0,transparent 36%),linear-gradient(130deg,#fff,#eef3ff); box-shadow:0 22px 58px #56527c16; }
+.glass-home .gl-editorial-hero h1 { max-width:16ch; margin:1rem 0; font-size:clamp(2.6rem,5vw,4.8rem); line-height:1.06; letter-spacing:-.06em; font-weight:760; }
+.glass-home .gl-editorial-hero h1 em { font-style:normal; color:#715bd1; }
+.glass-home .gl-editorial-hero > p:not(.gh-eyebrow) { max-width:68ch; margin:.8rem 0 0; color:#5f637a; font-size:1.04rem; line-height:1.7; }
+.glass-home .gl-editorial-stack { display:grid; gap:1rem; margin-top:2rem; }
+.glass-home .gl-editorial-section { min-width:0; padding:clamp(1.5rem,3vw,2.5rem); border:1px solid #fff; border-radius:25px; background:#ffffffbd; box-shadow:0 12px 31px #5150700d; }
+.glass-home .gl-editorial-section h2 { margin:0 0 .9rem; font-size:clamp(1.4rem,2.5vw,1.9rem); line-height:1.24; letter-spacing:-.04em; }
+.glass-home .gl-editorial-copy { color:#54586e; font-size:.94rem; line-height:1.75; }
+.glass-home .gl-editorial-copy p { margin:.8rem 0; color:inherit !important; line-height:inherit; }
+.glass-home .gl-editorial-copy a { color:#5c49b6; text-decoration:underline; text-underline-offset:3px; }
+.glass-home .gl-editorial-bullets { display:grid; gap:.5rem; margin:.8rem 0 1rem; padding-left:1.35rem; list-style:disc; }
+.glass-home .gl-editorial-bullets li { padding-left:.15rem; }
+.glass-home .gl-editorial-document { border-left:4px solid #c7baf2; }
+.glass-home .gl-editorial-notice { background:#f2f0ffcf; }
+.glass-home .gl-editorial-focus { text-align:center; }
+@media(max-width:680px) { .glass-home .gl-page.gl-editorial { width:min(100% - 1.25rem,560px); }.glass-home .gl-editorial-hero { padding:2rem 1.4rem; border-radius:25px; }.glass-home .gl-editorial-section { padding:1.5rem; border-radius:20px; } }
