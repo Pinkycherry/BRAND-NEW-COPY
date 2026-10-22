@@ -74,3 +74,40 @@
   .glass-home .gl-bottom-note .gh-button { margin-top:1.25rem; }
 }
 @media(prefers-reduced-motion:reduce) { .glass-home .gl-category { transition:none; }.glass-home .gl-category:hover { transform:none; } }
+
+/* Category and subcategory pages */
+.glass-home .gl-detail-hero { min-height:350px; }
+.glass-home .gl-detail-hero .gl-hero-art { width:min(100%,260px); }
+.glass-home .gl-path-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; list-style:none; margin:2rem 0 0; padding:0; }
+.glass-home .gl-path-card { display:flex; flex-direction:column; min-height:240px; padding:1.8rem; border:1px solid #fff; border-radius:26px; background:#ffffffbb; box-shadow:0 12px 35px #5653760d; }
+.glass-home .gl-path-index { color:#8275b7; font-size:.75rem; font-weight:800; letter-spacing:.16em; }
+.glass-home .gl-path-card h3 { margin:.9rem 0 .5rem; font-size:1.45rem; line-height:1.2; letter-spacing:-.035em; }
+.glass-home .gl-path-card p { max-width:36ch; margin:0; color:var(--gh-muted); font-size:.9rem; line-height:1.55; }
+.glass-home .gl-path-card a { display:inline-flex; align-items:center; gap:.4rem; min-height:44px; width:max-content; margin-top:auto; padding-top:1rem; color:#6452c0; font-size:.86rem; font-weight:750; }
+.glass-home .gl-path-card a:hover { text-decoration:underline; }
+.glass-home .gl-related { margin-top:5rem; }
+.glass-home .gl-related-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.8rem; margin-top:1.6rem; }
+.glass-home .gl-related-list a { display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:65px; padding:1rem 1.2rem; border:1px solid #fff; border-radius:18px; background:#ffffffba; color:#3d3e58; font-weight:700; }
+.glass-home .gl-related-list a:hover { color:#6851c6; background:#fff; }
+.glass-home .gl-related-list svg { flex:none; }
+.glass-home .gl-detail-columns { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(260px,.75fr); align-items:start; gap:2rem; margin-top:4rem; }
+.glass-home .gl-detail-columns .gl-index { padding-top:2rem; }
+.glass-home .gl-editorial { padding:2rem; border:1px solid #fff; border-radius:26px; background:#ffffff9e; }
+.glass-home .gl-editorial h2, .glass-home .gl-side h2 { margin:.55rem 0 1rem; font-size:1.65rem; letter-spacing:-.04em; }
+.glass-home .gl-editorial p:not(.gh-eyebrow), .glass-home .gl-side p:not(.gh-eyebrow) { color:var(--gh-muted); line-height:1.75; }
+.glass-home .gl-side { display:grid; gap:1rem; position:sticky; top:110px; }
+.glass-home .gl-side section { padding:1.6rem; border:1px solid #fff; border-radius:24px; background:#ffffffb7; }
+.glass-home .gl-side a { display:inline-flex; align-items:center; gap:.4rem; min-height:44px; margin-top:.6rem; color:#604ec1; font-weight:750; }
+.glass-home .gl-chips { display:flex; flex-wrap:wrap; gap:.5rem; list-style:none; margin:1rem 0 0; padding:0; }
+.glass-home .gl-chips li { padding:.45rem .7rem; border:1px solid #e1dff4; border-radius:999px; background:#f6f4ff; color:#575374; font-size:.8rem; }
+.glass-home .gl-ideas .gl-section-heading { align-items:end; }
+.glass-home .gl-idea-list { display:grid; gap:.8rem; list-style:none; margin:0; padding:0; }
+.glass-home .gl-idea-list li a { display:block; padding:1.7rem; border:1px solid #fff; border-radius:22px; background:#ffffffbd; box-shadow:0 8px 26px #5551770e; }
+.glass-home .gl-idea-list li a:hover { border-color:#b6a7f0; }
+.glass-home .gl-idea-list h3 { margin:.5rem 0; font-size:1.4rem; letter-spacing:-.03em; }
+.glass-home .gl-idea-list p { color:var(--gh-muted); line-height:1.6; }
+.glass-home .gl-idea-action { display:inline-flex; gap:.4rem; align-items:center; margin-top:.8rem; color:#6451c3; font-weight:750; font-size:.85rem; }
+.glass-home .gl-publishing { margin-top:1.5rem; }
+.glass-home .gl-publishing a { display:inline-flex; gap:.4rem; align-items:center; min-height:44px; color:#604ec1; font-weight:750; }
+@media(max-width:800px) { .glass-home .gl-detail-columns { grid-template-columns:1fr; }.glass-home .gl-side { position:static; grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:680px) { .glass-home .gl-path-grid, .glass-home .gl-related-list, .glass-home .gl-side { grid-template-columns:1fr; }.glass-home .gl-path-card { min-height:210px; padding:1.35rem; }.glass-home .gl-detail-columns { gap:1.3rem; margin-top:2.5rem; }.glass-home .gl-related { margin-top:3.5rem; }.glass-home .gl-editorial { padding:1.4rem; } }
