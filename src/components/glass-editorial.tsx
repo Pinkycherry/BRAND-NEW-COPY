@@ -1,4 +1,5 @@
-import { createContext, useContext, type ReactNode } from "react";
+import { Children, createContext, useContext, type ReactNode } from "react";
+import { Link } from "@tanstack/react-router";
 import { useRouterState } from "@tanstack/react-router";
 
 import { GlassShell } from "@/components/glass-shell";
@@ -20,6 +21,7 @@ export function ContentPage({
   wide?: boolean;
 }) {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
+  const sections = Children.toArray(children);
   return <>
     <JsonLd schema={[
       webPageSchema({ path: pathname, name: `${title}${highlight ? ` ${highlight}` : ""}`, description: intro }),
@@ -33,10 +35,22 @@ export function ContentPage({
           <h1>{title}{highlight && <> <em>{highlight}</em></>}</h1>
           <p>{intro}</p>
         </header>
-        <Tone.Provider value={tone}><div className="gl-editorial-stack">{children}</div></Tone.Provider>
+        <Tone.Provider value={tone}><div className="gl-editorial-stack">{sections.map((child, index) => <div className="gl-editorial-unit" key={index}>{child}{((tone === "document" || tone === "notice") ? index === sections.length - 1 : (index === 1 || (index === 4 && sections.length > 6))) && <EditorialNext />}</div>)}</div></Tone.Provider>
       </div>
     </GlassShell>
   </>;
+}
+
+function EditorialNext() {
+  return <aside className="gl-editorial-next" aria-label="Explore more at BusinessIdea.io">
+    <div><p className="gh-eyebrow">FOLLOW THE NEXT QUESTION</p><h2>Keep your momentum.</h2><p>Choose a real page that helps you turn what you have read into a decision.</p></div>
+    <div className="gl-editorial-next-links">
+      <Link to="/blueprints"><strong>Read a blueprint</strong><span>Explore published ideas →</span></Link>
+      <Link to="/calculator"><strong>Run your numbers</strong><span>Use a live calculator →</span></Link>
+      <Link to="/startup-guides"><strong>Learn the method</strong><span>Open startup guides →</span></Link>
+      <Link to="/founder-glossary"><strong>Understand a term</strong><span>Browse the glossary →</span></Link>
+    </div>
+  </aside>;
 }
 
 export function Section({ heading, children }: { heading: string; children: ReactNode }) {
