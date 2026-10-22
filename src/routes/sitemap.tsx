@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 
-import { ContentPage, Section, metaFor } from "@/components/page-layout";
+import { ContentPage, Section, metaFor } from "@/components/glass-editorial";
 import { CALCULATORS } from "@/lib/calculators";
 import { STARTUP_GUIDES } from "@/lib/guides-data";
 import { CASE_STUDIES } from "@/lib/case-studies-data";
@@ -84,6 +84,7 @@ const PAGE_GROUPS: { heading: string; links: { to: string; label: string }[] }[]
     links: [
       { to: "/", label: "Home" },
       { to: "/browse", label: "Browse all categories" },
+      { to: "/blueprints", label: "Published blueprints" },
       { to: "/blog", label: "Blog" },
     ],
   },
@@ -190,7 +191,7 @@ function SitemapPage() {
       eyebrow="Site map"
       title="Every page on"
       highlight="BBI"
-      intro={`${TAXONOMY.length} business idea categories and ${subcategoryTotal} subcategories, plus ${CALCULATORS.length} calculators, ${STARTUP_GUIDES.length} startup guides, ${CASE_STUDIES.length} founder stories and ${blogPosts.length} blog posts — every one of them linked from this page.`}
+      intro={`${TAXONOMY.length} business idea categories and ${subcategoryTotal} subcategories, plus ${CALCULATORS.length} calculators, ${STARTUP_GUIDES.length} startup guides, ${CASE_STUDIES.length} founder stories and ${blogPosts.length} blog posts. Search the separate index of completed source blueprints from the links below.`}
     >
       {PAGE_GROUPS.map((group) => (
         <Section key={group.heading} heading={group.heading}>
