@@ -48,3 +48,7 @@ An India-first decision entry page, business model comparisons grounded in actua
 ## Implemented validation field guide
 
 - `/startup-idea-validation` — SEO title “How to Validate a Startup Idea in India | BusinessIdea.io”; one H1 “Validate a startup idea before it costs you.” Eight substantive sections: falsifiable claim, buyer interviews, evidence ladder, four-field browser-local notebook, cash worksheet, four external AI research options through the existing blueprint Validate button, reversible next-decision selector, FAQ, plus a specific final action. The route does not claim an AI verdict or save/transmit notebook data. It is initially unlisted in the shared menu until live content, controls, SSR and noindex are checked; then add contextual links.
+
+## Implemented business-model comparison route
+
+- `/business-models-india` — SEO title “Business Models in India: Compare How an Idea Earns | BusinessIdea.io”; H1 “How does this business idea earn?” Seven substantive sections cover model obligations, a two-model comparison of five real operating patterns, a live rupee arithmetic worksheet, delivery burden, cash-order risks, buyer questions and FAQ. No market size, revenue promise or universal ranking. Initially unlisted in the shared menu pending live QA. The route is original BBI composition and copy.
