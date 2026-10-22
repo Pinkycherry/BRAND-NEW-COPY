@@ -1,150 +1,31 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
+import { ArrowUpRight } from "lucide-react";
 
-import { SiteShell, Breadcrumbs } from "@/components/site-shell";
-import { ExploreRail } from "@/components/explore-rail";
+import { GlassShell } from "@/components/glass-shell";
 import { formatDate } from "@/lib/blog-shared";
 import { getBlogPosts } from "@/lib/blog.functions";
-import { hideImgIfBroken } from "@/lib/utils";
-import { useDepthScene, useStaggerReveal, useTextReveal } from "@/motion";
+import "@/components/glass-library.css";
 
-const postsQuery = queryOptions({
-  queryKey: ["blog", "posts", 1],
-  queryFn: () => getBlogPosts({ data: { page: 1 } }),
-});
+const postsQuery = queryOptions({ queryKey: ["blog", "posts", 1], queryFn: () => getBlogPosts({ data: { page: 1 } }) });
 
 export const Route = createFileRoute("/blog/")({
   loader: ({ context }) => context.queryClient.ensureQueryData(postsQuery),
-  head: () => ({
-    meta: [
-      { title: "Blog — Founder Playbooks | BBI – Bro Business Ideas" },
-      {
-        name: "description",
-        content:
-          "Long-form founder playbooks and market breakdowns from BBI — real research, no filler.",
-      },
-      { property: "og:title", content: "Blog — Founder Playbooks | BBI – Bro Business Ideas" },
-      {
-        property: "og:description",
-        content: "Long-form founder playbooks and market breakdowns from BBI.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => ({ meta: [
+    { title: "Founder Notes & Articles | BusinessIdea.io" },
+    { name: "description", content: "Read published articles and practical notes for founders." },
+    { property: "og:type", content: "website" },
+  ] }),
   component: BlogIndex,
-  errorComponent: () => (
-    <SiteShell tone="instrument">
-      <div className="mx-auto max-w-6xl px-4 py-24">
-        <h1 className="text-2xl font-bold">The blog feed is unavailable</h1>
-        <p className="mt-2 text-muted-foreground">
-          We couldn&apos;t reach the blog just now. Nothing here is cached or faked — try again in a
-          moment.
-        </p>
-      </div>
-    </SiteShell>
-  ),
+  errorComponent: () => <GlassShell><div className="gl-page gl-message"><h1>The articles could not load.</h1><p>Please try again in a moment.</p><Link to="/">Return home</Link></div></GlassShell>,
 });
 
 function BlogIndex() {
   const { data } = useSuspenseQuery(postsQuery);
-  // One headline reveal per page, on the H1, and one stagger on the post grid.
-  const titleRef = useTextReveal<HTMLHeadingElement>();
-  // Masthead depth scene: one shared observer + one shared frame callback
-  // for the whole header. Cursor depth on fine pointers, scroll depth on touch
-  // (see motion.css, coarse-pointer block).
-  const sceneRef = useDepthScene<HTMLDivElement>({ strength: 0.5 });
-
-  const gridRef = useStaggerReveal<HTMLDivElement>({ direction: "up", stagger: 0.05 });
-
-  return (
-    <SiteShell tone="instrument">
-      <div ref={sceneRef} className="cx-scene mx-auto max-w-6xl px-3 py-12 sm:px-4">
-        {/* EDITABLE SECTION START — safe to add, remove, or reorder sections below without breaking routing or data fetching. */}
-        <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Blog" }]} />
-        <h1
-          ref={titleRef}
-          className="cx-layer cx-z3 mt-5 text-4xl font-extrabold tracking-tight sm:text-5xl"
-        >
-          Founder{" "}
-          <span className="bg-gradient-to-r from-primary via-accent to-warm bg-clip-text text-transparent">
-            playbooks
-          </span>
-        </h1>
-        <p className="mt-4 max-w-2xl text-muted-foreground">
-          Long-form writing on markets, founders and what actually works — held to the same standard
-          as the idea library: real research, no filler. Free after one sign-in.
-        </p>
-
-        {data.posts.length === 0 ? (
-          <p className="mt-12 text-muted-foreground">No posts published yet.</p>
-        ) : (
-          <div ref={gridRef} className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {data.posts.map((post, i) => {
-              // The most recent post reads as a genuine feature, not just the
-              // first tile in an identical grid (brief 12.7 — no repetitive
-              // same-size card walls).
-              const featured = i === 0 && data.posts.length > 2;
-              return (
-                <Link
-                  key={post.id}
-                  to="/blog/$slug"
-                  params={{ slug: post.slug }}
-                  className={`glass mo-card flex h-full flex-col overflow-hidden rounded-2xl ${
-                    featured ? "sm:col-span-2 lg:col-span-2" : ""
-                  }`}
-                >
-                  {post.image && (
-                    // The card already clips its own corners, so the media slot
-                    // is square-cornered on purpose — a second radius here
-                    // would notch the image away from the card edge.
-                    <div
-                      style={{ borderRadius: 0 }}
-                      className={`mo-media relative w-full ${featured ? "aspect-[21/9]" : "aspect-video"}`}
-                    >
-                      <img
-                        src={post.image}
-                        alt={post.imageAlt ?? post.title}
-                        width={post.imageWidth ?? 1672}
-                        height={post.imageHeight ?? 941}
-                        loading="lazy"
-                        decoding="async"
-                        ref={hideImgIfBroken}
-                        className="h-full w-full object-cover opacity-90"
-                      />
-                      {/* Gradient scrim so text over/near the image always stays
-                          legible and the photo never looks like a raw drop-in
-                          (brief 12.8). */}
-                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-background/0 to-transparent" />
-                    </div>
-                  )}
-                  <div className="flex flex-1 flex-col gap-3 p-5 pb-7">
-                    <div className="flex flex-wrap items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-accent">
-                      <span>{formatDate(post.date)}</span>
-                      <span aria-hidden className="text-muted-foreground">
-                        ·
-                      </span>
-                      <span className="text-muted-foreground">{post.readingMinutes} min read</span>
-                    </div>
-                    <h2
-                      className={`font-semibold leading-snug ${featured ? "text-2xl" : "text-lg"}`}
-                    >
-                      {post.title}
-                    </h2>
-                    <p className="text-sm leading-relaxed text-muted-foreground">{post.excerpt}</p>
-                    <span className="mt-auto pt-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-                      Read article →
-                    </span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        )}
-        {/* EDITABLE SECTION END */}
-
-        <ExploreRail exclude="blog" heading="Keep exploring" />
-      </div>
-    </SiteShell>
-  );
+  return <GlassShell><div className="gl-page">
+    <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><span>Blog</span></nav>
+    <header className="gl-hero"><div className="gl-hero-copy"><p className="gh-eyebrow">NOTES FOR THE JOURNEY</p><h1>Ideas are a start. <em>Keep learning.</em></h1><p>Published writing on markets, decisions, early experiments and what founders learn along the way.</p><div className="gl-hero-stats"><span><strong>{data.posts.length}</strong> articles on this page</span></div></div><div className="gl-hero-art" aria-hidden="true"><span className="gl-art-orbit gl-art-orbit-one" /><span className="gl-art-orbit gl-art-orbit-two" /><span className="gl-art-core">✦</span></div></header>
+    <section className="gl-index" aria-labelledby="articles-heading"><div className="gl-section-heading"><div><p className="gh-eyebrow">THE JOURNAL</p><h2 id="articles-heading">Recent articles.</h2><p>Open a story when you have time to think it through.</p></div></div>{data.posts.length ? <div className="gl-guide-grid gl-blog-grid">{data.posts.map((post, index) => <article key={post.id} className={index === 0 ? "gl-guide-card gl-feature-article" : "gl-guide-card"}><span className="gh-eyebrow">{formatDate(post.date)} · {post.readingMinutes} min read</span><h3><Link to="/blog/$slug" params={{ slug: post.slug }}>{post.title}</Link></h3><p>{post.excerpt}</p><Link to="/blog/$slug" params={{ slug: post.slug }} className="gl-idea-action">Read article <ArrowUpRight size={17} /></Link></article>)}</div> : <div className="gl-empty"><h3>No posts published yet.</h3><p>Explore the guides while the journal fills up.</p><Link to="/startup-guides">Read the guides</Link></div>}</section>
+    <aside className="gl-bottom-note"><div><p className="gh-eyebrow">KEEP EXPLORING</p><h2>Find a practical direction.</h2><p>The category map is a good place to turn a broad question into a focused path.</p></div><Link to="/browse" className="gh-button gh-button-primary">Explore ideas <ArrowUpRight size={17} /></Link></aside>
+  </div></GlassShell>;
 }
