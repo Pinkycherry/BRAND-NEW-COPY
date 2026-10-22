@@ -44,6 +44,7 @@ function ServicesPage() {
     <Section heading="Validate with the model you choose">
       <p>Every completed blueprint has a Validate button. It prepares a structured research prompt and lets you choose Claude, Perplexity, ChatGPT or Grok. The chosen provider opens with the prompt; its own sign-in or usage rules may apply.</p>
       <p>BBI does not generate or sell an automatic validation report on this demo. Treat an AI answer as a starting hypothesis: check local demand, speak to potential buyers and test the numbers yourself.</p>
+      <p><Link to="/startup-idea-validation">Work through the startup idea validation field guide</Link> to turn those questions into buyer conversations, a reversible offer and an evidence-based next decision.</p>
       <Bullets items={["Name the exact buyer and the problem they already pay to solve.", "Ask for opposing evidence and the conditions that would make the idea fail.", "Cross-check any market figure against a source you can open.", "Try one small customer test before committing to a full launch."]} />
     </Section>
     <Section heading="Make the numbers yours">
