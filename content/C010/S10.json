@@ -1,0 +1,508 @@
+{
+  "subcategory": {
+    "code": "C010-S10",
+    "intro": "Market Day Service starts with a nearby problem that people already spend time solving. A weekly or periodic market concentrates sellers and buyers for a short, busy window. Practical support can help vendors set up, handle goods and close down without losing trading time. The useful first question is where a resident currently goes, what the trip or wait costs in time, and whether a small operator can do one task reliably. Walk the intended service area and speak to potential customers before buying equipment. Ask for the last occasion when they needed help, how they found a provider, and what made the experience difficult. A booking that someone is willing to pay for teaches more than a general expression of interest. Keep the opening menu narrow enough to finish, price and explain without confusion. Travel, idle time, supplies, cleaning and returns all consume capacity even when the visible task is short. Set a clear radius and appointment window, and record actual time from first message to final handover. Confirm access to a work area, the customer's instructions, payment responsibility and a practical cancellation rule before committing. Keep names, addresses and other personal details only as needed for the booking. Market rules, street access and sanitation vary by place. Get organiser approval for any shared-area operation and avoid handling regulated goods without the right training. Start with a few paid trials, then decide whether repeat work is frequent enough to support regular hours. Local demand may differ by housing density, transport, seasons and competing providers. A promise of convenience is only valuable when the customer can trust the result and knows what happens if something goes wrong.",
+    "how_to_choose": "Walk the market before selecting a service. Learn arrival rules, loading points, stall sizes, busiest hours and who grants permission for temporary work. Compare options by the number of paid bookings you can group within a short route, the tools you already know how to use, and the time a customer can realistically wait. Write down one included task and one excluded task for each option. Check access, hygiene, consent and any applicable local permission before selling. Use a small paid trial to measure travel, preparation, work and follow-up. Choose the service whose quality you can repeat without relying on a perfect day.",
+    "faq": [
+      {
+        "q": "Can I start market day service from home?",
+        "a": "Often the administration can begin at home, but the work site and any storage need to suit the particular service. Check local rules and get permission to use shared space before taking bookings."
+      },
+      {
+        "q": "How should I set the first service area?",
+        "a": "Begin with a compact route you can reach predictably. Measure travel at the hours customers actually want, then expand only when paid demand covers extra time and transport."
+      },
+      {
+        "q": "Should I offer every related service at launch?",
+        "a": "A short menu makes quality, timing and pricing easier to control. Add another task only after you have the necessary skill, equipment and evidence that customers will pay."
+      },
+      {
+        "q": "What should I confirm before an appointment?",
+        "a": "Agree on the task, address or venue, access, time window, complete price and payment contact. Explain cancellation and any limits so a small misunderstanding does not become an unpaid visit."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C010-S10-I01",
+      "slug": "market-stall-setup-helper",
+      "title": "Market Stall Setup Helper",
+      "hook": "A short setup window creates demand for reliable extra hands. You offer scheduled stall setup and pack-down help.",
+      "summary": "You make scheduled stall setup and pack-down help available for sellers arriving early with portable stalls. You agree on a stall layout, carry approved items from the loading point and assemble only equipment you know how to handle. A short setup window creates demand for reliable extra hands.",
+      "what_it_is": "When someone asks for scheduled stall setup and pack-down help, your day begins with the details of their request. You agree on a stall layout, carry approved items from the loading point and assemble only equipment you know how to handle. The customer sees the result of scheduled stall setup and pack-down help before you finish, which helps the service feel trustworthy. Gloves, trolley, basic assembly skill and organiser permission are needed. With market stall setup helper, a message about timing, price and what is included saves awkward questions at handover. You do not assemble unsafe structures or obstruct common aisles. Once scheduled stall setup and pack-down help is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving sellers arriving early with portable stalls. Vendors want their display ready before customers arrive. A short setup window creates demand for reliable extra hands. Someone who handled scheduled stall setup and pack-down help badly last time is likely to notice a careful handover. You can begin market stall setup helper with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives market stall setup helper a better start than a broad promise to everyone.",
+      "how_money_comes": "In this business, you charge per stall or timed block with separate pack-down and heavy-item terms. The scheduled stall setup and pack-down help fee also has to pay for your preparation and the part of the day nobody sees. With scheduled stall setup and pack-down help, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra scheduled stall setup and pack-down help request is a separate decision, so the customer knows what they are paying for. Repeat market stall setup helper bookings show whether the work pays. Tap Validate for current market stall setup helper prices in your area.",
+      "what_you_need": "Gloves, trolley, basic assembly skill and organiser permission are needed. For market stall setup helper, you need a way for people to book a clear slot and a safe place for equipment after work. Your first scheduled stall setup and pack-down help customers will also show where your skill stops. You do not assemble unsafe structures or obstruct common aisles.",
+      "first_30_days": [
+        "Speak with potential market stall setup helper customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse scheduled stall setup and pack-down help while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A missing part or unstable stand can delay trading and injure someone. You feel it immediately when a customer has arranged their day around scheduled stall setup and pack-down help. Travel for market stall setup helper, changing instructions and cancellations can use the time that looked like your margin. You do not assemble unsafe structures or obstruct common aisles. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which market stall setup helper depends. For market stall setup helper, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if vendors want their display ready before customers arrive and you enjoy the routine behind scheduled stall setup and pack-down help. Walk away if you cannot manage the risk that a missing part or unstable stand can delay trading and injure someone. With market stall setup helper, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For market stall setup helper, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not assemble unsafe structures or obstruct common aisles. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for scheduled stall setup and pack-down help first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try market stall setup helper in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of scheduled stall setup and pack-down help before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S10-I02",
+      "slug": "vendor-cart-loading-assistance",
+      "title": "Vendor Cart Loading Assistance",
+      "hook": "A seller may need short bursts of carrying help at opening and closing. You offer booked carton and cart movement.",
+      "summary": "You make booked carton and cart movement available for small traders moving cartons between vehicles and stalls. You confirm quantities and route, use a suitable trolley and obtain a handover count at each end. A seller may need short bursts of carrying help at opening and closing.",
+      "what_it_is": "When someone asks for booked carton and cart movement, your day begins with the details of their request. You confirm quantities and route, use a suitable trolley and obtain a handover count at each end. The customer sees the result of booked carton and cart movement before you finish, which helps the service feel trustworthy. A sturdy trolley, safe lifting practice, gloves and market access are required. With vendor cart loading assistance, a message about timing, price and what is included saves awkward questions at handover. You do not lift beyond safe capacity or leave goods unattended. Once booked carton and cart movement is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving small traders moving cartons between vehicles and stalls. Traders value a predictable arrival at the loading point. A seller may need short bursts of carrying help at opening and closing. Someone who handled booked carton and cart movement badly last time is likely to notice a careful handover. You can begin vendor cart loading assistance with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives vendor cart loading assistance a better start than a broad promise to everyone.",
+      "how_money_comes": "In this business, you charge per booked window with limits on load size and distance. The booked carton and cart movement fee also has to pay for your preparation and the part of the day nobody sees. With booked carton and cart movement, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra booked carton and cart movement request is a separate decision, so the customer knows what they are paying for. Repeat vendor cart loading assistance bookings show whether the work pays. Tap Validate for current vendor cart loading assistance prices in your area.",
+      "what_you_need": "A sturdy trolley, safe lifting practice, gloves and market access are required. For vendor cart loading assistance, you need a way for people to book a clear slot and a safe place for equipment after work. Your first booked carton and cart movement customers will also show where your skill stops. You do not lift beyond safe capacity or leave goods unattended.",
+      "first_30_days": [
+        "Speak with potential vendor cart loading assistance customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse booked carton and cart movement while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Heavy or fragile goods can exceed a casual helper's ability. You feel it immediately when a customer has arranged their day around booked carton and cart movement. Travel for vendor cart loading assistance, changing instructions and cancellations can use the time that looked like your margin. You do not lift beyond safe capacity or leave goods unattended. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which vendor cart loading assistance depends. For vendor cart loading assistance, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if traders value a predictable arrival at the loading point and you enjoy the routine behind booked carton and cart movement. Walk away if you cannot manage the risk that heavy or fragile goods can exceed a casual helper's ability. With vendor cart loading assistance, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For vendor cart loading assistance, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not lift beyond safe capacity or leave goods unattended. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for booked carton and cart movement first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try vendor cart loading assistance in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of booked carton and cart movement before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S10-I03",
+      "slug": "market-morning-change-run",
+      "title": "Market Morning Change Run",
+      "hook": "A seller may struggle to leave the counter during early trading. You offer prearranged change delivery to stalls.",
+      "summary": "You make prearranged change delivery to stalls available for stallholders needing small notes and coins for trading. You take authorised requests, exchange exact amounts in a controlled handover and keep a transaction record. A seller may struggle to leave the counter during early trading.",
+      "what_it_is": "When someone asks for prearranged change delivery to stalls, your day begins with the details of their request. You take authorised requests, exchange exact amounts in a controlled handover and keep a transaction record. The customer sees the result of prearranged change delivery to stalls before you finish, which helps the service feel trustworthy. Secure cash handling, counting discipline, identity checks and a compact route are needed. With market morning change run, a message about timing, price and what is included saves awkward questions at handover. You do not handle large values or offer unlicensed financial services. Once prearranged change delivery to stalls is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving stallholders needing small notes and coins for trading. Vendors need exact change and a reliable receipt. A seller may struggle to leave the counter during early trading. Someone who handled prearranged change delivery to stalls badly last time is likely to notice a careful handover. You can begin market morning change run with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives market morning change run a better start than a broad promise to everyone.",
+      "how_money_comes": "In this business, you charge a disclosed service fee, never an unclear deduction from the exchange. The prearranged change delivery to stalls fee also has to pay for your preparation and the part of the day nobody sees. With prearranged change delivery to stalls, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra prearranged change delivery to stalls request is a separate decision, so the customer knows what they are paying for. Repeat market morning change run bookings show whether the work pays. Tap Validate for current market morning change run prices in your area.",
+      "what_you_need": "Secure cash handling, counting discipline, identity checks and a compact route are needed. For market morning change run, you need a way for people to book a clear slot and a safe place for equipment after work. Your first prearranged change delivery to stalls customers will also show where your skill stops. You do not handle large values or offer unlicensed financial services.",
+      "first_30_days": [
+        "Speak with potential market morning change run customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse prearranged change delivery to stalls while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Loss, counterfeit notes and personal safety risks are material. You feel it immediately when a customer has arranged their day around prearranged change delivery to stalls. Travel for market morning change run, changing instructions and cancellations can use the time that looked like your margin. You do not handle large values or offer unlicensed financial services. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which market morning change run depends. For market morning change run, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if vendors need exact change and a reliable receipt and you enjoy the routine behind prearranged change delivery to stalls. Walk away if you cannot manage the risk that loss, counterfeit notes and personal safety risks are material. With market morning change run, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For market morning change run, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not handle large values or offer unlicensed financial services. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for prearranged change delivery to stalls first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try market morning change run in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of prearranged change delivery to stalls before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S10-I04",
+      "slug": "stall-display-refresh-service",
+      "title": "Stall Display Refresh Service",
+      "hook": "A tidy table can help a busy seller keep serving buyers. You offer scheduled product display tidying.",
+      "summary": "You make scheduled product display tidying available for vendors whose tables become untidy during a long market day. You follow the seller's approved layout, refill from labelled stock and leave pricing decisions to the owner. A tidy table can help a busy seller keep serving buyers.",
+      "what_it_is": "When someone asks for scheduled product display tidying, your day begins with the details of their request. You follow the seller's approved layout, refill from labelled stock and leave pricing decisions to the owner. The customer sees the result of scheduled product display tidying before you finish, which helps the service feel trustworthy. A layout checklist, clean hands, simple display supplies and seller trust are needed. With stall display refresh service, a message about timing, price and what is included saves awkward questions at handover. You do not handle stock or cash without explicit instructions. Once scheduled product display tidying is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving vendors whose tables become untidy during a long market day. Sellers want a neat stand without leaving the till. A tidy table can help a busy seller keep serving buyers. Someone who handled scheduled product display tidying badly last time is likely to notice a careful handover. You can begin stall display refresh service with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives stall display refresh service a better start than a broad promise to everyone.",
+      "how_money_comes": "In this business, you charge for a short scheduled visit or a block of agreed visits. The scheduled product display tidying fee also has to pay for your preparation and the part of the day nobody sees. With scheduled product display tidying, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra scheduled product display tidying request is a separate decision, so the customer knows what they are paying for. Repeat stall display refresh service bookings show whether the work pays. Tap Validate for current stall display refresh service prices in your area.",
+      "what_you_need": "A layout checklist, clean hands, simple display supplies and seller trust are needed. For stall display refresh service, you need a way for people to book a clear slot and a safe place for equipment after work. Your first scheduled product display tidying customers will also show where your skill stops. You do not handle stock or cash without explicit instructions.",
+      "first_30_days": [
+        "Speak with potential stall display refresh service customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse scheduled product display tidying while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Mixing prices or stock can cause customer disputes. You feel it immediately when a customer has arranged their day around scheduled product display tidying. Travel for stall display refresh service, changing instructions and cancellations can use the time that looked like your margin. You do not handle stock or cash without explicit instructions. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which stall display refresh service depends. For stall display refresh service, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if sellers want a neat stand without leaving the till and you enjoy the routine behind scheduled product display tidying. Walk away if you cannot manage the risk that mixing prices or stock can cause customer disputes. With stall display refresh service, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For stall display refresh service, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not handle stock or cash without explicit instructions. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for scheduled product display tidying first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try stall display refresh service in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of scheduled product display tidying before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S10-I05",
+      "slug": "market-queue-order-assistant",
+      "title": "Market Queue Order Assistant",
+      "hook": "A rush can overwhelm one stallholder's ability to take orders and serve. You offer customer queue guidance and order recording.",
+      "summary": "You make customer queue guidance and order recording available for popular food or produce stalls facing a rush. You explain the seller's current menu or stock, record simple orders and guide customers to the correct pickup point. A rush can overwhelm one stallholder's ability to take orders and serve.",
+      "what_it_is": "When someone asks for customer queue guidance and order recording, your day begins with the details of their request. You explain the seller's current menu or stock, record simple orders and guide customers to the correct pickup point. The customer sees the result of customer queue guidance and order recording before you finish, which helps the service feel trustworthy. Clear speech, order slips, hygiene boundaries and a seller briefing matter. With market queue order assistant, a message about timing, price and what is included saves awkward questions at handover. You do not handle food or payments unless separately trained and authorised. Once customer queue guidance and order recording is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving popular food or produce stalls facing a rush. Vendors need faster ordering without losing control of the sale. A rush can overwhelm one stallholder's ability to take orders and serve. Someone who handled customer queue guidance and order recording badly last time is likely to notice a careful handover. You can begin market queue order assistant with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives market queue order assistant a better start than a broad promise to everyone.",
+      "how_money_comes": "In this business, you charge by staffed peak hours with a clear break and finish. The customer queue guidance and order recording fee also has to pay for your preparation and the part of the day nobody sees. With customer queue guidance and order recording, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra customer queue guidance and order recording request is a separate decision, so the customer knows what they are paying for. Repeat market queue order assistant bookings show whether the work pays. Tap Validate for current market queue order assistant prices in your area.",
+      "what_you_need": "Clear speech, order slips, hygiene boundaries and a seller briefing matter. For market queue order assistant, you need a way for people to book a clear slot and a safe place for equipment after work. Your first customer queue guidance and order recording customers will also show where your skill stops. You do not handle food or payments unless separately trained and authorised.",
+      "first_30_days": [
+        "Speak with potential market queue order assistant customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse customer queue guidance and order recording while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A wrong order or unfair queue can create frustration quickly. You feel it immediately when a customer has arranged their day around customer queue guidance and order recording. Travel for market queue order assistant, changing instructions and cancellations can use the time that looked like your margin. You do not handle food or payments unless separately trained and authorised. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which market queue order assistant depends. For market queue order assistant, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if vendors need faster ordering without losing control of the sale and you enjoy the routine behind customer queue guidance and order recording. Walk away if you cannot manage the risk that a wrong order or unfair queue can create frustration quickly. With market queue order assistant, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For market queue order assistant, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not handle food or payments unless separately trained and authorised. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for customer queue guidance and order recording first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try market queue order assistant in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of customer queue guidance and order recording before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S10-I06",
+      "slug": "market-packaging-supply-drop",
+      "title": "Market Packaging Supply Drop",
+      "hook": "A forgotten supply can interrupt sales when a stall cannot be left. You offer preordered packaging supply delivery.",
+      "summary": "You make preordered packaging supply delivery available for vendors running short of bags and packing materials. You collect orders before market day, buy agreed materials and deliver labelled bundles during setup. A forgotten supply can interrupt sales when a stall cannot be left.",
+      "what_it_is": "When someone asks for preordered packaging supply delivery, your day begins with the details of their request. You collect orders before market day, buy agreed materials and deliver labelled bundles during setup. The customer sees the result of preordered packaging supply delivery before you finish, which helps the service feel trustworthy. Supplier relationships, inventory counts, clean storage and a delivery route are needed. With market packaging supply drop, a message about timing, price and what is included saves awkward questions at handover. You confirm any market restrictions on packaging materials before stocking them. Once preordered packaging supply delivery is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving vendors running short of bags and packing materials. Sellers value exact materials at the promised hour. A forgotten supply can interrupt sales when a stall cannot be left. Someone who handled preordered packaging supply delivery badly last time is likely to notice a careful handover. You can begin market packaging supply drop with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives market packaging supply drop a better start than a broad promise to everyone.",
+      "how_money_comes": "In this business, you charge a transparent materials price and delivery fee, with minimum order stated. The preordered packaging supply delivery fee also has to pay for your preparation and the part of the day nobody sees. With preordered packaging supply delivery, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra preordered packaging supply delivery request is a separate decision, so the customer knows what they are paying for. Repeat market packaging supply drop bookings show whether the work pays. Tap Validate for current market packaging supply drop prices in your area.",
+      "what_you_need": "Supplier relationships, inventory counts, clean storage and a delivery route are needed. For market packaging supply drop, you need a way for people to book a clear slot and a safe place for equipment after work. Your first preordered packaging supply delivery customers will also show where your skill stops. In this business, you confirm any market restrictions on packaging materials before stocking them.",
+      "first_30_days": [
+        "Speak with potential market packaging supply drop customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse preordered packaging supply delivery while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Unsold stock or unsuitable packaging can tie up cash. You feel it immediately when a customer has arranged their day around preordered packaging supply delivery. Travel for market packaging supply drop, changing instructions and cancellations can use the time that looked like your margin. In this business, you confirm any market restrictions on packaging materials before stocking them. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which market packaging supply drop depends. For market packaging supply drop, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if sellers value exact materials at the promised hour and you enjoy the routine behind preordered packaging supply delivery. Walk away if you cannot manage the risk that unsold stock or unsuitable packaging can tie up cash. With market packaging supply drop, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For market packaging supply drop, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that confirm any market restrictions on packaging materials before stocking them. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for preordered packaging supply delivery first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try market packaging supply drop in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of preordered packaging supply delivery before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S10-I07",
+      "slug": "market-end-waste-sort-support",
+      "title": "Market End Waste Sort Support",
+      "hook": "A clean exit can help traders meet organiser expectations. You offer market close waste sorting and authorised transfer.",
+      "summary": "You make market close waste sorting and authorised transfer available for stallholders needing to clear their allotted area. You separate agreed waste streams, use the market's designated points and return reusable items to each seller. A clean exit can help traders meet organiser expectations.",
+      "what_it_is": "When someone asks for market close waste sorting and authorised transfer, your day begins with the details of their request. You separate agreed waste streams, use the market's designated points and return reusable items to each seller. The customer sees the result of market close waste sorting and authorised transfer before you finish, which helps the service feel trustworthy. Gloves, bags, trolley, waste rules and access to approved collection points matter. With market end waste sort support, a message about timing, price and what is included saves awkward questions at handover. You do not dump waste or handle hazardous material without proper arrangements. Once market close waste sorting and authorised transfer is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving stallholders needing to clear their allotted area. Vendors need their stall space cleared before leaving. A clean exit can help traders meet organiser expectations. Someone who handled market close waste sorting and authorised transfer badly last time is likely to notice a careful handover. You can begin market end waste sort support with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives market end waste sort support a better start than a broad promise to everyone.",
+      "how_money_comes": "In this business, you charge per stall or timed close-down block, including any authorised disposal cost. The market close waste sorting and authorised transfer fee also has to pay for your preparation and the part of the day nobody sees. With market close waste sorting and authorised transfer, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra market close waste sorting and authorised transfer request is a separate decision, so the customer knows what they are paying for. Repeat market end waste sort support bookings show whether the work pays. Tap Validate for current market end waste sort support prices in your area.",
+      "what_you_need": "Gloves, bags, trolley, waste rules and access to approved collection points matter. For market end waste sort support, you need a way for people to book a clear slot and a safe place for equipment after work. Your first market close waste sorting and authorised transfer customers will also show where your skill stops. You do not dump waste or handle hazardous material without proper arrangements.",
+      "first_30_days": [
+        "Speak with potential market end waste sort support customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse market close waste sorting and authorised transfer while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Sharp, spoiled or hazardous materials require special handling. You feel it immediately when a customer has arranged their day around market close waste sorting and authorised transfer. Travel for market end waste sort support, changing instructions and cancellations can use the time that looked like your margin. You do not dump waste or handle hazardous material without proper arrangements. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which market end waste sort support depends. For market end waste sort support, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if vendors need their stall space cleared before leaving and you enjoy the routine behind market close waste sorting and authorised transfer. Walk away if you cannot manage the risk that sharp, spoiled or hazardous materials require special handling. With market end waste sort support, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For market end waste sort support, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not dump waste or handle hazardous material without proper arrangements. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for market close waste sorting and authorised transfer first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try market end waste sort support in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of market close waste sorting and authorised transfer before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S10-I08",
+      "slug": "produce-crate-return-round",
+      "title": "Produce Crate Return Round",
+      "hook": "Reusable packaging can accumulate behind a busy produce stall. You offer labelled crate pickup and return.",
+      "summary": "You make labelled crate pickup and return available for produce sellers with reusable crates to collect and return. You count and label each seller's crates, move them to an agreed holding point and return or deliver them on a set route. Reusable packaging can accumulate behind a busy produce stall.",
+      "what_it_is": "When someone asks for labelled crate pickup and return, your day begins with the details of their request. You count and label each seller's crates, move them to an agreed holding point and return or deliver them on a set route. The customer sees the result of labelled crate pickup and return before you finish, which helps the service feel trustworthy. Trolley, crate labels, storage permission and count sheets are needed. With produce crate return round, a message about timing, price and what is included saves awkward questions at handover. You do not remove another seller's crates without consent. Once labelled crate pickup and return is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving produce sellers with reusable crates to collect and return. Sellers need an accountable count at each handover. Reusable packaging can accumulate behind a busy produce stall. Someone who handled labelled crate pickup and return badly last time is likely to notice a careful handover. You can begin produce crate return round with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives produce crate return round a better start than a broad promise to everyone.",
+      "how_money_comes": "In this business, you charge by crate band or route block, with loss responsibility in writing. The labelled crate pickup and return fee also has to pay for your preparation and the part of the day nobody sees. With labelled crate pickup and return, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra labelled crate pickup and return request is a separate decision, so the customer knows what they are paying for. Repeat produce crate return round bookings show whether the work pays. Tap Validate for current produce crate return round prices in your area.",
+      "what_you_need": "Trolley, crate labels, storage permission and count sheets are needed. For produce crate return round, you need a way for people to book a clear slot and a safe place for equipment after work. Your first labelled crate pickup and return customers will also show where your skill stops. You do not remove another seller's crates without consent.",
+      "first_30_days": [
+        "Speak with potential produce crate return round customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse labelled crate pickup and return while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Similar crates can be mixed up or damaged in transit. You feel it immediately when a customer has arranged their day around labelled crate pickup and return. Travel for produce crate return round, changing instructions and cancellations can use the time that looked like your margin. You do not remove another seller's crates without consent. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which produce crate return round depends. For produce crate return round, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if sellers need an accountable count at each handover and you enjoy the routine behind labelled crate pickup and return. Walk away if you cannot manage the risk that similar crates can be mixed up or damaged in transit. With produce crate return round, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For produce crate return round, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not remove another seller's crates without consent. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for labelled crate pickup and return first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try produce crate return round in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of labelled crate pickup and return before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S10-I09",
+      "slug": "market-day-child-free-shopping-porter",
+      "title": "Market Shopping Bag Porter",
+      "hook": "Older shoppers or people buying bulky items may value help to the exit. You offer short-distance shopping bag porter help.",
+      "summary": "You make short-distance shopping bag porter help available for shoppers carrying purchases across a large market. You agree on the destination and bag count, carry purchases alongside the customer and hand them over directly. Older shoppers or people buying bulky items may value help to the exit.",
+      "what_it_is": "When someone asks for short-distance shopping bag porter help, your day begins with the details of their request. You agree on the destination and bag count, carry purchases alongside the customer and hand them over directly. The customer sees the result of short-distance shopping bag porter help before you finish, which helps the service feel trustworthy. A trolley, safe handling, visible identification and organiser permission are useful. With market shopping bag porter, a message about timing, price and what is included saves awkward questions at handover. You do not take custody of children or carry goods you cannot safely manage. Once short-distance shopping bag porter help is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving shoppers carrying purchases across a large market. Shoppers need a transparent price and a trustworthy handover. Older shoppers or people buying bulky items may value help to the exit. Someone who handled short-distance shopping bag porter help badly last time is likely to notice a careful handover. You can begin market shopping bag porter with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives market shopping bag porter a better start than a broad promise to everyone.",
+      "how_money_comes": "In this business, you charge a clearly posted fee by trip or distance before carrying. The short-distance shopping bag porter help fee also has to pay for your preparation and the part of the day nobody sees. With short-distance shopping bag porter help, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra short-distance shopping bag porter help request is a separate decision, so the customer knows what they are paying for. Repeat market shopping bag porter bookings show whether the work pays. Tap Validate for current market shopping bag porter prices in your area.",
+      "what_you_need": "A trolley, safe handling, visible identification and organiser permission are useful. For market shopping bag porter, you need a way for people to book a clear slot and a safe place for equipment after work. Your first short-distance shopping bag porter help customers will also show where your skill stops. You do not take custody of children or carry goods you cannot safely manage.",
+      "first_30_days": [
+        "Speak with potential market shopping bag porter customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse short-distance shopping bag porter help while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Unattended valuables or a disputed missing item can create a claim. You feel it immediately when a customer has arranged their day around short-distance shopping bag porter help. Travel for market shopping bag porter, changing instructions and cancellations can use the time that looked like your margin. You do not take custody of children or carry goods you cannot safely manage. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which market shopping bag porter depends. For market shopping bag porter, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if shoppers need a transparent price and a trustworthy handover and you enjoy the routine behind short-distance shopping bag porter help. Walk away if you cannot manage the risk that unattended valuables or a disputed missing item can create a claim. With market shopping bag porter, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For market shopping bag porter, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not take custody of children or carry goods you cannot safely manage. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for short-distance shopping bag porter help first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try market shopping bag porter in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of short-distance shopping bag porter help before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "senior_citizen",
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S10-I10",
+      "slug": "rain-cover-stall-check-round",
+      "title": "Rain Cover Stall Check Round",
+      "hook": "An outdoor market can shift quickly from sun to rain. You offer prearranged stall cover checks and securing.",
+      "summary": "You make prearranged stall cover checks and securing available for outdoor sellers worried about sudden rain. You inspect approved covers before opening, note weak fixings and return during a weather change to help secure them. An outdoor market can shift quickly from sun to rain.",
+      "what_it_is": "When someone asks for prearranged stall cover checks and securing, your day begins with the details of their request. You inspect approved covers before opening, note weak fixings and return during a weather change to help secure them. The customer sees the result of prearranged stall cover checks and securing before you finish, which helps the service feel trustworthy. Weather-safe covers, ties, basic setup skill and organiser permission are needed. With rain cover stall check round, a message about timing, price and what is included saves awkward questions at handover. You do not climb unstable frames or promise protection against severe weather. Once prearranged stall cover checks and securing is done, you leave the item or space ready for the customer's next use.",
+      "who_pays_you": "You are serving outdoor sellers worried about sudden rain. Vendors want a practical response while they protect stock. An outdoor market can shift quickly from sun to rain. Someone who handled prearranged stall cover checks and securing badly last time is likely to notice a careful handover. You can begin rain cover stall check round with people close enough to reach reliably, listen to what they disliked about the old option and earn their trust through one paid job. That gives rain cover stall check round a better start than a broad promise to everyone.",
+      "how_money_comes": "In this business, you charge for a preparation visit and a defined standby window, not an unlimited weather guarantee. The prearranged stall cover checks and securing fee also has to pay for your preparation and the part of the day nobody sees. With prearranged stall cover checks and securing, the cost of materials, travel or a wasted slot can change what remains in your hand. An extra prearranged stall cover checks and securing request is a separate decision, so the customer knows what they are paying for. Repeat rain cover stall check round bookings show whether the work pays. Tap Validate for current rain cover stall check round prices in your area.",
+      "what_you_need": "Weather-safe covers, ties, basic setup skill and organiser permission are needed. For rain cover stall check round, you need a way for people to book a clear slot and a safe place for equipment after work. Your first prearranged stall cover checks and securing customers will also show where your skill stops. You do not climb unstable frames or promise protection against severe weather.",
+      "first_30_days": [
+        "Speak with potential rain cover stall check round customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse prearranged stall cover checks and securing while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "High winds or lightning can make the market unsafe for workers. You feel it immediately when a customer has arranged their day around prearranged stall cover checks and securing. Travel for rain cover stall check round, changing instructions and cancellations can use the time that looked like your margin. You do not climb unstable frames or promise protection against severe weather. A customer may be disappointed when you say no to unsuitable work, but a clear boundary protects the trust on which rain cover stall check round depends. For rain cover stall check round, that is better than finishing a job you cannot stand behind.",
+      "verdict": "Build this if vendors want a practical response while they protect stock and you enjoy the routine behind prearranged stall cover checks and securing. Walk away if you cannot manage the risk that high winds or lightning can make the market unsafe for workers. With rain cover stall check round, the whole visit must still earn after preparation and travel; the first paid bookings will tell you honestly.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For rain cover stall check round, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not climb unstable frames or promise protection against severe weather. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for prearranged stall cover checks and securing first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try rain cover stall check round in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of prearranged stall cover checks and securing before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    }
+  ]
+}
