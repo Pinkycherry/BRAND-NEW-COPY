@@ -155,3 +155,46 @@
 .glass-home .gl-tool-card .gl-idea-action { margin-top:auto; padding-top:1rem; }
 @media(max-width:900px) { .glass-home .gl-tool-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }.glass-home .gl-idea-layout { grid-template-columns:1fr; }.glass-home .gl-idea-sidebar { position:static; grid-row:1; grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:680px) { .glass-home .gl-idea-hero { grid-template-columns:1fr; gap:1rem; padding:2rem 1.3rem; border-radius:27px; }.glass-home .gl-idea-hero .gl-hero-art { width:180px; margin:auto; }.glass-home .gl-idea-layout { margin-top:1.5rem; gap:1rem; }.glass-home .gl-idea-sidebar { grid-template-columns:1fr; }.glass-home .gl-tool-grid { grid-template-columns:1fr; }.glass-home .gl-tool-card { min-height:240px; } }
+
+/* Calculator detail and search */
+.glass-home .gl-calculator-hero { padding:3.5rem clamp(1.6rem,5vw,4rem); border:1px solid #fff; border-radius:34px; background:radial-gradient(circle at 88% 22%,#dcd5ff,transparent 35%),linear-gradient(120deg,#fff,#eef3ff); }
+.glass-home .gl-calculator-hero h1 { margin:.8rem 0 1rem; font-size:clamp(2.8rem,5vw,5rem); line-height:1.06; letter-spacing:-.06em; }
+.glass-home .gl-calculator-hero h1 em { font-style:normal; background:linear-gradient(110deg,#765edf,#79abe8); background-clip:text; color:transparent; }
+.glass-home .gl-calculator-hero > p:last-child { max-width:710px; color:var(--gh-muted); font-size:1.08rem; line-height:1.7; }
+.glass-home .gl-calculator-layout { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(300px,.9fr); align-items:start; gap:1rem; margin-top:1.5rem; }
+.glass-home .gl-calculator-panel { min-width:0; padding:2rem; border:1px solid #fff; border-radius:25px; background:#ffffffc4; box-shadow:0 10px 30px #4e4b760e; }
+.glass-home .gl-panel-head { display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+.glass-home .gl-calculator-panel h2 { margin:.4rem 0; font-size:1.6rem; letter-spacing:-.04em; }
+.glass-home .gl-panel-head button { display:flex; align-items:center; gap:.4rem; min-height:44px; padding:.5rem .8rem; border:1px solid #dcd9ef; border-radius:12px; background:#fff; color:#6155a4; font-size:.8rem; font-weight:750; }
+.glass-home .gl-panel-help, .glass-home .gl-calculator-results > p:not(.gh-eyebrow) { color:var(--gh-muted); font-size:.87rem; line-height:1.7; }
+.glass-home .gl-field-groups { display:grid; gap:1.5rem; margin-top:1.5rem; }
+.glass-home .gl-field-groups fieldset { min-width:0; margin:0; padding:0; border:0; }
+.glass-home .gl-field-groups legend { margin-bottom:.9rem; color:#6555b5; font-size:.75rem; font-weight:800; letter-spacing:.11em; text-transform:uppercase; }
+.glass-home .gl-field-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+.glass-home .gl-field label { display:block; margin-bottom:.5rem; font-size:.86rem; font-weight:750; }
+.glass-home .gl-field label span { color:var(--gh-muted); font-weight:450; }
+.glass-home .gl-field-box { display:flex; align-items:center; gap:.4rem; min-height:49px; padding:0 .8rem; border:1px solid #dcdced; border-radius:12px; background:#fff; }
+.glass-home .gl-field-box:focus-within { border-color:#7969d9; box-shadow:0 0 0 3px #a9a0f449; }
+.glass-home .gl-field-box input { width:100%; min-width:0; border:0; outline:0; background:transparent; color:var(--gh-ink); font-size:1rem; font-variant-numeric:tabular-nums; }
+.glass-home .gl-field > p { margin:.5rem 0 0; color:var(--gh-muted); font-size:.75rem; line-height:1.55; }
+.glass-home .gl-field .gl-error-text { color:#a5264b; font-weight:700; }
+.glass-home .gl-calculator-results { position:sticky; top:110px; }
+.glass-home .gl-calculator-results ol, .glass-home .gl-calculator-results ul { list-style:none; margin:1rem 0; padding:0; }
+.glass-home .gl-calculator-results li { padding:1rem 0; border-bottom:1px solid #ebe9f4; }
+.glass-home .gl-calculator-results li > span { display:block; color:#655e88; font-size:.73rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
+.glass-home .gl-calculator-results li strong { display:block; margin:.3rem 0; color:#272840; font-size:1.45rem; line-height:1.2; }
+.glass-home .gl-calculator-results li.gl-result-primary strong { color:#6854c9; font-size:2rem; }
+.glass-home .gl-calculator-results li p { margin:.4rem 0; color:var(--gh-muted); font-size:.8rem; line-height:1.55; }
+.glass-home .gl-calculator-results .gl-results-note { padding-top:.8rem; }
+.glass-home .gl-more-tools { margin-top:1rem; }
+.glass-home .gl-more-tools summary { display:inline-flex; min-height:44px; align-items:center; padding:.6rem 1rem; border:1px solid #ded9f0; border-radius:12px; background:#fff; color:#6150b6; font-weight:750; cursor:pointer; }
+.glass-home .gl-search-form { display:flex; gap:.8rem; margin:2rem 0; }
+.glass-home .gl-search-form .gh-button { border:0; }
+.glass-home .gl-search-results { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; list-style:none; padding:0; margin:1.3rem 0; }
+.glass-home .gl-search-results li a { display:grid; gap:.6rem; align-content:start; min-height:155px; padding:1.25rem; border:1px solid #fff; border-radius:19px; background:#ffffffc4; }
+.glass-home .gl-search-results li a:hover { border-color:#c9bfea; }
+.glass-home .gl-search-results strong { font-size:1.05rem; line-height:1.3; }
+.glass-home .gl-search-results .gl-idea-action { margin-top:auto; }
+.glass-home .gl-result-count { color:var(--gh-muted); font-size:.9rem; }
+@media(max-width:850px) { .glass-home .gl-calculator-layout { grid-template-columns:1fr; }.glass-home .gl-calculator-results { position:static; }.glass-home .gl-search-results { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:680px) { .glass-home .gl-calculator-hero { padding:2.2rem 1.35rem; border-radius:27px; }.glass-home .gl-calculator-panel { padding:1.35rem; }.glass-home .gl-field-grid, .glass-home .gl-search-results { grid-template-columns:1fr; }.glass-home .gl-search-form { flex-direction:column; }.glass-home .gl-search-form .gh-button { justify-content:center; } }
