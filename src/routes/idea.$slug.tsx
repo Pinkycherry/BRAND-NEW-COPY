@@ -1,25 +1,19 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
+import { useState } from "react";
+import { ArrowUpRight, Check, Copy } from "lucide-react";
 
-import { SiteShell, Breadcrumbs } from "@/components/site-shell";
+import { GlassShell } from "@/components/glass-shell";
 import { TAXONOMY } from "@/data/taxonomy";
-import {
-  BAND_LABEL,
-  MODE_LABEL,
-  SKILL_LABEL,
-  TIME_LABEL,
-  getIdea,
-  type Idea,
-} from "@/lib/ideas.functions";
+import { BAND_LABEL, MODE_LABEL, SKILL_LABEL, TIME_LABEL, getIdea, type Idea } from "@/lib/ideas.functions";
+import "@/components/glass-library.css";
 
-const ideaQuery = (slug: string) =>
-  queryOptions({
-    queryKey: ["idea", slug],
-    queryFn: () => getIdea({ data: { slug } }),
-    staleTime: 60_000,
-  });
+const ideaQuery = (slug: string) => queryOptions({
+  queryKey: ["idea", slug],
+  queryFn: () => getIdea({ data: { slug } }),
+  staleTime: 60_000,
+});
 
-/** Category and subcategory for an idea, from the fixed taxonomy. */
 function placeOf(idea: Idea) {
   const category = TAXONOMY[Number(idea.category_code.slice(1)) - 1];
   const index = Number(idea.subcategory_code.slice(6)) - 1;
@@ -37,159 +31,53 @@ export const Route = createFileRoute("/idea/$slug")({
     meta: [
       { title: `${loaderData?.title ?? "Business idea"} | BusinessIdea.io` },
       { name: "description", content: loaderData?.summary ?? "" },
-      // Idea pages stay out of search results until launch decides otherwise.
       { name: "robots", content: "noindex,follow" },
     ],
   }),
   component: IdeaPage,
-  notFoundComponent: () => (
-    <SiteShell tone="instrument">
-      <p className="mx-auto max-w-3xl px-4 py-24">We don't have that idea.</p>
-    </SiteShell>
-  ),
-  errorComponent: () => (
-    <SiteShell tone="instrument">
-      <p className="mx-auto max-w-3xl px-4 py-24">Couldn't load this idea. Try refreshing.</p>
-    </SiteShell>
-  ),
+  notFoundComponent: () => <GlassShell><div className="gl-page gl-message"><h1>We do not have that published idea.</h1><Link to="/browse">Explore the library</Link></div></GlassShell>,
+  errorComponent: () => <GlassShell><div className="gl-page gl-message"><h1>This idea could not load.</h1><p>Please try again shortly.</p><Link to="/browse">Explore the library</Link></div></GlassShell>,
 });
 
-function Section({
-  id,
-  title,
-  children,
-}: {
-  id: string;
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section aria-labelledby={id} className="space-y-3">
-      <h2 id={id} className="text-xl font-semibold tracking-tight">
-        {title}
-      </h2>
-      {children}
-    </section>
-  );
-}
-
-function Para({ text }: { text: string }) {
-  return <p className="text-base leading-relaxed text-muted-foreground">{text}</p>;
+function IdeaSection({ id, eyebrow, title, children }: { id: string; eyebrow: string; title: string; children: React.ReactNode }) {
+  return <section id={id} className="gl-idea-section" aria-labelledby={`${id}-title`}><p className="gh-eyebrow">{eyebrow}</p><h2 id={`${id}-title`}>{title}</h2>{children}</section>;
 }
 
 function IdeaPage() {
   const { slug } = Route.useParams();
   const { data: idea } = useSuspenseQuery(ideaQuery(slug));
+  const [copied, setCopied] = useState(false);
   if (!idea) return null;
   const where = placeOf(idea);
-  const tags = [
-    BAND_LABEL[idea.investment_band],
-    TIME_LABEL[idea.time_needed],
-    SKILL_LABEL[idea.skill_level],
-    MODE_LABEL[idea.work_mode],
-  ].filter(Boolean);
-
-  return (
-    <SiteShell tone="instrument">
-      <article className="mx-auto max-w-3xl space-y-10 px-4 py-12">
-        <div className="space-y-4">
-          {where && (
-            <Breadcrumbs
-              items={[
-                { label: "Home", to: "/" },
-                { label: "Browse", to: "/browse" },
-                {
-                  label: where.category.name,
-                  to: "/category/$categorySlug",
-                  params: { categorySlug: where.category.slug },
-                },
-                {
-                  label: where.subcategory.name,
-                  to: "/category/$categorySlug/$subcategorySlug",
-                  params: {
-                    categorySlug: where.category.slug,
-                    subcategorySlug: where.subcategory.slug,
-                  },
-                },
-                { label: idea.title },
-              ]}
-            />
-          )}
-          <h1 className="text-3xl font-bold tracking-tight">{idea.title}</h1>
-          <p className="text-lg leading-relaxed">{idea.hook}</p>
-          <ul className="flex flex-wrap gap-2">
-            {tags.map((t) => (
-              <li
-                key={t}
-                className="rounded-full border border-border/60 px-3 py-1 text-xs text-muted-foreground"
-              >
-                {t}
-              </li>
-            ))}
-          </ul>
-          <Para text={idea.summary} />
-        </div>
-
-        <Section id="what" title="What this business is">
-          <Para text={idea.what_it_is} />
-        </Section>
-        <Section id="who" title="Who pays you">
-          <Para text={idea.who_pays_you} />
-        </Section>
-        <Section id="money" title="How the money comes">
-          <Para text={idea.how_money_comes} />
-        </Section>
-        <Section id="need" title="What you need">
-          <Para text={idea.what_you_need} />
-        </Section>
-        {idea.first_30_days?.length > 0 && (
-          <Section id="first" title="Your first 30 days">
-            <ol className="list-decimal space-y-2 pl-5 text-base leading-relaxed text-muted-foreground">
-              {idea.first_30_days.map((step) => (
-                <li key={step}>{step}</li>
-              ))}
-            </ol>
-          </Section>
-        )}
-        <Section id="hurts" title="What will hurt in year one">
-          <Para text={idea.what_hurts} />
-        </Section>
-        <Section id="verdict" title="The straight verdict">
-          <p className="rounded-xl border border-border/60 p-4 text-base leading-relaxed">
-            {idea.verdict}
-          </p>
-        </Section>
-        {idea.faq?.length > 0 && (
-          <Section id="faq" title="Questions people ask">
-            <div className="space-y-4">
-              {idea.faq.map((f) => (
-                <div key={f.q}>
-                  <h3 className="font-semibold">{f.q}</h3>
-                  <p className="mt-1 text-base leading-relaxed text-muted-foreground">{f.a}</p>
-                </div>
-              ))}
-            </div>
-          </Section>
-        )}
-        <Section id="validate" title="Check today's numbers in your area">
-          <p className="text-sm text-muted-foreground">
-            Copy this question into any research assistant for current prices and rules near you.
-          </p>
-          <p className="rounded-xl border border-dashed border-border/70 p-4 text-sm leading-relaxed">
-            {idea.validate_prompt}
-          </p>
-        </Section>
-
-        {where && (
-          <Link
-            to="/category/$categorySlug/$subcategorySlug"
-            params={{ categorySlug: where.category.slug, subcategorySlug: where.subcategory.slug }}
-            className="mo-link t-eyebrow inline-block"
-          >
-            ← All {where.subcategory.name.replace(/ Business Ideas$/, "")} ideas
-          </Link>
-        )}
-      </article>
-    </SiteShell>
-  );
+  const tags = [BAND_LABEL[idea.investment_band], TIME_LABEL[idea.time_needed], SKILL_LABEL[idea.skill_level], MODE_LABEL[idea.work_mode]].filter(Boolean);
+  const sections = [
+    idea.what_it_is && { id: "what", label: "The idea" },
+    idea.who_pays_you && { id: "buyers", label: "Who pays" },
+    idea.how_money_comes && { id: "money", label: "How money comes" },
+    idea.what_you_need && { id: "needs", label: "What you need" },
+    idea.first_30_days?.length && { id: "first", label: "First 30 days" },
+    idea.what_hurts && { id: "risks", label: "The hard parts" },
+    idea.verdict && { id: "verdict", label: "Verdict" },
+    idea.faq?.length && { id: "faq", label: "Questions" },
+    idea.validate_prompt && { id: "validate", label: "Validate locally" },
+  ].filter((section): section is { id: string; label: string } => Boolean(section));
+  const share = async () => {
+    try { await navigator.clipboard.writeText(window.location.href); setCopied(true); window.setTimeout(() => setCopied(false), 2500); } catch { setCopied(false); }
+  };
+  return <GlassShell><div className="gl-page gl-idea-page">
+    <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/browse">Explore</Link>{where && <><span>/</span><Link to="/category/$categorySlug" params={{ categorySlug: where.category.slug }}>{where.category.short}</Link><span>/</span><Link to="/category/$categorySlug/$subcategorySlug" params={{ categorySlug: where.category.slug, subcategorySlug: where.subcategory.slug }}>{where.subcategory.name.replace(/ Business Ideas$/i, "")}</Link></>}<span>/</span><span>Idea</span></nav>
+    <header className="gl-idea-hero"><div><p className="gh-eyebrow">A PUBLISHED IDEA · {idea.code}</p><h1>{idea.title}</h1><p className="gl-idea-hook">{idea.hook}</p><ul className="gl-chips">{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul><p className="gl-idea-summary">{idea.summary}</p><div className="gl-idea-actions"><a href="#what" className="gh-button gh-button-primary">Read the blueprint <ArrowUpRight size={17} /></a><button type="button" className="gh-button gh-button-secondary" onClick={share}>{copied ? <Check size={17} /> : <Copy size={17} />}{copied ? "Link copied" : "Copy link"}</button></div></div><div className="gl-hero-art" aria-hidden="true"><span className="gl-art-orbit gl-art-orbit-one" /><span className="gl-art-orbit gl-art-orbit-two" /><span className="gl-art-core">✦</span></div></header>
+    <div className="gl-idea-layout"><article className="gl-idea-body">
+      {idea.what_it_is && <IdeaSection id="what" eyebrow="01 / THE IDEA" title="What this business is"><p>{idea.what_it_is}</p></IdeaSection>}
+      {idea.who_pays_you && <IdeaSection id="buyers" eyebrow="02 / CUSTOMER" title="Who pays you"><p>{idea.who_pays_you}</p></IdeaSection>}
+      {idea.how_money_comes && <IdeaSection id="money" eyebrow="03 / REVENUE" title="How the money comes"><p>{idea.how_money_comes}</p></IdeaSection>}
+      {idea.what_you_need && <IdeaSection id="needs" eyebrow="04 / SETUP" title="What you need"><p>{idea.what_you_need}</p></IdeaSection>}
+      {idea.first_30_days?.length > 0 && <IdeaSection id="first" eyebrow="05 / EARLY ACTION" title="Your first 30 days"><ol className="gl-steps">{idea.first_30_days.map((step, index) => <li key={index}><span>{String(index + 1).padStart(2, "0")}</span><p>{step}</p></li>)}</ol></IdeaSection>}
+      {idea.what_hurts && <IdeaSection id="risks" eyebrow="06 / REALITY CHECK" title="What can hurt in year one"><p>{idea.what_hurts}</p></IdeaSection>}
+      {idea.verdict && <IdeaSection id="verdict" eyebrow="07 / THE STRAIGHT VERDICT" title="Is this worth a closer look?"><p className="gl-verdict">{idea.verdict}</p></IdeaSection>}
+      {idea.faq?.length > 0 && <IdeaSection id="faq" eyebrow="08 / QUESTIONS" title="What people ask"><div className="gl-faq">{idea.faq.map((item) => <details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></IdeaSection>}
+      {idea.validate_prompt && <IdeaSection id="validate" eyebrow="09 / VALIDATE LOCALLY" title="Check today's facts before you start"><p>Prices, licensing and demand vary by place and time. Use this research question as a starting point, then confirm it with local sources and potential buyers.</p><blockquote>{idea.validate_prompt}</blockquote><Link to="/calculator" className="gl-inline-link">Test your own numbers <ArrowUpRight size={17} /></Link></IdeaSection>}
+      {where && <div className="gl-back-path"><p>Want to compare another direction?</p><Link to="/category/$categorySlug/$subcategorySlug" params={{ categorySlug: where.category.slug, subcategorySlug: where.subcategory.slug }}>See more in {where.subcategory.name.replace(/ Business Ideas$/i, "")} <ArrowUpRight size={17} /></Link></div>}
+    </article><aside className="gl-idea-sidebar"><div><p className="gh-eyebrow">ON THIS PAGE</p><nav aria-label="Idea sections">{sections.map((section) => <a key={section.id} href={`#${section.id}`}>{section.label}</a>)}</nav></div><div><p className="gh-eyebrow">PUT IT TO A TEST</p><p>Use the calculator with your own assumptions. The figures on this page are a starting frame, not a promise of returns.</p><Link to="/calculator">Open calculators <ArrowUpRight size={16} /></Link></div></aside></div>
+  </div></GlassShell>;
 }
