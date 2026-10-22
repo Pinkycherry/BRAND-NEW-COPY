@@ -7,6 +7,7 @@ import {
   BookOpen,
   Calculator,
   Compass,
+  X,
   Search,
   ShieldCheck,
   Sparkles,
@@ -14,6 +15,7 @@ import {
 
 import { catalogQuery } from "@/lib/catalog";
 import { TAXONOMY } from "@/data/taxonomy";
+import { categoryImage } from "@/config/category-imagery";
 import { GlassShell } from "@/components/glass-shell";
 
 export const Route = createFileRoute("/")({
@@ -159,6 +161,7 @@ function HomePage() {
             {featured.map((entry, index) => entry.category && (
               <Link key={entry.match} to="/category/$categorySlug" params={{ categorySlug: entry.category.slug }} className={"gh-category-card gh-category-" + index}>
                 <span className="gh-category-top"><span className="gh-category-symbol" aria-hidden="true">{entry.icon}</span><ArrowUpRight size={20} aria-hidden="true" /></span>
+                <span className="gh-category-image"><img src={categoryImage(entry.category.slug).src} alt={categoryImage(entry.category.slug).alt} width={1280} height={549} loading="lazy" /></span>
                 <span className="gh-category-title">{entry.category.short}</span>
                 <span className="gh-category-bottom">{entry.category.subcategories.length} focused paths <ArrowRight size={15} aria-hidden="true" /></span>
               </Link>

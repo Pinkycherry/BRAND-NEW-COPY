@@ -3,6 +3,9 @@ import { useSuspenseQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { ArrowRight, ArrowUpRight, Search, X } from "lucide-react";
 
+import { PAGE_IMAGES, pageImageMeta } from "@/config/page-imagery";
+import { categoryImage } from "@/config/category-imagery";
+import { absoluteUrl } from "@/lib/schema";
 import { GlassShell } from "@/components/glass-shell";
 import { catalogQuery } from "@/lib/catalog";
 import { TAXONOMY } from "@/data/taxonomy";
@@ -18,6 +21,8 @@ export const Route = createFileRoute("/browse")({
       { property: "og:title", content: "Explore business ideas | BusinessIdea.io" },
       { property: "og:description", content: "Find a direction that fits your time, skills and place." },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      ...pageImageMeta(PAGE_IMAGES.browse, absoluteUrl),
     ],
   }),
   component: BrowsePage,
@@ -40,7 +45,7 @@ function BrowsePage() {
   return (
     <>
       <JsonLd schema={[
-        collectionPageSchema({ path: "/browse", name: "Business idea categories", description: "100 categories and 1,000 focused paths for India.", itemCount: catalog.totalCategories }),
+        collectionPageSchema({ path: "/browse", name: "Business idea categories", description: "100 categories and 1,000 focused paths for India.", itemCount: catalog.totalCategories, image: PAGE_IMAGES.browse.src }),
         breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Browse", path: "/browse" }]),
       ]} />
       <GlassShell>
@@ -53,7 +58,7 @@ function BrowsePage() {
               <p>Start with a category you know, or search for a specific kind of work. Every path is a way to narrow your question.</p>
               <div className="gl-hero-stats"><span><strong>{catalog.totalCategories}</strong> categories</span><span><strong>{catalog.totalSubcategories.toLocaleString()}</strong> focused paths</span></div>
             </div>
-            <div className="gl-hero-art" aria-hidden="true"><span className="gl-art-orbit gl-art-orbit-one" /><span className="gl-art-orbit gl-art-orbit-two" /><span className="gl-art-core">✦</span><span className="gl-art-pill gl-pill-one">Begin here</span><span className="gl-art-pill gl-pill-two">Follow curiosity ↗</span></div>
+            <figure className="gl-image-hero"><img src={PAGE_IMAGES.browse.src} alt={PAGE_IMAGES.browse.alt} width={1280} height={549} loading="eager" fetchPriority="high" /><figcaption>{PAGE_IMAGES.browse.description}</figcaption></figure>
           </header>
 
           <section className="gl-index" aria-labelledby="gl-index-title">
@@ -67,12 +72,14 @@ function BrowsePage() {
             ) : (
               <div className="gl-category-grid">
                 {categories.map((category) => {
+                  const image = categoryImage(category.slug);
                   const matches = needle && !category.name.toLowerCase().includes(needle)
                     ? category.subcategories.filter((sub) => sub.name.toLowerCase().includes(needle))
                     : category.subcategories;
                   return (
                     <article className="gl-category" key={category.slug}>
                       <div className="gl-category-top"><span className="gl-category-number">{String(category.n).padStart(2, "0")}</span><span className="gl-category-spark" aria-hidden="true">✦</span></div>
+                      <Link className="gl-category-media" to="/category/$categorySlug" params={{ categorySlug: category.slug }} aria-label={`Explore ${category.short}`}><img src={image.src} alt={image.alt} width={1280} height={549} loading="lazy" /></Link>
                       <h3><Link to="/category/$categorySlug" params={{ categorySlug: category.slug }}>{category.short}</Link></h3>
                       <p>{category.subcategories.length} focused paths</p>
                       <details open={Boolean(needle)} key={needle ? category.slug + needle : category.slug}>

@@ -216,3 +216,7 @@
 @media (prefers-reduced-motion: reduce) {
   .glass-home *, .glass-home *::before, .glass-home *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
 }
+
+.glass-home .gh-category-image { display:block; position:relative; width:100%; aspect-ratio:21/9; margin:1.1rem 0; overflow:hidden; border-radius:15px; background:#e8e6f4; }
+.glass-home .gh-category-image img { display:block; width:100%; height:100%; object-fit:cover; }
+.glass-home .gh-category-title { margin:.3rem 0 auto; }
