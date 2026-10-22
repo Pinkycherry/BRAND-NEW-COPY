@@ -304,14 +304,14 @@
 .glass-home .gl-prose th { color:#24263d; background:#f0edfc; }
 .glass-home .gl-prose tr:nth-child(even) td { background:#faf9ff; }
 
-/* Exact source category and index artwork in the new glass library. */
-.glass-home .gl-image-hero { width:100%; min-width:0; margin:0; overflow:hidden; border:1px solid #fff; border-radius:27px; background:#e9e7f4; box-shadow:0 18px 38px #59519024; }
-.glass-home .gl-image-hero img { display:block; width:100%; aspect-ratio:21/9; height:auto; object-fit:cover; }
-.glass-home .gl-image-hero figcaption { padding:.7rem .9rem; color:#62647d; background:#ffffffdc; font-size:.72rem; line-height:1.45; }
-.glass-home .gl-category-top { margin-bottom:1rem; }
-.glass-home .gl-category-media { display:block; width:100%; aspect-ratio:21/9; margin-bottom:1.15rem; overflow:hidden; border-radius:17px; background:#e8e6f4; }
-.glass-home .gl-category-media img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .25s ease; }
-.glass-home .gl-category-media:hover img { transform:scale(1.035); }
-.glass-home .gl-category-media:focus-visible { outline:3px solid #6858cd; outline-offset:3px; }
-@media(max-width:680px) { .glass-home .gl-image-hero { border-radius:19px; } }
-@media(prefers-reduced-motion:reduce) { .glass-home .gl-category-media img { transition:none; } }
+/* Founder toolkit and checked stories. */
+.glass-home .gl-resource-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; margin-top:2rem; }
+.glass-home .gl-resource-card { display:flex; flex-direction:column; gap:.7rem; min-height:210px; padding:1.7rem; border:1px solid #fff; border-radius:25px; background:#ffffffc2; box-shadow:0 12px 32px #54507310; }
+.glass-home .gl-resource-card h3 { margin:0; font-size:1.32rem; line-height:1.3; letter-spacing:-.03em; }
+.glass-home .gl-resource-card p { margin:0; color:var(--gh-muted); font-size:.91rem; line-height:1.6; }
+.glass-home .gl-resource-card .gh-eyebrow { color:#6755bf; font-size:.7rem; }
+.glass-home .gl-resource-icon { display:grid; place-items:center; width:46px; height:46px; margin-bottom:.3rem; border-radius:14px; color:#6f5bd0; background:#eeebff; }
+.glass-home .gl-resource-foot { display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-top:auto; padding-top:.9rem; border-top:1px solid #e7e5f2; color:#5d4bb5; font-size:.82rem; font-weight:750; }
+.glass-home .gl-story-empty { margin-top:2rem; }
+.glass-home .gl-story-empty a { display:inline-flex; align-items:center; gap:.4rem; margin-top:.8rem; color:#5d4bb5; font-weight:750; }
+@media(max-width:680px) { .glass-home .gl-resource-grid { grid-template-columns:1fr; } }

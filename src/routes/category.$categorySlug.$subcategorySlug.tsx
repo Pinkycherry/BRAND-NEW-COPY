@@ -3,6 +3,8 @@ import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { ArrowUpRight, Search } from "lucide-react";
 
+import { categoryImage } from "@/config/category-imagery";
+import { absoluteUrl } from "@/lib/schema";
 import { GlassShell } from "@/components/glass-shell";
 import { findSubcategory } from "@/lib/catalog";
 import { getSubcategoryDetail } from "@/lib/taxonomy.functions";
@@ -30,13 +32,17 @@ export const Route = createFileRoute("/category/$categorySlug/$subcategorySlug")
       context.queryClient.ensureQueryData(detailQuery(params.categorySlug, params.subcategorySlug)),
       context.queryClient.ensureQueryData(ideasQuery(codeFor(found.category.n, found.index))),
     ]);
-    return { name: found.subcategory.name, categoryName: found.category.name };
+    return { name: found.subcategory.name, categoryName: found.category.name, image: categoryImage(found.category.slug) };
   },
   head: ({ loaderData }) => ({
     meta: [
       { title: `${loaderData?.name ?? "Business ideas"} in India | BusinessIdea.io` },
       { name: "description", content: `Explore ${loaderData?.name ?? "this focused path"} under ${loaderData?.categoryName ?? "the idea library"}. Read who it suits and see ideas as they are published.` },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: loaderData?.image ? absoluteUrl(loaderData.image.src) : undefined },
+      { property: "og:image:alt", content: loaderData?.image?.alt },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: loaderData?.image ? absoluteUrl(loaderData.image.src) : undefined },
     ],
   }),
   component: SubcategoryPage,
@@ -57,17 +63,18 @@ function SubcategoryPage() {
   }, [ideas, query, sort]);
   const topic = subcategory.name.replace(/ Business Ideas$/i, "");
   const path = `/category/${categorySlug}/${subcategorySlug}`;
+  const image = categoryImage(categorySlug);
   const siblings = category.subcategories.filter((sub) => sub.slug !== subcategorySlug);
   return (
     <>
       <JsonLd schema={[
-        collectionPageSchema({ path, name: subcategory.name, description: `${subcategory.name} under ${category.name}.`, itemCount: ideas.length }),
+        collectionPageSchema({ path, name: subcategory.name, description: `${subcategory.name} under ${category.name}.`, itemCount: ideas.length, image: image.src }),
         breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Browse", path: "/browse" }, { name: category.name, path: `/category/${categorySlug}` }, { name: subcategory.name, path }]),
       ]} />
       <GlassShell>
         <div className="gl-page">
           <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/browse">Explore</Link><span>/</span><Link to="/category/$categorySlug" params={{ categorySlug }}>{category.short}</Link><span>/</span><span>{topic}</span></nav>
-          <header className="gl-hero gl-detail-hero"><div className="gl-hero-copy"><p className="gh-eyebrow">PATH {String(index + 1).padStart(2, "0")} / {category.subcategories.length} · {category.short.toUpperCase()}</p><h1>{topic} <em>business ideas.</em></h1><p>{detail?.searchIntent || `A closer look at ${topic.toLowerCase()} and the published ideas in this path.`}</p><div className="gl-hero-stats"><span><strong>{ideas.length}</strong> published {ideas.length === 1 ? "idea" : "ideas"} here</span></div></div><div className="gl-hero-art" aria-hidden="true"><span className="gl-art-orbit gl-art-orbit-one" /><span className="gl-art-orbit gl-art-orbit-two" /><span className="gl-art-core">✦</span></div></header>
+          <header className="gl-hero gl-detail-hero"><div className="gl-hero-copy"><p className="gh-eyebrow">PATH {String(index + 1).padStart(2, "0")} / {category.subcategories.length} · {category.short.toUpperCase()}</p><h1>{topic} <em>business ideas.</em></h1><p>{detail?.searchIntent || `A closer look at ${topic.toLowerCase()} and the published ideas in this path.`}</p><div className="gl-hero-stats"><span><strong>{ideas.length}</strong> published {ideas.length === 1 ? "idea" : "ideas"} here</span></div></div><figure className="gl-image-hero"><img src={image.src} alt={image.alt} width={1280} height={549} loading="eager" fetchPriority="high" /><figcaption>{image.description}</figcaption></figure></header>
           <div className="gl-detail-columns">
             <div>
               {detail?.scope && <section className="gl-editorial" aria-labelledby="scope-title"><p className="gh-eyebrow">THE SCOPE</p><h2 id="scope-title">What this path covers.</h2><p>{detail.scope}</p></section>}
