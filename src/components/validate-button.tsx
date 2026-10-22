@@ -43,7 +43,7 @@ export function ValidateButton({ slug }: { slug: string }) {
   };
 
   return <div className="gl-validate-panel">
-    <div className="gl-validate-top"><span className="gl-validate-icon" aria-hidden="true"><Sparkles size={24} /></span><div><p className="gh-eyebrow">FREE · NO EXTRA COST OR LIMIT</p><h3>Validate this idea.</h3></div></div>
+    <div className="gl-validate-top"><span className="gl-validate-icon" aria-hidden="true"><Sparkles size={24} /></span><div><p className="gh-eyebrow">NO SITE CHARGE · FOUR AI OPTIONS</p><h3>Validate this idea.</h3></div></div>
     <p>Get a structured research write-up using an AI tool you already use. Choose a destination; the prompt is prepared from this published blueprint.</p>
     <div className="gl-validate-options" aria-label="Choose an AI validation tool">
       {VALIDATE_PLATFORMS.map((platform) => {
