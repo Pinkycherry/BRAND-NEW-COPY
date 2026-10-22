@@ -44,3 +44,7 @@ An India-first decision entry page, business model comparisons grounded in actua
 ## Implemented first original route
 
 - `/business-ideas-india` — branded page name **The First Move**. SEO title “Business Ideas in India for Real Life | BusinessIdea.io”; H1 “Business ideas for the life you actually have.” Sections follow personal constraint → real category pathways → three financial/customer/risk questions → a first proof → four-provider research use → truthful FAQ. It links only to approved taxonomy categories, completed source blueprint index, real calculator, existing validation guide and contact. The four situation choices change original narrative and category artwork; no income figures or fake testimonials. This is an exemplary page family, not a competitor recreation.
+
+## Implemented validation field guide
+
+- `/startup-idea-validation` — SEO title “How to Validate a Startup Idea in India | BusinessIdea.io”; one H1 “Validate a startup idea before it costs you.” Eight substantive sections: falsifiable claim, buyer interviews, evidence ladder, four-field browser-local notebook, cash worksheet, four external AI research options through the existing blueprint Validate button, reversible next-decision selector, FAQ, plus a specific final action. The route does not claim an AI verdict or save/transmit notebook data. It is initially unlisted in the shared menu until live content, controls, SSR and noindex are checked; then add contextual links.
