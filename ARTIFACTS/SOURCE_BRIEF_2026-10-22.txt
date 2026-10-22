@@ -1,0 +1,123 @@
+You are an elite product designer + full-stack frontend architect specializing in high-conversion, mobile-first SaaS and content library websites. Your only job is to generate a complete, production-ready website framework for the domain businessidea.io.
+
+CONTEXT & NON-NEGOTIABLES
+- Domain: businessidea.io
+- Core product: The world’s largest structured library of researched business ideas (target 50,000+ ideas, currently starting with ~100 main categories). Each main category contains exactly 10 subcategories. Each subcategory contains a minimum of 10 fully researched ideas (expandable to infinity). Data will later connect to an existing Supabase database; for now generate the complete visual + interaction framework with realistic placeholder content and clear data-binding comments.
+- Target users: Mobile-first (80%+ traffic expected on phone). Primary audience: people searching for work-from-home, low-investment, side-hustle, women-focused, senior, zero-investment ideas, etc.
+- Visual language: Take the exact aesthetic language of the attached Aarav Singh portfolio screenshot (soft glassmorphism, floating rounded organic non-rectangular cards, soft purple/blue gradients, subtle 3D depth, glowing orbs, elegant typography hierarchy, rounded soft shadows, non-square/non-rectangular containers everywhere). NEVER use generic rectangular card grids or boring boxed layouts. Every section must feel premium, airy, and distinctive.
+- Interaction language: Heavy emphasis on mobile scroll-triggered animations, sticky elements, parallax, progressive disclosure, micro-interactions, and “hooky” progressive reveals that keep the thumb scrolling. Use modern scroll effects (Intersection Observer, scroll-driven animations, sticky sections that morph, floating action elements).
+- Inspiration sources (study deeply and exceed):
+  1. Visual & layout language → the provided Aarav Singh Digital Product Designer portfolio image (glass cards, floating stats, process steps, soft gradients, non-rect shapes).
+  2. Information architecture, free library feel, calculators, guides, glossary, founder toolkit → https://bbusiness.online/ (especially /browse, category structure with subcategories, calculators page, startup guides, glossary).
+  3. Depth of tools, validation flow, multi-step reports, AI generators, failure database, calculators → https://ideaproof.io/ (validation engine, 6–10 step journey, tools directory, visual identity / business plan style assets).
+- Output requirement: Generate a complete multi-page website framework. Describe every page in extreme detail (layout structure, section order, exact components, interaction behavior, mobile adaptations, data placeholders). Produce ready-to-implement React + Tailwind + Framer Motion (or pure CSS scroll-driven) code structure descriptions, component hierarchy, and design tokens. Do not generate actual idea content yet — only the framework, layouts, and realistic placeholder text. Later we will inject real Supabase data.
+
+DESIGN SYSTEM (LOCK THIS IN)
+- Color: Soft white / off-white base, deep charcoal text, primary accent soft violet-to-blue gradient, secondary soft cyan/mint accents. Glass cards with backdrop-blur, subtle borders, soft multi-layer shadows.
+- Shapes: Almost no hard rectangles. Prefer soft rounded rectangles with large radius, organic pill shapes, floating elliptical orbs, irregular soft blobs for backgrounds, circular progress indicators, soft hexagonal or rounded-hex icons when needed.
+- Typography: Clean modern sans (Inter or similar), strong hierarchy, generous line-height for mobile readability.
+- Icons: Prefer clean line icons or soft filled icons (Lucide / Heroicons style or custom SVG). Avoid photographic placeholders. Where visual identity or mockups are needed, describe AI-generatable abstract illustrations or pure CSS/SVG compositions (Grok can generate the icon SVGs and illustration prompts).
+- Motion: Scroll-triggered fade-up + scale, sticky section morphs, floating elements that react to scroll, progressive card reveals, mobile-friendly haptic-like micro-feedback on buttons.
+
+REQUIRED PAGES & FRAMEWORK (generate detailed section-by-section layouts for ALL of these)
+
+1. Homepage (the most important page – make it extremely hooky)
+   - Sticky glass header with logo, Explore (mega-menu for categories), Tools, Guides, Calculators, Blog, Pricing/Free, Login/Sign-up, primary CTA “Explore Ideas”.
+   - Hero: Non-rectangular floating composition. Large headline + subhead about the 50k+ idea library. Floating glass stats cards (e.g. 100+ Categories, 50k+ Ideas, Free forever after sign-in). Soft portrait or abstract founder-style illustration on one side (inspired by the portfolio photo treatment). Dual CTAs: “Browse Library” and “Surprise Me with an Idea”. Subtle floating orbs and soft gradient mesh background.
+   - Trust strip with logos or “Trusted by founders who started from zero”.
+   - Featured Categories canopy / interactive map or soft organic grid of main categories (non-rect cards that expand on hover/tap).
+   - “How it works” 3–5 step process with numbered soft glass cards and scroll-triggered connections.
+   - Selected / Trending Ideas horizontal or masonry-style soft cards (non-rect).
+   - Tools teaser (calculators, validators, business-plan generator).
+   - Testimonials carousel (soft cards with photos).
+   - Final CTA + newsletter + contact form in elegant glass container.
+   - Footer: Multi-column with all page links, legal, social, “Made for founders starting from zero”.
+
+2. Explore / Browse / Categories Index (mirror and improve bbusiness.online/browse)
+   - Search + filter bar (sticky on mobile).
+   - Main categories displayed as soft organic cards or an interactive canopy/tree visualization.
+   - Clicking a main category opens 10 subcategories in a beautiful progressive reveal.
+   - Each subcategory card shows idea count and leads to the idea list.
+
+3. Subcategory Idea List Page
+   - Header with subcategory name + description.
+   - 10+ idea cards in a unique mobile-friendly pattern (soft vertical stacked cards or staggered non-rect layout, not a boring grid). Each card shows title, short hook, investment level, trend score, “Validate” button, and “Read Blueprint”.
+   - Infinite scroll or “Load more” with smooth animation.
+   - Sticky filter/sort bar.
+
+4. Individual Idea Detail Page (the richest page – 12–15 sections minimum)
+   Structure every idea page with these sections (soft glass containers, progressive scroll reveals):
+   - Hero: Idea title, short elevator pitch, key tags (investment, time, skill level), big “Validate this Idea” CTA, trend score visual.
+   - Quick Verdict / GO-NOGO style summary card.
+   - Market Research (TAM/SAM/SOM style numbers, demand signals).
+   - Who Buys (ICP / customer persona).
+   - Revenue Model & Unit Economics.
+   - Startup Costs & Runway calculator embed.
+   - Competition Landscape (soft matrix or cards).
+   - Risks & Honest Pain Points.
+   - Step-by-step Launch Roadmap.
+   - Validation Tools (buttons that open AI validation flow or calculators).
+   - Related Ideas / Cross-sell.
+   - FAQ accordion for this idea.
+   - Testimonials specific to similar ideas.
+   - Final CTA block with “Save Idea”, “Generate Business Plan”, “Share”.
+   Use soft non-rect section dividers, floating side stats on desktop, sticky mobile bottom bar with primary actions.
+
+5. Tools & Calculators Hub (expand bbusiness.online/calculator + ideaproof tools)
+   - Beautiful grid/list of 20–40 calculators (Break-even, Startup Cost, ROI, CAC, LTV, Runway, TAM/SAM/SOM, etc.).
+   - Each calculator is its own focused page with clean inputs, live results, formula explanation, and “Save to Idea” button.
+   - Additional AI tools: Idea Validator, Business Plan Generator, Visual Identity / Brand Kit, Lean Canvas, Name Generator, Ad Creatives, etc. (describe the multi-step flow inspired by ideaproof’s 6–10 step journey).
+
+6. Validation Center / AI Validation Flow
+   - Multi-step progressive form (idea description → analysis → report).
+   - Results page with viability score, green/red flags, market snapshot, competitor map, next actions. Soft glass report cards. PDF export option.
+
+7. Startup Guides / Blog / Knowledge Hub
+   - Clean article list + individual long-form guide pages with sticky TOC, related ideas, calculators embedded.
+
+8. Glossary / Founder Glossary
+   - Searchable alphabetical or categorized terms with plain-language definitions (inspired by bbusiness).
+
+9. About / Story page
+   - Human, founder-focused narrative (why free, who it’s for).
+
+10. Pricing (honest version)
+    - Emphasize free forever after one sign-in (or freemium with optional lifetime/pro if desired). Clear comparison table against paid validators.
+
+11. Contact / Support + FAQ page
+
+12. Legal pages (Privacy, Terms, Cookie)
+
+13. User Dashboard (after login)
+    - Saved ideas, validation history, generated plans, personal notes.
+
+14–20+. Additional high-value pages you recommend to make the site more perfect than both references:
+    - Founder Stories / Case Studies
+    - Failure Database (inspired by ideaproof)
+    - Interactive Category Map / Canopy visualization
+    - Business Plan Template Library
+    - Visual Identity / Brand Kit generator results pages
+    - Community / Submit Idea
+    - Compare Ideas tool
+    - Mobile-optimized “Daily Idea” or “Surprise Me” experience
+    - Any other pages that increase retention, SEO, or conversion based on the two reference sites.
+
+TECHNICAL & INTERACTION REQUIREMENTS
+- Fully responsive, mobile-first. On mobile the experience must feel native: large tap targets, smooth scroll, sticky CTAs, bottom sheets for filters, progressive loading.
+- Scroll effects: Use scroll-triggered animations, sticky morphing sections, parallax floating elements, reveal-on-scroll for every major section.
+- Component library: GlassCard (soft, non-rect), FloatingOrb, ProgressPill, SoftButton, IdeaCard (unique pattern), StepConnector, CalculatorWidget, ValidationScoreRing, etc.
+- Accessibility: Full keyboard, ARIA, high contrast mode option.
+- Performance: Lazy-load images/icons, optimized fonts, minimal JS for animations.
+- Data placeholders: Every idea card, category, subcategory, and detail section must have clear // TODO: bind to Supabase fields comments.
+- Icon strategy: All icons as inline SVG or Lucide-style. For any illustrative assets (business plan mockups, visual identity previews), provide detailed prompts that Grok Imagine or similar can generate consistently, or pure CSS/SVG alternatives so we never depend on external stock images.
+
+OUTPUT FORMAT
+1. Design tokens (colors, radii, shadows, spacing, typography scale).
+2. Global layout components (Header, Footer, Navigation, Mobile menu).
+3. Detailed section-by-section description + component hierarchy for every page listed above.
+4. Specific interaction notes for mobile scroll behavior on each major section.
+5. Recommended additional pages beyond the list and why they increase value.
+6. Example code structure for the most complex components (Idea Detail page sections, Calculator, Validation report).
+7. Clear notes on how the framework will later connect to Supabase (category → subcategory → ideas hierarchy).
+
+Make the entire framework feel premium, distinctive, non-generic, and optimized to keep mobile users scrolling and exploring. Exceed both reference sites in visual elegance and practical founder utility. Begin generating the complete framework now.
