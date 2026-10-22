@@ -7,16 +7,14 @@ import {
   BookOpen,
   Calculator,
   Compass,
-  Menu,
   Search,
   ShieldCheck,
   Sparkles,
-  X,
 } from "lucide-react";
 
 import { catalogQuery } from "@/lib/catalog";
 import { TAXONOMY } from "@/data/taxonomy";
-import "@/components/glass-home.css";
+import { GlassShell } from "@/components/glass-shell";
 
 export const Route = createFileRoute("/")({
   loader: ({ context }) => context.queryClient.ensureQueryData(catalogQuery),
@@ -79,76 +77,6 @@ const resourceLinks = [
   { title: "Learn the language", description: "Plain-English business terms.", to: "/founder-glossary", icon: Compass },
 ] as const;
 
-function SiteHeader() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  return (
-    <header className="gh-header">
-      <div className="gh-nav">
-        <Link to="/" className="gh-brand" aria-label="BusinessIdea.io home" onClick={() => setMenuOpen(false)}>
-          <span className="gh-brand-mark" aria-hidden="true">b<span>.</span></span>
-          <span className="gh-brand-name">businessidea<span>.io</span></span>
-        </Link>
-        <nav className="gh-nav-links" aria-label="Main navigation">
-          <Link to="/browse">Explore ideas</Link>
-          <Link to="/calculator">Tools</Link>
-          <Link to="/startup-guides">Guides</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/pricing">Pricing</Link>
-        </nav>
-        <div className="gh-nav-actions">
-          <Link to="/sign-in" className="gh-sign-in">Sign in</Link>
-          <Link to="/browse" className="gh-nav-cta">Explore ideas <ArrowUpRight size={16} aria-hidden="true" /></Link>
-        </div>
-        <button
-          type="button"
-          className="gh-menu-toggle"
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={menuOpen}
-          aria-controls="gh-mobile-nav"
-          onClick={() => setMenuOpen((open) => !open)}
-        >
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
-      </div>
-      {menuOpen && (
-        <nav id="gh-mobile-nav" className="gh-mobile-nav" aria-label="Mobile navigation">
-          {([
-            { label: "Explore ideas", to: "/browse" },
-            { label: "Tools and calculators", to: "/calculator" },
-            { label: "Startup guides", to: "/startup-guides" },
-            { label: "Blog", to: "/blog" },
-            { label: "Pricing", to: "/pricing" },
-            { label: "Sign in", to: "/sign-in" },
-          ] as const).map((item) => (
-            <Link key={item.to} to={item.to} onClick={() => setMenuOpen(false)}>
-              {item.label}<ArrowUpRight size={17} aria-hidden="true" />
-            </Link>
-          ))}
-        </nav>
-      )}
-    </header>
-  );
-}
-
-function SiteFooter() {
-  return (
-    <footer className="gh-footer">
-      <div className="gh-footer-top">
-        <div>
-          <Link to="/" className="gh-brand"><span className="gh-brand-mark" aria-hidden="true">b<span>.</span></span><span className="gh-brand-name">businessidea<span>.io</span></span></Link>
-          <p>For the person starting with an idea and a real life to work around.</p>
-        </div>
-        <div className="gh-footer-links">
-          <div><h3>Explore</h3><Link to="/browse">All categories</Link><Link to="/search">Search</Link><Link to="/calculator">Calculators</Link><Link to="/startup-guides">Guides</Link></div>
-          <div><h3>About</h3><Link to="/about">Our story</Link><Link to="/pricing">Pricing</Link><Link to="/contact">Contact</Link><Link to="/founder-glossary">Glossary</Link></div>
-          <div><h3>Policies</h3><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link><Link to="/cookie-policy">Cookies</Link><Link to="/disclaimer">Disclaimer</Link></div>
-        </div>
-      </div>
-      <div className="gh-footer-bottom"><span>© {new Date().getFullYear()} BusinessIdea.io</span><span>Made for people starting from zero.</span></div>
-    </footer>
-  );
-}
-
 function HomePage() {
   const { data: catalog } = useSuspenseQuery(catalogQuery);
   const [query, setQuery] = useState("");
@@ -173,10 +101,7 @@ function HomePage() {
   };
 
   return (
-    <div className="glass-home">
-      <a className="gh-skip" href="#main">Skip to content</a>
-      <SiteHeader />
-      <main id="main">
+    <GlassShell>
         <section className="gh-hero" aria-labelledby="gh-title">
           <div className="gh-hero-copy">
             <span className="gh-kicker"><span className="gh-kicker-dot" /> YOUR NEXT CHAPTER STARTS HERE</span>
@@ -266,8 +191,6 @@ function HomePage() {
         </section>
 
         <section className="gh-section gh-final" aria-labelledby="gh-final-title"><div className="gh-final-glow" aria-hidden="true" /><p className="gh-eyebrow">TAKE YOUR TIME. START SOMEWHERE.</p><h2 id="gh-final-title">Your next idea might begin with one better question.</h2><p>Browse the paths, read the hard parts, and decide what deserves a small test.</p><div className="gh-final-actions"><Link to="/browse" className="gh-button gh-button-primary">Explore ideas <ArrowUpRight size={18} aria-hidden="true" /></Link><Link to="/contact" className="gh-button gh-button-secondary">Ask us a question</Link></div></section>
-      </main>
-      <SiteFooter />
-    </div>
+    </GlassShell>
   );
 }
