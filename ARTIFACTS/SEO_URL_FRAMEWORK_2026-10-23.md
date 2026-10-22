@@ -40,3 +40,7 @@ Sources: https://developers.google.com/search/docs/crawling-indexing/block-index
 ## Distinct page families to build
 
 An India-first decision entry page, business model comparisons grounded in actual published ideas, a validation field guide, calculator-to-blueprint journeys and location/starting-budget discovery should become their own branded routes only when content and destination bindings are real. Names, exact slugs and redirect mapping are recorded at implementation time. Do not invent thousands of empty URLs to imitate a competitor page count. Keep the 100-category/1,000-path framework and 879 completed source idea pages navigable while expanding actual content.
+
+## Implemented first original route
+
+- `/business-ideas-india` — branded page name **The First Move**. SEO title “Business Ideas in India for Real Life | BusinessIdea.io”; H1 “Business ideas for the life you actually have.” Sections follow personal constraint → real category pathways → three financial/customer/risk questions → a first proof → four-provider research use → truthful FAQ. It links only to approved taxonomy categories, completed source blueprint index, real calculator, existing validation guide and contact. The four situation choices change original narrative and category artwork; no income figures or fake testimonials. This is an exemplary page family, not a competitor recreation.

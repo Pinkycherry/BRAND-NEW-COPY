@@ -139,6 +139,11 @@ function HomePage() {
 
         <div className="gh-trust-line"><ShieldCheck size={17} aria-hidden="true" /><span>Research you can question. Clear risks you can see. No pressure to choose today.</span></div>
 
+        <section className="gh-first-move" aria-labelledby="gh-first-move-title">
+          <div><p className="gh-eyebrow">A DIFFERENT WAY TO BEGIN</p><h2 id="gh-first-move-title">The idea should fit <em>your real life.</em></h2><p>A job you cannot leave, people depending on you, a town you know. Those are not footnotes. They are the first filter.</p></div>
+          <div className="gh-first-move-action"><span>Start with what you can protect.</span><Link to="/business-ideas-india">Find your first move <ArrowUpRight size={19} aria-hidden="true" /></Link><small>A decision path for founders in India</small></div>
+        </section>
+
         <section className="gh-section gh-discovery" aria-labelledby="gh-explore-title">
           <div className="gh-section-head">
             <div><p className="gh-eyebrow">FIND YOUR WAY IN</p><h2 id="gh-explore-title">Start where you are.</h2><p>Choose a familiar starting point, or search across the full category map.</p></div>

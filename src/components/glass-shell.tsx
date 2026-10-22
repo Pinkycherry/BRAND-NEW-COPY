@@ -5,6 +5,7 @@ import "@/components/glass-home.css";
 
 const navGroups = [
   { label: "Explore", links: [
+    { label: "Start with your life", to: "/business-ideas-india", description: "An India-first decision path" },
     { label: "All 100 categories", to: "/browse", description: "Find a path that fits your life" },
     { label: "Published blueprints", to: "/blueprints", description: "Search completed source ideas" },
     { label: "Search the library", to: "/search", description: "Start with a topic or need" },
@@ -87,7 +88,7 @@ export function GlassFooter() {
           <Link to="/contact" className="gh-footer-contact">Ask us a question <ArrowUpRight size={16} aria-hidden="true" /></Link>
         </div>
         <div className="gh-footer-links">
-          <div><h3>Ideas</h3><Link to="/browse">100 categories</Link><Link to="/blueprints">Published blueprints</Link><Link to="/search">Search ideas</Link><Link to="/sitemap">All pages</Link></div>
+          <div><h3>Ideas</h3><Link to="/business-ideas-india">Find your first move</Link><Link to="/browse">100 categories</Link><Link to="/blueprints">Published blueprints</Link><Link to="/search">Search ideas</Link><Link to="/sitemap">All pages</Link></div>
           <div><h3>Learn</h3><Link to="/startup-guides">Startup guides</Link><Link to="/blog">Founder journal</Link><Link to="/founder-glossary">Glossary</Link><Link to="/learning-resources">Resources</Link></div>
           <div><h3>Build</h3><Link to="/calculator">Calculators</Link><Link to="/blueprints">Validate an idea</Link><Link to="/pricing">Pricing</Link><Link to="/services">Services</Link></div>
           <div><h3>People & policies</h3><Link to="/about">Our story</Link><Link to="/founders">Founders</Link><Link to="/contact">Contact</Link><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link><Link to="/cookie-policy">Cookies</Link><Link to="/disclaimer">Disclaimer</Link></div>
