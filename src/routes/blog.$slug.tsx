@@ -3,6 +3,7 @@ import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
 import { ArrowUpRight, Clock } from "lucide-react";
 
 import { GlassShell } from "@/components/glass-shell";
+import { ReadingPaths } from "@/components/reading-paths";
 import { JsonLd, articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { getBlogPost } from "@/lib/blog.functions";
 import { formatDate } from "@/lib/blog-shared";
@@ -54,6 +55,8 @@ function BlogArticle() {
   const { data } = useSuspenseQuery(postQuery(slug));
   if (!data) return null;
   const { post, related } = data;
+  const headings = Array.from(post.html.matchAll(/<h2(?:\s[^>]*)?>/gi), (match) => match.index ?? 0);
+  const breakAt = headings.length > 1 ? headings[Math.floor(headings.length / 2)] : post.html.length;
   return <>
     <JsonLd schema={[
       articleSchema({
@@ -78,7 +81,9 @@ function BlogArticle() {
           <img src={post.image} alt={post.imageAlt ?? post.title} width={post.imageWidth ?? 1672} height={post.imageHeight ?? 941} loading="eager" fetchPriority="high" decoding="async" ref={hideImgIfBroken} />
           {post.imageCaption && <figcaption>{post.imageCaption}</figcaption>}
         </figure>}
-        <div className="gl-prose" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="gl-prose" dangerouslySetInnerHTML={{ __html: post.html.slice(0, breakAt) }} />
+        <ReadingPaths />
+        {breakAt < post.html.length && <div className="gl-prose" dangerouslySetInnerHTML={{ __html: post.html.slice(breakAt) }} />}
       </article>
       {related.length > 0 && <section className="gl-related-articles" aria-labelledby="more-articles">
         <p className="gh-eyebrow">KEEP READING</p><h2 id="more-articles">More from the journal.</h2>
