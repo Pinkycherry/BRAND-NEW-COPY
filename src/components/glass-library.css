@@ -287,3 +287,13 @@
 .glass-home .gl-featured-figure figcaption { padding:.8rem 1.2rem; color:var(--gh-muted); font-size:.8rem; line-height:1.5; background:#ffffffd9; }
 @media(max-width:680px) { .glass-home .gl-guide-media, .glass-home .gl-blog-grid .gl-feature-article .gl-guide-media { width:calc(100% + 2.8rem); aspect-ratio:16/9; margin:-1.4rem -1.4rem 1.1rem; }.glass-home .gl-featured-figure { border-radius:20px; } }
 @media(prefers-reduced-motion:reduce) { .glass-home .gl-guide-media img { transition:none; } }
+
+.glass-home .gl-blog-article .gl-article-hero { max-width:1000px; }
+.glass-home .gl-article-byline { margin-top:1.4rem; color:#65677f; font-size:.84rem; line-height:1.6; }
+.glass-home .gl-article-byline a { color:#5c49b6; text-decoration:underline; text-underline-offset:3px; }
+.glass-home .gl-blog-article .gl-prose { max-width:850px; }
+.glass-home .gl-related-articles { margin-top:4rem; }
+.glass-home .gl-related-articles h2 { margin:.4rem 0 1.5rem; font-size:clamp(2rem,4vw,3rem); letter-spacing:-.05em; }
+.glass-home .gl-related-articles .gl-guide-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+@media(max-width:850px) { .glass-home .gl-related-articles .gl-guide-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:680px) { .glass-home .gl-related-articles .gl-guide-grid { grid-template-columns:1fr; } }
