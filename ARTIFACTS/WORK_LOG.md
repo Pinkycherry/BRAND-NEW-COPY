@@ -216,3 +216,8 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 
 ## 2026-10-23 00:14 IST — Isolating failed route batch, step 1
 - Reintroduce only /founders import from glass-editorial; the other four rolled-back routes remain on their prior files. This is a one-variable deployment check after the preview 500. Confirm both / and /founders return HTTP 200 and noindex before continuing. The page's verified people text remains unchanged.
+
+
+## 2026-10-23 00:16 IST — Founder route passed, isolate two policy imports
+- **Verified:** 3a9832ff80d55ec70110b30254a6723270cf40e7 passed Vercel; / and /founders returned HTTP 200 with sitewide X-Robots-Tag noindex,nofollow,noarchive,noimageindex. Preview /robots.txt now allows fetch so crawlers can read noindex; empty XML sitemap remains.
+- **Next diagnostic change:** Reintroduce only /gdpr and /refund-policy imports from glass-editorial with original legal text unchanged. Keep sitemap and Services rolled back until this pair passes live SSR. Scoped CSS already deployed.
