@@ -6,6 +6,10 @@
 
 The 980px editorial column and short succession of isolated cards feel narrow and finished too soon. Every main journey must use the available desktop width, retain readable text measures, provide many substantive sections, and link the reader onward before the page runs out. Header needs desktop dropdowns and mobile disclosure groups; footer needs a task-led continuation and fuller route inventory. Scrolling should feel cinematic but content must stay readable without motion and under reduced-motion preference.
 
+## Founder clarification — 23 October 2026
+
+The reference site is an inventory of possibilities, not a layout plan. BBI must stand apart in page names, emotional trigger, India-specific questions, section rhythm, visual composition and written voice. Avoid repeating the same four-card resource module everywhere. Design each page around the decision its reader is making and connect to the next real route at a natural hinge. Preserve page-family breadth and build real exemplars, without generating empty or copied pages merely to match a competitor count. Keyword intent belongs in meaningful URLs, H1/H2s, alt text and links; see SEO_URL_FRAMEWORK_2026-10-23.md.
+
 ## Directly observed reference, 22 October 2026
 
 - IdeaProof `/resources`: hero with clear library promise, topical in-page navigation, search, many themed groups (tools, calculators, templates, guides, audience and idea lists, failures, topic hubs) and specific links to each destination. It is an architecture reference, **not** a source for BBI counts, claims, generated products or text.

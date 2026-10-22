@@ -3,11 +3,15 @@
 **Owner:** Pinky 1. **Companion:** Pinky 2. **Approved by founder:** 22 October 2026 (IST).  
 **Target:** [businessidea.io](https://businessidea.io). **Working public demo:** [bbinewcopy.vercel.app](https://bbinewcopy.vercel.app/).  
 **Only implementation repository:** [Pinkycherry/BRAND-NEW-COPY](https://github.com/Pinkycherry/BRAND-NEW-COPY), branch `main`.  
-**Exact supplied brief:** [SOURCE_BRIEF_2026-10-22.txt](SOURCE_BRIEF_2026-10-22.txt). **Visual reference:** [REFERENCE_AARAV_2026-10-22.png](REFERENCE_AARAV_2026-10-22.png). **Running handoff:** [WORK_LOG.md](WORK_LOG.md).
+**Exact supplied brief:** [SOURCE_BRIEF_2026-10-22.txt](SOURCE_BRIEF_2026-10-22.txt). **Visual reference:** [REFERENCE_AARAV_2026-10-22.png](REFERENCE_AARAV_2026-10-22.png). **Running handoff:** [WORK_LOG.md](WORK_LOG.md). **Search/URL contract:** [SEO_URL_FRAMEWORK_2026-10-23.md](SEO_URL_FRAMEWORK_2026-10-23.md). **Page-depth reference and original BBI translation:** [REFERENCE_PAGE_ARCHITECTURE_2026-10-22.md](REFERENCE_PAGE_ARCHITECTURE_2026-10-22.md).
 
 ## Mandatory start of every site task
 
-Read this file, the exact source brief, the image, and the latest entries in WORK_LOG.md **before** any site/page/layout/structure research or edit. Also read [BUTTERFLY_EFFECT.md](../BUTTERFLY_EFFECT.md) and the relevant current code. Record the founder's new instructions, findings, decisions, edits, tests, deployment status, and issues with IST timestamps in WORK_LOG.md. Commit the log and implementation directly to `main` through the connected GitHub repository. Make each commit coherent; inspect the current branch head before writing. Do not leave the only copy of any deliverable in a local folder. Keep the project public so Pinky 2 can open this exact handoff. Never commit credentials or private information.
+Read this file, the exact source brief, the image, the SEO/URL framework, the page-depth reference, and the latest entries in WORK_LOG.md **before** any site/page/layout/structure research or edit. Also read [BUTTERFLY_EFFECT.md](../BUTTERFLY_EFFECT.md) and the relevant current code. Record the founder's new instructions, findings, decisions, edits, tests, deployment status, and issues with IST timestamps in WORK_LOG.md. Commit the log and implementation directly to `main` through the connected GitHub repository. Make each commit coherent; inspect the current branch head before writing. Do not leave the only copy of any deliverable in a local folder. Keep the project public so Pinky 2 can open this exact handoff. Never commit credentials or private information.
+
+## Latest founder direction — 23 October 2026 IST
+
+Build a distinctly BBI experience for Indian founders: emotionally resonant, useful decisions; wide, substantial, cinematic but readable sections; original composition and body language rather than a competitor template. IdeaProof is only an architecture-depth reference, never a copy source. Design deliberate descriptive slugs and natural business idea/startup idea/founder H1/H2s and links. Preserve original published URLs and images. Keep every preview URL and asset noindex until the actual domain is connected and the founder authorizes indexing. See SEO_URL_FRAMEWORK_2026-10-23.md. The last Services/founder/GDPR/refund/sitemap batch caused an HTTP 500 despite a green Vercel build and was reverted in ad3a95af; reintroduce those routes one at a time after isolating the cause. Do not confuse green build with healthy SSR.
 
 ## What is being built
 
