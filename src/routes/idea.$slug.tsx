@@ -1,10 +1,14 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
+import { queryOptions } from "@tanstack/react-query";
 import { useState } from "react";
 import { ArrowUpRight, Check, Copy } from "lucide-react";
 
 import { GlassShell } from "@/components/glass-shell";
 import { ValidateButton } from "@/components/validate-button";
+import { LegacyIdeaPage } from "@/components/legacy-idea";
+import { categoryImage } from "@/config/category-imagery";
+import { getLegacyIdea } from "@/lib/legacy-ideas.functions";
+import { absoluteUrl } from "@/lib/schema";
 import { TAXONOMY } from "@/data/taxonomy";
 import { BAND_LABEL, MODE_LABEL, SKILL_LABEL, TIME_LABEL, getIdea, type Idea } from "@/lib/ideas.functions";
 import "@/components/glass-library.css";
@@ -12,6 +16,12 @@ import "@/components/glass-library.css";
 const ideaQuery = (slug: string) => queryOptions({
   queryKey: ["idea", slug],
   queryFn: () => getIdea({ data: { slug } }),
+  staleTime: 60_000,
+});
+
+const legacyQuery = (slug: string) => queryOptions({
+  queryKey: ["legacy-idea", slug],
+  queryFn: () => getLegacyIdea({ data: { slug } }),
   staleTime: 60_000,
 });
 
@@ -25,14 +35,20 @@ function placeOf(idea: Idea) {
 export const Route = createFileRoute("/idea/$slug")({
   loader: async ({ context, params }) => {
     const idea = await context.queryClient.ensureQueryData(ideaQuery(params.slug));
-    if (!idea) throw notFound();
-    return { title: idea.title, summary: idea.summary };
+    if (idea) return { kind: "new" as const, idea, title: idea.title, summary: idea.summary, image: categoryImage(TAXONOMY[Number(idea.category_code.slice(1)) - 1]?.slug ?? "") };
+    const legacy = await context.queryClient.ensureQueryData(legacyQuery(params.slug));
+    if (!legacy) throw notFound();
+    return { kind: "legacy" as const, idea: legacy, title: legacy.seoTitle || legacy.title, summary: legacy.metaDescription || legacy.summary, image: categoryImage(legacy.categorySlug) };
   },
   head: ({ loaderData }) => ({
     meta: [
       { title: `${loaderData?.title ?? "Business idea"} | BusinessIdea.io` },
       { name: "description", content: loaderData?.summary ?? "" },
-      { name: "robots", content: "noindex,follow" },
+      { property: "og:type", content: "article" },
+      { property: "og:image", content: loaderData?.image ? absoluteUrl(loaderData.image.src) : undefined },
+      { property: "og:image:alt", content: loaderData?.image?.alt },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: loaderData?.image ? absoluteUrl(loaderData.image.src) : undefined },
     ],
   }),
   component: IdeaPage,
@@ -45,10 +61,10 @@ function IdeaSection({ id, eyebrow, title, children }: { id: string; eyebrow: st
 }
 
 function IdeaPage() {
-  const { slug } = Route.useParams();
-  const { data: idea } = useSuspenseQuery(ideaQuery(slug));
+  const data = Route.useLoaderData();
   const [copied, setCopied] = useState(false);
-  if (!idea) return null;
+  if (data.kind === "legacy") return <LegacyIdeaPage idea={data.idea} />;
+  const idea = data.idea;
   const where = placeOf(idea);
   const tags = [BAND_LABEL[idea.investment_band], TIME_LABEL[idea.time_needed], SKILL_LABEL[idea.skill_level], MODE_LABEL[idea.work_mode]].filter(Boolean);
   const sections = [

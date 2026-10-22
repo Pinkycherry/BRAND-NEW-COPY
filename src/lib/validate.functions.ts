@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { getIdea, type Idea } from "@/lib/ideas.functions";
+import { getLegacyIdea, type LegacyIdea } from "@/lib/legacy-ideas.functions";
 
 export const VALIDATE_PLATFORMS = [
   { id: "claude", label: "Claude" },
@@ -40,6 +41,22 @@ function promptFor(idea: Idea, context?: string): string {
   return lines.join("\n");
 }
 
+function promptForLegacy(idea: LegacyIdea, context?: string): string {
+  const lines = [
+    "Act as a blunt, operator-grade startup analyst. Produce a complete, structured validation report for this published business blueprint. Use current sources and mark unsupported claims as hypotheses.",
+    "", "Idea: " + idea.title, "Category: " + idea.categoryName + " / " + idea.subcategoryName,
+    "Business description: " + (idea.description || idea.summary),
+  ];
+  if (idea.targetCustomer) lines.push("Target buyer: " + idea.targetCustomer);
+  if (idea.howMakeMoney) lines.push("Revenue model: " + idea.howMakeMoney);
+  if (idea.startupCost) lines.push("Stated startup cost: " + idea.startupCost);
+  if (idea.cons.length) lines.push("Risks on file: " + idea.cons.join("; "));
+  if (idea.verdict) lines.push("Editorial verdict: " + idea.verdict);
+  if (context?.trim()) lines.push("", "User context: " + context.trim());
+  lines.push("", "Cover market analysis, target buyer, pricing and revenue, real risks, a practical first-customer roadmap, and local validation steps. Cite sources where possible. Include a chart or diagram if supported.");
+  return lines.join("\n");
+}
+
 function destination(platform: ValidatePlatform, prompt: string): string {
   const q = encodeURIComponent(prompt);
   switch (platform) {
@@ -59,6 +76,8 @@ export const getValidateUrl = createServerFn({ method: "POST" })
   }).parse(input))
   .handler(async ({ data }) => {
     const idea = await getIdea({ data: { slug: data.slug } });
-    if (!idea) throw new Error("That published idea could not be found.");
-    return destination(data.platform, promptFor(idea, data.context));
+    if (idea) return destination(data.platform, promptFor(idea, data.context));
+    const legacy = await getLegacyIdea({ data: { slug: data.slug } });
+    if (!legacy) throw new Error("That published idea could not be found.");
+    return destination(data.platform, promptForLegacy(legacy, data.context));
   });

@@ -315,3 +315,14 @@
 .glass-home .gl-story-empty { margin-top:2rem; }
 .glass-home .gl-story-empty a { display:inline-flex; align-items:center; gap:.4rem; margin-top:.8rem; color:#5d4bb5; font-weight:750; }
 @media(max-width:680px) { .glass-home .gl-resource-grid { grid-template-columns:1fr; } }
+
+/* Source blueprint fields rendered in the new idea template. */
+.glass-home .gl-legacy-hero { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(290px,.8fr); align-items:center; gap:2rem; }
+.glass-home .gl-legacy-hero .gl-image-hero { align-self:center; }
+.glass-home .gl-legacy-category { margin:1rem 0; color:#6a6b82; font-size:.86rem; font-weight:700; }
+.glass-home .gl-legacy-idea .gl-idea-body p { white-space:pre-line; }
+.glass-home .gl-legacy-list, .glass-home .gl-legacy-pros ul { padding-left:1.4rem; color:#464960; line-height:1.65; }
+.glass-home .gl-legacy-list li, .glass-home .gl-legacy-pros li { margin:.45rem 0; }
+.glass-home .gl-legacy-pros { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.3rem; }
+.glass-home .gl-legacy-pros h3 { margin:.2rem 0 .7rem; font-size:1.03rem; }
+@media(max-width:850px) { .glass-home .gl-legacy-hero { grid-template-columns:1fr; }.glass-home .gl-legacy-pros { grid-template-columns:1fr; } }
