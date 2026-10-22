@@ -1,0 +1,547 @@
+{
+  "subcategory": {
+    "code": "C002-S05",
+    "intro": "You know the small frictions in an apartment building because you live with them: a parcel left at the gate, a common room double-booked, plants drying while a neighbour travels. A society service can turn one of those moments into paid side work if you understand whose permission you need and whose trust you hold. A resident may be friendly, but access to a home, a pet or a private phone number should never be treated casually.\n\nBegin with one task, one building and a predictable time outside your main work. Ask the society committee or manager which activities are permitted in common areas and how visitors, keys and records are handled. Ask residents separately whether they want the service. A committee's permission to operate does not mean every household has agreed to give you details. Explain the job, timing, fee, cancellation and what happens if you are unavailable. Keep receipts and handovers simple.\n\nA side service can grow fast in a building because neighbours talk to one another. That is useful only while you can keep promises. A parcel desk needs a strict handover rule; a plant-care visit needs written instructions and a way to report damage; an event setup needs a cleanup plan. Count the awkward minutes waiting for a lift, chasing access or sorting a disputed item. Those are part of the work, even if you do it next door.\n\nThe ten ideas below have different payers and kinds of trust. Some are paid by a committee for a shared benefit, others by individual households. Pick the task you can perform without overstepping, test it with a few willing neighbours and let reliability earn the next booking.",
+    "how_to_choose": "Start with the inconvenience you see repeatedly and the permission path for solving it. If the task touches a home, keys, children, pets or medicines, define access and emergency boundaries before pricing. If it uses common space, get society approval and ask who cleans up. A fixed building route saves travel, but a neighbour can still ask for unlimited favours. Use a short paid trial with named hours and a written handover. Charge the right buyer: the committee for a shared service, a household for its private errand. Count waiting, coordination and record keeping along with the visible task.",
+    "faq": [
+      {
+        "q": "Do I need society permission?",
+        "a": "For common areas, shared records or services at the gate, ask the committee or manager first. A private household service may still need visitor and access rules. Put the permitted scope in writing."
+      },
+      {
+        "q": "How do I charge neighbours I already know?",
+        "a": "Give the same clear scope and fee to every buyer. Familiarity can make a vague favour grow into unpaid daily work. A short trial and written timings keep the relationship comfortable."
+      },
+      {
+        "q": "Should I keep residents' keys?",
+        "a": "Only if the task truly requires access and there is a secure, written handover process both sides accept. Many services can be designed without keys. Do not improvise a key arrangement."
+      },
+      {
+        "q": "What if I cannot come one day?",
+        "a": "Tell buyers how much notice you can give and who, if anyone, is authorised as backup. Do not send a substitute into a home or handle a pet without the owner's permission."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C002-S05-I01",
+      "slug": "evening-parcel-handover-window",
+      "title": "Evening Parcel Handover Window",
+      "hook": "You return from work and find a delivery note, but nobody knows which parcel is yours at the gate.",
+      "summary": "You offer a fixed evening parcel sorting and handover window to residents collecting parcels in one building. The society committee pays for a defined parcel handover routine, permission and a verified handover. Begin with a few willing parcel handover bookings and agreed hours so the service fits around your main work.",
+      "what_it_is": "You return from work and find a delivery note, but nobody knows which parcel is yours at the gate. You agree on security supervisor and committee process before taking the first booking. Then you log arrivals and verify the right recipient at pickup, using a short checklist and a handover the buyer can verify. Tell residents collecting parcels exactly when the parcel handover service starts and ends, and who makes decisions when something unexpected happens. Keep parcel handover details in an approved place rather than a public society chat. Do not open parcels or release one to an unverified person. A small paid parcel handover trial within one building reveals the waiting, lift and coordination time a simple description hides.",
+      "who_pays_you": "The society committee pays you for a reliable parcel handover routine. A misdelivered package can contain something valuable or private. You ask the committee how unclaimed packages are currently stored. Show the parcel handover steps you would follow, including who approves exceptions. Some residents may benefit from parcel handover but never use the service; do not share their details to find customers. Ask interested neighbours to opt in to parcel handover and explain the fee before seeking access or an advance.",
+      "how_money_comes": "Charge a fixed weekly fee for agreed hours and a volume limit. Count parcel handover preparation, waiting, the task and a written handover. Extra parcel handover work beyond agreed hours needs a separate fee and approval. Keep committee money, resident payments and your parcel handover service charge clearly recorded. If a parcel handover booking is cancelled, follow the rule shared before acceptance. Review the actual parcel handover work after a few trials before promising a monthly rate.",
+      "what_you_need": "You need a secure shelf, unique parcel log and receipt process, permission and a responsible contact. Make the parcel handover checklist short enough for a busy evening. Keep parcel handover addresses, keys and phone numbers secure, and return access when the job ends. Do not open parcels or release one to an unverified person. Tell the parcel handover buyer who will help if you cannot arrive; never send an unapproved substitute into a private space.",
+      "first_30_days": [
+        "Observe the existing gate parcel process with permission.",
+        "Agree on storage, identity check and unclaimed-item rules.",
+        "Test a paid short evening window with a small volume.",
+        "Record each handover without photographing parcel contents.",
+        "Review errors and waiting time before extending hours."
+      ],
+      "what_hurts": "A misdelivered package can contain something valuable or private. Do not open parcels or release one to an unverified person. A friendly neighbour may ask for an extra parcel handover favour when you need to leave. The parcel handover route can be delayed by access, lifts or a committee decision. Put a parcel handover exception in the agreed channel, record what happened and do not pretend you completed a visit you missed. A parcel handover mistake in a close community travels quickly, so correct it plainly.",
+      "verdict": "Build this if you can keep a fixed evening parcel sorting and handover window reliable and make residents collecting parcels feel respected. Walk away if security cannot give you a safe verification and storage process. A resident is trusting you with a sealed personal item.",
+      "faq": [
+        {
+          "q": "Can I sign for every delivery?",
+          "a": "Only if the society and carrier process allow it and residents have agreed. Some items require the addressee. Do not sign a name or accept liability casually."
+        },
+        {
+          "q": "What if a neighbour asks me to open a parcel?",
+          "a": "Decline unless a clearly authorised process exists. The simplest safe rule is to hand over the sealed item to the verified recipient."
+        },
+        {
+          "q": "Who handles a missing parcel?",
+          "a": "Agree on an escalation path with security and committee before the trial. Keep arrival and handover records, then let the authorised parties investigate."
+        }
+      ],
+      "validate_prompt": "I want to run a paid evening parcel handover window in an Indian apartment society. What permissions and verification rules are needed?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S05-I02",
+      "slug": "common-room-booking-steward",
+      "title": "Common Room Booking Steward",
+      "hook": "You arrive with birthday decorations and discover another family booked the same society room.",
+      "summary": "You offer a booking and handover service for a common room to families booking the room in one building. The society committee pays for a defined common room booking routine, permission and a verified handover. Begin with a few willing common room booking bookings and agreed hours so the service fits around your main work.",
+      "what_it_is": "You arrive with birthday decorations and discover another family booked the same society room. You agree on committee booking policy and keyholder approval before taking the first booking. Then you confirm slots, approved rules and the before-and-after checklist, using a short checklist and a handover the buyer can verify. Tell families booking the room exactly when the common room booking service starts and ends, and who makes decisions when something unexpected happens. Keep common room booking details in an approved place rather than a public society chat. The committee decides deposits, refunds and penalties. A small paid common room booking trial within one building reveals the waiting, lift and coordination time a simple description hides.",
+      "who_pays_you": "The society committee pays you for a reliable common room booking routine. A disputed deposit or damage claim can become personal. You show the committee how double bookings arise. Show the common room booking steps you would follow, including who approves exceptions. Some residents may benefit from common room booking but never use the service; do not share their details to find customers. Ask interested neighbours to opt in to common room booking and explain the fee before seeking access or an advance.",
+      "how_money_comes": "Charge a monthly fee for defined booking and inspection hours. Count common room booking preparation, waiting, the task and a written handover. Extra common room booking work beyond agreed hours needs a separate fee and approval. Keep committee money, resident payments and your common room booking service charge clearly recorded. If a common room booking booking is cancelled, follow the rule shared before acceptance. Review the actual common room booking work after a few trials before promising a monthly rate.",
+      "what_you_need": "You need a shared calendar, condition checklist and named committee contact, permission and a responsible contact. Make the common room booking checklist short enough for a busy evening. Keep common room booking addresses, keys and phone numbers secure, and return access when the job ends. The committee decides deposits, refunds and penalties. Tell the common room booking buyer who will help if you cannot arrive; never send an unapproved substitute into a private space.",
+      "first_30_days": [
+        "Read the current common room rules with the committee.",
+        "Build a simple booking and handover checklist.",
+        "Run a paid trial for a few reservations.",
+        "Confirm each slot and photograph condition only with permission.",
+        "Report unresolved damage questions to the committee."
+      ],
+      "what_hurts": "A disputed deposit or damage claim can become personal. The committee decides deposits, refunds and penalties. A friendly neighbour may ask for an extra common room booking favour when you need to leave. The common room booking route can be delayed by access, lifts or a committee decision. Put a common room booking exception in the agreed channel, record what happened and do not pretend you completed a visit you missed. A common room booking mistake in a close community travels quickly, so correct it plainly.",
+      "verdict": "Build this if you can keep a booking and handover service for a common room reliable and make families booking the room feel respected. Walk away if the committee leaves deposits and disputes for you to decide alone. Two families should never be promised the same room.",
+      "faq": [
+        {
+          "q": "Can I collect the room deposit?",
+          "a": "Use the society's approved payment process. Your fee is separate. The committee, not you, should decide whether any part of a deposit is kept."
+        },
+        {
+          "q": "Who checks the room after use?",
+          "a": "Agree on a time and checklist with the committee. If you inspect it, record only observable conditions and let the committee decide disputes."
+        },
+        {
+          "q": "Can I give a family extra time?",
+          "a": "Only under the booking policy and with approval. An informal extension may overlap the next household's reserved slot. Agree on the practical rule before the first booking."
+        }
+      ],
+      "validate_prompt": "I want to coordinate common room bookings for an Indian housing society. How should I handle approval, handover and deposit boundaries?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S05-I03",
+      "slug": "travelling-neighbour-plant-checks",
+      "title": "Travelling Neighbour Plant Checks",
+      "hook": "You get a message from a travelling friend whose balcony plants are drying, but you do not know how much water each needs.",
+      "summary": "You offer scheduled plant-care visits for neighbours to travelling residents in one building. Travelling residents pay for a defined plant check routine, permission and a verified handover. Begin with a few willing plant check bookings and agreed hours so the service fits around your main work.",
+      "what_it_is": "You get a message from a travelling friend whose balcony plants are drying, but you do not know how much water each needs. You agree on building visitor rules and household access consent before taking the first booking. Then you follow the owner's plant list and send a brief condition note, using a short checklist and a handover the buyer can verify. Tell travelling residents exactly when the plant check service starts and ends, and who makes decisions when something unexpected happens. Keep plant check details in an approved place rather than a public society chat. Do not enter without explicit consent or invent plant care instructions. A small paid plant check trial within one building reveals the waiting, lift and coordination time a simple description hides.",
+      "who_pays_you": "Travelling residents pay you for a reliable plant check routine. Overwatering can harm a plant as easily as neglect. You offer a paid trial to neighbours who already ask for help. Show the plant check steps you would follow, including who approves exceptions. Some residents may benefit from plant check but never use the service; do not share their details to find customers. Ask interested neighbours to opt in to plant check and explain the fee before seeking access or an advance.",
+      "how_money_comes": "Charge per visit or short trip package with a clear plant count. Count plant check preparation, waiting, the task and a written handover. Extra plant check work beyond agreed hours needs a separate fee and approval. Keep committee money, resident payments and your plant check service charge clearly recorded. If a plant check booking is cancelled, follow the rule shared before acceptance. Review the actual plant check work after a few trials before promising a monthly rate.",
+      "what_you_need": "You need written plant instructions, access handover and a photo rule, permission and a responsible contact. Make the plant check checklist short enough for a busy evening. Keep plant check addresses, keys and phone numbers secure, and return access when the job ends. Do not enter without explicit consent or invent plant care instructions. Tell the plant check buyer who will help if you cannot arrive; never send an unapproved substitute into a private space.",
+      "first_30_days": [
+        "Ask one owner to label the plants and watering amounts.",
+        "Agree on access, photos, timing and an emergency contact.",
+        "Perform a paid trial visit while the owner is nearby.",
+        "Log what was done and send a short approved update.",
+        "Review travel time and any special plants before a longer trip."
+      ],
+      "what_hurts": "Overwatering can harm a plant as easily as neglect. Do not enter without explicit consent or invent plant care instructions. A friendly neighbour may ask for an extra plant check favour when you need to leave. The plant check route can be delayed by access, lifts or a committee decision. Put a plant check exception in the agreed channel, record what happened and do not pretend you completed a visit you missed. A plant check mistake in a close community travels quickly, so correct it plainly.",
+      "verdict": "Build this if you can keep scheduled plant-care visits for neighbours reliable and make travelling residents feel respected. Walk away if you cannot get clear access and plant instructions from the owner. A living plant needs more than a quick photograph.",
+      "faq": [
+        {
+          "q": "Should I keep a spare key?",
+          "a": "Use a secure handover the owner and building accept, or arrange authorised access each visit. Do not keep or duplicate keys informally."
+        },
+        {
+          "q": "Can I treat a sick plant?",
+          "a": "Follow the owner's instructions and report what you see. Do not apply chemicals or change a routine without permission. Agree on the practical rule before the first booking."
+        },
+        {
+          "q": "What if a pot leaks onto a neighbour?",
+          "a": "Stop the watering that is causing harm, contact the owner and follow building rules. Document the condition without claiming you can repair damage yourself."
+        }
+      ],
+      "validate_prompt": "I want to check plants for travelling neighbours in an Indian apartment. How should I set access, plant instructions and visit pricing?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S05-I04",
+      "slug": "society-recycling-dropoff-hour",
+      "title": "Society Recycling Dropoff Hour",
+      "hook": "The cardboard piles up in your flat because the society collection day keeps changing.",
+      "summary": "You offer a scheduled dry-recyclable drop-off hour to residents bringing dry waste in one building. The committee or participating households pay for a defined recycling drop-off routine, permission and a verified handover. Begin with a few willing recycling drop-off bookings and agreed hours so the service fits around your main work.",
+      "what_it_is": "The cardboard piles up in your flat because the society collection day keeps changing. You agree on committee waste policy and collector agreement before taking the first booking. Then you set a permitted collection window and handover to an authorised collector, using a short checklist and a handover the buyer can verify. Tell residents bringing dry waste exactly when the recycling drop-off service starts and ends, and who makes decisions when something unexpected happens. Keep recycling drop-off details in an approved place rather than a public society chat. Do not store hazardous waste or promise every material is recyclable. A small paid recycling drop-off trial within one building reveals the waiting, lift and coordination time a simple description hides.",
+      "who_pays_you": "The committee or participating households pay you for a reliable recycling drop-off routine. An uncollected pile can block a fire route or attract pests. You ask residents and cleaners what materials collect between pickups. Show the recycling drop-off steps you would follow, including who approves exceptions. Some residents may benefit from recycling drop-off but never use the service; do not share their details to find customers. Ask interested neighbours to opt in to recycling drop-off and explain the fee before seeking access or an advance.",
+      "how_money_comes": "Charge a committee fee or agreed per-household contribution. Count recycling drop-off preparation, waiting, the task and a written handover. Extra recycling drop-off work beyond agreed hours needs a separate fee and approval. Keep committee money, resident payments and your recycling drop-off service charge clearly recorded. If a recycling drop-off booking is cancelled, follow the rule shared before acceptance. Review the actual recycling drop-off work after a few trials before promising a monthly rate.",
+      "what_you_need": "You need a clean sorting area, labelled bags and collection receipt, permission and a responsible contact. Make the recycling drop-off checklist short enough for a busy evening. Keep recycling drop-off addresses, keys and phone numbers secure, and return access when the job ends. Do not store hazardous waste or promise every material is recyclable. Tell the recycling drop-off buyer who will help if you cannot arrive; never send an unapproved substitute into a private space.",
+      "first_30_days": [
+        "Ask the committee and collector which materials are accepted.",
+        "Choose a collection point that does not block access.",
+        "Announce one paid trial hour with clear item limits.",
+        "Record weights or bag counts only if the collector needs them.",
+        "Confirm pickup and cleanup before repeating the service."
+      ],
+      "what_hurts": "An uncollected pile can block a fire route or attract pests. Do not store hazardous waste or promise every material is recyclable. A friendly neighbour may ask for an extra recycling drop-off favour when you need to leave. The recycling drop-off route can be delayed by access, lifts or a committee decision. Put a recycling drop-off exception in the agreed channel, record what happened and do not pretend you completed a visit you missed. A recycling drop-off mistake in a close community travels quickly, so correct it plainly.",
+      "verdict": "Build this if you can keep a scheduled dry-recyclable drop-off hour reliable and make residents bringing dry waste feel respected. Walk away if there is no confirmed collector or safe temporary space. A corridor must remain clear after everyone goes home.",
+      "faq": [
+        {
+          "q": "Can I take batteries and chemicals?",
+          "a": "Only through the appropriate authorised route, if arranged. A dry-recyclables hour should clearly exclude hazardous items it cannot handle. Agree on the practical rule before the first booking."
+        },
+        {
+          "q": "Who pays the collector?",
+          "a": "Agree with the committee and collector before the trial. Your coordination fee and any collection payment should be clear to participating residents."
+        },
+        {
+          "q": "What if the collector fails to arrive?",
+          "a": "Have a backup storage or return plan approved by the committee. Do not leave bags in a corridor or pretend pickup occurred."
+        }
+      ],
+      "validate_prompt": "I want to run a dry recycling drop-off hour for an Indian society. How should I confirm accepted materials and collector pickup?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S05-I05",
+      "slug": "move-in-lift-slot-coordinator",
+      "title": "Move In Lift Slot Coordinator",
+      "hook": "Your moving truck reaches the building just as two other families need the service lift.",
+      "summary": "You offer move-in lift slot coordination to new residents in one building. The facility manager pays for a defined move-in lift slot routine, permission and a verified handover. Begin with a few willing move-in lift slot bookings and agreed hours so the service fits around your main work.",
+      "what_it_is": "Your moving truck reaches the building just as two other families need the service lift. You agree on committee move policy and security team before taking the first booking. Then you schedule lift access and share approved moving rules, using a short checklist and a handover the buyer can verify. Tell new residents exactly when the move-in lift slot service starts and ends, and who makes decisions when something unexpected happens. Keep move-in lift slot details in an approved place rather than a public society chat. Do not guarantee lift availability without security confirmation. A small paid move-in lift slot trial within one building reveals the waiting, lift and coordination time a simple description hides.",
+      "who_pays_you": "The facility manager pays you for a reliable move-in lift slot routine. A delay may leave a truck waiting on the road. You ask a manager which moving-day conflicts recur. Show the move-in lift slot steps you would follow, including who approves exceptions. Some residents may benefit from move-in lift slot but never use the service; do not share their details to find customers. Ask interested neighbours to opt in to move-in lift slot and explain the fee before seeking access or an advance.",
+      "how_money_comes": "Charge a fee per approved move or monthly committee arrangement. Count move-in lift slot preparation, waiting, the task and a written handover. Extra move-in lift slot work beyond agreed hours needs a separate fee and approval. Keep committee money, resident payments and your move-in lift slot service charge clearly recorded. If a move-in lift slot booking is cancelled, follow the rule shared before acceptance. Review the actual move-in lift slot work after a few trials before promising a monthly rate.",
+      "what_you_need": "You need a lift calendar, contractor contact and damage checklist, permission and a responsible contact. Make the move-in lift slot checklist short enough for a busy evening. Keep move-in lift slot addresses, keys and phone numbers secure, and return access when the job ends. Do not guarantee lift availability without security confirmation. Tell the move-in lift slot buyer who will help if you cannot arrive; never send an unapproved substitute into a private space.",
+      "first_30_days": [
+        "Read the move and lift rules with the facility manager.",
+        "Map one moving day from gate arrival to cleanup.",
+        "Set up an approved slot request and confirmation process.",
+        "Coordinate a paid trial move with security.",
+        "Review delays, damage reports and neighbour complaints."
+      ],
+      "what_hurts": "A delay may leave a truck waiting on the road. Do not guarantee lift availability without security confirmation. A friendly neighbour may ask for an extra move-in lift slot favour when you need to leave. The move-in lift slot route can be delayed by access, lifts or a committee decision. Put a move-in lift slot exception in the agreed channel, record what happened and do not pretend you completed a visit you missed. A move-in lift slot mistake in a close community travels quickly, so correct it plainly.",
+      "verdict": "Build this if you can keep move-in lift slot coordination reliable and make new residents feel respected. Walk away if you cannot confirm slots with the facility team. Moving day is stressful enough without a false slot.",
+      "faq": [
+        {
+          "q": "Can I reserve the lift myself?",
+          "a": "Only through the committee's approved process. A slot is confirmed when the facility team approves it, not when you enter it in a sheet."
+        },
+        {
+          "q": "Who pays for damage?",
+          "a": "Follow the society's existing deposit and damage process. You can record condition and reports, but the committee settles liability. Agree on the practical rule before the first booking."
+        },
+        {
+          "q": "What if the truck is late?",
+          "a": "Use the policy for rescheduling and tell affected households promptly. Do not quietly extend a slot into another family's booking."
+        }
+      ],
+      "validate_prompt": "I want to coordinate moving lift slots in an Indian apartment building. What approvals and delay rules should I set?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S05-I06",
+      "slug": "neighbour-pet-feeding-visits",
+      "title": "Neighbour Pet Feeding Visits",
+      "hook": "Your neighbour has a short trip and worries whether the cat will eat if a stranger comes into the flat.",
+      "summary": "You offer short pet feeding and check visits to pet owners in one building. Pet owners pay for a defined pet feeding routine, permission and a verified handover. Begin with a few willing pet feeding bookings and agreed hours so the service fits around your main work.",
+      "what_it_is": "Your neighbour has a short trip and worries whether the cat will eat if a stranger comes into the flat. You agree on owner consent, building entry rules and emergency vet contact before taking the first booking. Then you follow written feeding instructions and send a simple welfare update, using a short checklist and a handover the buyer can verify. Tell pet owners exactly when the pet feeding service starts and ends, and who makes decisions when something unexpected happens. Keep pet feeding details in an approved place rather than a public society chat. Do not give medicine or change the diet without explicit instructions. A small paid pet feeding trial within one building reveals the waiting, lift and coordination time a simple description hides.",
+      "who_pays_you": "Pet owners pay you for a reliable pet feeding routine. A pet may hide, refuse food or need urgent care. You offer a paid introductory visit while the owner is home. Show the pet feeding steps you would follow, including who approves exceptions. Some residents may benefit from pet feeding but never use the service; do not share their details to find customers. Ask interested neighbours to opt in to pet feeding and explain the fee before seeking access or an advance.",
+      "how_money_comes": "Charge per visit with a clear duration and extra-task rule. Count pet feeding preparation, waiting, the task and a written handover. Extra pet feeding work beyond agreed hours needs a separate fee and approval. Keep committee money, resident payments and your pet feeding service charge clearly recorded. If a pet feeding booking is cancelled, follow the rule shared before acceptance. Review the actual pet feeding work after a few trials before promising a monthly rate.",
+      "what_you_need": "You need secure access, feeding notes and a responsible backup plan, permission and a responsible contact. Make the pet feeding checklist short enough for a busy evening. Keep pet feeding addresses, keys and phone numbers secure, and return access when the job ends. Do not give medicine or change the diet without explicit instructions. Tell the pet feeding buyer who will help if you cannot arrive; never send an unapproved substitute into a private space.",
+      "first_30_days": [
+        "Meet the pet and owner before accepting a trip.",
+        "Record feeding, access, emergency and backup instructions.",
+        "Do one paid trial visit while the owner can respond.",
+        "Send a factual update after each authorised visit.",
+        "Review time and the pet response before taking longer trips."
+      ],
+      "what_hurts": "A pet may hide, refuse food or need urgent care. Do not give medicine or change the diet without explicit instructions. A friendly neighbour may ask for an extra pet feeding favour when you need to leave. The pet feeding route can be delayed by access, lifts or a committee decision. Put a pet feeding exception in the agreed channel, record what happened and do not pretend you completed a visit you missed. A pet feeding mistake in a close community travels quickly, so correct it plainly.",
+      "verdict": "Build this if you can keep short pet feeding and check visits reliable and make pet owners feel respected. Walk away if you cannot arrange secure access and an approved backup. A pet cannot explain what went wrong after a missed visit.",
+      "faq": [
+        {
+          "q": "What if the cat hides?",
+          "a": "Follow the owner's plan, look for agreed signs of wellbeing and report what you actually observed. Do not claim the pet ate if you did not see it."
+        },
+        {
+          "q": "Can I give medication?",
+          "a": "Only with clear written instructions, appropriate skill and a process you can safely perform. If unsure, decline and suggest qualified help."
+        },
+        {
+          "q": "Who enters if I am ill?",
+          "a": "Agree on a named backup approved by the owner before the trip. Do not hand keys to a friend without consent."
+        }
+      ],
+      "validate_prompt": "I want to offer pet feeding visits for neighbours in India. What access, emergency and reporting boundaries should I set?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S05-I07",
+      "slug": "elder-neighbour-errand-companion",
+      "title": "Older Neighbour Errand Companion",
+      "hook": "Your aunt can choose her medicines herself but would appreciate company carrying a bag back from the shop.",
+      "summary": "You offer scheduled errand companionship to older neighbours in one building. Older residents or their families pay for a defined errand companionship routine, permission and a verified handover. Begin with a few willing errand companionship bookings and agreed hours so the service fits around your main work.",
+      "what_it_is": "Your aunt can choose her medicines herself but would appreciate company carrying a bag back from the shop. You agree on resident consent and building visitor rules before taking the first booking. Then you walk together or carry approved purchases on a defined route, using a short checklist and a handover the buyer can verify. Tell older neighbours exactly when the errand companionship service starts and ends, and who makes decisions when something unexpected happens. Keep errand companionship details in an approved place rather than a public society chat. Do not select medicines, handle bank credentials or override the person's choices. A small paid errand companionship trial within one building reveals the waiting, lift and coordination time a simple description hides.",
+      "who_pays_you": "Older residents or their families pay you for a reliable errand companionship routine. A request can become medical or financial decision-making. You ask seniors what help they actually want, without assuming. Show the errand companionship steps you would follow, including who approves exceptions. Some residents may benefit from errand companionship but never use the service; do not share their details to find customers. Ask interested neighbours to opt in to errand companionship and explain the fee before seeking access or an advance.",
+      "how_money_comes": "Charge per outing with a clear time and travel limit. Count errand companionship preparation, waiting, the task and a written handover. Extra errand companionship work beyond agreed hours needs a separate fee and approval. Keep committee money, resident payments and your errand companionship service charge clearly recorded. If a errand companionship booking is cancelled, follow the rule shared before acceptance. Review the actual errand companionship work after a few trials before promising a monthly rate.",
+      "what_you_need": "You need a phone, emergency contact and a simple receipt handover, permission and a responsible contact. Make the errand companionship checklist short enough for a busy evening. Keep errand companionship addresses, keys and phone numbers secure, and return access when the job ends. Do not select medicines, handle bank credentials or override the person's choices. Tell the errand companionship buyer who will help if you cannot arrive; never send an unapproved substitute into a private space.",
+      "first_30_days": [
+        "Ask an older resident what part of an errand is tiring.",
+        "Agree on route, purchases, timing and emergency contact.",
+        "Do one paid outing while a trusted contact knows the plan.",
+        "Hand over receipts and change promptly.",
+        "Review whether the service supports independence as intended."
+      ],
+      "what_hurts": "A request can become medical or financial decision-making. Do not select medicines, handle bank credentials or override the person's choices. A friendly neighbour may ask for an extra errand companionship favour when you need to leave. The errand companionship route can be delayed by access, lifts or a committee decision. Put a errand companionship exception in the agreed channel, record what happened and do not pretend you completed a visit you missed. A errand companionship mistake in a close community travels quickly, so correct it plainly.",
+      "verdict": "Build this if you can keep scheduled errand companionship reliable and make older neighbours feel respected. Walk away if the client expects medical or money decisions from you. An older neighbour should stay in charge of the errand.",
+      "faq": [
+        {
+          "q": "Can I pick up a prescription?",
+          "a": "Follow the pharmacy's rules and the resident's explicit instructions. Do not choose a substitute medicine or give dosing advice. Agree on the practical rule before the first booking."
+        },
+        {
+          "q": "Should a family member book without asking the senior?",
+          "a": "The older person's own wishes and consent matter. Confirm the service with them directly wherever possible and agree on a respectful communication path."
+        },
+        {
+          "q": "What if they need mobility assistance?",
+          "a": "Describe what you can safely do and when trained help is needed. Do not promise lifting or medical care beyond your ability."
+        }
+      ],
+      "validate_prompt": "I want to accompany older neighbours on errands in India. How should I price a route and respect consent and medical boundaries?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S05-I08",
+      "slug": "weekend-children-reading-corner",
+      "title": "Weekend Children Reading Corner",
+      "hook": "The society library has children's books, but the room is empty on Saturday and parents are busy.",
+      "summary": "You offer a supervised weekend reading corner to parents and children in one building. Parents pay for a defined reading corner routine, permission and a verified handover. Begin with a few willing reading corner bookings and agreed hours so the service fits around your main work.",
+      "what_it_is": "The society library has children's books, but the room is empty on Saturday and parents are busy. You agree on committee room approval and parent consent before taking the first booking. Then you run a small age-appropriate reading session with sign-in and pickup, using a short checklist and a handover the buyer can verify. Tell parents and children exactly when the reading corner service starts and ends, and who makes decisions when something unexpected happens. Keep reading corner details in an approved place rather than a public society chat. Do not accept a child without a named responsible pickup adult. A small paid reading corner trial within one building reveals the waiting, lift and coordination time a simple description hides.",
+      "who_pays_you": "Parents pay you for a reliable reading corner routine. A group can become childcare beyond the reading session. You invite a few families to a paid pilot. Show the reading corner steps you would follow, including who approves exceptions. Some residents may benefit from reading corner but never use the service; do not share their details to find customers. Ask interested neighbours to opt in to reading corner and explain the fee before seeking access or an advance.",
+      "how_money_comes": "Charge a per-child session fee with a firm group size. Count reading corner preparation, waiting, the task and a written handover. Extra reading corner work beyond agreed hours needs a separate fee and approval. Keep committee money, resident payments and your reading corner service charge clearly recorded. If a reading corner booking is cancelled, follow the rule shared before acceptance. Review the actual reading corner work after a few trials before promising a monthly rate.",
+      "what_you_need": "You need age-appropriate books, a safe room and clear pickup process, permission and a responsible contact. Make the reading corner checklist short enough for a busy evening. Keep reading corner addresses, keys and phone numbers secure, and return access when the job ends. Do not accept a child without a named responsible pickup adult. Tell the reading corner buyer who will help if you cannot arrive; never send an unapproved substitute into a private space.",
+      "first_30_days": [
+        "Ask the committee for room and safeguarding rules.",
+        "Choose a small age range and permitted book set.",
+        "Get written parent consent and pickup contacts.",
+        "Run one paid short session with a clear start and end.",
+        "Ask children and parents which stories held attention."
+      ],
+      "what_hurts": "A group can become childcare beyond the reading session. Do not accept a child without a named responsible pickup adult. A friendly neighbour may ask for an extra reading corner favour when you need to leave. The reading corner route can be delayed by access, lifts or a committee decision. Put a reading corner exception in the agreed channel, record what happened and do not pretend you completed a visit you missed. A reading corner mistake in a close community travels quickly, so correct it plainly.",
+      "verdict": "Build this if you can keep a supervised weekend reading corner reliable and make parents and children feel respected. Walk away if you cannot keep a safe group and named pickup contacts. A parent must know exactly who has their child.",
+      "faq": [
+        {
+          "q": "Can parents leave children for the whole afternoon?",
+          "a": "No, unless you have agreed and can safely provide that separate service. A reading corner has a specific duration, group size and pickup rule."
+        },
+        {
+          "q": "May I photograph children reading?",
+          "a": "Only with explicit parent permission for the specific use. A successful session does not require posting children's faces. Agree on the practical rule before the first booking."
+        },
+        {
+          "q": "What if a parent is late?",
+          "a": "Have an approved late pickup process and emergency contact before the first session. Do not leave a child alone when the reading time ends."
+        }
+      ],
+      "validate_prompt": "I want to run a small paid children reading corner in an Indian society. What room, consent and pickup rules should I arrange?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S05-I09",
+      "slug": "festival-common-area-setup",
+      "title": "Festival Common Area Setup Crew",
+      "hook": "The society festival begins at dusk, and the volunteers are still finding chairs and lights.",
+      "summary": "You offer a small event setup and cleanup service to residents gathering in the courtyard in one building. The festival committee pays for a defined festival setup routine, permission and a verified handover. Begin with a few willing festival setup bookings and agreed hours so the service fits around your main work.",
+      "what_it_is": "The society festival begins at dusk, and the volunteers are still finding chairs and lights. You agree on committee event plan, fire and electrical rules before taking the first booking. Then you place approved furniture, signs and decorations before guests arrive, using a short checklist and a handover the buyer can verify. Tell residents gathering in the courtyard exactly when the festival setup service starts and ends, and who makes decisions when something unexpected happens. Keep festival setup details in an approved place rather than a public society chat. Do not wire lights or block exits without qualified approval. A small paid festival setup trial within one building reveals the waiting, lift and coordination time a simple description hides.",
+      "who_pays_you": "The festival committee pays you for a reliable festival setup routine. Rain or a late vendor can upset the setup sequence. You ask the committee which setup tasks volunteers cannot cover. Show the festival setup steps you would follow, including who approves exceptions. Some residents may benefit from festival setup but never use the service; do not share their details to find customers. Ask interested neighbours to opt in to festival setup and explain the fee before seeking access or an advance.",
+      "how_money_comes": "Charge a per-event fee for defined setup and cleanup hours. Count festival setup preparation, waiting, the task and a written handover. Extra festival setup work beyond agreed hours needs a separate fee and approval. Keep committee money, resident payments and your festival setup service charge clearly recorded. If a festival setup booking is cancelled, follow the rule shared before acceptance. Review the actual festival setup work after a few trials before promising a monthly rate.",
+      "what_you_need": "You need a layout plan, safe lifting help and approved equipment, permission and a responsible contact. Make the festival setup checklist short enough for a busy evening. Keep festival setup addresses, keys and phone numbers secure, and return access when the job ends. Do not wire lights or block exits without qualified approval. Tell the festival setup buyer who will help if you cannot arrive; never send an unapproved substitute into a private space.",
+      "first_30_days": [
+        "Walk the space with the committee and mark clear exits.",
+        "List equipment, helpers, setup time and cleanup responsibility.",
+        "Quote a paid small event with a weather plan.",
+        "Check furniture and signs before guests arrive.",
+        "Return borrowed items and report damage after cleanup."
+      ],
+      "what_hurts": "Rain or a late vendor can upset the setup sequence. Do not wire lights or block exits without qualified approval. A friendly neighbour may ask for an extra festival setup favour when you need to leave. The festival setup route can be delayed by access, lifts or a committee decision. Put a festival setup exception in the agreed channel, record what happened and do not pretend you completed a visit you missed. A festival setup mistake in a close community travels quickly, so correct it plainly.",
+      "verdict": "Build this if you can keep a small event setup and cleanup service reliable and make residents gathering in the courtyard feel respected. Walk away if the committee cannot approve layout and safe exits. Neighbours deserve a safe place to gather.",
+      "faq": [
+        {
+          "q": "Can I install electrical decorations?",
+          "a": "Only within your competence and the committee's rules. Use a qualified person for wiring. Your setup role can focus on layout and safe placement."
+        },
+        {
+          "q": "Who supplies chairs and materials?",
+          "a": "Name the supplier and quantities in the event plan. Your fee should not quietly absorb rental and transport costs. Agree on the practical rule before the first booking."
+        },
+        {
+          "q": "What if rain changes the venue?",
+          "a": "Agree on one approving committee contact and a backup layout. Do not move signs or equipment into unsafe exits in a rush."
+        }
+      ],
+      "validate_prompt": "I want to offer festival common area setup for an Indian housing society. How should I scope permission, helpers and cleanup?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S05-I10",
+      "slug": "society-visitor-event-checkin",
+      "title": "Society Event Visitor Check In",
+      "hook": "Guests arrive for a society meeting, and the gate queue grows because nobody has the approved list.",
+      "summary": "You offer a temporary event visitor check-in desk to invited guests in one building. The event committee pays for a defined visitor check-in routine, permission and a verified handover. Begin with a few willing visitor check-in bookings and agreed hours so the service fits around your main work.",
+      "what_it_is": "Guests arrive for a society meeting, and the gate queue grows because nobody has the approved list. You agree on security supervisor and committee visitor policy before taking the first booking. Then you match the approved list and direct people to the right room, using a short checklist and a handover the buyer can verify. Tell invited guests exactly when the visitor check-in service starts and ends, and who makes decisions when something unexpected happens. Keep visitor check-in details in an approved place rather than a public society chat. Security decides access exceptions; you follow the approved list. A small paid visitor check-in trial within one building reveals the waiting, lift and coordination time a simple description hides.",
+      "who_pays_you": "The event committee pays you for a reliable visitor check-in routine. A wrong name match can deny entry or expose a visitor's details. You ask organisers where past guest queues formed. Show the visitor check-in steps you would follow, including who approves exceptions. Some residents may benefit from visitor check-in but never use the service; do not share their details to find customers. Ask interested neighbours to opt in to visitor check-in and explain the fee before seeking access or an advance.",
+      "how_money_comes": "Charge a per-event fee for a defined check-in shift. Count visitor check-in preparation, waiting, the task and a written handover. Extra visitor check-in work beyond agreed hours needs a separate fee and approval. Keep committee money, resident payments and your visitor check-in service charge clearly recorded. If a visitor check-in booking is cancelled, follow the rule shared before acceptance. Review the actual visitor check-in work after a few trials before promising a monthly rate.",
+      "what_you_need": "You need approved guest list, secure device and visible directions, permission and a responsible contact. Make the visitor check-in checklist short enough for a busy evening. Keep visitor check-in addresses, keys and phone numbers secure, and return access when the job ends. Security decides access exceptions; you follow the approved list. Tell the visitor check-in buyer who will help if you cannot arrive; never send an unapproved substitute into a private space.",
+      "first_30_days": [
+        "Meet security and agree on the event access procedure.",
+        "Test a fictional guest list and duplicate-name scenario.",
+        "Take a paid check-in shift for one small event.",
+        "Escalate unclear entries to the named supervisor.",
+        "Return or delete the guest list under the agreed rule."
+      ],
+      "what_hurts": "A wrong name match can deny entry or expose a visitor's details. Security decides access exceptions; you follow the approved list. A friendly neighbour may ask for an extra visitor check-in favour when you need to leave. The visitor check-in route can be delayed by access, lifts or a committee decision. Put a visitor check-in exception in the agreed channel, record what happened and do not pretend you completed a visit you missed. A visitor check-in mistake in a close community travels quickly, so correct it plainly.",
+      "verdict": "Build this if you can keep a temporary event visitor check-in desk reliable and make invited guests feel respected. Walk away if security expects you to improvise access decisions at the gate. A visitor deserves a calm answer without losing privacy.",
+      "faq": [
+        {
+          "q": "Can I let an unlisted guest in?",
+          "a": "Follow the society's visitor policy and ask the authorised supervisor. A friendly request at a busy gate is not permission to bypass the rule."
+        },
+        {
+          "q": "Should I photograph identity documents?",
+          "a": "Only if the society has a lawful, approved need and secure process. Do not store guest IDs on a personal phone for convenience."
+        },
+        {
+          "q": "What if two guests share a name?",
+          "a": "Use the approved additional detail and ask security when uncertain. A clear list should avoid exposing another visitor's information in the queue."
+        }
+      ],
+      "validate_prompt": "I want to run event check-in for an Indian apartment society. What guest-list privacy and security escalation rules should I follow?",
+      "investment_band": "zero",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional",
+        "senior_citizen"
+      ],
+      "place": [
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    }
+  ]
+}
