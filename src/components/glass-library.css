@@ -198,3 +198,33 @@
 .glass-home .gl-result-count { color:var(--gh-muted); font-size:.9rem; }
 @media(max-width:850px) { .glass-home .gl-calculator-layout { grid-template-columns:1fr; }.glass-home .gl-calculator-results { position:static; }.glass-home .gl-search-results { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:680px) { .glass-home .gl-calculator-hero { padding:2.2rem 1.35rem; border-radius:27px; }.glass-home .gl-calculator-panel { padding:1.35rem; }.glass-home .gl-field-grid, .glass-home .gl-search-results { grid-template-columns:1fr; }.glass-home .gl-search-form { flex-direction:column; }.glass-home .gl-search-form .gh-button { justify-content:center; } }
+
+/* Pricing, sign-in, and guide index */
+.glass-home .gl-pricing-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; margin-top:2rem; }
+.glass-home .gl-pricing-card { display:flex; flex-direction:column; align-items:start; padding:2rem; border:1px solid #fff; border-radius:27px; background:#ffffffc4; box-shadow:0 12px 35px #5653760d; }
+.glass-home .gl-pricing-card h3 { margin:1rem 0 .6rem; font-size:2rem; line-height:1.15; letter-spacing:-.04em; }
+.glass-home .gl-pricing-card > p { color:var(--gh-muted); line-height:1.7; }
+.glass-home .gl-pricing-card ul { display:grid; gap:.75rem; list-style:none; margin:1.4rem 0 2rem; padding:0; }
+.glass-home .gl-pricing-card li { display:flex; align-items:center; gap:.7rem; font-size:.94rem; }.glass-home .gl-pricing-card li svg { flex:none; color:#6e5bcb; }
+.glass-home .gl-pricing-card .gh-button { margin-top:auto; }
+.glass-home .gl-pricing-note { margin-top:2rem; }
+.glass-home .gl-sign-page { min-height:80vh; }
+.glass-home .gl-sign-card { display:grid; justify-items:center; text-align:center; max-width:660px; margin:3rem auto; padding:clamp(2rem,5vw,4rem); border:1px solid #fff; border-radius:34px; background:radial-gradient(circle at 50% 0,#e8e3ff,transparent 55%),#ffffffca; box-shadow:0 20px 60px #47447314; }
+.glass-home .gl-sign-art { display:grid; place-items:center; width:85px; height:85px; margin-bottom:1.5rem; border-radius:28px; background:linear-gradient(145deg,#a392ef,#728ee9); box-shadow:0 12px 28px #7669c750; color:#fff; font-size:3rem; }
+.glass-home .gl-sign-card h1 { margin:.6rem 0; font-size:clamp(2.8rem,5vw,4.5rem); letter-spacing:-.06em; }.glass-home .gl-sign-card h1 em { font-style:normal; color:#7460d6; }
+.glass-home .gl-sign-card > p:not(.gh-eyebrow) { max-width:450px; color:var(--gh-muted); line-height:1.7; }
+.glass-home .gl-sign-card .gh-button { margin:1.5rem 0 .3rem; border:0; }
+.glass-home .gl-sign-card .gh-button:disabled { opacity:.7; cursor:wait; }
+.glass-home .gl-sign-card .gl-sign-error { color:#a5264b !important; font-weight:700; }
+.glass-home .gl-sign-card .gl-sign-small { font-size:.8rem; }
+.glass-home .gl-filter { display:flex; flex-wrap:wrap; gap:.5rem; margin:1.8rem 0; }
+.glass-home .gl-filter button { min-height:43px; padding:.55rem .9rem; border:1px solid #ddd9ef; border-radius:999px; background:#ffffffd4; color:#55566f; font-size:.82rem; font-weight:700; }
+.glass-home .gl-filter button[aria-pressed=true] { border-color:#7966d1; background:#7561d4; color:#fff; }
+.glass-home .gl-guide-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+.glass-home .gl-guide-card { display:flex; flex-direction:column; align-items:start; padding:1.75rem; border:1px solid #fff; border-radius:25px; background:#ffffffc0; }
+.glass-home .gl-guide-card .gh-eyebrow { display:inline-flex; align-items:center; gap:.4rem; }
+.glass-home .gl-guide-card h3 { margin:1rem 0 .6rem; font-size:1.5rem; line-height:1.25; letter-spacing:-.035em; }
+.glass-home .gl-guide-card h3 a:hover { color:#6550c1; }
+.glass-home .gl-guide-card p { margin:0; color:var(--gh-muted); font-size:.9rem; line-height:1.7; }
+.glass-home .gl-guide-card .gl-idea-action { margin-top:auto; padding-top:1.4rem; }
+@media(max-width:680px) { .glass-home .gl-pricing-grid, .glass-home .gl-guide-grid { grid-template-columns:1fr; }.glass-home .gl-pricing-card, .glass-home .gl-guide-card { padding:1.4rem; }.glass-home .gl-sign-card { margin:1.5rem auto; border-radius:26px; } }
