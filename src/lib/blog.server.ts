@@ -18,10 +18,11 @@ const SOURCE_IDEA_ALIASES: Record<string, string> = {
 
 /** Legacy post copy contains original idea slugs. Seven have since changed.
  * Keep the authored HTML intact on disk and map those links only in output.
+ * Local idea routes read completed source blueprints when the target schema lacks them.
  */
-function linkToSourceBlueprints(html: string): string {
+function linkToLocalBlueprints(html: string): string {
   return html.replace(/href="\/idea\/([^"#?]+)"/g, (_match, slug: string) =>
-    `href="https://bbusiness.online/idea/${SOURCE_IDEA_ALIASES[slug] ?? slug}"`,
+    `href="/idea/${SOURCE_IDEA_ALIASES[slug] ?? slug}"`,
   );
 }
 
@@ -68,7 +69,7 @@ export async function fetchPostBySlug(slug: string): Promise<{
   return {
     post: {
       ...toCard(row),
-      html: linkToSourceBlueprints(sanitizeHtml(row.html ?? "")),
+      html: linkToLocalBlueprints(sanitizeHtml(row.html ?? "")),
       sourceUrl: `${siteUrl()}/blog/${row.slug}`,
     },
     related: PUBLISHED_BLOG_POSTS.filter((item) => item.slug !== slug).slice(0,3).map(toCard),

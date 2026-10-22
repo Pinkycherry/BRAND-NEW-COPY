@@ -78,7 +78,6 @@ function BlogArticle() {
           <img src={post.image} alt={post.imageAlt ?? post.title} width={post.imageWidth ?? 1672} height={post.imageHeight ?? 941} loading="eager" fetchPriority="high" decoding="async" ref={hideImgIfBroken} />
           {post.imageCaption && <figcaption>{post.imageCaption}</figcaption>}
         </figure>}
-        <p className="gl-source-note">Idea links in this source article open the existing blueprint library while those records are being moved into this demo.</p>
         <div className="gl-prose" dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
       {related.length > 0 && <section className="gl-related-articles" aria-labelledby="more-articles">

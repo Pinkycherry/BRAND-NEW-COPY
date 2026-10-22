@@ -72,7 +72,7 @@ The 23 posts contain 440 unique legacy `/idea/` links. Source project `public.id
 | `subscription-box-curation-software` | `subscription-box-software-business-idea` |
 | `invoice-template-sets-trades` | `passive-income-invoice-template-selling-business` |
 
-These article idea links currently open the existing source blueprint at bbusiness.online because the new demo idea schema has not imported the old library. The archived HTML in JSON is unchanged. When the old blueprints are migrated, update the render mapping and verify all 440 references. No source database records were modified.
+These article links now resolve locally to `/idea/:slug` in the new glass layout. The idea route prefers a new-schema published row and otherwise reads only `status=completed` source rows through `src/lib/legacy-ideas.functions.ts` with a public publishable key. The source data is read live rather than versioned in this repository; the 23 archived post bodies remain unchanged. The seven replacements are editorial best matches and should be reviewed before the actual domain release. No source database records were modified.
 
 ## Noindex release gate
 

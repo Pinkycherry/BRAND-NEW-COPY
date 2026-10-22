@@ -17,6 +17,7 @@ function Section({ eyebrow, title, children }: { eyebrow: string; title: string;
 export function LegacyIdeaPage({ idea }: { idea: LegacyIdea }) {
   const [copied, setCopied] = useState(false);
   const image = categoryImage(idea.categorySlug);
+  const intro = idea.description.split(/(?<=[.!?])\s+/)[0]?.slice(0, 260) || idea.summary.slice(0, 260);
   const category = TAXONOMY.find((item) => item.slug === idea.categorySlug);
   const share = async () => {
     try { await navigator.clipboard.writeText(window.location.href); setCopied(true); window.setTimeout(() => setCopied(false), 2500); }
@@ -25,7 +26,7 @@ export function LegacyIdeaPage({ idea }: { idea: LegacyIdea }) {
   return <><JsonLd schema={[articleSchema({ path: "/idea/" + idea.slug, headline: idea.title, description: idea.description || idea.summary, datePublished: idea.createdAt, categoryName: idea.categoryName, image: image.src }), breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Browse", path: "/browse" }, { name: idea.title, path: "/idea/" + idea.slug }])]}/><GlassShell><div className="gl-page gl-idea-page gl-legacy-idea">
     <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/browse">Explore</Link><span>/</span>{category && <><Link to="/category/$categorySlug" params={{ categorySlug: category.slug }}>{category.short}</Link><span>/</span></>}<span>{idea.title}</span></nav>
     <header className="gl-idea-hero gl-legacy-hero">
-      <div><p className="gh-eyebrow">A PUBLISHED BBI BLUEPRINT</p><h1>{idea.title}</h1><p className="gl-idea-hook">{idea.summary}</p><p className="gl-legacy-category">{idea.categoryName}{idea.subcategoryName ? " · " + idea.subcategoryName : ""}</p><div className="gl-idea-actions"><a href="#validate" className="gh-button gh-button-primary">Validate this idea <ArrowUpRight size={17} /></a><a href="#blueprint" className="gh-button gh-button-secondary">Read the blueprint</a><button type="button" className="gh-button gh-button-secondary" onClick={share}>{copied ? <Check size={17} /> : <Copy size={17} />}{copied ? "Link copied" : "Copy link"}</button></div></div>
+      <div><p className="gh-eyebrow">A PUBLISHED BBI BLUEPRINT</p><h1>{idea.title}</h1><p className="gl-idea-hook">{intro}</p><p className="gl-legacy-category">{idea.categoryName}{idea.subcategoryName ? " · " + idea.subcategoryName : ""}</p><div className="gl-idea-actions"><a href="#validate" className="gh-button gh-button-primary">Validate this idea <ArrowUpRight size={17} /></a><a href="#blueprint" className="gh-button gh-button-secondary">Read the blueprint</a><button type="button" className="gh-button gh-button-secondary" onClick={share}>{copied ? <Check size={17} /> : <Copy size={17} />}{copied ? "Link copied" : "Copy link"}</button></div></div>
       <figure className="gl-image-hero"><img src={image.src} alt={image.alt} width={1280} height={549} loading="eager" fetchPriority="high" /><figcaption>{image.description}</figcaption></figure>
     </header>
     <div className="gl-idea-layout"><article className="gl-idea-body" id="blueprint">
