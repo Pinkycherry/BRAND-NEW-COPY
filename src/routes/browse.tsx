@@ -93,6 +93,7 @@ function BrowsePage() {
               </div>
             )}
           </section>
+          <section className="gl-blueprint-invite"><div><p className="gh-eyebrow">ALREADY RESEARCHED</p><h2>Browse published idea blueprints.</h2><p>Explore the completed BBI library by title, then open any idea in the new layout.</p></div><Link to="/blueprints" className="gh-button gh-button-primary">See published blueprints <ArrowUpRight size={18} /></Link></section>
           <aside className="gl-bottom-note"><div><p className="gh-eyebrow">A CLEARER START</p><h2>Take one path at a time.</h2><p>Some subcategories are still filling up with published ideas. You can explore the structure now, and we will show the current content honestly on each page.</p></div><Link to="/calculator" className="gh-button gh-button-primary">Try a calculator <ArrowUpRight size={18} /></Link></aside>
         </div>
       </GlassShell>

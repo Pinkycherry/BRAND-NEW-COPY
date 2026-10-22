@@ -329,3 +329,21 @@
 
 .glass-home .gl-legacy-hero h1 { max-width:17ch; font-size:clamp(2.4rem,4.1vw,4.4rem); line-height:1.05; }
 .glass-home .gl-legacy-hero .gl-idea-hook { max-width:58ch; font-size:clamp(1.05rem,1.45vw,1.25rem); line-height:1.55; }
+
+/* Searchable index for completed source blueprints. */
+.glass-home .gl-blueprint-invite { display:flex; align-items:center; justify-content:space-between; gap:2rem; margin-top:4rem; padding:2.5rem; border:1px solid #fff; border-radius:30px; background:linear-gradient(120deg,#f0ecff,#e8f3ff); }
+.glass-home .gl-blueprint-invite h2 { margin:.35rem 0; font-size:clamp(1.8rem,3vw,2.7rem); letter-spacing:-.05em; }
+.glass-home .gl-blueprint-invite p:not(.gh-eyebrow) { margin:.3rem 0 0; color:var(--gh-muted); line-height:1.6; }
+.glass-home .gl-blueprint-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.1rem; margin-top:2rem; }
+.glass-home .gl-blueprint-card { min-width:0; overflow:hidden; border:1px solid #fff; border-radius:26px; background:#ffffffc7; box-shadow:0 13px 35px #57527512; }
+.glass-home .gl-blueprint-media { display:block; aspect-ratio:21/9; overflow:hidden; background:#e9e7f4; }
+.glass-home .gl-blueprint-media img { display:block; width:100%; height:100%; object-fit:cover; }
+.glass-home .gl-blueprint-card > div { display:flex; flex-direction:column; gap:.65rem; min-height:250px; padding:1.4rem; }
+.glass-home .gl-blueprint-card h3 { margin:0; font-size:1.25rem; line-height:1.25; letter-spacing:-.03em; }
+.glass-home .gl-blueprint-card h3 a:hover { color:#604db6; }
+.glass-home .gl-blueprint-card p:not(.gh-eyebrow) { margin:0; color:var(--gh-muted); font-size:.87rem; line-height:1.55; }
+.glass-home .gl-blueprint-card .gl-idea-action { display:inline-flex; gap:.4rem; align-items:center; margin-top:auto; color:#5e4eba; font-size:.84rem; font-weight:750; }
+.glass-home .gl-blueprint-pagination { display:flex; justify-content:center; align-items:center; gap:1.3rem; margin-top:2.2rem; font-size:.85rem; }
+.glass-home .gl-blueprint-pagination a { display:inline-flex; gap:.3rem; align-items:center; min-height:44px; padding:.6rem 1rem; border:1px solid #dcd8f4; border-radius:12px; color:#5e4eba; background:#fff; font-weight:750; }
+@media(max-width:920px) { .glass-home .gl-blueprint-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:680px) { .glass-home .gl-blueprint-grid { grid-template-columns:1fr; }.glass-home .gl-blueprint-invite { display:block; padding:2rem 1.35rem; }.glass-home .gl-blueprint-invite .gh-button { margin-top:1.2rem; } }

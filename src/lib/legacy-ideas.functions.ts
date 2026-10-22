@@ -58,3 +58,32 @@ export const getLegacyIdea = createServerFn({ method: "GET" })
       faq: questions(row.faq_json),
     };
   });
+
+
+export type LegacyIdeaCard = {
+  slug: string; title: string; description: string; categoryName: string; categorySlug: string;
+};
+export const getLegacyIdeaCards = createServerFn({ method: "GET" })
+  .inputValidator((input: unknown) => z.object({
+    q: z.string().trim().max(80).default(""),
+    page: z.number().int().min(1).max(100).default(1),
+  }).parse(input))
+  .handler(async ({ data }): Promise<{ items: LegacyIdeaCard[]; total: number; page: number }> => {
+    const perPage = 24;
+    let query = source().from("ideas")
+      .select("slug,title,business_description,category_name,category_slug", { count: "exact" })
+      .eq("status", "completed");
+    const term = data.q.replace(/[%_,()]/g, "").trim();
+    if (term) query = query.ilike("title", "%" + term + "%");
+    const { data: rows, count, error } = await query.order("title", { ascending: true })
+      .range((data.page - 1) * perPage, data.page * perPage - 1);
+    if (error) throw new Error("The published blueprint library could not load.");
+    return {
+      items: (rows ?? []).map((row) => ({
+        slug: row.slug, title: row.title,
+        description: (row.business_description ?? "").split(/(?<=[.!?])\s+/)[0]?.slice(0, 210) ?? "",
+        categoryName: row.category_name ?? "", categorySlug: row.category_slug ?? "",
+      })),
+      total: count ?? 0, page: data.page,
+    };
+  });
