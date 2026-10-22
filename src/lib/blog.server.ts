@@ -6,6 +6,25 @@ import {
 } from "./blog-shared";
 import { siteUrl } from "./site-config";
 
+const SOURCE_IDEA_ALIASES: Record<string, string> = {
+  "social-caption-template-packs": "passive-income-caption-template-selling-business",
+  "onboarding-checklist-sets-employers": "new-hire-onboarding-document-service",
+  "niche-job-board-one-trade": "niche-job-board-business-idea-2",
+  "home-inspector-member-community": "home-inspector-membership-community-idea",
+  "weekend-coffee-roasting-market": "part-time-coffee-roasting-business",
+  "subscription-box-curation-software": "subscription-box-software-business-idea",
+  "invoice-template-sets-trades": "passive-income-invoice-template-selling-business",
+};
+
+/** Legacy post copy contains original idea slugs. Seven have since changed.
+ * Keep the authored HTML intact on disk and map those links only in output.
+ */
+function linkToSourceBlueprints(html: string): string {
+  return html.replace(/href="\/idea\/([^"#?]+)"/g, (_match, slug: string) =>
+    `href="https://bbusiness.online/idea/${SOURCE_IDEA_ALIASES[slug] ?? slug}"`,
+  );
+}
+
 /** Published source rows are versioned with this demo because its database
  * does not contain blog_posts. The file set contains no drafts or user data.
  * The original body is sanitized on the way out, as in the staging site.
@@ -49,7 +68,7 @@ export async function fetchPostBySlug(slug: string): Promise<{
   return {
     post: {
       ...toCard(row),
-      html: sanitizeHtml(row.html ?? "").replace(/href="\/idea\//g, 'href="https://bbusiness.online/idea/'),
+      html: linkToSourceBlueprints(sanitizeHtml(row.html ?? "")),
       sourceUrl: `${siteUrl()}/blog/${row.slug}`,
     },
     related: PUBLISHED_BLOG_POSTS.filter((item) => item.slug !== slug).slice(0,3).map(toCard),
