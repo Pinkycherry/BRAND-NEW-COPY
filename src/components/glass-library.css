@@ -297,3 +297,9 @@
 .glass-home .gl-related-articles .gl-guide-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
 @media(max-width:850px) { .glass-home .gl-related-articles .gl-guide-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:680px) { .glass-home .gl-related-articles .gl-guide-grid { grid-template-columns:1fr; } }
+
+.glass-home .gl-source-note { max-width:850px; margin:0 auto -1rem; padding:0 .4rem; color:#62647d; font-size:.82rem; line-height:1.5; }
+.glass-home .gl-prose table { display:block; max-width:100%; overflow-x:auto; border-collapse:separate; border-spacing:0; margin:1.5rem 0; font-size:.85rem; }
+.glass-home .gl-prose :is(th,td) { min-width:125px; padding:.7rem .85rem; border-right:1px solid #e4e1ef; border-bottom:1px solid #e4e1ef; text-align:left; vertical-align:top; }
+.glass-home .gl-prose th { color:#24263d; background:#f0edfc; }
+.glass-home .gl-prose tr:nth-child(even) td { background:#faf9ff; }

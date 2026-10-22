@@ -49,7 +49,7 @@ export async function fetchPostBySlug(slug: string): Promise<{
   return {
     post: {
       ...toCard(row),
-      html: sanitizeHtml(row.html ?? ""),
+      html: sanitizeHtml(row.html ?? "").replace(/href="\/idea\//g, 'href="https://bbusiness.online/idea/'),
       sourceUrl: `${siteUrl()}/blog/${row.slug}`,
     },
     related: PUBLISHED_BLOG_POSTS.filter((item) => item.slug !== slug).slice(0,3).map(toCard),
