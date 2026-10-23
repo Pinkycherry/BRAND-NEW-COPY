@@ -9,7 +9,7 @@
 .glass-home .gr-hero>div>p:not(.gh-eyebrow){max-width:57ch;color:#555d72;font-size:1.05rem}
 .glass-home .gr-hero .gh-button{margin-top:1rem}
 .glass-home .gr-hero-feature{display:flex;flex-direction:column;overflow:hidden;border-radius:25px 60px 25px 25px;background:#fff;box-shadow:0 18px 42px #403a6b30}
-.glass-home .gr-hero-feature img{display:block;width:100%;height:auto;aspect-ratio:1.6;object-fit:cover}
+.glass-home .gr-hero-feature img{display:block;width:100%;height:auto;object-fit:contain}
 .glass-home .gr-hero-feature>span{display:grid;gap:.3rem;padding:1rem 1.35rem 1.2rem;background:#fff;color:#242641}
 .glass-home .gr-hero-feature small{font-size:.69rem;font-weight:800;letter-spacing:.08em;color:#6e57b8}
 .glass-home .gr-hero-feature strong{font-size:1.3rem;line-height:1.2;max-width:30ch}
