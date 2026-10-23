@@ -137,9 +137,9 @@ This is a page-first editorial route collection. It is a plan, not a claim that 
 | `/unit-economics-india` | Is one sale worth repeating? Contribution, capacity and break-even. | Live; desktop-tested; phone QA open |
 | `/startup-cash-flow-india` | Will cash arrive before bills fall due? A timed cash calendar. | Live; desktop-tested; phone QA open |
 | `/business-demand-test-india` | Does interest become a commitment? Conversation, pre-order and paid trial distinctions. | Live; desktop-tested; phone QA open |
-| `/startup-launch-plan-india` | What belongs in the first 30 days? Week-by-week decision gates. | Implemented on main; deployment and visual QA pending |
-| `/business-idea-pivot-or-stop` | When should I adjust or stop? Evidence thresholds and sunk cost check. | Implemented on main; deployment and visual QA pending |
-| `/founder-decision-journal` | What did I actually observe? Browser-local dated decision record. | Planned |
+| `/startup-launch-plan-india` | What belongs in the first 30 days? Week-by-week decision gates. | Live; desktop-tested; phone QA open |
+| `/business-idea-pivot-or-stop` | When should I adjust or stop? Evidence thresholds and sunk cost check. | Live; desktop-tested; phone QA open |
+| `/founder-decision-journal` | What did I actually observe? Browser-local dated decision record. | Implemented on main; deployment and visual QA pending |
 | `/startup-terms-india` | Which terms matter for my next decision? Existing 159-term glossary organized by moment. | Planned |
 | `/business-idea-reading-room` | What should I read next? Existing 20 guides and 23 posts grouped by decision, with original imagery. | Planned |
 | `/business-idea-toolkit` | Which working tool answers this question now? Existing calculators and validation entry, with honest availability. | Planned |
