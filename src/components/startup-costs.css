@@ -47,7 +47,7 @@
 .glass-home .sc-summary label input{margin-top:.35rem}
 .glass-home .sc-total{margin-top:1.3rem;padding:1.2rem;background:#292a4a;border-radius:16px;color:#fff}
 .glass-home .sc-total span,.glass-home .sc-total strong,.glass-home .sc-total small{display:block}
-.glass-home .sc-total strong{font-size:clamp(1.65rem,2.4vw,2.4rem);margin:.35rem 0;color:#fff}
+.glass-home .sc-summary .sc-total strong{font-size:clamp(1.65rem,2.4vw,2.4rem);margin:.35rem 0;color:#fff}
 .glass-home .sc-total small{color:#d9d7ed;line-height:1.5}
 .glass-home .sc-caveat{font-size:.79rem;color:#656b7d;margin-bottom:0}
 .glass-home .sc-patterns{display:grid;grid-template-columns:minmax(0,.43fr) minmax(0,.57fr);gap:3.5rem;padding:4rem 0}
