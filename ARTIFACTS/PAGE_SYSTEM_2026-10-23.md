@@ -201,3 +201,8 @@ The remaining proposed routes in the twenty-four-page collection are still plann
 ### Source article engagement — 23 Oct 2026, 13:04 IST
 
 The 20 guide and 23 journal detail routes retain original bodies and featured images. Their repeated mid-read four-card detour, section rail and bottom CTA now select three working pages from the article topic: buyer, pricing, cash, validation, launch or a general decision. Each card names the next question and action. This is a contextual route mapping, not a rewrite of the source copy; inspect representative source pages and improve individual guide/post metadata and prose where weak. All shared pages retain global noindex. Mobile layout uses a single card column under 620px; rendered phone QA remains open.
+
+
+## Complete collection map — 24 October 2026
+
+The full family, page content, section and contextual link blueprint, plus the redirect register and post-frame QA sequence, are recorded in [COMPLETE_PAGE_COLLECTION_BLUEPRINT_2026-10-24.md](COMPLETE_PAGE_COLLECTION_BLUEPRINT_2026-10-24.md). This 24-route table remains the authoritative implementation status ledger; the larger document covers existing source families as well as the distinct scenes.
