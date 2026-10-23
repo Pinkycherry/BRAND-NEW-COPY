@@ -128,7 +128,7 @@ This is a page-first editorial route collection. It is a plan, not a claim that 
 | `/startup-idea-comparison` | Which two ideas deserve a fair test? Evidence-based side-by-side comparison. | Live; desktop-tested; phone QA open |
 | `/business-idea-risk-check` | Which failure would hurt most? Personal downside and reversible experiment. | Live; desktop-tested; phone QA open |
 | `/business-idea-time-fit` | Can this coexist with my job, caregiving and commute? Weekly capacity map. | Live; desktop-tested; phone QA open |
-| `/side-business-ideas-india` | How do I start while earning elsewhere? Hours, boundaries and first sale plan. | Implemented on main; deployment and visual QA pending |
+| `/side-business-ideas-india` | How do I start while earning elsewhere? Hours, boundaries and first sale plan. | Live; desktop-tested; phone QA open |
 | `/local-business-ideas-india` | What does my neighbourhood need repeatedly? Catchment, channel and repeat purchase. | Planned |
 | `/online-business-ideas-india` | When does online distribution actually help? Acquisition and fulfilment reality. | Planned |
 | `/service-business-ideas-india` | How do I sell an ability before building a product? Scope, quote and delivery proof. | Planned |
