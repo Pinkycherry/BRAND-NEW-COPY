@@ -65,6 +65,7 @@ function GuidePage() {
         {breakAt < anchoredMarkdown.length && <div className="gl-prose"><Markdown rehypePlugins={[rehypeRaw]} components={{ a: ({ href, children }) => href?.startsWith("/") ? <Link to={href as "/"}>{children}</Link> : <a href={href}>{children}</a>, img: ({ src, alt }) => <img src={src} alt={alt ?? ""} loading="lazy" /> }}>{anchoredMarkdown.slice(breakAt)}</Markdown></div>}
         </div><ReaderCompanion sections={sections} label="Guide sections" topic={guide.slug} /></div>
       </article>
+      <p className="gl-reading-room-link"><Link to="/business-idea-reading-room">See this method beside an original founder article <ArrowUpRight size={17}/></Link></p>
       <nav className="gl-article-nav" aria-label="More guides">{previous && <Link to="/startup-guides/$slug" params={{ slug: previous.slug }}><span>← Previous guide</span><strong>{previous.title}</strong></Link>}{next && <Link to="/startup-guides/$slug" params={{ slug: next.slug }}><span>Next guide →</span><strong>{next.title}</strong></Link>}</nav>
       <aside className="gl-bottom-note"><div><p className="gh-eyebrow">BEFORE YOU LEAVE THIS GUIDE</p><h2>{readingPathsFor(guide.slug).question}</h2><p>{readingPathsFor(guide.slug).intro}</p></div><Link to={readingPathsFor(guide.slug).links[0].to as "/"} className="gh-button gh-button-primary">{readingPathsFor(guide.slug).links[0].title} <ArrowUpRight size={17} /></Link></aside>
     </div></GlassShell>

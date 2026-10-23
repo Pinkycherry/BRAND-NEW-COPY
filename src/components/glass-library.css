@@ -449,3 +449,8 @@
 .glass-home .gl-bottom-note{margin-top:2.8rem;padding:2rem}
 @media(max-width:830px){.glass-home .gl-reading-paths{grid-template-columns:1fr}.glass-home .gl-reading-path-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:620px){.glass-home .gl-reading-path-grid{grid-template-columns:1fr}.glass-home .gl-reading-path-grid a{min-height:0}.glass-home .gl-bottom-note{padding:1.35rem}}
+
+/* Single contextual return to the combined original source reading room. */
+.glass-home .gl-reading-room-link{margin:1.25rem 0 2rem;padding:15px 20px;background:#f3f1fc;border:1px solid #e7e1f7;border-radius:15px}
+.glass-home .gl-reading-room-link a{display:inline-flex;align-items:center;gap:8px;line-height:1.4;font-weight:800;color:#6753b8}
+.glass-home .gl-reading-room-link a:focus-visible{outline:3px solid #486bdb;outline-offset:3px}

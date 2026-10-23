@@ -97,6 +97,7 @@ function BlogArticle() {
           <ReaderCompanion sections={sections} label="Article sections" topic={post.slug} />
         </div>
       </article>
+      <p className="gl-reading-room-link"><Link to="/business-idea-reading-room">Pair this story with a source startup guide <ArrowUpRight size={17}/></Link></p>
       {related.length > 0 && <section className="gl-related-articles" aria-labelledby="more-articles">
         <p className="gh-eyebrow">KEEP READING</p><h2 id="more-articles">More from the journal.</h2>
         <div className="gl-guide-grid">{related.map((item) => <article key={item.id} className="gl-guide-card">
