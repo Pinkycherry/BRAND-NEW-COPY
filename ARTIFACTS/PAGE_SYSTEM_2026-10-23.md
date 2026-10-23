@@ -131,7 +131,7 @@ This is a page-first editorial route collection. It is a plan, not a claim that 
 | `/side-business-ideas-india` | How do I start while earning elsewhere? Hours, boundaries and first sale plan. | Live; desktop-tested; phone QA open |
 | `/local-business-ideas-india` | What does my neighbourhood need repeatedly? Catchment, channel and repeat purchase. | Live; desktop-tested; phone QA open |
 | `/online-business-ideas-india` | When does online distribution actually help? Acquisition and fulfilment reality. | Implemented on main; deployment and visual QA pending |
-| `/service-business-ideas-india` | How do I sell an ability before building a product? Scope, quote and delivery proof. | Planned |
+| `/service-business-ideas-india` | How do I sell an ability before building a product? Scope, quote and delivery proof. | Implemented on main; deployment and visual QA pending |
 | `/product-business-ideas-india` | What inventory and returns can I carry? Unit, stock and supplier decisions. | Planned |
 | `/business-pricing-india` | What price survives all costs? Price ladder and scenario worksheet. | Live; desktop-tested; phone QA open |
 | `/unit-economics-india` | Is one sale worth repeating? Contribution, capacity and break-even. | Live; desktop-tested; phone QA open |
