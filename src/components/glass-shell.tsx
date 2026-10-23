@@ -22,6 +22,7 @@ const navGroups = [
     { label: "60 calculators", to: "/calculator", description: "Use your own numbers" },
     { label: "Startup cost ledger", to: "/startup-costs-india", description: "Plan cash before a first sale" },
     { label: "First-price workbench", to: "/business-pricing-india", description: "Quote a defined offer" },
+    { label: "Cash-flow calendar", to: "/startup-cash-flow-india", description: "See when bills outrun collections" },
     { label: "Validate a published idea", to: "/blueprints", description: "Four external research choices on each idea" },
   ] },
   { label: "About", links: [
@@ -93,7 +94,7 @@ export function GlassFooter() {
         <div className="gh-footer-links">
           <div><h3>Ideas</h3><Link to="/business-ideas-india">Find your first move</Link><Link to="/business-models-india">Compare business models</Link><Link to="/browse">100 categories</Link><Link to="/blueprints">Published blueprints</Link><Link to="/search">Search ideas</Link><Link to="/sitemap">All pages</Link></div>
           <div><h3>Learn</h3><Link to="/startup-guides">Startup guides</Link><Link to="/startup-idea-validation">Validation field guide</Link><Link to="/blog">Founder journal</Link><Link to="/founder-glossary">Glossary</Link><Link to="/learning-resources">Resources</Link></div>
-          <div><h3>Build</h3><Link to="/startup-costs-india">Startup cost ledger</Link><Link to="/business-pricing-india">First-price workbench</Link><Link to="/calculator">Calculators</Link><Link to="/blueprints">Validate an idea</Link><Link to="/pricing">Pricing</Link><Link to="/services">Services</Link></div>
+          <div><h3>Build</h3><Link to="/startup-costs-india">Startup cost ledger</Link><Link to="/business-pricing-india">First-price workbench</Link><Link to="/startup-cash-flow-india">Cash-flow calendar</Link><Link to="/calculator">Calculators</Link><Link to="/blueprints">Validate an idea</Link><Link to="/pricing">Pricing</Link><Link to="/services">Services</Link></div>
           <div><h3>People & policies</h3><Link to="/about">Our story</Link><Link to="/founders">Founders</Link><Link to="/contact">Contact</Link><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link><Link to="/cookie-policy">Cookies</Link><Link to="/disclaimer">Disclaimer</Link></div>
         </div>
       </div>

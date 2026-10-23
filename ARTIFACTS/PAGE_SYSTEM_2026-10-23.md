@@ -165,3 +165,7 @@ The remaining proposed routes in the twenty-four-page collection are still plann
 ### New live route — 23 Oct 2026, 11:37 IST
 
 `/first-customer-india` is implemented and live-tested: trigger/workaround/payer map, three buying settings, conversation guide, signal ladder, tab-local evidence log, India delivery checks, FAQ and next paths. It is noindex. Guide and blog featured hero images were corrected to show their full original artwork and separate captions; pricing quote card corrected. Phone visual QA and deeper source-article copy review remain outstanding.
+
+### Cash-flow route — 23/10/2026, 11:46 IST
+
+`/startup-cash-flow-india` is live and browser-tested. With ₹3,100 opening cash, a ₹5,000 supplier bill, ₹8,000 collection, and ₹4,000 rent, dated balances are −₹1,900, ₹6,100, ₹2,100. The lowest balance is −₹1,900; the delayed-collections stress case is −₹5,900. The global noindex hold and desktop width check passed. The route is connected to the header, footer, cost and pricing pages. Mobile visual QA remains outstanding.
