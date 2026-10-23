@@ -8,10 +8,10 @@
 .glass-home .jr-hero h1{font-size:clamp(3rem,5vw,5.3rem);line-height:1.03;margin:.6rem 0 1rem;max-width:14ch}
 .glass-home .jr-hero>div>p:not(.gh-eyebrow){max-width:57ch;color:#555d72;font-size:1.05rem}
 .glass-home .jr-hero .gh-button{margin-top:1rem}
-.glass-home .jr-feature{display:block;overflow:hidden;position:relative;aspect-ratio:1.22;border-radius:25px 60px 25px 25px;background:#d7dce9;box-shadow:0 18px 42px #403a6b30}
-.glass-home .jr-feature img{width:100%;height:100%;object-fit:cover}
-.glass-home .jr-feature>span{position:absolute;bottom:0;left:0;right:0;display:grid;gap:.35rem;padding:3rem 1.5rem 1.3rem;background:linear-gradient(transparent,#171727ed);color:#fff}
-.glass-home .jr-feature small{font-size:.69rem;font-weight:800;letter-spacing:.08em;color:#d8cfff}
+.glass-home .jr-feature{display:flex;flex-direction:column;overflow:hidden;border-radius:25px 60px 25px 25px;background:#fff;box-shadow:0 18px 42px #403a6b30}
+.glass-home .jr-feature img{display:block;width:100%;height:auto;aspect-ratio:1.6;object-fit:cover}
+.glass-home .jr-feature>span{display:grid;gap:.3rem;padding:1rem 1.35rem 1.2rem;background:#fff;color:#242641}
+.glass-home .jr-feature small{font-size:.69rem;font-weight:800;letter-spacing:.08em;color:#6e57b8}
 .glass-home .jr-feature strong{font-size:1.3rem;line-height:1.2;max-width:30ch}
 .glass-home .jr-feature>span>span{display:flex;align-items:center;gap:.3rem;font-size:.83rem}
 .glass-home .jr-questions{display:grid;grid-template-columns:minmax(0,.28fr) minmax(0,.72fr);gap:3rem;padding:3.8rem 0}
@@ -40,4 +40,4 @@
 .glass-home .jr-after a span{display:flex;align-items:center;gap:.35rem;color:#5e4eae;font-size:.85rem}
 .glass-home .jr-page .gl-bottom-note{margin-top:0}
 @media(max-width:950px){.glass-home .jr-hero,.glass-home .jr-questions,.glass-home .jr-evidence,.glass-home .jr-after{grid-template-columns:1fr;gap:1.5rem}}
-@media(max-width:650px){.glass-home .jr-page{width:min(100% - 1.25rem,600px)}.glass-home .jr-hero{padding:1.8rem 1.3rem;border-radius:26px 50px 26px 26px}.glass-home .jr-hero h1{font-size:clamp(2.7rem,11vw,3.8rem)}.glass-home .jr-feature{aspect-ratio:1.2}.glass-home .jr-questions,.glass-home .jr-index{padding-top:3rem}.glass-home .jr-question-grid{grid-template-columns:1fr}.glass-home .jr-evidence,.glass-home .jr-after{padding:1.5rem}.glass-home .jr-evidence>div:last-child>div,.glass-home .jr-after a{grid-template-columns:1fr;display:grid}}
+@media(max-width:650px){.glass-home .jr-page{width:min(100% - 1.25rem,600px)}.glass-home .jr-hero{padding:1.8rem 1.3rem;border-radius:26px 50px 26px 26px}.glass-home .jr-hero h1{font-size:clamp(2.7rem,11vw,3.8rem)}.glass-home .jr-questions,.glass-home .jr-index{padding-top:3rem}.glass-home .jr-question-grid{grid-template-columns:1fr}.glass-home .jr-evidence,.glass-home .jr-after{padding:1.5rem}.glass-home .jr-evidence>div:last-child>div,.glass-home .jr-after a{grid-template-columns:1fr;display:grid}}

@@ -13,7 +13,7 @@
 .glass-home .bp-hero .gh-button{margin-top:1rem}
 .glass-home .bp-hero aside{padding:2rem;border:1px solid #fff;border-radius:24px;background:#ffffffcf;box-shadow:0 16px 40px #4c46701d;transform:rotate(2deg)}
 .glass-home .bp-hero aside span{display:block;color:#745fc4;font-size:.73rem;font-weight:800;letter-spacing:.08em}
-.glass-home .bp-hero aside strong{display:block;margin:1rem 0;font-size:clamp(1.35rem,2.5vw,2.1rem);line-height:1.27}
+.glass-home .bp-hero aside strong{display:block;margin:1rem 0;font-size:clamp(1.35rem,2.2vw,1.9rem);line-height:1.32;text-wrap:balance}
 .glass-home .bp-hero aside p{color:#61677a;margin-bottom:0}
 .glass-home .bp-scope{display:grid;grid-template-columns:minmax(0,.32fr) minmax(0,.68fr);gap:3rem;padding:3.5rem 0}
 .glass-home .bp-scope>div p:not(.gh-eyebrow){color:#5b6276}
