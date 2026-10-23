@@ -5,7 +5,7 @@
 .glass-home .dt-page h1,.glass-home .dt-page h2,.glass-home .dt-page h3{color:#282943;letter-spacing:-.035em}
 .glass-home .dt-page h2{font-size:clamp(1.9rem,3vw,2.8rem);line-height:1.12;margin:.35rem 0 .8rem}
 .glass-home .dt-page p{line-height:1.58}
-.glass-home .dt-page section{scroll-margin-top:90px;padding:clamp(2.5rem,4.5vw,4rem) 0}
+.glass-home .dt-page section{scroll-margin-top:90px;padding:clamp(1.8rem,3vw,2.8rem) 0}
 .glass-home .dt-page a:not(.gh-button){display:inline-flex;align-items:center;gap:.4rem;color:#59449e;font-weight:750;text-decoration:none}
 .glass-home .dt-page a:hover{text-decoration:underline}
 .glass-home .dt-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.7fr);gap:2rem;align-items:center;padding:clamp(1.5rem,3vw,2.8rem);border:1px solid #fff;border-radius:27px 65px 27px 27px;background:linear-gradient(120deg,#fff,#e9e7f8 58%,#e6f4f4)}

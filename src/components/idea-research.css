@@ -17,7 +17,7 @@
 .glass-home .ir-hero li{display:flex;gap:.8rem;border-top:1px solid #dedceb;padding:.65rem 0;font-size:.88rem}
 .glass-home .ir-hero li span{color:#765dc6;font-weight:800}
 .glass-home .ir-hero aside p{font-size:.84rem;margin:0}
-.glass-home .ir-page section{padding:clamp(2.5rem,4.6vw,4rem) 0}
+.glass-home .ir-page section{padding:clamp(1.8rem,3vw,2.8rem) 0}
 .glass-home .ir-signal,.glass-home .ir-alternatives,.glass-home .ir-next,.glass-home .ir-faq{display:grid;grid-template-columns:minmax(0,.38fr) minmax(0,.62fr);gap:2rem}
 .glass-home .ir-signal>*,.glass-home .ir-alternatives>*,.glass-home .ir-next>*,.glass-home .ir-faq>*{min-width:0}
 .glass-home .ir-signal>div:first-child p:not(.gh-eyebrow),.glass-home .ir-alternatives>div:first-child p,.glass-home .ir-next>div:first-child p{color:#5a6174}

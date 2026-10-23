@@ -84,3 +84,6 @@
 
 .glass-home .fc-research-path{display:flex;align-items:center;gap:.5rem 1rem;flex-wrap:wrap;margin:0 0 2rem;padding:1rem 1.2rem;border-left:4px solid #7560c2;border-radius:9px;background:#eeebfa;color:#4b4d67;font-size:.9rem}
 .glass-home .fc-research-path a{display:inline-flex;align-items:center;gap:.35rem;color:#5542a6;font-weight:750}
+
+.glass-home .fc-signal-next{margin:1rem 0 0;color:#d9d7ec;font-size:.9rem}
+.glass-home .fc-signal-next a{display:inline-flex;align-items:center;gap:.3rem;color:#fff;font-weight:750;text-decoration:underline}

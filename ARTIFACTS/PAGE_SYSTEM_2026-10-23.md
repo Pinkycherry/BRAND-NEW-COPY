@@ -177,3 +177,7 @@ The remaining proposed routes in the twenty-four-page collection are still plann
 ### Demand-test page — 23 Oct 2026, 12:07 IST
 
 `/business-demand-test-india` implemented on main with three selectable commitment formats, a browser-local offer/audience/stop-condition slip, staged response counts with inconsistent-count warning, buyer and cash hooks, source journal artwork in a 16:9 containment stage, interpretation, FAQ and next decision. Verify Vercel, interaction, image, noindex and geometry before broad navigation integration. Mobile visual QA remains outstanding.
+
+### Demand-test live QA — 23 Oct 2026, 12:12 IST
+
+`/business-demand-test-india` deployed successfully and browser QA passed: booking selector changes the advice; 12 people shown the offer, five detail requests and two actions render “2 of 12”; noindex; 1363px viewport, 1348px document width; original journal artwork 1439×810 displayed in a 684×385 16:9 stage without cropping. A desktop screenshot exposed more vertical interval than needed between short sections, so the research and demand pages have tighter 1.8–2.8rem section spacing. Contextual hooks added to first-customer, research and validation. Phone visual QA remains outstanding.
