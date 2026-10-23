@@ -185,3 +185,7 @@ The remaining proposed routes in the twenty-four-page collection are still plann
 ### Two-idea comparison — 23 Oct 2026, 12:24 IST
 
 `/startup-idea-comparison` implemented: two named candidates, five evidence lenses, choose stronger side or unclear per lens, editable observation notes, risk/cash questions, illustrated service-vs-stock example, original library artwork in 16:9 containment, one-week fair test, decision note and FAQ. No numerical verdict or fake winner. Await live deployment, interaction, noindex, image and geometry QA before contextual links.
+
+### First Move repair — 23 Oct 2026, 12:33 IST
+
+`/business-ideas-india` rebuilt at the exact section the founder flagged: the sparse “cost of a wrong start is personal” panel now pairs an answer with three useful cash, buyer and idea-comparison paths. Decorative hero orbit replaced by live decision links. Oversized hero and 5rem intervals reduced; the proof row points to completed blueprint, demand test and price workbench. All category artwork uses an uncropped 16:9 contain stage; the validation guide art replaces decorative text slips. Desktop and mobile type rules tightened. Live deployment, images, links and noindex need verification.
