@@ -189,3 +189,7 @@ The remaining proposed routes in the twenty-four-page collection are still plann
 ### First Move repair — 23 Oct 2026, 12:33 IST
 
 `/business-ideas-india` rebuilt at the exact section the founder flagged: the sparse “cost of a wrong start is personal” panel now pairs an answer with three useful cash, buyer and idea-comparison paths. Decorative hero orbit replaced by live decision links. Oversized hero and 5rem intervals reduced; the proof row points to completed blueprint, demand test and price workbench. All category artwork uses an uncropped 16:9 contain stage; the validation guide art replaces decorative text slips. Desktop and mobile type rules tightened. Live deployment, images, links and noindex need verification.
+
+### Personal downside — 23 Oct 2026, 12:47 IST
+
+`/business-idea-risk-check` implemented: cash-versus-time boundary worksheet, five selectable operating patterns and smaller tests, risk/contradiction/stop notebook, relevant original guide art in a full 16:9 stage, buyer and money hooks, FAQ. No universal score. Await Vercel and live QA before linking broadly. The First Move page meanwhile passed live desktop QA: noindex, 1280×720 category art at 426×240, no overflow; the selected-situation panel now has a tested working destination.
