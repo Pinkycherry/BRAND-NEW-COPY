@@ -112,3 +112,38 @@ A page only gains a link when the destination is built, loads, answers the promi
 4. Strengthen the existing browse/category/idea and knowledge indexes using source images/content; make internal links only after destinations pass.
 5. Revisit home, shared header/footer and sitewide spacing *after* page families have substance. Check all routes sharing them.
 6. Keep a public route/status table in WORK_LOG.md: designed, implemented, built, live-tested, image-audited, SEO-hold-verified. Screenshot after three to five edits, and when visual correction is requested. Green build alone is not a live SSR test.
+
+## Twenty-four page collection — build sequence and real status
+
+This is a page-first editorial route collection. It is a plan, not a claim that all routes exist. The first three are implemented and live-tested; remaining routes require page-specific content and QA before broad navigation links. Preserve old published URLs as additional entry points. Each page must answer a distinct founder decision with examples, useful input or a source-backed method, intentional composition, natural India business/startup language and the global noindex hold.
+
+| Route | Founder question and designed anchor | Status |
+|---|---|---|
+| `/business-ideas-india` | Which business idea fits my actual constraints? Four starting choices, town/city context and next evidence. | Live; deepen |
+| `/startup-idea-validation` | What would count as proof before I pay? Six-step field guide and local decision notebook. | Live; deepen |
+| `/business-models-india` | How does this business actually make money? Five-model comparison and rupee worksheet. | Live; deepen |
+| `/startup-costs-india` | What must I pay before my first sale? Cost ledger, deposits, tools, working capital and contingency. | Next build |
+| `/first-customer-india` | Who will pay first and where can I meet them? Buyer map, outreach test and evidence notes. | Planned |
+| `/business-idea-research-india` | What can I learn in my own street and search results? Local demand walk and competitor observations. | Planned |
+| `/startup-idea-comparison` | Which two ideas deserve a fair test? Evidence-based side-by-side comparison. | Planned |
+| `/business-idea-risk-check` | Which failure would hurt most? Personal downside and reversible experiment. | Planned |
+| `/business-idea-time-fit` | Can this coexist with my job, caregiving and commute? Weekly capacity map. | Planned |
+| `/side-business-ideas-india` | How do I start while earning elsewhere? Hours, boundaries and first sale plan. | Planned |
+| `/local-business-ideas-india` | What does my neighbourhood need repeatedly? Catchment, channel and repeat purchase. | Planned |
+| `/online-business-ideas-india` | When does online distribution actually help? Acquisition and fulfilment reality. | Planned |
+| `/service-business-ideas-india` | How do I sell an ability before building a product? Scope, quote and delivery proof. | Planned |
+| `/product-business-ideas-india` | What inventory and returns can I carry? Unit, stock and supplier decisions. | Planned |
+| `/business-pricing-india` | What price survives all costs? Price ladder and scenario worksheet. | Planned |
+| `/unit-economics-india` | Is one sale worth repeating? Contribution, capacity and break-even. | Planned |
+| `/startup-cash-flow-india` | Will cash arrive before bills fall due? A timed cash calendar. | Planned |
+| `/business-demand-test-india` | Does interest become a commitment? Conversation, pre-order and paid trial distinctions. | Planned |
+| `/startup-launch-plan-india` | What belongs in the first 30 days? Week-by-week decision gates. | Planned |
+| `/business-idea-pivot-or-stop` | When should I adjust or stop? Evidence thresholds and sunk cost check. | Planned |
+| `/founder-decision-journal` | What did I actually observe? Browser-local dated decision record. | Planned |
+| `/startup-terms-india` | Which terms matter for my next decision? Existing 159-term glossary organized by moment. | Planned |
+| `/business-idea-reading-room` | What should I read next? Existing 20 guides and 23 posts grouped by decision, with original imagery. | Planned |
+| `/business-idea-toolkit` | Which working tool answers this question now? Existing calculators and validation entry, with honest availability. | Planned |
+
+### Collection order
+
+Build the money chain first: startup costs, pricing, unit economics, cash flow. Then buyer/evidence chain and starting context; finally decision/reference compositions. Deepen the existing guide and blog indexes in parallel with links to completed pages. After each route, verify live SSR, interactions, phone layout, image/alt, metadata and noindex. Link it from neighbouring pages only once the destination is useful. Screenshots after every three to five edits.
