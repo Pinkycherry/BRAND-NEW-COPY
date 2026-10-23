@@ -132,12 +132,12 @@ This is a page-first editorial route collection. It is a plan, not a claim that 
 | `/local-business-ideas-india` | What does my neighbourhood need repeatedly? Catchment, channel and repeat purchase. | Live; desktop-tested; phone QA open |
 | `/online-business-ideas-india` | When does online distribution actually help? Acquisition and fulfilment reality. | Live; desktop-tested; phone QA open |
 | `/service-business-ideas-india` | How do I sell an ability before building a product? Scope, quote and delivery proof. | Live; desktop-tested; phone QA open |
-| `/product-business-ideas-india` | What inventory and returns can I carry? Unit, stock and supplier decisions. | Implemented on main; deployment and visual QA pending |
+| `/product-business-ideas-india` | What inventory and returns can I carry? Unit, stock and supplier decisions. | Live; desktop-tested; phone QA open |
 | `/business-pricing-india` | What price survives all costs? Price ladder and scenario worksheet. | Live; desktop-tested; phone QA open |
 | `/unit-economics-india` | Is one sale worth repeating? Contribution, capacity and break-even. | Live; desktop-tested; phone QA open |
 | `/startup-cash-flow-india` | Will cash arrive before bills fall due? A timed cash calendar. | Live; desktop-tested; phone QA open |
 | `/business-demand-test-india` | Does interest become a commitment? Conversation, pre-order and paid trial distinctions. | Live; desktop-tested; phone QA open |
-| `/startup-launch-plan-india` | What belongs in the first 30 days? Week-by-week decision gates. | Planned |
+| `/startup-launch-plan-india` | What belongs in the first 30 days? Week-by-week decision gates. | Implemented on main; deployment and visual QA pending |
 | `/business-idea-pivot-or-stop` | When should I adjust or stop? Evidence thresholds and sunk cost check. | Planned |
 | `/founder-decision-journal` | What did I actually observe? Browser-local dated decision record. | Planned |
 | `/startup-terms-india` | Which terms matter for my next decision? Existing 159-term glossary organized by moment. | Planned |
