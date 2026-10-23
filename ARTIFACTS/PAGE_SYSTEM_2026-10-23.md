@@ -122,21 +122,21 @@ This is a page-first editorial route collection. It is a plan, not a claim that 
 | `/business-ideas-india` | Which business idea fits my actual constraints? Four starting choices, town/city context and next evidence. | Live; deepen |
 | `/startup-idea-validation` | What would count as proof before I pay? Six-step field guide and local decision notebook. | Live; deepen |
 | `/business-models-india` | How does this business actually make money? Five-model comparison and rupee worksheet. | Live; deepen |
-| `/startup-costs-india` | What must I pay before my first sale? Cost ledger, deposits, tools, working capital and contingency. | Next build |
-| `/first-customer-india` | Who will pay first and where can I meet them? Buyer map, outreach test and evidence notes. | Planned |
-| `/business-idea-research-india` | What can I learn in my own street and search results? Local demand walk and competitor observations. | Planned |
-| `/startup-idea-comparison` | Which two ideas deserve a fair test? Evidence-based side-by-side comparison. | Planned |
-| `/business-idea-risk-check` | Which failure would hurt most? Personal downside and reversible experiment. | Planned |
+| `/startup-costs-india` | What must I pay before my first sale? Cost ledger, deposits, tools, working capital and contingency. | Live; desktop-tested; phone QA open |
+| `/first-customer-india` | Who will pay first and where can I meet them? Buyer map, outreach test and evidence notes. | Live; desktop-tested; phone QA open |
+| `/business-idea-research-india` | What can I learn in my own street and search results? Local demand walk and competitor observations. | Live; desktop-tested; phone QA open |
+| `/startup-idea-comparison` | Which two ideas deserve a fair test? Evidence-based side-by-side comparison. | Live; desktop-tested; phone QA open |
+| `/business-idea-risk-check` | Which failure would hurt most? Personal downside and reversible experiment. | Live; desktop-tested; phone QA open |
 | `/business-idea-time-fit` | Can this coexist with my job, caregiving and commute? Weekly capacity map. | Planned |
 | `/side-business-ideas-india` | How do I start while earning elsewhere? Hours, boundaries and first sale plan. | Planned |
 | `/local-business-ideas-india` | What does my neighbourhood need repeatedly? Catchment, channel and repeat purchase. | Planned |
 | `/online-business-ideas-india` | When does online distribution actually help? Acquisition and fulfilment reality. | Planned |
 | `/service-business-ideas-india` | How do I sell an ability before building a product? Scope, quote and delivery proof. | Planned |
 | `/product-business-ideas-india` | What inventory and returns can I carry? Unit, stock and supplier decisions. | Planned |
-| `/business-pricing-india` | What price survives all costs? Price ladder and scenario worksheet. | Planned |
+| `/business-pricing-india` | What price survives all costs? Price ladder and scenario worksheet. | Live; desktop-tested; phone QA open |
 | `/unit-economics-india` | Is one sale worth repeating? Contribution, capacity and break-even. | Planned |
-| `/startup-cash-flow-india` | Will cash arrive before bills fall due? A timed cash calendar. | Planned |
-| `/business-demand-test-india` | Does interest become a commitment? Conversation, pre-order and paid trial distinctions. | Planned |
+| `/startup-cash-flow-india` | Will cash arrive before bills fall due? A timed cash calendar. | Live; desktop-tested; phone QA open |
+| `/business-demand-test-india` | Does interest become a commitment? Conversation, pre-order and paid trial distinctions. | Live; desktop-tested; phone QA open |
 | `/startup-launch-plan-india` | What belongs in the first 30 days? Week-by-week decision gates. | Planned |
 | `/business-idea-pivot-or-stop` | When should I adjust or stop? Evidence thresholds and sunk cost check. | Planned |
 | `/founder-decision-journal` | What did I actually observe? Browser-local dated decision record. | Planned |
