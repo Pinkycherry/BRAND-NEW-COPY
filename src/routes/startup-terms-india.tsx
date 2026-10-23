@@ -7,7 +7,7 @@ import { JsonLd, breadcrumbSchema, collectionPageSchema } from "@/lib/schema";
 import "@/components/startup-terms.css";
 
 const moments=[
- {name:"Find the buyer",question:"Who has the problem and how do I reach them?",slugs:["ideal-customer-profile","customer-acquisition-cost","customer-satisfaction"],route:"/first-customer-india",action:"Map a paying buyer"},
+ {name:"Find the buyer",question:"Who has the problem and how do I reach them?",slugs:["ideal-customer-profile","customer-acquisition-cost","csat"],route:"/first-customer-india",action:"Map a paying buyer"},
  {name:"Price one sale",question:"What stays with the business after the sale?",slugs:["gross-margin","unit-economics","working-capital"],route:"/unit-economics-india",action:"Run one-order numbers"},
  {name:"Test a version",question:"What should exist before a bigger build?",slugs:["minimum-viable-product","product-market-fit","pivot"],route:"/startup-idea-validation",action:"Design a small test"},
  {name:"Protect the cash",question:"How long can this commitment continue?",slugs:["burn-rate","runway","deferred-revenue"],route:"/startup-cash-flow-india",action:"Date the cash movement"}
