@@ -402,3 +402,9 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 ## 2026-10-23 13:06 IST — Route ledger corrected after failed table match
 - **Issue:** The preceding contextual article commit's automated status substitution missed all eight rows because the matching expression did not fit the Markdown line shape; its log text incorrectly said the table was marked live. This follow-up replaces the eight exact route row statuses with “Live; desktop-tested; phone QA open” while preserving all fourteen planned entries and the three prior live rows. No site route code changes in this commit.
 - **Audit:** `ARTIFACTS/PAGE_SYSTEM_2026-10-23.md` is the truthful 24-route ledger. Next: verify Vercel deployment of shared guide/journal paths, and inspect representative source pages. Preview remains noindex.
+
+## 24/10/2026, 03:38 IST — Time-fit destination restored after interrupted edit
+- **Instruction:** Continue page-first construction, compact mobile-safe engagement, direct main commits and detailed handoff.
+- **Finding:** The interrupted write never advanced main. The initially guessed source image path was invalid; verified the existing side-hustle artwork path against `src/config/category-imagery.ts`.
+- **Edit:** Added isolated `/business-idea-time-fit` and scoped CSS. Three situation views, editable first-order capacity arithmetic, hidden-work checklist, full 16:9 original image, browser-local delivery note, contextual demand/cash/pricing/risk paths and FAQ. No made-up success metric or persisted data. Updated route ledger.
+- **QA:** Shared shell, tokens and data contracts untouched. Verify Vercel status and live geometry after commit; 390/360px real render remains open. Existing preview-wide noindex configuration applies.
