@@ -169,3 +169,7 @@ The remaining proposed routes in the twenty-four-page collection are still plann
 ### Cash-flow route — 23/10/2026, 11:46 IST
 
 `/startup-cash-flow-india` is live and browser-tested. With ₹3,100 opening cash, a ₹5,000 supplier bill, ₹8,000 collection, and ₹4,000 rent, dated balances are −₹1,900, ₹6,100, ₹2,100. The lowest balance is −₹1,900; the delayed-collections stress case is −₹5,900. The global noindex hold and desktop width check passed. The route is connected to the header, footer, cost and pricing pages. Mobile visual QA remains outstanding.
+
+### Evidence desk — 23 Oct 2026, 11:56 IST
+
+`/business-idea-research-india` is live: compact lead, neighbourhood/workplace/online selector, current alternatives, original guide image in a true 16:9 containment stage, editable claim/source/date/countercase rows, countercheck reveal, situational links, question note and FAQ. Browser QA confirmed state transitions, source artwork 1003×565 in a 682×384 stage, noindex, and no desktop horizontal overflow. The first visual pass exposed unnecessarily tall link cards beside a long section heading; CSS aligns cards to content. Contextual links added to first-customer and validation routes. Phone visual QA and broader article integration remain outstanding.
