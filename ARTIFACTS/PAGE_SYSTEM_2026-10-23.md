@@ -147,3 +147,17 @@ This is a page-first editorial route collection. It is a plan, not a claim that 
 ### Collection order
 
 Build the money chain first: startup costs, pricing, unit economics, cash flow. Then buyer/evidence chain and starting context; finally decision/reference compositions. Deepen the existing guide and blog indexes in parallel with links to completed pages. After each route, verify live SSR, interactions, phone layout, image/alt, metadata and noindex. Link it from neighbouring pages only once the destination is useful. Screenshots after every three to five edits.
+
+## Verified progress checkpoint — 23 Oct 2026, 11:26 IST
+
+| Route | Current observed state |
+|---|---|
+| `/business-ideas-india` | Live and desktop geometry repaired; further depth planned |
+| `/startup-idea-validation` | Live interactive field guide; noindex |
+| `/business-models-india` | Live comparison and rupee worksheet; noindex |
+| `/startup-costs-india` | Live cash ledger; ₹61,000 sample arithmetic verified; result contrast fixed; noindex |
+| `/business-pricing-india` | Live first-price worksheet; ₹1,000 planning floor and 12-sale fixed-cost break-even sample verified; noindex |
+| `/startup-guides` | Live reading room, 20 image-backed source guides, working filter; noindex |
+| `/blog` | Live journal, 23 image-backed source posts; noindex |
+
+The remaining proposed routes in the twenty-four-page collection are still planned, not built. The original published idea, guide, blog, taxonomy, calculator and glossary routes remain separate live families. Desktop screenshots and arithmetic tests do not substitute for phone visual QA. Two original golden-tree PNGs are intentionally skipped per founder instruction.

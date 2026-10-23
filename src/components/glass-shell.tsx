@@ -9,17 +9,20 @@ const navGroups = [
     { label: "All 100 categories", to: "/browse", description: "Find a path that fits your life" },
     { label: "Published blueprints", to: "/blueprints", description: "Search completed source ideas" },
     { label: "Search the library", to: "/search", description: "Start with a topic or need" },
+    { label: "Business models", to: "/business-models-india", description: "Compare how an idea earns" },
   ] },
   { label: "Learn", links: [
-    { label: "Startup guides", to: "/startup-guides", description: "Practical playbooks" },
+    { label: "Startup guides", to: "/startup-guides", description: "Choose a founder decision" },
+    { label: "Validation field guide", to: "/startup-idea-validation", description: "Test before you pay" },
     { label: "Founder journal", to: "/blog", description: "Stories and working lessons" },
     { label: "Founder glossary", to: "/founder-glossary", description: "Terms in plain language" },
     { label: "Learning resources", to: "/learning-resources", description: "Everything in one place" },
   ] },
   { label: "Tools", links: [
     { label: "60 calculators", to: "/calculator", description: "Use your own numbers" },
-    { label: "Validate an idea", to: "/blueprints", description: "Four AI research choices on each idea" },
-    { label: "Browse business models", to: "/browse", description: "Compare starting directions" },
+    { label: "Startup cost ledger", to: "/startup-costs-india", description: "Plan cash before a first sale" },
+    { label: "First-price workbench", to: "/business-pricing-india", description: "Quote a defined offer" },
+    { label: "Validate a published idea", to: "/blueprints", description: "Four external research choices on each idea" },
   ] },
   { label: "About", links: [
     { label: "Our story", to: "/about", description: "Why this library exists" },
@@ -88,9 +91,9 @@ export function GlassFooter() {
           <Link to="/contact" className="gh-footer-contact">Ask us a question <ArrowUpRight size={16} aria-hidden="true" /></Link>
         </div>
         <div className="gh-footer-links">
-          <div><h3>Ideas</h3><Link to="/business-ideas-india">Find your first move</Link><Link to="/browse">100 categories</Link><Link to="/blueprints">Published blueprints</Link><Link to="/search">Search ideas</Link><Link to="/sitemap">All pages</Link></div>
-          <div><h3>Learn</h3><Link to="/startup-guides">Startup guides</Link><Link to="/blog">Founder journal</Link><Link to="/founder-glossary">Glossary</Link><Link to="/learning-resources">Resources</Link></div>
-          <div><h3>Build</h3><Link to="/calculator">Calculators</Link><Link to="/blueprints">Validate an idea</Link><Link to="/pricing">Pricing</Link><Link to="/services">Services</Link></div>
+          <div><h3>Ideas</h3><Link to="/business-ideas-india">Find your first move</Link><Link to="/business-models-india">Compare business models</Link><Link to="/browse">100 categories</Link><Link to="/blueprints">Published blueprints</Link><Link to="/search">Search ideas</Link><Link to="/sitemap">All pages</Link></div>
+          <div><h3>Learn</h3><Link to="/startup-guides">Startup guides</Link><Link to="/startup-idea-validation">Validation field guide</Link><Link to="/blog">Founder journal</Link><Link to="/founder-glossary">Glossary</Link><Link to="/learning-resources">Resources</Link></div>
+          <div><h3>Build</h3><Link to="/startup-costs-india">Startup cost ledger</Link><Link to="/business-pricing-india">First-price workbench</Link><Link to="/calculator">Calculators</Link><Link to="/blueprints">Validate an idea</Link><Link to="/pricing">Pricing</Link><Link to="/services">Services</Link></div>
           <div><h3>People & policies</h3><Link to="/about">Our story</Link><Link to="/founders">Founders</Link><Link to="/contact">Contact</Link><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link><Link to="/cookie-policy">Cookies</Link><Link to="/disclaimer">Disclaimer</Link></div>
         </div>
       </div>
