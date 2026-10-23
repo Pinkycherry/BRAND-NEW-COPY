@@ -14,6 +14,7 @@ const startingPoints = [
     body: "A business idea that needs you available all day may cost more than the cash you put in. Begin by asking what can be tested after work without promising customers a schedule you cannot keep.",
     categorySlugs: ["side-hustle-business-ideas", "online-business-ideas", "work-from-home-business-ideas"],
     next: "List the hours you can protect each week, then read one blueprint for the customer and first sale.",
+    path: "/startup-idea-comparison", action: "Compare two ideas against those hours",
   },
   {
     id: "home", label: "I need to stay close to home", cue: "Place and care come first",
@@ -21,6 +22,7 @@ const startingPoints = [
     body: "Home is not a limitation to hide. It changes the delivery model, customer radius and how often you can be away. Compare paths that can be examined from where you already are.",
     categorySlugs: ["work-from-home-business-ideas", "women-friendly-business-ideas", "online-business-ideas"],
     next: "Check the actual work, not the label. A home-based idea can still require stock, visits or a fixed daily window.",
+    path: "/startup-costs-india", action: "See cash tied up before a home sale",
   },
   {
     id: "town", label: "I know my town", cue: "Local trust is an advantage",
@@ -28,6 +30,7 @@ const startingPoints = [
     body: "People already travel, wait or settle for a poor workaround. A local business starts by finding that repeated inconvenience and learning who would pay to remove it.",
     categorySlugs: ["village-and-small-town-business-ideas", "agriculture-and-farming-business-ideas", "side-hustle-business-ideas"],
     next: "Speak to potential customers where the problem occurs. Ask what they did last time and what it cost them.",
+    path: "/business-idea-research-india", action: "Observe a local workaround",
   },
   {
     id: "student", label: "I am studying", cue: "Protect your learning and your cash",
@@ -35,6 +38,7 @@ const startingPoints = [
     body: "A small first customer teaches more than a polished name or logo. Look for a problem you can solve well while keeping the time you need to study.",
     categorySlugs: ["student-business-ideas", "side-hustle-business-ideas", "online-business-ideas"],
     next: "Try one clear offer with one real buyer before buying equipment or committing to a recurring expense.",
+    path: "/business-demand-test-india", action: "Ask for one real buyer action",
   },
 ] as const;
 
@@ -76,7 +80,7 @@ function IndiaBusinessIdeasPage() {
         <div className="gl-india-choice-intro"><p className="gh-eyebrow">02 / CHOOSE YOUR REALITY</p><h2 id="gl-india-choice-title">What must this business work around?</h2><p>Choose the constraint that matters most today. These are starting directions, not guarantees of income or fit.</p><a href="#first-proof">What happens next <ArrowRight size={16} /></a></div>
         <div className="gl-india-choice-stage">
           <div className="gl-india-tabs" role="group" aria-label="Choose a starting situation">{startingPoints.map((point) => <button key={point.id} type="button" aria-pressed={choice === point.id} onClick={() => setChoice(point.id)}>{point.label}</button>)}</div>
-          <div className="gl-india-choice-story" key={choice}><p className="gh-eyebrow">{selected.cue.toUpperCase()}</p><h3>{selected.headline}</h3><p>{selected.body}</p><div className="gl-india-note"><strong>One useful next step</strong><span>{selected.next}</span></div></div>
+          <div className="gl-india-choice-story" key={choice}><div className="gl-india-choice-copy"><p className="gh-eyebrow">{selected.cue.toUpperCase()}</p><h3>{selected.headline}</h3><p>{selected.body}</p><div className="gl-india-note"><strong>One useful next step</strong><span>{selected.next}</span></div></div><aside className="gl-india-choice-next"><span>DO THIS WITH YOUR SITUATION</span><strong>{selected.action}</strong><p>Use the page to turn this direction into a question you can answer before a bigger spend.</p><Link to={selected.path}>Open the working page <ArrowUpRight size={17}/></Link></aside></div>
           <div className="gl-india-category-picks">{categories.map((category) => { const art = categoryImage(category.slug); return <Link key={category.slug} to="/category/$categorySlug" params={{ categorySlug: category.slug }}><img src={art.src} alt={art.alt} loading="lazy" /><span>{category.name}<ArrowUpRight size={16} /></span></Link>; })}</div>
         </div>
       </section>
