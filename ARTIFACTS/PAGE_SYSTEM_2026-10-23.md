@@ -193,3 +193,7 @@ The remaining proposed routes in the twenty-four-page collection are still plann
 ### Personal downside — 23 Oct 2026, 12:47 IST
 
 `/business-idea-risk-check` implemented: cash-versus-time boundary worksheet, five selectable operating patterns and smaller tests, risk/contradiction/stop notebook, relevant original guide art in a full 16:9 stage, buyer and money hooks, FAQ. No universal score. Await Vercel and live QA before linking broadly. The First Move page meanwhile passed live desktop QA: noindex, 1280×720 category art at 426×240, no overflow; the selected-situation panel now has a tested working destination.
+
+### Risk check verified and contextualized — 23 Oct 2026, 12:55 IST
+
+`/business-idea-risk-check` live QA: entered ₹10,000 one-time, ₹2,000 monthly for 3 months, ₹15,000 chosen boundary, 6 hours/week for 4 weeks. Result ₹16,000 cash exposed, 24 hours reserved and ₹1,000 over boundary. Credit selector changed content; noindex; no desktop overflow. During related-guide inspection, the pre-launch source was revealed as a SaaS technical checklist, too weak a match for personal cash risk. Replaced the panel with the original cash-flow guide image and exact `startup-cash-flow-management` route. Contextual risk links added at the First Move stop question and startup-cost reduction section. Verify the new image and link after deployment.
