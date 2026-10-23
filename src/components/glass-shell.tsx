@@ -10,6 +10,9 @@ const navGroups = [
     { label: "Published blueprints", to: "/blueprints", description: "Search completed source ideas" },
     { label: "Search the library", to: "/search", description: "Start with a topic or need" },
     { label: "Business models", to: "/business-models-india", description: "Compare how an idea earns" },
+    { label: "Side business ideas", to: "/side-business-ideas-india", description: "Fit a test around work and care" },
+    { label: "Local business ideas", to: "/local-business-ideas-india", description: "Walk a real buying route" },
+    { label: "Online business ideas", to: "/online-business-ideas-india", description: "Trace acquisition and fulfilment" },
   ] },
   { label: "Learn", links: [
     { label: "Startup guides", to: "/startup-guides", description: "Choose a founder decision" },
@@ -18,12 +21,16 @@ const navGroups = [
     { label: "Founder journal", to: "/blog", description: "Stories and working lessons" },
     { label: "Founder glossary", to: "/founder-glossary", description: "Terms in plain language" },
     { label: "Learning resources", to: "/learning-resources", description: "Everything in one place" },
+    { label: "Reading room", to: "/business-idea-reading-room", description: "20 guides and 23 original articles" },
+    { label: "Startup terms by decision", to: "/startup-terms-india", description: "159 exact source definitions" },
   ] },
   { label: "Tools", links: [
     { label: "60 calculators", to: "/calculator", description: "Use your own numbers" },
     { label: "Startup cost ledger", to: "/startup-costs-india", description: "Plan cash before a first sale" },
     { label: "First-price workbench", to: "/business-pricing-india", description: "Quote a defined offer" },
     { label: "Cash-flow calendar", to: "/startup-cash-flow-india", description: "See when bills outrun collections" },
+    { label: "Launch evidence plan", to: "/startup-launch-plan-india", description: "Four checks before a bigger step" },
+    { label: "Product batch worksheet", to: "/product-business-ideas-india", description: "Count stock and cash honestly" },
     { label: "Validate a published idea", to: "/blueprints", description: "Four external research choices on each idea" },
   ] },
   { label: "About", links: [
@@ -93,9 +100,9 @@ export function GlassFooter() {
           <Link to="/contact" className="gh-footer-contact">Ask us a question <ArrowUpRight size={16} aria-hidden="true" /></Link>
         </div>
         <div className="gh-footer-links">
-          <div><h3>Ideas</h3><Link to="/business-ideas-india">Find your first move</Link><Link to="/business-models-india">Compare business models</Link><Link to="/browse">100 categories</Link><Link to="/blueprints">Published blueprints</Link><Link to="/search">Search ideas</Link><Link to="/sitemap">All pages</Link></div>
-          <div><h3>Learn</h3><Link to="/startup-guides">Startup guides</Link><Link to="/startup-idea-validation">Validation field guide</Link><Link to="/business-idea-research-india">Business idea research</Link><Link to="/blog">Founder journal</Link><Link to="/founder-glossary">Glossary</Link><Link to="/learning-resources">Resources</Link></div>
-          <div><h3>Build</h3><Link to="/startup-costs-india">Startup cost ledger</Link><Link to="/business-pricing-india">First-price workbench</Link><Link to="/startup-cash-flow-india">Cash-flow calendar</Link><Link to="/calculator">Calculators</Link><Link to="/blueprints">Validate an idea</Link><Link to="/pricing">Pricing</Link><Link to="/services">Services</Link></div>
+          <div><h3>Ideas</h3><Link to="/business-ideas-india">Find your first move</Link><Link to="/business-models-india">Compare business models</Link><Link to="/side-business-ideas-india">Side businesses</Link><Link to="/local-business-ideas-india">Local businesses</Link><Link to="/online-business-ideas-india">Online businesses</Link><Link to="/browse">100 categories</Link><Link to="/blueprints">Published blueprints</Link><Link to="/search">Search ideas</Link><Link to="/sitemap">All pages</Link></div>
+          <div><h3>Learn</h3><Link to="/startup-guides">Startup guides</Link><Link to="/business-idea-reading-room">Reading room</Link><Link to="/startup-terms-india">Terms by decision</Link><Link to="/startup-idea-validation">Validation field guide</Link><Link to="/business-idea-research-india">Business idea research</Link><Link to="/blog">Founder journal</Link><Link to="/founder-glossary">Glossary</Link><Link to="/learning-resources">Resources</Link></div>
+          <div><h3>Build</h3><Link to="/startup-costs-india">Startup cost ledger</Link><Link to="/business-pricing-india">First-price workbench</Link><Link to="/startup-cash-flow-india">Cash-flow calendar</Link><Link to="/startup-launch-plan-india">Launch evidence plan</Link><Link to="/product-business-ideas-india">Product batch</Link><Link to="/calculator">Calculators</Link><Link to="/blueprints">Validate an idea</Link><Link to="/pricing">Pricing</Link><Link to="/services">Services</Link></div>
           <div><h3>People & policies</h3><Link to="/about">Our story</Link><Link to="/founders">Founders</Link><Link to="/contact">Contact</Link><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link><Link to="/cookie-policy">Cookies</Link><Link to="/disclaimer">Disclaimer</Link></div>
         </div>
       </div>
