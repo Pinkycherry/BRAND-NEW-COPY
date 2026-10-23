@@ -142,7 +142,7 @@ This is a page-first editorial route collection. It is a plan, not a claim that 
 | `/founder-decision-journal` | What did I actually observe? Browser-local dated decision record. | Live; desktop-tested; phone QA open |
 | `/startup-terms-india` | Which terms matter for my next decision? Existing 159-term glossary organized by moment. | Implemented on main; deployment and visual QA pending |
 | `/business-idea-reading-room` | What should I read next? Existing 20 guides and 23 posts grouped by decision, with original imagery. | Implemented on main; deployment and visual QA pending |
-| `/business-idea-toolkit` | Which working tool answers this question now? Existing calculators and validation entry, with honest availability. | Planned |
+| `/business-idea-toolkit` | Which working tool answers this question now? Existing calculators and validation entry, with honest availability. | Implemented; live QA pending |
 
 ### Collection order
 
