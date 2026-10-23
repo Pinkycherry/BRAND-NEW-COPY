@@ -161,3 +161,7 @@ Build the money chain first: startup costs, pricing, unit economics, cash flow. 
 | `/blog` | Live journal, 23 image-backed source posts; noindex |
 
 The remaining proposed routes in the twenty-four-page collection are still planned, not built. The original published idea, guide, blog, taxonomy, calculator and glossary routes remain separate live families. Desktop screenshots and arithmetic tests do not substitute for phone visual QA. Two original golden-tree PNGs are intentionally skipped per founder instruction.
+
+### New live route — 23 Oct 2026, 11:37 IST
+
+`/first-customer-india` is implemented and live-tested: trigger/workaround/payer map, three buying settings, conversation guide, signal ladder, tab-local evidence log, India delivery checks, FAQ and next paths. It is noindex. Guide and blog featured hero images were corrected to show their full original artwork and separate captions; pricing quote card corrected. Phone visual QA and deeper source-article copy review remain outstanding.
