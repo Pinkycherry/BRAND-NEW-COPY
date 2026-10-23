@@ -134,7 +134,7 @@ This is a page-first editorial route collection. It is a plan, not a claim that 
 | `/service-business-ideas-india` | How do I sell an ability before building a product? Scope, quote and delivery proof. | Planned |
 | `/product-business-ideas-india` | What inventory and returns can I carry? Unit, stock and supplier decisions. | Planned |
 | `/business-pricing-india` | What price survives all costs? Price ladder and scenario worksheet. | Live; desktop-tested; phone QA open |
-| `/unit-economics-india` | Is one sale worth repeating? Contribution, capacity and break-even. | Implemented on main; deployment and visual QA pending |
+| `/unit-economics-india` | Is one sale worth repeating? Contribution, capacity and break-even. | Live; desktop-tested; phone QA open |
 | `/startup-cash-flow-india` | Will cash arrive before bills fall due? A timed cash calendar. | Live; desktop-tested; phone QA open |
 | `/business-demand-test-india` | Does interest become a commitment? Conversation, pre-order and paid trial distinctions. | Live; desktop-tested; phone QA open |
 | `/startup-launch-plan-india` | What belongs in the first 30 days? Week-by-week decision gates. | Planned |
