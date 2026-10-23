@@ -3,7 +3,7 @@ import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
 import { ArrowUpRight, Clock } from "lucide-react";
 
 import { GlassShell } from "@/components/glass-shell";
-import { ReadingPaths } from "@/components/reading-paths";
+import { ReadingPaths, readingPathsFor } from "@/components/reading-paths";
 import { ReaderCompanion } from "@/components/reader-companion";
 import { JsonLd, articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { getBlogPost } from "@/lib/blog.functions";
@@ -91,10 +91,10 @@ function BlogArticle() {
         <div className="gl-reading-layout">
           <div className="gl-reading-main">
             <div className="gl-prose" dangerouslySetInnerHTML={{ __html: anchoredHtml.slice(0, breakAt) }} />
-            <ReadingPaths />
+            <ReadingPaths topic={post.slug} />
             {breakAt < anchoredHtml.length && <div className="gl-prose" dangerouslySetInnerHTML={{ __html: anchoredHtml.slice(breakAt) }} />}
           </div>
-          <ReaderCompanion sections={sections} label="Article sections" />
+          <ReaderCompanion sections={sections} label="Article sections" topic={post.slug} />
         </div>
       </article>
       {related.length > 0 && <section className="gl-related-articles" aria-labelledby="more-articles">
@@ -107,7 +107,7 @@ function BlogArticle() {
           <Link to="/blog/$slug" params={{ slug: item.slug }} className="gl-idea-action">Read article <ArrowUpRight size={17} /></Link>
         </article>)}</div>
       </section>}
-      <aside className="gl-bottom-note"><div><p className="gh-eyebrow">A NEXT STEP</p><h2>Explore an idea in depth.</h2><p>Published blueprints include risks, first steps and a direct choice of four AI research tools.</p></div><Link to="/browse" className="gh-button gh-button-primary">Browse ideas <ArrowUpRight size={17} /></Link></aside>
+      <aside className="gl-bottom-note"><div><p className="gh-eyebrow">TAKE THIS OFF THE PAGE</p><h2>{readingPathsFor(post.slug).question}</h2><p>{readingPathsFor(post.slug).intro}</p></div><Link to={readingPathsFor(post.slug).links[0].to as "/"} className="gh-button gh-button-primary">{readingPathsFor(post.slug).links[0].title} <ArrowUpRight size={17} /></Link></aside>
     </div></GlassShell>
   </>;
 }

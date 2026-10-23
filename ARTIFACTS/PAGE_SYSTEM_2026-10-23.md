@@ -197,3 +197,7 @@ The remaining proposed routes in the twenty-four-page collection are still plann
 ### Risk check verified and contextualized — 23 Oct 2026, 12:55 IST
 
 `/business-idea-risk-check` live QA: entered ₹10,000 one-time, ₹2,000 monthly for 3 months, ₹15,000 chosen boundary, 6 hours/week for 4 weeks. Result ₹16,000 cash exposed, 24 hours reserved and ₹1,000 over boundary. Credit selector changed content; noindex; no desktop overflow. During related-guide inspection, the pre-launch source was revealed as a SaaS technical checklist, too weak a match for personal cash risk. Replaced the panel with the original cash-flow guide image and exact `startup-cash-flow-management` route. Contextual risk links added at the First Move stop question and startup-cost reduction section. Verify the new image and link after deployment.
+
+### Source article engagement — 23 Oct 2026, 13:04 IST
+
+The 20 guide and 23 journal detail routes retain original bodies and featured images. Their repeated mid-read four-card detour, section rail and bottom CTA now select three working pages from the article topic: buyer, pricing, cash, validation, launch or a general decision. Each card names the next question and action. This is a contextual route mapping, not a rewrite of the source copy; inspect representative source pages and improve individual guide/post metadata and prose where weak. All shared pages retain global noindex. Mobile layout uses a single card column under 620px; rendered phone QA remains open.

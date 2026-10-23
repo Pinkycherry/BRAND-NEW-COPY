@@ -4,7 +4,7 @@ import rehypeRaw from "rehype-raw";
 import { ArrowUpRight, CheckCircle2, Clock } from "lucide-react";
 
 import { GlassShell } from "@/components/glass-shell";
-import { ReadingPaths } from "@/components/reading-paths";
+import { ReadingPaths, readingPathsFor } from "@/components/reading-paths";
 import { ReaderCompanion } from "@/components/reader-companion";
 import { JsonLd, articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { getGuideBySlug, STARTUP_GUIDES } from "@/lib/guides-data";
@@ -61,12 +61,12 @@ function GuidePage() {
         <div className="gl-reading-layout"><div className="gl-reading-main">
         {guide.keyTakeaways.length > 0 && <aside className="gl-takeaways"><p className="gh-eyebrow">THE MAIN POINTS</p><h2>Keep these in mind.</h2><ul>{guide.keyTakeaways.map((point, i) => <li key={i}><CheckCircle2 size={19} aria-hidden="true" />{point}</li>)}</ul></aside>}
         <div className="gl-prose"><Markdown rehypePlugins={[rehypeRaw]} components={{ a: ({ href, children }) => href?.startsWith("/") ? <Link to={href as "/"}>{children}</Link> : <a href={href}>{children}</a>, img: ({ src, alt }) => <img src={src} alt={alt ?? ""} loading="lazy" /> }}>{anchoredMarkdown.slice(0, breakAt)}</Markdown></div>
-        <ReadingPaths context="guide" />
+        <ReadingPaths context="guide" topic={guide.slug} />
         {breakAt < anchoredMarkdown.length && <div className="gl-prose"><Markdown rehypePlugins={[rehypeRaw]} components={{ a: ({ href, children }) => href?.startsWith("/") ? <Link to={href as "/"}>{children}</Link> : <a href={href}>{children}</a>, img: ({ src, alt }) => <img src={src} alt={alt ?? ""} loading="lazy" /> }}>{anchoredMarkdown.slice(breakAt)}</Markdown></div>}
-        </div><ReaderCompanion sections={sections} label="Guide sections" /></div>
+        </div><ReaderCompanion sections={sections} label="Guide sections" topic={guide.slug} /></div>
       </article>
       <nav className="gl-article-nav" aria-label="More guides">{previous && <Link to="/startup-guides/$slug" params={{ slug: previous.slug }}><span>← Previous guide</span><strong>{previous.title}</strong></Link>}{next && <Link to="/startup-guides/$slug" params={{ slug: next.slug }}><span>Next guide →</span><strong>{next.title}</strong></Link>}</nav>
-      <aside className="gl-bottom-note"><div><p className="gh-eyebrow">KEEP EXPLORING</p><h2>Put the idea to a test.</h2><p>Use your own numbers in one of the live calculators, or find a more focused category path.</p></div><Link to="/calculator" className="gh-button gh-button-primary">Open calculators <ArrowUpRight size={17} /></Link></aside>
+      <aside className="gl-bottom-note"><div><p className="gh-eyebrow">BEFORE YOU LEAVE THIS GUIDE</p><h2>{readingPathsFor(guide.slug).question}</h2><p>{readingPathsFor(guide.slug).intro}</p></div><Link to={readingPathsFor(guide.slug).links[0].to as "/"} className="gh-button gh-button-primary">{readingPathsFor(guide.slug).links[0].title} <ArrowUpRight size={17} /></Link></aside>
     </div></GlassShell>
   </>;
 }
