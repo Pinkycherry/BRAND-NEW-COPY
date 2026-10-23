@@ -131,8 +131,8 @@ This is a page-first editorial route collection. It is a plan, not a claim that 
 | `/side-business-ideas-india` | How do I start while earning elsewhere? Hours, boundaries and first sale plan. | Live; desktop-tested; phone QA open |
 | `/local-business-ideas-india` | What does my neighbourhood need repeatedly? Catchment, channel and repeat purchase. | Live; desktop-tested; phone QA open |
 | `/online-business-ideas-india` | When does online distribution actually help? Acquisition and fulfilment reality. | Live; desktop-tested; phone QA open |
-| `/service-business-ideas-india` | How do I sell an ability before building a product? Scope, quote and delivery proof. | Live; desktop-tested; follow-up quote fix pending; phone QA open |
-| `/product-business-ideas-india` | What inventory and returns can I carry? Unit, stock and supplier decisions. | Planned |
+| `/service-business-ideas-india` | How do I sell an ability before building a product? Scope, quote and delivery proof. | Live; desktop-tested; phone QA open |
+| `/product-business-ideas-india` | What inventory and returns can I carry? Unit, stock and supplier decisions. | Implemented on main; deployment and visual QA pending |
 | `/business-pricing-india` | What price survives all costs? Price ladder and scenario worksheet. | Live; desktop-tested; phone QA open |
 | `/unit-economics-india` | Is one sale worth repeating? Contribution, capacity and break-even. | Live; desktop-tested; phone QA open |
 | `/startup-cash-flow-india` | Will cash arrive before bills fall due? A timed cash calendar. | Live; desktop-tested; phone QA open |
