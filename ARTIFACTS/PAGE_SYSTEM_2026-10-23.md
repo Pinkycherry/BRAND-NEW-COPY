@@ -173,3 +173,7 @@ The remaining proposed routes in the twenty-four-page collection are still plann
 ### Evidence desk — 23 Oct 2026, 11:56 IST
 
 `/business-idea-research-india` is live: compact lead, neighbourhood/workplace/online selector, current alternatives, original guide image in a true 16:9 containment stage, editable claim/source/date/countercase rows, countercheck reveal, situational links, question note and FAQ. Browser QA confirmed state transitions, source artwork 1003×565 in a 682×384 stage, noindex, and no desktop horizontal overflow. The first visual pass exposed unnecessarily tall link cards beside a long section heading; CSS aligns cards to content. Contextual links added to first-customer and validation routes. Phone visual QA and broader article integration remain outstanding.
+
+### Demand-test page — 23 Oct 2026, 12:07 IST
+
+`/business-demand-test-india` implemented on main with three selectable commitment formats, a browser-local offer/audience/stop-condition slip, staged response counts with inconsistent-count warning, buyer and cash hooks, source journal artwork in a 16:9 containment stage, interpretation, FAQ and next decision. Verify Vercel, interaction, image, noindex and geometry before broad navigation integration. Mobile visual QA remains outstanding.
