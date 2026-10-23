@@ -88,3 +88,5 @@
 
 /* Let link and signal cards hug their content beside longer editorial copy. */
 .glass-home .ir-signal-grid,.glass-home .ir-alternatives-grid,.glass-home .ir-next-grid{align-content:start;align-items:start}
+
+.glass-home .ir-check a:not(.gh-button){color:#fff;text-decoration:underline;text-underline-offset:3px}

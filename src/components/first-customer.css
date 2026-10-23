@@ -87,3 +87,5 @@
 
 .glass-home .fc-signal-next{margin:1rem 0 0;color:#d9d7ec;font-size:.9rem}
 .glass-home .fc-signal-next a{display:inline-flex;align-items:center;gap:.3rem;color:#fff;font-weight:750;text-decoration:underline}
+
+.glass-home .fc-signal-next{grid-column:1/-1}
