@@ -283,3 +283,7 @@
 .glass-home .gh-fieldpaths-choices small{font-size:.88rem;line-height:1.4;color:#63677b}
 .glass-home .gh-fieldpaths-choices svg{position:absolute;right:18px;top:22px}
 @media(max-width:760px){.glass-home .gh-fieldpaths{grid-template-columns:1fr}}
+
+/* Editorial heading scale in the home decision hinge. */
+.glass-home .gh-fieldpaths h2{max-width:20ch;font-size:clamp(2rem,3vw,2.85rem);line-height:1.12;letter-spacing:-.045em}
+@media(max-width:600px){.glass-home .gh-fieldpaths h2{font-size:clamp(1.85rem,7vw,2.25rem)}}

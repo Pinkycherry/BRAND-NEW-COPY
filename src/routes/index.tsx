@@ -74,7 +74,7 @@ const steps = [
 ];
 
 const resourceLinks = [
-  { title: "Run the numbers", description: "Start with a simple calculator.", to: "/calculator", icon: Calculator },
+  { title: "Choose a tool", description: "Find a working calculator for your next question.", to: "/business-idea-toolkit", icon: Calculator },
   { title: "Read a guide", description: "Learn one practical next step.", to: "/startup-guides", icon: BookOpen },
   { title: "Learn the language", description: "Plain-English business terms.", to: "/founder-glossary", icon: Compass },
 ] as const;
