@@ -49,7 +49,7 @@ function BrowsePage() {
         breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Browse", path: "/browse" }]),
       ]} />
       <GlassShell>
-        <div className="gl-page">
+        <div className="gl-page gl-browse-index">
           <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span aria-hidden="true">/</span><span>Explore ideas</span></nav>
           <header className="gl-hero">
             <div className="gl-hero-copy">
@@ -78,7 +78,7 @@ function BrowsePage() {
                     : category.subcategories;
                   return (
                     <article className="gl-category" key={category.slug}>
-                      <div className="gl-category-top"><span className="gl-category-number">{String(category.n).padStart(2, "0")}</span><span className="gl-category-spark" aria-hidden="true">✦</span></div>
+                      
                       <Link className="gl-category-media" to="/category/$categorySlug" params={{ categorySlug: category.slug }} aria-label={`Explore ${category.short}`}><img src={image.src} alt={image.alt} width={1280} height={549} loading="lazy" /></Link>
                       <h3><Link to="/category/$categorySlug" params={{ categorySlug: category.slug }}>{category.short}</Link></h3>
                       <p>{category.subcategories.length} focused paths</p>
