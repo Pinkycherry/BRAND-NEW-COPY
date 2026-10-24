@@ -10,7 +10,7 @@ import {
   X,
   Search,
   ShieldCheck,
-  Sparkles,
+  Shuffle,
 } from "lucide-react";
 
 import { catalogQuery } from "@/lib/catalog";
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
 const entryPaths = [
   { label: "Work from home", match: "work-from-home-business-ideas", icon: "⌂" },
   { label: "Side hustles", match: "side-hustle-business-ideas", icon: "↗" },
-  { label: "For students", match: "student-business-ideas", icon: "✳" },
+  { label: "For students", match: "student-business-ideas", icon: "✎" },
   { label: "Small towns", match: "village-and-small-town-business-ideas", icon: "◌" },
   { label: "Food", match: "food-business-ideas", icon: "◈" },
   { label: "Online", match: "online-business-ideas", icon: "◎" },
@@ -57,17 +57,14 @@ const entryPaths = [
 
 const steps = [
   {
-    number: "01",
     title: "Start with your situation",
     text: "Find a direction that fits your time, skills, place and budget. There is no need to know the industry first.",
   },
   {
-    number: "02",
     title: "Read the honest version",
     text: "See who buys, how income works and what tends to hurt before you spend money.",
   },
   {
-    number: "03",
     title: "Test one small step",
     text: "Use the guides and calculators to decide what to check locally before you commit.",
   },
@@ -111,7 +108,7 @@ function HomePage() {
             <p className="gh-lede">Explore practical ideas for the time, money and skills you have. Get the honest details before you decide what to build.</p>
             <div className="gh-hero-actions">
               <Link to="/browse" className="gh-button gh-button-primary">Browse the library <ArrowUpRight size={18} aria-hidden="true" /></Link>
-              <button className="gh-button gh-button-secondary" type="button" onClick={drawSurprise}><Sparkles size={18} aria-hidden="true" /> Surprise me</button>
+              <button className="gh-button gh-button-secondary" type="button" onClick={drawSurprise}><Shuffle size={18} aria-hidden="true" /> Surprise me</button>
             </div>
             <div className="gh-hero-proof" aria-label="Library structure">
               <div><strong>{catalog.totalCategories}</strong><span>main categories</span></div>
@@ -121,20 +118,18 @@ function HomePage() {
               <div><strong>₹0</strong><span>to browse</span></div>
             </div>
           </div>
-          <div className="gh-hero-art" aria-label="An abstract glowing idea map" role="img">
-            <div className="gh-art-halo gh-art-halo-one" />
-            <div className="gh-art-halo gh-art-halo-two" />
-            <div className="gh-art-core">
-              <span className="gh-art-label">YOUR POSSIBILITIES</span>
-              <span className="gh-art-line gh-art-line-one" />
-              <span className="gh-art-line gh-art-line-two" />
-              <span className="gh-art-line gh-art-line-three" />
-              <span className="gh-art-spark">✦</span>
+          <aside className="gh-hero-choice" aria-label="Choose a real starting condition">
+            <Link className="gh-hero-story" to="/blog/$slug" params={{ slug: "realistic-part-time-business-ideas" }}>
+              <img src="/images/blog/realistic-part-time-business-ideas-extra-income-evening-hustles-weekend-jobs-skills.webp" alt="Original part-time business ideas journal artwork about evening and weekend work" width={1280} height={720} />
+              <span><small>THE ORIGINAL JOURNAL</small><strong>What fits the hours you actually have?</strong><ArrowUpRight size={18} aria-hidden="true" /></span>
+            </Link>
+            <div className="gh-hero-choice-list">
+              <p>What is already spoken for?</p>
+              <Link to="/category/$categorySlug" params={{ categorySlug: "part-time-business-ideas" }}><small>YOUR TIME</small><strong>Keep the salary</strong><span>Explore part-time paths</span><ArrowUpRight size={17} aria-hidden="true" /></Link>
+              <Link to="/local-business-ideas-india"><small>YOUR PLACE</small><strong>Know a street</strong><span>Check the nearby buyer</span><ArrowUpRight size={17} aria-hidden="true" /></Link>
+              <Link to="/startup-costs-india"><small>YOUR CASH</small><strong>Protect the next bill</strong><span>Open the cost ledger</span><ArrowUpRight size={17} aria-hidden="true" /></Link>
             </div>
-            <div className="gh-float gh-float-one"><span className="gh-float-icon">✳</span><span><small>BEGIN WITH</small><strong>what you have</strong></span></div>
-            <div className="gh-float gh-float-two"><span className="gh-float-icon">↗</span><span><small>MOVE TOWARD</small><strong>what could work</strong></span></div>
-            <div className="gh-float gh-float-three"><span className="gh-mini-dot" /><span>One clear next step</span></div>
-          </div>
+          </aside>
         </section>
 
         <div className="gh-trust-line"><ShieldCheck size={17} aria-hidden="true" /><span>Research you can question. Clear risks you can see. No pressure to choose today.</span></div>
@@ -175,7 +170,7 @@ function HomePage() {
         </section>
 
         <section id="gh-surprise" className="gh-section gh-surprise" aria-labelledby="gh-surprise-title">
-          <div className="gh-surprise-orb" aria-hidden="true">✳</div>
+          
           <div><p className="gh-eyebrow">A LITTLE SERENDIPITY</p><h2 id="gh-surprise-title">Not sure where to begin?</h2><p>Let the library open one real subcategory. If it is not for you, draw another.</p></div>
           <div className="gh-surprise-action">
             <button className="gh-button gh-button-dark" type="button" onClick={drawSurprise}>Find a direction <ArrowUpRight size={18} aria-hidden="true" /></button>
@@ -185,7 +180,7 @@ function HomePage() {
 
         <section className="gh-section gh-process" aria-labelledby="gh-process-title">
           <div className="gh-section-head"><div><p className="gh-eyebrow">HOW IT WORKS</p><h2 id="gh-process-title">Less guessing. Better first steps.</h2></div><p>No perfect founder story required. Just a useful place to begin.</p></div>
-          <div className="gh-steps">{steps.map((step) => <article key={step.number} className="gh-step"><span className="gh-step-number">{step.number}</span><span className="gh-step-orb" aria-hidden="true">✦</span><h3>{step.title}</h3><p>{step.text}</p></article>)}</div>
+          <div className="gh-steps">{steps.map((step) => <article key={step.title} className="gh-step"><h3>{step.title}</h3><p>{step.text}</p></article>)}</div>
         </section>
 
         <section className="gh-section gh-honesty" aria-labelledby="gh-honesty-title">
@@ -196,7 +191,7 @@ function HomePage() {
 
         <section className="gh-section gh-fieldpaths" aria-labelledby="gh-fieldpaths-title">
           <div className="gh-fieldpaths-copy"><p className="gh-eyebrow">AFTER YOU FIND A DIRECTION</p><h2 id="gh-fieldpaths-title">The next question is more useful than a bigger list.</h2><p>A business idea becomes real when someone pays, the first order can be delivered, and the cash arrives before the next bill. Choose the part you cannot yet explain.</p><Link to="/business-idea-reading-room">Pair a source guide with a founder story <ArrowUpRight size={18} aria-hidden="true" /></Link><figure><img src="/images/blog/how-to-find-your-first-paying-customer-without-spending-on-ads.webp" alt="Original first paying customer article featured image" width={1439} height={810} loading="lazy" /><figcaption>Read the full source, then take one buyer question into the field.</figcaption></figure></div>
-          <div className="gh-fieldpaths-choices"><Link to="/first-customer-india"><span>01 / BUYER</span><strong>Who will pay first?</strong><small>Turn the guess into a bounded offer and a real response.</small><ArrowUpRight size={18} aria-hidden="true" /></Link><Link to="/business-pricing-india"><span>02 / PRICE</span><strong>What remains after delivery?</strong><small>Quote a first offer with direct costs and an honest scope.</small><ArrowUpRight size={18} aria-hidden="true" /></Link><Link to="/startup-cash-flow-india"><span>03 / CASH</span><strong>Will money arrive before bills?</strong><small>Date collections and payments, not just a profit estimate.</small><ArrowUpRight size={18} aria-hidden="true" /></Link><Link to="/startup-launch-plan-india"><span>04 / NEXT STEP</span><strong>What evidence unlocks launch?</strong><small>Buyer, offer, money and fulfilment in four practical gates.</small><ArrowUpRight size={18} aria-hidden="true" /></Link></div>
+          <div className="gh-fieldpaths-choices"><Link to="/first-customer-india"><span>BUYER</span><strong>Who will pay first?</strong><small>Turn the guess into a bounded offer and a real response.</small><ArrowUpRight size={18} aria-hidden="true" /></Link><Link to="/business-pricing-india"><span>PRICE</span><strong>What remains after delivery?</strong><small>Quote a first offer with direct costs and an honest scope.</small><ArrowUpRight size={18} aria-hidden="true" /></Link><Link to="/startup-cash-flow-india"><span>CASH</span><strong>Will money arrive before bills?</strong><small>Date collections and payments, not just a profit estimate.</small><ArrowUpRight size={18} aria-hidden="true" /></Link><Link to="/startup-launch-plan-india"><span>NEXT STEP</span><strong>What evidence unlocks launch?</strong><small>Buyer, offer, money and fulfilment in four practical gates.</small><ArrowUpRight size={18} aria-hidden="true" /></Link></div>
         </section>
         <section className="gh-section gh-toolkit" aria-labelledby="gh-toolkit-title">
           <div className="gh-section-head"><div><p className="gh-eyebrow">YOUR FOUNDER TOOLKIT</p><h2 id="gh-toolkit-title">Make the next move clearer.</h2><p>Use what is already here, whenever you need it.</p></div></div>
