@@ -26,7 +26,7 @@ const navGroups = [
   ] },
   { label: "Tools", links: [
     { label: "Business idea toolkit", to: "/business-idea-toolkit", description: "Choose a question and working tool" },
-    { label: "60 calculators", to: "/calculator", description: "Use your own numbers" },
+    { label: "Available calculators", to: "/calculator", description: "Five modeled tools; more under review" },
     { label: "Startup cost ledger", to: "/startup-costs-india", description: "Plan cash before a first sale" },
     { label: "First-price workbench", to: "/business-pricing-india", description: "Quote a defined offer" },
     { label: "Cash-flow calendar", to: "/startup-cash-flow-india", description: "See when bills outrun collections" },

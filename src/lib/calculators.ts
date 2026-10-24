@@ -969,6 +969,12 @@ export const CALCULATORS: readonly Calculator[] = [
   ...GENERATED_CALCULATORS,
 ];
 
+/** The source archive contains 55 generated records with generic, incorrect arithmetic. Keep their URLs, but do not expose their results until each metric is rebuilt and checked. */
+const READY_SLUGS = new Set(["break-even", "startup-cost", "roi", "funding-needed", "customer-acquisition-cost"]);
+export function isReadyCalculator(calculator: Calculator): boolean { return READY_SLUGS.has(calculator.slug); }
+export const READY_CALCULATORS = CALCULATORS.filter(isReadyCalculator);
+export const REVIEW_CALCULATORS = CALCULATORS.filter(calculator => !isReadyCalculator(calculator));
+
 export function findCalculator(slug: string): Calculator | undefined {
   return CALCULATORS.find((calculator) => calculator && calculator.slug === slug);
 }

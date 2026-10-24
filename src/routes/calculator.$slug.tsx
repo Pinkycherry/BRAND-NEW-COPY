@@ -3,9 +3,10 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowUpRight, RotateCcw } from "lucide-react";
 
 import { GlassShell } from "@/components/glass-shell";
-import { CALCULATORS, defaultInputs, fieldGroups, findCalculator, readValues, type Calculator, type FieldIssue, type Reading } from "@/lib/calculators";
+import { READY_CALCULATORS, isReadyCalculator, defaultInputs, fieldGroups, findCalculator, readValues, type Calculator, type FieldIssue, type Reading } from "@/lib/calculators";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import "@/components/glass-library.css";
+import "@/components/calculator-review.css";
 
 export const Route = createFileRoute("/calculator/$slug")({
   loader: ({ params }) => {
@@ -16,8 +17,8 @@ export const Route = createFileRoute("/calculator/$slug")({
   head: ({ loaderData }) => {
     const calculator = loaderData ? findCalculator(loaderData.slug) : undefined;
     return { meta: [
-      { title: calculator ? `${calculator.title} ${calculator.highlight} | BusinessIdea.io` : "Calculator not found | BusinessIdea.io" },
-      { name: "description", content: calculator?.description ?? "Explore the live startup calculators." },
+      { title: calculator ? `${calculator.title}${isReadyCalculator(calculator) ? " calculator" : " calculation under review"} | BusinessIdea.io` : "Calculator not found | BusinessIdea.io" },
+      { name: "description", content: calculator && isReadyCalculator(calculator) ? calculator.description : "This source calculation is under review. Use a specifically modeled calculator or founder worksheet instead." },
       { property: "og:type", content: "website" },
     ] };
   },
@@ -29,7 +30,12 @@ function CalculatorRoute() {
   const { slug } = Route.useParams();
   const calculator = findCalculator(slug);
   if (!calculator) throw notFound();
+  if (!isReadyCalculator(calculator)) return <CalculatorReview calculator={calculator} />;
   return <CalculatorPage key={calculator.slug} calculator={calculator} />;
+}
+
+function CalculatorReview({ calculator }: { calculator: Calculator }) {
+  return <GlassShell><div className="gl-page gl-calculator-review"><nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/calculator">Calculators</Link><span>/</span><span>{calculator.title}</span></nav><header><p className="gh-eyebrow">SOURCE CALCULATION UNDER REVIEW</p><h1>{calculator.title} needs a proper model.</h1><p>This source entry had generic inputs and an arithmetic result that did not define the named metric. We have paused its calculator instead of showing a misleading number. Its URL is preserved while the inputs, formula and edge cases are rebuilt and checked.</p></header><div className="gl-review-actions"><Link className="gh-button gh-button-primary" to="/business-idea-toolkit">Choose an available tool <ArrowUpRight size={17}/></Link><Link className="gh-button gh-button-secondary" to="/startup-terms-india">Look up the metric <ArrowUpRight size={17}/></Link></div></div></GlassShell>;
 }
 
 function CalculatorPage({ calculator }: { calculator: Calculator }) {
@@ -39,7 +45,7 @@ function CalculatorPage({ calculator }: { calculator: Calculator }) {
   const issueFor = (key: string): FieldIssue | undefined => issues.find((issue) => issue.key === key);
   const name = `${calculator.title} ${calculator.highlight}`;
   const path = `/calculator/${calculator.slug}`;
-  const others = CALCULATORS.filter((item) => item.slug !== calculator.slug);
+  const others = READY_CALCULATORS.filter((item) => item.slug !== calculator.slug);
   return <>
     <JsonLd schema={[
       webPageSchema({ path, name, description: calculator.description }),
