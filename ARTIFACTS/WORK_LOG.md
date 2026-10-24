@@ -576,3 +576,7 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 ## 24/10/2026 10:55 IST — Validation card QA and next density/ordinal batch
 - **Deploy:** d25474d Vercel success. Validation route has no decorative stamp spans in interview or evidence cards; original question text and evidence order remain. Screenshot `businessidea-validation-no-numbers-1792819488852.jpg` shown. Noindex retained. The screenshot exposed a large interval from adjacent 4rem section padding.
 - **Edit:** Scoped validation CSS reduces lead/interview vertical padding; four independent scene JSX files (Comparison, Risk, Time Fit, Side Business) remove numeric eyebrow prefixes only. No shared tokens, data contracts or URLs change. Desktop screenshot after deploy, then remaining scene families and card numerals. Phone QA open.
+
+## 24/10/2026 10:57 IST — Third batch live; five business shelf labels next
+- **Live:** 0019591 Vercel success. Time Fit subject labels read without ordinal prefix and remains noindex. Validation lead/interview padding measured 40px, not 64px; screenshot `businessidea-validation-density-1792819646810.jpg` shown. No shared style or URL change.
+- **Edit:** Remove only decorative ordinal prefixes in five independent shelf route files (Local, Online, Service, Product, Unit Economics). Preserve semantic subject labels and numeric actual values. Check a representative rendered page after deploy. Separate numbered card ornaments and wider spacing defects remain pending.
