@@ -62,7 +62,7 @@ export function PartTimeCategory({ category, related }: PartTimeProps) {
 
     <div className="pt-lanes" aria-label="Part-time business idea collections">
       {lanes.map((lane, laneIndex) => <section className={"pt-lane pt-lane-" + lane.id} id={lane.id} key={lane.id} aria-labelledby={lane.id + "-heading"}>
-        <div className="pt-lane-intro"><p className="pt-kicker">{lane.cue}</p><h2 id={lane.id + "-heading"}>{lane.title}</h2><p>{lane.intro}</p>{laneIndex === 0 && <Link to="/side-business-ideas-india" className="pt-text-link">Compare a side business with your current week <ArrowUpRight size={16} /></Link>}{laneIndex === 1 && <Link to="/startup-costs-india" className="pt-text-link">Write down every startup cost <ArrowUpRight size={16} /></Link>}{laneIndex === 2 && <Link to="/first-customer-india" className="pt-text-link">Find your first paying customer <ArrowUpRight size={16} /></Link>}</div>
+        <div className="pt-lane-intro"><p className="pt-kicker">{lane.cue}</p><h2 id={lane.id + "-heading"}>{lane.title}</h2><p>{lane.intro}</p>{laneIndex === 0 && <Link to="/side-business-ideas-india" className="pt-text-link">Compare a side business with your current week <ArrowUpRight size={16} /></Link>}{laneIndex === 1 && <Link to="/weekend-market-stall-profit-check" className="pt-text-link">Check what a market day leaves <ArrowUpRight size={16} /></Link>}{laneIndex === 2 && <Link to="/first-customer-india" className="pt-text-link">Find your first paying customer <ArrowUpRight size={16} /></Link>}</div>
         <div className="pt-route-list">{lane.entries.map(([name, note]) => {
           const sub = pathFor(category, name);
           if (!sub) return null;

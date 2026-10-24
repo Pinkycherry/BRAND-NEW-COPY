@@ -16,7 +16,7 @@ export const PART_TIME_PATHS: Record<string, { lead: string; question: string; c
     lead: "A stall can give you buyer feedback in a single day. The table fee, stock, samples and travel still have to come out of the takings.",
     question: "What would a good market day mean?",
     checks: ["Ask the organiser about the actual stall fee and permitted products.", "Plan the smallest stock batch you can carry home if it does not sell."],
-    nextLabel: "List the day's full cost", nextHref: "/startup-costs-india",
+    nextLabel: "Check one market day's surplus", nextHref: "/weekend-market-stall-profit-check",
   },
   "part-time-shop-accounts-help-business-ideas": {
     lead: "A shop may need regular help with records but cannot hand over an open-ended pile of work. Define the documents, deadline and responsibility before offering a weekly slot.",

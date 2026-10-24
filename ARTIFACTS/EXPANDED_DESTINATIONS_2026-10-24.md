@@ -61,3 +61,6 @@ The next destinations are distinct jobs, not cloned collection templates. The pa
 
 ### 24/10/2026 10:42 IST — Weekend Market Stall Profit Check in build
 The proposed `/weekend-market-stall-profit-check` now has a sourced, isolated ledger design for one actual market day. Only the user's entered rupee fields produce a surplus, explicitly before owner pay, tax and shared overhead. This is **not yet verified live**. The full 56-destination target and all other proposed rows remain pending. Integrate the route from the source collection only after deployed arithmetic and destination QA.
+
+### 24/10/2026 10:45 IST — Market-day worksheet desktop verification
+The first new proposed destination deployed as a substantive page. Test arithmetic produced ₹830 and -₹670 in two input cases; no result appears until all eight rupee fields are entered. It includes source method links, 16:9 journal art and named paths to ten source stall ideas. Desktop/noindex checks passed. **Status remains PENDING full acceptance** until 360/390px, contextual link deployment and editorial review; 32 other proposed destinations have not been built.
