@@ -19,7 +19,7 @@
 .glass-home .bp-scope>div p:not(.gh-eyebrow){color:#5b6276}
 .glass-home .bp-scope ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem;list-style:none;margin:0;padding:0}
 .glass-home .bp-scope li{padding:1.35rem;border:1px solid #fff;border-radius:20px;background:#ffffffc7}
-.glass-home .bp-scope li span{display:block;color:#775fc6;font-size:.75rem;font-weight:800;margin-bottom:.8rem}
+
 .glass-home .bp-scope li strong{font-size:1.2rem}
 .glass-home .bp-scope li p{color:#5d6376;font-size:.87rem}
 .glass-home .bp-workbench{padding:clamp(1.5rem,4vw,3rem);border:1px solid #fff;border-radius:32px 70px 32px 32px;background:linear-gradient(125deg,#e9e6ff,#f5f8ff 65%,#e5f4f4)}
