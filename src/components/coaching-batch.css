@@ -5,16 +5,16 @@
 .glass-home .cb-page a:hover{text-decoration:underline}
 .glass-home .cb-page a:focus-visible,.glass-home .cb-page input:focus-visible,.glass-home .cb-page summary:focus-visible{outline:3px solid #6858ca;outline-offset:3px}
 .glass-home .cb-page h1,.glass-home .cb-page h2,.glass-home .cb-page h3{letter-spacing:-.035em;color:#232334}
-.glass-home .cb-page h1{font-size:clamp(2.5rem,4.15vw,4.7rem);line-height:1.04;margin:14px 0 20px;max-width:13ch}
+.glass-home .cb-page h1{font-size:clamp(2.5rem,3.55vw,3.75rem);line-height:1.08;margin:12px 0 16px;max-width:20ch}
 .glass-home .cb-page h2{font-size:clamp(1.85rem,2.7vw,2.8rem);line-height:1.12;margin:8px 0 16px;max-width:19ch}
 .glass-home .cb-page h3{font-size:clamp(1.16rem,1.4vw,1.5rem);line-height:1.25;margin:0 0 8px}
 .glass-home .cb-page p{line-height:1.6;margin:0 0 14px}
 .glass-home .cb-page .gh-eyebrow{font-size:.73rem;line-height:1.4;letter-spacing:.11em;font-weight:800;color:#6959a9;margin:0}
 .glass-home .cb-page .gl-breadcrumb{padding:20px 0 0;margin-bottom:0}
-.glass-home .cb-hero{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(330px,.8fr);gap:clamp(24px,4vw,72px);align-items:center;padding:45px 0 62px}
+.glass-home .cb-hero{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(330px,.8fr);gap:clamp(24px,4vw,72px);align-items:center;padding:28px 0 40px}
 .glass-home .cb-hero>div>p:not(.gh-eyebrow){font-size:clamp(1.04rem,1.35vw,1.23rem);max-width:58ch}
-.glass-home .cb-hero .gh-button{margin-top:16px;display:inline-flex;align-items:center;gap:10px;min-height:48px}
-.glass-home .cb-offer-slip{padding:34px;min-height:290px;border-radius:36px 36px 65px 36px;background:linear-gradient(144deg,#eeeafd 5%,#fff 70%);border:1px solid #e3dcf8;box-shadow:0 24px 65px rgba(53,47,109,.10);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.glass-home .cb-hero .gh-button{margin-top:8px;display:inline-flex;align-items:center;gap:10px;min-height:48px}
+.glass-home .cb-offer-slip{padding:34px;min-height:260px;border-radius:36px 36px 65px 36px;background:linear-gradient(144deg,#eeeafd 5%,#fff 70%);border:1px solid #e3dcf8;box-shadow:0 24px 65px rgba(53,47,109,.10);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
 .glass-home .cb-offer-slip>span,.glass-home .cb-result>span{font-size:.72rem;font-weight:800;letter-spacing:.12em;color:#6959a9}
 .glass-home .cb-offer-slip strong{display:block;font-size:clamp(1.4rem,2vw,2rem);line-height:1.22;letter-spacing:-.03em;margin:18px 0}
 .glass-home .cb-offer-slip p{max-width:45ch}
