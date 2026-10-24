@@ -6,12 +6,12 @@
 .glass-home .sc-page h2{font-size:clamp(2rem,3.2vw,3.4rem);line-height:1.1;margin:.5rem 0 1rem}
 .glass-home .sc-page h3{font-size:1.35rem;line-height:1.2;margin:0 0 .45rem}
 .glass-home .sc-page p{line-height:1.65}
-.glass-home .sc-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.58fr);align-items:center;gap:clamp(2rem,6vw,6rem);padding:clamp(2rem,5vw,4.5rem);border:1px solid #fff;border-radius:35px 86px 35px 35px;background:radial-gradient(circle at 90% 12%,#ded5ff,transparent 40%),linear-gradient(120deg,#fff,#edf5ff);box-shadow:0 22px 55px #5b57941c}
-.glass-home .sc-hero h1{font-size:clamp(3rem,5.3vw,5.7rem);line-height:1.04;max-width:13ch;margin:.7rem 0 1rem}
+.glass-home .sc-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.58fr);align-items:center;gap:clamp(1.25rem,3vw,2.5rem);padding:clamp(1.5rem,3vw,2.5rem);border:1px solid #fff;border-radius:35px 86px 35px 35px;background:radial-gradient(circle at 90% 12%,#ded5ff,transparent 40%),linear-gradient(120deg,#fff,#edf5ff);box-shadow:0 22px 55px #5b57941c}
+.glass-home .sc-hero h1{font-size:clamp(2.75rem,4vw,3.8rem);line-height:1.06;max-width:19ch;margin:.4rem 0 .7rem}
 .glass-home .sc-hero h1 em{font-style:normal;color:#785fca}
 .glass-home .sc-lede{max-width:66ch;color:#555d72;font-size:1.05rem}
-.glass-home .sc-hero .gh-button{margin-top:1rem}
-.glass-home .sc-hero-note{display:grid;gap:.35rem;padding:2rem;border:1px solid #fff;border-radius:24px;background:#ffffffc7;box-shadow:0 16px 45px #4d48701c;transform:rotate(2deg)}
+.glass-home .sc-hero .gh-button{margin-top:.35rem}
+.glass-home .sc-hero-note{display:grid;gap:.35rem;padding:1.35rem;border:1px solid #fff;border-radius:24px;background:#ffffffc7;box-shadow:0 16px 45px #4d48701c;transform:rotate(2deg)}
 .glass-home .sc-hero-note span{font-size:.72rem;letter-spacing:.1em;color:#755fbe;font-weight:800;margin-top:.75rem}
 .glass-home .sc-hero-note strong{font-size:1.32rem}
 .glass-home .sc-hero-note p{border-top:1px solid #d8d4e8;margin:1rem 0 0;padding-top:1rem;color:#5d6375}
