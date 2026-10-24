@@ -57,3 +57,7 @@ For every page, define exact section order, mobile behavior, loading/error/empty
 ## Handoff format for every subsequent task
 
 Read the linked artifacts; inspect the affected route and shared dependencies; note the blast radius; implement directly in `main`; run the relevant checks; verify the Vercel deployment when observable; append an IST log entry containing instruction, files, commit, tests, live result, remaining issue, and next action. Pinky 2 should be able to resume from the public URLs above without relying on chat history.
+
+## Latest founder correction — 24 October 2026 IST
+
+Read [PENDING.md](PENDING.md) before every research/edit. The founder rejected the pervasive visible numeric section labels, star/sparkle/Gemini-like symbols, oversized category hero followed by another empty heading, and page-to-page repetition. Research first, then build 50–60 **different** substantive destinations from real Indian founder questions and source material; weave contextual onward links rather than dumping 60 calculator links onto a page. Start with the part-time category first fold, audit mobile and SEO, and retain every instruction as pending until evidence closes it. The 55 generic calculator records with mathematically misleading outputs are a critical integrity issue; quarantine before routing visitors to them. Palette/logo decisions are deferred, but layout and content quality are not.
