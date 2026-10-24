@@ -29,7 +29,7 @@ Every page needs an answer in the opening screen; a substantive method or source
 | Idea /idea/:slug | Preserve source slug, image, original data and real Validate button. Conditional 12–15 modules: premise, buyer, existing alternative, source evidence, offer, work and time, revenue, direct cost, unit economics when inputs exist, cash timing, competition, risk, first 30 days, validation, FAQ and related real ideas. Missing facts are marked unknown, not fabricated. | In-module prompts route buyer → First Customer; cash → Costs/Cash Flow; pricing → Price; test → Validation/Demand; two options → Compare. Validate retains all existing LLM providers. |
 | Startup guides /startup-guides and /startup-guides/:slug | All 20 original full articles and featured images; index by decision, original date/title, image and summary. Details retain full prose with reliable TOC, source-specific mid-read path, examples where source supports them, conclusion and FAQ only if supported. | Each article chooses topic-aware tools and real related guides; original slug remains. |
 | Journal /blog and /blog/:slug | All 23 published posts, original image/date/body/author where available, index by reader question, source-specific reading companions, excerpts, next practical step. | Part-time → Time Fit; small town → Research; price → Price; buyer → First Customer; route determined from actual subject. |
-| Calculator /calculator and /calculator/:slug | Preserve 60 working calculator routes; index by question rather than 60 indistinguishable tiles. Detail: inputs, transparent formula, live result, interpretation, countercase, source context and next move. | Cost/price/cash/unit question → relevant decision page and a published idea; no faux saved result. |
+| Calculator /calculator and /calculator/:slug | Preserve 60 source calculator URLs. Five specifically modeled tools are currently available; 55 generic generated entries are paused with an under-review explanation until each formula is rebuilt. Available detail: named inputs, transparent formula, live result, interpretation, limitations and next move. | Cost/price/cash/unit question → relevant decision page and a published idea; no faux saved result. |
 | Glossary /founder-glossary | Preserve 159 actual definitions, search and alphabet; add decision clusters, exact source text, context example where warranted, linked term/application. | Margin → Price/Unit Economics; runway → Cash; validation → Demand; no made-up terms. |
 | Resource hubs /learning-resources and /useful-tools | Existing source destinations with available-now labels, task-led navigation and accurate capability descriptions. | No dead generator, fake report or account promise. |
 | Human/access /about, /founders, /contact, /pricing, /services | True authorship, editorial method, limitations, contact pathway and exact currently free/available tools. | Contextual inquiry or library route; no fake testimonial, subscription or AI outcome. |
@@ -37,7 +37,7 @@ Every page needs an answer in the opening screen; a substantive method or source
 
 ## Distinct India-first decision scenes: current and required
 
-The authoritative 24-row live/planned status remains in PAGE_SYSTEM_2026-10-23.md. At this checkpoint, twelve of these routes are implemented and desktop tested or live; twelve are planned. A route is promoted as live only after deployment and direct behavior inspection. Phone visual QA is open.
+The authoritative 24-row live/planned status remains in PAGE_SYSTEM_2026-10-23.md. The table contains 23 distinct decision scenes. Status varies and must be checked against the running log; a route is promoted as live only after deployment and direct behavior inspection. Phone visual QA is open. The founder requests 50–60 different substantive destinations: see EXPANDED_DESTINATIONS_2026-10-24.md for 33 additional, pending routes (56 total proposed), excluding repeated taxonomy and calculator aliases.
 
 | Scene / URL | Main content and working object | In-page paths |
 |---|---|---|
@@ -63,7 +63,11 @@ The authoritative 24-row live/planned status remains in PAGE_SYSTEM_2026-10-23.m
 | Decision Journal /founder-decision-journal | Browser-local dated claim, observation, source and next decision; export/copy only if actually implemented. | Research, Pivot, Validation. |
 | Terms /startup-terms-india | Existing 159 real terms organized by the first decision they affect, with exact definition links. | Glossary detail/anchor, relevant worksheet. |
 | Reading Room /business-idea-reading-room | Combined 20 guides and 23 journal articles using original art and decision-specific trails, without duplicate thin excerpts. | Full source URL → matching tool → published idea. |
-| Toolkit /business-idea-toolkit | Source 60 calculators, working validation entry and the new worksheets by question, honest availability and how input is handled. | Calculator → interpretation → guide/blueprint. |
+| Toolkit /business-idea-toolkit | Five specifically modeled calculators, 55 source entries under formula review, working validation entry and new worksheets by question, honest availability and how input is handled. | Calculator → interpretation → guide/blueprint. |
+
+## Expansion register
+
+The 33 additional destinations and their distinct content/decision objects are recorded in [EXPANDED_DESTINATIONS_2026-10-24.md](EXPANDED_DESTINATIONS_2026-10-24.md). Together with the 23 scenes above, this is a **56-destination target**, not a 56-page completion claim. Source idea, taxonomy, guide and post families are separate and cannot inflate that count. All 33 additions are pending full build and QA.
 
 ## Link and redirect contract
 
@@ -86,12 +90,12 @@ The authoritative 24-row live/planned status remains in PAGE_SYSTEM_2026-10-23.m
 
 ## Rollout and what follows the page frames
 
-1. Finish the twelve planned decision/shelf/reference scenes, using real source records and original images. Add one or two contextual links from neighbouring pages only after each route is working.
-2. Deepen the existing home, browse, 100 category and 1,000 subcategory framework, catalog, idea detail template, 20 guides, 23 posts, 60 calculator routes and 159 terms. Priority is useful content and truthful data bindings, not a raw URL count. Ensure every published idea has a complete readable fallback and real Validate entry.
+1. Complete and deepen the 23 existing decision scenes, then build the distinct 33-route expansion only where real source evidence supports the promised answer, using original images. Add one or two contextual links from neighbouring pages only after each route is working.
+2. Deepen the existing home, browse, 100 category and 1,000 subcategory framework, catalog, idea detail template, 20 guides, 23 posts, five active calculator models, 55 under-review source routes and 159 terms. Priority is useful content and truthful data bindings, not a raw URL count. Ensure every published idea has a complete readable fallback and real Validate entry.
 3. Run the route and redirect audit; repair dead links, misrouted source images, canonical duplication and any SSR error. Check header/footer coverage and read-through journeys from at least four founder starting situations.
 4. Inspect actual 360/390px and desktop rendered screens, text crossings, full 16:9 artwork, performance, keyboard focus and reduced motion. Screenshots after every three to five edits and after a visual repair.
 5. Only after domain connection and founder authorization: migrate canonicals, sitemap and indexing in one controlled release; verify robots headers and image SEO again. No claim that preview URLs can be completely invisible while public.
-6. Post-frame expansion is a new planning round with the founder: evidence-backed location shelves, additional original long-form content, saved founder work only with real auth, and deeper validated tools. Do not prepublish empty “future feature” pages or fabricate 50,000 ideas.
+6. The founder has directed an expanded 50–60 destination plan. The 56-route register is in EXPANDED_DESTINATIONS_2026-10-24.md; build substantive pages and source evidence before promotion. Saved founder work still requires real auth. Do not prepublish empty “future feature” pages or fabricate 50,000 ideas.
 
 ## Handoff test for Pinky 2
 
