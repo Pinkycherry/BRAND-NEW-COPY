@@ -26,7 +26,7 @@
 .glass-home .vf-section-head { max-width:850px; }
 .glass-home .vf-section-head > p:not(.gh-eyebrow) { max-width:70ch; color:#596076; }
 .glass-home .vf-interview-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; margin-top:2rem; }
-.glass-home .vf-interview-list article { display:grid; grid-template-columns:36px 1fr; gap:1.2rem; padding:1.8rem; border:1px solid #fff; border-radius:23px; background:#ffffffd7; }
+.glass-home .vf-interview-list article { display:grid; grid-template-columns:1fr; gap:0; padding:1.8rem; border:1px solid #fff; border-radius:23px; background:#ffffffd7; }
 .glass-home .vf-interview-list article:nth-child(even) { background:#f0effe; }
 .glass-home .vf-interview-list article > span { color:#7d6ac6; font-weight:800; font-size:.8rem; }
 .glass-home .vf-interview-list p { margin:0; color:#5c6177; }
@@ -38,7 +38,7 @@
 .glass-home .vf-evidence .gh-eyebrow { color:#c2b4ff; }
 .glass-home .vf-evidence > div > p:last-child { max-width:42ch; color:#d4d2e6; }
 .glass-home .vf-evidence ol { list-style:none; padding:0; margin:0; }
-.glass-home .vf-evidence li { display:grid; grid-template-columns:38px 1fr; gap:1rem; padding:.9rem 0; border-bottom:1px solid #ffffff30; }
+.glass-home .vf-evidence li { display:grid; grid-template-columns:1fr; gap:0; padding:.9rem 0; border-bottom:1px solid #ffffff30; }
 .glass-home .vf-evidence li:last-child { border:0; }
 .glass-home .vf-evidence li > span { color:#b9aaf8; font-size:.78rem; font-weight:800; }
 .glass-home .vf-evidence strong { font-size:1.08rem; }
