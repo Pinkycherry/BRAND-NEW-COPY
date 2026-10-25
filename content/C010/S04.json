@@ -1,0 +1,521 @@
+{
+  "subcategory": {
+    "code": "C010-S04",
+    "intro": "A doorstep grooming service saves the customer a trip, but it makes the provider responsible for carrying a clean workspace into somebody else's home. The customer may want a haircut before a shift, threading for an apartment group or a simple service for a child who dislikes a crowded salon. These are different businesses even when the scissors and mirror look similar. Choose the client and the service you have been trained to perform, then include travel, setup, cleaning and safe tool storage in the quote. Ask for an appropriate chair, light, water and privacy before arriving. If the home cannot provide them, bring suitable equipment or decline the job. Use clean or single use materials between clients and ask about allergies or skin conditions without claiming to treat them. A client should know the price and what is included before you unpack your kit. Take bookings in a compact area or group appointments at one building to keep travel from consuming the whole day. A venue booking needs more staff and different timing than a single doorstep trim. Get consent before taking photos, respect private rooms and never bring an unannounced helper into a home. Some grooming requests involve medical risk or animal handling outside an ordinary beautician's skills; refer them when needed. The ten ideas below choose different customer groups, time slots and mobile setups. Build a narrow menu you can deliver consistently and keep a contingency for a late previous visit. A good mobile service leaves the client comfortable, the work area clean and the next appointment still on time. The convenience of coming to the door should never be used as an excuse for rushed or unhygienic work.",
+    "how_to_choose": "Start with your strongest trained service and the customers you can reach in one cluster. An apartment block day gives several short bookings in one place; a men's haircut route needs portable equipment and cleanup. A child focused visit requires patience and a parent present. Group events need assistants and a booking coordinator. Count full travel and cleaning time, not only minutes touching the client. Trial paid visits with a small menu and ask what in home conditions made work difficult. Add a second service only after tools, hygiene and appointment length are predictable.",
+    "faq": [
+      {
+        "q": "Do you need a salon room to offer doorstep grooming?",
+        "a": "A mobile setup can work, but check local business and service requirements and carry suitable clean tools. The customer's home must have a safe workspace. Do not perform a procedure that needs facilities you cannot provide there."
+      },
+      {
+        "q": "How should travel appear in the price?",
+        "a": "State the included radius and any extra travel or minimum booking amount before confirming. Grouped appointments can reduce the cost per customer. Hiding the journey in a surprise bill damages trust."
+      },
+      {
+        "q": "Can you use one kit for several homes?",
+        "a": "Only with a proper cleaning and replacement process between clients. Pack used materials separately, follow product instructions and allow time for sanitation. A busy route does not excuse reused disposable items."
+      },
+      {
+        "q": "What if the customer requests another service on arrival?",
+        "a": "Check whether you have the skill, safe setup and time. Quote it before starting and decline if it delays another booking or requires equipment you did not bring. The original appointment stays the priority."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C010-S04-I01",
+      "slug": "mens-doorstep-hair-and-beard-route",
+      "title": "Mens Doorstep Hair and Beard Route",
+      "hook": "A busy worker may want a reliable haircut and beard trim at home without spending the evening in a salon queue.",
+      "summary": "You offer booked men's haircuts and beard trims on a compact home visit route. Each customer provides a safe chair and light or you bring a portable setup. A narrow menu, clean tools and full cleanup make the convenience worth the travel fee.",
+      "what_it_is": "On a usual day, you confirm the requested cut, address, parking and workspace before leaving. You bring clean clippers, guards, scissors, cape, mirror and a way to collect hair. You ask the customer to describe length and beard shape, then check before making an irreversible change. In this business, you use fresh or properly sanitised materials, keep electrical tools away from water and leave the floor clean. You quote the service and travel together, with a stated time for each visit. You do not add chemical treatments or a close shave you cannot safely perform in the available room. Group appointments in the same lane only with each customer's own booking consent.",
+      "who_pays_you": "Office workers, shop owners and fathers with little salon time may pay for a home visit. Some families book several adults at one address, reducing travel. A customer who lives far away and wants only a very quick trim may prefer a local barber; explain the minimum visit fee clearly. A dense residential route is more useful than a citywide promise.",
+      "how_money_comes": "In this business, you charge per haircut or haircut and beard package with travel included inside a defined radius. An extra person at the same home receives a stated rate, not an unplanned free service. Replacement blades, tool cleaning and travel time belong in the price. Repeat visits can steady the calendar, but confirm each appointment. You use Validate for current local salon and mobile service rates.",
+      "what_you_need": "Barbering skill, portable clean tools, battery or safe power plan, cape, hand hygiene and a protected case for used items. You need booking discipline and respect for a private home. You check local service requirements. In this business, you keep a backup tool so a failed clipper does not leave a half finished haircut.",
+      "first_30_days": [
+        "Ask nearby men which home visit times would save a real trip to the barber.",
+        "Practise a portable setup and complete cleanup at a consenting household.",
+        "Trial paid appointments within one compact area with a clear travel boundary.",
+        "Measure full door to door time before publishing a daily booking capacity."
+      ],
+      "what_hurts": "Poor lighting can hide an uneven cut, and a small home may not have a safe socket or chair. Traffic between appointments can make the next customer wait. Hair clippings left behind can ruin an otherwise good service. In this business, you confirm the space, carry backup equipment and leave enough time to clean before travelling on.",
+      "verdict": "Build this if you cut hair well and can leave each home clean within a realistic route. Walk away if travel turns every short appointment into an unpaid half day.",
+      "faq": [
+        {
+          "q": "Who provides the chair and mirror?",
+          "a": "Agree before the visit. You may bring portable equipment, but the setup must be stable and well lit for safe work."
+        },
+        {
+          "q": "Can several family members share one booking?",
+          "a": "Yes, when you confirm each service, time and price in advance. Do not assume an extra person can fit before your next appointment."
+        },
+        {
+          "q": "What if the clipper stops working?",
+          "a": "Bring a tested backup or reschedule promptly under a fair policy. Do not improvise with an unsafe tool simply to finish the job."
+        }
+      ],
+      "validate_prompt": "I want to offer home visit men's haircuts and beard trims in India. What portable tools, hygiene, travel radius and local prices should I validate?",
+      "investment_band": "under_25k",
+      "life_stage": [
+        "working_professional",
+        "student"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S04-I02",
+      "slug": "apartment-threading-booking-afternoon",
+      "title": "Apartment Threading Booking Afternoon",
+      "hook": "Several residents in one apartment can book short threading appointments on the same afternoon without travelling to a parlour.",
+      "summary": "You arrange a permitted group booking window in an apartment common room or at individual doors. Residents select short grooming services and time slots in advance. One location reduces travel, while privacy, clean thread and punctual queue management remain essential.",
+      "what_it_is": "Get association permission for any common space and agree on privacy, seating, water and cleanup. Publish a narrow menu of threading services with individual appointment slots. You ask each client about irritated skin, use fresh thread and clean hands, then record completion without sharing personal details in the society group. If service happens inside flats instead, schedule enough time to move and reset tools. Display prices before work and end the session at the agreed hour. You do not use a common hall for a procedure that requires a private equipped room.",
+      "who_pays_you": "Apartment residents who want routine brow or upper lip threading may book, often after office hours or on a weekend. The association may allow access but individual clients usually pay. A full building of interested residents can make one visit worthwhile; a distant society with only one short appointment may not. In this business, you confirm bookings before travelling.",
+      "how_money_comes": "In this business, you charge each client the posted service price, with a minimum group booking value or shared travel fee disclosed by the organiser. A no show can open a slot for someone nearby, but never overbook in anticipation. Consumables and room cleanup remain your costs. Repeat monthly building days can provide predictable work. Validate local home service rates and any common room fee before quoting.",
+      "what_you_need": "Threading skill, fresh thread, mirror, good light, hygienic hand setup, appointment list and society permission. You need a portable privacy solution if the common room is exposed. You check local grooming and building access rules. In this business, you keep customer messages private rather than posting their chosen service beside a flat number.",
+      "first_30_days": [
+        "Ask one apartment manager whether a group grooming window is permitted and where it could happen.",
+        "Collect actual paid interest before reserving a full afternoon.",
+        "Trial a small booked session with sanitation and privacy between clients.",
+        "Review no shows and movement time before offering a monthly repeat day."
+      ],
+      "what_hurts": "Residents may arrive together despite their slots, while the common room may not feel private enough. A client with irritated skin may insist on threading anyway. The building can change access rules, and a short booking may not cover travel. In this business, you keep permission and minimums clear, refuse unsafe skin work and do not rush the queue.",
+      "verdict": "Build this if enough residents book one permitted location and you can protect privacy and hygiene. Walk away if the common area exposes clients or the building will not approve access.",
+      "faq": [
+        {
+          "q": "Must the association pay?",
+          "a": "No. It may only approve the space while each client pays you. Confirm any room charge or minimum booking before announcing appointments."
+        },
+        {
+          "q": "Can walk ins join?",
+          "a": "Only if time and hygiene supplies remain after confirmed clients. Keep a queue without displacing someone who booked a specific slot."
+        },
+        {
+          "q": "What if a client has a skin reaction?",
+          "a": "Stop and follow appropriate product free care guidance within your skill, then direct medical concerns to a qualified professional. Do not make treatment claims."
+        }
+      ],
+      "validate_prompt": "I want to run a booked threading afternoon in Indian apartments. What association permission, privacy, hygiene, minimum bookings and rates should I check?",
+      "investment_band": "under_25k",
+      "life_stage": [
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "metro",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S04-I03",
+      "slug": "child-friendly-home-haircut-visit",
+      "title": "Child Friendly Home Haircut Visit",
+      "hook": "A young child who fears a noisy salon may sit more calmly for a familiar paced haircut at home.",
+      "summary": "You provide planned children's haircuts in their homes with a parent present, a short consultation and safe portable tools. The service allows breaks without promising a perfect style on a distressed child. Patience and clear stop rules matter more than speed.",
+      "what_it_is": "On a usual day, you speak with the parent about the child's age, past haircut experience and a calm place to sit. You bring clean scissors or guarded clippers suited to your training, a cape and a way to collect hair. You explain the steps to the child simply and ask the parent to remain present. Pause when the child moves or becomes distressed, and stop if a safe cut is not possible. You never restrain a child to finish a paid appointment. You quote a visit that allows reasonable settling time and a fair incomplete service policy. Leave tools and hair safely cleared before departing.",
+      "who_pays_you": "Parents of young children, including children uncomfortable with salon noise or long waits, may pay. Some families want siblings done together in one home visit, but each child needs enough time and a separate choice to stop. A child with specialised support needs may require an experienced provider and a plan agreed with caregivers rather than a generic appointment.",
+      "how_money_comes": "In this business, you charge per child with an included visit and a stated extra travel amount beyond your radius. A sibling booking reduces travel but increases hands on time. You set a fair fee for a visit that must stop early for safety; do not promise a finished haircut regardless of the child's comfort. Repeat cuts can bring referrals from parent groups with permission. Validate local rates and realistic appointment length.",
+      "what_you_need": "Haircutting skill with children, guarded portable tools, hygiene supplies, calm communication and a parent's presence. You need a safe stable chair and an emergency stop habit. You check local grooming requirements. In this business, you keep sharp tools controlled if siblings or pets are moving around the room. You avoid claiming therapeutic expertise you do not have.",
+      "first_30_days": [
+        "Ask parents which parts of a salon visit their children find difficult.",
+        "Practise a calm portable setup with a parent present and a clear stop signal.",
+        "Trial paid visits with generous time and no pressure for a complicated style.",
+        "Review actual settling time and safety before adding back to back bookings."
+      ],
+      "what_hurts": "A child can turn suddenly toward scissors or refuse the cape. Parents may insist that you continue despite visible distress because they paid. A long calming visit can delay the next booking. In this business, you put safety ahead of a perfect finish, set expectations before starting and leave enough room in your calendar for breaks.",
+      "verdict": "Build this if you are patient with children and comfortable stopping when a haircut is unsafe. Walk away if your income depends on rushing a distressed child through the chair.",
+      "faq": [
+        {
+          "q": "Must a parent be present?",
+          "a": "Yes, require an authorised caregiver throughout the appointment. They can help the child feel secure and decide when to pause."
+        },
+        {
+          "q": "What if the child refuses the haircut?",
+          "a": "Use the agreed stop and fee policy. Never force a child to continue simply to deliver the promised style. Offer a calm rescheduling option."
+        },
+        {
+          "q": "What if the child asks to stop?",
+          "a": "Pause immediately and ask the parent how to proceed. A calm unfinished cut is safer than forcing a frightened child to continue unwillingly through the appointment."
+        }
+      ],
+      "validate_prompt": "I want to offer patient home haircuts for children in India. What safety process, caregiver consent, portable tools and local fees should I validate?",
+      "investment_band": "under_25k",
+      "life_stage": [
+        "working_professional",
+        "homemaker"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S04-I04",
+      "slug": "hostel-barber-group-visit-day",
+      "title": "Hostel Barber Group Visit Day",
+      "hook": "Students in a hostel can book short haircuts in one permitted visit instead of travelling separately to a crowded market barber.",
+      "summary": "You run a scheduled barber visit at a hostel in an approved room, with individual student bookings and fees. Grouped demand reduces travel. Hygiene, access permission and a tidy room make the service acceptable to the hostel manager.",
+      "what_it_is": "On a usual day, you ask the hostel operator for written permission, an appropriate well lit space, cleaning expectations and allowed hours. Publish a limited haircut menu and appointment list without pressuring students to join. You bring clean tools and a floor covering, perform each student's chosen cut, sanitise between clients and collect hair after the final slot. In this business, you use a receipt or simple payment record for each person. You do not enter private rooms or use the hostel name as an endorsement without permission. A crowded corridor with moving residents is not a safe barber station.",
+      "who_pays_you": "College students, coaching students and hostel residents pay individually. A hostel manager may help announce the approved day but should not be assumed to pay. A large residence can fill several hours if students genuinely book in advance. During holidays demand falls, so plan other customers outside the hostel schedule.",
+      "how_money_comes": "In this business, you charge per haircut at a posted group visit price, with a reasonable minimum of confirmed bookings to justify travel and setup. The hostel may charge for room use, which must be included before announcing rates. No shows and student budgets affect revenue, so take bookings without buying excessive supplies. A repeat monthly visit can build a habit. Validate local barber fees and cleaning costs.",
+      "what_you_need": "Barbering skill, portable powered or charged tools, mirrors, floor cover, sanitation supplies and hostel permission. You need a booking list and safe electrical setup. You check local grooming service requirements. In this business, you clean the room fully and keep sharp items controlled around waiting students.",
+      "first_30_days": [
+        "Ask hostel managers whether a barber visit is allowed and which room can be used.",
+        "Collect genuine student bookings before reserving a date.",
+        "Trial a paid short session with individual receipts and full cleanup.",
+        "Review no shows and service timing before offering a standing monthly visit."
+      ],
+      "what_hurts": "Students may crowd the room or ask for cuts beyond the scheduled time. Hostel rules can change, and a power socket may be unavailable. A missed cleanup will end future access quickly. In this business, you keep a cutoff, bring a backup power plan and refuse work in an unsafe improvised space even if several students are waiting.",
+      "verdict": "Build this if the hostel permits a clean room and enough students book in advance. Walk away if access is informal or the minimum bookings never cover setup and travel.",
+      "faq": [
+        {
+          "q": "Does the hostel need to approve the visit?",
+          "a": "Yes. Get clear permission for the room, time and cleanup. A student's invitation alone may not authorise commercial work in common space."
+        },
+        {
+          "q": "Can residents join without booking?",
+          "a": "Only if capacity remains after confirmed slots. Keep tools clean between every person even when a group is waiting. Allow enough cleanup time."
+        },
+        {
+          "q": "Can you add more students on the day?",
+          "a": "Only when there is time and a clear fee. Do not extend the group session into another booking without explicit agreement from the organiser."
+        }
+      ],
+      "validate_prompt": "I want to run booked barber days at student hostels in India. What hostel permission, hygiene, minimum bookings and current fees should I validate?",
+      "investment_band": "under_25k",
+      "life_stage": [
+        "working_professional",
+        "student"
+      ],
+      "place": [
+        "small_town",
+        "city"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S04-I05",
+      "slug": "doorstep-basic-manicure-for-shift-workers",
+      "title": "Doorstep Basic Manicure for Shift Workers",
+      "hook": "A person working unusual hours may want simple nail care at home when a salon appointment is hard to reach.",
+      "summary": "You provide booked basic manicures and tidy nail care at the customer's home, within your training and a safe visit window. The narrow service avoids complex extensions. You clean portable tools, ventilation and clear product choices make repeat visits possible.",
+      "what_it_is": "On a usual day, you confirm the requested basic manicure, address, workspace and any known product sensitivity before arriving. You bring clean tools, fresh single use materials, labelled products, a portable mat and light. Examine whether the nail appears healthy enough for a cosmetic service; refer an apparent infection or injury rather than covering it. In this business, you explain the service price and finish time, work with adequate ventilation and collect every clipping and used material. You do not offer extensions or aggressive cutting because a client mentions a party. A safe narrow visit fits a shift worker's schedule better than an overlong menu.",
+      "who_pays_you": "Nurses, retail employees, hospitality workers and others with irregular shifts may pay. Some prefer a quiet visit after rest rather than a salon queue. Book within a realistic radius and ask whether the proposed hour is comfortable and safe for both sides. A few returning clients can support a route, but do not assume every worker wants late night service.",
+      "how_money_comes": "In this business, you charge per defined basic manicure, with a transparent travel fee beyond the included area and a rescheduling policy. Consumables and cleaning between homes must be costed. Repeat care can bring bookings every few weeks, but never push unnecessary appointments. A complex design is a different service with separate time and skill. Validate local mobile beauty rates and product costs.",
+      "what_you_need": "Nail care training, portable clean tools, hygienic waste bag, light, ventilation plan and safe travel. You learn product instructions and when to refuse a cosmetic service. You check local grooming requirements. In this business, you keep client photographs and nail condition notes private, and do not diagnose medical problems.",
+      "first_30_days": [
+        "Ask shift workers whether a short home nail care appointment would fit their real hours.",
+        "Test a portable basic manicure setup and cleanup without relying on salon furniture.",
+        "Trial paid visits within one compact area at safe appointment times.",
+        "Review product use, travel and sanitation time before adding more slots."
+      ],
+      "what_hurts": "A poor home surface or lack of ventilation can make product use uncomfortable. A client may want an infection covered, or a late shift can change at short notice. Travel at unusual hours has personal safety costs. In this business, you set a safe schedule, decline medical nail problems and do not let a simple manicure become an untrained procedure.",
+      "verdict": "Build this if you can bring clean basic nail care to safe appointments without rushing. Walk away if most requests require medical attention or late travel you cannot manage. Keep the service limited to comfortable cosmetic care.",
+      "faq": [
+        {
+          "q": "Can you remove an infected nail?",
+          "a": "No. A suspected infection or injury belongs with a qualified clinician. Cosmetic work should be declined until it is appropriate."
+        },
+        {
+          "q": "Do you need ventilation at home?",
+          "a": "Yes, follow each product's directions and choose a suitable workspace. Do not use a strong product in a small closed room to save setup time."
+        },
+        {
+          "q": "Can you do elaborate extensions too?",
+          "a": "Only with separate training, tools and booking time. Keep the basic manicure offer narrow until you can safely deliver more."
+        }
+      ],
+      "validate_prompt": "I want to offer basic home manicures for shift workers in India. What safe visit hours, hygiene, product needs and current local prices should I check?",
+      "investment_band": "under_25k",
+      "life_stage": [
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "metro",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S04-I06",
+      "slug": "workplace-lunch-break-grooming-day",
+      "title": "Workplace Lunch Break Grooming Day",
+      "hook": "A small office can book several simple haircuts on one day without sending its staff across town.",
+      "summary": "You arrange a scheduled grooming station at an employer's premises and serve consenting staff in reserved slots. The company provides space, while individuals or the employer pay the agreed fee. A focused haircut menu keeps the working day predictable.",
+      "what_it_is": "On a usual day, you ask the office for permission, a well-lit washable space, power access and a private booking contact. You offer a limited set of cuts that fit the slot length and bring a protective floor covering, clean tools and a waste bag. Appointments remain optional for employees. In this business, you check how long setup and cleanup take before advertising a full schedule. You keep photographs and employee names private unless separately permitted. A workplace visit is a group booking with one venue and a clear finish time, rather than an open invitation for walk-ins.",
+      "who_pays_you": "Small offices, clinics and shops with several interested workers can make a visit viable. The employer may pay as a staff benefit or staff may pay individually. You ask who settles the bill before the day. A workplace with one interested person is generally better served through a normal home booking, because setup and travel consume the margin.",
+      "how_money_comes": "In this business, you quote a minimum block of booked slots and a per-person price beyond it. You include travel, setup, consumables and cleanup in that quote. You take a booking deposit from the organiser where appropriate and set a cancellation cutoff. You do not count an informal expression of interest as a paid slot. You use Validate for comparable local group service rates.",
+      "what_you_need": "Solid haircutting ability, portable tools, clean capes, sanitation supplies, floor protection, safe extension arrangements and a booking sheet. You also need the venue's consent and a clear way to collect payment. You start with one nearby workplace and enough buffer between appointments to avoid disrupting its operations.",
+      "first_30_days": [
+        "Time each service and design a short menu.",
+        "Approach a few employers with a booking sheet and minimum group size.",
+        "Run one paid pilot with advance appointments and photograph the station only with permission.",
+        "Review slot times, no-shows and cleanup before repeating."
+      ],
+      "what_hurts": "Late staff, unsuitable rooms and last-minute changes can cause a queue. An employer may expect all-day availability for a small fee. Specify the booked window, minimum charge and responsibility for the space. You do not work around unsafe wiring or pressure people to book. An interrupted workday can cost the organiser goodwill, so leave enough spare time around each slot.",
+      "verdict": "Build this if you can fill timed group slots and leave a workplace spotless. Walk away if the venue cannot provide safe space or a reliable organiser. Start with one cooperative office and time the whole visit.",
+      "faq": [
+        {
+          "q": "Who pays for the cuts?",
+          "a": "Either the employer or individual staff can pay. Agree on one arrangement before the visit so you do not chase several people afterward."
+        },
+        {
+          "q": "Can staff walk in without booking?",
+          "a": "Allow it only if spare time remains. Reserved appointments protect the office schedule and keep your minimum group booking commercially sensible."
+        },
+        {
+          "q": "Do you need the employer's consent?",
+          "a": "Yes. Confirm the room, timing, cleaning expectations and payment contact with an authorised organiser before offering services inside the workplace."
+        }
+      ],
+      "validate_prompt": "I want to run a paid haircut day in a small Indian workplace. Check current local salon rules, hygiene expectations and group booking prices.",
+      "investment_band": "under_25k",
+      "life_stage": [
+        "student",
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "metro",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S04-I07",
+      "slug": "clubhouse-team-haircut-session",
+      "title": "Clubhouse Team Haircut Session",
+      "hook": "A sports club can coordinate basic trims after training when several members are already gathered in one place.",
+      "summary": "You book a defined session at a local clubhouse and deliver simple cuts to a pre-registered team group. The familiar venue reduces separate travel, while the appointment list and portable cleaning setup keep the session orderly.",
+      "what_it_is": "On a usual day, you speak with the club organiser about a suitable room, water and power, adult supervision for younger members and the end time. You bring clean barber tools, capes, a covered waste bag and floor protection. You take each person's requested length individually; a team booking does not mean everyone wants the same cut. In this business, you give adequate time for hygiene between clients and leave the shared room ready for its next use. You avoid working beside an active playing area or promising a rushed cut while athletes are moving through.",
+      "who_pays_you": "Amateur clubs, training academies and residential sports groups may organise a paid session. Individual members can pay or the club can cover it, with the arrangement agreed in advance. A large team with very few confirmed bookings is not a viable group visit; set a minimum booking threshold and a date to confirm it.",
+      "how_money_comes": "In this business, you charge a minimum session amount or a prepaid number of cuts, then a clear additional per-person rate. You include travel, venue setup, cleaning and replacement consumables. You keep cash or digital payments recorded against actual services. Consider a repeat monthly session only after demand has been proven. You use Validate to check current local grooming rates.",
+      "what_you_need": "Competent haircutting, reliable portable equipment, sanitation and floor protection, a booking list and a named club contact. If serving minors, obtain appropriate guardian permission and agree on who remains present. You start with a small team and a simple menu that you can finish within the venue booking.",
+      "first_30_days": [
+        "Measure each service and cleaning time carefully.",
+        "Find one club willing to collect advance names and confirm a room.",
+        "Run a limited paid session and note delays, requests and payment gaps.",
+        "Adjust the minimum group size and repeat only if the session earned after travel."
+      ],
+      "what_hurts": "A practice may finish late, people may leave early, and a venue may lack suitable light or sockets. You do not turn an uncertain group into a whole-day commitment. You confirm a cut-off time, minimum fee and cancellation terms. The quality of each person's cut matters more than a fast team total.",
+      "verdict": "Build this if a club can confirm enough appointments and give you a clean working room. Walk away if the roster changes constantly or the venue is unsafe. A dependable organiser matters more than a large informal team.",
+      "faq": [
+        {
+          "q": "Can you cut hair outdoors by the field?",
+          "a": "A sheltered, clean and well-lit indoor space is preferable. Wind, dust and poor power access make careful cutting and cleanup difficult."
+        },
+        {
+          "q": "Can you serve a junior team?",
+          "a": "Only with appropriate guardian consent and a responsible adult present. Check local requirements and keep the service simple and age appropriate."
+        },
+        {
+          "q": "Should every member receive the same style?",
+          "a": "No. Confirm each person's requested length and limits before cutting. A group price does not remove the need for individual care."
+        }
+      ],
+      "validate_prompt": "I plan scheduled haircuts for a local sports club in India. Check current local requirements for venue use, minors, hygiene and a realistic minimum group fee.",
+      "investment_band": "under_25k",
+      "life_stage": [
+        "student",
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S04-I08",
+      "slug": "barbershop-overflow-home-appointments",
+      "title": "Barbershop Overflow Home Appointments",
+      "hook": "A crowded neighbourhood barber may have customers willing to pay for a booked home slot rather than return another day.",
+      "summary": "You partner with a busy barbershop for overflow home appointments within a short radius. The shop keeps its walk-in business, while you serve customers who explicitly choose a priced visit. A written referral and payment arrangement avoids disputes.",
+      "what_it_is": "On a usual day, you agree with the shop owner on the visit menu, travel radius, booking contact, fee split and responsibility for complaints before accepting referrals. Call the customer to confirm the address, requested service, price and suitable workspace. You carry your own clean tools and record each appointment. You do not imply you represent the shop unless it has authorised that claim. You send an agreed completion update without sharing unrelated customer information. This is a relationship and scheduling business as much as a haircut service.",
+      "who_pays_you": "The customer pays for a convenient booked visit, generally at a premium over a walk-in cut. A barber facing weekend queues may welcome a trustworthy referral option. Customers who just want the cheapest cut will wait for the shop; focus on those who value a definite slot. In this business, you start with one partner and a narrow local route.",
+      "how_money_comes": "In this business, you collect the agreed visit price and settle the referral share on a stated schedule, or let the shop collect and pay your service fee. You put travel and consumables into the economics before agreeing on a split. You track cancellations and refunds. You do not promise a commission from every lead when a visit was never completed. You check current local service pricing with Validate.",
+      "what_you_need": "Strong basic barbering, a portable hygienic kit, a reliable phone, simple appointment records and a clear written understanding with the shop. You need enough travel time between visits and a way to handle dissatisfied customers. Protect customer contact details and obtain consent before using them for follow-up marketing.",
+      "first_30_days": [
+        "Map a small route and calculate travel time.",
+        "Propose a written referral trial to one shop and agree on price and complaints.",
+        "Complete a few paid visits with explicit customer confirmation.",
+        "Compare completed visits, travel and the shop share before extending."
+      ],
+      "what_hurts": "Ambiguous ownership of a customer can damage the partnership. The shop may send faraway or low-fee leads, and a missed appointment harms both reputations. You set a radius, service list and booking process. In this business, you keep a separate record of actual completed work and settle disagreements promptly. A simple written record of referrals and completed appointments helps both parties settle disagreements fairly.",
+      "verdict": "Build this if a shop can send confirmed nearby visits under clear terms. Walk away if either party expects an undefined share or free travel. Keep referral and payment records before you add more partners.",
+      "faq": [
+        {
+          "q": "Who handles a complaint?",
+          "a": "Agree on that before the first referral. The person performing the cut should listen and document the issue, while any refund follows the written arrangement."
+        },
+        {
+          "q": "Can you use the shop's customer list?",
+          "a": "Only for appointments the customer has authorised. Do not copy or market to a broader list without clear permission from the people involved."
+        },
+        {
+          "q": "Should the visit cost more?",
+          "a": "Usually the price should cover travel and the agreed shop share. Test whether local customers accept the complete price before expanding."
+        }
+      ],
+      "validate_prompt": "I want to take overflow home haircut bookings from an Indian barbershop. Check current local pricing, service rules and practical referral agreement terms.",
+      "investment_band": "under_25k",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S04-I09",
+      "slug": "wedding-venue-mens-grooming-slot",
+      "title": "Wedding Venue Mens Grooming Slot",
+      "hook": "A wedding party may need several final hair and beard touch-ups at one venue before photographs begin.",
+      "summary": "You offer a reserved grooming block for consenting adult male guests or family members at a wedding venue. A short pre-agreed service menu and one family coordinator help you finish before the event timeline becomes crowded.",
+      "what_it_is": "On a usual day, you discuss the guest count, requested hair styling or beard tidy, venue access and exact ready-by time with one organiser. You bring clean tools, mirror, capes, wipes and safe product options. You check that the venue has a suitable private area with light and power. Assign timed slots and confirm each person's preference before touching hair or beard. You do not include bridal makeup, chemical treatments or a full haircut for everyone in a touch-up block. You keep a reserve window for small delays while setting a hard finish.",
+      "who_pays_you": "Wedding families and planners may pay for a convenient set of final grooming services. A groom and a few relatives can form a viable block if the fee covers the whole visit. Guests may also pay individually, but one organiser should guarantee the minimum. This is most useful where the ceremony location is far from a trusted salon.",
+      "how_money_comes": "In this business, you quote a venue booking block with a maximum number of basic touch-ups, and list extra services separately. You take a booking deposit and clarify postponement and cancellation terms. You include travel, product, waiting time and the pressure of a fixed event deadline. In this business, you record what the client has paid and what remains due. You use Validate for current local event grooming rates.",
+      "what_you_need": "Good hair and beard finishing skills, portable clean tools, a compact product kit and calm communication under time pressure. You check venue entry, parking, sockets and room availability beforehand. One assistant may help only if you can supervise and price that work. In this business, you avoid using products when allergies or preferences are unclear.",
+      "first_30_days": [
+        "Design a small touch-up menu and time each service.",
+        "Speak with nearby planners or coordinators and make a booking checklist.",
+        "Take a modest paid group booking with enough buffer.",
+        "Compare actual guest count and waiting time with the quoted block."
+      ],
+      "what_hurts": "Event schedules drift and additional guests often appear without warning. A venue room may be reassigned or power may fail. You put the room and finish time in writing, keep a portable backup where practical and charge for extra services only when there is time. A rushed wrong cut cannot be undone.",
+      "verdict": "Build this if you can manage a fixed event deadline and a limited menu calmly. Walk away if the organiser cannot confirm access, timing or payment. Protect the ready-by deadline even when extra guests ask.",
+      "faq": [
+        {
+          "q": "Can you do full haircuts at the venue?",
+          "a": "Only if booked separately with enough time and a suitable room. A touch-up block should not silently turn into many full cuts."
+        },
+        {
+          "q": "What if more guests request service?",
+          "a": "Serve extras only if time and the agreed fee permit. The booked party and ready-by time have priority over last-minute requests."
+        },
+        {
+          "q": "Do you need a deposit?",
+          "a": "A deposit can protect a reserved event date. State the balance, cancellation rules and included number of services before the family commits."
+        }
+      ],
+      "validate_prompt": "I want to provide men's wedding venue grooming in India. Check current local event service rates, venue rules and a fair booking and cancellation structure.",
+      "investment_band": "under_25k",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "metro",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S04-I10",
+      "slug": "accessible-chair-grooming-home-visit",
+      "title": "Accessible Chair Grooming Home Visit",
+      "hook": "Some customers who cannot comfortably travel to a salon want a patient haircut in their own accessible space.",
+      "summary": "You provide scheduled basic haircuts for adults with limited mobility at home, working within the customer's comfort and consent. A longer appointment, simple setup and clear limits support a careful service without presenting it as medical care.",
+      "what_it_is": "On a usual day, you ask the customer how they prefer to sit, move and communicate before confirming a visit. You check whether the space has enough light, room for your tools and an accessible exit. You use a stable position that the customer chooses, take breaks when requested and ask permission before each change in posture. In this business, you bring clean capes and tools, collect cut hair and leave the area tidy. You do not lift or transfer a person, provide nursing care or promise a treatment for scalp conditions. If a support person is wanted, arrange that with the customer's consent.",
+      "who_pays_you": "Adults with mobility limitations, their families or care organisers may pay for a convenient haircut. The customer remains the decision maker where possible, even if someone else books and pays. A single nearby visit can work at a higher appointment rate because it allows extra time. You do not build the business on intrusive sales to vulnerable people.",
+      "how_money_comes": "In this business, you charge a stated visit rate that covers travel, a longer slot and cleaning. You offer a clear price for additional family members at the same address only when the first customer has finished comfortably. You explain cancellation and access needs before travelling. In this business, you keep any recurring appointment optional and reconfirm it. You check current local home grooming prices using Validate.",
+      "what_you_need": "Patient haircutting ability, clean portable tools, a small protective covering, clear communication and a practical understanding of your limits. You may need to adapt your working height without placing equipment in a walkway. You have a contact and exit plan for visits to unfamiliar addresses, and respect the customer's privacy.",
+      "first_30_days": [
+        "Practise a seated haircut workflow and measure the extra time.",
+        "Speak with community groups or families without requesting private health lists.",
+        "Complete a few paid visits with informed consent and a support person when requested.",
+        "Review physical strain, travel and feedback before setting regular slots."
+      ],
+      "what_hurts": "A cramped room, unstable chair or request for a transfer can make the visit unsafe. A customer may tire and need to stop halfway. You offer a pause or reschedule, and be clear that you cannot give health advice. Accessibility needs differ, so ask rather than assume what help is wanted.",
+      "verdict": "Build this if you can offer patient, consent-led cuts in suitable homes. Walk away if a visit requires lifting, clinical care or an unsafe working position. Let the customer's comfort decide the pace of the booking.",
+      "faq": [
+        {
+          "q": "Can you help someone move from bed to a chair?",
+          "a": "No. Do not perform transfers without appropriate training and responsibility. Arrange for a suitable support person or decline a setup you cannot serve safely."
+        },
+        {
+          "q": "Who chooses the haircut when family books?",
+          "a": "Ask the customer directly where possible and respect their preference. The person paying should not override a capable adult's choice of style."
+        },
+        {
+          "q": "What if a customer needs frequent breaks?",
+          "a": "Allow a longer booking and explain the price in advance. Stop if the customer is uncomfortable and agree on a safe next step."
+        }
+      ],
+      "validate_prompt": "I want to offer home haircuts for adults with limited mobility in India. Check current local salon requirements, safe service boundaries and visit pricing.",
+      "investment_band": "under_25k",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town",
+        "village"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "gender_fit": "any",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    }
+  ]
+}

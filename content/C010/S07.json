@@ -1,0 +1,507 @@
+{
+  "subcategory": {
+    "code": "C010-S07",
+    "intro": "Local Tutor Network starts with a nearby problem that people already spend time solving. Families often seek consistent help with a subject, study routine or exam preparation. A local network can match a learner with a verified tutor and stay accountable for scheduling and feedback. The useful first question is where a resident currently goes, what the trip or wait costs in time, and whether a small operator can do one task reliably. Walk the intended service area and speak to potential customers before buying equipment. Ask for the last occasion when they needed help, how they found a provider, and what made the experience difficult. A booking that someone is willing to pay for teaches more than a general expression of interest. Keep the opening menu narrow enough to finish, price and explain without confusion. Travel, idle time, supplies, cleaning and returns all consume capacity even when the visible task is short. Set a clear radius and appointment window, and record actual time from first message to final handover. Confirm access to a work area, the customer's instructions, payment responsibility and a practical cancellation rule before committing. Keep names, addresses and other personal details only as needed for the booking. Never promise marks or admission. Obtain parent or guardian consent for minors, protect student information and check qualifications rather than accepting an unverified claim. Start with a few paid trials, then decide whether repeat work is frequent enough to support regular hours. Local demand may differ by housing density, transport, seasons and competing providers. A promise of convenience is only valuable when the customer can trust the result and knows what happens if something goes wrong.",
+    "how_to_choose": "Decide whether you personally teach or coordinate other educators. Compare subject competence, safe meeting spaces, child safeguarding, tutor checks and the time required to monitor each placement. Compare options by the number of paid bookings you can group within a short route, the tools you already know how to use, and the time a customer can realistically wait. Write down one included task and one excluded task for each option. Check access, hygiene, consent and any applicable local permission before selling. Use a small paid trial to measure travel, preparation, work and follow-up. Choose the service whose quality you can repeat without relying on a perfect day.",
+    "faq": [
+      {
+        "q": "Can I start local tutor network from home?",
+        "a": "Often the administration can begin at home, but the work site and any storage need to suit the particular service. Check local rules and get permission to use shared space before taking bookings."
+      },
+      {
+        "q": "How should I set the first service area?",
+        "a": "Begin with a compact route you can reach predictably. Measure travel at the hours customers actually want, then expand only when paid demand covers extra time and transport."
+      },
+      {
+        "q": "Should I offer every related service at launch?",
+        "a": "A short menu makes quality, timing and pricing easier to control. Add another task only after you have the necessary skill, equipment and evidence that customers will pay."
+      },
+      {
+        "q": "What should I confirm before an appointment?",
+        "a": "Agree on the task, address or venue, access, time window, complete price and payment contact. Explain cancellation and any limits so a small misunderstanding does not become an unpaid visit."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C010-S07-I01",
+      "slug": "primary-maths-homework-circle",
+      "title": "Primary Maths Homework Circle",
+      "hook": "A child freezes at the maths homework table, and one patient explanation can make the next question feel possible.",
+      "summary": "You run a small primary maths circle for children who need to practise foundations without a crowded classroom. After seeing each child’s schoolwork with a parent, you group compatible levels and teach through short exercises. Families pay for a regular, calm hour where their child can ask a question without embarrassment.",
+      "what_it_is": "A parent shows you the school topics that are causing trouble, and you spend a little time seeing what the child can already do. In a small group, you use counters, drawings and short written problems to make number sense visible. Each child tries a question, explains a step and gets feedback before moving on. The session is practice, not a race through the textbook or a place where you complete homework for them. Afterward, you tell the parent which idea clicked and what still needs work. A steady weekly slot helps children become comfortable enough to admit when they do not understand.",
+      "who_pays_you": "Parents of primary pupils who stumble over basic operations or grow anxious about maths are the likely buyers. Some children need regular practice even when their school marks are acceptable. A parent may hear about you from another family in the same class or from a neighbour who has seen your patient manner. They pay for attention and clear feedback, rather than a guarantee of a particular score. You should talk with the child as well as the adult before deciding that the group is suitable.",
+      "how_money_comes": "Families can pay for a fixed block of weekly sessions, with missed class and holiday rules agreed in advance. Your time includes preparation, a short parent update and checking whether children are still at compatible levels. Manipulatives and worksheets cost something, but the main expense is a slot you cannot sell twice. A group becomes profitable only if it stays small enough for real feedback. Tap Validate for current local tutoring prices before deciding what the hour should cost.",
+      "what_you_need": "You need confidence with primary maths, child friendly explanations, a quiet table and simple teaching aids. Parents should know the group size, schedule and supervision arrangements. Keep learning notes private and obtain permission before sharing a child’s work with anyone else. A way to show several methods for the same idea is more useful than just knowing the answer. You also need a safe pickup process at the end of the hour.",
+      "first_30_days": [
+        "Speak with potential primary maths homework circle customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse small-group primary maths sessions while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A mixed ability circle can leave a slower child feeling exposed or let a faster child get bored. Parents may want you to finish that evening’s homework, though doing it for the pupil hides the real gap. School tests can make a family impatient with steady foundational work. You should be frank about what the child practised and when a different level of help is needed. A calm classroom depends on your ability to notice the child who has gone quiet.",
+      "verdict": "Build this if you enjoy explaining simple ideas in several ways and can keep the group genuinely small. Walk away if you would have to pack children of very different levels into one hour to make it pay. The best sign is a child willing to try another problem.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For primary maths homework circle, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not complete homework for a pupil or run an unsupervised group. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for small-group primary maths sessions first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try primary maths homework circle in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of small-group primary maths sessions before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S07-I02",
+      "slug": "board-exam-science-tutor-match",
+      "title": "Board Exam Science Tutor Match",
+      "hook": "A science exam is coming, and a family needs a tutor who actually knows the child’s syllabus and timetable.",
+      "summary": "You match secondary students with local science tutors after checking subject experience, availability and parent expectations. The student tries an agreed session before anyone commits to a longer plan. Your work is careful matching and follow up, so a family does not lose valuable weeks with someone teaching the wrong course.",
+      "what_it_is": "A parent and student tell you which science topics need help, what board or syllabus the school follows and when the child is free. You speak to suitable tutors, check their background and arrange an introductory paid trial with the family’s consent. After the session, both sides tell you whether the teaching style fits. If it does, they agree directly on ongoing lessons and you record the matching terms. You do not guarantee exam results or replace the parent’s judgment about a person entering their home. Your value is in saving a family the search and making the first introduction more informed.",
+      "who_pays_you": "Families preparing for secondary science exams pay when they cannot easily judge among many tutor advertisements. A coaching centre may also ask for a specialist in a particular subject, but you should be clear who is paying your fee. Students need a teacher they can ask questions, not simply an impressive qualification on paper. Your first matches may come through known teachers and parents, provided you check each tutor rather than relying only on a recommendation.",
+      "how_money_comes": "You can charge the family a disclosed matching fee after a suitable trial, or receive a clearly explained referral fee from a tutor. The payment point and refund terms should be agreed before introductions. Calls, background checks and an unsuccessful match all take time, so a fee tied to a real service must cover them. You should not quietly earn from both sides without telling them.",
+      "what_you_need": "You need a small roster of tutors whose subject knowledge, identity and availability you have checked, plus a written record of the family’s syllabus and preferences. Safeguarding and parent consent matter when arranging any lesson with a minor. Set expectations about where the trial happens, who is present and how concerns will be raised. A simple feedback process after the first class gives both the child and tutor room to speak honestly.",
+      "first_30_days": [
+        "Speak with potential board exam science tutor match customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse verified local science tutor matching while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A tutor can cancel near an exam or turn out to teach a different syllabus than promised. A student may be too shy to say that the first session was confusing. Parents might assume your introduction includes ongoing supervision, which you should define clearly. You cannot make a poor match good by urging the family to continue. Keep accurate records, offer a fair remedy under your terms and remove an unreliable tutor from future introductions.",
+      "verdict": "Build this if you know local tutors well enough to verify their work and can listen to the student’s experience. Walk away if your roster is just a list of phone numbers. A family is paying for a considered introduction, not an exam result.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For board exam science tutor match, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not guarantee board results or share student contact details without consent. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for verified local science tutor matching first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try board exam science tutor match in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of verified local science tutor matching before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S07-I03",
+      "slug": "neighbourhood-reading-practice-club",
+      "title": "Neighbourhood Reading Practice Club",
+      "hook": "A child avoids reading aloud, but a familiar little group can make the page feel less frightening.",
+      "summary": "You host guided reading practice for children who need regular time with books and a patient listener. The group meets at a suitable level, each child gets a turn, and parents hear what has improved. It is a reading habit service, not a promise to diagnose a learning difficulty.",
+      "what_it_is": "You choose short stories and information texts that the children can nearly read by themselves. At the table, one child reads a passage while others listen, then you help with unfamiliar words and ask what the story meant. You give each child a quiet chance to try again without making the group a performance. A simple reading note goes home so parents know which sounds or words need gentle practice. Books can be borrowed under clear rules or read during the session. When a child needs a different kind of assessment, you speak privately with the parent rather than making a label in front of peers.",
+      "who_pays_you": "Parents whose children have little reading practice outside school may pay for a regular club. Some families own books but struggle to keep a calm reading routine after a long day. A library, society room or nearby home can introduce you to a small group if access is permitted. Families value an adult who notices progress without shaming a hesitant reader. The child’s willingness to return is as important as a parent’s wish to improve marks.",
+      "how_money_comes": "Parents can pay for a set of weekly sessions, with a clear policy for holidays and missed days. Books, copies and room use cost money, while your attention sets the true group limit. A larger circle may look profitable but leave quiet readers unseen. You can offer a separate one to one slot when a child needs it, at a separately agreed price.",
+      "what_you_need": "You need a range of age appropriate books, a quiet safe space, patient reading skills and a way to note progress without ranking children publicly. Parents should know who supervises the group and how pickup works. You may need permission to use a library or society room. Keep individual learning concerns private. A child who is very anxious may need a smaller start than a group session can offer.",
+      "first_30_days": [
+        "Speak with potential neighbourhood reading practice club customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse guided small-group reading sessions while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A child can feel embarrassed if a peer laughs at a mistake, and one uncomfortable day may undo weeks of trust. Wide differences in reading level make a single text unfair to someone. Parents may expect fast changes in test scores when the real gain begins with confidence. You need to protect turns, choose suitable books and explain the pace honestly. A noisy space can also make careful listening almost impossible.",
+      "verdict": "Build this if you love books and can protect each child’s confidence while they practise. Walk away if you cannot keep the group small and kind. A child choosing to read another page is the result worth building on.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For neighbourhood reading practice club, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that keep groups small and never publicise a child's difficulties. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for guided small-group reading sessions first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try neighbourhood reading practice club in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of guided small-group reading sessions before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S07-I04",
+      "slug": "spoken-english-pair-practice",
+      "title": "Spoken English Pair Practice",
+      "hook": "An adult understands English at work but never gets a relaxed chance to speak it out loud.",
+      "summary": "You pair adults with compatible speaking goals for scheduled English practice and guide short role plays. One learner may want to handle customer calls, another a job conversation. They pay for regular speaking time and useful feedback, not a lecture about grammar they already know.",
+      "what_it_is": "A learner tells you which conversations make them hesitate. You listen briefly to their current speaking level and pair them with someone whose goal and pace are close. During the session, they try situations such as explaining a delivery delay or introducing themselves at a meeting. You guide turns so neither person dominates, note a few useful phrases and let them retry without constant interruption. Each pair leaves with a small practice idea for the week. If the match feels uncomfortable, you change it rather than asking a quieter learner to stay silent. The sessions are practice with a supportive guide, not a promise of instant fluency.",
+      "who_pays_you": "Shop workers, new professionals and adults returning to work may pay for a calm place to speak. Some people know the words but are worried that a mistake will draw laughter. You can meet the first learners through a local class or a permitted community group. A pair works well when both are able to listen, attend regularly and respect one another’s pace. You should also offer a solo option if a person is not ready for paired practice.",
+      "how_money_comes": "Learners pay for a block of scheduled sessions, either as a pair or in an individual slot. Your fee covers matching, preparation and the time spent listening to both people. Empty seats are a cost when one learner cancels, so the rescheduling rule needs to be clear. A modest room or online connection can keep costs manageable, but feedback is still your main work.",
+      "what_you_need": "You need clear spoken English, a patient ear, simple role play prompts and a quiet setting where adults can hear each other. A short intake conversation helps you avoid pairing people with very different aims. Keep personal stories shared in practice confidential. Agree on attendance and whether sessions are in person or online. Your best tool is the ability to let a learner finish a thought before correcting a useful point.",
+      "first_30_days": [
+        "Speak with potential spoken english pair practice customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse scheduled spoken English practice pairs while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A mismatched pair can leave one person discouraged while the other grows impatient. Someone may expect you to remove an accent rather than help them communicate clearly. Cancellations make it hard to keep a pair together, and a room that is too noisy can stop conversation. You need to rebalance turns and explain what practice can realistically do. Never make a learner’s mistake into a joke, even when the group is relaxed.",
+      "verdict": "Build this if you can create a respectful speaking space and enjoy listening more than lecturing. Walk away if the pair cannot count on a fair turn and a steady schedule. The useful sign is that a learner speaks more freely next week.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For spoken english pair practice, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not claim a formal language certificate from informal practice. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for scheduled spoken English practice pairs first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try spoken english pair practice in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of scheduled spoken English practice pairs before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S07-I05",
+      "slug": "local-tutor-substitute-roster",
+      "title": "Local Tutor Substitute Roster",
+      "hook": "A tutor calls in sick, and a small coaching centre needs a prepared replacement for that day’s class.",
+      "summary": "You keep a verified roster of tutors who can cover occasional absences at local learning centres. The centre approves the substitute, gives lesson notes and pays for the booked class. Your coordination protects the students’ routine without asking a stranger to invent a lesson at the door.",
+      "what_it_is": "You learn the subjects, class levels and usual timings of a few nearby centres. Potential substitutes share their qualifications, experience and available slots, which you check before putting them on the roster. When a centre needs cover, you confirm a teacher who fits the subject and send the lesson plan, address and centre contact. The centre authorises the booking and handles its own student safeguarding process. After class, the tutor reports what was covered and any unfinished work. You follow up on reliability rather than treating a filled slot as success by itself. The service is useful when everyone knows who is teaching and what pupils were supposed to learn.",
+      "who_pays_you": "Small tutoring centres with a limited staff pay when an absence would otherwise cancel a class. The centre manager is your buyer; students and parents are affected by the quality of the match. You may start with one centre that already trusts your judgment and a few teachers whose work you have seen. A centre values quick contact, but it also needs the right subject and someone who can follow its lesson notes.",
+      "how_money_comes": "The centre pays a disclosed coordination fee for a confirmed cover slot, while the substitute’s teaching fee is agreed separately or passed through transparently. You should be paid for a successful booking under clear cancellation terms, not for sending a random number. Checking a roster and remaining available on short notice uses time between actual calls.",
+      "what_you_need": "You need verified tutor identities, subject backgrounds, availability and consent to be contacted at short notice. A written agreement with each centre should cover approval, safeguarding, lesson material, payment and cancellations. Keep student information limited to what a substitute needs and protect it after class. A backup contact can help when the first teacher cannot travel. The roster stays useful only when you update real availability.",
+      "first_30_days": [
+        "Speak with potential local tutor substitute roster customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse short-notice verified tutor cover while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A substitute may cancel on the morning of class or teach a topic different from the centre’s plan. A hurried introduction can leave a tutor unsure about room rules and student needs. One poor lesson can damage the centre’s trust in all future matches. You need honest availability checks and feedback after each cover. If you cannot verify a teacher for the required level, a cancellation may be better than placing someone unprepared.",
+      "verdict": "Build this if you know reliable tutors and can maintain a small, accurate roster. Walk away if speed would make you skip checks or hide a mismatch in subject knowledge. A centre pays for dependable cover, not merely a name in a phonebook.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For local tutor substitute roster, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not send an unverified person into a child-facing classroom. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for short-notice verified tutor cover first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try local tutor substitute roster in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of short-notice verified tutor cover before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S07-I06",
+      "slug": "school-transition-study-planner",
+      "title": "School Transition Study Planner",
+      "hook": "A child moves into a harder grade, and the family needs a study rhythm that still leaves room to breathe.",
+      "summary": "You help a student and parent shape a manageable weekly study plan for a new school grade. Together you look at class timings, travel, homework and the subjects that need attention. The family pays for planning and short check ins, while the child remains the person doing the learning.",
+      "what_it_is": "At the first meeting, a student shows you their timetable and describes what feels different this year. You listen to the parent too, then mark the fixed school and rest hours before suggesting any extra practice. The plan gives each subject a realistic place and leaves a little room for missed days. In a weekly check in, you ask what the child actually managed and adjust the next week rather than scolding them for a perfect plan nobody could follow. You can share a simple written calendar at home. This is routine support, not a diagnosis or a guarantee of marks.",
+      "who_pays_you": "Families whose child has entered a new grade or changed schools may pay when the home routine feels chaotic. A student can be doing well yet feel overwhelmed by more teachers and deadlines. You reach buyers through local parent circles or known tutors, with the child’s consent to take part. Parents value a calmer week and a clear view of work remaining. The plan belongs to the student and should not become another daily argument imposed by an outsider.",
+      "how_money_comes": "You can charge for the initial planning meeting and a defined set of brief follow ups. The fee covers listening, writing the schedule and adapting it as real schoolwork appears. A family that wants subject teaching needs a separate arrangement with someone qualified, rather than unlimited tutoring inside a planning fee. Calls and changed appointments take time, so set a clear cadence.",
+      "what_you_need": "You need a good grasp of school routines, a simple calendar and the patience to hear a child’s view of the week. Parents should agree on how notes will be shared and who can see them. You need to know when a problem calls for a subject tutor, a school conversation or other support beyond your role. A plan that includes rest, travel and household responsibilities is more likely to survive than one made only of study blocks.",
+      "first_30_days": [
+        "Speak with potential school transition study planner customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse study routine planning and check-in sessions while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A crowded plan can increase stress just when the family hoped for relief. Parents and students may describe very different priorities, and one may expect you to take sides. Exam weeks change the rhythm, while sickness can break even a sensible calendar. You should treat the first plan as a trial and revise it with the child. If a family insists on more hours than the student can reasonably manage, your service cannot honestly promise calm.",
+      "verdict": "Build this if you can listen to children and parents and turn their actual week into a gentle routine. Walk away if you are expected to force an unrealistic timetable or promise marks. The plan works when the student can use it on an ordinary Tuesday.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For school transition study planner, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that avoid diagnosing a learning condition or promising a rank. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for study routine planning and check-in sessions first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try school transition study planner in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of study routine planning and check-in sessions before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S07-I07",
+      "slug": "village-tutor-travel-cluster",
+      "title": "Village Tutor Travel Cluster",
+      "hook": "Several village families need a subject teacher, but none can make a separate trip worthwhile for that tutor.",
+      "summary": "You organise grouped tutor visits across nearby villages, with families agreeing on levels, time and a suitable host space. The teacher reaches several pupils on one route and each group receives a proper lesson. Your work is in matching, permissions and travel planning, not pretending a long journey is free.",
+      "what_it_is": "You speak with families in a small cluster of villages to learn the subject, age group and existing schoolwork. With parent consent, you arrange a safe place for each group and ask a qualified tutor what travel schedule they can genuinely keep. The families know the lesson length, who supervises children and how the fee is shared. On the day, you confirm the tutor’s arrival and collect feedback after the class. You do not combine pupils simply because their homes are close if their learning levels are too different. A route has to leave enough teaching time after the travel.",
+      "who_pays_you": "Families in places without a suitable local subject teacher are the buyers, sometimes sharing a group fee. A parent representative may coordinate the host space, but every family should know the terms. You can begin with one subject and two nearby stops rather than promising a district wide roster. Parents value a teacher their children can see regularly, and tutors value a route that pays fairly for travel and teaching.",
+      "how_money_comes": "You can earn a disclosed coordination fee from families or an agreed amount from the tutor, with the teaching and travel payments clear to everyone. A compact route spreads travel over several sessions, but rain or one cancellation can change the calculation. Collect fees on an agreed schedule and avoid leaving a tutor unpaid because one household forgot.",
+      "what_you_need": "You need reliable tutors, parent consent, safe host spaces, a practical route and a phone that works in the areas you cover. Verify the teacher’s subject ability and make pickup, supervision and cancellation arrangements explicit. A written schedule for each village prevents a child waiting at an empty room. Keep student information private and know whom to call when a road or vehicle makes a lesson impossible.",
+      "first_30_days": [
+        "Speak with potential village tutor travel cluster customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse grouped tutor visits across nearby villages while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A flooded road or late bus can disrupt several groups in one afternoon. One host may be unavailable, and families may be disappointed when children of different levels cannot share a class. Travel can consume the tutor’s pay if the route grows too spread out. You should have a clear cancellation message and a fair make up rule. The arrangement loses its value if teachers are routinely rushed from one village to the next.",
+      "verdict": "Build this if nearby families have confirmed demand and a tutor can follow a safe, paid route. Walk away if travel leaves too little time for teaching or supervision cannot be agreed. A small dependable cluster is a stronger start than a long map of possible pupils.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For village tutor travel cluster, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that confirm the teaching venue and child supervision before travel. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for grouped tutor visits across nearby villages first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try village tutor travel cluster in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of grouped tutor visits across nearby villages before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "village",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S07-I08",
+      "slug": "college-entrance-topic-clinic",
+      "title": "College Entrance Topic Clinic",
+      "hook": "An entrance student understands most of a subject but keeps losing marks on one particular kind of question.",
+      "summary": "You run a focused clinic on one entrance topic at a time, with the prerequisites stated before booking. Students work through methods and mistakes in a small group. They pay for a clear lesson and practice they can use afterward, without a promise that one clinic will secure admission.",
+      "what_it_is": "You announce the exact topic, required starting knowledge and lesson length, so students know whether the clinic fits. At the session you explain one method, work through examples and let learners try similar questions before discussing errors. A short recap shows where each person should practise next. You use the current syllabus and a question style you have checked, rather than repeating notes from an old exam cycle. The group stays small enough for students to ask why a step works. If someone lacks the prerequisite, you point them to the needed foundation instead of letting them sit lost through the hour.",
+      "who_pays_you": "Students preparing for a specific college entrance exam and parents seeking help with one stubborn topic may pay. A coaching student can still want a slower explanation outside a large batch. You can meet your first learners through a permitted student group or a tutor who knows your subject. They value an instructor who names the topic honestly and leaves them able to solve a new question, not someone who sells fear before an exam.",
+      "how_money_comes": "You charge per clinic or for a small series of distinct topics, with the scope and refund rule clear before payment. Preparation, current materials and checking student work are part of your time. A packed room may bring more fees but weaken the practice that makes the class useful. You can offer a separate individual session for someone who needs fundamentals.",
+      "what_you_need": "You need strong command of the topic, current syllabus awareness, a quiet room or stable online setup and problems students can work themselves. State prerequisites plainly. Keep any answer sheets and learner details private. A board or shared page should let you show each step without rushing. You also need the humility to correct a mistaken explanation promptly when a student spots one.",
+      "first_30_days": [
+        "Speak with potential college entrance topic clinic customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse focused entrance topic practice clinics while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "An outdated exam pattern can make the practice less relevant, while an oversized class hides students who have not understood the first step. Exam pressure may tempt you to promise shortcuts or a score you cannot guarantee. Students can arrive with very different foundations despite booking the same topic. You should check the starting point early and let an unsuitable learner change to a better class. A careful method matters more than a dramatic prediction.",
+      "verdict": "Build this if you know a topic deeply and can teach it through practice rather than a long monologue. Walk away if you cannot keep materials current or give a student room to ask. A focused clinic should leave them better able to tackle an unfamiliar question.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For college entrance topic clinic, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that verify the current syllabus and never market a certain admission. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for focused entrance topic practice clinics first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try college entrance topic clinic in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of focused entrance topic practice clinics before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "field",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S07-I09",
+      "slug": "homework-supervision-study-hour",
+      "title": "Homework Supervision Study Hour",
+      "hook": "A parent is still at work when school ends, and their child needs a quiet hour to begin homework.",
+      "summary": "You supervise a scheduled after school study hour where children work independently at a safe table. You help them understand instructions and tell parents what remains unfinished. The fee is for structure and supervision, not for doing assignments or promising that every subject question can be taught on the spot.",
+      "what_it_is": "Children arrive at an agreed time after school and sign in under your supervision. Each one takes out their own homework, shows you the task and settles at a quiet table. You clarify an instruction or help a child break a large assignment into smaller pieces, while they write the answers themselves. Before pickup, you note what was completed and what needs home or specialist help. Parents know the collection time, authorised pickup person and how to reach you. A snack or extended care, if offered, is a separate agreement with the right safeguards. The ordinary value is a calm start to the evening.",
+      "who_pays_you": "Working parents whose children need a routine between school and dinner may pay for this hour. Some children can do the work but struggle to begin when the house is busy. A family may find you through a school parent group or a neighbour, provided the venue and supervision details are transparent. They value the reassurance that a child is safe and knows which pages still need attention. They should not have to guess whether you are also a subject tutor.",
+      "how_money_comes": "Families can pay for fixed school day slots in a week or month, with a policy for holidays and late pickup. The fee covers your presence, space, materials and communication with parents. Group size must reflect the number of children you can actually supervise, not only the number of chairs in a room. A longer care slot costs more time and needs its own terms.",
+      "what_you_need": "You need a safe quiet space, a sign in record, parent contact details and a clear authorised pickup process. Know the children’s ages and any relevant needs before accepting them. You need enough adults for the group size and a plan for a child who becomes unwell or whose parent is delayed. A timetable and a place for bags help the hour feel settled. Be honest about which subjects you can explain and which require another teacher.",
+      "first_30_days": [
+        "Speak with potential homework supervision study hour customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse supervised independent homework time while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "Late pickup changes your working day and can leave a child worried. A difficult assignment may need specialist teaching beyond the supervision fee. A noisy group can stop everybody from concentrating, while a missing pickup instruction is a safety issue. You should agree on the boundary with parents and contact them early when something changes. If the room or staffing cannot support calm supervision, extra enrolments will make the service worse.",
+      "verdict": "Build this if you can offer a safe, dependable hour and genuinely enjoy helping children settle into work. Walk away if pickup arrangements or supervision would be uncertain. Parents are trusting you with their child first and their homework routine second.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For homework supervision study hour, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not do assignments on behalf of children or accept unsafe ratios. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for supervised independent homework time first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try homework supervision study hour in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of supervised independent homework time before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    },
+    {
+      "code": "C010-S07-I10",
+      "slug": "tutor-parent-progress-check",
+      "title": "Tutor Parent Progress Check",
+      "hook": "A parent and a tutor both care about a child’s progress, yet their conversations keep missing each other.",
+      "summary": "You facilitate short progress reviews between independent tutors and parents using agreed learning goals and work samples. Both sides see what has changed and decide the next small step. You charge for preparation and a structured conversation, without judging a child’s ability from one set of marks.",
+      "what_it_is": "A parent and tutor agree to share the goals, recent assignments and questions they want discussed. With permission, you review those samples and prepare a short agenda that keeps the call focused. The tutor describes what the child can do now, while the parent explains what happens during homework at home. You help them choose a practical next step and write a brief note of what each person agreed to do. You do not speak for the child without asking them or turn one difficult week into a label. The service is a calmer bridge between people already involved in the learning.",
+      "who_pays_you": "Parents paying for independent tuition may want a clearer view of the work, while tutors may value help making updates concise. Either can pay, but both should know who booked you and what information will be shared. You can begin with tutors who already invite parent conversations and families who have asked for better communication. The buyer values a meeting that ends with a useful action, not a complaint session that damages the relationship.",
+      "how_money_comes": "You charge for one defined review, including preparation, the call and a short written summary. Extra meetings or detailed analysis of more work should be quoted separately. Obtaining consent and sorting samples take time before the conversation begins, so the fee cannot cover only the minutes on the phone. A tutor with several families may book repeat reviews, but no child’s notes should be reused across clients.",
+      "what_you_need": "You need strong listening skills, a simple meeting structure, secure handling of student work and permission from the relevant adults. Ask what the child is comfortable sharing and keep the notes factual. The tutor and parent should see the agenda and know who will receive the summary. You also need to recognise when a teaching issue needs a subject expert rather than a facilitator. A short action list is more useful than a long report.",
+      "first_30_days": [
+        "Speak with potential tutor parent progress check customers about recent needs and acceptable appointment times.",
+        "Test the tools and rehearse structured tutor progress reviews while recording setup, work and cleanup time.",
+        "Complete a few paid bookings in one small area with written scope and price.",
+        "Review travel, complaints, repeat requests and net proceeds before opening more slots."
+      ],
+      "what_hurts": "A tutor may feel judged and a parent may expect you to pronounce on a child’s ability after one meeting. Old frustrations can take over the call. Private work samples can also be mishandled if consent is vague. You should keep the discussion on agreed goals and stop claims you cannot support. If the two sides want you to take one person’s side, the review will not give the child a better plan.",
+      "verdict": "Build this if you can listen fairly and turn a tense conversation into a clear next step. Walk away if you are expected to diagnose a child or act as a secret advocate for either adult. The value lies in shared understanding, not a verdict on the learner.",
+      "faq": [
+        {
+          "q": "What should the first booking include?",
+          "a": "For tutor parent progress check, describe the precise task, visit window, complete fee and customer preparation. A written message helps both sides agree before travel and prevents a surprise request from swallowing the slot."
+        },
+        {
+          "q": "How do I handle a request outside the menu?",
+          "a": "Explain that do not expose private student work or claim to diagnose a disability. Offer a separate quote only when you have the skill, time and permission. Declining an unsuitable addition protects the customer and your ability to complete other bookings."
+        },
+        {
+          "q": "Is a repeat package sensible?",
+          "a": "Test one paid appointment for structured tutor progress reviews first. If the customer wants a regular slot, state how cancellations, travel and any changed scope will be handled rather than promising unlimited help."
+        }
+      ],
+      "validate_prompt": "I want to try tutor parent progress check in an Indian neighbourhood. Check current local prices, practical demand, permissions and the safe limits of structured tutor progress reviews before I take paid bookings.",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "working_professional"
+      ],
+      "place": [
+        "city",
+        "small_town"
+      ],
+      "work_mode": "mixed",
+      "time_needed": "part_time",
+      "skill_level": "trained",
+      "confidence": "confident",
+      "writer": "Agent 2"
+    }
+  ]
+}
