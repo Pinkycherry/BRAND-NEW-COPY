@@ -169,3 +169,7 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 25/10/2026 07:29:41 IST — Superseding founder direction for five-page layout batch
 - **ACTIVE:** Five live route frameworks: Templates, Tools directory, Topics, Idea lists and Product/validator. Match the depth and page-family composition of the public reference; Bible themed temporary labels only, no scripture quotations, no Indian epic or Islamic material, and no final business copy. Do not use competitor images. Existing source art may be used with correct crop. Buttons and link slots must be visible, but destinations without a built page or backend are not to be invented.
 - **ACTIVE:** Commit directly to public main, verify Vercel/noindex and responsive screenshots; tell founder as each page is completed. One page is implemented in the first commit; remaining four and subsequent page families are pending. This latest request supersedes older restrictions on framework link placeholders and older copy direction for this prototype batch.
+
+
+### 25/10/2026 07:31:41 IST — Latest content direction replaces scripture placeholder
+- **ACTIVE:** All five frameworks need Indian business sample content. No Bible, Islamic scriptures or Indian epic sample text. Match the reference's depth, layout roles and link strategy without copying competitor prose or images. Keep noindex until domain launch. Revisit all earlier placeholder instructions as superseded; the previous /templates text is corrected in the next commit.
