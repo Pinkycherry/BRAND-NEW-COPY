@@ -173,3 +173,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 
 ### 25/10/2026 07:31:41 IST — Latest content direction replaces scripture placeholder
 - **ACTIVE:** All five frameworks need Indian business sample content. No Bible, Islamic scriptures or Indian epic sample text. Match the reference's depth, layout roles and link strategy without copying competitor prose or images. Keep noindex until domain launch. Revisit all earlier placeholder instructions as superseded; the previous /templates text is corrected in the next commit.
+
+
+### 26/10/2026, 03:15 IST — Four remaining collection families staged; live gate OPEN
+- Reference read: IdeaProof /tools clusters instruments by need, /topics arranges learning by founder stage, /lists filters intent and /validate shows a product journey. BBI adaptation uses real Indian routes and no competitor text, imagery or invented AI scores. Hypothesis: distinct routes with searchable filters, useful worksheets and truthful destination availability will provide the page-family depth the founder requested.
+- Scope: new /tools, /topics, /lists, /product with route-scoped shared CSS and isolated /templates onward links. Check SSR/build, 360/390px and desktop layout, interactions, staging noindex and actual destinations before closing. Five-page batch remains OPEN until live checks pass.
