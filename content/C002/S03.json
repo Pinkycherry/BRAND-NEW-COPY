@@ -1,0 +1,547 @@
+{
+  "subcategory": {
+    "code": "C002-S03",
+    "intro": "You see a useful product in a small maker's hands and know three people who would appreciate it, but you also know how quickly trust disappears when a social page shows an item that never arrives. Reselling through WhatsApp or Instagram can fit around another job if you choose a narrow product, inspect it and explain exactly what a buyer will receive. The work is not forwarding a supplier's photograph to everyone in your contacts. You are the person who answers the size question, notices damage and makes the return process fair.\n\nStart by buying or borrowing an authorised sample from a dependable seller. Check dimensions, materials, variants, packaging and the supplier's ability to replenish. Ask for permission to use their images or take your own. Put the price, delivery area, payment method, expected timing and return conditions in a written message before accepting an order. Keep buyer details private and do not add friends to a broadcast list without asking. A few well-served buyers teach you which questions deserve a clearer photograph.\n\nA side activity needs a boundary around your evenings. Decide when you reply, pack and hand parcels to a courier or local pickup point. If you do not keep stock, say when an item is confirmed by the supplier rather than treating an enquiry as a sale. If you hold stock, count storage, damage and returns in the margin. Check the rules that apply to the product and your selling channel, especially for claims about safety, health or authenticity. Never promise a benefit you cannot verify.\n\nThe ten ideas below have different practical tests. A second-hand exam guide needs its edition checked; a plant stand needs accurate measurements; a board game needs every piece. Choose the niche where you can inspect what matters and where a buyer's next message would feel welcome rather than exhausting.",
+    "how_to_choose": "Pick an item you can hold and inspect before posting. If a product has sizes or many variants, build a simple measurement guide and keep live stock notes. If it is used, photograph its actual condition and check completeness. If it is fragile, test packaging and calculate breakage. Ask the supplier how a damaged piece is handled before you take a buyer's payment. Start with a handful of opt-in customers and one product family. Work out your margin after procurement, packing, delivery, returns and your own time. A smaller reliable assortment suits evening side work better than a huge feed that requires constant apologies.",
+    "faq": [
+      {
+        "q": "Do I need to buy stock first?",
+        "a": "Not always, but you should inspect a real sample and confirm availability before collecting payment. Be clear whether you hold the item or order after a buyer commits. That timing changes the promise you can make."
+      },
+      {
+        "q": "Can I use a supplier's photos?",
+        "a": "Ask permission and check that the images show the exact variant you sell. Your own honest photographs can answer buyer questions better. Do not present someone else's work as yours."
+      },
+      {
+        "q": "How should I handle returns?",
+        "a": "Write a clear policy before the sale and comply with applicable consumer rules. Agree with the supplier about damage and defects. Never leave a buyer waiting while you argue privately about who bears the loss."
+      },
+      {
+        "q": "Will my friends buy if I message them often?",
+        "a": "Ask people if they want updates and let them leave easily. Send useful product information at a sensible pace. Trust is worth more than a large contact list full of annoyed friends."
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "code": "C002-S03-I01",
+      "slug": "preowned-exam-guide-edition-resale",
+      "title": "Preowned Exam Guide Edition Resale",
+      "hook": "A student buys a cheap exam guide online and only later notices it follows an old paper pattern.",
+      "summary": "You resell inspected preowned exam guides to students preparing for a named exam through an opt-in college group and a page with actual book photos. Inspect a used exam guide sample and show its condition, size and return terms. Confirm availability before payment. Your used exam guide margin covers packing, delivery and remedies when an item arrives wrong.",
+      "what_it_is": "A student buys a cheap exam guide online and only later notices it follows an old paper pattern. You find graduates who want to sell their own books, inspect a real used exam guide and take your own photographs or obtain permission to use the seller's. Before listing, you check edition, pages, markings and current syllabus fit. Put used exam guide size or condition, stock status, delivery time and return terms in the post. A message asking about used exam guide is not a confirmed order until availability and payment steps are clear. Keep a small used exam guide reply window and an order log so you do not promise the same piece twice. Do not copy or scan the guide to create a new product. Hand over the used exam guide the buyer actually saw.",
+      "who_pays_you": "Students preparing for a named exam pay you for the confidence that the used exam guide has been checked. You reach them through an opt-in college group and a page with actual book photos. Show a used exam guide detail that a supplier photo leaves out, and let buyers opt in rather than adding them to a broadcast list. Ask what they use now instead of the used exam guide and why it disappoints them. That conversation tells you whether your used exam guide range solves a real problem or merely looks attractive online.",
+      "how_money_comes": "You earn the difference between purchase and resale after packing and delivery. Count the supplier cost, sample, packaging, delivery, payment fees and likely exchanges before setting a margin on used exam guide. If a buyer commits to a used exam guide you do not hold, explain how availability and dispatch are confirmed. Keep payment records separate and agree with graduates who want to sell their own books on how a defect will be settled. A busy used exam guide inbox is not proof of profit.",
+      "what_you_need": "You need a book-condition checklist and current edition information, a dependable seller relationship with graduates who want to sell their own books and a place to keep small stock safe. Make an accurate used exam guide listing from an item you have seen, with clear terms and a payment method you control. Record each buyer's order and address privately. Do not copy or scan the guide to create a new product. Choose used exam guide reply and dispatch times that fit around your main work, then tell customers when they can expect an answer.",
+      "first_30_days": [
+        "Ask students which guide editions they still use.",
+        "Inspect a few books page by page before buying them.",
+        "Post actual condition photos with edition and marking notes.",
+        "Sell a small paid batch with clear collection and return terms.",
+        "Track which exam and edition questions buyers ask most."
+      ],
+      "what_hurts": "A missing page or old edition can make the guide useless. Do not copy or scan the guide to create a new product. A supplier may show a fine used exam guide sample and send a different batch. A buyer who receives the wrong used exam guide will come to you, not the supplier. Exchanges for used exam guide eat your evenings and margin, while broad posts invite more messages than you can answer. Inspect each used exam guide batch, keep receipts and solve a mistake promptly instead of forwarding blame.",
+      "verdict": "Build this if you can inspect inspected preowned exam guides and explain the terms warmly to students preparing for a named exam. Walk away if you cannot verify the guide edition and missing pages. A student is spending precious preparation money.",
+      "faq": [
+        {
+          "q": "Can I resell a marked-up guide?",
+          "a": "Yes, if the condition and markings are described honestly and the buyer can see useful photos. A heavily written-in book may need a lower price or may be unsuitable."
+        },
+        {
+          "q": "How do I know the edition is current?",
+          "a": "Check the exam's current pattern and the book's publication details. Do not guess from the cover colour. State the exact edition so a student can decide."
+        },
+        {
+          "q": "Can I sell photocopies?",
+          "a": "Do not copy protected books without permission. Reselling an authentic physical copy is different from reproducing its pages for buyers."
+        }
+      ],
+      "validate_prompt": "I want to resell inspected second-hand exam guides to students in India. How should I check editions, condition and returns?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S03-I02",
+      "slug": "lunch-bag-size-video-resale",
+      "title": "Office Lunch Bag Size Video Resale",
+      "hook": "Your lunch box looks as though it will fit the bag in the photo, but the zipper will not close.",
+      "summary": "You resell measured washable lunch bags to office commuters carrying their own dabba through short phone videos in an opt-in office group. Inspect a lunch bag sample and show its condition, size and return terms. Confirm availability before payment. Your lunch bag margin covers packing, delivery and remedies when an item arrives wrong.",
+      "what_it_is": "Your lunch box looks as though it will fit the bag in the photo, but the zipper will not close. You find a small bag maker with repeatable stitching, inspect a real lunch bag and take your own photographs or obtain permission to use the seller's. Before listing, you test fit with common container shapes and measure inside space. Put lunch bag size or condition, stock status, delivery time and return terms in the post. A message asking about lunch bag is not a confirmed order until availability and payment steps are clear. Keep a small lunch bag reply window and an order log so you do not promise the same piece twice. Do not guarantee a fit without the buyer checking measurements. Hand over the lunch bag the buyer actually saw.",
+      "who_pays_you": "Office commuters carrying their own dabba pay you for the confidence that the lunch bag has been checked. You reach them through short phone videos in an opt-in office group. Show a lunch bag detail that a supplier photo leaves out, and let buyers opt in rather than adding them to a broadcast list. Ask what they use now instead of the lunch bag and why it disappoints them. That conversation tells you whether your lunch bag range solves a real problem or merely looks attractive online.",
+      "how_money_comes": "You earn a per-bag margin with local pickup or courier priced clearly. Count the supplier cost, sample, packaging, delivery, payment fees and likely exchanges before setting a margin on lunch bag. If a buyer commits to a lunch bag you do not hold, explain how availability and dispatch are confirmed. Keep payment records separate and agree with a small bag maker with repeatable stitching on how a defect will be settled. A busy lunch bag inbox is not proof of profit.",
+      "what_you_need": "You need a tape measure, actual samples and care instructions, a dependable seller relationship with a small bag maker with repeatable stitching and a place to keep small stock safe. Make an accurate lunch bag listing from an item you have seen, with clear terms and a payment method you control. Record each buyer's order and address privately. Do not guarantee a fit without the buyer checking measurements. Choose lunch bag reply and dispatch times that fit around your main work, then tell customers when they can expect an answer.",
+      "first_30_days": [
+        "Buy or borrow two actual bag samples and measure them.",
+        "Ask commuters what containers they carry most often.",
+        "Film a simple fit demonstration with your own boxes.",
+        "Take a small paid batch with clear dimensions and pickup terms.",
+        "Compare returned bags with the posted measurements."
+      ],
+      "what_hurts": "The maker may change dimensions between batches. Do not guarantee a fit without the buyer checking measurements. A supplier may show a fine lunch bag sample and send a different batch. A buyer who receives the wrong lunch bag will come to you, not the supplier. Exchanges for lunch bag eat your evenings and margin, while broad posts invite more messages than you can answer. Inspect each lunch bag batch, keep receipts and solve a mistake promptly instead of forwarding blame.",
+      "verdict": "Build this if you can inspect measured washable lunch bags and explain the terms warmly to office commuters carrying their own dabba. Walk away if the maker will not share consistent measurements. A commuter should be able to close the zipper on their dabba.",
+      "faq": [
+        {
+          "q": "Can I say a particular dabba will fit?",
+          "a": "Only after measuring that exact shape and allowing for the zipper. Give internal dimensions so buyers can compare their own container."
+        },
+        {
+          "q": "What if the next batch is slightly smaller?",
+          "a": "Measure new stock and update the listing before taking orders. A previous sample cannot stand in for a changed product."
+        },
+        {
+          "q": "Who handles washing complaints?",
+          "a": "Give the maker's tested care instructions and agree on defect handling. Do not promise machine washing unless the product has been checked for it."
+        }
+      ],
+      "validate_prompt": "I want to resell measured lunch bags through an office social group in India. What fit tests and batch checks should I do?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S03-I03",
+      "slug": "balcony-plant-stand-measure-resale",
+      "title": "Balcony Plant Stand Measure Resale",
+      "hook": "The plant stand arrives and blocks half the balcony door because the listing showed no real size.",
+      "summary": "You resell compact metal plant stands to apartment gardeners with narrow balconies through a local plant group with permission to post. Inspect a plant stand sample and show its condition, size and return terms. Confirm availability before payment. Your plant stand margin covers packing, delivery and remedies when an item arrives wrong.",
+      "what_it_is": "The plant stand arrives and blocks half the balcony door because the listing showed no real size. You find a local fabricator who can repeat a design, inspect a real plant stand and take your own photographs or obtain permission to use the seller's. Before listing, you measure footprint, pot capacity and assembly needs. Put plant stand size or condition, stock status, delivery time and return terms in the post. A message asking about plant stand is not a confirmed order until availability and payment steps are clear. Keep a small plant stand reply window and an order log so you do not promise the same piece twice. Do not promise a safe weight limit without a verified test. Hand over the plant stand the buyer actually saw.",
+      "who_pays_you": "Apartment gardeners with narrow balconies pay you for the confidence that the plant stand has been checked. You reach them through a local plant group with permission to post. Show a plant stand detail that a supplier photo leaves out, and let buyers opt in rather than adding them to a broadcast list. Ask what they use now instead of the plant stand and why it disappoints them. That conversation tells you whether your plant stand range solves a real problem or merely looks attractive online.",
+      "how_money_comes": "You earn a per-stand margin with delivery and assembly quoted separately. Count the supplier cost, sample, packaging, delivery, payment fees and likely exchanges before setting a margin on plant stand. If a buyer commits to a plant stand you do not hold, explain how availability and dispatch are confirmed. Keep payment records separate and agree with a local fabricator who can repeat a design on how a defect will be settled. A busy plant stand inbox is not proof of profit.",
+      "what_you_need": "You need a real sample, tape, assembly instructions and safe packing, a dependable seller relationship with a local fabricator who can repeat a design and a place to keep small stock safe. Make an accurate plant stand listing from an item you have seen, with clear terms and a payment method you control. Record each buyer's order and address privately. Do not promise a safe weight limit without a verified test. Choose plant stand reply and dispatch times that fit around your main work, then tell customers when they can expect an answer.",
+      "first_30_days": [
+        "Visit the fabricator and inspect one finished stand.",
+        "Measure a real balcony doorway and sample pot sizes.",
+        "Post a scale photo and all dimensions in the listing.",
+        "Sell a small local batch with clear delivery and assembly terms.",
+        "Check paint damage and customer fit questions after pickup."
+      ],
+      "what_hurts": "Welds and paint may vary across runs. Do not promise a safe weight limit without a verified test. A supplier may show a fine plant stand sample and send a different batch. A buyer who receives the wrong plant stand will come to you, not the supplier. Exchanges for plant stand eat your evenings and margin, while broad posts invite more messages than you can answer. Inspect each plant stand batch, keep receipts and solve a mistake promptly instead of forwarding blame.",
+      "verdict": "Build this if you can inspect compact metal plant stands and explain the terms warmly to apartment gardeners with narrow balconies. Walk away if you cannot inspect the stand or explain its real footprint. A balcony door must still open after delivery.",
+      "faq": [
+        {
+          "q": "Will it fit every balcony?",
+          "a": "No. Show exact footprint, height and door-clearance needs. Ask buyers to measure their own space before payment. Do not fill the gap with a guessed number."
+        },
+        {
+          "q": "Can I state a load capacity?",
+          "a": "Only when the maker has a reliable verified specification. Otherwise explain intended use and avoid an invented weight claim. A buyer may plan heavy pots around what you write."
+        },
+        {
+          "q": "Who assembles the stand?",
+          "a": "Agree whether it arrives assembled, flat-packed or with paid help. A buyer should know this before ordering and see how it fits through their doorway."
+        }
+      ],
+      "validate_prompt": "I want to resell compact plant stands in Indian apartment groups. How should I show scale, assembly and verified load limits?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S03-I04",
+      "slug": "pet-collar-fit-resale",
+      "title": "Pet Collar Fit Check Resale",
+      "hook": "The new collar looks cute, but your dog slips out of it on the first walk.",
+      "summary": "You resell adjustable pet collars with actual size ranges to pet owners replacing a worn collar through a local pet group where owners opt in. Inspect a pet collar sample and show its condition, size and return terms. Confirm availability before payment. Your pet collar margin covers packing, delivery and remedies when an item arrives wrong.",
+      "what_it_is": "The new collar looks cute, but your dog slips out of it on the first walk. You find a pet accessory maker with consistent hardware, inspect a real pet collar and take your own photographs or obtain permission to use the seller's. Before listing, you check closure, material and neck measurement guide. Put pet collar size or condition, stock status, delivery time and return terms in the post. A message asking about pet collar is not a confirmed order until availability and payment steps are clear. Keep a small pet collar reply window and an order log so you do not promise the same piece twice. Do not market a decorative collar as restraint-safe without proof. Hand over the pet collar the buyer actually saw.",
+      "who_pays_you": "Pet owners replacing a worn collar pay you for the confidence that the pet collar has been checked. You reach them through a local pet group where owners opt in. Show a pet collar detail that a supplier photo leaves out, and let buyers opt in rather than adding them to a broadcast list. Ask what they use now instead of the pet collar and why it disappoints them. That conversation tells you whether your pet collar range solves a real problem or merely looks attractive online.",
+      "how_money_comes": "You earn per collar while budgeting exchanges and delivery. Count the supplier cost, sample, packaging, delivery, payment fees and likely exchanges before setting a margin on pet collar. If a buyer commits to a pet collar you do not hold, explain how availability and dispatch are confirmed. Keep payment records separate and agree with a pet accessory maker with consistent hardware on how a defect will be settled. A busy pet collar inbox is not proof of profit.",
+      "what_you_need": "You need sample collars, a measuring guide and hardware checks, a dependable seller relationship with a pet accessory maker with consistent hardware and a place to keep small stock safe. Make an accurate pet collar listing from an item you have seen, with clear terms and a payment method you control. Record each buyer's order and address privately. Do not market a decorative collar as restraint-safe without proof. Choose pet collar reply and dispatch times that fit around your main work, then tell customers when they can expect an answer.",
+      "first_30_days": [
+        "Inspect the buckle and seams on real samples.",
+        "Ask owners how they measure a pet neck comfortably.",
+        "Create a clear range and adjustment video.",
+        "Sell a small batch with fair size exchange terms.",
+        "Review fit feedback and stop a faulty hardware batch."
+      ],
+      "what_hurts": "A poor fit may put an animal at risk. Do not market a decorative collar as restraint-safe without proof. A supplier may show a fine pet collar sample and send a different batch. A buyer who receives the wrong pet collar will come to you, not the supplier. Exchanges for pet collar eat your evenings and margin, while broad posts invite more messages than you can answer. Inspect each pet collar batch, keep receipts and solve a mistake promptly instead of forwarding blame.",
+      "verdict": "Build this if you can inspect adjustable pet collars with actual size ranges and explain the terms warmly to pet owners replacing a worn collar. Walk away if you cannot verify closures or handle a faulty collar. A pet owner is trusting a small piece of hardware.",
+      "faq": [
+        {
+          "q": "Can I recommend a size from the dog's breed?",
+          "a": "Ask for a neck measurement and explain the adjustment range. Dogs of the same breed differ, and a photo is not a safe fit check."
+        },
+        {
+          "q": "Is the collar safe for walking?",
+          "a": "Use only verified maker specifications and test the hardware. If it is decorative, say so clearly and do not imply it can restrain a pulling dog."
+        },
+        {
+          "q": "What if the buckle fails?",
+          "a": "Stop selling that batch, contact the maker and help affected buyers under the agreed remedy. A pet owner's trust matters more than moving remaining stock."
+        }
+      ],
+      "validate_prompt": "I want to resell pet collars in an Indian social group. How should I verify fit, hardware and size exchanges?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S03-I05",
+      "slug": "hobby-yarn-dye-lot-resale",
+      "title": "Hobby Yarn Dye Lot Resale",
+      "hook": "Halfway through a scarf, you order the same colour and the new skein is just different enough to show.",
+      "summary": "You resell labelled yarn bundles from one dye lot to knitters and crocheters through a craft group with close-up colour and label photos. Inspect a yarn bundle sample and show its condition, size and return terms. Confirm availability before payment. Your yarn bundle margin covers packing, delivery and remedies when an item arrives wrong.",
+      "what_it_is": "Halfway through a scarf, you order the same colour and the new skein is just different enough to show. You find a yarn wholesaler who labels each lot, inspect a real yarn bundle and take your own photographs or obtain permission to use the seller's. Before listing, you check fibre, length and matching dye lot across bundles. Put yarn bundle size or condition, stock status, delivery time and return terms in the post. A message asking about yarn bundle is not a confirmed order until availability and payment steps are clear. Keep a small yarn bundle reply window and an order log so you do not promise the same piece twice. Do not promise an exact colour match from a phone screen. Hand over the yarn bundle the buyer actually saw.",
+      "who_pays_you": "Knitters and crocheters pay you for the confidence that the yarn bundle has been checked. You reach them through a craft group with close-up colour and label photos. Show a yarn bundle detail that a supplier photo leaves out, and let buyers opt in rather than adding them to a broadcast list. Ask what they use now instead of the yarn bundle and why it disappoints them. That conversation tells you whether your yarn bundle range solves a real problem or merely looks attractive online.",
+      "how_money_comes": "You earn per bundle, holding enough matching stock for a project. Count the supplier cost, sample, packaging, delivery, payment fees and likely exchanges before setting a margin on yarn bundle. If a buyer commits to a yarn bundle you do not hold, explain how availability and dispatch are confirmed. Keep payment records separate and agree with a yarn wholesaler who labels each lot on how a defect will be settled. A busy yarn bundle inbox is not proof of profit.",
+      "what_you_need": "You need sample swatches, lot records and careful dry storage, a dependable seller relationship with a yarn wholesaler who labels each lot and a place to keep small stock safe. Make an accurate yarn bundle listing from an item you have seen, with clear terms and a payment method you control. Record each buyer's order and address privately. Do not promise an exact colour match from a phone screen. Choose yarn bundle reply and dispatch times that fit around your main work, then tell customers when they can expect an answer.",
+      "first_30_days": [
+        "Ask crafters how many skeins a small project needs.",
+        "Inspect labels and group stock by dye lot.",
+        "Photograph yarn in consistent light with the label visible.",
+        "Sell a small paid bundle with lot and return details.",
+        "Track colour questions and sold-out lot requests."
+      ],
+      "what_hurts": "Screen colours vary and restock may come from a new dye lot. Do not promise an exact colour match from a phone screen. A supplier may show a fine yarn bundle sample and send a different batch. A buyer who receives the wrong yarn bundle will come to you, not the supplier. Exchanges for yarn bundle eat your evenings and margin, while broad posts invite more messages than you can answer. Inspect each yarn bundle batch, keep receipts and solve a mistake promptly instead of forwarding blame.",
+      "verdict": "Build this if you can inspect labelled yarn bundles from one dye lot and explain the terms warmly to knitters and crocheters. Walk away if you will mix dye lots without telling the crafter. A colour mismatch can show through a whole handmade project.",
+      "faq": [
+        {
+          "q": "Can I mix dye lots in a bundle?",
+          "a": "Only if the buyer knows and accepts it. For a continuous project, matching lots matter. Show the label numbers before payment."
+        },
+        {
+          "q": "Will the photo show the exact colour?",
+          "a": "No screen is identical. Use consistent lighting and describe the shade, while allowing a fair return path for an unused item under your policy."
+        },
+        {
+          "q": "How much stock should I hold?",
+          "a": "Start with a few project-size bundles and track demand. Holding many colours ties up money, while a single skein may not be enough for the buyer's plan."
+        }
+      ],
+      "validate_prompt": "I want to resell yarn bundles to Indian craft groups. How should I handle dye lots, colour photos and limited stock?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S03-I06",
+      "slug": "complete-preowned-board-games",
+      "title": "Complete Preowned Board Game Resale",
+      "hook": "You gather friends for game night and discover the used box is missing the pieces needed to finish.",
+      "summary": "You resell inspected preowned board games to families and flatmates through a local community page with actual component photos. Inspect a used board game sample and show its condition, size and return terms. Confirm availability before payment. Your used board game margin covers packing, delivery and remedies when an item arrives wrong.",
+      "what_it_is": "You gather friends for game night and discover the used box is missing the pieces needed to finish. You find owners clearing intact games from their shelves, inspect a real used board game and take your own photographs or obtain permission to use the seller's. Before listing, you count components, test play and describe box wear. Put used board game size or condition, stock status, delivery time and return terms in the post. A message asking about used board game is not a confirmed order until availability and payment steps are clear. Keep a small used board game reply window and an order log so you do not promise the same piece twice. Do not sell counterfeit or incomplete games as genuine and complete. Hand over the used board game the buyer actually saw.",
+      "who_pays_you": "Families and flatmates pay you for the confidence that the used board game has been checked. You reach them through a local community page with actual component photos. Show a used board game detail that a supplier photo leaves out, and let buyers opt in rather than adding them to a broadcast list. Ask what they use now instead of the used board game and why it disappoints them. That conversation tells you whether your used board game range solves a real problem or merely looks attractive online.",
+      "how_money_comes": "You earn a resale margin after inspection and local delivery. Count the supplier cost, sample, packaging, delivery, payment fees and likely exchanges before setting a margin on used board game. If a buyer commits to a used board game you do not hold, explain how availability and dispatch are confirmed. Keep payment records separate and agree with owners clearing intact games from their shelves on how a defect will be settled. A busy used board game inbox is not proof of profit.",
+      "what_you_need": "You need a checklist for each game and a clean repacking method, a dependable seller relationship with owners clearing intact games from their shelves and a place to keep small stock safe. Make an accurate used board game listing from an item you have seen, with clear terms and a payment method you control. Record each buyer's order and address privately. Do not sell counterfeit or incomplete games as genuine and complete. Choose used board game reply and dispatch times that fit around your main work, then tell customers when they can expect an answer.",
+      "first_30_days": [
+        "Choose a few authentic games you understand.",
+        "Count every component against the included rules.",
+        "Photograph the actual box, wear and sorted pieces.",
+        "Offer local paid pickup with a condition and return rule.",
+        "Ask buyers whether the game played as described."
+      ],
+      "what_hurts": "A missing card can make a whole game unplayable. Do not sell counterfeit or incomplete games as genuine and complete. A supplier may show a fine used board game sample and send a different batch. A buyer who receives the wrong used board game will come to you, not the supplier. Exchanges for used board game eat your evenings and margin, while broad posts invite more messages than you can answer. Inspect each used board game batch, keep receipts and solve a mistake promptly instead of forwarding blame.",
+      "verdict": "Build this if you can inspect inspected preowned board games and explain the terms warmly to families and flatmates. Walk away if you cannot count and photograph every game component. Friends should be able to finish the game they bought.",
+      "faq": [
+        {
+          "q": "Can I replace a missing piece myself?",
+          "a": "Only if you disclose it and the buyer agrees. Some replacements change play or value. Do not call a substituted box complete and original."
+        },
+        {
+          "q": "How do I price a worn box?",
+          "a": "Show clear photos and compare condition with the actual components. A playable game can still appeal, but the buyer deserves to know about damage."
+        },
+        {
+          "q": "Can I photocopy the rules?",
+          "a": "Check the publisher's rights. Offer the authentic rules included with the game or direct the buyer to an authorised version, rather than reproducing protected material."
+        }
+      ],
+      "validate_prompt": "I want to resell complete used board games in an Indian neighbourhood group. What inspection and authenticity checks matter?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S03-I07",
+      "slug": "rain-cover-backpack-fit-resale",
+      "title": "Backpack Rain Cover Fit Resale",
+      "hook": "The first monsoon shower catches your backpack, and the cover you bought keeps sliding off at the straps.",
+      "summary": "You resell backpack rain covers in measured sizes to commuters and college students through a college opt-in group with rainy-day fit videos. Inspect a rain cover sample and show its condition, size and return terms. Confirm availability before payment. Your rain cover margin covers packing, delivery and remedies when an item arrives wrong.",
+      "what_it_is": "The first monsoon shower catches your backpack, and the cover you bought keeps sliding off at the straps. You find a supplier with consistent sizes and seam quality, inspect a real rain cover and take your own photographs or obtain permission to use the seller's. Before listing, you test fit and fastening on several bag shapes. Put rain cover size or condition, stock status, delivery time and return terms in the post. A message asking about rain cover is not a confirmed order until availability and payment steps are clear. Keep a small rain cover reply window and an order log so you do not promise the same piece twice. Do not claim waterproof protection beyond what testing supports. Hand over the rain cover the buyer actually saw.",
+      "who_pays_you": "Commuters and college students pay you for the confidence that the rain cover has been checked. You reach them through a college opt-in group with rainy-day fit videos. Show a rain cover detail that a supplier photo leaves out, and let buyers opt in rather than adding them to a broadcast list. Ask what they use now instead of the rain cover and why it disappoints them. That conversation tells you whether your rain cover range solves a real problem or merely looks attractive online.",
+      "how_money_comes": "You earn per cover with an exchange allowance for sizing. Count the supplier cost, sample, packaging, delivery, payment fees and likely exchanges before setting a margin on rain cover. If a buyer commits to a rain cover you do not hold, explain how availability and dispatch are confirmed. Keep payment records separate and agree with a supplier with consistent sizes and seam quality on how a defect will be settled. A busy rain cover inbox is not proof of profit.",
+      "what_you_need": "You need sample backpacks, cover measurements and a water test, a dependable seller relationship with a supplier with consistent sizes and seam quality and a place to keep small stock safe. Make an accurate rain cover listing from an item you have seen, with clear terms and a payment method you control. Record each buyer's order and address privately. Do not claim waterproof protection beyond what testing supports. Choose rain cover reply and dispatch times that fit around your main work, then tell customers when they can expect an answer.",
+      "first_30_days": [
+        "Buy samples in each intended size and measure them.",
+        "Test fastening on different backpacks in light rain.",
+        "Film the fit and explain where water can enter.",
+        "Offer a paid small batch before the season peaks.",
+        "Record size exchanges and fabric failures."
+      ],
+      "what_hurts": "A cover may resist a light shower but leak in heavy rain. Do not claim waterproof protection beyond what testing supports. A supplier may show a fine rain cover sample and send a different batch. A buyer who receives the wrong rain cover will come to you, not the supplier. Exchanges for rain cover eat your evenings and margin, while broad posts invite more messages than you can answer. Inspect each rain cover batch, keep receipts and solve a mistake promptly instead of forwarding blame.",
+      "verdict": "Build this if you can inspect backpack rain covers in measured sizes and explain the terms warmly to commuters and college students. Walk away if you need to exaggerate rain protection to make sales. A wet notebook is a real loss on the way to class.",
+      "faq": [
+        {
+          "q": "Will one cover fit every backpack?",
+          "a": "No. Show the bag size range and fastening method. Ask buyers to measure height and width, especially for very full bags."
+        },
+        {
+          "q": "Can I call it waterproof?",
+          "a": "Use the supplier's verified claim and your own realistic test. Explain limits around seams and straps rather than promising dry contents in every storm."
+        },
+        {
+          "q": "What if the cover tears on the first use?",
+          "a": "Have a defect policy with the supplier and respond promptly. Inspect remaining stock from the same batch before continuing to sell it."
+        }
+      ],
+      "validate_prompt": "I want to resell backpack rain covers to Indian commuters. How should I test fit and describe rain protection honestly?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S03-I08",
+      "slug": "small-pottery-gift-piece-resale",
+      "title": "Small Pottery Gift Piece Resale",
+      "hook": "You find a handmade cup you love online, but you are afraid it will arrive broken with no remedy.",
+      "summary": "You resell small handmade pottery gifts to people sending a thoughtful local gift through a local gift page with real piece photos. Inspect a pottery gift sample and show its condition, size and return terms. Confirm availability before payment. Your pottery gift margin covers packing, delivery and remedies when an item arrives wrong.",
+      "what_it_is": "You find a handmade cup you love online, but you are afraid it will arrive broken with no remedy. You find a potter who can pack and replace damaged pieces, inspect a real pottery gift and take your own photographs or obtain permission to use the seller's. Before listing, you inspect glaze, size and food-contact claims carefully. Put pottery gift size or condition, stock status, delivery time and return terms in the post. A message asking about pottery gift is not a confirmed order until availability and payment steps are clear. Keep a small pottery gift reply window and an order log so you do not promise the same piece twice. Do not claim food safety without the potter's verified materials and process. Hand over the pottery gift the buyer actually saw.",
+      "who_pays_you": "People sending a thoughtful local gift pay you for the confidence that the pottery gift has been checked. You reach them through a local gift page with real piece photos. Show a pottery gift detail that a supplier photo leaves out, and let buyers opt in rather than adding them to a broadcast list. Ask what they use now instead of the pottery gift and why it disappoints them. That conversation tells you whether your pottery gift range solves a real problem or merely looks attractive online.",
+      "how_money_comes": "You earn per piece after protective packaging, delivery and breakage. Count the supplier cost, sample, packaging, delivery, payment fees and likely exchanges before setting a margin on pottery gift. If a buyer commits to a pottery gift you do not hold, explain how availability and dispatch are confirmed. Keep payment records separate and agree with a potter who can pack and replace damaged pieces on how a defect will be settled. A busy pottery gift inbox is not proof of profit.",
+      "what_you_need": "You need actual samples, packing tests and a clear damage process, a dependable seller relationship with a potter who can pack and replace damaged pieces and a place to keep small stock safe. Make an accurate pottery gift listing from an item you have seen, with clear terms and a payment method you control. Record each buyer's order and address privately. Do not claim food safety without the potter's verified materials and process. Choose pottery gift reply and dispatch times that fit around your main work, then tell customers when they can expect an answer.",
+      "first_30_days": [
+        "Meet a potter and inspect several pieces for variation.",
+        "Test packaging on a short delivery route.",
+        "Photograph actual dimensions and one natural variation.",
+        "Sell a few paid local gifts with damage reporting terms.",
+        "Count breakage and ask what buyers expected from the photos."
+      ],
+      "what_hurts": "Fragile pieces can break after you hand the parcel over. Do not claim food safety without the potter's verified materials and process. A supplier may show a fine pottery gift sample and send a different batch. A buyer who receives the wrong pottery gift will come to you, not the supplier. Exchanges for pottery gift eat your evenings and margin, while broad posts invite more messages than you can answer. Inspect each pottery gift batch, keep receipts and solve a mistake promptly instead of forwarding blame.",
+      "verdict": "Build this if you can inspect small handmade pottery gifts and explain the terms warmly to people sending a thoughtful local gift. Walk away if the maker cannot explain glaze use and damage remedies. A gift arrives at someone else’s door, where you cannot explain it.",
+      "faq": [
+        {
+          "q": "Can I say a cup is safe for hot drinks?",
+          "a": "Only if the potter can substantiate the materials, glaze and intended use. Otherwise describe it as a decorative item and do not invite food use."
+        },
+        {
+          "q": "What if a parcel arrives broken?",
+          "a": "Tell buyers how and when to report damage, then follow the agreed replacement or refund process. Have the arrangement with the potter before taking payment."
+        },
+        {
+          "q": "Will every handmade piece look identical?",
+          "a": "No. Show the range of normal variation and, for a one-off piece, photograph the actual item being sold. A gift buyer deserves to know what arrives."
+        }
+      ],
+      "validate_prompt": "I want to resell local pottery gifts through social apps in India. How should I handle food-contact claims, photos and breakage?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S03-I09",
+      "slug": "packing-cube-size-bundle-resale",
+      "title": "Travel Packing Cube Size Bundle",
+      "hook": "Your weekend bag looks roomy until the packing cubes arrive and none fits between the shoes.",
+      "summary": "You resell measured packing cube sets to short-trip travellers through a travel group with permission for a short fit video. Inspect a packing cube set sample and show its condition, size and return terms. Confirm availability before payment. Your packing cube set margin covers packing, delivery and remedies when an item arrives wrong.",
+      "what_it_is": "Your weekend bag looks roomy until the packing cubes arrive and none fits between the shoes. You find a textile supplier with consistent stitching, inspect a real packing cube set and take your own photographs or obtain permission to use the seller's. Before listing, you show dimensions, zipper quality and use inside real bags. Put packing cube set size or condition, stock status, delivery time and return terms in the post. A message asking about packing cube set is not a confirmed order until availability and payment steps are clear. Keep a small packing cube set reply window and an order log so you do not promise the same piece twice. Do not imply every suitcase has the same internal space. Hand over the packing cube set the buyer actually saw.",
+      "who_pays_you": "Short-trip travellers pay you for the confidence that the packing cube set has been checked. You reach them through a travel group with permission for a short fit video. Show a packing cube set detail that a supplier photo leaves out, and let buyers opt in rather than adding them to a broadcast list. Ask what they use now instead of the packing cube set and why it disappoints them. That conversation tells you whether your packing cube set range solves a real problem or merely looks attractive online.",
+      "how_money_comes": "You earn per set after returns and shipping costs. Count the supplier cost, sample, packaging, delivery, payment fees and likely exchanges before setting a margin on packing cube set. If a buyer commits to a packing cube set you do not hold, explain how availability and dispatch are confirmed. Keep payment records separate and agree with a textile supplier with consistent stitching on how a defect will be settled. A busy packing cube set inbox is not proof of profit.",
+      "what_you_need": "You need sample bags, a measuring tape and zipper inspection list, a dependable seller relationship with a textile supplier with consistent stitching and a place to keep small stock safe. Make an accurate packing cube set listing from an item you have seen, with clear terms and a payment method you control. Record each buyer's order and address privately. Do not imply every suitcase has the same internal space. Choose packing cube set reply and dispatch times that fit around your main work, then tell customers when they can expect an answer.",
+      "first_30_days": [
+        "Inspect zippers and seams on a few sets.",
+        "Measure common small bags and film one packing test.",
+        "Post exact cube dimensions and a clear set contents photo.",
+        "Sell a small paid batch with size return terms.",
+        "Ask which bag shapes caused fit problems."
+      ],
+      "what_hurts": "A set may look spacious in photos but fit poorly. Do not imply every suitcase has the same internal space. A supplier may show a fine packing cube set sample and send a different batch. A buyer who receives the wrong packing cube set will come to you, not the supplier. Exchanges for packing cube set eat your evenings and margin, while broad posts invite more messages than you can answer. Inspect each packing cube set batch, keep receipts and solve a mistake promptly instead of forwarding blame.",
+      "verdict": "Build this if you can inspect measured packing cube sets and explain the terms warmly to short-trip travellers. Walk away if you have not tested fit or zipper quality on real bags. A traveller needs the set to work in their own bag.",
+      "faq": [
+        {
+          "q": "Do they fit airline cabin bags?",
+          "a": "Bag dimensions vary by carrier and suitcase design. State cube measurements and show a real fit example, not a blanket cabin-bag promise."
+        },
+        {
+          "q": "Can I sell the cubes individually?",
+          "a": "Only if the supplier's packaging and your pricing support it. A set should list every included size clearly. Check the included sizes on the actual sample."
+        },
+        {
+          "q": "What if a zipper fails?",
+          "a": "Inspect stock, keep a supplier remedy and help the buyer quickly. One failed zipper can spoil a trip, so do not dismiss it as cosmetic."
+        }
+      ],
+      "validate_prompt": "I want to resell packing cube sets to Indian travellers online. How should I show real bag fit and handle zipper defects?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    },
+    {
+      "code": "C002-S03-I10",
+      "slug": "reusable-gift-box-local-resale",
+      "title": "Reusable Gift Box Local Resale",
+      "hook": "You finish wrapping a family gift and realise the box will be thrown away after one use.",
+      "summary": "You resell durable reusable gift boxes to families and small local gift sellers through an opt-in local gift group with unwrapped scale photos. Inspect a gift box sample and show its condition, size and return terms. Confirm availability before payment. Your gift box margin covers packing, delivery and remedies when an item arrives wrong.",
+      "what_it_is": "You finish wrapping a family gift and realise the box will be thrown away after one use. You find a box maker with steady material quality, inspect a real gift box and take your own photographs or obtain permission to use the seller's. Before listing, you check size, closure and repeat-use wear. Put gift box size or condition, stock status, delivery time and return terms in the post. A message asking about gift box is not a confirmed order until availability and payment steps are clear. Keep a small gift box reply window and an order log so you do not promise the same piece twice. Do not claim a box lasts for years without real testing. Hand over the gift box the buyer actually saw.",
+      "who_pays_you": "Families and small local gift sellers pay you for the confidence that the gift box has been checked. You reach them through an opt-in local gift group with unwrapped scale photos. Show a gift box detail that a supplier photo leaves out, and let buyers opt in rather than adding them to a broadcast list. Ask what they use now instead of the gift box and why it disappoints them. That conversation tells you whether your gift box range solves a real problem or merely looks attractive online.",
+      "how_money_comes": "You earn per box or small matched bundle with local pickup. Count the supplier cost, sample, packaging, delivery, payment fees and likely exchanges before setting a margin on gift box. If a buyer commits to a gift box you do not hold, explain how availability and dispatch are confirmed. Keep payment records separate and agree with a box maker with steady material quality on how a defect will be settled. A busy gift box inbox is not proof of profit.",
+      "what_you_need": "You need real samples, dimension chart and closure tests, a dependable seller relationship with a box maker with steady material quality and a place to keep small stock safe. Make an accurate gift box listing from an item you have seen, with clear terms and a payment method you control. Record each buyer's order and address privately. Do not claim a box lasts for years without real testing. Choose gift box reply and dispatch times that fit around your main work, then tell customers when they can expect an answer.",
+      "first_30_days": [
+        "Open and close samples repeatedly and check damage.",
+        "Ask gift buyers which sizes they actually need.",
+        "Photograph the empty box beside familiar objects for scale.",
+        "Sell a small local batch with clear material and return notes.",
+        "Review broken closures and unsold colours before reordering."
+      ],
+      "what_hurts": "Decorative magnets or hinges may fail after repeated opening. Do not claim a box lasts for years without real testing. A supplier may show a fine gift box sample and send a different batch. A buyer who receives the wrong gift box will come to you, not the supplier. Exchanges for gift box eat your evenings and margin, while broad posts invite more messages than you can answer. Inspect each gift box batch, keep receipts and solve a mistake promptly instead of forwarding blame.",
+      "verdict": "Build this if you can inspect durable reusable gift boxes and explain the terms warmly to families and small local gift sellers. Walk away if you cannot show the internal size and closure clearly. A family should feel good using the box again.",
+      "faq": [
+        {
+          "q": "Will the box fit any gift?",
+          "a": "Give internal dimensions and ask buyers to measure the item. A beautiful box is disappointing if the lid cannot close."
+        },
+        {
+          "q": "Can I call it sustainable?",
+          "a": "Describe the actual material and repeated-use design without a broad environmental claim you cannot substantiate. Let buyers decide how they will reuse it."
+        },
+        {
+          "q": "Should I offer custom names?",
+          "a": "Only with a clear order cutoff and separate price. Personalisation changes returns and leaves stock you may not resell if a buyer changes their mind."
+        }
+      ],
+      "validate_prompt": "I want to resell reusable gift boxes in an Indian local group. How should I test closures, show size and price custom names?",
+      "investment_band": "under_25k",
+      "gender_fit": "any",
+      "life_stage": [
+        "student",
+        "homemaker",
+        "working_professional"
+      ],
+      "place": [
+        "small_town",
+        "city",
+        "metro"
+      ],
+      "work_mode": "home",
+      "time_needed": "part_time",
+      "skill_level": "basic",
+      "confidence": "confident",
+      "writer": "Agent 1"
+    }
+  ]
+}
