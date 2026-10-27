@@ -1,5 +1,13 @@
 # BusinessIdea.io: working rules for Claude
 
+## Commits: always straight to main (founder rule, 28 Oct 2026)
+
+Every commit goes to `main` and is pushed to `main`. No side branches, no pull
+requests, nothing for the founder to merge by hand. `main` deploys
+https://bbinewcopy.vercel.app automatically. After each push, give the founder
+the live page links (not commit links) and add an entry to the site copy log
+artifact: https://claude.ai/artifact/RLTddg7r1u7RFnFi76rzVj
+
 ## Links: always full, clickable URLs
 
 Whenever you point the founder to any place (a repo file, a GitHub setting, a
