@@ -408,10 +408,23 @@ function NavDropdown({
       closeTimer.current = null;
     }
   };
+  // Only one header menu may be open: opening this one tells the others to close.
+  const id = useRef(Math.random().toString(36)).current;
   const openNow = () => {
     cancelClose();
     setOpen(true);
+    window.dispatchEvent(new CustomEvent("bbi-nav-open", { detail: id }));
   };
+  useEffect(() => {
+    const onOther = (e: Event) => {
+      if ((e as CustomEvent<string>).detail !== id) {
+        cancelClose();
+        setOpen(false);
+      }
+    };
+    window.addEventListener("bbi-nav-open", onOther);
+    return () => window.removeEventListener("bbi-nav-open", onOther);
+  }, [id]);
   const closeSoon = () => {
     cancelClose();
     closeTimer.current = setTimeout(() => setOpen(false), 150);
@@ -451,7 +464,7 @@ function NavDropdown({
         aria-haspopup="menu"
         // Plain pages: keyboard focus no longer opens the menu, because
         // Enter then toggled it straight back shut. Enter or Space opens it.
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => (open && !isDesktop() ? setOpen(false) : openNow())}
         className="relative flex items-center gap-1 rounded-[calc(var(--radius)-2px)] px-1.5 py-1 uppercase tracking-[0.18em] transition-colors duration-300 hover:text-foreground"
       >
         {/* One marker element shared across every dropdown trigger, so moving
