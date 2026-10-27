@@ -1,4 +1,15 @@
 {
   "installCommand": "bun install --frozen-lockfile",
-  "buildCommand": "bun run build"
+  "buildCommand": "bun run build",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, noimageindex"
+        }
+      ]
+    }
+  ]
 }

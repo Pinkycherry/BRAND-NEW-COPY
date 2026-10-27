@@ -84,6 +84,7 @@ const PAGE_GROUPS: { heading: string; links: { to: string; label: string }[] }[]
     links: [
       { to: "/", label: "Home" },
       { to: "/browse", label: "Browse all categories" },
+      { to: "/blueprints", label: "Published blueprints" },
       { to: "/blog", label: "Blog" },
     ],
   },
@@ -190,7 +191,7 @@ function SitemapPage() {
       eyebrow="Site map"
       title="Every page on"
       highlight="BBI"
-      intro={`${TAXONOMY.length} business idea categories and ${subcategoryTotal} subcategories, plus ${CALCULATORS.length} calculators, ${STARTUP_GUIDES.length} startup guides, ${CASE_STUDIES.length} founder stories and ${blogPosts.length} blog posts — every one of them linked from this page.`}
+      intro={`${TAXONOMY.length} business idea categories and ${subcategoryTotal} subcategories, plus ${CALCULATORS.length} calculators, ${STARTUP_GUIDES.length} startup guides, ${CASE_STUDIES.length} founder stories and ${blogPosts.length} blog posts. Search the separate index of completed source blueprints from the links below.`}
     >
       {PAGE_GROUPS.map((group) => (
         <Section key={group.heading} heading={group.heading}>

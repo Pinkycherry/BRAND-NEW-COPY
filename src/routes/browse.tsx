@@ -1,159 +1,102 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useSuspenseQuery } from "@tanstack/react-query";
+import { useMemo, useState } from "react";
+import { ArrowRight, ArrowUpRight, Search, X } from "lucide-react";
 
-import { SiteShell, Breadcrumbs } from "@/components/site-shell";
-import { ExploreRail } from "@/components/explore-rail";
+import { PAGE_IMAGES, pageImageMeta } from "@/config/page-imagery";
+import { categoryImage } from "@/config/category-imagery";
+import { absoluteUrl } from "@/lib/schema";
+import { GlassShell } from "@/components/glass-shell";
 import { catalogQuery } from "@/lib/catalog";
 import { TAXONOMY } from "@/data/taxonomy";
-import FocusCards from "@/components/aceternity/focus-cards";
-import { categoryImage } from "@/config/category-imagery";
-import { absoluteUrl, JsonLd, breadcrumbSchema, collectionPageSchema } from "@/lib/schema";
-import { PAGE_IMAGES, pageImageMeta } from "@/config/page-imagery";
-import { PageHeroImage } from "@/components/page-hero-image";
-import { useScrollProgress, useTextReveal } from "@/motion";
+import { JsonLd, breadcrumbSchema, collectionPageSchema } from "@/lib/schema";
+import "@/components/glass-library.css";
 
 export const Route = createFileRoute("/browse")({
   loader: ({ context }) => context.queryClient.ensureQueryData(catalogQuery),
   head: () => ({
     meta: [
-      { title: "Browse Business Idea Categories | BBI – Bro Business Ideas" },
-      {
-        name: "description",
-        content:
-          "Browse 100 business idea categories and 1,000 subcategories for India, from work from home and food to farming, home services and small manufacturing.",
-      },
-      {
-        property: "og:title",
-        content: "Browse Business Idea Categories | BBI – Bro Business Ideas",
-      },
-      {
-        property: "og:description",
-        content:
-          "100 business idea categories, ten subcategories each, written for readers in India.",
-      },
+      { title: "Browse 100 Business Idea Categories | BusinessIdea.io" },
+      { name: "description", content: "Explore 100 approved business idea categories and 1,000 focused subcategories for people starting in India." },
+      { property: "og:title", content: "Explore business ideas | BusinessIdea.io" },
+      { property: "og:description", content: "Find a direction that fits your time, skills and place." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       ...pageImageMeta(PAGE_IMAGES.browse, absoluteUrl),
     ],
   }),
   component: BrowsePage,
-  errorComponent: () => (
-    <SiteShell tone="instrument">
-      <p className="mx-auto max-w-6xl px-4 py-24">
-        Couldn't load the idea library — try refreshing.
-      </p>
-    </SiteShell>
-  ),
-  notFoundComponent: () => (
-    <SiteShell tone="instrument">
-      <p className="mx-auto max-w-6xl px-4 py-24">That page doesn't exist.</p>
-    </SiteShell>
-  ),
+  errorComponent: () => <GlassShell><div className="gl-page gl-message"><h1>We could not load the library.</h1><p>Please try again in a moment.</p><Link to="/">Return home</Link></div></GlassShell>,
 });
 
 function BrowsePage() {
-  const { data } = useSuspenseQuery(catalogQuery);
-  const headingRef = useTextReveal<HTMLHeadingElement>();
-  const depthRef = useScrollProgress<HTMLDivElement>();
+  const { data: catalog } = useSuspenseQuery(catalogQuery);
+  const [query, setQuery] = useState("");
+  const [order, setOrder] = useState<"sheet" | "az">("sheet");
+  const needle = query.trim().toLowerCase();
+  const categories = useMemo(() => {
+    const candidates = TAXONOMY.filter((category) =>
+      !needle || category.name.toLowerCase().includes(needle) ||
+      category.subcategories.some((sub) => sub.name.toLowerCase().includes(needle))
+    );
+    return order === "az" ? [...candidates].sort((a, b) => a.name.localeCompare(b.name)) : candidates;
+  }, [needle, order]);
+
   return (
     <>
-      <JsonLd
-        schema={[
-          collectionPageSchema({
-            path: "/browse",
-            name: "Browse Business Idea Categories",
-            description: "100 business idea categories and 1,000 subcategories for India.",
-            itemCount: data.totalCategories,
-            image: PAGE_IMAGES.browse.src,
-          }),
-          breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name: "Browse", path: "/browse" },
-          ]),
-        ]}
-      />
-      <SiteShell tone="instrument">
-        <div ref={depthRef} className="bbi-depth mx-auto max-w-6xl px-4 py-12">
-          <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Browse" }]} />
-          <div className="bbi-depth-back">
-            <h1 ref={headingRef} className="mt-4 text-3xl font-bold tracking-tight">
-              Every business idea category
-            </h1>
-            <p className="mt-2 text-sm text-muted-foreground">
-              {data.totalCategories} categories · {data.totalSubcategories} subcategories
-            </p>
-            <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-              Each category opens into ten focused subcategories. Ideas fill the subcategories as
-              they are published.
-            </p>
-            {/* Someone landing on the library from search has no idea what it
-                costs, and the answer is the most persuasive thing on the page. */}
-            <p className="mt-1 text-xs uppercase tracking-[0.16em] text-muted-foreground">
-              Free after one sign-in · No credit card · Pay nothing, ever
-            </p>
-            <PageHeroImage image={PAGE_IMAGES.browse} />
-          </div>
-          {/* Was `space-y-6`: fourteen full-width bars, each holding a single
-              line of text and a count, roughly 1,600px of page to say what a
-              grid says in 400. FocusCards instead: hovering one category pulls
-              it forward and lets the rest fall back, so a long grid answers
-              where the reader is looking. Photography is this site's own
-              committed category images (src/config/category-imagery.ts) --
-              matched to the category, not an external, unreliable source. */}
-          <FocusCards
-            className="bbi-depth-front mt-8"
-            cards={data.categories.map((category) => {
-              const photo = categoryImage(category.categorySlug);
-              return {
-                title: category.categoryName,
-                meta: `${category.subcategoryCount} subcategories`,
-                src: photo.src,
-                alt: photo.alt,
-                to: "/category/$categorySlug",
-                params: { categorySlug: category.categorySlug },
-              };
-            })}
-          />
-
-          {/* Every subcategory, one link each, so all 1,000 are one click from
-              the library and reachable by a crawler without the menus. */}
-          <section className="bbi-depth-front mt-16" aria-labelledby="all-subcategories">
-            <h2 id="all-subcategories" className="text-2xl font-semibold tracking-tight">
-              All {data.totalSubcategories} subcategories
-            </h2>
-            <div className="mt-6 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-              {TAXONOMY.map((category) => (
-                <div key={category.slug}>
-                  <h3 className="text-sm font-semibold">
-                    <Link
-                      to="/category/$categorySlug"
-                      params={{ categorySlug: category.slug }}
-                      className="hover:text-primary"
-                    >
-                      {category.name}
-                    </Link>
-                  </h3>
-                  <ul className="mt-2 grid gap-1">
-                    {category.subcategories.map((sub) => (
-                      <li key={sub.slug}>
-                        <Link
-                          to="/category/$categorySlug/$subcategorySlug"
-                          params={{ categorySlug: category.slug, subcategorySlug: sub.slug }}
-                          className="text-xs text-muted-foreground hover:text-foreground"
-                        >
-                          {sub.name.replace(/ Business Ideas$/, "")}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+      <JsonLd schema={[
+        collectionPageSchema({ path: "/browse", name: "Business idea categories", description: "100 categories and 1,000 focused paths for India.", itemCount: catalog.totalCategories, image: PAGE_IMAGES.browse.src }),
+        breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Browse", path: "/browse" }]),
+      ]} />
+      <GlassShell>
+        <div className="gl-page gl-browse-index">
+          <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span aria-hidden="true">/</span><span>Explore ideas</span></nav>
+          <header className="gl-hero">
+            <div className="gl-hero-copy">
+              <p className="gh-eyebrow">THE IDEA LIBRARY</p>
+              <h1>Find a direction <em>worth exploring.</em></h1>
+              <p>Start with a category you know, or search for a specific kind of work. Every path is a way to narrow your question.</p>
+              <div className="gl-hero-stats"><span><strong>{catalog.totalCategories}</strong> categories</span><span><strong>{catalog.totalSubcategories.toLocaleString()}</strong> focused paths</span></div>
             </div>
-          </section>
+            <figure className="gl-image-hero"><img src={PAGE_IMAGES.browse.src} alt={PAGE_IMAGES.browse.alt} width={1280} height={549} loading="eager" fetchPriority="high" /><figcaption>{PAGE_IMAGES.browse.description}</figcaption></figure>
+          </header>
 
-          <ExploreRail exclude="ideas" heading="Keep exploring" />
+          <section className="gl-index" aria-labelledby="gl-index-title">
+            <div className="gl-section-heading"><div><p className="gh-eyebrow">EXPLORE THE MAP</p><h2 id="gl-index-title">All categories</h2><p>Open a category to see its ten approved subcategories.</p></div><span className="gl-count">{categories.length} of {catalog.totalCategories} categories</span></div>
+            <div className="gl-controls">
+              <label className="gl-search"><Search size={20} aria-hidden="true" /><span className="gh-sr-only">Search categories and subcategories</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search categories or specific paths..." type="search" />{query && <button type="button" aria-label="Clear search" onClick={() => setQuery("")}><X size={19} /></button>}</label>
+              <label className="gl-sort">Sort <select value={order} onChange={(event) => setOrder(event.target.value as "sheet" | "az")}><option value="sheet">Original order</option><option value="az">A to Z</option></select></label>
+            </div>
+            {categories.length === 0 ? (
+              <div className="gl-empty"><span aria-hidden="true">✳</span><h3>No matching path yet.</h3><p>Try a broader word such as food, home, design or farming.</p><button type="button" onClick={() => setQuery("")}>Show all categories <ArrowRight size={17} /></button></div>
+            ) : (
+              <div className="gl-category-grid">
+                {categories.map((category) => {
+                  const image = categoryImage(category.slug);
+                  const matches = needle && !category.name.toLowerCase().includes(needle)
+                    ? category.subcategories.filter((sub) => sub.name.toLowerCase().includes(needle))
+                    : category.subcategories;
+                  return (
+                    <article className="gl-category" key={category.slug}>
+                      
+                      <Link className="gl-category-media" to="/category/$categorySlug" params={{ categorySlug: category.slug }} aria-label={`Explore ${category.short}`}><img src={image.src} alt={image.alt} width={1280} height={549} loading="lazy" /></Link>
+                      <h3><Link to="/category/$categorySlug" params={{ categorySlug: category.slug }}>{category.short}</Link></h3>
+                      <p>{category.subcategories.length} focused paths</p>
+                      <details open={Boolean(needle)} key={needle ? category.slug + needle : category.slug}>
+                        <summary>View paths <span aria-hidden="true">⌄</span></summary>
+                        <ul>{matches.map((sub) => <li key={sub.slug}><Link to="/category/$categorySlug/$subcategorySlug" params={{ categorySlug: category.slug, subcategorySlug: sub.slug }}>{sub.name.replace(/ Business Ideas$/i, "")}<ArrowUpRight size={15} aria-hidden="true" /></Link></li>)}</ul>
+                      </details>
+                      <Link className="gl-category-cta" to="/category/$categorySlug" params={{ categorySlug: category.slug }}>Explore category <ArrowUpRight size={17} aria-hidden="true" /></Link>
+                    </article>
+                  );
+                })}
+              </div>
+            )}
+          </section>
+          <section className="gl-blueprint-invite"><div><p className="gh-eyebrow">ALREADY RESEARCHED</p><h2>Browse published idea blueprints.</h2><p>Explore the completed BBI library by title, then open any idea in the new layout.</p></div><Link to="/blueprints" className="gh-button gh-button-primary">See published blueprints <ArrowUpRight size={18} /></Link></section>
+          <aside className="gl-bottom-note"><div><p className="gh-eyebrow">A CLEARER START</p><h2>Take one path at a time.</h2><p>Some subcategories are still filling up with published ideas. You can explore the structure now, and we will show the current content honestly on each page.</p></div><Link to="/calculator" className="gh-button gh-button-primary">Try a calculator <ArrowUpRight size={18} /></Link></aside>
         </div>
-      </SiteShell>
+      </GlassShell>
     </>
   );
 }

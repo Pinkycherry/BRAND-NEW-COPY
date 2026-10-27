@@ -1,214 +1,55 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { BookOpen, Clock, ArrowRight, Sparkles, Compass } from "lucide-react";
+import { ArrowUpRight, BookOpen, Clock } from "lucide-react";
 
-import { SiteShell, Breadcrumbs } from "@/components/site-shell";
-import { ExploreRail } from "@/components/explore-rail";
-import { JsonLd, breadcrumbSchema, collectionPageSchema } from "@/lib/schema";
+import { GlassShell } from "@/components/glass-shell";
+import { STARTUP_GUIDES } from "@/lib/guides-data";
 import { guideImage } from "@/config/guide-imagery";
 import { hideImgIfBroken } from "@/lib/utils";
-import { STARTUP_GUIDES, type StartupGuideMeta } from "@/lib/guides-data";
+import { JsonLd, breadcrumbSchema, collectionPageSchema } from "@/lib/schema";
+import "@/components/glass-library.css";
+import "@/components/guide-reading-room.css";
 
 export const Route = createFileRoute("/startup-guides/")({
-  head: () => ({
-    meta: [
-      { title: "Tactical Startup & Validation Guides | BBI – Bro Business Ideas" },
-      {
-        name: "description",
-        content:
-          "In-depth tactical playbooks on idea validation, TAM calculation, zero-investment business models, and PMF benchmarks.",
-      },
-      {
-        property: "og:title",
-        content: "Tactical Startup & Validation Guides | BBI – Bro Business Ideas",
-      },
-      {
-        property: "og:description",
-        content:
-          "Practical operator playbooks with zero fluff: Customer discovery, bottom-up market sizing, lean productized models, and launch audits.",
-      },
-    ],
-  }),
-  component: StartupGuidesIndexPage,
+  head: () => ({ meta: [
+    { title: "Startup Guides in India: Read for Your Next Founder Decision | BusinessIdea.io" },
+    { name: "description", content: "Read 20 published startup guides with original featured images. Choose the founder decision in front of you: validation, market, cash, launch or growth." },
+    { property: "og:title", content: "Startup Guides | BusinessIdea.io" },
+    { property: "og:type", content: "website" },
+  ] }),
+  component: GuidesIndex,
 });
 
-function StartupGuidesIndexPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+const readingPaths = [
+  { label:"I need a real first test", detail:"Name the buyer, show the offer, listen for a commitment.", slug:"business-idea-validation-framework", next:"/startup-idea-validation" },
+  { label:"I need to understand the market", detail:"Study alternatives and the segment you can actually reach.", slug:"competitor-analysis-framework", next:"/business-ideas-india" },
+  { label:"I need to keep cash breathing", detail:"Put collection dates next to the bills, not just revenue totals.", slug:"startup-cash-flow-management", next:"/startup-costs-india" },
+  { label:"I am nearly ready to launch", detail:"Check the operational promises before a public announcement.", slug:"pre-launch-checklist-for-startups", next:"/business-models-india" },
+] as const;
+const featureSlug="business-idea-validation-framework";
+const featureGuide=STARTUP_GUIDES.find(guide=>guide.slug===featureSlug)!;
+const featureArt=guideImage(featureSlug);
 
-  const categories = [
-    "All",
-    "Validation",
-    "Market Sizing",
-    "Bootstrapping",
-    "Growth & PMF",
-    "Launch & Ops",
-  ];
+const categories = ["All", ...Array.from(new Set(STARTUP_GUIDES.map((guide) => guide.category)))];
 
-  const filteredGuides =
-    selectedCategory === "All"
-      ? STARTUP_GUIDES
-      : STARTUP_GUIDES.filter((g) => g.category === selectedCategory);
-
-  return (
-    <>
-      <JsonLd
-        schema={[
-          collectionPageSchema({
-            path: "/startup-guides",
-            name: "Tactical Startup & Validation Guides",
-            description: "Practical operator playbooks on idea validation, TAM sizing, and PMF.",
-            itemCount: STARTUP_GUIDES.length,
-          }),
-          breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name: "Startup Guides", path: "/startup-guides" },
-          ]),
-        ]}
-      />
-      <SiteShell tone="instrument">
-        <div className="mx-auto max-w-6xl px-3 py-10 sm:px-4 sm:py-14">
-          <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Startup Guides" }]} />
-
-          <div className="mt-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-            <div>
-              <p className="t-eyebrow">Operator Playbooks</p>
-              <h1 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-                Startup & Validation{" "}
-                <span className="bg-gradient-to-r from-primary via-accent to-warm bg-clip-text text-transparent">
-                  Guides
-                </span>
-              </h1>
-              <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">
-                Zero fluff, empirical frameworks written for early-stage builders. Learn how to run
-                customer discovery without pitching, size defensible markets, and launch lean
-                businesses from zero capital.
-              </p>
-            </div>
-            <div className="flex shrink-0 items-center gap-2">
-              <Link
-                to="/calculator"
-                className="flex items-center gap-2 rounded-full border border-border px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground transition-colors hover:border-primary hover:text-foreground"
-              >
-                <Compass className="h-3.5 w-3.5" />
-                Useful Tools
-              </Link>
-            </div>
-          </div>
-
-          {/* Category Filter Chips */}
-          <div className="mt-8 flex flex-wrap gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => setSelectedCategory(cat)}
-                className={`rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] transition-colors ${
-                  selectedCategory === cat
-                    ? "glass-btn-glow glass-btn"
-                    : "glass text-muted-foreground hover:bg-secondary hover:text-foreground"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-
-          {/* Guides Catalog Grid */}
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {filteredGuides.map((guide) => (
-              <article
-                key={guide.slug}
-                className="glass group flex flex-col justify-between rounded-2xl p-6 transition-all hover:border-primary/50 hover:shadow-lg sm:p-7"
-              >
-                <div>
-                  {guideImage(guide.slug) && (
-                    <Link
-                      to="/startup-guides/$slug"
-                      params={{ slug: guide.slug }}
-                      className="-mx-6 -mt-6 mb-5 block overflow-hidden rounded-t-2xl sm:-mx-7 sm:-mt-7"
-                      tabIndex={-1}
-                    >
-                      <img
-                        src={guideImage(guide.slug)!.src}
-                        alt={guideImage(guide.slug)!.alt}
-                        width={guideImage(guide.slug)!.width}
-                        height={guideImage(guide.slug)!.height}
-                        loading="lazy"
-                        decoding="async"
-                        ref={hideImgIfBroken}
-                        className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                      />
-                    </Link>
-                  )}
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <span className="rounded-full border border-accent/40 bg-accent/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.18em] text-accent">
-                      {guide.category}
-                    </span>
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1">
-                        <Clock className="h-3.5 w-3.5" />
-                        {guide.readTime}
-                      </span>
-                      <span>·</span>
-                      <span>{guide.wordCount} words</span>
-                    </div>
-                  </div>
-
-                  <h2 className="mt-4 font-display text-xl font-bold tracking-tight text-foreground transition-colors group-hover:text-primary sm:text-2xl">
-                    <Link to="/startup-guides/$slug" params={{ slug: guide.slug }}>
-                      {guide.title}
-                    </Link>
-                  </h2>
-
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {guide.description}
-                  </p>
-                </div>
-
-                <div className="mt-6 flex items-center justify-between border-t border-border/60 pt-4">
-                  <span className="text-xs text-muted-foreground">By {guide.author}</span>
-                  <Link
-                    to="/startup-guides/$slug"
-                    params={{ slug: guide.slug }}
-                    className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.16em] text-primary transition-colors hover:underline"
-                  >
-                    <span>Read Guide</span>
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          {/* Quick Cross-Link Banner */}
-          <div className="glass mt-14 rounded-2xl p-6 sm:p-8">
-            <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent">
-                  Interactive Practice
-                </span>
-                <h3 className="mt-1 font-display text-xl font-bold tracking-tight">
-                  Need to calculate your market size or cash runway?
-                </h3>
-                <p className="mt-1 max-w-xl text-sm text-muted-foreground">
-                  Our interactive financial calculators complement these guides with real-time
-                  formulas and benchmark tests.
-                </p>
-              </div>
-              <Link
-                to="/calculator"
-                className="glass-btn-light shrink-0 rounded-xl px-5 py-2.5 text-xs font-bold uppercase tracking-[0.16em]"
-              >
-                Open Calculators →
-              </Link>
-            </div>
-          </div>
-
-          {/* This page already points at /calculator directly above, so the
-              rail excludes it too and doesn't repeat the same link twice. */}
-          <ExploreRail exclude={["guides", "calculators"]} heading="Keep exploring" />
-        </div>
-      </SiteShell>
-    </>
-  );
+function GuidesIndex() {
+  const [selected, setSelected] = useState("All");
+  const guides = selected === "All" ? STARTUP_GUIDES : STARTUP_GUIDES.filter((guide) => guide.category === selected);
+  return <>
+    <JsonLd schema={[
+      collectionPageSchema({ path: "/startup-guides", name: "Startup guides", description: "Published guides for the decisions a founder faces.", itemCount: STARTUP_GUIDES.length }),
+      breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Guides", path: "/startup-guides" }]),
+    ]} />
+    <GlassShell><div className="gl-page gr-page">
+      <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><span>Guides</span></nav>
+      <header className="gr-hero"><div><p className="gh-eyebrow">THE FOUNDER READING ROOM · INDIA</p><h1>Read for the decision in front of you.</h1><p>Twenty published startup guides, each with its original article and featured image. Begin with the question that is costing you sleep, then go deeper when the next question becomes clear.</p><a href="#choose-a-path" className="gh-button gh-button-primary">Find a reading path <ArrowUpRight size={17}/></a></div><Link to="/startup-guides/$slug" params={{slug:featureGuide.slug}} className="gr-hero-feature">{featureArt && <img src={featureArt.src} alt={featureArt.alt} width={featureArt.width} height={featureArt.height} ref={hideImgIfBroken}/>}<span><small>START HERE / VALIDATION</small><strong>{featureGuide.title}</strong><span>Read the guide <ArrowUpRight size={16}/></span></span></Link></header>
+      <section className="gr-choice" id="choose-a-path" aria-labelledby="gr-choice-title"><div className="gr-choice-intro"><p className="gh-eyebrow">01 / YOUR NEXT DECISION</p><h2 id="gr-choice-title">Where is the uncertainty?</h2><p>You do not have to read a library in order. Pick the part of your business idea that could change what you do this week.</p></div><div className="gr-paths">{readingPaths.map((path,index)=><article key={path.slug}><span>0{index+1}</span><h3>{path.label}</h3><p>{path.detail}</p><Link to="/startup-guides/$slug" params={{slug:path.slug}}>Read the source guide <ArrowUpRight size={16}/></Link></article>)}</div></section>
+      <section className="gr-method" aria-labelledby="gr-method-title"><div><p className="gh-eyebrow">02 / READ WITH A PENCIL</p><h2 id="gr-method-title">Take one useful action from an article.</h2><p>A guide is worth reading when it changes a real decision. Put the new question beside a customer, a supplier or a number from your own situation.</p></div><ol><li><strong>Before reading</strong><p>Write down the decision: customer, cost, model or launch date.</p></li><li><strong>While reading</strong><p>Mark assumptions that the author cannot know about your town, buyer or budget.</p></li><li><strong>After reading</strong><p>Run one small test. Keep what you observed separate from what you hoped.</p></li></ol></section>
+      <section className="gl-index gr-index" aria-labelledby="guides-title"><div className="gl-section-heading"><div><p className="gh-eyebrow">03 / THE COMPLETE SHELF</p><h2 id="guides-title">All published startup guides.</h2><p>Every article below is an existing source guide with its own featured image. Filter by subject, then open the full reading page.</p></div><span className="gl-count">{guides.length} guides</span></div><div className="gl-filter" role="group" aria-label="Filter guides by topic">{categories.map((category) => <button key={category} type="button" aria-pressed={selected === category} onClick={() => setSelected(category)}>{category}</button>)}</div><div className="gl-guide-grid">{guides.map((guide) => { const art = guideImage(guide.slug); return <article key={guide.slug} className="gl-guide-card">
+        {art && <Link to="/startup-guides/$slug" params={{ slug: guide.slug }} className="gl-guide-media" tabIndex={-1}><img src={art.src} alt={art.alt} width={art.width} height={art.height} loading="lazy" decoding="async" ref={hideImgIfBroken} /></Link>}
+        <span className="gl-tool-icon"><BookOpen size={23} strokeWidth={1.7} aria-hidden="true" /></span><span className="gh-eyebrow">{guide.category} · <Clock size={14} aria-hidden="true" /> {guide.readTime}</span><h3><Link to="/startup-guides/$slug" params={{ slug: guide.slug }}>{guide.title}</Link></h3><p>{guide.description}</p><Link to="/startup-guides/$slug" params={{ slug: guide.slug }} className="gl-idea-action">Read guide <ArrowUpRight size={17} /></Link></article>; })}</div></section>
+      <section className="gr-crossroads" aria-labelledby="gr-crossroads-title"><div><p className="gh-eyebrow">04 / FROM READING TO REALITY</p><h2 id="gr-crossroads-title">Give the next question a place to land.</h2><p>The source guides cover different stages, including SaaS and B2B. If your idea is a local service, a product or a side business, use the principle that applies and test the actual numbers in your context.</p><Link to="/business-idea-reading-room" className="gh-text-link">Pair a guide with an original founder article <ArrowUpRight size={17}/></Link></div><div><Link to="/startup-costs-india"><strong>What will leave my pocket?</strong><span>Make the first-sale rupee map <ArrowUpRight size={16}/></span></Link><Link to="/startup-idea-validation"><strong>Will anybody commit?</strong><span>Use the field notebook <ArrowUpRight size={16}/></span></Link><Link to="/business-models-india"><strong>What must I deliver?</strong><span>Compare operating models <ArrowUpRight size={16}/></span></Link></div></section>
+      <aside className="gl-bottom-note"><div><p className="gh-eyebrow">MAKE IT CONCRETE</p><h2>Put a number beside the idea.</h2><p>Use one of the live calculators to check a cost, a margin or a time horizon using your own assumptions.</p></div><Link to="/calculator" className="gh-button gh-button-primary">Explore calculators <ArrowUpRight size={17} /></Link></aside>
+    </div></GlassShell>
+  </>;
 }

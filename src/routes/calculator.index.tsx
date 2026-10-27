@@ -1,145 +1,37 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowUpRight, Calculator } from "lucide-react";
 
-import { SiteShell, Breadcrumbs } from "@/components/site-shell";
-import { ExploreRail } from "@/components/explore-rail";
-import { CALCULATORS } from "@/lib/calculators";
+import { GlassShell } from "@/components/glass-shell";
+import { READY_CALCULATORS, REVIEW_CALCULATORS } from "@/lib/calculators";
 import { JsonLd, breadcrumbSchema, collectionPageSchema } from "@/lib/schema";
-import { useDepthScene, useElementPointerGroup, useStaggerReveal, useTextReveal } from "@/motion";
+import "@/components/glass-library.css";
+import "@/components/calculator-review.css";
 
-const TITLE = "Business Calculators for Indian Founders | BBI – Bro Business Ideas";
-const DESCRIPTION =
-  "Free break-even, startup cost, ROI and funding calculators in rupees. They run in your browser, they show the formula behind every number, and nothing is saved.";
+const DESCRIPTION = "Five specifically modeled startup calculators in rupees, plus source calculator titles held for formula review. Enter your own numbers and inspect the working.";
 
 export const Route = createFileRoute("/calculator/")({
-  head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => ({ meta: [
+    { title: "Startup Calculators | BusinessIdea.io" },
+    { name: "description", content: DESCRIPTION },
+    { property: "og:title", content: "Startup Calculators | BusinessIdea.io" },
+    { property: "og:description", content: DESCRIPTION },
+    { property: "og:type", content: "website" },
+  ] }),
   component: CalculatorIndex,
 });
 
 function CalculatorIndex() {
-  // One headline reveal per page, on the H1. One stagger, on the grid.
-  const titleRef = useTextReveal<HTMLHeadingElement>();
-  // Masthead depth scene: one shared observer + one shared frame callback
-  // for the whole header. Cursor depth on fine pointers, scroll depth on touch
-  // (see motion.css, coarse-pointer block).
-  const sceneRef = useDepthScene<HTMLDivElement>({ strength: 0.5 });
-
-  const gridRef = useStaggerReveal<HTMLDivElement>({ direction: "up", stagger: 0.05 });
-  // One pointer listener for the whole grid rather than one per card.
-  const pointerRef = useElementPointerGroup<HTMLDivElement>(".mo-card");
-
-  return (
-    <>
-      <JsonLd
-        schema={[
-          collectionPageSchema({
-            path: "/calculator",
-            name: "Business calculators",
-            description: DESCRIPTION,
-            itemCount: CALCULATORS.length,
-          }),
-          breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name: "Calculators", path: "/calculator" },
-          ]),
-        ]}
-      />
-      <SiteShell tone="instrument">
-        <div ref={sceneRef} className="cx-scene mx-auto max-w-6xl px-3 py-12 sm:px-4">
-          {/* EDITABLE SECTION START — safe to add, remove, or reorder sections below without breaking routing or data fetching. */}
-          <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Calculators" }]} />
-          <p className="mt-6 t-eyebrow">Calculators</p>
-          <h1
-            ref={titleRef}
-            className="cx-layer cx-z3 mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl"
-          >
-            Small tools that answer{" "}
-            <span className="bg-gradient-to-r from-primary via-accent to-warm bg-clip-text text-transparent">
-              one question each
-            </span>
-          </h1>
-          <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">
-            Every number here is worked out in your browser from what you type, in rupees. Each
-            answer shows the formula under it, so you can check it by hand. Nothing is sent
-            anywhere, nothing is stored, and no figure is filled in for you.
-          </p>
-
-          <div
-            ref={(node) => {
-              gridRef.current = node;
-              pointerRef.current = node;
-            }}
-            className="mt-10 grid gap-5 sm:grid-cols-2"
-          >
-            {CALCULATORS.map((calculator) => (
-              <Link
-                key={calculator.slug}
-                to="/calculator/$slug"
-                params={{ slug: calculator.slug }}
-                className="glass mo-card flex h-full flex-col gap-3 rounded-2xl p-6"
-              >
-                <h2 className="font-display text-xl font-bold tracking-tight">
-                  {calculator.title} <span className="text-accent">{calculator.highlight}</span>
-                </h2>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {calculator.answers}
-                </p>
-                <p className="mt-auto pt-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-                  {calculator.fields.length} things to fill in
-                </p>
-              </Link>
-            ))}
-          </div>
-
-          <div className="glass mt-10 rounded-2xl px-5 py-6 sm:px-7">
-            <h2 className="font-display text-lg font-bold tracking-tight">
-              How to read the answers
-            </h2>
-            <ul className="mt-3 space-y-1 text-sm leading-relaxed text-muted-foreground">
-              <li className="mo-row -mx-2 flex gap-2.5 rounded-lg px-2 py-1.5">
-                <span
-                  aria-hidden
-                  className="mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
-                />
-                <span>
-                  A calculator only knows what you typed. It has no idea what your market charges,
-                  and it will not tell you whether a number is good or bad.
-                </span>
-              </li>
-              <li className="mo-row -mx-2 flex gap-2.5 rounded-lg px-2 py-1.5">
-                <span
-                  aria-hidden
-                  className="mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
-                />
-                <span>
-                  When a sum cannot be done — dividing by zero, or a price that never covers its
-                  cost — the tool says so in words instead of showing a broken number.
-                </span>
-              </li>
-              <li className="mo-row -mx-2 flex gap-2.5 rounded-lg px-2 py-1.5">
-                <span
-                  aria-hidden
-                  className="mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
-                />
-                <span>
-                  Results change as you type. There is no button to press and no result to wait for.
-                </span>
-              </li>
-            </ul>
-          </div>
-          {/* EDITABLE SECTION END */}
-
-          <ExploreRail exclude="calculators" heading="Keep exploring" />
-        </div>
-      </SiteShell>
-    </>
-  );
+  return <>
+    <JsonLd schema={[
+      collectionPageSchema({ path: "/calculator", name: "Startup calculators", description: DESCRIPTION, itemCount: READY_CALCULATORS.length }),
+      breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Calculators", path: "/calculator" }]),
+    ]} />
+    <GlassShell><div className="gl-page">
+      <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><span>Calculators</span></nav>
+      <header className="gl-hero"><div className="gl-hero-copy"><p className="gh-eyebrow">THE FOUNDER TOOLKIT</p><h1>Give your numbers <em>a closer look.</em></h1><p>Five tools have specific inputs and visible working. The other 55 source entries are held for formula review; we will not show a number for a metric we cannot support.</p><div className="gl-hero-stats"><span><strong>{READY_CALCULATORS.length}</strong> available calculators</span><span>{REVIEW_CALCULATORS.length} source entries under review</span></div></div><figure className="gl-image-hero"><img src="/images/guides/startup-cash-flow-management-extending-your-runway-reduce-burn-rate-expenses.webp" alt="Startup cash flow guide artwork about runway and spending, fully visible" width={1338} height={753}/><figcaption>Start with a real cost, then check the timing.</figcaption></figure></header>
+      <section className="gl-index" aria-labelledby="tools-heading"><div className="gl-section-heading"><div><p className="gh-eyebrow">CHOOSE A WORKING MODEL</p><h2 id="tools-heading">Five calculations you can inspect.</h2><p>Each available tool has named inputs and a visible formula. Replace the sample numbers with your own evidence.</p></div></div><div className="gl-tool-grid">{READY_CALCULATORS.map((tool) => <Link key={tool.slug} to="/calculator/$slug" params={{ slug: tool.slug }} className="gl-tool-card"><span className="gl-tool-icon"><Calculator size={24} strokeWidth={1.7} aria-hidden="true" /></span><h3>{tool.title} <em>{tool.highlight}</em></h3><p>{tool.answers}</p><span className="gl-idea-action">Open calculator <ArrowUpRight size={18} /></span></Link>)}</div></section>
+      <section className="gl-review-index" aria-labelledby="review-heading"><p className="gh-eyebrow">SOURCE ARCHIVE / UNDER REVIEW</p><h2 id="review-heading">{REVIEW_CALCULATORS.length} metric pages are being rebuilt.</h2><p>Their old URLs remain available with an explanation, but the generic inputs and outputs are paused. These titles are a repair queue, not working recommendations.</p><details><summary>See the metric titles in review</summary><ul>{REVIEW_CALCULATORS.map(tool=><li key={tool.slug}>{tool.title}</li>)}</ul></details></section>
+      <aside className="gl-bottom-note"><div><p className="gh-eyebrow">READ THE RESULT CAREFULLY</p><h2>Your inputs shape the answer.</h2><p>The tools calculate from your figures. They do not know local demand, tax or every cost you may face. Check the formula and confirm assumptions before you make a decision.</p></div><Link to="/browse" className="gh-button gh-button-primary">Explore ideas <ArrowUpRight size={18} /></Link></aside>
+    </div></GlassShell>
+  </>;
 }
