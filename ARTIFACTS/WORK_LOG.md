@@ -677,3 +677,9 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 
 ## 26/10/2026, 03:21 IST — Final collection batch live verification
 - Main 494e314 Vercel status success. The deployed /product fourth-step Review brief button keeps question four selected and moves the summary into view; staging noindex meta remains present. /tools customer filter and unmatched search show the expected result/empty state. Five routes remain reachable. Actual phone viewport rendering and response-header read are still pending; this pass does not claim those gates closed.
+
+
+## 27/10/2026 — /lists rebuilt on the purchased page architecture
+- Founder direction: same structure, composition, header and footer as the purchased Lists layout, filled with our content; host on bbinewcopy.vercel.app.
+- Added src/components/v2/frame.tsx + v2.css (header with Validate/Learn/Free Tools menus, footer with 19 link groups) and src/lib/lists.functions.ts (live counts from published ideas).
+- /lists now follows the purchased section order: breadcrumb, hero with search, start row, filter bar, three steps, next step, featured list, six card sections, tools, strategy, complete index, FAQ, CTA, key facts, read-first links. Every link targets an existing route; all 1,000 taxonomy slugs checked against the database. Budget cards show live counts but no link until a single-list page layout exists. Hero image is a placeholder.

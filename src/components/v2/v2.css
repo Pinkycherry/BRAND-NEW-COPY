@@ -1,0 +1,53 @@
+/*
+ * Component classes used by the v2 page family (src/components/v2).
+ * Inside the components layer so Tailwind utilities on the same element
+ * (hover:border-primary/50 and so on) still win, as they do in the source
+ * layout. Colours come from our own tokens, never hard-coded brand hues.
+ */
+@layer components {
+  .v2 .glass-nav-scrolled {
+    background: rgb(255 255 255 / 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgb(226 232 240 / 0.4);
+    box-shadow:
+      0 4px 6px -1px rgb(0 0 0 / 0.05),
+      0 2px 4px -1px rgb(0 0 0 / 0.03),
+      0 10px 25px -5px rgb(0 0 0 / 0.08);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .v2 .text-display-lg {
+    letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+
+  .v2 .premium-card {
+    border-radius: 1rem;
+    background-color: #fff;
+    border: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .v2 .premium-card:hover {
+    box-shadow:
+      0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+
+  .v2 .btn-primary {
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px color-mix(in srgb, var(--primary) 30%, transparent);
+  }
+  .v2 .btn-primary:hover {
+    box-shadow: 0 10px 15px -3px color-mix(in srgb, var(--primary) 40%, transparent);
+    transform: translateY(-1px) scale(1.03);
+  }
+
+  .v2 details > summary::-webkit-details-marker {
+    display: none;
+  }
+}
