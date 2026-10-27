@@ -1,4 +1,5 @@
 import { Link, useLoaderData, useRouterState } from "@tanstack/react-router";
+import { Header as PurchasedHeader } from "./v2/frame";
 import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { User } from "lucide-react";
@@ -909,62 +910,12 @@ export function SiteShell({
         tone === "instrument" ? " bbi-instrument" : ""
       }${plain ? " cm-page" : " home-page"}`}
     >
-      <header className="sticky top-0 z-40 px-3 pt-2 sm:px-4 sm:pt-5">
-        {/* Reading position for the whole document. One composited transform
-            per frame, driven from --page-p — no layout, no repaint. */}
-        <div aria-hidden className="mx-auto h-px max-w-6xl overflow-hidden rounded-full bg-border">
-          <div className="mo-page-rail h-full w-full bg-accent" />
-        </div>
-        <div className="glass-nav bbi-nav-bar relative mx-auto mt-2 flex max-w-6xl items-center justify-between gap-3 rounded-md border border-border px-4 py-2.5 sm:gap-5 sm:px-6 sm:py-3">
-          <Link to="/" onClick={() => setMobileOpen(false)} className="flex shrink-0 items-center">
-            {/* The founder's wordmark image, by request (2026-09-28). */}
-            <img
-              src="/images/brand/b-business-beyond-the-bright-idea-wordmark.webp"
-              alt="B Business, Beyond the Bright Idea"
-              width={160}
-              height={40}
-              className="h-8 w-auto rounded-sm sm:h-9"
-            />
-          </Link>
-
-          <nav className="hidden shrink-0 items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground lg:flex xl:gap-4">
-            <CinemaChrome.Provider value={true}>
-              <CategoryMega />
-              <LinkListDropdown label="Explore" items={EXPLORE_ITEMS} />
-              <LinkListDropdown label="Company" items={COMPANY_ITEMS} />
-              <LinkListDropdown label="Policies" items={POLICY_ITEMS} />
-            </CinemaChrome.Provider>
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="relative transition-colors duration-300 hover:text-foreground after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-primary after:transition-all after:duration-500 hover:after:w-full"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
-          {/* The header search field was removed at the founder's request.
-              Search is still reachable: the sheet menu carries a full
-              LiveSearch, and the category menu links to /search directly. */}
-          <div className="hidden min-w-0 items-center gap-2 lg:flex">
-            <AuthButtons still={plain} />
-          </div>
-
-          <button
-            type="button"
-            aria-expanded={mobileOpen}
-            aria-label="Open navigation menu"
-            onClick={() => setMobileOpen(true)}
-            className="flex shrink-0 flex-col gap-1.5 rounded-full border border-border px-3 py-2.5 lg:hidden"
-          >
-            <span aria-hidden className="block h-0.5 w-5 bg-foreground" />
-            <span aria-hidden className="block h-0.5 w-5 bg-foreground" />
-            <span aria-hidden className="block h-0.5 w-5 bg-foreground" />
-          </button>
-        </div>
-      </header>
+      {/* The purchased header (src/components/v2/frame.tsx) on every page.
+          It is fixed, so a spacer keeps page content below it. */}
+      <div className="v2">
+        <PurchasedHeader active={pathname} />
+      </div>
+      <div aria-hidden className="h-24 shrink-0" />
       <AnimatePresence>
         {mobileOpen && <MobileMenu onClose={() => setMobileOpen(false)} />}
       </AnimatePresence>

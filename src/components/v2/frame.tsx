@@ -189,7 +189,7 @@ function Logo({ footer = false }: { footer?: boolean }) {
   );
 }
 
-function Header({ active }: { active?: string | undefined }) {
+export function Header({ active }: { active?: string | undefined }) {
   const [open, setOpen] = useState<number | null>(null);
   const [mobile, setMobile] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -232,8 +232,8 @@ function Header({ active }: { active?: string | undefined }) {
                 </div>
               );
             })}
-            <a className="px-4 py-2 rounded-full hover:bg-slate-100 hover:text-primary transition-all relative" href="/browse">
-              Browse
+            <a className="px-4 py-2 rounded-full hover:bg-slate-100 hover:text-primary transition-all relative" href="/pricing">
+              Pricing
             </a>
             <a href="/search" aria-label="Search" title="Search" className="ml-1 p-2 rounded-full hover:bg-slate-100 hover:text-primary transition-all">
               <Search className="h-4 w-4" />
@@ -247,8 +247,8 @@ function Header({ active }: { active?: string | undefined }) {
               href="/product"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 min-h-[44px] touch-manipulation active:scale-[0.98] active:opacity-90 text-white h-11 btn-primary px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm shadow-md hover:shadow-lg transition-all font-semibold"
             >
-              <span className="sm:hidden">Validate</span>
-              <span className="hidden sm:inline">Validate an idea</span>
+              <span className="sm:hidden">Sign up</span>
+              <span className="hidden sm:inline">Get Report</span>
             </a>
             <a href="/search" aria-label="Search" className="lg:hidden text-slate-900 hover:bg-slate-100 p-2 rounded-lg transition-colors">
               <Search className="h-5 w-5" />
@@ -295,7 +295,7 @@ function Header({ active }: { active?: string | undefined }) {
               ))}
             </div>
           ))}
-          <a href="/browse" className="block py-2 text-sm font-medium text-slate-800">Browse</a>
+          <a href="/pricing" className="block py-2 text-sm font-medium text-slate-800">Pricing</a>
           <a href="/sign-in" className="block py-2 text-sm font-medium text-slate-800">Login</a>
         </div>
       )}
