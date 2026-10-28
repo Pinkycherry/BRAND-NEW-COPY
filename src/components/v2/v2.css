@@ -51,3 +51,48 @@
     display: none;
   }
 }
+
+/* Mega menu panels (transcribed from the seller screenshots). */
+
+.bm-panel{position:fixed;left:50%;transform:translateX(-50%);top:5.25rem;width:min(1180px,calc(100vw - 2rem));z-index:9999;background:#fff;border:1px solid #e2e8f0;border-radius:20px;box-shadow:0 20px 50px -12px rgba(15,23,42,.18);padding:24px;display:none;font-family:Inter,system-ui,sans-serif;color:#0f172a;max-height:calc(100vh - 6.5rem);overflow:auto}
+.bm-panel.open{display:grid;grid-template-columns:300px 1fr;gap:28px}
+.bm-hero{border-radius:16px;padding:22px;background:linear-gradient(160deg,#f5f3ff,#ede9fe)}
+.bm-hero.orange{background:linear-gradient(160deg,#fff7ed,#ffedd5)}
+.bm-hero .ic{width:56px;height:56px;border-radius:14px;background:#7c3aed;display:grid;place-items:center;color:#fff;font-weight:800;font-size:22px}
+.bm-hero.orange .ic{background:#f97316}
+.bm-badge{float:right;font-size:12px;font-weight:700;color:#fff;background:#22c55e;border-radius:99px;padding:3px 10px;letter-spacing:.03em}
+.bm-badge.p{background:#8b5cf6}.bm-badge.o{background:#f97316}
+.bm-hero h4{font-size:21px;font-weight:500;margin:18px 0 6px}
+.bm-hero p{color:#475569;font-size:15px;margin:0 0 10px;line-height:1.45}
+.bm-btn{display:inline-block;margin-top:8px;background:#fff;border-radius:99px;padding:9px 18px;font-size:15px;color:#7c3aed;box-shadow:0 2px 8px rgba(0,0,0,.08);text-decoration:none}
+.bm-hero.orange .bm-btn{color:#ea580c}
+.bm-label{font-size:13px;letter-spacing:.08em;color:#64748b;text-transform:uppercase;margin:22px 0 10px}
+.bm-dot::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#6366f1;margin-right:10px;vertical-align:middle}
+.bm-dot.g::before{background:#10b981}.bm-dot.r::before{background:#ef4444}.bm-dot.o::before{background:#f97316}.bm-dot.pk::before{background:#ec4899}
+.bm-list a{display:block;color:#334155;font-size:16px;padding:6px 0;text-decoration:none}
+.bm-list a:hover,.bm-cols a:hover{color:#7c3aed}
+.bm-cols{display:grid;gap:24px}
+.bm-cols a{color:#1e293b;text-decoration:none}
+.bm-banner{display:flex;align-items:center;gap:14px;border:1px solid #ddd6fe;background:#faf5ff;border-radius:14px;padding:12px 14px;margin-bottom:12px;text-decoration:none!important}
+.bm-banner.o{border-color:#fed7aa;background:#fff7ed}.bm-banner.r{border-color:#fecaca;background:#fef2f2}.bm-banner.g{border-color:#a7f3d0;background:#ecfdf5}.bm-banner.pk{border-color:#fbcfe8;background:#fdf2f8}.bm-banner.b{border-color:#c7d2fe;background:#eef2ff}
+.bm-banner .ic{width:42px;height:42px;border-radius:11px;background:#7c3aed;flex:none}
+.bm-banner.o .ic{background:#f97316}.bm-banner.r .ic{background:#ef4444}.bm-banner.g .ic{background:#10b981}.bm-banner.pk .ic{background:#ec4899}.bm-banner.b .ic{background:#4f46e5}
+.bm-banner b{display:block;font-weight:500;font-size:17px;color:#0f172a}.bm-banner span{font-size:14px;color:#64748b}
+.bm-items a{display:flex;justify-content:space-between;font-size:16px;padding:7px 0;color:#1e293b}
+.bm-items small{color:#94a3b8}.bm-new{font-size:12px;background:#dcfce7;color:#15803d;border-radius:99px;padding:2px 8px}
+.bm-two{display:grid;grid-template-columns:1fr 1fr;column-gap:16px}
+.bm-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.bm-tile{border:1px solid #e2e8f0;border-radius:14px;padding:8px 8px 12px;text-align:center;font-size:14px;color:#334155;text-decoration:none}
+.bm-tile i{display:block;height:110px;border-radius:10px;margin-bottom:10px;background:linear-gradient(140deg,#f5f3ff,#e0f2fe)}
+.bm-pdfs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.bm-pdf{display:flex;gap:12px;border:1px solid #e2e8f0;border-radius:14px;padding:10px;font-size:15px;color:#0f172a;text-decoration:none}
+.bm-pdf i{width:52px;height:64px;border-radius:6px;background:#1e293b;flex:none}
+.bm-pdf em{display:block;font-style:normal;color:#7c3aed;font-size:13px;margin-top:4px}.bm-pdf s{color:#94a3b8}
+.bm-pill{display:inline-block;margin-top:10px;background:#f5f3ff;border-radius:12px;padding:8px 14px;color:#7c3aed;font-size:15px;text-decoration:none}
+.bm-pill.g{background:#ecfdf5;color:#059669}
+.bm-foot-list{padding:4px 0 14px;display:grid;gap:12px}
+.bm-foot-list a{color:#475569;font-size:15px;text-decoration:none}
+.bm-foot-list a:hover{color:#7c3aed}
+@media (max-width:1023px){.bm-panel{display:none!important}}
+
+.text-brand-500{color:var(--primary)}.text-brand-600{color:var(--primary)}.bg-brand-500{background:var(--primary)}
