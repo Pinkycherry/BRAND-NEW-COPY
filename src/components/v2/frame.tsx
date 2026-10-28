@@ -1,132 +1,132 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { ArrowRight, ChevronDown, Menu, Search, X } from "lucide-react";
+import { ChevronDown, Menu, Search, X } from "lucide-react";
 
 import { TAXONOMY } from "@/data/taxonomy";
 
 import "./v2.css";
 
 /**
- * Header and footer of the purchased page architecture, converted to React
- * and filled with our own pages. The menu layout (hero card, columns,
- * banners, tiles) follows the seller's header; every item links to a route
- * that exists on our site. Footer lists our 100 main categories.
+ * Header and footer of the purchased page architecture, converted to React.
+ * Names, menus and sections are as supplied (markup from the page files,
+ * menu contents from the founder's screenshots). Framework only: every link
+ * is inert (#), no images, no currency amounts, no US/UK items.
  */
 
-type L = { label: string; href: string; note?: string };
+const NO_LINK = "#";
 
-/** Category n (1-100) from the approved taxonomy, linked to its page. */
-function cat(n: number, label?: string): L {
-  const c = TAXONOMY.find((x) => x.n === n);
-  return { label: label ?? c?.short ?? "", href: c ? `/category/${c.slug}` : "/browse" };
-}
+type Item = string | [label: string, note: string];
 
-function Links({ items, two = false }: { items: L[]; two?: boolean }) {
+function A({ children, className, href }: { children: ReactNode; className?: string | undefined; href?: string | undefined }) {
   return (
-    <div className={two ? "bm-list bm-two" : "bm-list"}>
-      {items.map((l) => (
-        <a key={l.href + l.label} href={l.href}>
-          {l.label}
-        </a>
-      ))}
-    </div>
+    <a href={href ?? NO_LINK} className={className}>
+      {children}
+    </a>
   );
 }
 
-function Banner({ tone = "", title, sub, href }: { tone?: string; title: string; sub: string; href: string }) {
+function Banner({ tone = "", title, sub, href }: { tone?: string; title: string; sub: string; href?: string }) {
   return (
-    <a href={href} className={`bm-banner ${tone}`}>
+    <A className={`bm-banner ${tone}`} href={href}>
       <i className="ic" />
       <div>
         <b>{title}</b>
         <span>{sub}</span>
       </div>
-      <ArrowRight className="bm-arrow" />
-    </a>
+    </A>
   );
 }
 
-function Hero({ tone = "", badge, icon, title, body, cta, href }: { tone?: string; badge: string; icon: string; title: string; body: string; cta: string; href: string }) {
+/** Items are seller placeholders (plain text, inert) unless a real page of ours matches. */
+const OURS: Record<string, string> = {
+  "Break-even": "/calculator/break-even",
+  Funding: "/calculator/funding-needed",
+  ROI: "/calculator/roi",
+  "Startup Cost": "/calculator/startup-cost",
+};
+
+function Links({ items, className = "bm-list" }: { items: (string | [string, string])[]; className?: string }) {
   return (
-    <div className={`bm-hero ${tone}`}>
-      <div className="bm-hero-top">
-        <div className="ic">{icon}</div>
-        <span className="bm-badge">{badge}</span>
-      </div>
-      <h4>{title}</h4>
-      <p>{body}</p>
-      <a className="bm-btn" href={href}>
-        {cta}
-      </a>
+    <div className={className}>
+      {items.map((x) => {
+        const [t, href] = typeof x === "string" ? [x, OURS[x]] : x;
+        return (
+          <A key={t} href={href}>
+            {t}
+          </A>
+        );
+      })}
     </div>
   );
 }
 
-function Label({ children, dot = "" }: { children: ReactNode; dot?: string }) {
-  return <div className={`bm-label${dot ? ` bm-dot ${dot}` : ""}`}>{children}</div>;
+function Counted({ items }: { items: Item[] }) {
+  return (
+    <div className="bm-items">
+      {items.map((x) => {
+        const [t, n] = typeof x === "string" ? [x, ""] : x;
+        return (
+          <A key={t}>
+            <span>{t}</span>
+            {n === "NEW" ? <span className="bm-new">NEW</span> : n ? <small>{n}</small> : null}
+          </A>
+        );
+      })}
+    </div>
+  );
 }
+
+function Hero({ tone = "", badge, badgeTone = "", icon, title, body, cta }: { tone?: string; badge: string; badgeTone?: string; icon: string; title: string; body: string[]; cta: string }) {
+  return (
+    <div className={`bm-hero ${tone}`}>
+      <span className={`bm-badge ${badgeTone}`}>{badge}</span>
+      <div className="ic">{icon}</div>
+      <h4>{title}</h4>
+      {body.map((p) => (
+        <p key={p}>{p}</p>
+      ))}
+      <A className="bm-btn">{cta}</A>
+    </div>
+  );
+}
+
+/** Our broad idea categories for Learn > Startup ideas, from the approved taxonomy. */
+const OUR_IDEAS: [string, string][] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => {
+  const c = TAXONOMY.find((x) => x.n === n);
+  return [c?.short ?? "", c ? `/category/${c.slug}` : "/browse"];
+});
 
 function ValidatePanel() {
   return (
     <>
-      <aside>
-        <Hero badge="FREE" icon="✓" title="Validation workbench" body="Write the buyer, the problem and a small offer, then test it with real buyers." cta="Start free →" href="/product" />
-        <Label>Popular</Label>
-        <Links
-          items={[
-            { label: "How to validate an idea", href: "/startup-idea-validation" },
-            { label: "Test demand", href: "/business-demand-test-india" },
-            { label: "Risk check", href: "/business-idea-risk-check" },
-            { label: "Compare two ideas", href: "/startup-idea-comparison" },
-            { label: "Find your first customer", href: "/first-customer-india" },
-          ]}
-        />
-      </aside>
-      <div className="bm-cols bm-cols-2">
+      <div>
+        <Hero badge="1 FREE VALIDATION" icon="✓" title="AI Idea Validator" body={["Instant score, market size & competitor map in 60 seconds.", "★ 4.9 · 30k+ founders validated"]} cta="Start free →" />
+        <div className="bm-label">Popular searches</div>
+        <Links items={["Free Validator", "Competitor Analysis", "Startup Failure Database", "Validate Marketplace", "Business Plan Generator"]} />
+      </div>
+      <div className="bm-cols" style={{ gridTemplateColumns: "1fr 1fr" }}>
         <div>
-          <Label dot="v">Tools and calculators</Label>
+          <div className="bm-label bm-dot" style={{ marginTop: 0 }}>AI Generators (11)</div>
           <div className="bm-tiles">
-            {[
-              { label: "Startup cost", href: "/calculator/startup-cost" },
-              { label: "Break-even", href: "/calculator/break-even" },
-              { label: "Return on investment", href: "/calculator/roi" },
-              { label: "Funding needed", href: "/calculator/funding-needed" },
-              { label: "Unit economics", href: "/unit-economics-india" },
-              { label: "Cash flow", href: "/startup-cash-flow-india" },
-              { label: "Pricing", href: "/business-pricing-india" },
-              { label: "Launch plan", href: "/startup-launch-plan-india" },
-              { label: "Research desk", href: "/business-idea-research-india" },
-              { label: "Time fit", href: "/business-idea-time-fit" },
-              { label: "Decision journal", href: "/founder-decision-journal" },
-            ].map((t) => (
-              <a key={t.href} href={t.href} className="bm-tile">
-                {t.label}
-              </a>
+            {["Idea Generator", "Business Name", "Validator", "Market Research", "Lean Canvas", "Business Plan", "Brand Strategy", "Logo Generator", "Visual Identity", "Marketing Suite", "Ad Creatives"].map((t) => (
+              <A key={t} className="bm-tile"><i />{t}</A>
             ))}
-            <a href="/calculator" className="bm-tile bm-tile-all">
-              View all →
-            </a>
+            <A className="bm-tile"><i className="bm-tile-more">→</i>VIEW ALL<br />11 generators →</A>
           </div>
         </div>
         <div>
-          <Label dot="v">Published ideas</Label>
-          <Banner title="All published blueprints" sub="Search every published business idea" href="/blueprints" />
-          <div className="bm-cols bm-cols-3 bm-tight">
-            <div>
-              <Label>Online</Label>
-              <Links items={[cat(4, "Online"), cat(56, "E-commerce"), cat(57, "Affiliate sites"), cat(47, "Digital marketing"), cat(12, "Freelance")]} />
-            </div>
-            <div>
-              <Label>Food</Label>
-              <Links items={[cat(16, "Food"), cat(17, "Home kitchen"), cat(18, "Street food"), cat(19, "Bakery"), cat(20, "Catering")]} />
-            </div>
-            <div>
-              <Label>Beauty and fashion</Label>
-              <Links items={[cat(27, "Beauty"), cat(28, "Salon"), cat(30, "Fashion"), cat(31, "Tailoring"), cat(32, "Jewellery")]} />
-            </div>
+          <div className="bm-label bm-dot" style={{ marginTop: 0 }}>Validation reports (20)</div>
+          <Banner title="All validation reports" sub="Industry-specific report landings" />
+          <div className="bm-pdfs">
+            {["The HealthTech Founder's Field Guide 2026", "The LegalTech Founder's Field Guide 2026", "Why 90% of Startups Fail in 2026"].map((t) => (
+              <A key={t} className="bm-pdf"><div>{t}</div></A>
+            ))}
           </div>
-          <a className="bm-pill" href="/browse">
-            See all 100 categories →
-          </a>
+          <div className="bm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)", gap: 12 }}>
+            <div><div className="bm-label" style={{ margin: "0 0 4px" }}>Tech</div><Links items={["SaaS", "B2B SaaS", "AI / ML", "Mobile App", "GameTech"]} /></div>
+            <div><div className="bm-label" style={{ margin: "0 0 4px" }}>Business</div><Links items={["E-commerce", "Marketplace", "Fintech", "HRTech", "LegalTech"]} /></div>
+            <div><div className="bm-label" style={{ margin: "0 0 4px" }}>Vertical</div><Links items={["HealthTech", "EdTech", "PropTech", "FoodTech", "TravelTech"]} /></div>
+          </div>
+          <A className="bm-pill">See all 20 reports →</A>
         </div>
       </div>
     </>
@@ -136,56 +136,29 @@ function ValidatePanel() {
 function LearnPanel() {
   return (
     <>
-      <aside>
-        <Hero tone="orange" badge="100 CATEGORIES" icon="💡" title="Business ideas" body="Business ideas for India, sorted into 100 categories and 1,000 subcategories." cta="Browse →" href="/browse" />
-        <Label>Start here</Label>
-        <Links
-          items={[
-            { label: "Business ideas in India", href: "/business-ideas-india" },
-            { label: "Side business ideas", href: "/side-business-ideas-india" },
-            { label: "Local business ideas", href: "/local-business-ideas-india" },
-            { label: "Online business ideas", href: "/online-business-ideas-india" },
-            { label: "Service business ideas", href: "/service-business-ideas-india" },
-            { label: "Product business ideas", href: "/product-business-ideas-india" },
-          ]}
-        />
-      </aside>
-      <div className="bm-cols bm-cols-3">
+      <div>
+        <Hero tone="orange" badge="1,798+ IDEAS" badgeTone="o" icon="💡" title="Ideas Database" body={["1,798+ validated startup ideas across 30 industries."]} cta="Browse →" />
+        <div className="bm-label">Authority 2026</div>
+        <Links items={["Best Validators 2026", "Best AI Validation Tools", "Best Market Research", "Frameworks Comparison", "Research Methodology", "About BusinessIdea.io"]} />
+      </div>
+      <div className="bm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
         <div>
-          <Label dot="o">Business ideas</Label>
-          <Banner tone="o" title="All idea lists" sub="Every subcategory list in one place" href="/lists" />
-          <Links items={[cat(1), cat(2), cat(3), cat(4), cat(5), cat(6, "For Women"), cat(7, "For Students"), cat(8, "For Senior Citizens"), cat(9, "Village and Small Town"), cat(10)]} />
+          <div className="bm-label bm-dot o" style={{ marginTop: 0 }}>Startup ideas</div>
+          <Banner tone="o" title="All Idea Lists" sub="Every business idea list in one place" href="/lists" />
+          <Links items={OUR_IDEAS} />
         </div>
         <div>
-          <Label dot="r">Money and risk</Label>
-          <Banner tone="r" title="Startup costs" sub="What leaves your pocket before the first sale" href="/startup-costs-india" />
-          <Links
-            items={[
-              { label: "Cash flow", href: "/startup-cash-flow-india" },
-              { label: "Unit economics", href: "/unit-economics-india" },
-              { label: "Pricing", href: "/business-pricing-india" },
-              { label: "Business models", href: "/business-models-india" },
-              { label: "Risk check", href: "/business-idea-risk-check" },
-              { label: "Pivot or stop", href: "/business-idea-pivot-or-stop" },
-            ]}
-          />
-          <Label>By industry</Label>
-          <Links two items={[cat(16, "Food"), cat(27, "Beauty"), cat(37, "Education"), cat(30, "Fashion")]} />
+          <div className="bm-label bm-dot r" style={{ marginTop: 0 }}>Failures (1000+)</div>
+          <Banner tone="r" title="All Failures Database" sub="1000+ post-mortems & lessons" />
+          <Counted items={[["All Countries Hub", "(15)"], "Why Startups Fail", "Biggest Ever", "AI Pattern Analysis", "Failed vs Successful", "How to Avoid Failure", "Failure Analysis Hub", ["Yearly Report 2026", "NEW"], "Yearly Report 2025"]} />
+          <div className="bm-label">By industry</div>
+          <Links className="bm-two bm-list" items={["Fintech", "AI Startups", "EV & Auto", "E-commerce"]} />
+          <A className="bm-pill">See all industries →</A>
         </div>
         <div>
-          <Label dot="b">Knowledge</Label>
-          <Banner tone="b" title="Startup guides" sub="Step-by-step guides for founders" href="/startup-guides" />
-          <Links
-            items={[
-              { label: "Glossary", href: "/founder-glossary" },
-              { label: "Startup terms", href: "/startup-terms-india" },
-              { label: "Founder stories", href: "/founder-stories" },
-              { label: "Journal", href: "/blog" },
-              { label: "Reading room", href: "/business-idea-reading-room" },
-              { label: "Learning resources", href: "/learning-resources" },
-              { label: "About us", href: "/about" },
-            ]}
-          />
+          <div className="bm-label bm-dot b" style={{ marginTop: 0 }}>Knowledge</div>
+          <Banner tone="b" title="Startup Knowledge Hub" sub="The complete BusinessIdea.io index" />
+          <Counted items={[["Guides", "(15)"], ["Questions", "(100+)"], "Glossary", "Compare Tools", "Feature Matrix", "Versus Pages", "Frameworks", "Case Studies", "Industry Benchmarks", "Fundraising Benchmarks", "Funding FAQ", "Blog", "Changelog"]} />
         </div>
       </div>
     </>
@@ -195,56 +168,31 @@ function LearnPanel() {
 function ToolsPanel() {
   return (
     <>
-      <aside>
-        <Hero badge="FREE" icon="✓" title="Founder toolkit" body="Pick a founder question and work it through with your own figures." cta="Open the toolkit →" href="/business-idea-toolkit" />
-        <Label>Popular</Label>
-        <Links
-          items={[
-            { label: "Startup cost calculator", href: "/calculator/startup-cost" },
-            { label: "Break-even calculator", href: "/calculator/break-even" },
-            { label: "Validation workbench", href: "/product" },
-          ]}
-        />
-      </aside>
-      <div className="bm-cols bm-cols-3">
+      <div>
+        <Hero badge="14 TOOLS" badgeTone="p" icon="✓" title="All AI Generators" body={["14 AI tools for validation, brand, marketing & launch."]} cta="Browse generators →" />
+        <div className="bm-label">Popular generators</div>
+        <Links items={["Idea Generator", "AI Idea Validator", "Brand Strategy"]} />
+      </div>
+      <div className="bm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
         <div>
-          <Label dot="g">Calculators</Label>
-          <Banner tone="g" title="All calculators" sub="Free money calculators for founders" href="/calculator" />
-          <Links
-            two
-            items={[
-              { label: "Startup cost", href: "/calculator/startup-cost" },
-              { label: "Break-even", href: "/calculator/break-even" },
-              { label: "ROI", href: "/calculator/roi" },
-              { label: "Funding needed", href: "/calculator/funding-needed" },
-              { label: "Unit economics", href: "/unit-economics-india" },
-              { label: "Cash flow", href: "/startup-cash-flow-india" },
-            ]}
-          />
+          <div className="bm-label bm-dot g" style={{ marginTop: 0 }}>Calculators (10)</div>
+          <Banner tone="g" title="All Calculators" sub="10 free finance & growth calculators" />
+          <Links className="bm-two bm-list" items={["Runway", "CAC", "LTV", "Valuation", "Break-even", "Equity Split", "Funding", "ROI", "Market Size", "Startup Cost"]} />
         </div>
         <div>
-          <Label dot="pk">Worksheets</Label>
-          <Banner tone="pk" title="Templates" sub="Plans, interviews and more" href="/templates" />
-          <Links
-            items={[
-              { label: "Launch plan", href: "/startup-launch-plan-india" },
-              { label: "Demand test", href: "/business-demand-test-india" },
-              { label: "Compare two ideas", href: "/startup-idea-comparison" },
-              { label: "Decision journal", href: "/founder-decision-journal" },
-              { label: "Weekend stall profit check", href: "/weekend-market-stall-profit-check" },
-            ]}
-          />
+          <div className="bm-label bm-dot pk" style={{ marginTop: 0 }}>Templates</div>
+          <Banner tone="pk" title="All Templates" sub="Pitch deck, plans, interviews & more" />
+          <Links items={["Pitch Deck", "Business Plan", "Competitive Analysis", "Customer Persona", "Validation Interview Script", "Validation Templates"]} />
+          <A className="bm-pill g">All Resources →</A>
         </div>
         <div>
-          <Label dot="g">Directory</Label>
-          <Banner tone="g" title="Useful tools" sub="Free tools we point founders to" href="/useful-tools" />
-          <Links
-            items={[
-              { label: "Learning resources", href: "/learning-resources" },
-              { label: "Reading room", href: "/business-idea-reading-room" },
-              { label: "Search ideas", href: "/search" },
-            ]}
-          />
+          <div className="bm-label bm-dot g" style={{ marginTop: 0 }}>Free tools directory (1,060+)</div>
+          <Banner tone="g" title="Browse all tools" sub="1,060+ tools across 30 categories" />
+          <Links className="bm-two bm-list" items={["Validation & Research", "No-Code Builders", "AI Assistants", "Design & UI", "SEO Tools", "Fundraising"]} />
+          <A className="bm-pill g">See all 30 categories →</A>
+          <div className="bm-label bm-dot">Startup directories (867)</div>
+          <Banner title="Where to submit your startup" sub="867 directories with DR, link type & ..." />
+          <Links className="bm-two bm-list" items={["Tier 1 picks", "Dofollow links", "Free to submit", "DR 70+ sites", "AI directories", "PH alternatives"]} />
         </div>
       </div>
     </>
@@ -259,11 +207,17 @@ const MEGA = [
 
 function Logo({ footer = false }: { footer?: boolean }) {
   return (
-    <a href="/" className="flex items-center gap-3 cursor-pointer group" aria-label="BusinessIdea.io home">
-      <span className={footer ? "text-lg tracking-tight text-slate-900 whitespace-nowrap font-bold" : "text-display-lg tracking-tight whitespace-nowrap shrink-0 text-base sm:text-lg text-slate-900"}>
+    <A className="flex items-center gap-3 cursor-pointer group">
+      <span
+        className={
+          footer
+            ? "text-base sm:text-lg tracking-tight text-slate-900 whitespace-nowrap font-sans font-bold"
+            : "text-display-lg tracking-tight transition-all duration-500 whitespace-nowrap shrink-0 hidden [@media(min-width:380px)]:inline text-base sm:text-lg text-slate-900"
+        }
+      >
         Business<span className="text-brand-500">Idea</span>.io
       </span>
-    </a>
+    </A>
   );
 }
 
@@ -283,7 +237,7 @@ export function Header({ active: _active }: { active?: string | undefined }) {
   };
   const hideSoon = () => {
     cancel();
-    timer.current = setTimeout(() => setOpen(null), 180);
+    timer.current = setTimeout(() => setOpen(null), 150);
   };
 
   useEffect(() => {
@@ -305,44 +259,46 @@ export function Header({ active: _active }: { active?: string | undefined }) {
     };
   }, []);
 
+  const Panel = open === null ? null : MEGA[open]?.Panel;
+
   return (
-    <div ref={ref} className="v2 v2-header">
-      <nav className="fixed top-0 inset-x-0 z-50 py-4 px-4 pointer-events-none">
-        <div className="mx-auto flex items-center justify-between rounded-3xl pointer-events-auto relative glass-nav-scrolled max-w-6xl px-5 sm:px-6 h-16">
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-gradient-to-r from-transparent via-brand-500 to-transparent w-3/4" />
+    <div ref={ref} className="v2">
+      <nav className="fixed top-0 w-full z-50 transition-all duration-500 py-4 pointer-events-none">
+        <div className="mx-auto flex items-center justify-between rounded-3xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] pointer-events-auto relative overflow-visible glass-nav-scrolled max-w-6xl px-6 h-16">
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-gradient-to-r from-transparent via-brand-500 to-transparent transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] w-3/4 opacity-100" />
           <Logo />
-          <div className="hidden lg:flex items-center gap-1 text-sm font-medium text-slate-600">
+          <div className="hidden lg:flex items-center gap-2 text-sm font-medium text-slate-600">
             {MEGA.map((m, i) => (
-              <div key={m.label} onMouseEnter={() => show(i)} onMouseLeave={hideSoon}>
+              <div key={m.label} data-mega-menu="true" onMouseEnter={() => show(i)} onMouseLeave={hideSoon}>
                 <button
                   type="button"
                   aria-expanded={open === i}
                   aria-haspopup="true"
                   onClick={() => (open === i ? setOpen(null) : show(i))}
-                  className={`v2-nav-btn${open === i ? " is-open" : ""}`}
+                  className={`px-4 py-2 rounded-full hover:bg-slate-100 hover:text-brand-600 transition-all flex items-center gap-1 relative${open === i ? " text-brand-600 bg-slate-100" : ""}`}
                 >
                   {m.label}
-                  <ChevronDown className="v2-chev" />
+                  <ChevronDown className={`h-4 w-4 opacity-50 transition-transform duration-300${open === i ? " rotate-180" : ""}`} />
+                  {open === i && <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-brand-500 rounded-full" />}
                 </button>
               </div>
             ))}
-            <a className="v2-nav-btn" href="/pricing">
-              Pricing
-            </a>
-            <a href="/search" aria-label="Search" title="Search" className="v2-nav-btn v2-icon-btn">
+            <A className="px-4 py-2 rounded-full hover:bg-slate-100 hover:text-brand-600 transition-all relative">Pricing</A>
+            <button type="button" aria-label="Search (⌘K)" title="Search (⌘K)" className="ml-1 p-2 rounded-full hover:bg-slate-100 hover:text-brand-600 transition-all">
               <Search className="h-4 w-4" />
-            </a>
+            </button>
           </div>
-          <div className="flex items-center gap-3">
-            <a href="/sign-in" className="hidden md:block text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
-              Login
-            </a>
-            <a href="/product" className="btn-primary inline-flex items-center justify-center h-11 px-4 sm:px-5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap">
+          <div className="flex items-center gap-4">
+            <A className="hidden md:block text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Login</A>
+            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 min-h-[44px] touch-manipulation active:scale-[0.98] active:opacity-90 text-white h-11 btn-primary px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm shadow-md hover:shadow-lg transition-all font-semibold">
               <span className="sm:hidden">Sign up</span>
               <span className="hidden sm:inline">Get Report</span>
-            </a>
+            </button>
+            <button type="button" aria-label="Search" className="lg:hidden text-slate-900 hover:bg-slate-100 p-2 rounded-lg transition-colors">
+              <Search className="h-5 w-5" />
+            </button>
             <button
-              className="lg:hidden text-slate-900 hover:bg-slate-100 p-2 rounded-lg transition-colors"
+              className="lg:hidden text-slate-900 hover:bg-slate-100 p-2 relative z-50 rounded-lg transition-colors"
               aria-label={mobile ? "Close navigation menu" : "Open navigation menu"}
               type="button"
               aria-expanded={mobile}
@@ -354,31 +310,26 @@ export function Header({ active: _active }: { active?: string | undefined }) {
         </div>
       </nav>
 
-      <div className={`bm-panel${open !== null ? " open" : ""}`} onMouseEnter={cancel} onMouseLeave={hideSoon} aria-hidden={open === null}>
-        {MEGA.map((m, i) => (open === i ? <m.Panel key={m.label} /> : null))}
-      </div>
+      {Panel && (
+        <div className="bm-panel open" onMouseEnter={cancel} onMouseLeave={hideSoon}>
+          <Panel />
+        </div>
+      )}
 
       {mobile && (
-        <div className="v2-mobile lg:hidden">
+        <div className="lg:hidden fixed inset-x-4 top-24 z-40 glass-nav-scrolled rounded-2xl p-5 max-h-[75vh] overflow-y-auto">
           {MEGA.map((m) => (
-            <details key={m.label}>
-              <summary>
-                {m.label}
-                <ChevronDown className="v2-chev" />
-              </summary>
-              <div className="v2-mobile-body">
-                <m.Panel />
-              </div>
-            </details>
+            <A key={m.label} className="block py-2 text-sm font-semibold text-slate-800">{m.label}</A>
           ))}
-          <a href="/pricing">Pricing</a>
-          <a href="/search">Search</a>
-          <a href="/sign-in">Login</a>
+          <A className="block py-2 text-sm font-semibold text-slate-800">Pricing</A>
+          <A className="block py-2 text-sm font-semibold text-slate-800">Login</A>
         </div>
       )}
     </div>
   );
 }
+
+type L = { label: string; href: string };
 
 const LEGAL: L[] = [
   { label: "About", href: "/about" },
