@@ -29,7 +29,6 @@ import {
   ResourceDirectory,
   ReviewMeta,
 } from "@/components/v2/list-page-static";
-import { BAND_LABEL } from "@/lib/ideas.functions";
 import { getListPage, type ListIdea, type ListPage } from "@/lib/lists.functions";
 
 /*
@@ -67,7 +66,8 @@ function points(text: string | null | undefined, n: number): string[] {
   if (!text) return [];
   return (text.replace(/\s+/g, " ").match(/[^.!?]+[.!?]+/g) ?? [text]).map((s) => s.trim()).filter(Boolean).slice(0, n);
 }
-const band = (i: ListIdea) => (i.investment_band ? BAND_LABEL[i.investment_band] ?? "" : "");
+const COST_LEVEL: Record<string, string> = { zero: "Almost no money", under_25k: "Lower startup cost", "25k_1l": "Moderate startup cost", "1l_5l": "Higher startup cost", above_5l: "Significant startup cost" };
+const band = (i: ListIdea) => (i.investment_band ? COST_LEVEL[i.investment_band] ?? "" : "");
 const lower = (s: string) => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
 
 const BTN =
@@ -172,7 +172,7 @@ function Comparison({ ideas }: { ideas: ListIdea[] }) {
   );
 }
 
-function TopCard({ idea, n }: { idea: ListIdea; n: number }) {
+export function TopCard({ idea, n }: { idea: ListIdea; n: number }) {
   const need = points(idea.what_you_need, 4);
   const hurts = points(idea.what_hurts, 3);
   return (
@@ -261,7 +261,6 @@ function TopCard({ idea, n }: { idea: ListIdea; n: number }) {
               Validate This Idea Free
               <ArrowRight className="h-4 w-4" />
             </a>
-            <span className="text-xs text-muted-foreground">40 free credits • No card required</span>
           </div>
         </div>
       </div>
@@ -349,7 +348,7 @@ function Cite({ title, slug, year }: { title: string; slug: string; year: string
   );
 }
 
-function Faq({ faq }: { faq: ListPage["faq"] }) {
+export function Faq({ faq }: { faq: ListPage["faq"] }) {
   const [open, setOpen] = useState<number | null>(null);
   if (faq.length === 0) return null;
   return (
@@ -374,7 +373,7 @@ function Faq({ faq }: { faq: ListPage["faq"] }) {
                 </button>
               </h3>
               <div hidden={open !== i} className="overflow-hidden text-sm pb-4 text-muted-foreground leading-relaxed">
-                {f.a}
+                {f.a} {f.href && <a className="font-semibold text-primary underline underline-offset-2" href={f.href}>Explore the source <ArrowRight className="inline h-3.5 w-3.5" /></a>}
               </div>
             </div>
           ))}

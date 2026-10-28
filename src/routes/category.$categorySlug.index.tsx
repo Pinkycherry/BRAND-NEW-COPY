@@ -1,78 +1,34 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
-import { ArrowUpRight } from "lucide-react";
+import { createFileRoute, notFound } from "@tanstack/react-router";
+import { ArrowRight, ChevronRight, House, Library, List, Lightbulb } from "lucide-react";
 
-import { categoryImage } from "@/config/category-imagery";
-import { absoluteUrl } from "@/lib/schema";
-import { GlassShell } from "@/components/glass-shell";
-import { PartTimeCategory } from "@/components/part-time-category";
-import { findCategory, neighbourCategories } from "@/lib/catalog";
-import { getCategoryDetails } from "@/lib/taxonomy.functions";
-import { JsonLd, breadcrumbSchema, collectionPageSchema, itemListSchema } from "@/lib/schema";
-import "@/components/glass-library.css";
-
-const PART_TIME_FEATURE = { src: "/images/blog/realistic-part-time-business-ideas-extra-income-evening-hustles-weekend-jobs-skills.webp", alt: "Part-time business ideas across evening, weekend and teaching work in the original feature artwork" };
-
-const detailsQuery = (categorySlug: string) => queryOptions({
-  queryKey: ["category-details", categorySlug],
-  queryFn: () => getCategoryDetails({ data: { categorySlug } }),
-  staleTime: Infinity,
-});
+import { V2Frame } from "@/components/v2/frame";
+import { getCategoryPage } from "@/lib/category-page.functions";
+import { Faq, TopCard } from "./lists.$slug";
 
 export const Route = createFileRoute("/category/$categorySlug/")({
-  loader: async ({ context, params }) => {
-    const category = findCategory(params.categorySlug);
-    if (!category) throw notFound();
-    await context.queryClient.ensureQueryData(detailsQuery(params.categorySlug));
-    return { name: category.name, short: category.short, image: category.slug === "part-time-business-ideas" ? { ...categoryImage(category.slug), ...PART_TIME_FEATURE } : categoryImage(category.slug) };
+  loader: async ({ params }) => {
+    const page = await getCategoryPage({ data: { slug: params.categorySlug } });
+    if (!page) throw notFound();
+    return page;
   },
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: loaderData?.name === "Part Time Business Ideas" ? "Part-Time Business Ideas for Your Actual Week | BusinessIdea.io" : `${loaderData?.name ?? "Business Ideas"} | BusinessIdea.io` },
-      { name: "description", content: loaderData?.name === "Part Time Business Ideas" ? "Choose a part-time business idea around evenings, weekends or daytime hours. Explore ten real India-focused collections and the risks to check first." : `Explore ten focused paths within ${loaderData?.name ?? "this category"} in India. See who each one suits before choosing an idea.` },
-      { property: "og:title", content: `${loaderData?.name ?? "Business Ideas"} | BusinessIdea.io` },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: loaderData?.image ? absoluteUrl(loaderData.image.src) : undefined },
-      { property: "og:image:alt", content: loaderData?.image?.alt },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: loaderData?.image ? absoluteUrl(loaderData.image.src) : undefined },
-    ],
-  }),
+  head: ({ loaderData }) => ({ meta: [
+    { title: `${loaderData?.name ?? "Business ideas"} | BusinessIdea.io` },
+    { name: "description", content: loaderData?.intro ?? "Explore the business idea library." },
+  ] }),
   component: CategoryPage,
-  errorComponent: () => <GlassShell><div className="gl-page gl-message"><h1>This category could not load.</h1><p>Please try again shortly.</p><Link to="/browse">All categories</Link></div></GlassShell>,
-  notFoundComponent: () => <GlassShell><div className="gl-page gl-message"><h1>We do not have that category.</h1><Link to="/browse">Browse the library</Link></div></GlassShell>,
 });
 
 function CategoryPage() {
-  const { categorySlug } = Route.useParams();
-  const category = findCategory(categorySlug)!;
-  const { data: details } = useSuspenseQuery(detailsQuery(categorySlug));
-  const path = `/category/${categorySlug}`;
-  const related = neighbourCategories(categorySlug, 4);
-  const image = categorySlug === "part-time-business-ideas" ? { ...categoryImage(categorySlug), ...PART_TIME_FEATURE } : categoryImage(categorySlug);
-  const schema = [
-        collectionPageSchema({ path, name: category.name, description: `Ten focused paths for ${category.short.toLowerCase()} businesses in India.`, itemCount: category.subcategories.length, image: image.src }),
-        itemListSchema({ name: `${category.name}: subcategories`, items: category.subcategories.map((sub) => ({ name: sub.name, path: `${path}/${sub.slug}` })) }),
-        breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Browse", path: "/browse" }, { name: category.name, path }]),
-      ];
-  if (categorySlug === "part-time-business-ideas") return <><JsonLd schema={schema} /><PartTimeCategory category={category} related={related} /></>;
-  return (
-    <>
-      <JsonLd schema={schema} />
-      <GlassShell>
-        <div className="gl-page">
-          <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/browse">Explore ideas</Link><span>/</span><span>{category.short}</span></nav>
-          <header className="gl-hero gl-detail-hero"><div className="gl-hero-copy"><p className="gh-eyebrow">BUSINESS IDEA COLLECTION</p><h1>{category.short} <em>business ideas.</em></h1><p>Explore ten more specific directions. Read who each one may suit, then open the path that matches your situation.</p><div className="gl-hero-stats"><span><strong>{category.subcategories.length}</strong> focused paths</span><span>India-focused library</span></div></div><figure className="gl-image-hero"><img src={image.src} alt={image.alt} width={1280} height={549} loading="eager" fetchPriority="high" /><figcaption>{image.description}</figcaption></figure></header>
-          <section className="gl-index" aria-labelledby="paths-heading"><div className="gl-section-heading"><div><p className="gh-eyebrow">GO ONE LEVEL DEEPER</p><h2 id="paths-heading">Choose a focused path.</h2><p>Each path has its own context and published ideas when available.</p></div></div>
-            <ol className="gl-path-grid">{category.subcategories.map((sub) => {
-              const people = details[sub.slug]?.targetPeople?.slice(3, 6) ?? [];
-              return <li key={sub.slug} className="gl-path-card"><h3>{sub.name.replace(/ Business Ideas$/i, "")}</h3>{people.length > 0 && <p>Often relevant to {people.join(", ").toLowerCase()}.</p>}<Link to="/category/$categorySlug/$subcategorySlug" params={{ categorySlug, subcategorySlug: sub.slug }} aria-label={`Explore ${sub.name}`}>Explore this path <ArrowUpRight size={18} aria-hidden="true" /></Link></li>;
-            })}</ol>
-          </section>
-          <section className="gl-related" aria-labelledby="related-heading"><div className="gl-section-heading"><div><p className="gh-eyebrow">KEEP EXPLORING</p><h2 id="related-heading">Other directions to consider.</h2></div></div><div className="gl-related-list">{related.map((item) => <Link key={item.slug} to="/category/$categorySlug" params={{ categorySlug: item.slug }}>{item.short}<ArrowUpRight size={18} aria-hidden="true" /></Link>)}</div></section>
-          <aside className="gl-bottom-note"><div><p className="gh-eyebrow">ONE STEP AT A TIME</p><h2>Not ready to choose?</h2><p>See the full category map or use a calculator to test your own numbers.</p></div><Link to="/browse" className="gh-button gh-button-primary">All categories <ArrowUpRight size={18} /></Link></aside>
-        </div>
-      </GlassShell>
-    </>
-  );
+  const page = Route.useLoaderData();
+  return <V2Frame active="/lists">
+    <div className="border-b bg-muted/30 pt-24 lg:pt-28"><div className="container mx-auto max-w-6xl px-4 py-3"><nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-muted-foreground"><a href="/"><House size={16}/><span className="sr-only">Home</span></a><ChevronRight size={15}/><a href="/browse">Browse</a><ChevronRight size={15}/><span aria-current="page">{page.name}</span></nav></div></div>
+    <article className="container mx-auto max-w-5xl px-4 pt-8 pb-16">
+      <div className="mb-8 text-center"><span className="inline-flex rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">{page.short}</span><h1 className="mt-4 text-3xl font-bold md:text-5xl">{page.name}</h1><p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{page.intro}</p><p className="mt-4 text-sm text-muted-foreground">{page.total} published ideas · {page.subs.length} focused paths</p></div>
+      <div className="tldr-section mb-9 rounded-2xl border-l-4 border-primary bg-primary/5 p-5"><h2 className="text-sm font-bold uppercase tracking-wide text-primary">Start here</h2><p className="mt-2 text-foreground/90">Choose a focused path, then read each idea’s buyer, work and risks before testing a small next step.</p></div>
+      <section aria-labelledby="paths-title" className="mb-12"><div className="mb-6 flex items-center gap-2"><Library className="text-primary"/><h2 id="paths-title" className="text-2xl font-bold">Focused lists</h2></div><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{page.subs.map(s=><a key={s.slug} href={s.count ? `/lists/${s.slug}` : `/category/${page.slug}/${s.slug}`} className="group rounded-lg border bg-card p-5 shadow-sm premium-card transition hover:border-primary/50"><h3 className="text-lg font-semibold group-hover:text-primary">{s.name}</h3><div className="mt-4 flex items-center justify-between text-sm text-muted-foreground"><span className="flex items-center gap-1"><List size={15}/>{s.count ? `${s.count} published ideas` : "Ideas coming"}</span><ChevronRight size={17}/></div></a>)}</div></section>
+      {page.ideas.length ? <section aria-labelledby="top-title" className="mb-12"><h2 id="top-title" className="mb-6 text-2xl font-bold">Ideas to explore</h2><div className="mb-7 rounded-lg border bg-card p-5 shadow-sm"><h3 className="font-semibold">At a glance</h3><div className="mt-4 overflow-x-auto"><table className="w-full text-sm"><thead><tr><th className="p-3 text-left">Idea</th><th className="p-3 text-left">Who may pay</th><th className="p-3 text-left">Explore</th></tr></thead><tbody>{page.ideas.map(i=><tr className="border-t" key={i.slug}><td className="p-3 font-semibold">{i.title}</td><td className="p-3">{i.who_pays_you}</td><td className="p-3"><a className="text-primary underline" href={`/idea/${i.slug}`}>Read idea</a></td></tr>)}</tbody></table></div></div><div className="space-y-7">{page.ideas.map((i,n)=><TopCard idea={i} n={n+1} key={i.slug}/>)}</div></section> : <section className="mb-12 rounded-2xl border border-border bg-muted/30 p-8 text-center"><Lightbulb className="mx-auto text-primary"/><h2 className="mt-3 text-2xl font-bold">Ideas coming</h2><p className="mt-3 text-muted-foreground">No ideas are published in this category yet. The focused paths above show what is being prepared.</p></section>}
+      <Faq faq={page.faq}/>
+      <section className="rounded-2xl border border-primary/20 bg-primary/5 p-8 text-center"><h2 className="text-2xl font-bold">Keep the next step small.</h2><p className="mt-3 text-muted-foreground">Compare a focused list, then test the costs and demand in your setting.</p><a className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white" href="/tools">Explore tools <ArrowRight size={16}/></a></section>
+    </article>
+  </V2Frame>;
 }

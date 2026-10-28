@@ -18,6 +18,7 @@ export type ListIdea = {
   time_needed: string | null;
   skill_level: string | null;
   updated_at: string | null;
+  faq?: { q: string; a: string }[] | null;
 };
 
 export type ListPage = {
@@ -26,7 +27,7 @@ export type ListPage = {
   slug: string;
   intro: string | null;
   howToChoose: string | null;
-  faq: { q: string; a: string }[];
+  faq: { q: string; a: string; href?: string }[];
   categoryName: string;
   ideas: ListIdea[];
   siblings: { name: string; slug: string; count: number }[];
@@ -39,7 +40,13 @@ export type ListsHub = {
 };
 
 const IDEA_COLUMNS =
-  "slug,title,hook,summary,who_pays_you,how_money_comes,what_you_need,what_hurts,verdict,investment_band,time_needed,skill_level,updated_at";
+  "slug,title,hook,summary,who_pays_you,how_money_comes,what_you_need,what_hurts,verdict,investment_band,time_needed,skill_level,updated_at,faq";
+
+export function firstFaq(value: unknown): { q: string; a: string } | null {
+  if (!Array.isArray(value)) return null;
+  const item = value.find((f) => f && typeof f.q === "string" && typeof f.a === "string");
+  return item ? { q: item.q, a: item.a } : null;
+}
 
 /** Published idea counts per subcategory code, read in pages of 1,000. */
 async function subcategoryCounts(client: NonNullable<ReturnType<typeof dbOrNull>>) {
@@ -115,7 +122,10 @@ export const getListPage = createServerFn({ method: "GET" })
       slug: s.slug,
       intro: s.intro,
       howToChoose: s.how_to_choose,
-      faq,
+      faq: [...faq, ...list.flatMap((idea) => {
+        const entry = firstFaq(idea.faq);
+        return entry ? [{ ...entry, href: `/idea/${idea.slug}` }] : [];
+      })],
       categoryName: (cat as { name: string } | null)?.name ?? "",
       ideas: list,
       siblings: ((sibs ?? []) as { code: string; name: string; slug: string }[])
