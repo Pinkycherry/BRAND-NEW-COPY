@@ -1,13 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { V2Frame } from "@/components/v2/frame";
+import { STARTUP_GUIDES } from "@/lib/guides-data";
 
-import html from "@/bought/research-1.html?raw";
-import { boughtPage } from "@/bought/serve";
-
-// Purchased page, served exactly as supplied (scripts removed, noindex kept).
-export const Route = createFileRoute("/market-research")({
-  server: {
-    handlers: {
-      GET: async () => boughtPage(html),
-    },
-  },
-});
+export const Route=createFileRoute("/market-research")({head:()=>({meta:[{title:"Market Research Guides | BusinessIdea.io"},{name:"description",content:"Published guides for market sizing, competition and demand research."}]}),component:MarketResearchPage});
+const wrap="mx-auto max-w-6xl px-4 md:px-6";
+const card="group block rounded-xl border bg-card p-5 shadow-sm transition hover:border-primary/50";
+const guides=STARTUP_GUIDES.filter(g=>/market|competitor|validation|customer/i.test(g.title)).slice(0,8);
+function MarketResearchPage(){return <V2Frame active="/topics">
+  <div className="border-b bg-muted/30 pt-24 lg:pt-28"><nav aria-label="Breadcrumb" className={`${wrap} flex items-center gap-2 py-3 text-sm`}><a href="/">Home</a><ChevronRight size={15}/><span>Market research</span></nav></div>
+  <section className="border-b bg-gradient-to-b from-amber-500/10 to-background py-12 lg:py-16"><div className={wrap}><span className="rounded-full bg-secondary px-3 py-1 text-xs font-bold">Founder research</span><h1 className="mt-4 text-3xl font-bold md:text-5xl">Market Research</h1><p className="mt-4 max-w-2xl text-muted-foreground">Read published guides on market sizing, buyers, competition and demand.</p><div className="mt-6 flex flex-wrap gap-3"><a href="/business-idea-research-india" className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white">Research an idea <ArrowRight size={17}/></a><a href="/browse" className="inline-flex min-h-11 items-center rounded-lg border bg-card px-6 py-3 font-semibold">Browse ideas</a></div></div></section>
+  <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-2xl font-bold">Market research guides</h2><div className="mt-6 grid gap-4 md:grid-cols-3">{guides.map(g=><a className={card} key={g.slug} href={`/startup-guides/${g.slug}`}><span className="text-xs font-bold uppercase text-primary">{g.category}</span><h3 className="mt-3 text-lg font-semibold group-hover:text-primary">{g.title}</h3><p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{g.description}</p><span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Read guide <ArrowRight size={16}/></span></a>)}</div></div></section>
+  <section className="border-t bg-muted/20 py-12"><div className={wrap}><h2 className="text-2xl font-bold">Continue your journey</h2><div className="mt-5 grid gap-3 md:grid-cols-3">{[["Business idea research","/business-idea-research-india"],["Business demand test","/business-demand-test-india"],["Compare two ideas","/startup-idea-comparison"]].map(([t,h])=><a className={card} key={h} href={h}>{t} <ArrowRight size={16} className="inline text-primary"/></a>)}</div><h2 className="mt-10 text-2xl font-bold">Startup resources</h2><div className="mt-4 flex flex-wrap gap-2">{[["Idea lists","/lists"],["Startup guides","/startup-guides"],["Tools","/tools"],["Glossary","/glossary"]].map(([t,h])=><a className="rounded-full border bg-card px-4 py-2 text-sm" key={h} href={h}>{t}</a>)}</div></div></section>
+</V2Frame>}
