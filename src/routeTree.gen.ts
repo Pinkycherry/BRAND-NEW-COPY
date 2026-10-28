@@ -22,17 +22,22 @@ import { Route as BusinessIdeaToolkitRouteImport } from './routes/business-idea-
 import { Route as BusinessIdeasIndiaRouteImport } from './routes/business-ideas-india'
 import { Route as BusinessModelsIndiaRouteImport } from './routes/business-models-india'
 import { Route as BusinessPricingIndiaRouteImport } from './routes/business-pricing-india'
+import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as CoachingBatchBusinessIdeaIndiaRouteImport } from './routes/coaching-batch-business-idea-india'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FirstCustomerIndiaRouteImport } from './routes/first-customer-india'
 import { Route as FounderDecisionJournalRouteImport } from './routes/founder-decision-journal'
 import { Route as FoundersRouteImport } from './routes/founders'
+import { Route as FrameworksComparisonRouteImport } from './routes/frameworks-comparison'
 import { Route as GdprRouteImport } from './routes/gdpr'
 import { Route as ListsRouteImport } from './routes/lists'
 import { Route as LocalBusinessIdeasIndiaRouteImport } from './routes/local-business-ideas-india'
+import { Route as MarketResearchRouteImport } from './routes/market-research'
 import { Route as OnlineBusinessIdeasIndiaRouteImport } from './routes/online-business-ideas-india'
+import { Route as OpenSourceRouteImport } from './routes/open-source'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ProductRouteImport } from './routes/product'
@@ -67,6 +72,7 @@ import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as BlueprintsIndexRouteImport } from './routes/blueprints.index'
 import { Route as CalculatorIndexRouteImport } from './routes/calculator.index'
 import { Route as CalculatorSlugRouteImport } from './routes/calculator.$slug'
+import { Route as FailedStartupsIndiaRouteImport } from './routes/failed-startups.india'
 import { Route as FounderGlossaryIndexRouteImport } from './routes/founder-glossary.index'
 import { Route as FounderStoriesIndexRouteImport } from './routes/founder-stories.index'
 import { Route as FounderStoriesSlugRouteImport } from './routes/founder-stories.$slug'
@@ -144,6 +150,11 @@ const BusinessPricingIndiaRoute = BusinessPricingIndiaRouteImport.update({
   path: '/business-pricing-india',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CaseStudiesRoute = CaseStudiesRouteImport.update({
+  id: '/case-studies',
+  path: '/case-studies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CoachingBatchBusinessIdeaIndiaRoute =
   CoachingBatchBusinessIdeaIndiaRouteImport.update({
     id: '/coaching-batch-business-idea-india',
@@ -165,6 +176,11 @@ const DisclaimerRoute = DisclaimerRouteImport.update({
   path: '/disclaimer',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FirstCustomerIndiaRoute = FirstCustomerIndiaRouteImport.update({
   id: '/first-customer-india',
   path: '/first-customer-india',
@@ -178,6 +194,11 @@ const FounderDecisionJournalRoute = FounderDecisionJournalRouteImport.update({
 const FoundersRoute = FoundersRouteImport.update({
   id: '/founders',
   path: '/founders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrameworksComparisonRoute = FrameworksComparisonRouteImport.update({
+  id: '/frameworks-comparison',
+  path: '/frameworks-comparison',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GdprRoute = GdprRouteImport.update({
@@ -195,12 +216,22 @@ const LocalBusinessIdeasIndiaRoute = LocalBusinessIdeasIndiaRouteImport.update({
   path: '/local-business-ideas-india',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MarketResearchRoute = MarketResearchRouteImport.update({
+  id: '/market-research',
+  path: '/market-research',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OnlineBusinessIdeasIndiaRoute =
   OnlineBusinessIdeasIndiaRouteImport.update({
     id: '/online-business-ideas-india',
     path: '/online-business-ideas-india',
     getParentRoute: () => rootRouteImport,
   } as any)
+const OpenSourceRoute = OpenSourceRouteImport.update({
+  id: '/open-source',
+  path: '/open-source',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PricingRoute = PricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
@@ -374,6 +405,11 @@ const CalculatorSlugRoute = CalculatorSlugRouteImport.update({
   path: '/calculator/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FailedStartupsIndiaRoute = FailedStartupsIndiaRouteImport.update({
+  id: '/failed-startups/india',
+  path: '/failed-startups/india',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FounderGlossaryIndexRoute = FounderGlossaryIndexRouteImport.update({
   id: '/founder-glossary/',
   path: '/founder-glossary/',
@@ -441,17 +477,22 @@ export interface FileRoutesByFullPath {
   '/business-ideas-india': typeof BusinessIdeasIndiaRoute
   '/business-models-india': typeof BusinessModelsIndiaRoute
   '/business-pricing-india': typeof BusinessPricingIndiaRoute
+  '/case-studies': typeof CaseStudiesRoute
   '/coaching-batch-business-idea-india': typeof CoachingBatchBusinessIdeaIndiaRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/faq': typeof FaqRoute
   '/first-customer-india': typeof FirstCustomerIndiaRoute
   '/founder-decision-journal': typeof FounderDecisionJournalRoute
   '/founders': typeof FoundersRoute
+  '/frameworks-comparison': typeof FrameworksComparisonRoute
   '/gdpr': typeof GdprRoute
   '/lists': typeof ListsRoute
   '/local-business-ideas-india': typeof LocalBusinessIdeasIndiaRoute
+  '/market-research': typeof MarketResearchRoute
   '/online-business-ideas-india': typeof OnlineBusinessIdeasIndiaRoute
+  '/open-source': typeof OpenSourceRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/product': typeof ProductRoute
@@ -483,6 +524,7 @@ export interface FileRoutesByFullPath {
   '/weekend-market-stall-profit-check': typeof WeekendMarketStallProfitCheckRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/calculator/$slug': typeof CalculatorSlugRoute
+  '/failed-startups/india': typeof FailedStartupsIndiaRoute
   '/founder-stories/$slug': typeof FounderStoriesSlugRoute
   '/idea/$slug': typeof IdeaSlugRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
@@ -511,17 +553,22 @@ export interface FileRoutesByTo {
   '/business-ideas-india': typeof BusinessIdeasIndiaRoute
   '/business-models-india': typeof BusinessModelsIndiaRoute
   '/business-pricing-india': typeof BusinessPricingIndiaRoute
+  '/case-studies': typeof CaseStudiesRoute
   '/coaching-batch-business-idea-india': typeof CoachingBatchBusinessIdeaIndiaRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/faq': typeof FaqRoute
   '/first-customer-india': typeof FirstCustomerIndiaRoute
   '/founder-decision-journal': typeof FounderDecisionJournalRoute
   '/founders': typeof FoundersRoute
+  '/frameworks-comparison': typeof FrameworksComparisonRoute
   '/gdpr': typeof GdprRoute
   '/lists': typeof ListsRoute
   '/local-business-ideas-india': typeof LocalBusinessIdeasIndiaRoute
+  '/market-research': typeof MarketResearchRoute
   '/online-business-ideas-india': typeof OnlineBusinessIdeasIndiaRoute
+  '/open-source': typeof OpenSourceRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/product': typeof ProductRoute
@@ -553,6 +600,7 @@ export interface FileRoutesByTo {
   '/weekend-market-stall-profit-check': typeof WeekendMarketStallProfitCheckRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/calculator/$slug': typeof CalculatorSlugRoute
+  '/failed-startups/india': typeof FailedStartupsIndiaRoute
   '/founder-stories/$slug': typeof FounderStoriesSlugRoute
   '/idea/$slug': typeof IdeaSlugRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
@@ -582,17 +630,22 @@ export interface FileRoutesById {
   '/business-ideas-india': typeof BusinessIdeasIndiaRoute
   '/business-models-india': typeof BusinessModelsIndiaRoute
   '/business-pricing-india': typeof BusinessPricingIndiaRoute
+  '/case-studies': typeof CaseStudiesRoute
   '/coaching-batch-business-idea-india': typeof CoachingBatchBusinessIdeaIndiaRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/faq': typeof FaqRoute
   '/first-customer-india': typeof FirstCustomerIndiaRoute
   '/founder-decision-journal': typeof FounderDecisionJournalRoute
   '/founders': typeof FoundersRoute
+  '/frameworks-comparison': typeof FrameworksComparisonRoute
   '/gdpr': typeof GdprRoute
   '/lists': typeof ListsRoute
   '/local-business-ideas-india': typeof LocalBusinessIdeasIndiaRoute
+  '/market-research': typeof MarketResearchRoute
   '/online-business-ideas-india': typeof OnlineBusinessIdeasIndiaRoute
+  '/open-source': typeof OpenSourceRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/product': typeof ProductRoute
@@ -624,6 +677,7 @@ export interface FileRoutesById {
   '/weekend-market-stall-profit-check': typeof WeekendMarketStallProfitCheckRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/calculator/$slug': typeof CalculatorSlugRoute
+  '/failed-startups/india': typeof FailedStartupsIndiaRoute
   '/founder-stories/$slug': typeof FounderStoriesSlugRoute
   '/idea/$slug': typeof IdeaSlugRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
@@ -654,17 +708,22 @@ export interface FileRouteTypes {
     | '/business-ideas-india'
     | '/business-models-india'
     | '/business-pricing-india'
+    | '/case-studies'
     | '/coaching-batch-business-idea-india'
     | '/contact'
     | '/cookie-policy'
     | '/disclaimer'
+    | '/faq'
     | '/first-customer-india'
     | '/founder-decision-journal'
     | '/founders'
+    | '/frameworks-comparison'
     | '/gdpr'
     | '/lists'
     | '/local-business-ideas-india'
+    | '/market-research'
     | '/online-business-ideas-india'
+    | '/open-source'
     | '/pricing'
     | '/privacy'
     | '/product'
@@ -696,6 +755,7 @@ export interface FileRouteTypes {
     | '/weekend-market-stall-profit-check'
     | '/blog/$slug'
     | '/calculator/$slug'
+    | '/failed-startups/india'
     | '/founder-stories/$slug'
     | '/idea/$slug'
     | '/startup-guides/$slug'
@@ -724,17 +784,22 @@ export interface FileRouteTypes {
     | '/business-ideas-india'
     | '/business-models-india'
     | '/business-pricing-india'
+    | '/case-studies'
     | '/coaching-batch-business-idea-india'
     | '/contact'
     | '/cookie-policy'
     | '/disclaimer'
+    | '/faq'
     | '/first-customer-india'
     | '/founder-decision-journal'
     | '/founders'
+    | '/frameworks-comparison'
     | '/gdpr'
     | '/lists'
     | '/local-business-ideas-india'
+    | '/market-research'
     | '/online-business-ideas-india'
+    | '/open-source'
     | '/pricing'
     | '/privacy'
     | '/product'
@@ -766,6 +831,7 @@ export interface FileRouteTypes {
     | '/weekend-market-stall-profit-check'
     | '/blog/$slug'
     | '/calculator/$slug'
+    | '/failed-startups/india'
     | '/founder-stories/$slug'
     | '/idea/$slug'
     | '/startup-guides/$slug'
@@ -794,17 +860,22 @@ export interface FileRouteTypes {
     | '/business-ideas-india'
     | '/business-models-india'
     | '/business-pricing-india'
+    | '/case-studies'
     | '/coaching-batch-business-idea-india'
     | '/contact'
     | '/cookie-policy'
     | '/disclaimer'
+    | '/faq'
     | '/first-customer-india'
     | '/founder-decision-journal'
     | '/founders'
+    | '/frameworks-comparison'
     | '/gdpr'
     | '/lists'
     | '/local-business-ideas-india'
+    | '/market-research'
     | '/online-business-ideas-india'
+    | '/open-source'
     | '/pricing'
     | '/privacy'
     | '/product'
@@ -836,6 +907,7 @@ export interface FileRouteTypes {
     | '/weekend-market-stall-profit-check'
     | '/blog/$slug'
     | '/calculator/$slug'
+    | '/failed-startups/india'
     | '/founder-stories/$slug'
     | '/idea/$slug'
     | '/startup-guides/$slug'
@@ -865,17 +937,22 @@ export interface RootRouteChildren {
   BusinessIdeasIndiaRoute: typeof BusinessIdeasIndiaRoute
   BusinessModelsIndiaRoute: typeof BusinessModelsIndiaRoute
   BusinessPricingIndiaRoute: typeof BusinessPricingIndiaRoute
+  CaseStudiesRoute: typeof CaseStudiesRoute
   CoachingBatchBusinessIdeaIndiaRoute: typeof CoachingBatchBusinessIdeaIndiaRoute
   ContactRoute: typeof ContactRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
   DisclaimerRoute: typeof DisclaimerRoute
+  FaqRoute: typeof FaqRoute
   FirstCustomerIndiaRoute: typeof FirstCustomerIndiaRoute
   FounderDecisionJournalRoute: typeof FounderDecisionJournalRoute
   FoundersRoute: typeof FoundersRoute
+  FrameworksComparisonRoute: typeof FrameworksComparisonRoute
   GdprRoute: typeof GdprRoute
   ListsRoute: typeof ListsRoute
   LocalBusinessIdeasIndiaRoute: typeof LocalBusinessIdeasIndiaRoute
+  MarketResearchRoute: typeof MarketResearchRoute
   OnlineBusinessIdeasIndiaRoute: typeof OnlineBusinessIdeasIndiaRoute
+  OpenSourceRoute: typeof OpenSourceRoute
   PricingRoute: typeof PricingRoute
   PrivacyRoute: typeof PrivacyRoute
   ProductRoute: typeof ProductRoute
@@ -907,6 +984,7 @@ export interface RootRouteChildren {
   WeekendMarketStallProfitCheckRoute: typeof WeekendMarketStallProfitCheckRoute
   BlogSlugRoute: typeof BlogSlugRoute
   CalculatorSlugRoute: typeof CalculatorSlugRoute
+  FailedStartupsIndiaRoute: typeof FailedStartupsIndiaRoute
   FounderStoriesSlugRoute: typeof FounderStoriesSlugRoute
   IdeaSlugRoute: typeof IdeaSlugRoute
   StartupGuidesSlugRoute: typeof StartupGuidesSlugRoute
@@ -1015,6 +1093,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BusinessPricingIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/case-studies': {
+      id: '/case-studies'
+      path: '/case-studies'
+      fullPath: '/case-studies'
+      preLoaderRoute: typeof CaseStudiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/coaching-batch-business-idea-india': {
       id: '/coaching-batch-business-idea-india'
       path: '/coaching-batch-business-idea-india'
@@ -1043,6 +1128,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DisclaimerRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/first-customer-india': {
       id: '/first-customer-india'
       path: '/first-customer-india'
@@ -1062,6 +1154,13 @@ declare module '@tanstack/react-router' {
       path: '/founders'
       fullPath: '/founders'
       preLoaderRoute: typeof FoundersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/frameworks-comparison': {
+      id: '/frameworks-comparison'
+      path: '/frameworks-comparison'
+      fullPath: '/frameworks-comparison'
+      preLoaderRoute: typeof FrameworksComparisonRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gdpr': {
@@ -1085,11 +1184,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LocalBusinessIdeasIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/market-research': {
+      id: '/market-research'
+      path: '/market-research'
+      fullPath: '/market-research'
+      preLoaderRoute: typeof MarketResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/online-business-ideas-india': {
       id: '/online-business-ideas-india'
       path: '/online-business-ideas-india'
       fullPath: '/online-business-ideas-india'
       preLoaderRoute: typeof OnlineBusinessIdeasIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/open-source': {
+      id: '/open-source'
+      path: '/open-source'
+      fullPath: '/open-source'
+      preLoaderRoute: typeof OpenSourceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pricing': {
@@ -1330,6 +1443,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CalculatorSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/failed-startups/india': {
+      id: '/failed-startups/india'
+      path: '/failed-startups/india'
+      fullPath: '/failed-startups/india'
+      preLoaderRoute: typeof FailedStartupsIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/founder-glossary/': {
       id: '/founder-glossary/'
       path: '/founder-glossary'
@@ -1417,17 +1537,22 @@ const rootRouteChildren: RootRouteChildren = {
   BusinessIdeasIndiaRoute: BusinessIdeasIndiaRoute,
   BusinessModelsIndiaRoute: BusinessModelsIndiaRoute,
   BusinessPricingIndiaRoute: BusinessPricingIndiaRoute,
+  CaseStudiesRoute: CaseStudiesRoute,
   CoachingBatchBusinessIdeaIndiaRoute: CoachingBatchBusinessIdeaIndiaRoute,
   ContactRoute: ContactRoute,
   CookiePolicyRoute: CookiePolicyRoute,
   DisclaimerRoute: DisclaimerRoute,
+  FaqRoute: FaqRoute,
   FirstCustomerIndiaRoute: FirstCustomerIndiaRoute,
   FounderDecisionJournalRoute: FounderDecisionJournalRoute,
   FoundersRoute: FoundersRoute,
+  FrameworksComparisonRoute: FrameworksComparisonRoute,
   GdprRoute: GdprRoute,
   ListsRoute: ListsRoute,
   LocalBusinessIdeasIndiaRoute: LocalBusinessIdeasIndiaRoute,
+  MarketResearchRoute: MarketResearchRoute,
   OnlineBusinessIdeasIndiaRoute: OnlineBusinessIdeasIndiaRoute,
+  OpenSourceRoute: OpenSourceRoute,
   PricingRoute: PricingRoute,
   PrivacyRoute: PrivacyRoute,
   ProductRoute: ProductRoute,
@@ -1459,6 +1584,7 @@ const rootRouteChildren: RootRouteChildren = {
   WeekendMarketStallProfitCheckRoute: WeekendMarketStallProfitCheckRoute,
   BlogSlugRoute: BlogSlugRoute,
   CalculatorSlugRoute: CalculatorSlugRoute,
+  FailedStartupsIndiaRoute: FailedStartupsIndiaRoute,
   FounderStoriesSlugRoute: FounderStoriesSlugRoute,
   IdeaSlugRoute: IdeaSlugRoute,
   StartupGuidesSlugRoute: StartupGuidesSlugRoute,

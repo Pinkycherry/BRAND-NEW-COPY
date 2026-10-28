@@ -1,36 +1,12 @@
-
-import { useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, Calculator, Search } from "lucide-react";
-import { READY_CALCULATORS, REVIEW_CALCULATORS } from "@/lib/calculators";
-import { CollectionFrame, CollectionLinks } from "@/components/collection-framework";
 
+import html from "@/bought/tools.html?raw";
+
+// Purchased page, served exactly as supplied (scripts removed, noindex kept).
 export const Route = createFileRoute("/tools")({
-  head: () => ({ meta: [
-    { title: "Business Idea Tools and Calculators in India | BusinessIdea.io" },
-    { name: "description", content: "Find working startup cost, break-even and customer acquisition calculators, plus practical buyer and cash worksheets for Indian founders." },
-    { name: "robots", content: "noindex,nofollow,noarchive,noimageindex" },
-  ] }),
-  component: ToolsPage,
+  server: {
+    handlers: {
+      GET: async () => new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8" } }),
+    },
+  },
 });
-const tracks = [
-  { name: "Find a buyer", question: "Who may pay, and what did they do last time?", detail: "Trace a recent workaround before building an offer.", href: "/first-customer-india", action: "Map a first customer" },
-  { name: "Check demand", question: "Will anyone take a real next step?", detail: "Choose a small test and decide in advance what counts as action.", href: "/business-demand-test-india", action: "Design a demand test" },
-  { name: "Price one sale", question: "What stays after one order?", detail: "Add direct delivery costs before quoting a margin.", href: "/unit-economics-india", action: "Examine one order" },
-  { name: "Date the cash", question: "Can you pay suppliers before buyers pay you?", detail: "Put payments and collections in date order.", href: "/startup-cash-flow-india", action: "Open cash flow" },
-];
-function ToolsPage() {
-  const [query, setQuery] = useState("");
-  const [group, setGroup] = useState("All");
-  const tools = useMemo(() => READY_CALCULATORS.filter(tool => (group === "All" || tool.title.toLowerCase().includes(group.toLowerCase())) && (tool.title + " " + tool.answers).toLowerCase().includes(query.trim().toLowerCase())), [query, group]);
-  return <CollectionFrame active="/tools">
-    <header className="cf-wrap cf-hero"><div><span className="cf-kicker">FOUNDER TOOLS · INDIA</span><h1>Use a tool for the decision <em>in front of you.</em></h1><p>Start with a buyer question or put your own rupee amounts into a working calculator. A result is an arithmetic check, not proof that people will buy.</p><div className="cf-actions"><a className="cf-button cf-button-dark" href="#working-tools">Find a working tool <ArrowRight size={18}/></a><a className="cf-button cf-button-light" href="#founder-paths">Choose by question <ArrowUpRight size={18}/></a></div></div><div className="cf-visual" aria-label="Three steps from a question to evidence"><span>YOUR WORKBENCH</span><strong>Ask. Calculate. Check outside the screen.</strong><div className="cf-visual-row">What is the decision? <span>QUESTION</span></div><div className="cf-visual-row">Which figures are yours? <span>INPUTS</span></div><div className="cf-visual-row">What must a buyer confirm? <span>FIELD TEST</span></div></div></header>
-    <div className="cf-band"><div className="cf-wrap"><b>AVAILABLE NOW</b><span>{READY_CALCULATORS.length} specifically modeled calculators</span><span>Buyer and cash workbenches</span><span>Source metric archive clearly marked under review</span></div></div>
-    <section id="founder-paths" className="cf-section cf-wrap"><div className="cf-section-heading"><span className="cf-kicker">BY THE PROBLEM</span><h2>Choose the question, then the instrument.</h2><p>A calculator is useful after you know what is being measured. These paths connect to working pages with a clear next action.</p></div><div className="cf-grid">{tracks.map(item => <article className="cf-card" key={item.name}><small>{item.name}</small><h3>{item.question}</h3><p>{item.detail}</p><a href={item.href}>{item.action} <ArrowUpRight size={17}/></a></article>)}</div></section>
-    <section id="working-tools" className="cf-soft cf-section"><div className="cf-wrap"><div className="cf-section-heading"><span className="cf-kicker">LIVE CALCULATORS</span><h2>Put your own numbers to work.</h2><p>These calculators have specific inputs and visible formulas. Review the assumptions and avoid treating a scenario as a forecast.</p></div><label className="cf-search"><span>Search available tools</span><input value={query} onChange={event => setQuery(event.target.value)} placeholder="Try startup cost or customer" type="search" /></label><div className="cf-tags" role="group" aria-label="Filter tools">{["All","Startup","Break","Customer","Funding"].map(item => <button type="button" key={item} aria-pressed={group === item} onClick={() => setGroup(item)}>{item}</button>)}</div><div className="cf-grid" style={{marginTop:24}}>{tools.map(tool => <article className="cf-card" key={tool.slug}><Calculator size={26} strokeWidth={1.5}/><h3>{tool.title} {tool.highlight}</h3><p>{tool.answers}</p><a href={"/calculator/" + tool.slug}>Open calculator <ArrowUpRight size={17}/></a></article>)}</div>{tools.length === 0 && <p className="cf-empty">No working calculator matches this search. Clear the filter or browse the practical paths above.</p>}</div></section>
-    <section className="cf-section cf-wrap cf-feature"><div><span className="cf-kicker">THE USEFUL LIMIT</span><h2>Numbers only answer the question you put in.</h2><p>Write down where each amount came from: a supplier quote, a receipt, a customer conversation or an estimate. A neat result cannot correct an unsupported price or a missing cost.</p><ul><li>Check the period of every input before comparing figures.</li><li>Include delivery, collection delays and returns where they apply.</li><li>Ask a buyer what they actually did before treating demand as real.</li></ul></div><aside className="cf-feature-panel"><span className="cf-kicker">NEXT TOOL BY STAGE</span><h3>Move from calculation to field evidence.</h3><a href="/startup-costs-india">Map cash before the first sale <ArrowUpRight size={17}/></a><a href="/startup-idea-validation">Interview a buyer <ArrowUpRight size={17}/></a><a href="/templates">Open the evidence template preview <ArrowUpRight size={17}/></a><a href="/blueprints">Read a published blueprint <ArrowUpRight size={17}/></a></aside></section>
-    <section className="cf-dark cf-section"><div className="cf-wrap cf-feature"><div><span className="cf-kicker">SOURCE ARCHIVE</span><h2>Other metric titles are being repaired.</h2><p>{REVIEW_CALCULATORS.length} inherited entries still need formula review. Their old URLs are preserved, but they are not promoted as working calculators here.</p></div><div className="cf-feature-panel"><h3>What is available instead?</h3><p>Use the working tools above, the practical founder workbenches, and the published idea Validate choice for external model research.</p><a href="/business-idea-toolkit">See the broader toolkit <ArrowUpRight size={17}/></a></div></div></section>
-    <section className="cf-section cf-wrap cf-faq"><div><span className="cf-kicker">QUESTIONS</span><h2>Before you trust a result.</h2></div><div><details><summary>Will a calculator save my idea?</summary><p>No. The current working calculators show results from inputs in your session; a saved account history has not been implemented.</p></details><details><summary>Can the tools validate market demand?</summary><p>They calculate from your numbers. The demand test and buyer conversation pages help you gather separate evidence.</p></details><details><summary>Where are the other calculator titles?</summary><p>They remain in the source archive while individual formulas and inputs are reviewed. This page links only to specifically modeled calculators.</p></details></div></section>
-    <CollectionLinks current="/tools"/>
-  </CollectionFrame>;
-}

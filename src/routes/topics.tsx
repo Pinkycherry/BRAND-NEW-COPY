@@ -1,45 +1,12 @@
-
-import { useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { CollectionFrame, CollectionLinks } from "@/components/collection-framework";
 
-const topics = [
-  { stage: "Discover", title: "Find a business idea that fits your life", detail: "Start with hours, cash and obligations, then look at the actual work behind a category label.", href: "/business-ideas-india", action: "Choose a starting point" },
-  { stage: "Discover", title: "Research a real buyer", detail: "Write a claim that someone can prove wrong and find the current workaround.", href: "/business-idea-research-india", action: "Open the research desk" },
-  { stage: "Test", title: "Validate the problem", detail: "Ask about a recent event, the current alternative and a next step at a stated price.", href: "/startup-idea-validation", action: "Use the field guide" },
-  { stage: "Test", title: "Run a small demand test", detail: "Choose a booking, conversation or appropriate paid trial with a stop condition.", href: "/business-demand-test-india", action: "Design the test" },
-  { stage: "Money", title: "Count startup costs", detail: "Separate one-time cash from repeated bills and check how much must leave before a sale.", href: "/startup-costs-india", action: "Map the first spend" },
-  { stage: "Money", title: "Price one honest order", detail: "Include direct delivery and selling costs before using a headline margin.", href: "/business-pricing-india", action: "Work out a first price" },
-  { stage: "Money", title: "Check cash flow", detail: "Put supplier bills and collections on the dates they are likely to happen.", href: "/startup-cash-flow-india", action: "Date the cash" },
-  { stage: "Decide", title: "Compare two ideas", detail: "Hold both directions against the same evidence rather than changing standards midstream.", href: "/startup-idea-comparison", action: "Compare the candidates" },
-  { stage: "Decide", title: "Know when to pivot or stop", detail: "Set a boundary for further money and time before sunk cost starts deciding for you.", href: "/business-idea-pivot-or-stop", action: "Set the decision boundary" },
-  { stage: "Launch", title: "Find a first paying customer", detail: "Trace a buying occasion and the person who can say yes.", href: "/first-customer-india", action: "Map your first buyer" },
-  { stage: "Launch", title: "Plan a measured start", detail: "Order the first month around a buyer, a delivery promise and a cash check.", href: "/startup-launch-plan-india", action: "Open the launch plan" },
-  { stage: "Learn", title: "Read startup guides", detail: "Go deeper on an actual founder decision with the existing source guide collection.", href: "/startup-guides", action: "Browse guides" },
-  { stage: "Learn", title: "Understand founder terms", detail: "Look up the words you meet while pricing, testing and planning.", href: "/founder-glossary", action: "Open the glossary" },
-] as const;
-const stages = ["All", "Discover", "Test", "Money", "Decide", "Launch", "Learn"] as const;
+import html from "@/bought/topics.html?raw";
+
+// Purchased page, served exactly as supplied (scripts removed, noindex kept).
 export const Route = createFileRoute("/topics")({
-  head: () => ({ meta: [
-    { title: "Business Idea and Startup Topics for India | BusinessIdea.io" },
-    { name: "description", content: "Explore Indian startup topics by the decision in front of you: research, customer validation, costs, cash, launch and learning." },
-    { name: "robots", content: "noindex,nofollow,noarchive,noimageindex" },
-  ] }),
-  component: TopicsPage,
+  server: {
+    handlers: {
+      GET: async () => new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8" } }),
+    },
+  },
 });
-function TopicsPage() {
-  const [stage, setStage] = useState<(typeof stages)[number]>("All");
-  const [query, setQuery] = useState("");
-  const shown = useMemo(() => topics.filter(item => (stage === "All" || item.stage === stage) && (item.title + " " + item.detail).toLowerCase().includes(query.trim().toLowerCase())), [stage, query]);
-  return <CollectionFrame active="/topics">
-    <header className="cf-wrap cf-hero"><div><span className="cf-kicker">THE KNOWLEDGE MAP</span><h1>Find the answer for <em>your next founder decision.</em></h1><p>You do not need to read an entire startup textbook. Choose the problem you face now, read one useful page, then test it against your own situation.</p><div className="cf-actions"><a className="cf-button cf-button-dark" href="#topic-index">Explore topics <ArrowRight size={17}/></a><a className="cf-button cf-button-light" href="/lists">Browse idea lists <ArrowUpRight size={17}/></a></div></div><div className="cf-visual" aria-label="Founder decision journey"><span>A PATH THROUGH THE WORK</span><strong>From a rough idea to a real first move.</strong><div className="cf-visual-row">Discover the buyer <span>RESEARCH</span></div><div className="cf-visual-row">Test a clear offer <span>EVIDENCE</span></div><div className="cf-visual-row">Protect your cash <span>DECISION</span></div></div></header>
-    <div className="cf-band"><div className="cf-wrap"><b>READ BY MOMENT</b><span>Discover</span><span>Test</span><span>Money</span><span>Decide</span><span>Launch</span><span>Learn</span></div></div>
-    <section className="cf-section cf-wrap cf-feature"><div><span className="cf-kicker">NEW HERE?</span><h2>Start with what you can change this week.</h2><p>If you have several attractive ideas, compare the hours and cash they demand. If one idea keeps returning, find a buyer story and design a small test. A reading path should end in an action you can observe.</p></div><aside className="cf-feature-panel"><h3>Three useful entry points</h3><a href="/business-ideas-india">I need a starting direction <ArrowUpRight size={17}/></a><a href="/startup-idea-validation">I have an idea to test <ArrowUpRight size={17}/></a><a href="/startup-costs-india">I need to protect my money <ArrowUpRight size={17}/></a></aside></section>
-    <section id="topic-index" className="cf-soft cf-section"><div className="cf-wrap"><div className="cf-section-heading"><span className="cf-kicker">THE TOPIC LIBRARY</span><h2>Go straight to the question.</h2><p>Filter by stage or search for a phrase. Every result opens a completed page, not an empty placeholder.</p></div><label className="cf-search"><span>Search topics</span><input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Try pricing, first customer or cash" /></label><div className="cf-tags" role="group" aria-label="Filter topics by stage">{stages.map(item => <button key={item} type="button" aria-pressed={stage === item} onClick={() => setStage(item)}>{item}</button>)}</div><div className="cf-grid" style={{marginTop:25}}>{shown.map(item => <article className="cf-card" key={item.href}><small>{item.stage}</small><h3>{item.title}</h3><p>{item.detail}</p><a href={item.href}>{item.action} <ArrowUpRight size={17}/></a></article>)}</div>{shown.length === 0 && <p className="cf-empty">No topic matches that search. Try a different word or choose All.</p>}</div></section>
-    <section className="cf-section cf-wrap"><div className="cf-section-heading"><span className="cf-kicker">TURN READING INTO A TEST</span><h2>A sensible route through the material.</h2><p>The next step changes with what you have learned. You can enter at any point and return when a new question appears.</p></div><div className="cf-steps"><div className="cf-step"><h3>Find a real occurrence.</h3><p>Who had the problem recently? What did they pay, borrow or do instead?</p><a className="cf-card-link" href="/business-idea-research-india">Research the buyer <ArrowUpRight size={16}/></a></div><div className="cf-step"><h3>Ask for an action.</h3><p>Offer a specific outcome and record the commitment, refusal or unanswered question.</p><a className="cf-card-link" href="/business-demand-test-india">Plan a small test <ArrowUpRight size={16}/></a></div><div className="cf-step"><h3>Check the downside.</h3><p>Put the start cost, delivery effort and stop condition on paper before scaling it.</p><a className="cf-card-link" href="/business-idea-risk-check">Set a risk boundary <ArrowUpRight size={16}/></a></div></div></section>
-    <section className="cf-dark cf-section"><div className="cf-wrap cf-feature"><div><span className="cf-kicker">FROM TOPIC TO WORK</span><h2>Need a format or a number?</h2><p>Use a template to record what happened or a calculator to see what your own figures imply. Neither replaces a buyer conversation.</p></div><div className="cf-feature-panel"><h3>Choose your next instrument</h3><a href="/templates">Preview research and plan templates <ArrowUpRight size={17}/></a><a href="/tools">Open working calculators and field tools <ArrowUpRight size={17}/></a><a href="/blueprints">Read published idea blueprints <ArrowUpRight size={17}/></a></div></div></section>
-    <section className="cf-section cf-wrap cf-faq"><div><span className="cf-kicker">QUESTIONS</span><h2>How to use this library.</h2></div><div><details><summary>Do I have to follow the topics in order?</summary><p>No. Start with your present decision and follow the next question that emerges.</p></details><details><summary>Are these topics evidence about my idea?</summary><p>They are practical explanations and worksheets. Your own buyer conversations, quotes and actions supply evidence about your specific idea.</p></details><details><summary>Where can I read longer articles?</summary><p>The Startup Guides and Journal collections contain longer source material and related routes.</p></details></div></section>
-    <CollectionLinks current="/topics"/>
-  </CollectionFrame>;
-}
