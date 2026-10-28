@@ -191,3 +191,5 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Shared header/footer and static menu snapshot changed. Check the live navigation after deployment, including that no menu anchor has `href="#"`; preserve valid route targets. No database change.
 ### 28/10/2026 23:55 IST — Retire seller static list markup
 - The unused static list component has no importer and contains unsupported market claims and placeholder anchors. Remove it rather than retain unreachable seller content. Verify `/lists/<slug>` still renders after main deployment.
+### 29/10/2026 00:05 IST — Subcategory route shared list body
+- Data mapping uses the taxonomy code to ensure the subcategory slug matches the published list row. This changes the subcategory route and exports the existing list body from `/lists/<slug>`. Check a published subcategory live and its breadcrumb/idea links after push.

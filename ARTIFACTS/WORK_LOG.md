@@ -693,3 +693,5 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Removed the `#` anchor fallback from V2Frame. Entries without a real route are omitted; the static purchased-page menu snapshot was regenerated from the same frame. `npm run build` passed (same Vite target as `bun run build`; Bun unavailable here). Main push and live menu check follow.
 ## 2026-10-28 23:55 IST — Order 4 unused static list component
 - Removed `list-page-static.tsx`. No route imports it; the live `/lists/<slug>` page uses the database-backed React route. The retired file contained seller market news, US figures and `href="#"` links. Build and live representative list check follow.
+## 2026-10-29 00:05 IST — Order 4 subcategory conversion
+- `/category/<category>/<sub>` now loads the exact published list record and renders the shared seller `/lists/<slug>` body, including comparison, idea cards, FAQ and related links. The parent breadcrumb goes to its category; unpublished paths show an explicit browse route. Removed the prior GlassShell and gl-/gh- route markup. Build passed; main deployment and live check follow.

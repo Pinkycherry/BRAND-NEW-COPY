@@ -317,7 +317,10 @@ function Conclusion({ p }: { p: ListPage }) {
 }
 
 function ListPageView() {
-  const p = Route.useLoaderData();
+  return <ListPageBody p={Route.useLoaderData()} />;
+}
+
+export function ListPageBody({ p, categorySlug }: { p: ListPage; categorySlug?: string }) {
   const latest = p.ideas.map((i) => i.updated_at ?? "").sort().pop() ?? "";
   const d = latest ? new Date(latest) : new Date();
   const updated = d.toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" });
@@ -340,7 +343,7 @@ function ListPageView() {
               </li>
               <li aria-hidden="true" className="mx-1 text-muted-foreground"><ChevronRight className="h-4 w-4" /></li>
               <li className="inline-flex items-center gap-1.5">
-                <a href="/lists" className="flex items-center transition-colors text-muted-foreground hover:text-primary">Lists</a>
+                <a href={categorySlug ? `/category/${categorySlug}` : "/lists"} className="flex items-center transition-colors text-muted-foreground hover:text-primary">{categorySlug ? p.categoryName : "Lists"}</a>
               </li>
               <li aria-hidden="true" className="mx-1 text-muted-foreground"><ChevronRight className="h-4 w-4" /></li>
               <li className="inline-flex items-center gap-1.5">
