@@ -6,7 +6,7 @@ import { STARTUP_GUIDES } from "@/lib/guides-data";
 export const Route=createFileRoute("/frameworks-comparison")({head:()=>({meta:[{title:"Validation Frameworks and Comparisons | BusinessIdea.io"},{name:"description",content:"Read published validation frameworks and business comparison guides."}]}),component:FrameworksPage});
 const wrap="mx-auto max-w-6xl px-4 md:px-6";
 const card="group block rounded-xl border bg-card p-5 shadow-sm transition hover:border-primary/50";
-const frameworkGuides=STARTUP_GUIDES.filter(g=>/framework|validation|market.sizing|product.market.fit/i.test(`${g.title} ${g.category}`));
+const frameworkGuides=STARTUP_GUIDES.filter(g=>/framework|validation|market.sizing|product.market.fit/i.test(g.title));
 const comparisons=[["Compare two ideas","/startup-idea-comparison"],["Service and product business ideas","/service-business-ideas-india"],["Business models in India","/business-models-india"],["Business idea risk check","/business-idea-risk-check"]];
 function FrameworksPage(){return <V2Frame active="/topics">
   <div className="border-b bg-muted/30 pt-24 lg:pt-28"><nav aria-label="Breadcrumb" className={`${wrap} flex items-center gap-2 py-3 text-sm`}><a href="/">Home</a><ChevronRight size={15}/><span>Frameworks comparison</span></nav></div>
