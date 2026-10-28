@@ -1,13 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { V2Frame } from "@/components/v2/frame";
+import { STARTUP_GUIDES } from "@/lib/guides-data";
 
-import html from "@/bought/frameworks-comparison.html?raw";
-import { boughtPage } from "@/bought/serve";
-
-// Purchased page, served exactly as supplied (scripts removed, noindex kept).
-export const Route = createFileRoute("/frameworks-comparison")({
-  server: {
-    handlers: {
-      GET: async () => boughtPage(html),
-    },
-  },
-});
+export const Route=createFileRoute("/frameworks-comparison")({head:()=>({meta:[{title:"Validation Frameworks and Comparisons | BusinessIdea.io"},{name:"description",content:"Read published validation frameworks and business comparison guides."}]}),component:FrameworksPage});
+const wrap="mx-auto max-w-6xl px-4 md:px-6";
+const card="group block rounded-xl border bg-card p-5 shadow-sm transition hover:border-primary/50";
+const frameworkGuides=STARTUP_GUIDES.filter(g=>/framework|validation|market.sizing|product.market.fit/i.test(`${g.title} ${g.category}`));
+const comparisons=[["Compare two ideas","/startup-idea-comparison"],["Service and product business ideas","/service-business-ideas-india"],["Business models in India","/business-models-india"],["Business idea risk check","/business-idea-risk-check"]];
+function FrameworksPage(){return <V2Frame active="/topics">
+  <div className="border-b bg-muted/30 pt-24 lg:pt-28"><nav aria-label="Breadcrumb" className={`${wrap} flex items-center gap-2 py-3 text-sm`}><a href="/">Home</a><ChevronRight size={15}/><span>Frameworks comparison</span></nav></div>
+  <section className="border-b bg-gradient-to-b from-amber-500/10 to-background py-12 lg:py-16"><div className={wrap}><span className="rounded-full bg-secondary px-3 py-1 text-xs font-bold">Founder research</span><h1 className="mt-4 text-3xl font-bold md:text-5xl">Validation frameworks compared</h1><p className="mt-4 max-w-2xl text-muted-foreground">Explore our published frameworks and comparison guides.</p><div className="mt-6 flex flex-wrap gap-3"><a href="/startup-idea-comparison" className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white">Compare ideas <ArrowRight size={17}/></a><a href="/startup-guides" className="inline-flex min-h-11 items-center rounded-lg border bg-card px-6 py-3 font-semibold">Startup guides</a></div></div></section>
+  <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-2xl font-bold">Frameworks in depth</h2><div className="mt-6 grid gap-4 md:grid-cols-3">{frameworkGuides.map(g=><a key={g.slug} className={card} href={`/startup-guides/${g.slug}`}><span className="text-xs font-bold uppercase text-primary">{g.category}</span><h3 className="mt-3 text-lg font-semibold group-hover:text-primary">{g.title}</h3><p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{g.description}</p><span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Read guide <ArrowRight size={16}/></span></a>)}</div></div></section>
+  <section className="border-y bg-muted/20 py-12"><div className={wrap}><h2 className="text-2xl font-bold">Related comparisons</h2><div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{comparisons.map(([t,h])=><a className={card} key={h} href={h}>{t} <ArrowRight size={16} className="inline text-primary"/></a>)}</div></div></section>
+  <section className="py-12"><div className={wrap}><h2 className="text-2xl font-bold">Browse by topic</h2><div className="mt-4 flex flex-wrap gap-2">{[...new Set(STARTUP_GUIDES.map(g=>g.category))].map(g=><a key={g} className="rounded-full border bg-card px-4 py-2 text-sm" href="/topics">{g}</a>)}</div><h2 className="mt-10 text-2xl font-bold">Next step</h2><div className="mt-5 grid gap-3 md:grid-cols-3">{[["Browse ideas","/browse"],["Calculate startup costs","/calculator/startup-cost"],["Test demand","/business-demand-test-india"]].map(([t,h])=><a className={card} href={h} key={h}>{t} <ArrowRight size={16} className="inline text-primary"/></a>)}</div><h2 className="mt-10 text-2xl font-bold">Related resources</h2><div className="mt-4 flex flex-wrap gap-2">{[["Tools","/tools"],["Idea lists","/lists"],["Glossary","/glossary"]].map(([t,h])=><a key={h} href={h} className="rounded-full border bg-card px-4 py-2 text-sm">{t}</a>)}</div></div></section>
+</V2Frame>}
