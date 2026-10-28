@@ -187,3 +187,5 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 28/10/2026 23:30 IST — Order 4 home data gate
 - Founder requested real report preview, trust counts, testimonials, and broken-button repair. Current home had removed unsupported seller blocks. A published idea contains hook, buyer, revenue and risk fields; the server list hub returns current published idea/category/list counts. Use these fields in a compact preview and count band. The verified founder-story collection has zero entries, so no testimonial is rendered. The seller six-step report, market-watch and pricing claims lack corresponding records and remain open gaps in `docs/SELLER_MAP.md`.
 - Blast radius: additive fields in the home server response and the home route only. No database row or global style change. Build and live checks required; shared frame and other route families are separate jobs.
+### 28/10/2026 23:45 IST — Menu fallback removal
+- Shared header/footer and static menu snapshot changed. Check the live navigation after deployment, including that no menu anchor has `href="#"`; preserve valid route targets. No database change.

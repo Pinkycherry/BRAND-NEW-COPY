@@ -11,11 +11,10 @@ import "./v2.css";
  * Also rendered to static markup for the purchased HTML pages.
  */
 
-const NO_LINK = "#";
-
 function A({ children, className, href }: { children: ReactNode; className?: string | undefined; href?: string | undefined }) {
+  if (!href || href === "#") return null;
   return (
-    <a href={href ?? NO_LINK} className={className}>
+    <a href={href} className={className}>
       {children}
     </a>
   );
@@ -36,7 +35,7 @@ function Banner({ tone = "", title, sub, href }: { tone?: string; title: string;
 function Links({ items, className = "mm-list" }: { items: (string | [string, string])[]; className?: string }) {
   return (
     <div className={className}>
-      {items.map((x) => {
+      {items.filter((x) => typeof x !== "string" && Boolean(x[1]) && x[1] !== "#").map((x) => {
         const [t, href] = typeof x === "string" ? [x, undefined] : x;
         return (
           <A key={t} href={href}>
