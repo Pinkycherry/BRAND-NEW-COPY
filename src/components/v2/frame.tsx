@@ -24,7 +24,7 @@ function A({ children, className, href }: { children: ReactNode; className?: str
 
 function Banner({ tone = "", title, sub, href }: { tone?: string; title: string; sub: string; href?: string }) {
   return (
-    <A className={`bm-banner ${tone}`} href={href}>
+    <A className={`mm-banner ${tone}`} href={href}>
       <i className="ic" />
       <div>
         <b>{title}</b>
@@ -34,7 +34,7 @@ function Banner({ tone = "", title, sub, href }: { tone?: string; title: string;
   );
 }
 
-function Links({ items, className = "bm-list" }: { items: (string | [string, string])[]; className?: string }) {
+function Links({ items, className = "mm-list" }: { items: (string | [string, string])[]; className?: string }) {
   return (
     <div className={className}>
       {items.map((x) => {
@@ -51,14 +51,14 @@ function Links({ items, className = "bm-list" }: { items: (string | [string, str
 
 function Hero({ tone = "", badge, badgeTone = "", icon, title, body, cta, href }: { tone?: string; badge: string; badgeTone?: string; icon: string; title: string; body: string[]; cta: string; href: string }) {
   return (
-    <div className={`bm-hero ${tone}`}>
-      <span className={`bm-badge ${badgeTone}`}>{badge}</span>
+    <div className={`mm-hero ${tone}`}>
+      <span className={`mm-badge ${badgeTone}`}>{badge}</span>
       <div className="ic">{icon}</div>
       <h4>{title}</h4>
       {body.map((p) => (
         <p key={p}>{p}</p>
       ))}
-      <A className="bm-btn" href={href}>
+      <A className="mm-btn" href={href}>
         {cta}
       </A>
     </div>
@@ -76,7 +76,7 @@ const OUR_IDEAS: [string, string][] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) =>
 
 function Tile({ label, href }: { label: string; href: string }) {
   return (
-    <A className="bm-tile" href={href}>
+    <A className="mm-tile" href={href}>
       <i />
       {label}
     </A>
@@ -85,7 +85,7 @@ function Tile({ label, href }: { label: string; href: string }) {
 
 function Pdf({ title, sub, href }: { title: string; sub: string; href: string }) {
   return (
-    <A className="bm-pdf" href={href}>
+    <A className="mm-pdf" href={href}>
       <div>
         {title}
         <em>{sub}</em>
@@ -99,7 +99,7 @@ export function ValidatePanel() {
     <>
       <div>
         <Hero badge="FREE" icon="✓" title="Validation Workbench" body={["Write your buyer, their problem and a small first offer on one page.", "Then test it with real buyers before you spend."]} cta="Start free →" href="/product" />
-        <div className="bm-label">Popular checks</div>
+        <div className="mm-label">Popular checks</div>
         <Links
           items={[
             ["How to validate an idea", "/startup-idea-validation"],
@@ -110,10 +110,10 @@ export function ValidatePanel() {
           ]}
         />
       </div>
-      <div className="bm-cols" style={{ gridTemplateColumns: "1fr 1fr" }}>
+      <div className="mm-cols" style={{ gridTemplateColumns: "1fr 1fr" }}>
         <div>
-          <div className="bm-label bm-dot" style={{ marginTop: 0 }}>Founder tools (11)</div>
-          <div className="bm-tiles">
+          <div className="mm-label mm-dot" style={{ marginTop: 0 }}>Founder tools (11)</div>
+          <div className="mm-tiles">
             <Tile label="Startup Cost" href="/calculator/startup-cost" />
             <Tile label="Break-even" href="/calculator/break-even" />
             <Tile label="Return on Investment" href="/calculator/roi" />
@@ -125,35 +125,35 @@ export function ValidatePanel() {
             <Tile label="Research Desk" href="/business-idea-research-india" />
             <Tile label="Time Fit" href="/business-idea-time-fit" />
             <Tile label="Decision Journal" href="/founder-decision-journal" />
-            <A className="bm-tile" href="/calculator">
-              <i className="bm-tile-more">→</i>VIEW ALL<br />calculators →
+            <A className="mm-tile" href="/calculator">
+              <i className="mm-tile-more">→</i>VIEW ALL<br />calculators →
             </A>
           </div>
         </div>
         <div>
-          <div className="bm-label bm-dot" style={{ marginTop: 0 }}>Founder guides</div>
+          <div className="mm-label mm-dot" style={{ marginTop: 0 }}>Founder guides</div>
           <Banner title="All startup guides" sub="Step-by-step guides for first-time founders" href="/startup-guides" />
-          <div className="bm-pdfs">
+          <div className="mm-pdfs">
             <Pdf title="Startup Costs in India" sub="What leaves your pocket first" href="/startup-costs-india" />
             <Pdf title="Business Models in India" sub="How an idea earns" href="/business-models-india" />
             <Pdf title="When to Pivot or Stop" sub="Reading the evidence" href="/business-idea-pivot-or-stop" />
             <Pdf title="Your First Customer" sub="Reach one real buyer" href="/first-customer-india" />
           </div>
-          <div className="bm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)", gap: 12 }}>
+          <div className="mm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)", gap: 12 }}>
             <div>
-              <div className="bm-label" style={{ margin: "0 0 4px" }}>By place</div>
+              <div className="mm-label" style={{ margin: "0 0 4px" }}>By place</div>
               <Links items={[cat(1), cat(5), cat(9, "Small Town"), cat(10), cat(4)]} />
             </div>
             <div>
-              <div className="bm-label" style={{ margin: "0 0 4px" }}>For you</div>
+              <div className="mm-label" style={{ margin: "0 0 4px" }}>For you</div>
               <Links items={[cat(6, "Women"), cat(7, "Students"), cat(8, "Senior Citizens"), cat(14, "Parents"), cat(11, "Skilled People")]} />
             </div>
             <div>
-              <div className="bm-label" style={{ margin: "0 0 4px" }}>By industry</div>
+              <div className="mm-label" style={{ margin: "0 0 4px" }}>By industry</div>
               <Links items={[cat(16), cat(27), cat(30), cat(37), cat(47)]} />
             </div>
           </div>
-          <A className="bm-pill" href="/browse">See all 100 categories →</A>
+          <A className="mm-pill" href="/browse">See all 100 categories →</A>
         </div>
       </div>
     </>
@@ -165,7 +165,7 @@ export function LearnPanel() {
     <>
       <div>
         <Hero tone="orange" badge="100 CATEGORIES" badgeTone="o" icon="💡" title="Business Ideas Database" body={["Researched business ideas for India, sorted into 100 categories."]} cta="Browse →" href="/browse" />
-        <div className="bm-label">Start here</div>
+        <div className="mm-label">Start here</div>
         <Links
           items={[
             ["Business ideas in India", "/business-ideas-india"],
@@ -177,14 +177,14 @@ export function LearnPanel() {
           ]}
         />
       </div>
-      <div className="bm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
+      <div className="mm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
         <div>
-          <div className="bm-label bm-dot o" style={{ marginTop: 0 }}>Startup ideas</div>
+          <div className="mm-label mm-dot o" style={{ marginTop: 0 }}>Startup ideas</div>
           <Banner tone="o" title="All Idea Lists" sub="Every business idea list in one place" href="/lists" />
           <Links items={OUR_IDEAS} />
         </div>
         <div>
-          <div className="bm-label bm-dot r" style={{ marginTop: 0 }}>Money and risk</div>
+          <div className="mm-label mm-dot r" style={{ marginTop: 0 }}>Money and risk</div>
           <Banner tone="r" title="Startup Costs" sub="What you spend before the first sale" href="/startup-costs-india" />
           <Links
             items={[
@@ -197,12 +197,12 @@ export function LearnPanel() {
               ["Launch plan", "/startup-launch-plan-india"],
             ]}
           />
-          <div className="bm-label">More categories</div>
-          <Links className="bm-two bm-list" items={[cat(17), cat(19), cat(28), cat(38)]} />
-          <A className="bm-pill" href="/browse">See all 100 categories →</A>
+          <div className="mm-label">More categories</div>
+          <Links className="mm-two mm-list" items={[cat(17), cat(19), cat(28), cat(38)]} />
+          <A className="mm-pill" href="/browse">See all 100 categories →</A>
         </div>
         <div>
-          <div className="bm-label bm-dot b" style={{ marginTop: 0 }}>Knowledge</div>
+          <div className="mm-label mm-dot b" style={{ marginTop: 0 }}>Knowledge</div>
           <Banner tone="b" title="Startup Guides" sub="Step-by-step guides for founders" href="/startup-guides" />
           <Links
             items={[
@@ -229,7 +229,7 @@ export function ToolsPanel() {
     <>
       <div>
         <Hero badge="FREE" badgeTone="p" icon="✓" title="Founder Toolkit" body={["Pick a founder question and work it through with your own numbers."]} cta="Open the toolkit →" href="/business-idea-toolkit" />
-        <div className="bm-label">Popular tools</div>
+        <div className="mm-label">Popular tools</div>
         <Links
           items={[
             ["Startup cost calculator", "/calculator/startup-cost"],
@@ -238,12 +238,12 @@ export function ToolsPanel() {
           ]}
         />
       </div>
-      <div className="bm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
+      <div className="mm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
         <div>
-          <div className="bm-label bm-dot g" style={{ marginTop: 0 }}>Calculators</div>
+          <div className="mm-label mm-dot g" style={{ marginTop: 0 }}>Calculators</div>
           <Banner tone="g" title="All Calculators" sub="Free money calculators for founders" href="/calculator" />
           <Links
-            className="bm-two bm-list"
+            className="mm-two mm-list"
             items={[
               ["Startup Cost", "/calculator/startup-cost"],
               ["Break-even", "/calculator/break-even"],
@@ -255,7 +255,7 @@ export function ToolsPanel() {
           />
         </div>
         <div>
-          <div className="bm-label bm-dot pk" style={{ marginTop: 0 }}>Worksheets</div>
+          <div className="mm-label mm-dot pk" style={{ marginTop: 0 }}>Worksheets</div>
           <Banner tone="pk" title="Templates" sub="Plans, interviews and more" href="/templates" />
           <Links
             items={[
@@ -267,13 +267,13 @@ export function ToolsPanel() {
               ["Coaching batch check", "/coaching-batch-business-idea-india"],
             ]}
           />
-          <A className="bm-pill g" href="/learning-resources">All Resources →</A>
+          <A className="mm-pill g" href="/learning-resources">All Resources →</A>
         </div>
         <div>
-          <div className="bm-label bm-dot g" style={{ marginTop: 0 }}>Tools directory</div>
+          <div className="mm-label mm-dot g" style={{ marginTop: 0 }}>Tools directory</div>
           <Banner tone="g" title="Useful Tools" sub="Free tools we recommend to founders" href="/useful-tools" />
           <Links
-            className="bm-two bm-list"
+            className="mm-two mm-list"
             items={[
               ["Learning resources", "/learning-resources"],
               ["Reading room", "/business-idea-reading-room"],
@@ -281,10 +281,10 @@ export function ToolsPanel() {
               ["Blueprints", "/blueprints"],
             ]}
           />
-          <A className="bm-pill g" href="/useful-tools">See all tools →</A>
-          <div className="bm-label bm-dot">Idea lists</div>
+          <A className="mm-pill g" href="/useful-tools">See all tools →</A>
+          <div className="mm-label mm-dot">Idea lists</div>
           <Banner title="All Idea Lists" sub="Every business idea list in one place" href="/lists" />
-          <Links className="bm-two bm-list" items={[cat(1), cat(2), cat(3), cat(4), cat(5), cat(10)]} />
+          <Links className="mm-two mm-list" items={[cat(1), cat(2), cat(3), cat(4), cat(5), cat(10)]} />
         </div>
       </div>
     </>
@@ -403,7 +403,7 @@ export function Header({ active: _active }: { active?: string | undefined }) {
       </nav>
 
       {Panel && (
-        <div className="bm-panel open" onMouseEnter={cancel} onMouseLeave={hideSoon}>
+        <div className="mm-panel open" onMouseEnter={cancel} onMouseLeave={hideSoon}>
           <Panel />
         </div>
       )}
