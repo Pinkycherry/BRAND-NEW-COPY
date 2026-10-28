@@ -1,3 +1,4 @@
+import { SellerFaq } from "@/components/v2/faq";
 import { V2PageHero, V2PageSection } from "@/components/v2/page-sections";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { queryOptions } from "@tanstack/react-query";
@@ -95,7 +96,7 @@ function IdeaPage() {
       {idea.first_30_days?.length > 0 && <IdeaSection id="first" eyebrow="EARLY ACTION" title="Your first 30 days"><ol className="gl-steps">{idea.first_30_days.map((step, index) => <li key={index}><p>{step}</p></li>)}</ol></IdeaSection>}
       {idea.what_hurts && <IdeaSection id="risks" eyebrow="REALITY CHECK" title="What can hurt in year one"><p>{idea.what_hurts}</p></IdeaSection>}
       {idea.verdict && <IdeaSection id="verdict" eyebrow="THE STRAIGHT VERDICT" title="Is this worth a closer look?"><p className="gl-verdict">{idea.verdict}</p></IdeaSection>}
-      {idea.faq?.length > 0 && <IdeaSection id="faq" eyebrow="QUESTIONS" title="What people ask"><div className="gl-faq">{idea.faq.map((item) => <details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></IdeaSection>}
+      {idea.faq?.length > 0 && <SellerFaq id="faq" title="What people ask" faq={idea.faq} />}
       <IdeaSection id="validate" eyebrow="VALIDATE THE IDEA" title="Run the research before you commit"><ValidateButton slug={idea.slug} /><p className="gl-validation-caution">AI research is a starting point. Confirm prices, licensing and demand with local sources and potential buyers.</p><Link to="/calculator" className="gl-inline-link">Test your own numbers <ArrowUpRight size={17} /></Link></IdeaSection>
       {where && <div className="gl-back-path"><p>Want to compare another direction?</p><Link to="/category/$categorySlug/$subcategorySlug" params={{ categorySlug: where.category.slug, subcategorySlug: where.subcategory.slug }}>See more in {where.subcategory.name.replace(/ Business Ideas$/i, "")} <ArrowUpRight size={17} /></Link></div>}
     </article><aside className="gl-idea-sidebar"><div><p className="gh-eyebrow">ON THIS PAGE</p><nav aria-label="Idea sections">{sections.map((section) => <a key={section.id} href={`#${section.id}`}>{section.label}</a>)}</nav></div><div><p className="gh-eyebrow">PUT IT TO A TEST</p><p>Use the calculator with your own assumptions. The figures on this page are a starting frame, not a promise of returns.</p><Link to="/calculator">Open calculators <ArrowUpRight size={16} /></Link></div></aside></div>

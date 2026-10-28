@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { SellerFaq as Faq } from "@/components/v2/faq";
+export { SellerFaq as Faq } from "@/components/v2/faq";
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -340,41 +342,6 @@ function Cite({ title, slug, year }: { title: string; slug: string; year: string
           </button>
         </div>
       </section>
-    </div>
-  );
-}
-
-export function Faq({ faq }: { faq: ListPage["faq"] }) {
-  const [open, setOpen] = useState<number | null>(null);
-  if (faq.length === 0) return null;
-  return (
-    <div className="rounded-lg border bg-card text-card-foreground shadow-sm premium-card mb-12">
-      <div className="p-8">
-        <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-          <CircleHelp className="h-6 w-6 text-primary" />
-          Frequently Asked Questions
-        </h2>
-        <div className="w-full">
-          {faq.map((f, i) => (
-            <div key={f.q} className="border-b" data-state={open === i ? "open" : "closed"}>
-              <h3 className="flex">
-                <button
-                  type="button"
-                  aria-expanded={open === i}
-                  onClick={() => setOpen(open === i ? null : i)}
-                  className="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline text-left"
-                >
-                  {f.q}
-                  <ChevronDown className={`h-4 w-4 shrink-0 transition-transform duration-200${open === i ? " rotate-180" : ""}`} />
-                </button>
-              </h3>
-              <div hidden={open !== i} className="overflow-hidden text-sm pb-4 text-muted-foreground leading-relaxed">
-                {f.a} {f.href && <a className="font-semibold text-primary underline underline-offset-2" href={f.href}>Explore the source <ArrowRight className="inline h-3.5 w-3.5" /></a>}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }
