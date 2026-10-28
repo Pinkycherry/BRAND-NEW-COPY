@@ -13,9 +13,9 @@ Source: `src/bought/` on main. This is an inventory, not approval to reproduce s
 
 ### `home.html` → /
 
-Available fields: ideas.title,slug,summary,status; categories.code,name; subcategories.code,name,slug; guides-data, calculators; report/trust/testimonial rows: none.
+Available fields: published ideas.slug,title,hook,summary,who_pays_you,how_money_comes,what_hurts; category and subcategory published counts; guides-data and calculators. Verified founder testimonials: none.
 
-Current page gaps: Current / has report preview, trust-metrics and testimonial placeholders; V2Frame still has a `#` fallback for omitted menu hrefs.
+Order 4: `/` uses the most recently updated published idea for a compact preview and live published idea/category/list counts for the proof band. The seller six-step generated report has no matching report record. Verified founder stories are zero, so testimonials remain omitted. Seller market-watch and pricing claims also have no matching data. V2Frame `#` fallback is tracked in Order 4 job 2.
 
 | # | Seller section (DOM order) | Components in order | Our source / gap |
 |---:|---|---|---|

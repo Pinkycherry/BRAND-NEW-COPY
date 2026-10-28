@@ -183,3 +183,7 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 26/10/2026, 03:20 IST — Five-route deployment observed; phone gate remains open
 - Vercel c8a72d4 successful and /tools, /topics, /lists, /product, /templates each SSR-rendered with one H1, noindex meta and no desktop overflow at 1363px. Topic/list filters and Product four-answer browser-local brief tested. Minor Product review action and spacing correction committed next.
 - Keep 360/390px screenshot, staging response-header inspection and deeper link checks OPEN. Do not treat this desktop verification as release approval.
+
+### 28/10/2026 23:30 IST — Order 4 home data gate
+- Founder requested real report preview, trust counts, testimonials, and broken-button repair. Current home had removed unsupported seller blocks. A published idea contains hook, buyer, revenue and risk fields; the server list hub returns current published idea/category/list counts. Use these fields in a compact preview and count band. The verified founder-story collection has zero entries, so no testimonial is rendered. The seller six-step report, market-watch and pricing claims lack corresponding records and remain open gaps in `docs/SELLER_MAP.md`.
+- Blast radius: additive fields in the home server response and the home route only. No database row or global style change. Build and live checks required; shared frame and other route families are separate jobs.
