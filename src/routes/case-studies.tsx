@@ -1,13 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { V2Frame } from "@/components/v2/frame";
+import { CASE_STUDIES } from "@/lib/case-studies-data";
+import { STARTUP_GUIDES } from "@/lib/guides-data";
 
-import html from "@/bought/case-studies.html?raw";
-import { boughtPage } from "@/bought/serve";
-
-// Purchased page, served exactly as supplied (scripts removed, noindex kept).
-export const Route = createFileRoute("/case-studies")({
-  server: {
-    handlers: {
-      GET: async () => boughtPage(html),
-    },
-  },
-});
+export const Route=createFileRoute("/case-studies")({head:()=>({meta:[{title:"Founder Case Studies | BusinessIdea.io"},{name:"description",content:"Verified founder case studies and related research resources."}]}),component:CaseStudiesPage});
+const wrap="mx-auto max-w-6xl px-4 md:px-6";
+const card="group block rounded-xl border bg-card p-5 shadow-sm transition hover:border-primary/50";
+function CaseStudiesPage(){return <V2Frame active="/case-studies">
+  <div className="border-b bg-muted/30 pt-24 lg:pt-28"><nav aria-label="Breadcrumb" className={`${wrap} flex items-center gap-2 py-3 text-sm`}><a href="/">Home</a><ChevronRight size={15}/><span>Case studies</span></nav></div>
+  <section className="border-b bg-gradient-to-b from-amber-500/10 to-background py-12 lg:py-16"><div className={wrap}><span className="rounded-full bg-secondary px-3 py-1 text-xs font-bold">Founder research</span><h1 className="mt-4 text-3xl font-bold md:text-5xl">Startup validation case studies</h1><p className="mt-4 max-w-2xl text-muted-foreground">{CASE_STUDIES.length} verified founder stories in the published collection.</p><div className="mt-6 flex flex-wrap gap-3"><a href="/browse" className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white">Browse ideas <ArrowRight size={17}/></a><a href="/startup-guides" className="inline-flex min-h-11 items-center rounded-lg border bg-card px-6 py-3 font-semibold">Read guides</a></div></div></section>
+  {CASE_STUDIES.length>0&&<section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-2xl font-bold">Case studies</h2><div className="mt-6 grid gap-4 md:grid-cols-3">{CASE_STUDIES.map(study=><a key={study.slug} href={`/founder-stories/${study.slug}`} className={card}><span className="text-xs font-bold uppercase text-primary">{study.story_theme}</span><h3 className="mt-3 text-lg font-semibold">{study.title}</h3><p className="mt-2 text-sm text-muted-foreground">{study.solution_and_offer}</p><span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Read story <ArrowRight size={16}/></span></a>)}</div></div></section>}
+  <section className="border-t bg-muted/20 py-12"><div className={wrap}><h2 className="text-2xl font-bold">Explore free startup tools &amp; resources</h2><div className="mt-5 grid gap-3 md:grid-cols-3">{[["Startup cost calculator","/calculator/startup-cost"],["Business demand test","/business-demand-test-india"],["Founder toolkit","/tools"]].map(([t,h])=><a key={h} className={card} href={h}>{t} <ArrowRight size={16} className="inline text-primary"/></a>)}</div></div></section>
+  <section className="py-12"><div className={wrap}><h2 className="text-2xl font-bold">Related comparisons</h2><div className="mt-5 grid gap-3 md:grid-cols-3">{[["Compare two ideas","/startup-idea-comparison"],["Business models in India","/business-models-india"],["Service business ideas","/service-business-ideas-india"]].map(([t,h])=><a key={h} className={card} href={h}>{t} <ArrowRight size={16} className="inline text-primary"/></a>)}</div><h2 className="mt-10 text-2xl font-bold">Browse by topic</h2><div className="mt-4 flex flex-wrap gap-2">{STARTUP_GUIDES.map(g=><a key={g.slug} className="rounded-full border bg-card px-4 py-2 text-sm" href={`/startup-guides/${g.slug}`}>{g.title}</a>)}</div></div></section>
+</V2Frame>}
