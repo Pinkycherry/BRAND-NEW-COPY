@@ -48,6 +48,33 @@ export function firstFaq(value: unknown): { q: string; a: string } | null {
   return item ? { q: item.q, a: item.a } : null;
 }
 
+export function faqEntries(value: unknown): { q: string; a: string }[] {
+  if (!Array.isArray(value)) return [];
+  return value.filter((item) => item && typeof item.q === "string" && typeof item.a === "string" && item.q.trim() && item.a.trim())
+    .map((item) => ({ q: item.q as string, a: item.a as string }));
+}
+
+export function normalizeFaqQuestion(question: string): string {
+  return question.normalize("NFKC").toLocaleLowerCase("en").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+}
+
+/** Keep source order while taking the next unused question from each idea. */
+export function uniqueFaqBySource(primary: { q: string; a: string; href?: string }[], sources: { q: string; a: string; href?: string }[][], max = 8) {
+  const used = new Set<string>();
+  const result: { q: string; a: string; href?: string }[] = [];
+  const add = (item: { q: string; a: string; href?: string }) => {
+    const key = normalizeFaqQuestion(item.q);
+    if (!key || used.has(key) || result.length >= max) return false;
+    used.add(key); result.push(item); return true;
+  };
+  primary.forEach(add);
+  for (const source of sources) {
+    if (result.length >= max) break;
+    for (const item of source) if (add(item)) break;
+  }
+  return result;
+}
+
 /** Published idea counts per subcategory code, read in pages of 1,000. */
 async function subcategoryCounts(client: NonNullable<ReturnType<typeof dbOrNull>>) {
   const counts: Record<string, number> = {};
@@ -113,19 +140,14 @@ export const getListPage = createServerFn({ method: "GET" })
       const { data: rows } = await client.from("ideas").select("subcategory_code").in("subcategory_code", sibCodes).eq("status", "published");
       for (const r of (rows ?? []) as { subcategory_code: string }[]) sibCounts[r.subcategory_code] = (sibCounts[r.subcategory_code] ?? 0) + 1;
     }
-    const faq = Array.isArray(s.faq)
-      ? (s.faq as { q?: unknown; a?: unknown }[]).filter((f) => typeof f.q === "string" && typeof f.a === "string").map((f) => ({ q: f.q as string, a: f.a as string }))
-      : [];
+    const faq = faqEntries(s.faq);
     return {
       code: s.code,
       name: s.name,
       slug: s.slug,
       intro: s.intro,
       howToChoose: s.how_to_choose,
-      faq: [...faq, ...list.flatMap((idea) => {
-        const entry = firstFaq(idea.faq);
-        return entry ? [{ ...entry, href: `/idea/${idea.slug}` }] : [];
-      })],
+      faq: uniqueFaqBySource(faq, list.map((idea) => faqEntries(idea.faq).map((entry) => ({ ...entry, href: `/idea/${idea.slug}` })))),
       categoryName: (cat as { name: string } | null)?.name ?? "",
       ideas: list,
       siblings: ((sibs ?? []) as { code: string; name: string; slug: string }[])

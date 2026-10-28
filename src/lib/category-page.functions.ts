@@ -3,7 +3,7 @@ import { z } from "zod";
 
 import { TAXONOMY } from "@/data/taxonomy";
 import { dbOrNull } from "./db";
-import { firstFaq, type ListIdea } from "./lists.functions";
+import { faqEntries, uniqueFaqBySource, type ListIdea } from "./lists.functions";
 
 type CategoryPageData = {
   name: string;
@@ -34,14 +34,14 @@ export const getCategoryPage = createServerFn({ method: "GET" })
     for (const idea of rows) counts.set(idea.subcategory_code, (counts.get(idea.subcategory_code) ?? 0) + 1);
     const subRows = new Map(((subsResult.data ?? []) as { code: string; slug: string; faq: unknown }[]).map(s => [s.slug, s]));
     const subs = category.subcategories.map(s => ({ name: s.name, slug: s.slug, count: counts.get(subRows.get(s.slug)?.code ?? "") ?? 0 }));
-    const faq = category.subcategories.flatMap(s => {
+    const faqSources = category.subcategories.map(s => {
       const source = subRows.get(s.slug);
-      const own = firstFaq(source?.faq);
-      if (own) return [{ ...own, href: `/lists/${s.slug}` }];
-      const idea = rows.find(i => i.subcategory_code === source?.code && firstFaq(i.faq));
-      const fallback = firstFaq(idea?.faq);
-      return fallback && idea ? [{ ...fallback, href: `/idea/${idea.slug}` }] : [];
+      const own = faqEntries(source?.faq).map(entry => ({ ...entry, href: `/lists/${s.slug}` }));
+      const fromIdeas = rows.filter(i => i.subcategory_code === source?.code)
+        .flatMap(idea => faqEntries(idea.faq).map(entry => ({ ...entry, href: `/idea/${idea.slug}` })));
+      return [...own, ...fromIdeas];
     });
+    const faq = uniqueFaqBySource([], faqSources);
     return {
       name: category.name,
       short: category.short,
