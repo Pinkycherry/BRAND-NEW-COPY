@@ -1,13 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { V2Frame } from "@/components/v2/frame";
 
-import html from "@/bought/research-2.html?raw";
-import { boughtPage } from "@/bought/serve";
-
-// Purchased page, served exactly as supplied (scripts removed, noindex kept).
-export const Route = createFileRoute("/failed-startups/india")({
-  server: {
-    handlers: {
-      GET: async () => boughtPage(html),
-    },
-  },
-});
+export const Route=createFileRoute("/failed-startups/india")({head:()=>({meta:[{title:"Startup Risk Research in India | BusinessIdea.io"},{name:"description",content:"Read published risk, demand and pivot guides for business ideas in India."}]}),component:FailedStartupsPage});
+const wrap="mx-auto max-w-6xl px-4 md:px-6";
+const card="group block rounded-xl border bg-card p-5 shadow-sm transition hover:border-primary/50";
+const lessons=[["Business idea risk check","/business-idea-risk-check"],["When to pivot or stop","/business-idea-pivot-or-stop"],["Test business demand","/business-demand-test-india"],["Startup idea validation","/startup-idea-validation"]];
+function FailedStartupsPage(){return <V2Frame active="/topics">
+  <div className="border-b bg-muted/30 pt-24 lg:pt-28"><nav aria-label="Breadcrumb" className={`${wrap} flex items-center gap-2 py-3 text-sm`}><a href="/">Home</a><ChevronRight size={15}/><span>Startup risk in India</span></nav></div>
+  <section className="border-b bg-gradient-to-b from-amber-500/10 to-background py-12 lg:py-16"><div className={wrap}><span className="rounded-full bg-secondary px-3 py-1 text-xs font-bold">India guide</span><h1 className="mt-4 text-3xl font-bold md:text-5xl">Startup risk research in India</h1><div className="mt-6 flex flex-wrap gap-3"><a href="/business-idea-risk-check" className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white">Read risk check <ArrowRight size={17}/></a><a href="/browse" className="inline-flex min-h-11 items-center rounded-lg border bg-card px-6 py-3 font-semibold">Browse ideas</a></div></div></section>
+  <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-2xl font-bold">Lessons for India founders</h2><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{lessons.map(([t,h])=><a className={card} key={h} href={h}><h3 className="font-semibold group-hover:text-primary">{t}</h3><span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Read guide <ArrowRight size={16}/></span></a>)}</div></div></section>
+  <section className="border-t bg-muted/20 py-12"><div className={wrap}><h2 className="text-2xl font-bold">Next step</h2><div className="mt-5 grid gap-3 md:grid-cols-3">{[["Browse ideas","/browse"],["Calculate startup costs","/calculator/startup-cost"],["Compare two ideas","/startup-idea-comparison"]].map(([t,h])=><a className={card} key={h} href={h}>{t} <ArrowRight size={16} className="inline text-primary"/></a>)}</div><h2 className="mt-10 text-2xl font-bold">Related resources</h2><div className="mt-4 flex flex-wrap gap-2">{[["Idea lists","/lists"],["Startup guides","/startup-guides"],["Tools","/tools"]].map(([t,h])=><a className="rounded-full border bg-card px-4 py-2 text-sm" key={h} href={h}>{t}</a>)}</div></div></section>
+</V2Frame>}
