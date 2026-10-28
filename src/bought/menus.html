@@ -42,6 +42,28 @@
 .bm-foot-list a{color:#475569;font-size:15px;text-decoration:none}
 .bm-foot-list a:hover{color:#7c3aed}
 @media (max-width:1023px){.bm-panel{display:none!important}}
+.bm-tile i{display:block}
+nav .btn-primary{background:#7c3aed!important;color:#fff!important}
+/* Footer */
+.v2-footer { border-top: 1px solid #e2e8f0; background: #f8fafc; color: #0f172a; }
+.v2-footer .v2-footer-inner { max-width: 1200px; margin: 0 auto; padding: 56px 24px 28px; }
+.v2-footer .v2-footer-top { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 48px; }
+.v2-footer .v2-footer-brand p { margin: 14px 0 0; font-size: 14px; line-height: 1.6; color: #475569; }
+.v2-footer .v2-footer-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.v2-footer .v2-footer-actions a { padding: 7px 12px; border: 1px solid #e2e8f0; border-radius: 999px; background: #fff; font-size: 13px; font-weight: 500; color: #334155; text-decoration: none; }
+.v2-footer .v2-footer-actions a:hover { border-color: var(--primary); color: var(--primary); }
+.v2-footer h3 { margin: 0 0 16px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #64748b; }
+.v2-footer .v2-footer-cats ul { margin: 0; padding: 0; list-style: none; columns: 4 170px; column-gap: 24px; }
+.v2-footer .v2-footer-cats li { break-inside: avoid; padding: 4px 0; }
+.v2-footer .v2-footer-cats a { font-size: 13.5px; line-height: 1.4; color: #475569; text-decoration: none; }
+.v2-footer .v2-footer-cats a:hover { color: var(--primary); }
+.v2-footer .v2-footer-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0; font-size: 13px; color: #64748b; }
+.v2-footer .v2-footer-bottom p { margin: 0; }
+.v2-footer .v2-footer-bottom nav { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+.v2-footer .v2-footer-bottom a { color: #64748b; text-decoration: none; }
+.v2-footer .v2-footer-bottom a:hover { color: var(--primary); }
+@media (max-width: 860px) { .v2-footer .v2-footer-top { grid-template-columns: 1fr; gap: 32px; } .v2-footer .v2-footer-cats ul { columns: 2; } }
+
 </style>
 <div id="bm-root"></div>
 <script>
@@ -51,21 +73,7 @@ function a(t,cls,inner){return '<a href="'+(L[t]||"#")+'"'+(cls?' class="'+cls+'
 function list(items){return items.map(function(t){return a(t)}).join('');}
 function items(arr){return arr.map(function(x){var t=x[0],n=x[1]||'';return a(t,'', '<span>'+t+'</span>'+(n==='NEW'?'<span class="bm-new">NEW</span>':n?'<small>'+n+'</small>':''))}).join('');}
 function banner(c,t,s){return a(t,'bm-banner '+c,'<i class="ic"></i><div><b>'+t+'</b><span>'+s+'</span></div>');}
-var P={};
-P["Validate"]='<div><div class="bm-hero"><span class="bm-badge">1 FREE VALIDATION</span><div class="ic">✓</div><h4>AI Idea Validator</h4><p>Instant score, market size &amp; competitor map in 60 seconds.</p><p>★ 4.9 · 30k+ founders validated</p><a class="bm-btn" href="#">Start free →</a></div><div class="bm-label">Popular searches</div><div class="bm-list">'+list(["Free Validator","Competitor Analysis","Startup Failure Database","Validate Marketplace","Business Plan Generator"])+'</div></div>'
-+'<div class="bm-cols" style="grid-template-columns:1fr 1fr"><div><div class="bm-label bm-dot" style="margin-top:0">AI Generators (11)</div><div class="bm-tiles">'+["Idea Generator","Business Name","Validator","Market Research","Lean Canvas","Business Plan","Brand Strategy","Logo Generator","Visual Identity","Marketing Suite","Ad Creatives"].map(function(t){return a(t,'bm-tile',t)}).join('')+a('View all','bm-tile','VIEW ALL<br>11 generators →')+'</div></div>'
-+'<div><div class="bm-label bm-dot" style="margin-top:0">Validation reports (20)</div>'+banner('','All validation reports','Industry-specific report landings')+'<div class="bm-pdfs">'
-+["The HealthTech Founder\'s Field Guide 2026","The LegalTech Founder\'s Field Guide 2026","Why 90% of Startups Fail in 2026"].map(function(x){return a(x,'bm-pdf','<div>'+x+'</div>')}).join('')+'</div>'
-+'<div class="bm-cols" style="grid-template-columns:repeat(3,1fr);gap:12px"><div class="bm-list"><div class="bm-label" style="margin:0 0 4px">Tech</div>'+list(["SaaS","B2B SaaS","AI / ML","Mobile App","GameTech"])+'</div><div class="bm-list"><div class="bm-label" style="margin:0 0 4px">Business</div>'+list(["E-commerce","Marketplace","Fintech","HRTech","LegalTech"])+'</div><div class="bm-list"><div class="bm-label" style="margin:0 0 4px">Vertical</div>'+list(["HealthTech","EdTech","PropTech","FoodTech","TravelTech"])+'</div></div><a class="bm-pill" href="#">See all 20 reports →</a></div></div>';
-P["Learn"]='<div><div class="bm-hero orange"><span class="bm-badge o">1,798+ IDEAS</span><div class="ic">💡</div><h4>Ideas Database</h4><p>1,798+ validated startup ideas across 30 industries.</p><a class="bm-btn" href="#">Browse →</a></div><div class="bm-label">Authority 2026</div><div class="bm-list">'+list(["Best Validators 2026","Best AI Validation Tools","Best Market Research","Frameworks Comparison","Research Methodology","About BusinessIdea.io"])+'</div></div>'
-+'<div class="bm-cols" style="grid-template-columns:repeat(3,1fr)"><div><div class="bm-label bm-dot o" style="margin-top:0">Startup ideas</div>'+banner('o','All 55 Lists','1,798+ ideas across 30 industries')+'<div class="bm-list">'+list(["AI Startup Ideas","B2B SaaS Ideas","Micro-SaaS Ideas","Online Business","Dropshipping","Side Hustles","Fintech Ideas","For Women","Low Investment","Passive Income"])+'</div></div>'
-+'<div><div class="bm-label bm-dot r" style="margin-top:0">Failures (1000+)</div>'+banner('r','All Failures Database','1000+ post-mortems &amp; lessons')+'<div class="bm-items">'+items([["All Countries Hub","(15)"],["Why Startups Fail"],["Biggest Ever"],["AI Pattern Analysis"],["Failed vs Successful"],["How to Avoid Failure"],["Failure Analysis Hub"],["Yearly Report 2026","NEW"],["Yearly Report 2025"]])+'</div><div class="bm-label">By industry</div><div class="bm-two bm-list">'+list(["Fintech","AI Startups","EV & Auto","E-commerce"])+'</div><a href="#" style="color:#7c3aed">See all industries →</a><div class="bm-label">By country</div></div>'
-+'<div><div class="bm-label bm-dot b" style="margin-top:0">Knowledge</div>'+banner('b','Startup Knowledge Hub','The complete BusinessIdea.io index')+'<div class="bm-items">'+items([["Guides","(15)"],["Questions","(100+)"],["Glossary"],["Compare Tools"],["Feature Matrix"],["Versus Pages"],["Frameworks"],["Case Studies"],["Industry Benchmarks"],["Fundraising Benchmarks"],["Funding FAQ"],["Blog"],["Changelog"]])+'</div></div></div>';
-P["Free Tools"]='<div><div class="bm-hero"><span class="bm-badge p">14 TOOLS</span><div class="ic">✓</div><h4>All AI Generators</h4><p>14 AI tools for validation, brand, marketing &amp; launch.</p><a class="bm-btn" href="#">Browse generators →</a></div><div class="bm-label">Popular generators</div><div class="bm-list">'+list(["Idea Generator","AI Idea Validator","Brand Strategy"])+'</div></div>'
-+'<div class="bm-cols" style="grid-template-columns:repeat(3,1fr)"><div><div class="bm-label bm-dot g" style="margin-top:0">Calculators (10)</div>'+banner('g','All Calculators','10 free finance &amp; growth calculators')+'<div class="bm-two bm-list">'+list(["Runway","CAC","LTV","Valuation","Break-even","Equity Split","Funding","ROI","Market Size","Startup Cost"])+'</div></div>'
-+'<div><div class="bm-label bm-dot pk" style="margin-top:0">Templates</div>'+banner('pk','All Templates','Pitch deck, plans, interviews &amp; more')+'<div class="bm-list">'+list(["Pitch Deck","Business Plan","Competitive Analysis","Customer Persona","Validation Interview Script","Validation Templates"])+'</div><a class="bm-pill g" href="#">All Resources →</a></div>'
-+'<div><div class="bm-label bm-dot g" style="margin-top:0">Free tools directory (1,060+)</div>'+banner('g','Browse all tools','1,060+ tools across 30 categories')+'<div class="bm-two bm-list">'+list(["Validation & Research","No-Code Builders","AI Assistants","Design & UI","SEO Tools","Fundraising"])+'</div><a class="bm-pill g" href="#">See all 30 categories →</a>'
-+'<div class="bm-label bm-dot">Startup directories (867)</div>'+banner('','Where to submit your startup','867 directories with DR, link type &amp; ...')+'<div class="bm-two bm-list">'+list(["Tier 1 picks","Dofollow links","Free to submit","DR 70+ sites","AI directories","PH alternatives"])+'</div></div></div>';
+var P=__PANELS__;
 var root=document.getElementById('bm-root'),panels={},timer;
 Object.keys(P).forEach(function(k){var d=document.createElement('div');d.className='bm-panel';d.innerHTML=P[k];root.appendChild(d);panels[k]=d;
  d.addEventListener('mouseenter',function(){clearTimeout(timer)});d.addEventListener('mouseleave',closeSoon);});
@@ -77,24 +85,6 @@ document.querySelectorAll('nav [data-mega-menu] > button').forEach(function(b){v
  b.addEventListener('click',function(e){e.preventDefault();panels[k].classList.contains('open')?closeAll():open();});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll();});
 document.addEventListener('mousedown',function(e){if(!e.target.closest('.bm-panel')&&!e.target.closest('[data-mega-menu]'))closeAll();});
-var F={"Product":["AI Business Idea Validator","AI Market Research Tool","AI Business Plan Generator","AI Competitor Analysis","Features","Connect AI Assistants","Pricing & Plans"],
-"Free Tools":["All Free Tools (1,000+)","Launch Directories (867)","Tier 1 Directories","Free Submission Sites","Startup Idea Generator","Business Name Generator","Lean Canvas Generator","Business Plan Templates"],
-"Tools Directory":["Validation & Research","No-Code Builders","Landing Pages","SEO Tools","Marketing Automation","Fundraising & Investors","Analytics","Launch Directories"],
-"Marketing Suite":["Brand Strategy","Logo Generator","Marketing Suite","Ad Creatives","Visual Identity"],
-"Calculators":["Startup Cost Calculator","Runway Calculator","Break-Even Calculator","Market Size Calculator","Funding Calculator","ROI Calculator","CAC Calculator","LTV Calculator","Equity Calculator","Validation ROI Calculator"],
-"Templates":["Business Plan Templates","Pitch Deck Templates","Competitive Analysis","Customer Persona","Interview Script"],
-"Industry Validators":["SaaS Validator","E-commerce Validator","Mobile App Validator","Fintech Validator","Healthtech Validator","Edtech Validator","Marketplace Validator","PropTech Validator","FoodTech Validator","TravelTech Validator"],
-"Resources":["Blog & Insights","Terminology Glossary","Validation FAQ","Startup Questions","Success Stories","About BusinessIdea.io","Contact Support","Validation Templates","Frameworks Comparison","Funding FAQ"],
-"Guides":["Product-Market Fit Guide","Pre-Seed Funding Guide","Business Model Canvas","Validation Guide","SaaS Validation Guide","Validation Mistakes","All Guides →"],
-"Ideas by Demographic":["For Women","For College Students","For Retirees","For Introverts","For Developers","For Teachers"],
-"Ideas by Budget":["Zero-Cost Ideas","Low Overhead","High Profit Low Investment","Million Dollar Ideas"],
-"Ideas by Industry":["Food Business","Food Truck Ideas","Real Estate","Beauty Business","Fitness Business","Cleaning Business"],
-"Ideas by Location":["Home-Based","Work From Home","Digital Nomad","Small Town","Part-Time","Solo Business"],
-"Failure Analysis":["Failure Database (1000+)","Failures by Country (Hub)","Why Startups Fail","Biggest Failures Ever","Failure Analysis","AI Pattern Analysis","Failed vs Successful","2025 Failure Report","Fintech Failures","AI Startup Failures","Failed Startups Europe"],
-"Research Datasets":["Open Source Ledger (1,665)","Supabase vs Firebase","SaaS Pricing Benchmarks (181)","SaaS Pricing Patterns","Notion Pricing","Slack Pricing","Ranked Business Ideas (50)","Niche B2B Micro-SaaS","AI Agents Business Idea"]};
-document.querySelectorAll('footer [data-orientation="vertical"] > h3 > button').forEach(function(b){var k=b.textContent.trim(),reg=document.getElementById(b.getAttribute('aria-controls'));if(!reg)return;
- if(F[k])reg.innerHTML='<div class="bm-foot-list">'+list(F[k])+'</div>';
- b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.setAttribute('data-state',o?'closed':'open');reg.hidden=o;reg.setAttribute('data-state',o?'closed':'open');var s=b.querySelector('svg');if(s)s.style.transform=o?'':'rotate(180deg)';});});
-document.querySelectorAll('nav a[href], footer a[href]').forEach(function(x){x.setAttribute('href','#');x.removeAttribute('target');});
+document.querySelectorAll('nav a[href]').forEach(function(x){if(x.getAttribute('href').indexOf('/')!==0||x.closest('[data-mega-menu]'))x.setAttribute('href','#');});
 })();
 </script>

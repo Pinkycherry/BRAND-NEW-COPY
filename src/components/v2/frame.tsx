@@ -94,7 +94,7 @@ function Pdf({ title, sub, href }: { title: string; sub: string; href: string })
   );
 }
 
-function ValidatePanel() {
+export function ValidatePanel() {
   return (
     <>
       <div>
@@ -160,7 +160,7 @@ function ValidatePanel() {
   );
 }
 
-function LearnPanel() {
+export function LearnPanel() {
   return (
     <>
       <div>
@@ -224,7 +224,7 @@ function LearnPanel() {
   );
 }
 
-function ToolsPanel() {
+export function ToolsPanel() {
   return (
     <>
       <div>
