@@ -36,11 +36,7 @@
     }
     button.parentElement.addEventListener('mouseenter', open);
     button.parentElement.addEventListener('mouseleave', closeSoon);
-    button.addEventListener('click', function (e) {
-      pinned = true;
-      if (e.detail === 0 && button.getAttribute('aria-expanded') === 'true') { cancel(); closePanels(); }
-      else open();
-    });
+    button.addEventListener('click', function () { pinned = true; open(); });
     button.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowDown') { e.preventDefault(); pinned = true; open(); panel.querySelector('a').focus(); }
     });

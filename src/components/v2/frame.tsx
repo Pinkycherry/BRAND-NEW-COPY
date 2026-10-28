@@ -361,7 +361,7 @@ export function Header({ active: _active }: { active?: string | undefined }) {
         <div className="mm-desktop">
           {MEGA.map((m, i) => <div key={m.label} className="mm-disclosure" onMouseEnter={() => show(i)} onMouseLeave={hideSoon}>
             <button id={`mm-trigger-${i}`} type="button" aria-expanded={open === i} aria-controls={`mm-panel-${i}`}
-              onClick={(e) => { cancel(); pinned.current = true; setOpen(e.detail === 0 && open === i ? null : i); }}
+              onClick={() => { cancel(); pinned.current = true; setOpen(i); }}
               onKeyDown={(e) => { if(e.key === "ArrowDown") { e.preventDefault(); pinned.current = true; show(i); requestAnimationFrame(() => ref.current?.querySelector<HTMLAnchorElement>(`#mm-panel-${i} a`)?.focus()); } }}>
               {m.label}<ChevronDown size={16} aria-hidden="true" />
             </button>
