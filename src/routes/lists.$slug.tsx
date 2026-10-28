@@ -152,7 +152,7 @@ function Comparison({ ideas }: { ideas: ListIdea[] }) {
   );
 }
 
-export function TopCard({ idea, n, actionHref }: { idea: ListIdea; n: number; actionHref?: string }) {
+export function TopCard({ idea, n, actionHref, showAction = true }: { idea: ListIdea; n: number; actionHref?: string; showAction?: boolean }) {
   const need = points(idea.what_you_need, 4);
   const hurts = points(idea.what_hurts, 3);
   return (
@@ -228,7 +228,7 @@ export function TopCard({ idea, n, actionHref }: { idea: ListIdea; n: number; ac
             <p className="text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Our Verdict</p>
             <p className="text-sm text-foreground/85 leading-relaxed">{sentences(idea.verdict, 2)}</p>
           </div>
-          <div className="mt-5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+          {showAction && <div className="mt-5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
             <a
               href={actionHref ?? `/idea/${idea.slug}`}
               className={`${BTN} bg-slate-900 hover:bg-slate-700 h-12 rounded-lg px-6 text-base gap-2 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-md hover:shadow-lg hover:scale-[1.02] transition-all w-full sm:w-auto min-h-[44px]`}
@@ -237,7 +237,7 @@ export function TopCard({ idea, n, actionHref }: { idea: ListIdea; n: number; ac
               Read this idea
               <ArrowRight className="h-4 w-4" />
             </a>
-          </div>
+          </div>}
         </div>
       </div>
     </div>
