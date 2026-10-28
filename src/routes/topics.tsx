@@ -1,13 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { V2Frame } from "@/components/v2/frame";
+import { STARTUP_GUIDES } from "@/lib/guides-data";
 
-import html from "@/bought/topics.html?raw";
-import { boughtPage } from "@/bought/serve";
-
-// Purchased page, served exactly as supplied (scripts removed, noindex kept).
-export const Route = createFileRoute("/topics")({
-  server: {
-    handlers: {
-      GET: async () => boughtPage(html),
-    },
-  },
-});
+export const Route=createFileRoute("/topics")({head:()=>({meta:[{title:"Startup Knowledge Hub | BusinessIdea.io"},{name:"description",content:"Explore the published startup guides by topic."}]}),component:TopicsPage});
+const wrap="mx-auto max-w-6xl px-4 md:px-6";
+const card="group block rounded-xl border bg-card p-5 shadow-sm hover:border-primary/50";
+const groups=[...new Set(STARTUP_GUIDES.map(g=>g.category))];
+function TopicsPage(){return <V2Frame active="/topics">
+  <div className="border-b bg-muted/30 pt-24 lg:pt-28"><nav aria-label="Breadcrumb" className={`${wrap} flex items-center gap-2 py-3 text-sm`}><a href="/">Home</a><ChevronRight size={15}/><span>Topics</span></nav></div>
+  <section className="border-b bg-gradient-to-b from-amber-500/10 to-background py-12 lg:py-16"><div className={wrap}><span className="rounded-full bg-secondary px-3 py-1 text-xs font-bold">Startup guides</span><h1 className="mt-4 text-3xl font-bold md:text-5xl">Startup Knowledge Hub</h1><p className="mt-4 max-w-2xl text-muted-foreground">{STARTUP_GUIDES.length} published guides across {groups.length} topics.</p><div className="mt-6 flex flex-wrap gap-3"><a href="/startup-guides" className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white">Browse guides <ArrowRight size={17}/></a><a href="/browse" className="inline-flex min-h-11 items-center rounded-lg border bg-card px-6 py-3 font-semibold">Browse ideas</a></div></div></section>
+  <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-2xl font-bold">Quick start by intent</h2><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{groups.map(g=><a key={g} className={card} href={`#${g.toLowerCase().replace(/[^a-z0-9]+/g,"-")}`}><h3 className="font-semibold group-hover:text-primary">{g}</h3><span className="mt-2 block text-sm text-muted-foreground">{STARTUP_GUIDES.filter(x=>x.category===g).length} guides</span></a>)}</div></div></section>
+  <section className="border-y bg-muted/20 py-12"><div className={wrap}><h2 className="text-2xl font-bold">Featured deep-dives</h2><div className="mt-6 grid gap-4 md:grid-cols-3">{STARTUP_GUIDES.slice(0,3).map(g=><a key={g.slug} className={card} href={`/startup-guides/${g.slug}`}><span className="text-xs font-bold uppercase text-primary">{g.category}</span><h3 className="mt-3 text-lg font-semibold">{g.title}</h3><p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{g.description}</p><span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Read guide <ArrowRight size={16}/></span></a>)}</div></div></section>
+  {groups.map((g,n)=><section key={g} id={g.toLowerCase().replace(/[^a-z0-9]+/g,"-")} className="scroll-mt-24 border-b py-12 lg:py-16"><div className={wrap}><h2 className="text-2xl font-bold">{String(n+1).padStart(2,"0")}. {g}</h2><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{STARTUP_GUIDES.filter(x=>x.category===g).map(guide=><a key={guide.slug} className={card} href={`/startup-guides/${guide.slug}`}><h3 className="font-semibold group-hover:text-primary">{guide.title}</h3><p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{guide.description}</p><span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Read guide <ArrowRight size={16}/></span></a>)}</div></div></section>)}
+  <section className="py-12"><div className={wrap}><h2 className="text-2xl font-bold">Next step</h2><div className="mt-5 grid gap-3 md:grid-cols-3">{[["Browse ideas","/browse"],["Calculate startup costs","/calculator/startup-cost"],["Explore idea lists","/lists"]].map(([t,h])=><a className={card} key={h} href={h}>{t} <ArrowRight size={16} className="inline text-primary"/></a>)}</div><h2 className="mt-10 text-2xl font-bold">Related resources</h2><div className="mt-4 flex flex-wrap gap-2">{[["Startup guides","/startup-guides"],["Glossary","/glossary"],["Tools","/tools"]].map(([t,h])=><a key={h} href={h} className="rounded-full border bg-card px-4 py-2 text-sm">{t}</a>)}</div></div></section>
+</V2Frame>}
