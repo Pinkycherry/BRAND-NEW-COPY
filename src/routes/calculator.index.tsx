@@ -1,38 +1,16 @@
-import { V2PageAsideCta, V2PageHero, V2PageSection } from "@/components/v2/page-sections";
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, Calculator } from "lucide-react";
-
-import { GlassShell } from "@/components/glass-shell";
-import { READY_CALCULATORS, REVIEW_CALCULATORS } from "@/lib/calculators";
-import { JsonLd, breadcrumbSchema, collectionPageSchema } from "@/lib/schema";
-import "@/components/glass-library.css";
-import "@/components/calculator-review.css";
-
-const DESCRIPTION = "Five specifically modeled startup calculators in rupees, plus source calculator titles held for formula review. Enter your own numbers and inspect the working.";
+import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, Calculator, ChevronRight } from "lucide-react";
+import { V2Frame } from "@/components/v2/frame";
+import { READY_CALCULATORS } from "@/lib/calculators";
 
 export const Route = createFileRoute("/calculator/")({
-  head: () => ({ meta: [
-    { title: "Startup Calculators | BusinessIdea.io" },
-    { name: "description", content: DESCRIPTION },
-    { property: "og:title", content: "Startup Calculators | BusinessIdea.io" },
-    { property: "og:description", content: DESCRIPTION },
-    { property: "og:type", content: "website" },
-  ] }),
+  head: () => ({ meta: [{ title: "Startup Calculators | BusinessIdea.io" }, { name: "description", content: "Working business calculators with visible formulas and results." }] }),
   component: CalculatorIndex,
 });
-
-function CalculatorIndex() {
-  return <>
-    <JsonLd schema={[
-      collectionPageSchema({ path: "/calculator", name: "Startup calculators", description: DESCRIPTION, itemCount: READY_CALCULATORS.length }),
-      breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Calculators", path: "/calculator" }]),
-    ]} />
-    <GlassShell><div className="gl-page">
-      <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><span>Calculators</span></nav>
-      <V2PageHero className="gl-hero"><div className="gl-hero-copy"><p className="gh-eyebrow">THE FOUNDER TOOLKIT</p><h1>Give your numbers <em>a closer look.</em></h1><p>Five tools have specific inputs and visible working. The other 55 source entries are held for formula review; we will not show a number for a metric we cannot support.</p><div className="gl-hero-stats"><span><strong>{READY_CALCULATORS.length}</strong> available calculators</span><span>{REVIEW_CALCULATORS.length} source entries under review</span></div></div><figure className="gl-image-hero"><img src="/images/guides/startup-cash-flow-management-extending-your-runway-reduce-burn-rate-expenses.webp" alt="Startup cash flow guide artwork about runway and spending, fully visible" width={1338} height={753}/><figcaption>Start with a real cost, then check the timing.</figcaption></figure></V2PageHero>
-      <V2PageSection className="gl-index" aria-labelledby="tools-heading"><div className="gl-section-heading"><div><p className="gh-eyebrow">CHOOSE A WORKING MODEL</p><h2 id="tools-heading">Five calculations you can inspect.</h2><p>Each available tool has named inputs and a visible formula. Replace the sample numbers with your own evidence.</p></div></div><div className="gl-tool-grid">{READY_CALCULATORS.map((tool) => <Link key={tool.slug} to="/calculator/$slug" params={{ slug: tool.slug }} className="gl-tool-card"><span className="gl-tool-icon"><Calculator size={24} strokeWidth={1.7} aria-hidden="true" /></span><h3>{tool.title} <em>{tool.highlight}</em></h3><p>{tool.answers}</p><span className="gl-idea-action">Open calculator <ArrowUpRight size={18} /></span></Link>)}</div></V2PageSection>
-      <V2PageSection className="gl-review-index" aria-labelledby="review-heading"><p className="gh-eyebrow">SOURCE ARCHIVE / UNDER REVIEW</p><h2 id="review-heading">{REVIEW_CALCULATORS.length} metric pages are being rebuilt.</h2><p>Their old URLs remain available with an explanation, but the generic inputs and outputs are paused. These titles are a repair queue, not working recommendations.</p><details><summary>See the metric titles in review</summary><ul>{REVIEW_CALCULATORS.map(tool=><li key={tool.slug}>{tool.title}</li>)}</ul></details></V2PageSection>
-      <V2PageAsideCta className="gl-bottom-note"><div><p className="gh-eyebrow">READ THE RESULT CAREFULLY</p><h2>Your inputs shape the answer.</h2><p>The tools calculate from your figures. They do not know local demand, tax or every cost you may face. Check the formula and confirm assumptions before you make a decision.</p></div><Link to="/browse" className="gh-button gh-button-primary">Explore ideas <ArrowUpRight size={18} /></Link></V2PageAsideCta>
-    </div></GlassShell>
-  </>;
-}
+const wrap="mx-auto max-w-6xl px-4 md:px-6";
+function CalculatorIndex(){return <V2Frame active="/tools">
+  <div className="border-b bg-muted/30 pt-24 lg:pt-28"><nav className={`${wrap} flex items-center gap-2 py-3 text-sm`} aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={15}/><span>Calculators</span></nav></div>
+  <section className="border-b bg-gradient-to-b from-amber-500/10 to-background py-12 lg:py-16"><div className={wrap}><span className="rounded-full bg-secondary px-3 py-1 text-xs font-bold">Founder tools</span><h1 className="mt-4 text-3xl font-bold md:text-5xl">Startup calculators</h1><p className="mt-4 max-w-2xl text-muted-foreground">Choose a working model, enter your own numbers, and inspect the formula and result.</p><div className="mt-6 flex flex-wrap gap-3"><a href="/tools" className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white">Explore tools <ArrowRight size={17}/></a><a href="/browse" className="inline-flex min-h-11 items-center gap-2 rounded-lg border bg-card px-6 py-3 font-semibold">Browse ideas</a></div></div></section>
+  <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-2xl font-bold">Working calculators</h2><p className="mt-2 text-muted-foreground">{READY_CALCULATORS.length} calculations with named inputs and visible working.</p><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{READY_CALCULATORS.map(tool=><a key={tool.slug} href={`/calculator/${tool.slug}`} className="group rounded-xl border bg-card p-6 shadow-sm transition hover:border-primary/50"><Calculator className="text-primary"/><h3 className="mt-4 text-xl font-semibold group-hover:text-primary">{tool.title} {tool.highlight}</h3><p className="mt-2 text-sm text-muted-foreground">{tool.answers}</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">Open calculator <ArrowRight size={16}/></span></a>)}</div></div></section>
+  <section className="border-t bg-muted/20 py-12"><div className={wrap}><h2 className="text-2xl font-bold">Next step</h2><div className="mt-5 grid gap-3 md:grid-cols-3">{[["Browse published ideas","/browse"],["Test demand","/business-demand-test-india"],["Compare two ideas","/startup-idea-comparison"]].map(([t,h])=><a key={h} href={h} className="rounded-xl border bg-card p-5 font-semibold hover:border-primary/50">{t} <ArrowRight className="ml-1 inline text-primary" size={17}/></a>)}</div><h2 className="mt-10 text-2xl font-bold">Related resources</h2><div className="mt-4 flex flex-wrap gap-2">{[["Tools","/tools"],["Idea lists","/lists"],["Startup guides","/startup-guides"]].map(([t,h])=><a key={h} href={h} className="rounded-full border bg-card px-4 py-2 text-sm">{t}</a>)}</div></div></section>
+</V2Frame>}
