@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 import "@/components/glass-home.css";
-import { Header as PurchasedHeader } from "@/components/v2/frame";
+import { Header as PurchasedHeader, Footer as PurchasedFooter } from "@/components/v2/frame";
 
 const navGroups = [
   { label: "Explore", links: [
@@ -114,5 +114,5 @@ export function GlassFooter() {
 }
 
 export function GlassShell({ children }: { children: ReactNode }) {
-  return <div className="glass-home"><a className="gh-skip" href="#main">Skip to content</a><div className="v2"><PurchasedHeader /></div><div aria-hidden="true" style={{ height: "6rem" }} /><main id="main">{children}</main><GlassFooter /></div>;
+  return <div className="glass-home"><a className="gh-skip" href="#main">Skip to content</a><div className="v2"><PurchasedHeader /></div><div aria-hidden="true" style={{ height: "6rem" }} /><main id="main">{children}</main><PurchasedFooter /></div>;
 }
