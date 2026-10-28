@@ -9,7 +9,7 @@ type CategoryPageData = {
   name: string;
   short: string;
   slug: string;
-  intro: string;
+  intro: string | null;
   subs: { name: string; slug: string; count: number }[];
   ideas: ListIdea[];
   faq: { q: string; a: string; href?: string }[];
@@ -33,7 +33,7 @@ export const getCategoryPage = createServerFn({ method: "GET" })
     const counts = new Map<string, number>();
     for (const idea of rows) counts.set(idea.subcategory_code, (counts.get(idea.subcategory_code) ?? 0) + 1);
     const subRows = new Map(((subsResult.data ?? []) as { code: string; slug: string; faq: unknown }[]).map(s => [s.slug, s]));
-    const subs = category.subcategories.map(s => ({ name: s.name, slug: s.slug, count: counts.get(subRows.get(s.slug)?.code ?? "") ?? 0 }));
+    const subs = category.subcategories.map(s => ({ name: s.name, slug: s.slug, count: counts.get(subRows.get(s.slug)?.code ?? "") ?? 0 })).filter(s => s.count > 0);
     const faqSources = category.subcategories.map(s => {
       const source = subRows.get(s.slug);
       const own = faqEntries(source?.faq).map(entry => ({ ...entry, href: `/lists/${s.slug}` }));
@@ -46,7 +46,7 @@ export const getCategoryPage = createServerFn({ method: "GET" })
       name: category.name,
       short: category.short,
       slug: category.slug,
-      intro: `Explore ten more specific directions within ${category.name}. Read who each one may suit, then open the path that matches your situation.`,
+      intro: null,
       subs,
       ideas: rows.slice(0, 5),
       faq,
