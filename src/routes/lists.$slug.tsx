@@ -1,17 +1,13 @@
-import { useState } from "react";
 import { SellerFaq as Faq } from "@/components/v2/faq";
 export { SellerFaq as Faq } from "@/components/v2/faq";
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import {
   ArrowRight,
-  ChevronDown,
   ChevronRight,
   CircleCheck,
-  CircleHelp,
   CircleX,
   House,
   Lightbulb,
-  Quote,
   Star,
   ThumbsDown,
   ThumbsUp,
@@ -20,25 +16,7 @@ import {
 } from "lucide-react";
 
 import { V2Frame } from "@/components/v2/frame";
-import {
-  AuthorBox,
-  BeforeYouBuild,
-  DeeperAnswers,
-  IntelligenceReport,
-  MarketWatch,
-  PeopleAlsoSearch,
-  RelatedResources,
-  ResourceDirectory,
-  ReviewMeta,
-} from "@/components/v2/list-page-static";
 import { getListPage, type ListIdea, type ListPage } from "@/lib/lists.functions";
-
-/*
- * /lists/<subcategory-slug>: one page per subcategory, on the purchased
- * single-list layout. Same sections and order as supplied; the idea cards,
- * comparison table, intro and FAQ are filled from our published ideas.
- * Remaining sections are the seller's placeholders (list-page-static.tsx).
- */
 
 export const Route = createFileRoute("/lists/$slug")({
   loader: async ({ params }) => {
@@ -84,11 +62,11 @@ function Head({ p, title, words, updated }: { p: ListPage; title: string; words:
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">{title}</h1>
       <p className="text-sm md:text-base text-muted-foreground mb-3 max-w-2xl mx-auto">{sentences(p.intro, 1)}</p>
       <div className="flex items-center justify-center mb-3">
-        <button className={`${BTN} rounded-lg hover:bg-slate-700 h-11 py-2 gap-2 bg-primary text-primary-foreground shadow-md hover:shadow-lg hover:scale-[1.02] transition-all min-h-[44px] px-5 text-sm font-semibold`}>
+        <a href="/product" className={`${BTN} rounded-lg hover:bg-slate-700 h-11 py-2 gap-2 bg-primary text-primary-foreground shadow-md hover:shadow-lg hover:scale-[1.02] transition-all min-h-[44px] px-5 text-sm font-semibold`}>
           <Lightbulb className="h-4 w-4" />
-          Validate Your Idea Free — 120s
+          Validate your idea
           <ArrowRight className="h-3.5 w-3.5" />
-        </button>
+        </a>
       </div>
       <p className="mt-2 text-xs text-muted-foreground/80">
         {Math.max(1, Math.round(words / 220))} min read · {p.ideas.length} items · Updated {updated}
@@ -256,7 +234,7 @@ export function TopCard({ idea, n, actionHref }: { idea: ListIdea; n: number; ac
               className={`${BTN} bg-slate-900 hover:bg-slate-700 h-12 rounded-lg px-6 text-base gap-2 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-md hover:shadow-lg hover:scale-[1.02] transition-all w-full sm:w-auto min-h-[44px]`}
             >
               <Lightbulb className="h-4 w-4" />
-              Validate This Idea Free
+              Read this idea
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
@@ -296,52 +274,10 @@ function MoreCard({ idea, n }: { idea: ListIdea; n: number }) {
             className={`${BTN} border bg-white hover:border-slate-400 shadow-sm h-10 rounded-lg px-3 text-sm flex-shrink-0 gap-1.5 text-primary border-primary/30 hover:bg-primary/10 min-h-[40px]`}
           >
             <Lightbulb className="h-4 w-4" />
-            <span className="hidden sm:inline">Validate</span>
+            <span className="hidden sm:inline">Read idea</span>
           </a>
         </div>
       </div>
-    </div>
-  );
-}
-
-function Cite({ title, slug, year }: { title: string; slug: string; year: string }) {
-  const styles = ["APA", "MLA", "Chicago", "BibTeX"] as const;
-  const [tab, setTab] = useState<(typeof styles)[number]>("APA");
-  const url = `https://businessidea.io/lists/${slug}`;
-  const text: Record<(typeof styles)[number], string> = {
-    APA: `BusinessIdea.io. (${year}). ${title}. BusinessIdea.io. Retrieved from ${url}`,
-    MLA: `"${title}." BusinessIdea.io, ${year}, ${url}.`,
-    Chicago: `BusinessIdea.io. "${title}." ${year}. ${url}.`,
-    BibTeX: `@misc{businessidea_${slug.replace(/-/g, "_")}, title={${title}}, author={BusinessIdea.io}, year={${year}}, url={${url}}}`,
-  };
-  return (
-    <div className="mb-12">
-      <section aria-labelledby="cite-heading" className="rounded-xl border border-border bg-muted/20 scroll-mt-24 p-5 lg:p-6" id="cite-this-page">
-        <div className="flex items-center gap-2 mb-3">
-          <Quote className="h-4 w-4 text-primary" />
-          <h3 className="text-sm font-semibold text-foreground" id="cite-heading">Cite this page</h3>
-        </div>
-        <div role="tablist" className="items-center justify-center rounded-lg bg-muted p-1 text-muted-foreground grid w-full grid-cols-4 mb-3 h-9">
-          {styles.map((s) => (
-            <button
-              key={s}
-              role="tab"
-              type="button"
-              aria-selected={tab === s}
-              onClick={() => setTab(s)}
-              className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-4 py-2 font-medium transition-all text-xs${tab === s ? " bg-background text-foreground shadow-sm font-semibold" : ""}`}
-            >
-              {s}
-            </button>
-          ))}
-        </div>
-        <div className="flex items-start gap-2">
-          <p className="flex-1 rounded-md border border-border bg-background p-3 font-mono text-xs leading-relaxed break-all">{text[tab]}</p>
-          <button type="button" onClick={() => void navigator.clipboard?.writeText(text[tab])} className="rounded-md border border-border px-3 py-2 text-xs font-medium">
-            Copy
-          </button>
-        </div>
-      </section>
     </div>
   );
 }
@@ -419,8 +355,6 @@ function ListPageView() {
         <div className="container mx-auto max-w-5xl">
           <Head p={p} title={title} words={words} updated={updated} />
           <Tldr p={p} title={title} month={month} />
-          <AuthorBox />
-          <ReviewMeta />
           <Intro p={p} />
           <Comparison ideas={top} />
           <div className="space-y-8 mb-12">
@@ -439,23 +373,16 @@ function ListPageView() {
               ))}
             </div>
           )}
-          <Cite title={title} slug={p.slug} year={String(d.getFullYear())} />
           <Faq faq={p.faq} />
-          <DeeperAnswers />
-          <PeopleAlsoSearch />
-          <ResourceDirectory />
           <RelatedLists p={p} />
-          <BeforeYouBuild />
-          <IntelligenceReport />
           <Conclusion p={p} />
         </div>
       </article>
-      <RelatedResources />
+      <section className="py-12 lg:py-16"><div className="mx-auto max-w-6xl px-4 md:px-6"><h2 className="text-2xl font-bold">Related resources</h2><div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{[["Browse all idea lists","/lists"],["Startup cost calculator","/calculator/startup-cost"],["Business idea validation guide","/startup-idea-validation"],["Compare two ideas","/startup-idea-comparison"],["Explore all tools","/tools"]].map(([t,h])=><a key={h} href={h} className="rounded-xl border bg-card p-4 font-semibold hover:border-primary/50">{t} <ArrowRight size={16} className="ml-1 inline text-primary"/></a>)}</div><h2 className="mt-10 text-2xl font-bold">People also search for</h2><div className="mt-4 flex flex-wrap gap-2">{p.siblings.slice(0,8).map(s=><a key={s.slug} href={`/lists/${s.slug}`} className="rounded-full border bg-card px-4 py-2 text-sm hover:border-primary/50">{s.name}</a>)}</div></div></section>
       <div className="sr-only">
         <h2>Quick Answer: {title}</h2>
         <p>{p.intro}</p>
       </div>
-      <MarketWatch />
     </V2Frame>
   );
 }
