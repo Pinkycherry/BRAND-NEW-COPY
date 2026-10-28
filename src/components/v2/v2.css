@@ -199,3 +199,15 @@
 @media (max-width: 860px) { .v2-footer .v2-footer-top { grid-template-columns: 1fr; gap: 32px; } .v2-footer .v2-footer-cats ul { columns: 2; } }
 
 @media (max-width:369px) { .mm-header .mm-login { display:none; } }
+
+/* Page sections are separated by spacing and background shifts, never rules. */
+.v2 main section,
+.v2 main > div,
+.v2 main article > header,
+.v2 main article > nav,
+.v2-footer,
+.v2-footer .v2-footer-bottom {
+  border-top-color: transparent !important;
+  border-bottom-color: transparent !important;
+}
+.v2 main hr { display: none !important; }
