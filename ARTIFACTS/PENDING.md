@@ -189,3 +189,5 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Blast radius: additive fields in the home server response and the home route only. No database row or global style change. Build and live checks required; shared frame and other route families are separate jobs.
 ### 28/10/2026 23:45 IST — Menu fallback removal
 - Shared header/footer and static menu snapshot changed. Check the live navigation after deployment, including that no menu anchor has `href="#"`; preserve valid route targets. No database change.
+### 28/10/2026 23:55 IST — Retire seller static list markup
+- The unused static list component has no importer and contains unsupported market claims and placeholder anchors. Remove it rather than retain unreachable seller content. Verify `/lists/<slug>` still renders after main deployment.

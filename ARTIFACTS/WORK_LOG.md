@@ -691,3 +691,5 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Verification: Vite build through `npm run build` passed. Bun executable is unavailable in this workspace; the script is the same `vite build` target. Live deployment still to check after the main push.
 ## 2026-10-28 23:45 IST — Order 4 menu links
 - Removed the `#` anchor fallback from V2Frame. Entries without a real route are omitted; the static purchased-page menu snapshot was regenerated from the same frame. `npm run build` passed (same Vite target as `bun run build`; Bun unavailable here). Main push and live menu check follow.
+## 2026-10-28 23:55 IST — Order 4 unused static list component
+- Removed `list-page-static.tsx`. No route imports it; the live `/lists/<slug>` page uses the database-backed React route. The retired file contained seller market news, US figures and `href="#"` links. Build and live representative list check follow.
