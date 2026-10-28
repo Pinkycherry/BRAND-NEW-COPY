@@ -1,3 +1,4 @@
+import { V2PageAsideCta, V2PageCard, V2PageHero, V2PageSection } from "@/components/v2/page-sections";
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
 import { ArrowUpRight, Clock } from "lucide-react";
@@ -79,11 +80,11 @@ function BlogArticle() {
     <GlassShell><div className="gl-page gl-article-page gl-blog-article">
       <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/blog">Blog</Link><span>/</span><span>{post.title}</span></nav>
       <article>
-        <header className="gl-article-hero">
+        <V2PageHero className="gl-article-hero">
           <p className="gh-eyebrow">{formatDate(post.date)} · <Clock size={15} aria-hidden="true" /> {post.readingMinutes} min read{post.categories[0] ? ` · ${post.categories[0]}` : ""}</p>
           <h1>{post.title}</h1><p>{post.excerpt}</p>
           <div className="gl-article-byline">Written by <Link to="/founders" hash={founderProfile(FOUNDER.name).slug}>{FOUNDER.name}</Link> · Reviewed by <Link to="/founders" hash={founderProfile(CO_FOUNDER.name).slug}>{CO_FOUNDER.name}</Link></div>
-        </header>
+        </V2PageHero>
         {post.image && <figure className="gl-featured-figure">
           <img src={post.image} alt={post.imageAlt ?? post.title} width={post.imageWidth ?? 1672} height={post.imageHeight ?? 941} loading="eager" fetchPriority="high" decoding="async" ref={hideImgIfBroken} />
           {post.imageCaption && <figcaption>{post.imageCaption}</figcaption>}
@@ -98,17 +99,17 @@ function BlogArticle() {
         </div>
       </article>
       <p className="gl-reading-room-link"><Link to="/business-idea-reading-room">Pair this story with a source startup guide <ArrowUpRight size={17}/></Link></p>
-      {related.length > 0 && <section className="gl-related-articles" aria-labelledby="more-articles">
+      {related.length > 0 && <V2PageSection className="gl-related-articles" aria-labelledby="more-articles">
         <p className="gh-eyebrow">KEEP READING</p><h2 id="more-articles">More from the journal.</h2>
-        <div className="gl-guide-grid">{related.map((item) => <article key={item.id} className="gl-guide-card">
+        <div className="gl-guide-grid">{related.map((item) => <V2PageCard key={item.id} className="gl-guide-card">
           {item.image && <Link to="/blog/$slug" params={{ slug: item.slug }} className="gl-guide-media" tabIndex={-1}><img src={item.image} alt={item.imageAlt ?? item.title} width={item.imageWidth ?? 1672} height={item.imageHeight ?? 941} loading="lazy" decoding="async" ref={hideImgIfBroken} /></Link>}
           <span className="gh-eyebrow">{formatDate(item.date)}</span>
           <h3><Link to="/blog/$slug" params={{ slug: item.slug }}>{item.title}</Link></h3>
           <p>{item.excerpt}</p>
           <Link to="/blog/$slug" params={{ slug: item.slug }} className="gl-idea-action">Read article <ArrowUpRight size={17} /></Link>
-        </article>)}</div>
-      </section>}
-      <aside className="gl-bottom-note"><div><p className="gh-eyebrow">TAKE THIS OFF THE PAGE</p><h2>{readingPathsFor(post.slug).question}</h2><p>{readingPathsFor(post.slug).intro}</p></div><Link to={readingPathsFor(post.slug).links[0].to as "/"} className="gh-button gh-button-primary">{readingPathsFor(post.slug).links[0].title} <ArrowUpRight size={17} /></Link></aside>
+        </V2PageCard>)}</div>
+      </V2PageSection>}
+      <V2PageAsideCta className="gl-bottom-note"><div><p className="gh-eyebrow">TAKE THIS OFF THE PAGE</p><h2>{readingPathsFor(post.slug).question}</h2><p>{readingPathsFor(post.slug).intro}</p></div><Link to={readingPathsFor(post.slug).links[0].to as "/"} className="gh-button gh-button-primary">{readingPathsFor(post.slug).links[0].title} <ArrowUpRight size={17} /></Link></V2PageAsideCta>
     </div></GlassShell>
   </>;
 }

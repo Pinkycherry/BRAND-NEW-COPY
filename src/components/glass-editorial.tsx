@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { useRouterState } from "@tanstack/react-router";
 
 import { GlassShell } from "@/components/glass-shell";
+import { V2PageHero, V2PageSection, V2PageAsideCta } from "@/components/v2/page-sections";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import "@/components/glass-library.css";
 
@@ -30,11 +31,11 @@ export function ContentPage({
     <GlassShell>
       <div className="gl-page gl-editorial">
         <nav className="gl-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>{eyebrow}</span></nav>
-        <header className="gl-editorial-hero">
+        <V2PageHero className="gl-editorial-hero">
           <p className="gh-eyebrow">{eyebrow.toUpperCase()}</p>
           <h1>{title}{highlight && <> <em>{highlight}</em></>}</h1>
           <p>{intro}</p>
-        </header>
+        </V2PageHero>
         <Tone.Provider value={tone}><div className="gl-editorial-stack">{sections.map((child, index) => <div className="gl-editorial-unit" key={index}>{child}{((tone === "document" || tone === "notice") ? index === sections.length - 1 : (index === 1 || (index === 4 && sections.length > 6))) && <EditorialNext />}</div>)}</div></Tone.Provider>
       </div>
     </GlassShell>
@@ -42,7 +43,7 @@ export function ContentPage({
 }
 
 function EditorialNext() {
-  return <aside className="gl-editorial-next" aria-label="Explore more at BusinessIdea.io">
+  return <V2PageAsideCta className="gl-editorial-next" aria-label="Explore more at BusinessIdea.io">
     <div><p className="gh-eyebrow">FOLLOW THE NEXT QUESTION</p><h2>Keep your momentum.</h2><p>Choose a real page that helps you turn what you have read into a decision.</p></div>
     <div className="gl-editorial-next-links">
       <Link to="/blueprints"><strong>Read a blueprint</strong><span>Explore published ideas →</span></Link>
@@ -50,14 +51,14 @@ function EditorialNext() {
       <Link to="/startup-guides"><strong>Learn the method</strong><span>Open startup guides →</span></Link>
       <Link to="/founder-glossary"><strong>Understand a term</strong><span>Browse the glossary →</span></Link>
     </div>
-  </aside>;
+  </V2PageAsideCta>;
 }
 
 export function Section({ heading, children }: { heading: string; children: ReactNode }) {
   const tone = useContext(Tone);
-  return <section className={`gl-editorial-section gl-editorial-${tone}`}>
+  return <V2PageSection className={`gl-editorial-section gl-editorial-${tone}`}>
     <h2>{heading}</h2><div className="gl-editorial-copy">{children}</div>
-  </section>;
+  </V2PageSection>;
 }
 
 export function Bullets({ items }: { items: string[] }) {

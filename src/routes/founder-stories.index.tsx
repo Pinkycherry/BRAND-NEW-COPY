@@ -1,3 +1,4 @@
+import { V2PageAsideCta, V2PageCard, V2PageHero, V2PageSection } from "@/components/v2/page-sections";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { GlassShell } from "@/components/glass-shell";
@@ -26,11 +27,11 @@ function FounderStoriesIndexPage() {
     ]} />
     <GlassShell><div className="gl-page">
       <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><span>Founder stories</span></nav>
-      <header className="gl-hero"><div className="gl-hero-copy"><p className="gh-eyebrow">REAL OPERATOR BREAKDOWNS</p><h1>Stories with <em>the facts behind them.</em></h1><p>We publish founder stories after the operator and numbers have been checked. There are no verified stories ready yet.</p><div className="gl-hero-stats"><span><strong>{CASE_STUDIES.length}</strong> published stories</span></div></div><figure className="gl-image-hero"><img src={image.src} alt={image.alt} width={1280} height={549} loading="eager" fetchPriority="high" /><figcaption>{image.description}</figcaption></figure></header>
-      <section className="gl-index" aria-labelledby="stories-title"><div className="gl-section-heading"><div><p className="gh-eyebrow">THE COLLECTION</p><h2 id="stories-title">Founder stories.</h2></div></div>
-        {CASE_STUDIES.length ? <div className="gl-resource-grid">{CASE_STUDIES.map((study) => <article key={study.slug} className="gl-resource-card"><p className="gh-eyebrow">{study.story_theme}</p><h3>{study.title}</h3><p>{study.solution_and_offer}</p><Link className="gl-resource-foot" to="/founder-stories/$slug" params={{ slug: study.slug }}>Read story <ArrowUpRight size={18} /></Link></article>)}</div> : <div className="gl-empty gl-story-empty"><h3>Checked stories are being prepared.</h3><p>Earlier illustrative examples were removed. We will add real operator breakdowns when we can verify the details.</p><Link to="/startup-guides">Read startup guides <ArrowUpRight size={18} /></Link></div>}
-      </section>
-      <aside className="gl-bottom-note"><div><p className="gh-eyebrow">IN THE MEANTIME</p><h2>Explore a researched idea.</h2><p>The library shows buyers, costs, risks and first steps for published blueprints.</p></div><Link to="/browse" className="gh-button gh-button-primary">Browse ideas <ArrowUpRight size={18} /></Link></aside>
+      <V2PageHero className="gl-hero"><div className="gl-hero-copy"><p className="gh-eyebrow">REAL OPERATOR BREAKDOWNS</p><h1>Stories with <em>the facts behind them.</em></h1><p>We publish founder stories after the operator and numbers have been checked. There are no verified stories ready yet.</p><div className="gl-hero-stats"><span><strong>{CASE_STUDIES.length}</strong> published stories</span></div></div><figure className="gl-image-hero"><img src={image.src} alt={image.alt} width={1280} height={549} loading="eager" fetchPriority="high" /><figcaption>{image.description}</figcaption></figure></V2PageHero>
+      <V2PageSection className="gl-index" aria-labelledby="stories-title"><div className="gl-section-heading"><div><p className="gh-eyebrow">THE COLLECTION</p><h2 id="stories-title">Founder stories.</h2></div></div>
+        {CASE_STUDIES.length ? <div className="gl-resource-grid">{CASE_STUDIES.map((study) => <V2PageCard key={study.slug} className="gl-resource-card"><p className="gh-eyebrow">{study.story_theme}</p><h3>{study.title}</h3><p>{study.solution_and_offer}</p><Link className="gl-resource-foot" to="/founder-stories/$slug" params={{ slug: study.slug }}>Read story <ArrowUpRight size={18} /></Link></V2PageCard>)}</div> : <div className="gl-empty gl-story-empty"><h3>Checked stories are being prepared.</h3><p>Earlier illustrative examples were removed. We will add real operator breakdowns when we can verify the details.</p><Link to="/startup-guides">Read startup guides <ArrowUpRight size={18} /></Link></div>}
+      </V2PageSection>
+      <V2PageAsideCta className="gl-bottom-note"><div><p className="gh-eyebrow">IN THE MEANTIME</p><h2>Explore a researched idea.</h2><p>The library shows buyers, costs, risks and first steps for published blueprints.</p></div><Link to="/browse" className="gh-button gh-button-primary">Browse ideas <ArrowUpRight size={18} /></Link></V2PageAsideCta>
     </div></GlassShell>
   </>;
 }

@@ -1,3 +1,4 @@
+import { V2PageHero, V2PageSection } from "@/components/v2/page-sections";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { queryOptions } from "@tanstack/react-query";
 import { useState } from "react";
@@ -58,7 +59,7 @@ export const Route = createFileRoute("/idea/$slug")({
 });
 
 function IdeaSection({ id, eyebrow, title, children }: { id: string; eyebrow: string; title: string; children: React.ReactNode }) {
-  return <section id={id} className="gl-idea-section" aria-labelledby={`${id}-title`}><p className="gh-eyebrow">{eyebrow}</p><h2 id={`${id}-title`}>{title}</h2>{children}</section>;
+  return <V2PageSection id={id} className="gl-idea-section" aria-labelledby={`${id}-title`}><p className="gh-eyebrow">{eyebrow}</p><h2 id={`${id}-title`}>{title}</h2>{children}</V2PageSection>;
 }
 
 function IdeaPage() {
@@ -84,7 +85,7 @@ function IdeaPage() {
   };
   return <GlassShell><div className="gl-page gl-idea-page">
     <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/browse">Explore</Link>{where && <><span>/</span><Link to="/category/$categorySlug" params={{ categorySlug: where.category.slug }}>{where.category.short}</Link><span>/</span><Link to="/category/$categorySlug/$subcategorySlug" params={{ categorySlug: where.category.slug, subcategorySlug: where.subcategory.slug }}>{where.subcategory.name.replace(/ Business Ideas$/i, "")}</Link></>}<span>/</span><span>Idea</span></nav>
-    <header className="gl-idea-hero"><div><p className="gh-eyebrow">A PUBLISHED IDEA · {idea.code}</p><h1>{idea.title}</h1><p className="gl-idea-hook">{idea.hook}</p><ul className="gl-chips">{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul><p className="gl-idea-summary">{idea.summary}</p><div className="gl-idea-actions"><a href="#validate" className="gh-button gh-button-primary">Validate this idea <ArrowUpRight size={17} /></a><a href="#what" className="gh-button gh-button-secondary">Read the blueprint</a><button type="button" className="gh-button gh-button-secondary" onClick={share}>{copied ? <Check size={17} /> : <Copy size={17} />}{copied ? "Link copied" : "Copy link"}</button></div></div><figure className="gl-idea-feature"><img src={data.image.src} alt={data.image.alt} width={1280} height={549} /><figcaption>{where ? <Link to="/category/$categorySlug" params={{ categorySlug: where.category.slug }}>Explore more {where.category.short} paths <ArrowUpRight size={16} aria-hidden="true" /></Link> : "Artwork for this business idea category"}</figcaption></figure></header>
+    <V2PageHero className="gl-idea-hero"><div><p className="gh-eyebrow">A PUBLISHED IDEA · {idea.code}</p><h1>{idea.title}</h1><p className="gl-idea-hook">{idea.hook}</p><ul className="gl-chips">{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul><p className="gl-idea-summary">{idea.summary}</p><div className="gl-idea-actions"><a href="#validate" className="gh-button gh-button-primary">Validate this idea <ArrowUpRight size={17} /></a><a href="#what" className="gh-button gh-button-secondary">Read the blueprint</a><button type="button" className="gh-button gh-button-secondary" onClick={share}>{copied ? <Check size={17} /> : <Copy size={17} />}{copied ? "Link copied" : "Copy link"}</button></div></div><figure className="gl-idea-feature"><img src={data.image.src} alt={data.image.alt} width={1280} height={549} /><figcaption>{where ? <Link to="/category/$categorySlug" params={{ categorySlug: where.category.slug }}>Explore more {where.category.short} paths <ArrowUpRight size={16} aria-hidden="true" /></Link> : "Artwork for this business idea category"}</figcaption></figure></V2PageHero>
     <div className="gl-idea-layout"><article className="gl-idea-body">
       <TopCard idea={{ ...idea, updated_at: null }} n={1} actionHref="#validate" />
       {idea.what_it_is && <IdeaSection id="what" eyebrow="THE IDEA" title="What this business is"><p>{idea.what_it_is}</p></IdeaSection>}

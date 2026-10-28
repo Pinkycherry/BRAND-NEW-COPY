@@ -1,3 +1,4 @@
+import { V2PageAsideCta, V2PageHero } from "@/components/v2/page-sections";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -56,7 +57,7 @@ function GuidePage() {
     ]} />
     <GlassShell><div className="gl-page gl-article-page">
       <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/startup-guides">Guides</Link><span>/</span><span>{guide.title}</span></nav>
-      <article><header className="gl-article-hero"><p className="gh-eyebrow">{guide.category} · <Clock size={15} aria-hidden="true" /> {guide.readTime}</p><h1>{guide.title}</h1><p>{guide.description}</p></header>
+      <article><V2PageHero className="gl-article-hero"><p className="gh-eyebrow">{guide.category} · <Clock size={15} aria-hidden="true" /> {guide.readTime}</p><h1>{guide.title}</h1><p>{guide.description}</p></V2PageHero>
         {art && <figure className="gl-featured-figure"><img src={art.src} alt={art.alt} width={art.width} height={art.height} loading="eager" fetchPriority="high" decoding="async" ref={hideImgIfBroken} /><figcaption>{art.description}</figcaption></figure>}
         <div className="gl-reading-layout"><div className="gl-reading-main">
         {guide.keyTakeaways.length > 0 && <aside className="gl-takeaways"><p className="gh-eyebrow">THE MAIN POINTS</p><h2>Keep these in mind.</h2><ul>{guide.keyTakeaways.map((point, i) => <li key={i}><CheckCircle2 size={19} aria-hidden="true" />{point}</li>)}</ul></aside>}
@@ -67,7 +68,7 @@ function GuidePage() {
       </article>
       <p className="gl-reading-room-link"><Link to="/business-idea-reading-room">See this method beside an original founder article <ArrowUpRight size={17}/></Link></p>
       <nav className="gl-article-nav" aria-label="More guides">{previous && <Link to="/startup-guides/$slug" params={{ slug: previous.slug }}><span>← Previous guide</span><strong>{previous.title}</strong></Link>}{next && <Link to="/startup-guides/$slug" params={{ slug: next.slug }}><span>Next guide →</span><strong>{next.title}</strong></Link>}</nav>
-      <aside className="gl-bottom-note"><div><p className="gh-eyebrow">BEFORE YOU LEAVE THIS GUIDE</p><h2>{readingPathsFor(guide.slug).question}</h2><p>{readingPathsFor(guide.slug).intro}</p></div><Link to={readingPathsFor(guide.slug).links[0].to as "/"} className="gh-button gh-button-primary">{readingPathsFor(guide.slug).links[0].title} <ArrowUpRight size={17} /></Link></aside>
+      <V2PageAsideCta className="gl-bottom-note"><div><p className="gh-eyebrow">BEFORE YOU LEAVE THIS GUIDE</p><h2>{readingPathsFor(guide.slug).question}</h2><p>{readingPathsFor(guide.slug).intro}</p></div><Link to={readingPathsFor(guide.slug).links[0].to as "/"} className="gh-button gh-button-primary">{readingPathsFor(guide.slug).links[0].title} <ArrowUpRight size={17} /></Link></V2PageAsideCta>
     </div></GlassShell>
   </>;
 }
