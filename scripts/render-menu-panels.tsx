@@ -6,9 +6,10 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { createElement } from "react";
 
-import { Footer, LearnPanel, ToolsPanel, ValidatePanel } from "../src/components/v2/frame";
+import { Header, Footer, LearnPanel, ToolsPanel, ValidatePanel } from "../src/components/v2/frame";
 
 const out = {
+  header: renderToStaticMarkup(createElement(Header)),
   Validate: renderToStaticMarkup(createElement(ValidatePanel)),
   Learn: renderToStaticMarkup(createElement(LearnPanel)),
   "Free Tools": renderToStaticMarkup(createElement(ToolsPanel)),

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { ChevronDown, Menu, Search, X } from "lucide-react";
+import { ArrowRight, BookOpen, Calculator, ChartNoAxesCombined, ChevronDown, ClipboardCheck, Clock, Coins, Menu, NotebookPen, Rocket, Search, Wallet, X, type LucideIcon } from "lucide-react";
 
 import { TAXONOMY } from "@/data/taxonomy";
 
@@ -7,9 +7,8 @@ import "./v2.css";
 
 /**
  * Header and footer of the purchased page architecture, converted to React.
- * Names, menus and sections are as supplied (markup from the page files,
- * menu contents from the founder's screenshots). Framework only: every link
- * is inert (#), no images, no currency amounts, no US/UK items.
+ * Purchased layout with approved BusinessIdea.io routes and taxonomy.
+ * Also rendered to static markup for the purchased HTML pages.
  */
 
 const NO_LINK = "#";
@@ -25,7 +24,7 @@ function A({ children, className, href }: { children: ReactNode; className?: str
 function Banner({ tone = "", title, sub, href }: { tone?: string; title: string; sub: string; href?: string }) {
   return (
     <A className={`mm-banner ${tone}`} href={href}>
-      <i className="ic" />
+      <i className="ic" aria-hidden="true"><BookOpen size={22} /></i>
       <div>
         <b>{title}</b>
         <span>{sub}</span>
@@ -52,8 +51,8 @@ function Links({ items, className = "mm-list" }: { items: (string | [string, str
 function Hero({ tone = "", badge, badgeTone = "", icon, title, body, cta, href }: { tone?: string; badge: string; badgeTone?: string; icon: string; title: string; body: string[]; cta: string; href: string }) {
   return (
     <div className={`mm-hero ${tone}`}>
-      <span className={`mm-badge ${badgeTone}`}>{badge}</span>
-      <div className="ic">{icon}</div>
+      <div className="mm-hero-top"><div className="ic" aria-hidden="true">{icon}</div>
+      <span className={`mm-badge ${badgeTone}`}>{badge}</span></div>
       <h4>{title}</h4>
       {body.map((p) => (
         <p key={p}>{p}</p>
@@ -74,10 +73,19 @@ function cat(n: number, label?: string): [string, string] {
 /** Our broad idea categories for Learn > Startup ideas, from the approved taxonomy. */
 const OUR_IDEAS: [string, string][] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => cat(n));
 
+const TOOL_ICONS: Record<string, LucideIcon> = {
+  "/calculator/startup-cost": Wallet, "/calculator/break-even": Calculator,
+  "/calculator/roi": ChartNoAxesCombined, "/calculator/funding-needed": Coins,
+  "/unit-economics-india": Calculator, "/startup-cash-flow-india": ChartNoAxesCombined,
+  "/business-pricing-india": Coins, "/startup-launch-plan-india": Rocket,
+  "/business-idea-research-india": Search, "/business-idea-time-fit": Clock,
+  "/founder-decision-journal": NotebookPen,
+};
 function Tile({ label, href }: { label: string; href: string }) {
+  const Icon = TOOL_ICONS[href] ?? ClipboardCheck;
   return (
     <A className="mm-tile" href={href}>
-      <i />
+      <i aria-hidden="true"><Icon size={28} strokeWidth={1.6} /></i>
       {label}
     </A>
   );
@@ -110,7 +118,7 @@ export function ValidatePanel() {
           ]}
         />
       </div>
-      <div className="mm-cols" style={{ gridTemplateColumns: "1fr 1fr" }}>
+      <div className="mm-cols" style={{ gridTemplateColumns: "repeat(2,minmax(0,1fr))" }}>
         <div>
           <div className="mm-label mm-dot" style={{ marginTop: 0 }}>Founder tools (11)</div>
           <div className="mm-tiles">
@@ -126,7 +134,7 @@ export function ValidatePanel() {
             <Tile label="Time Fit" href="/business-idea-time-fit" />
             <Tile label="Decision Journal" href="/founder-decision-journal" />
             <A className="mm-tile" href="/calculator">
-              <i className="mm-tile-more">→</i>VIEW ALL<br />calculators →
+              <i className="mm-tile-more" aria-hidden="true"><ArrowRight size={28} /></i>VIEW ALL<br />calculators →
             </A>
           </div>
         </div>
@@ -139,7 +147,7 @@ export function ValidatePanel() {
             <Pdf title="When to Pivot or Stop" sub="Reading the evidence" href="/business-idea-pivot-or-stop" />
             <Pdf title="Your First Customer" sub="Reach one real buyer" href="/first-customer-india" />
           </div>
-          <div className="mm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)", gap: 12 }}>
+          <div className="mm-cols" style={{ gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: 12 }}>
             <div>
               <div className="mm-label" style={{ margin: "0 0 4px" }}>By place</div>
               <Links items={[cat(1), cat(5), cat(9, "Small Town"), cat(10), cat(4)]} />
@@ -177,7 +185,7 @@ export function LearnPanel() {
           ]}
         />
       </div>
-      <div className="mm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
+      <div className="mm-cols" style={{ gridTemplateColumns: "repeat(3,minmax(0,1fr))" }}>
         <div>
           <div className="mm-label mm-dot o" style={{ marginTop: 0 }}>Startup ideas</div>
           <Banner tone="o" title="All Idea Lists" sub="Every business idea list in one place" href="/lists" />
@@ -238,7 +246,7 @@ export function ToolsPanel() {
           ]}
         />
       </div>
-      <div className="mm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
+      <div className="mm-cols" style={{ gridTemplateColumns: "repeat(3,minmax(0,1fr))" }}>
         <div>
           <div className="mm-label mm-dot g" style={{ marginTop: 0 }}>Calculators</div>
           <Banner tone="g" title="All Calculators" sub="Free money calculators for founders" href="/calculator" />
@@ -298,49 +306,45 @@ const MEGA = [
 ];
 
 function Logo({ footer = false }: { footer?: boolean }) {
-  return (
-    <A className="flex items-center gap-3 cursor-pointer group">
-      <span
-        className={
-          footer
-            ? "text-base sm:text-lg tracking-tight text-slate-900 whitespace-nowrap font-sans font-bold"
-            : "text-display-lg tracking-tight transition-all duration-500 whitespace-nowrap shrink-0 hidden [@media(min-width:380px)]:inline text-base sm:text-lg text-slate-900"
-        }
-      >
-        Business<span className="text-brand-500">Idea</span>.io
-      </span>
-    </A>
-  );
+  return <a className={footer ? "mm-brand mm-brand-footer" : "mm-brand"} href="/" aria-label="BusinessIdea.io home">
+    Business<span>Idea</span>.io
+  </a>;
 }
 
+/** Same markup is rendered by React and scripts/render-menu-panels.tsx.
+ * Raw pages attach the matching disclosure events in bought/menus.html.
+ * Keep every panel in the DOM so aria-controls always resolves. */
 export function Header({ active: _active }: { active?: string | undefined }) {
   const [open, setOpen] = useState<number | null>(null);
   const [mobile, setMobile] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const ref = useRef<HTMLDivElement>(null);
-
+  const ref = useRef<HTMLElement>(null);
+  const pinned = useRef(false);
   const cancel = () => {
     if (timer.current) clearTimeout(timer.current);
     timer.current = null;
   };
-  const show = (i: number) => {
-    cancel();
-    setOpen(i);
-  };
+  const show = (i: number) => { cancel(); setOpen(i); };
   const hideSoon = () => {
     cancel();
-    timer.current = setTimeout(() => setOpen(null), 150);
+    timer.current = setTimeout(() => {
+      // Keyboard focus must not disappear when the pointer leaves the menu.
+      if (!pinned.current && !ref.current?.querySelector(".mm-panel:focus-within, .mm-disclosure:focus-within")) setOpen(null);
+    }, 180);
   };
-
   useEffect(() => {
     const out = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(null);
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        pinned.current = false; setOpen(null); setMobile(false);
+      }
     };
     const esc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setOpen(null);
-        setMobile(false);
-      }
+      if (e.key !== "Escape") return;
+      const root = ref.current;
+      const expanded = root?.querySelector<HTMLButtonElement>('.mm-desktop button[aria-expanded="true"]');
+      if (expanded) expanded.focus();
+      else if (root?.querySelector('.mm-mobile-toggle[aria-expanded="true"]')) root.querySelector<HTMLButtonElement>('.mm-mobile-toggle')?.focus();
+      cancel(); pinned.current = false; setOpen(null); setMobile(false);
     };
     document.addEventListener("mousedown", out);
     document.addEventListener("keydown", esc);
@@ -350,74 +354,46 @@ export function Header({ active: _active }: { active?: string | undefined }) {
       cancel();
     };
   }, []);
-
-  const Panel = open === null ? null : MEGA[open]?.Panel;
-
   return (
-    <div ref={ref} className="v2">
-      <nav className="fixed top-0 w-full z-50 transition-all duration-500 py-4 pointer-events-none">
-        <div className="mx-auto flex items-center justify-between rounded-3xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] pointer-events-auto relative overflow-visible glass-nav-scrolled max-w-6xl px-6 h-16">
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-gradient-to-r from-transparent via-brand-500 to-transparent transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] w-3/4 opacity-100" />
-          <Logo />
-          <div className="hidden lg:flex items-center gap-2 text-sm font-medium text-slate-600">
-            {MEGA.map((m, i) => (
-              <div key={m.label} data-mega-menu="true" onMouseEnter={() => show(i)} onMouseLeave={hideSoon}>
-                <button
-                  type="button"
-                  aria-expanded={open === i}
-                  aria-haspopup="true"
-                  onClick={() => (open === i ? setOpen(null) : show(i))}
-                  className={`px-4 py-2 rounded-full hover:bg-slate-100 hover:text-brand-600 transition-all flex items-center gap-1 relative${open === i ? " text-brand-600 bg-slate-100" : ""}`}
-                >
-                  {m.label}
-                  <ChevronDown className={`h-4 w-4 opacity-50 transition-transform duration-300${open === i ? " rotate-180" : ""}`} />
-                  {open === i && <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-brand-500 rounded-full" />}
-                </button>
-              </div>
-            ))}
-            <A className="px-4 py-2 rounded-full hover:bg-slate-100 hover:text-brand-600 transition-all relative">Pricing</A>
-            <button type="button" aria-label="Search (⌘K)" title="Search (⌘K)" className="ml-1 p-2 rounded-full hover:bg-slate-100 hover:text-brand-600 transition-all">
-              <Search className="h-4 w-4" />
+    <header ref={ref} className="mm-header" data-header-version="2026-10-28">
+      <nav className="mm-nav" aria-label="Main navigation">
+        <Logo />
+        <div className="mm-desktop">
+          {MEGA.map((m, i) => <div key={m.label} className="mm-disclosure" onMouseEnter={() => show(i)} onMouseLeave={hideSoon}>
+            <button id={`mm-trigger-${i}`} type="button" aria-expanded={open === i} aria-controls={`mm-panel-${i}`}
+              onClick={(e) => { cancel(); pinned.current = true; setOpen(e.detail === 0 && open === i ? null : i); }}
+              onKeyDown={(e) => { if(e.key === "ArrowDown") { e.preventDefault(); pinned.current = true; show(i); requestAnimationFrame(() => ref.current?.querySelector<HTMLAnchorElement>(`#mm-panel-${i} a`)?.focus()); } }}>
+              {m.label}<ChevronDown size={16} aria-hidden="true" />
             </button>
-          </div>
-          <div className="flex items-center gap-4">
-            <A className="hidden md:block text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Login</A>
-            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 min-h-[44px] touch-manipulation active:scale-[0.98] active:opacity-90 text-white h-11 btn-primary px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm shadow-md hover:shadow-lg transition-all font-semibold">
-              <span className="sm:hidden">Sign up</span>
-              <span className="hidden sm:inline">Get Report</span>
-            </button>
-            <button type="button" aria-label="Search" className="lg:hidden text-slate-900 hover:bg-slate-100 p-2 rounded-lg transition-colors">
-              <Search className="h-5 w-5" />
-            </button>
-            <button
-              className="lg:hidden text-slate-900 hover:bg-slate-100 p-2 relative z-50 rounded-lg transition-colors"
-              aria-label={mobile ? "Close navigation menu" : "Open navigation menu"}
-              type="button"
-              aria-expanded={mobile}
-              onClick={() => setMobile(!mobile)}
-            >
-              {mobile ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
+          </div>)}
+          <a href="/pricing">Pricing</a>
+          <a className="mm-search" href="/search" aria-label="Search"><Search size={19} aria-hidden="true" /></a>
+        </div>
+        <div className="mm-actions">
+          <a className="mm-login" href="/sign-in">Login</a>
+          <a className="mm-report" href="/product">Get Report</a>
+          <a className="mm-mobile-search" href="/search" aria-label="Search"><Search size={20} aria-hidden="true" /></a>
+          <button className="mm-mobile-toggle" type="button" aria-label={mobile ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={mobile} aria-controls="mm-mobile" onClick={() => {setMobile(!mobile);setOpen(null);}}>
+            <Menu className="mm-open-icon" size={23} aria-hidden="true"/><X className="mm-close-icon" size={23} aria-hidden="true"/>
+          </button>
         </div>
       </nav>
-
-      {Panel && (
-        <div className="mm-panel open" onMouseEnter={cancel} onMouseLeave={hideSoon}>
-          <Panel />
-        </div>
-      )}
-
-      {mobile && (
-        <div className="lg:hidden fixed inset-x-4 top-24 z-40 glass-nav-scrolled rounded-2xl p-5 max-h-[75vh] overflow-y-auto">
-          {MEGA.map((m) => (
-            <A key={m.label} className="block py-2 text-sm font-semibold text-slate-800">{m.label}</A>
-          ))}
-          <A className="block py-2 text-sm font-semibold text-slate-800">Pricing</A>
-          <A className="block py-2 text-sm font-semibold text-slate-800">Login</A>
-        </div>
-      )}
-    </div>
+      {MEGA.map(({label, Panel}, i) => <div key={label} id={`mm-panel-${i}`} className={`mm-panel${open === i ? " open" : ""}`}
+        aria-labelledby={`mm-trigger-${i}`} hidden={open !== i} onMouseEnter={cancel} onMouseLeave={hideSoon}
+        onBlur={(e) => { if (!ref.current?.contains(e.relatedTarget as Node | null)) setOpen(null); }}>
+        <Panel />
+      </div>)}
+      <nav id="mm-mobile" className="mm-mobile" aria-label="Mobile navigation" hidden={!mobile}>
+        {MEGA.map(({label, Panel}) => <details key={label}>
+          <summary>{label}<ChevronDown size={18} aria-hidden="true" /></summary>
+          <div className="mm-mobile-content"><Panel /></div>
+        </details>)}
+        <a className="mm-mobile-link" href="/search">Search</a>
+        <a className="mm-mobile-link" href="/pricing">Pricing</a>
+        <a className="mm-mobile-link" href="/sign-in">Login</a>
+      </nav>
+    </header>
   );
 }
 

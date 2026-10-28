@@ -16,3 +16,7 @@ This site-build role is separate from the older content-writing assignment in `d
 
 ## Mandatory founder correction — 24 October 2026 IST
 Before changing any layout or creating a page, research the reference architecture, current rendered page and relevant primary UX/SEO guidance. Record the finding and hypothesis in `ARTIFACTS/PENDING.md` and `ARTIFACTS/WORK_LOG.md`. No AI slop, generic boilerplate, competitor content copying, pervasive visible section numbering, Gemini-like star motifs or huge empty headings. The founder requests 50–60 **distinct substantive page/collection destinations**, not 60 repeated calculator links per page. Keep every founder input pending until live screenshot and destination/phone/SEO evidence closes it. A green build is insufficient.
+
+## Founder correction — 28/10/2026 07:49 IST
+
+Never start or deploy to a local server. Every commit goes directly to `main`; no branches or PRs. Run offline build/static checks, push main, and verify on https://bbinewcopy.vercel.app/ only. This supersedes earlier local-preview guidance.
