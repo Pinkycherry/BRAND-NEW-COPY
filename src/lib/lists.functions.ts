@@ -1,70 +1,126 @@
 import { createServerFn } from "@tanstack/react-start";
+import { z } from "zod";
 
 import { dbOrNull } from "./db";
 
-/**
- * Live counts for the /lists hub. Every number on that page comes from here,
- * read from published rows, so nothing on the page is typed by hand.
- */
-export type ListsCounts = {
-  total: number;
-  byCategory: Record<string, number>;
-  bySubcategory: Record<string, number>;
-  byBand: Record<string, number>;
-  /** Named combinations used by the budget cards, keyed by card id. */
-  combos: Record<string, number>;
-};
-
-type Row = {
-  category_code: string;
-  subcategory_code: string;
+/** One idea as shown on a list page. */
+export type ListIdea = {
+  slug: string;
+  title: string;
+  hook: string | null;
+  summary: string | null;
+  who_pays_you: string | null;
+  how_money_comes: string | null;
+  what_you_need: string | null;
+  what_hurts: string | null;
+  verdict: string | null;
   investment_band: string | null;
-  gender_fit: string | null;
-  life_stage: string[] | null;
-  place: string[] | null;
-  work_mode: string | null;
+  time_needed: string | null;
+  skill_level: string | null;
+  updated_at: string | null;
 };
 
-const EMPTY: ListsCounts = { total: 0, byCategory: {}, bySubcategory: {}, byBand: {}, combos: {} };
-
-const has = (list: string[] | null, value: string) => !!list && list.includes(value);
-const lowCost = (r: Row) => r.investment_band === "zero" || r.investment_band === "under_25k";
-
-/** Budget-card filters. Each id is used once in src/routes/lists.tsx. */
-const COMBOS: Record<string, (r: Row) => boolean> = {
-  "zero-women": (r) => r.investment_band === "zero" && r.gender_fit === "women",
-  "zero-students": (r) => r.investment_band === "zero" && has(r.life_stage, "student"),
-  "zero-online": (r) => r.investment_band === "zero" && r.work_mode === "online",
-  "low-home": (r) => lowCost(r) && r.work_mode === "home",
-  "low-homemakers": (r) => lowCost(r) && has(r.life_stage, "homemaker"),
-  "low-village": (r) => lowCost(r) && has(r.place, "village"),
+export type ListPage = {
+  code: string;
+  name: string;
+  slug: string;
+  intro: string | null;
+  howToChoose: string | null;
+  faq: { q: string; a: string }[];
+  categoryName: string;
+  ideas: ListIdea[];
+  siblings: { name: string; slug: string; count: number }[];
+  totalIdeas: number;
 };
 
-export const getListsCounts = createServerFn({ method: "GET" }).handler(
-  async (): Promise<ListsCounts> => {
+export type ListsHub = {
+  total: number;
+  categories: { code: string; name: string; subs: { code: string; name: string; slug: string; count: number }[] }[];
+};
+
+const IDEA_COLUMNS =
+  "slug,title,hook,summary,who_pays_you,how_money_comes,what_you_need,what_hurts,verdict,investment_band,time_needed,skill_level,updated_at";
+
+/** Published idea counts per subcategory code, read in pages of 1,000. */
+async function subcategoryCounts(client: NonNullable<ReturnType<typeof dbOrNull>>) {
+  const counts: Record<string, number> = {};
+  for (let from = 0; from < 100000; from += 1000) {
+    const { data, error } = await client
+      .from("ideas")
+      .select("subcategory_code")
+      .eq("status", "published")
+      .order("code", { ascending: true })
+      .range(from, from + 999);
+    if (error || !data) break;
+    for (const r of data as { subcategory_code: string }[]) counts[r.subcategory_code] = (counts[r.subcategory_code] ?? 0) + 1;
+    if (data.length < 1000) break;
+  }
+  return counts;
+}
+
+/** Every category that has published ideas, with its subcategories and counts. */
+export const getListsHub = createServerFn({ method: "GET" }).handler(async (): Promise<ListsHub> => {
+  const client = dbOrNull();
+  if (!client) return { total: 0, categories: [] };
+  const counts = await subcategoryCounts(client);
+  const [{ data: cats }, { data: subs }] = await Promise.all([
+    client.from("categories").select("code,name").order("code"),
+    client.from("subcategories").select("code,category_code,name,slug").order("code"),
+  ]);
+  const byCat = new Map<string, ListsHub["categories"][number]>();
+  for (const c of (cats ?? []) as { code: string; name: string }[]) byCat.set(c.code, { code: c.code, name: c.name, subs: [] });
+  for (const s of (subs ?? []) as { code: string; category_code: string; name: string; slug: string }[]) {
+    const n = counts[s.code] ?? 0;
+    if (n > 0) byCat.get(s.category_code)?.subs.push({ code: s.code, name: s.name, slug: s.slug, count: n });
+  }
+  return {
+    total: Object.values(counts).reduce((a, b) => a + b, 0),
+    categories: [...byCat.values()].filter((c) => c.subs.length > 0),
+  };
+});
+
+/** One subcategory list page by its slug, or null. */
+export const getListPage = createServerFn({ method: "GET" })
+  .inputValidator((input: unknown) => z.object({ slug: z.string().min(1).max(200) }).parse(input))
+  .handler(async ({ data }): Promise<ListPage | null> => {
     const client = dbOrNull();
-    if (!client) return EMPTY;
-    const rows: Row[] = [];
-    const PAGE = 1000;
-    for (let from = 0; from < 50000; from += PAGE) {
-      const { data, error } = await client
-        .from("ideas")
-        .select("category_code,subcategory_code,investment_band,gender_fit,life_stage,place,work_mode")
-        .eq("status", "published")
-        .order("code", { ascending: true })
-        .range(from, from + PAGE - 1);
-      if (error) return EMPTY;
-      rows.push(...((data ?? []) as Row[]));
-      if (!data || data.length < PAGE) break;
+    if (!client) return null;
+    const { data: sub } = await client
+      .from("subcategories")
+      .select("code,category_code,name,slug,intro,how_to_choose,faq")
+      .eq("slug", data.slug)
+      .maybeSingle();
+    if (!sub) return null;
+    const s = sub as { code: string; category_code: string; name: string; slug: string; intro: string | null; how_to_choose: string | null; faq: unknown };
+    const [{ data: ideas }, { data: cat }, { data: sibs }, { count: total }] = await Promise.all([
+      client.from("ideas").select(IDEA_COLUMNS).eq("subcategory_code", s.code).eq("status", "published").order("position"),
+      client.from("categories").select("name").eq("code", s.category_code).maybeSingle(),
+      client.from("subcategories").select("code,name,slug").eq("category_code", s.category_code).order("code"),
+      client.from("ideas").select("code", { count: "exact", head: true }).eq("status", "published"),
+    ]);
+    const list = (ideas ?? []) as ListIdea[];
+    if (list.length === 0) return null;
+    const sibCodes = ((sibs ?? []) as { code: string }[]).map((x) => x.code).filter((c) => c !== s.code);
+    const sibCounts: Record<string, number> = {};
+    if (sibCodes.length) {
+      const { data: rows } = await client.from("ideas").select("subcategory_code").in("subcategory_code", sibCodes).eq("status", "published");
+      for (const r of (rows ?? []) as { subcategory_code: string }[]) sibCounts[r.subcategory_code] = (sibCounts[r.subcategory_code] ?? 0) + 1;
     }
-    const out: ListsCounts = { total: rows.length, byCategory: {}, bySubcategory: {}, byBand: {}, combos: {} };
-    for (const r of rows) {
-      out.byCategory[r.category_code] = (out.byCategory[r.category_code] ?? 0) + 1;
-      out.bySubcategory[r.subcategory_code] = (out.bySubcategory[r.subcategory_code] ?? 0) + 1;
-      const band = r.investment_band ?? "unknown";
-      out.byBand[band] = (out.byBand[band] ?? 0) + 1;
-      for (const [id, test] of Object.entries(COMBOS)) if (test(r)) out.combos[id] = (out.combos[id] ?? 0) + 1;
-    }
-    return out;
-  },
-);
+    const faq = Array.isArray(s.faq)
+      ? (s.faq as { q?: unknown; a?: unknown }[]).filter((f) => typeof f.q === "string" && typeof f.a === "string").map((f) => ({ q: f.q as string, a: f.a as string }))
+      : [];
+    return {
+      code: s.code,
+      name: s.name,
+      slug: s.slug,
+      intro: s.intro,
+      howToChoose: s.how_to_choose,
+      faq,
+      categoryName: (cat as { name: string } | null)?.name ?? "",
+      ideas: list,
+      siblings: ((sibs ?? []) as { code: string; name: string; slug: string }[])
+        .filter((x) => x.code !== s.code && (sibCounts[x.code] ?? 0) > 0)
+        .map((x) => ({ name: x.name, slug: x.slug, count: sibCounts[x.code] ?? 0 })),
+      totalIdeas: total ?? 0,
+    };
+  });

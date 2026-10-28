@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ChevronDown, Github, Mail, Menu, Search, Twitter, X } from "lucide-react";
 
+import { TAXONOMY } from "@/data/taxonomy";
+
 import "./v2.css";
 
 /**
@@ -125,6 +127,14 @@ function LearnPanel() {
           <div className="bm-label bm-dot o" style={{ marginTop: 0 }}>Startup ideas</div>
           <Banner tone="o" title="All 55 Lists" sub="1,798+ ideas across 30 industries" />
           <Links items={["AI Startup Ideas", "B2B SaaS Ideas", "Micro-SaaS Ideas", "Online Business", "Dropshipping", "Side Hustles", "Fintech Ideas", "For Women", "Low Investment", "Passive Income"]} />
+          {/* Our own idea lists: real links to the category sections of /lists. */}
+          <div className="bm-label">Our idea lists</div>
+          <div className="bm-list">
+            {TAXONOMY.slice(0, 12).map((c) => (
+              <a key={c.slug} href={`/lists#C${String(c.n).padStart(3, "0")}`}>{c.short}</a>
+            ))}
+            <a href="/lists" style={{ color: "#7c3aed" }}>All idea lists →</a>
+          </div>
         </div>
         <div>
           <div className="bm-label bm-dot r" style={{ marginTop: 0 }}>Failures (1000+)</div>

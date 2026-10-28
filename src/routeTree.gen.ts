@@ -33,7 +33,6 @@ import { Route as FounderDecisionJournalRouteImport } from './routes/founder-dec
 import { Route as FoundersRouteImport } from './routes/founders'
 import { Route as FrameworksComparisonRouteImport } from './routes/frameworks-comparison'
 import { Route as GdprRouteImport } from './routes/gdpr'
-import { Route as ListsRouteImport } from './routes/lists'
 import { Route as LocalBusinessIdeasIndiaRouteImport } from './routes/local-business-ideas-india'
 import { Route as MarketResearchRouteImport } from './routes/market-research'
 import { Route as OnlineBusinessIdeasIndiaRouteImport } from './routes/online-business-ideas-india'
@@ -78,6 +77,8 @@ import { Route as FounderStoriesIndexRouteImport } from './routes/founder-storie
 import { Route as FounderStoriesSlugRouteImport } from './routes/founder-stories.$slug'
 import { Route as IdeaSlugRouteImport } from './routes/idea.$slug'
 import { Route as LearningResourcesIndexRouteImport } from './routes/learning-resources.index'
+import { Route as ListsIndexRouteImport } from './routes/lists.index'
+import { Route as ListsSlugRouteImport } from './routes/lists.$slug'
 import { Route as StartupGuidesIndexRouteImport } from './routes/startup-guides.index'
 import { Route as StartupGuidesSlugRouteImport } from './routes/startup-guides.$slug'
 import { Route as UsefulToolsIndexRouteImport } from './routes/useful-tools.index'
@@ -204,11 +205,6 @@ const FrameworksComparisonRoute = FrameworksComparisonRouteImport.update({
 const GdprRoute = GdprRouteImport.update({
   id: '/gdpr',
   path: '/gdpr',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ListsRoute = ListsRouteImport.update({
-  id: '/lists',
-  path: '/lists',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LocalBusinessIdeasIndiaRoute = LocalBusinessIdeasIndiaRouteImport.update({
@@ -435,6 +431,16 @@ const LearningResourcesIndexRoute = LearningResourcesIndexRouteImport.update({
   path: '/learning-resources/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ListsIndexRoute = ListsIndexRouteImport.update({
+  id: '/lists/',
+  path: '/lists/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ListsSlugRoute = ListsSlugRouteImport.update({
+  id: '/lists/$slug',
+  path: '/lists/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StartupGuidesIndexRoute = StartupGuidesIndexRouteImport.update({
   id: '/startup-guides/',
   path: '/startup-guides/',
@@ -488,7 +494,6 @@ export interface FileRoutesByFullPath {
   '/founders': typeof FoundersRoute
   '/frameworks-comparison': typeof FrameworksComparisonRoute
   '/gdpr': typeof GdprRoute
-  '/lists': typeof ListsRoute
   '/local-business-ideas-india': typeof LocalBusinessIdeasIndiaRoute
   '/market-research': typeof MarketResearchRoute
   '/online-business-ideas-india': typeof OnlineBusinessIdeasIndiaRoute
@@ -527,6 +532,7 @@ export interface FileRoutesByFullPath {
   '/failed-startups/india': typeof FailedStartupsIndiaRoute
   '/founder-stories/$slug': typeof FounderStoriesSlugRoute
   '/idea/$slug': typeof IdeaSlugRoute
+  '/lists/$slug': typeof ListsSlugRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/blueprints/': typeof BlueprintsIndexRoute
@@ -534,6 +540,7 @@ export interface FileRoutesByFullPath {
   '/founder-glossary/': typeof FounderGlossaryIndexRoute
   '/founder-stories/': typeof FounderStoriesIndexRoute
   '/learning-resources/': typeof LearningResourcesIndexRoute
+  '/lists/': typeof ListsIndexRoute
   '/startup-guides/': typeof StartupGuidesIndexRoute
   '/useful-tools/': typeof UsefulToolsIndexRoute
   '/category/$categorySlug/$subcategorySlug': typeof CategoryCategorySlugSubcategorySlugRoute
@@ -564,7 +571,6 @@ export interface FileRoutesByTo {
   '/founders': typeof FoundersRoute
   '/frameworks-comparison': typeof FrameworksComparisonRoute
   '/gdpr': typeof GdprRoute
-  '/lists': typeof ListsRoute
   '/local-business-ideas-india': typeof LocalBusinessIdeasIndiaRoute
   '/market-research': typeof MarketResearchRoute
   '/online-business-ideas-india': typeof OnlineBusinessIdeasIndiaRoute
@@ -603,6 +609,7 @@ export interface FileRoutesByTo {
   '/failed-startups/india': typeof FailedStartupsIndiaRoute
   '/founder-stories/$slug': typeof FounderStoriesSlugRoute
   '/idea/$slug': typeof IdeaSlugRoute
+  '/lists/$slug': typeof ListsSlugRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
   '/blog': typeof BlogIndexRoute
   '/blueprints': typeof BlueprintsIndexRoute
@@ -610,6 +617,7 @@ export interface FileRoutesByTo {
   '/founder-glossary': typeof FounderGlossaryIndexRoute
   '/founder-stories': typeof FounderStoriesIndexRoute
   '/learning-resources': typeof LearningResourcesIndexRoute
+  '/lists': typeof ListsIndexRoute
   '/startup-guides': typeof StartupGuidesIndexRoute
   '/useful-tools': typeof UsefulToolsIndexRoute
   '/category/$categorySlug/$subcategorySlug': typeof CategoryCategorySlugSubcategorySlugRoute
@@ -641,7 +649,6 @@ export interface FileRoutesById {
   '/founders': typeof FoundersRoute
   '/frameworks-comparison': typeof FrameworksComparisonRoute
   '/gdpr': typeof GdprRoute
-  '/lists': typeof ListsRoute
   '/local-business-ideas-india': typeof LocalBusinessIdeasIndiaRoute
   '/market-research': typeof MarketResearchRoute
   '/online-business-ideas-india': typeof OnlineBusinessIdeasIndiaRoute
@@ -680,6 +687,7 @@ export interface FileRoutesById {
   '/failed-startups/india': typeof FailedStartupsIndiaRoute
   '/founder-stories/$slug': typeof FounderStoriesSlugRoute
   '/idea/$slug': typeof IdeaSlugRoute
+  '/lists/$slug': typeof ListsSlugRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/blueprints/': typeof BlueprintsIndexRoute
@@ -687,6 +695,7 @@ export interface FileRoutesById {
   '/founder-glossary/': typeof FounderGlossaryIndexRoute
   '/founder-stories/': typeof FounderStoriesIndexRoute
   '/learning-resources/': typeof LearningResourcesIndexRoute
+  '/lists/': typeof ListsIndexRoute
   '/startup-guides/': typeof StartupGuidesIndexRoute
   '/useful-tools/': typeof UsefulToolsIndexRoute
   '/category/$categorySlug/$subcategorySlug': typeof CategoryCategorySlugSubcategorySlugRoute
@@ -719,7 +728,6 @@ export interface FileRouteTypes {
     | '/founders'
     | '/frameworks-comparison'
     | '/gdpr'
-    | '/lists'
     | '/local-business-ideas-india'
     | '/market-research'
     | '/online-business-ideas-india'
@@ -758,6 +766,7 @@ export interface FileRouteTypes {
     | '/failed-startups/india'
     | '/founder-stories/$slug'
     | '/idea/$slug'
+    | '/lists/$slug'
     | '/startup-guides/$slug'
     | '/blog/'
     | '/blueprints/'
@@ -765,6 +774,7 @@ export interface FileRouteTypes {
     | '/founder-glossary/'
     | '/founder-stories/'
     | '/learning-resources/'
+    | '/lists/'
     | '/startup-guides/'
     | '/useful-tools/'
     | '/category/$categorySlug/$subcategorySlug'
@@ -795,7 +805,6 @@ export interface FileRouteTypes {
     | '/founders'
     | '/frameworks-comparison'
     | '/gdpr'
-    | '/lists'
     | '/local-business-ideas-india'
     | '/market-research'
     | '/online-business-ideas-india'
@@ -834,6 +843,7 @@ export interface FileRouteTypes {
     | '/failed-startups/india'
     | '/founder-stories/$slug'
     | '/idea/$slug'
+    | '/lists/$slug'
     | '/startup-guides/$slug'
     | '/blog'
     | '/blueprints'
@@ -841,6 +851,7 @@ export interface FileRouteTypes {
     | '/founder-glossary'
     | '/founder-stories'
     | '/learning-resources'
+    | '/lists'
     | '/startup-guides'
     | '/useful-tools'
     | '/category/$categorySlug/$subcategorySlug'
@@ -871,7 +882,6 @@ export interface FileRouteTypes {
     | '/founders'
     | '/frameworks-comparison'
     | '/gdpr'
-    | '/lists'
     | '/local-business-ideas-india'
     | '/market-research'
     | '/online-business-ideas-india'
@@ -910,6 +920,7 @@ export interface FileRouteTypes {
     | '/failed-startups/india'
     | '/founder-stories/$slug'
     | '/idea/$slug'
+    | '/lists/$slug'
     | '/startup-guides/$slug'
     | '/blog/'
     | '/blueprints/'
@@ -917,6 +928,7 @@ export interface FileRouteTypes {
     | '/founder-glossary/'
     | '/founder-stories/'
     | '/learning-resources/'
+    | '/lists/'
     | '/startup-guides/'
     | '/useful-tools/'
     | '/category/$categorySlug/$subcategorySlug'
@@ -948,7 +960,6 @@ export interface RootRouteChildren {
   FoundersRoute: typeof FoundersRoute
   FrameworksComparisonRoute: typeof FrameworksComparisonRoute
   GdprRoute: typeof GdprRoute
-  ListsRoute: typeof ListsRoute
   LocalBusinessIdeasIndiaRoute: typeof LocalBusinessIdeasIndiaRoute
   MarketResearchRoute: typeof MarketResearchRoute
   OnlineBusinessIdeasIndiaRoute: typeof OnlineBusinessIdeasIndiaRoute
@@ -987,6 +998,7 @@ export interface RootRouteChildren {
   FailedStartupsIndiaRoute: typeof FailedStartupsIndiaRoute
   FounderStoriesSlugRoute: typeof FounderStoriesSlugRoute
   IdeaSlugRoute: typeof IdeaSlugRoute
+  ListsSlugRoute: typeof ListsSlugRoute
   StartupGuidesSlugRoute: typeof StartupGuidesSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
   BlueprintsIndexRoute: typeof BlueprintsIndexRoute
@@ -994,6 +1006,7 @@ export interface RootRouteChildren {
   FounderGlossaryIndexRoute: typeof FounderGlossaryIndexRoute
   FounderStoriesIndexRoute: typeof FounderStoriesIndexRoute
   LearningResourcesIndexRoute: typeof LearningResourcesIndexRoute
+  ListsIndexRoute: typeof ListsIndexRoute
   StartupGuidesIndexRoute: typeof StartupGuidesIndexRoute
   UsefulToolsIndexRoute: typeof UsefulToolsIndexRoute
   CategoryCategorySlugSubcategorySlugRoute: typeof CategoryCategorySlugSubcategorySlugRoute
@@ -1168,13 +1181,6 @@ declare module '@tanstack/react-router' {
       path: '/gdpr'
       fullPath: '/gdpr'
       preLoaderRoute: typeof GdprRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lists': {
-      id: '/lists'
-      path: '/lists'
-      fullPath: '/lists'
-      preLoaderRoute: typeof ListsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/local-business-ideas-india': {
@@ -1485,6 +1491,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LearningResourcesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lists/': {
+      id: '/lists/'
+      path: '/lists'
+      fullPath: '/lists/'
+      preLoaderRoute: typeof ListsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lists/$slug': {
+      id: '/lists/$slug'
+      path: '/lists/$slug'
+      fullPath: '/lists/$slug'
+      preLoaderRoute: typeof ListsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/startup-guides/': {
       id: '/startup-guides/'
       path: '/startup-guides'
@@ -1548,7 +1568,6 @@ const rootRouteChildren: RootRouteChildren = {
   FoundersRoute: FoundersRoute,
   FrameworksComparisonRoute: FrameworksComparisonRoute,
   GdprRoute: GdprRoute,
-  ListsRoute: ListsRoute,
   LocalBusinessIdeasIndiaRoute: LocalBusinessIdeasIndiaRoute,
   MarketResearchRoute: MarketResearchRoute,
   OnlineBusinessIdeasIndiaRoute: OnlineBusinessIdeasIndiaRoute,
@@ -1587,6 +1606,7 @@ const rootRouteChildren: RootRouteChildren = {
   FailedStartupsIndiaRoute: FailedStartupsIndiaRoute,
   FounderStoriesSlugRoute: FounderStoriesSlugRoute,
   IdeaSlugRoute: IdeaSlugRoute,
+  ListsSlugRoute: ListsSlugRoute,
   StartupGuidesSlugRoute: StartupGuidesSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
   BlueprintsIndexRoute: BlueprintsIndexRoute,
@@ -1594,6 +1614,7 @@ const rootRouteChildren: RootRouteChildren = {
   FounderGlossaryIndexRoute: FounderGlossaryIndexRoute,
   FounderStoriesIndexRoute: FounderStoriesIndexRoute,
   LearningResourcesIndexRoute: LearningResourcesIndexRoute,
+  ListsIndexRoute: ListsIndexRoute,
   StartupGuidesIndexRoute: StartupGuidesIndexRoute,
   UsefulToolsIndexRoute: UsefulToolsIndexRoute,
   CategoryCategorySlugSubcategorySlugRoute:
