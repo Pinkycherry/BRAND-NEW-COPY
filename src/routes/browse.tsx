@@ -1,91 +1,30 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { useSuspenseQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
-import { ArrowRight, ArrowUpRight, Search, X } from "lucide-react";
-
-import { PAGE_IMAGES, pageImageMeta } from "@/config/page-imagery";
-import { categoryImage } from "@/config/category-imagery";
-import { absoluteUrl } from "@/lib/schema";
+import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, ChevronRight, Search } from "lucide-react";
 import { V2Frame } from "@/components/v2/frame";
-import { catalogQuery } from "@/lib/catalog";
+import { getListsHub } from "@/lib/lists.functions";
 import { TAXONOMY } from "@/data/taxonomy";
-import { JsonLd, breadcrumbSchema, collectionPageSchema } from "@/lib/schema";
-import "@/components/glass-library.css";
 
 export const Route = createFileRoute("/browse")({
-  loader: ({ context }) => context.queryClient.ensureQueryData(catalogQuery),
-  head: () => ({
-    meta: [
-      { title: "Browse 100 Business Idea Categories | BusinessIdea.io" },
-      { name: "description", content: "Explore 100 approved business idea categories and 1,000 focused subcategories for people starting in India." },
-      { property: "og:title", content: "Explore business ideas | BusinessIdea.io" },
-      { property: "og:description", content: "Find a direction that fits your time, skills and place." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      ...pageImageMeta(PAGE_IMAGES.browse, absoluteUrl),
-    ],
-  }),
+  loader: () => getListsHub(),
+  head: () => ({ meta: [{ title: "Browse Published Business Ideas | BusinessIdea.io" }, { name: "description", content: "Browse published Indian business ideas by category and focused list." }] }),
   component: BrowsePage,
-  errorComponent: () => <V2Frame><div className="container mx-auto min-h-[50vh] px-4 pt-32"><h1>We could not load the library.</h1><p>Please try again in a moment.</p><Link to="/">Return home</Link></div></V2Frame>,
 });
+const wrap = "mx-auto max-w-6xl px-4 md:px-6";
+const card = "group flex h-full flex-col rounded-xl border border-border bg-card p-5 shadow-sm transition hover:border-primary/50 hover:-translate-y-0.5";
 
 function BrowsePage() {
-  const { data: catalog } = useSuspenseQuery(catalogQuery);
+  const hub = Route.useLoaderData();
   const [query, setQuery] = useState("");
-  const [order, setOrder] = useState<"sheet" | "az">("sheet");
-  const needle = query.trim().toLowerCase();
-  const categories = useMemo(() => {
-    const candidates = TAXONOMY.filter((category) =>
-      !needle || category.name.toLowerCase().includes(needle) ||
-      category.subcategories.some((sub) => sub.name.toLowerCase().includes(needle))
-    );
-    return order === "az" ? [...candidates].sort((a, b) => a.name.localeCompare(b.name)) : candidates;
-  }, [needle, order]);
-
-  return (
-    <>
-      <JsonLd schema={[
-        collectionPageSchema({ path: "/browse", name: "Business idea categories", description: "100 categories and 1,000 focused paths for India.", itemCount: catalog.totalCategories, image: PAGE_IMAGES.browse.src }),
-        breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Browse", path: "/browse" }]),
-      ]} />
-      <V2Frame active="/browse">
-        <div className="container mx-auto max-w-6xl px-4 pb-20 pt-28">
-          <nav className="mb-5 flex gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb"><Link to="/">Home</Link><span aria-hidden="true">/</span><span>Explore ideas</span></nav>
-          <header className="grid items-center gap-8 rounded-2xl border border-border bg-gradient-to-b from-amber-500/10 to-background p-6 md:grid-cols-[1.2fr_0.8fr] md:p-12">
-            <div><p className="text-xs font-bold uppercase tracking-widest text-primary">THE IDEA LIBRARY</p><h1 className="mt-4 text-4xl font-bold md:text-5xl">Find a direction <span className="text-primary">worth exploring.</span></h1><p className="mt-5 text-muted-foreground">Start with a category you know, or search for a specific kind of work. Every path is a way to narrow your question.</p><div className="mt-7 flex gap-8 text-sm"><span><strong>{catalog.totalCategories}</strong> categories</span><span><strong>{catalog.totalSubcategories.toLocaleString()}</strong> focused paths</span></div></div>
-            <figure><img className="w-full rounded-xl object-cover" src={PAGE_IMAGES.browse.src} alt={PAGE_IMAGES.browse.alt} width={1280} height={549} loading="eager" fetchPriority="high" /><figcaption className="mt-2 text-xs text-muted-foreground">{PAGE_IMAGES.browse.description}</figcaption></figure>
-          </header>
-
-          <section className="pt-16" aria-labelledby="gl-index-title">
-            <div className="flex flex-wrap items-end justify-between gap-4"><div><p className="text-xs font-bold uppercase tracking-widest text-primary">EXPLORE THE MAP</p><h2 id="gl-index-title" className="mt-2 text-3xl font-bold">All categories</h2><p className="mt-2 text-muted-foreground">Open a category to see its ten approved subcategories.</p></div><span className="text-sm text-muted-foreground">{categories.length} of {catalog.totalCategories} categories</span></div>
-            <div className="my-6 flex flex-wrap gap-3">
-              <label className="flex min-w-[240px] flex-1 items-center gap-2 rounded-xl border border-border bg-card px-4"><Search size={20} aria-hidden="true" /><span className="sr-only">Search categories and subcategories</span><input className="w-full bg-transparent py-4 outline-none" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search categories or specific paths..." type="search" />{query && <button type="button" aria-label="Clear search" onClick={() => setQuery("")}><X size={19} /></button>}</label>
-              <label className="flex items-center gap-2 rounded-xl border border-border bg-card px-4">Sort <select className="bg-transparent py-4" value={order} onChange={(event) => setOrder(event.target.value as "sheet" | "az")}><option value="sheet">Original order</option><option value="az">A to Z</option></select></label>
-            </div>
-            {categories.length === 0 ? (
-              <div className="rounded-xl border border-border p-8 text-center"><h3>No matching path yet.</h3><p>Try a broader word such as food, home, design or farming.</p><button type="button" onClick={() => setQuery("")}>Show all categories <ArrowRight size={17} /></button></div>
-            ) : (
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {categories.map((category) => {
-                  const image = categoryImage(category.slug);
-                  const matches = needle && !category.name.toLowerCase().includes(needle)
-                    ? category.subcategories.filter((sub) => sub.name.toLowerCase().includes(needle))
-                    : category.subcategories;
-                  return (
-                    <article className="premium-card flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm" key={category.slug}>
-                      
-                      <Link to="/category/$categorySlug" params={{ categorySlug: category.slug }} aria-label={`Explore ${category.short}`}><img className="aspect-[2/1] w-full object-cover" src={image.src} alt={image.alt} width={1280} height={549} loading="lazy" /></Link>
-                      <div className="flex flex-1 flex-col p-5"><h3 className="text-xl font-bold"><Link to="/category/$categorySlug" params={{ categorySlug: category.slug }}>{category.short}</Link></h3><p className="mt-2 text-sm text-muted-foreground">{category.subcategories.length} focused paths</p><details className="mt-5 border-t border-border pt-3" open={Boolean(needle)} key={needle ? category.slug + needle : category.slug}><summary className="cursor-pointer font-semibold text-primary">View paths</summary><ul className="mt-3 max-h-64 space-y-2 overflow-auto text-sm">{matches.map((sub) => <li key={sub.slug}><Link to="/category/$categorySlug/$subcategorySlug" params={{ categorySlug: category.slug, subcategorySlug: sub.slug }}>{sub.name.replace(/ Business Ideas$/i, "")}</Link></li>)}</ul></details><Link className="mt-auto inline-flex items-center gap-1 pt-5 text-sm font-semibold text-primary" to="/category/$categorySlug" params={{ categorySlug: category.slug }}>Explore category <ArrowUpRight size={17} aria-hidden="true" /></Link></div>
-                    </article>
-                  );
-                })}
-              </div>
-            )}
-          </section>
-          <section className="mt-16 flex flex-wrap items-center justify-between gap-6 rounded-2xl border border-border bg-muted/30 p-8"><div><p className="text-xs font-bold uppercase tracking-widest text-primary">ALREADY RESEARCHED</p><h2 className="mt-2 text-2xl font-bold">Browse published idea blueprints.</h2><p className="mt-2 text-muted-foreground">Explore the completed BBI library by title, then open any idea in the new layout.</p></div><Link to="/blueprints" className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white">See published blueprints <ArrowUpRight size={18} /></Link></section>
-          <aside className="mt-8 flex flex-wrap items-center justify-between gap-6 rounded-2xl border border-primary/20 bg-primary/5 p-8"><div><p className="text-xs font-bold uppercase tracking-widest text-primary">A CLEARER START</p><h2 className="mt-2 text-2xl font-bold">Take one path at a time.</h2><p className="mt-2 text-muted-foreground">Some subcategories are still filling up with published ideas. You can explore the structure now, and we will show the current content honestly on each page.</p></div><Link to="/calculator" className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white">Try a calculator <ArrowUpRight size={18} /></Link></aside>
-        </div>
-      </V2Frame>
-    </>
-  );
+  const [sort, setSort] = useState<"order"|"az">("order");
+  const all = useMemo(() => hub.categories.map(c=>({ ...c, taxonomy:TAXONOMY.find(t=>t.code===c.code) })), [hub]);
+  const needle = query.trim().toLocaleLowerCase();
+  const categories = all.filter(c=>!needle || c.name.toLocaleLowerCase().includes(needle) || c.subs.some(s=>s.name.toLocaleLowerCase().includes(needle)));
+  if(sort==="az") categories.sort((a,b)=>a.name.localeCompare(b.name));
+  return <V2Frame active="/browse">
+    <div className="border-b bg-muted/30 pt-24 lg:pt-28"><nav className={`${wrap} flex items-center gap-2 py-3 text-sm`} aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={15}/><span>Browse</span></nav></div>
+    <section className="border-b bg-gradient-to-b from-amber-500/10 to-background py-12 lg:py-16"><div className={wrap}><span className="rounded-full bg-secondary px-3 py-1 text-xs font-bold">Published idea library</span><h1 className="mt-4 max-w-3xl text-3xl font-bold md:text-5xl">Find a direction worth exploring.</h1><p className="mt-4 max-w-2xl text-muted-foreground">{hub.total.toLocaleString("en-IN")} published ideas across {all.length} categories and {all.reduce((n,c)=>n+c.subs.length,0)} focused lists.</p><div className="mt-6 flex flex-wrap gap-3"><a href="/lists" className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white">Browse idea lists <ArrowRight size={17}/></a><a href="/tools" className="inline-flex min-h-11 items-center gap-2 rounded-lg border bg-card px-6 py-3 font-semibold">Explore tools</a></div></div></section>
+    <section className="py-12 lg:py-16"><div className={wrap}><div className="flex flex-wrap items-end justify-between gap-4"><div><h2 className="text-2xl font-bold">Categories</h2><p className="mt-2 text-muted-foreground">Open a category to explore its published lists.</p></div><span className="text-sm text-muted-foreground">{categories.length} categories</span></div><div className="my-6 flex flex-wrap gap-3"><label className="flex min-w-60 flex-1 items-center gap-2 rounded-lg border bg-card px-4"><Search size={19}/><span className="sr-only">Search categories and lists</span><input type="search" value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search categories or lists" className="min-h-11 w-full min-w-0 bg-transparent outline-none"/></label><label className="flex items-center gap-2 rounded-lg border bg-card px-4">Sort <select value={sort} onChange={e=>setSort(e.target.value as "order"|"az")} className="min-h-11 bg-transparent"><option value="order">Category order</option><option value="az">A to Z</option></select></label></div><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{categories.map(c=><article className={card} key={c.code}><h3 className="text-xl font-bold"><a className="hover:text-primary" href={`/category/${c.taxonomy?.slug}`}>{c.name}</a></h3><p className="mt-2 text-sm text-muted-foreground">{c.subs.length} lists · {c.subs.reduce((n,s)=>n+s.count,0)} published ideas</p><ul className="mt-5 space-y-2 border-t pt-4 text-sm">{c.subs.filter(s=>!needle||c.name.toLocaleLowerCase().includes(needle)||s.name.toLocaleLowerCase().includes(needle)).slice(0,5).map(s=><li key={s.code}><a className="hover:text-primary hover:underline" href={`/lists/${s.slug}`}>{s.name}</a></li>)}</ul><a className="mt-auto inline-flex items-center gap-1 pt-5 text-sm font-semibold text-primary" href={`/category/${c.taxonomy?.slug}`}>Explore category <ArrowRight size={16}/></a></article>)}</div>{categories.length===0&&<p className="rounded-xl border p-6 text-muted-foreground">No published category matches this search.</p>}</div></section>
+    <section className="border-t bg-muted/20 py-12"><div className={wrap}><h2 className="text-2xl font-bold">Next step</h2><div className="mt-5 grid gap-4 md:grid-cols-3">{[["Compare two ideas","/startup-idea-comparison"],["Test demand","/business-demand-test-india"],["Calculate startup costs","/calculator/startup-cost"]].map(([t,h])=><a key={h} className={card} href={h}>{t}<ArrowRight className="mt-3 text-primary" size={17}/></a>)}</div><h2 className="mt-10 text-2xl font-bold">Related resources</h2><div className="mt-4 flex flex-wrap gap-3">{[["All idea lists","/lists"],["Calculators","/calculator"],["Startup guides","/startup-guides"]].map(([t,h])=><a key={h} className="rounded-full border bg-card px-4 py-2 text-sm" href={h}>{t}</a>)}</div></div></section>
+  </V2Frame>;
 }
