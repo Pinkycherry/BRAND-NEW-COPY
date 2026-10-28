@@ -1,13 +1,15 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, ChevronRight, Search } from "lucide-react";
+import { V2Frame } from "@/components/v2/frame";
+import { SellerFaq } from "@/components/v2/faq";
+import { getFaqDirectory } from "@/lib/faq.functions";
 
-import html from "@/bought/faq.html?raw";
-import { boughtPage } from "@/bought/serve";
-
-// Purchased page, served exactly as supplied (scripts removed, noindex kept).
-export const Route = createFileRoute("/faq")({
-  server: {
-    handlers: {
-      GET: async () => boughtPage(html),
-    },
-  },
-});
+export const Route=createFileRoute("/faq")({loader:()=>getFaqDirectory(),head:()=>({meta:[{title:"Frequently Asked Questions | BusinessIdea.io"},{name:"description",content:"Questions and answers from published business idea research."}]}),component:FaqPage});
+const wrap="mx-auto max-w-6xl px-4 md:px-6";
+function FaqPage(){const faq=Route.useLoaderData();const [query,setQuery]=useState("");const visible=faq.filter(x=>`${x.q} ${x.a}`.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()));return <V2Frame active="/faq">
+  <div className="border-b bg-muted/30 pt-24 lg:pt-28"><nav aria-label="Breadcrumb" className={`${wrap} flex items-center gap-2 py-3 text-sm`}><a href="/">Home</a><ChevronRight size={15}/><span>FAQ</span></nav></div>
+  <section className="border-b bg-gradient-to-b from-amber-500/10 to-background py-12 lg:py-16"><div className={wrap}><span className="rounded-full bg-secondary px-3 py-1 text-xs font-bold">Idea research</span><h1 className="mt-4 text-3xl font-bold md:text-5xl">Frequently Asked Questions</h1><p className="mt-4 max-w-2xl text-muted-foreground">{faq.length} questions from our business idea and list research.</p><div className="mt-6 flex flex-wrap gap-3"><a href="/browse" className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white">Browse ideas <ArrowRight size={17}/></a><a href="/lists" className="inline-flex min-h-11 items-center rounded-lg border bg-card px-6 py-3 font-semibold">Idea lists</a></div></div></section>
+  <section className="py-12 lg:py-16"><div className={wrap}><label className="flex max-w-xl items-center gap-2 rounded-xl border bg-card px-4"><Search size={19}/><span className="sr-only">Search questions</span><input type="search" value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search questions" className="min-h-11 min-w-0 flex-1 bg-transparent outline-none"/></label><p className="mt-3 text-sm text-muted-foreground">{visible.length} questions</p></div><SellerFaq key={query} faq={visible} title="Questions from the idea library"/></section>
+  <section className="border-t bg-muted/20 py-12"><div className={wrap}><h2 className="text-2xl font-bold">Next step</h2><div className="mt-5 grid gap-3 md:grid-cols-3">{[["Browse ideas","/browse"],["Compare two ideas","/startup-idea-comparison"],["Explore tools","/tools"]].map(([t,h])=><a key={h} href={h} className="rounded-xl border bg-card p-5 font-semibold hover:border-primary/50">{t} <ArrowRight className="inline text-primary" size={16}/></a>)}</div><h2 className="mt-10 text-2xl font-bold">Related resources</h2><div className="mt-4 flex flex-wrap gap-2">{[["Idea lists","/lists"],["Glossary","/glossary"],["Startup guides","/startup-guides"]].map(([t,h])=><a key={h} href={h} className="rounded-full border bg-card px-4 py-2 text-sm">{t}</a>)}</div></div></section>
+</V2Frame>}
