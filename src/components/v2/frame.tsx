@@ -14,8 +14,6 @@ import "./v2.css";
 
 const NO_LINK = "#";
 
-type Item = string | [label: string, note: string];
-
 function A({ children, className, href }: { children: ReactNode; className?: string | undefined; href?: string | undefined }) {
   return (
     <a href={href ?? NO_LINK} className={className}>
@@ -36,19 +34,11 @@ function Banner({ tone = "", title, sub, href }: { tone?: string; title: string;
   );
 }
 
-/** Items are seller placeholders (plain text, inert) unless a real page of ours matches. */
-const OURS: Record<string, string> = {
-  "Break-even": "/calculator/break-even",
-  Funding: "/calculator/funding-needed",
-  ROI: "/calculator/roi",
-  "Startup Cost": "/calculator/startup-cost",
-};
-
 function Links({ items, className = "bm-list" }: { items: (string | [string, string])[]; className?: string }) {
   return (
     <div className={className}>
       {items.map((x) => {
-        const [t, href] = typeof x === "string" ? [x, OURS[x]] : x;
+        const [t, href] = typeof x === "string" ? [x, undefined] : x;
         return (
           <A key={t} href={href}>
             {t}
@@ -59,23 +49,7 @@ function Links({ items, className = "bm-list" }: { items: (string | [string, str
   );
 }
 
-function Counted({ items }: { items: Item[] }) {
-  return (
-    <div className="bm-items">
-      {items.map((x) => {
-        const [t, n] = typeof x === "string" ? [x, ""] : x;
-        return (
-          <A key={t}>
-            <span>{t}</span>
-            {n === "NEW" ? <span className="bm-new">NEW</span> : n ? <small>{n}</small> : null}
-          </A>
-        );
-      })}
-    </div>
-  );
-}
-
-function Hero({ tone = "", badge, badgeTone = "", icon, title, body, cta }: { tone?: string; badge: string; badgeTone?: string; icon: string; title: string; body: string[]; cta: string }) {
+function Hero({ tone = "", badge, badgeTone = "", icon, title, body, cta, href }: { tone?: string; badge: string; badgeTone?: string; icon: string; title: string; body: string[]; cta: string; href: string }) {
   return (
     <div className={`bm-hero ${tone}`}>
       <span className={`bm-badge ${badgeTone}`}>{badge}</span>
@@ -84,49 +58,102 @@ function Hero({ tone = "", badge, badgeTone = "", icon, title, body, cta }: { to
       {body.map((p) => (
         <p key={p}>{p}</p>
       ))}
-      <A className="bm-btn">{cta}</A>
+      <A className="bm-btn" href={href}>
+        {cta}
+      </A>
     </div>
   );
 }
 
-/** Our broad idea categories for Learn > Startup ideas, from the approved taxonomy. */
-const OUR_IDEAS: [string, string][] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => {
+/** Category n (1-100) from the approved taxonomy as [label, link]. */
+function cat(n: number, label?: string): [string, string] {
   const c = TAXONOMY.find((x) => x.n === n);
-  return [c?.short ?? "", c ? `/category/${c.slug}` : "/browse"];
-});
+  return [label ?? c?.short ?? "", c ? `/category/${c.slug}` : "/browse"];
+}
+
+/** Our broad idea categories for Learn > Startup ideas, from the approved taxonomy. */
+const OUR_IDEAS: [string, string][] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => cat(n));
+
+function Tile({ label, href }: { label: string; href: string }) {
+  return (
+    <A className="bm-tile" href={href}>
+      <i />
+      {label}
+    </A>
+  );
+}
+
+function Pdf({ title, sub, href }: { title: string; sub: string; href: string }) {
+  return (
+    <A className="bm-pdf" href={href}>
+      <div>
+        {title}
+        <em>{sub}</em>
+      </div>
+    </A>
+  );
+}
 
 function ValidatePanel() {
   return (
     <>
       <div>
-        <Hero badge="1 FREE VALIDATION" icon="✓" title="AI Idea Validator" body={["Instant score, market size & competitor map in 60 seconds.", "★ 4.9 · 30k+ founders validated"]} cta="Start free →" />
-        <div className="bm-label">Popular searches</div>
-        <Links items={["Free Validator", "Competitor Analysis", "Startup Failure Database", "Validate Marketplace", "Business Plan Generator"]} />
+        <Hero badge="FREE" icon="✓" title="Validation Workbench" body={["Write your buyer, their problem and a small first offer on one page.", "Then test it with real buyers before you spend."]} cta="Start free →" href="/product" />
+        <div className="bm-label">Popular checks</div>
+        <Links
+          items={[
+            ["How to validate an idea", "/startup-idea-validation"],
+            ["Test demand", "/business-demand-test-india"],
+            ["Business idea risk check", "/business-idea-risk-check"],
+            ["Compare two ideas", "/startup-idea-comparison"],
+            ["Find your first customer", "/first-customer-india"],
+          ]}
+        />
       </div>
       <div className="bm-cols" style={{ gridTemplateColumns: "1fr 1fr" }}>
         <div>
-          <div className="bm-label bm-dot" style={{ marginTop: 0 }}>AI Generators (11)</div>
+          <div className="bm-label bm-dot" style={{ marginTop: 0 }}>Founder tools (11)</div>
           <div className="bm-tiles">
-            {["Idea Generator", "Business Name", "Validator", "Market Research", "Lean Canvas", "Business Plan", "Brand Strategy", "Logo Generator", "Visual Identity", "Marketing Suite", "Ad Creatives"].map((t) => (
-              <A key={t} className="bm-tile"><i />{t}</A>
-            ))}
-            <A className="bm-tile"><i className="bm-tile-more">→</i>VIEW ALL<br />11 generators →</A>
+            <Tile label="Startup Cost" href="/calculator/startup-cost" />
+            <Tile label="Break-even" href="/calculator/break-even" />
+            <Tile label="Return on Investment" href="/calculator/roi" />
+            <Tile label="Funding Needed" href="/calculator/funding-needed" />
+            <Tile label="Unit Economics" href="/unit-economics-india" />
+            <Tile label="Cash Flow" href="/startup-cash-flow-india" />
+            <Tile label="Pricing" href="/business-pricing-india" />
+            <Tile label="Launch Plan" href="/startup-launch-plan-india" />
+            <Tile label="Research Desk" href="/business-idea-research-india" />
+            <Tile label="Time Fit" href="/business-idea-time-fit" />
+            <Tile label="Decision Journal" href="/founder-decision-journal" />
+            <A className="bm-tile" href="/calculator">
+              <i className="bm-tile-more">→</i>VIEW ALL<br />calculators →
+            </A>
           </div>
         </div>
         <div>
-          <div className="bm-label bm-dot" style={{ marginTop: 0 }}>Validation reports (20)</div>
-          <Banner title="All validation reports" sub="Industry-specific report landings" />
+          <div className="bm-label bm-dot" style={{ marginTop: 0 }}>Founder guides</div>
+          <Banner title="All startup guides" sub="Step-by-step guides for first-time founders" href="/startup-guides" />
           <div className="bm-pdfs">
-            {["The HealthTech Founder's Field Guide 2026", "The LegalTech Founder's Field Guide 2026", "Why 90% of Startups Fail in 2026"].map((t) => (
-              <A key={t} className="bm-pdf"><div>{t}</div></A>
-            ))}
+            <Pdf title="Startup Costs in India" sub="What leaves your pocket first" href="/startup-costs-india" />
+            <Pdf title="Business Models in India" sub="How an idea earns" href="/business-models-india" />
+            <Pdf title="When to Pivot or Stop" sub="Reading the evidence" href="/business-idea-pivot-or-stop" />
+            <Pdf title="Your First Customer" sub="Reach one real buyer" href="/first-customer-india" />
           </div>
           <div className="bm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)", gap: 12 }}>
-            <div><div className="bm-label" style={{ margin: "0 0 4px" }}>Tech</div><Links items={["SaaS", "B2B SaaS", "AI / ML", "Mobile App", "GameTech"]} /></div>
-            <div><div className="bm-label" style={{ margin: "0 0 4px" }}>Business</div><Links items={["E-commerce", "Marketplace", "Fintech", "HRTech", "LegalTech"]} /></div>
-            <div><div className="bm-label" style={{ margin: "0 0 4px" }}>Vertical</div><Links items={["HealthTech", "EdTech", "PropTech", "FoodTech", "TravelTech"]} /></div>
+            <div>
+              <div className="bm-label" style={{ margin: "0 0 4px" }}>By place</div>
+              <Links items={[cat(1), cat(5), cat(9, "Small Town"), cat(10), cat(4)]} />
+            </div>
+            <div>
+              <div className="bm-label" style={{ margin: "0 0 4px" }}>For you</div>
+              <Links items={[cat(6, "Women"), cat(7, "Students"), cat(8, "Senior Citizens"), cat(14, "Parents"), cat(11, "Skilled People")]} />
+            </div>
+            <div>
+              <div className="bm-label" style={{ margin: "0 0 4px" }}>By industry</div>
+              <Links items={[cat(16), cat(27), cat(30), cat(37), cat(47)]} />
+            </div>
           </div>
-          <A className="bm-pill">See all 20 reports →</A>
+          <A className="bm-pill" href="/browse">See all 100 categories →</A>
         </div>
       </div>
     </>
@@ -137,9 +164,18 @@ function LearnPanel() {
   return (
     <>
       <div>
-        <Hero tone="orange" badge="1,798+ IDEAS" badgeTone="o" icon="💡" title="Ideas Database" body={["1,798+ validated startup ideas across 30 industries."]} cta="Browse →" />
-        <div className="bm-label">Authority 2026</div>
-        <Links items={["Best Validators 2026", "Best AI Validation Tools", "Best Market Research", "Frameworks Comparison", "Research Methodology", "About BusinessIdea.io"]} />
+        <Hero tone="orange" badge="100 CATEGORIES" badgeTone="o" icon="💡" title="Business Ideas Database" body={["Researched business ideas for India, sorted into 100 categories."]} cta="Browse →" href="/browse" />
+        <div className="bm-label">Start here</div>
+        <Links
+          items={[
+            ["Business ideas in India", "/business-ideas-india"],
+            ["Side business ideas", "/side-business-ideas-india"],
+            ["Local business ideas", "/local-business-ideas-india"],
+            ["Online business ideas", "/online-business-ideas-india"],
+            ["Service business ideas", "/service-business-ideas-india"],
+            ["Product business ideas", "/product-business-ideas-india"],
+          ]}
+        />
       </div>
       <div className="bm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
         <div>
@@ -148,17 +184,40 @@ function LearnPanel() {
           <Links items={OUR_IDEAS} />
         </div>
         <div>
-          <div className="bm-label bm-dot r" style={{ marginTop: 0 }}>Failures (1000+)</div>
-          <Banner tone="r" title="All Failures Database" sub="1000+ post-mortems & lessons" />
-          <Counted items={[["All Countries Hub", "(15)"], "Why Startups Fail", "Biggest Ever", "AI Pattern Analysis", "Failed vs Successful", "How to Avoid Failure", "Failure Analysis Hub", ["Yearly Report 2026", "NEW"], "Yearly Report 2025"]} />
-          <div className="bm-label">By industry</div>
-          <Links className="bm-two bm-list" items={["Fintech", "AI Startups", "EV & Auto", "E-commerce"]} />
-          <A className="bm-pill">See all industries →</A>
+          <div className="bm-label bm-dot r" style={{ marginTop: 0 }}>Money and risk</div>
+          <Banner tone="r" title="Startup Costs" sub="What you spend before the first sale" href="/startup-costs-india" />
+          <Links
+            items={[
+              ["Cash flow", "/startup-cash-flow-india"],
+              ["Unit economics", "/unit-economics-india"],
+              ["Pricing your offer", "/business-pricing-india"],
+              ["Business models", "/business-models-india"],
+              ["Risk check", "/business-idea-risk-check"],
+              ["Pivot or stop", "/business-idea-pivot-or-stop"],
+              ["Launch plan", "/startup-launch-plan-india"],
+            ]}
+          />
+          <div className="bm-label">More categories</div>
+          <Links className="bm-two bm-list" items={[cat(17), cat(19), cat(28), cat(38)]} />
+          <A className="bm-pill" href="/browse">See all 100 categories →</A>
         </div>
         <div>
           <div className="bm-label bm-dot b" style={{ marginTop: 0 }}>Knowledge</div>
-          <Banner tone="b" title="Startup Knowledge Hub" sub="The complete BusinessIdea.io index" />
-          <Counted items={[["Guides", "(15)"], ["Questions", "(100+)"], "Glossary", "Compare Tools", "Feature Matrix", "Versus Pages", "Frameworks", "Case Studies", "Industry Benchmarks", "Fundraising Benchmarks", "Funding FAQ", "Blog", "Changelog"]} />
+          <Banner tone="b" title="Startup Guides" sub="Step-by-step guides for founders" href="/startup-guides" />
+          <Links
+            items={[
+              ["Glossary", "/founder-glossary"],
+              ["Startup terms", "/startup-terms-india"],
+              ["Founder stories", "/founder-stories"],
+              ["Journal", "/blog"],
+              ["Reading room", "/business-idea-reading-room"],
+              ["Learning resources", "/learning-resources"],
+              ["Research desk", "/business-idea-research-india"],
+              ["Our founders", "/founders"],
+              ["About us", "/about"],
+              ["Contact", "/contact"],
+            ]}
+          />
         </div>
       </div>
     </>
@@ -169,30 +228,63 @@ function ToolsPanel() {
   return (
     <>
       <div>
-        <Hero badge="14 TOOLS" badgeTone="p" icon="✓" title="All AI Generators" body={["14 AI tools for validation, brand, marketing & launch."]} cta="Browse generators →" />
-        <div className="bm-label">Popular generators</div>
-        <Links items={["Idea Generator", "AI Idea Validator", "Brand Strategy"]} />
+        <Hero badge="FREE" badgeTone="p" icon="✓" title="Founder Toolkit" body={["Pick a founder question and work it through with your own numbers."]} cta="Open the toolkit →" href="/business-idea-toolkit" />
+        <div className="bm-label">Popular tools</div>
+        <Links
+          items={[
+            ["Startup cost calculator", "/calculator/startup-cost"],
+            ["Break-even calculator", "/calculator/break-even"],
+            ["Validation workbench", "/product"],
+          ]}
+        />
       </div>
       <div className="bm-cols" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
         <div>
-          <div className="bm-label bm-dot g" style={{ marginTop: 0 }}>Calculators (10)</div>
-          <Banner tone="g" title="All Calculators" sub="10 free finance & growth calculators" />
-          <Links className="bm-two bm-list" items={["Runway", "CAC", "LTV", "Valuation", "Break-even", "Equity Split", "Funding", "ROI", "Market Size", "Startup Cost"]} />
+          <div className="bm-label bm-dot g" style={{ marginTop: 0 }}>Calculators</div>
+          <Banner tone="g" title="All Calculators" sub="Free money calculators for founders" href="/calculator" />
+          <Links
+            className="bm-two bm-list"
+            items={[
+              ["Startup Cost", "/calculator/startup-cost"],
+              ["Break-even", "/calculator/break-even"],
+              ["ROI", "/calculator/roi"],
+              ["Funding Needed", "/calculator/funding-needed"],
+              ["Unit Economics", "/unit-economics-india"],
+              ["Cash Flow", "/startup-cash-flow-india"],
+            ]}
+          />
         </div>
         <div>
-          <div className="bm-label bm-dot pk" style={{ marginTop: 0 }}>Templates</div>
-          <Banner tone="pk" title="All Templates" sub="Pitch deck, plans, interviews & more" />
-          <Links items={["Pitch Deck", "Business Plan", "Competitive Analysis", "Customer Persona", "Validation Interview Script", "Validation Templates"]} />
-          <A className="bm-pill g">All Resources →</A>
+          <div className="bm-label bm-dot pk" style={{ marginTop: 0 }}>Worksheets</div>
+          <Banner tone="pk" title="Templates" sub="Plans, interviews and more" href="/templates" />
+          <Links
+            items={[
+              ["Launch plan", "/startup-launch-plan-india"],
+              ["Demand test", "/business-demand-test-india"],
+              ["Compare two ideas", "/startup-idea-comparison"],
+              ["Decision journal", "/founder-decision-journal"],
+              ["Weekend stall profit check", "/weekend-market-stall-profit-check"],
+              ["Coaching batch check", "/coaching-batch-business-idea-india"],
+            ]}
+          />
+          <A className="bm-pill g" href="/learning-resources">All Resources →</A>
         </div>
         <div>
-          <div className="bm-label bm-dot g" style={{ marginTop: 0 }}>Free tools directory (1,060+)</div>
-          <Banner tone="g" title="Browse all tools" sub="1,060+ tools across 30 categories" />
-          <Links className="bm-two bm-list" items={["Validation & Research", "No-Code Builders", "AI Assistants", "Design & UI", "SEO Tools", "Fundraising"]} />
-          <A className="bm-pill g">See all 30 categories →</A>
-          <div className="bm-label bm-dot">Startup directories (867)</div>
-          <Banner title="Where to submit your startup" sub="867 directories with DR, link type & ..." />
-          <Links className="bm-two bm-list" items={["Tier 1 picks", "Dofollow links", "Free to submit", "DR 70+ sites", "AI directories", "PH alternatives"]} />
+          <div className="bm-label bm-dot g" style={{ marginTop: 0 }}>Tools directory</div>
+          <Banner tone="g" title="Useful Tools" sub="Free tools we recommend to founders" href="/useful-tools" />
+          <Links
+            className="bm-two bm-list"
+            items={[
+              ["Learning resources", "/learning-resources"],
+              ["Reading room", "/business-idea-reading-room"],
+              ["Search ideas", "/search"],
+              ["Blueprints", "/blueprints"],
+            ]}
+          />
+          <A className="bm-pill g" href="/useful-tools">See all tools →</A>
+          <div className="bm-label bm-dot">Idea lists</div>
+          <Banner title="All Idea Lists" sub="Every business idea list in one place" href="/lists" />
+          <Links className="bm-two bm-list" items={[cat(1), cat(2), cat(3), cat(4), cat(5), cat(10)]} />
         </div>
       </div>
     </>
