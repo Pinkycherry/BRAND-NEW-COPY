@@ -17,7 +17,7 @@ function BrowsePage() {
   const hub = Route.useLoaderData();
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<"order"|"az">("order");
-  const all = useMemo(() => hub.categories.map(c=>({ ...c, taxonomy:TAXONOMY.find(t=>t.code===c.code) })), [hub]);
+  const all = useMemo(() => hub.categories.map(c=>({ ...c, taxonomy:TAXONOMY.find(t=>`C${String(t.n).padStart(3,"0")}`===c.code) })), [hub]);
   const needle = query.trim().toLocaleLowerCase();
   const categories = all.filter(c=>!needle || c.name.toLocaleLowerCase().includes(needle) || c.subs.some(s=>s.name.toLocaleLowerCase().includes(needle)));
   if(sort==="az") categories.sort((a,b)=>a.name.localeCompare(b.name));
