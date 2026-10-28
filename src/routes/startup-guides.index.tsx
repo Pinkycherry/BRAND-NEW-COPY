@@ -1,56 +1,17 @@
-import { V2PageAsideCta, V2PageCard, V2PageHero, V2PageSection } from "@/components/v2/page-sections";
-import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowUpRight, BookOpen, Clock } from "lucide-react";
-
-import { GlassShell } from "@/components/glass-shell";
+import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, BookOpen, ChevronRight } from "lucide-react";
+import { V2Frame } from "@/components/v2/frame";
 import { STARTUP_GUIDES } from "@/lib/guides-data";
-import { guideImage } from "@/config/guide-imagery";
-import { hideImgIfBroken } from "@/lib/utils";
-import { JsonLd, breadcrumbSchema, collectionPageSchema } from "@/lib/schema";
-import "@/components/glass-library.css";
-import "@/components/guide-reading-room.css";
 
-export const Route = createFileRoute("/startup-guides/")({
-  head: () => ({ meta: [
-    { title: "Startup Guides in India: Read for Your Next Founder Decision | BusinessIdea.io" },
-    { name: "description", content: "Read 20 published startup guides with original featured images. Choose the founder decision in front of you: validation, market, cash, launch or growth." },
-    { property: "og:title", content: "Startup Guides | BusinessIdea.io" },
-    { property: "og:type", content: "website" },
-  ] }),
-  component: GuidesIndex,
-});
-
-const readingPaths = [
-  { label:"I need a real first test", detail:"Name the buyer, show the offer, listen for a commitment.", slug:"business-idea-validation-framework", next:"/startup-idea-validation" },
-  { label:"I need to understand the market", detail:"Study alternatives and the segment you can actually reach.", slug:"competitor-analysis-framework", next:"/business-ideas-india" },
-  { label:"I need to keep cash breathing", detail:"Put collection dates next to the bills, not just revenue totals.", slug:"startup-cash-flow-management", next:"/startup-costs-india" },
-  { label:"I am nearly ready to launch", detail:"Check the operational promises before a public announcement.", slug:"pre-launch-checklist-for-startups", next:"/business-models-india" },
-] as const;
-const featureSlug="business-idea-validation-framework";
-const featureGuide=STARTUP_GUIDES.find(guide=>guide.slug===featureSlug)!;
-const featureArt=guideImage(featureSlug);
-
-const categories = ["All", ...Array.from(new Set(STARTUP_GUIDES.map((guide) => guide.category)))];
-
-function GuidesIndex() {
-  const [selected, setSelected] = useState("All");
-  const guides = selected === "All" ? STARTUP_GUIDES : STARTUP_GUIDES.filter((guide) => guide.category === selected);
-  return <>
-    <JsonLd schema={[
-      collectionPageSchema({ path: "/startup-guides", name: "Startup guides", description: "Published guides for the decisions a founder faces.", itemCount: STARTUP_GUIDES.length }),
-      breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Guides", path: "/startup-guides" }]),
-    ]} />
-    <GlassShell><div className="gl-page gr-page">
-      <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><span>Guides</span></nav>
-      <V2PageHero className="gr-hero"><div><p className="gh-eyebrow">THE FOUNDER READING ROOM · INDIA</p><h1>Read for the decision in front of you.</h1><p>Twenty published startup guides, each with its original article and featured image. Begin with the question that is costing you sleep, then go deeper when the next question becomes clear.</p><a href="#choose-a-path" className="gh-button gh-button-primary">Find a reading path <ArrowUpRight size={17}/></a></div><Link to="/startup-guides/$slug" params={{slug:featureGuide.slug}} className="gr-hero-feature">{featureArt && <img src={featureArt.src} alt={featureArt.alt} width={featureArt.width} height={featureArt.height} ref={hideImgIfBroken}/>}<span><small>START HERE / VALIDATION</small><strong>{featureGuide.title}</strong><span>Read the guide <ArrowUpRight size={16}/></span></span></Link></V2PageHero>
-      <V2PageSection className="gr-choice" id="choose-a-path" aria-labelledby="gr-choice-title"><div className="gr-choice-intro"><p className="gh-eyebrow">01 / YOUR NEXT DECISION</p><h2 id="gr-choice-title">Where is the uncertainty?</h2><p>You do not have to read a library in order. Pick the part of your business idea that could change what you do this week.</p></div><div className="gr-paths">{readingPaths.map((path,index)=><article key={path.slug}><span>0{index+1}</span><h3>{path.label}</h3><p>{path.detail}</p><Link to="/startup-guides/$slug" params={{slug:path.slug}}>Read the source guide <ArrowUpRight size={16}/></Link></article>)}</div></V2PageSection>
-      <V2PageSection className="gr-method" aria-labelledby="gr-method-title"><div><p className="gh-eyebrow">02 / READ WITH A PENCIL</p><h2 id="gr-method-title">Take one useful action from an article.</h2><p>A guide is worth reading when it changes a real decision. Put the new question beside a customer, a supplier or a number from your own situation.</p></div><ol><li><strong>Before reading</strong><p>Write down the decision: customer, cost, model or launch date.</p></li><li><strong>While reading</strong><p>Mark assumptions that the author cannot know about your town, buyer or budget.</p></li><li><strong>After reading</strong><p>Run one small test. Keep what you observed separate from what you hoped.</p></li></ol></V2PageSection>
-      <V2PageSection className="gl-index gr-index" aria-labelledby="guides-title"><div className="gl-section-heading"><div><p className="gh-eyebrow">03 / THE COMPLETE SHELF</p><h2 id="guides-title">All published startup guides.</h2><p>Every article below is an existing source guide with its own featured image. Filter by subject, then open the full reading page.</p></div><span className="gl-count">{guides.length} guides</span></div><div className="gl-filter" role="group" aria-label="Filter guides by topic">{categories.map((category) => <button key={category} type="button" aria-pressed={selected === category} onClick={() => setSelected(category)}>{category}</button>)}</div><div className="gl-guide-grid">{guides.map((guide) => { const art = guideImage(guide.slug); return <V2PageCard key={guide.slug} className="gl-guide-card">
-        {art && <Link to="/startup-guides/$slug" params={{ slug: guide.slug }} className="gl-guide-media" tabIndex={-1}><img src={art.src} alt={art.alt} width={art.width} height={art.height} loading="lazy" decoding="async" ref={hideImgIfBroken} /></Link>}
-        <span className="gl-tool-icon"><BookOpen size={23} strokeWidth={1.7} aria-hidden="true" /></span><span className="gh-eyebrow">{guide.category} · <Clock size={14} aria-hidden="true" /> {guide.readTime}</span><h3><Link to="/startup-guides/$slug" params={{ slug: guide.slug }}>{guide.title}</Link></h3><p>{guide.description}</p><Link to="/startup-guides/$slug" params={{ slug: guide.slug }} className="gl-idea-action">Read guide <ArrowUpRight size={17} /></Link></V2PageCard>; })}</div></V2PageSection>
-      <V2PageSection className="gr-crossroads" aria-labelledby="gr-crossroads-title"><div><p className="gh-eyebrow">04 / FROM READING TO REALITY</p><h2 id="gr-crossroads-title">Give the next question a place to land.</h2><p>The source guides cover different stages, including SaaS and B2B. If your idea is a local service, a product or a side business, use the principle that applies and test the actual numbers in your context.</p><Link to="/business-idea-reading-room" className="gh-text-link">Pair a guide with an original founder article <ArrowUpRight size={17}/></Link></div><div><Link to="/startup-costs-india"><strong>What will leave my pocket?</strong><span>Make the first-sale rupee map <ArrowUpRight size={16}/></span></Link><Link to="/startup-idea-validation"><strong>Will anybody commit?</strong><span>Use the field notebook <ArrowUpRight size={16}/></span></Link><Link to="/business-models-india"><strong>What must I deliver?</strong><span>Compare operating models <ArrowUpRight size={16}/></span></Link></div></V2PageSection>
-      <V2PageAsideCta className="gl-bottom-note"><div><p className="gh-eyebrow">MAKE IT CONCRETE</p><h2>Put a number beside the idea.</h2><p>Use one of the live calculators to check a cost, a margin or a time horizon using your own assumptions.</p></div><Link to="/calculator" className="gh-button gh-button-primary">Explore calculators <ArrowUpRight size={17} /></Link></V2PageAsideCta>
-    </div></GlassShell>
-  </>;
-}
+export const Route=createFileRoute("/startup-guides/")({head:()=>({meta:[{title:"Startup Guides | BusinessIdea.io"},{name:"description",content:"Browse published guides for validation, market sizing, bootstrapping, growth and launch."}]}),component:GuidesIndex});
+const wrap="mx-auto max-w-6xl px-4 md:px-6";
+const card="group block rounded-xl border bg-card p-5 shadow-sm transition hover:border-primary/50";
+const categories=["All",...new Set(STARTUP_GUIDES.map(g=>g.category))];
+function GuidesIndex(){const [selected,setSelected]=useState("All");const guides=selected==="All"?STARTUP_GUIDES:STARTUP_GUIDES.filter(g=>g.category===selected);const featured=STARTUP_GUIDES.find(g=>g.slug==="business-idea-validation-framework");return <V2Frame active="/startup-guides">
+  <div className="border-b bg-muted/30 pt-24 lg:pt-28"><nav aria-label="Breadcrumb" className={`${wrap} flex items-center gap-2 py-3 text-sm`}><a href="/">Home</a><ChevronRight size={15}/><span>Startup guides</span></nav></div>
+  <section className="border-b bg-gradient-to-b from-amber-500/10 to-background py-12 lg:py-16"><div className={wrap}><span className="rounded-full bg-secondary px-3 py-1 text-xs font-bold">The founder reading room</span><h1 className="mt-4 text-3xl font-bold md:text-5xl">Read for the decision in front of you.</h1><p className="mt-4 max-w-2xl text-muted-foreground">{STARTUP_GUIDES.length} published startup guides.</p><div className="mt-6 flex flex-wrap gap-3"><a href="#guides" className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white">Browse guides <ArrowRight size={17}/></a><a href="/browse" className="inline-flex min-h-11 items-center rounded-lg border bg-card px-6 py-3 font-semibold">Browse ideas</a></div>{featured&&<a className={`${card} mt-8 max-w-xl`} href={`/startup-guides/${featured.slug}`}><span className="text-xs font-bold uppercase text-primary">{featured.category}</span><h2 className="mt-2 text-xl font-bold">{featured.title}</h2><span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary">Read guide <ArrowRight size={16}/></span></a>}</div></section>
+  <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-2xl font-bold">Choose a reading path</h2><div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{categories.slice(1).map(c=><button type="button" className={`${card} text-left`} key={c} onClick={()=>{setSelected(c);document.getElementById("guides")?.scrollIntoView()}}><span className="font-semibold">{c}</span><span className="mt-2 block text-sm text-muted-foreground">{STARTUP_GUIDES.filter(g=>g.category===c).length} guides</span></button>)}</div></div></section>
+  <section id="guides" className="scroll-mt-24 border-t bg-muted/20 py-12 lg:py-16"><div className={wrap}><div className="flex flex-wrap items-end justify-between gap-3"><h2 className="text-2xl font-bold">All published startup guides</h2><span className="text-sm text-muted-foreground">{guides.length} guides</span></div><div className="mt-5 flex flex-wrap gap-2" role="group" aria-label="Filter guides by topic">{categories.map(c=><button key={c} type="button" aria-pressed={selected===c} onClick={()=>setSelected(c)} className={`rounded-full px-4 py-2 text-sm ${selected===c?"bg-primary text-white":"border bg-card"}`}>{c}</button>)}</div><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{guides.map(g=><a className={card} href={`/startup-guides/${g.slug}`} key={g.slug}><BookOpen className="text-primary"/><span className="mt-3 block text-xs font-bold uppercase text-primary">{g.category} · {g.readTime}</span><h3 className="mt-2 text-lg font-semibold group-hover:text-primary">{g.title}</h3><p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{g.description}</p><span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Read guide <ArrowRight size={16}/></span></a>)}</div></div></section>
+  <section className="py-12"><div className={wrap}><h2 className="text-2xl font-bold">Next step</h2><div className="mt-5 grid gap-3 md:grid-cols-3">{[["Browse ideas","/browse"],["Calculate startup costs","/calculator/startup-cost"],["Test demand","/business-demand-test-india"]].map(([t,h])=><a className={card} href={h} key={h}>{t} <ArrowRight size={16} className="inline text-primary"/></a>)}</div><h2 className="mt-10 text-2xl font-bold">Related resources</h2><div className="mt-4 flex flex-wrap gap-2">{[["Topics","/topics"],["Glossary","/glossary"],["Tools","/tools"]].map(([t,h])=><a className="rounded-full border bg-card px-4 py-2 text-sm" href={h} key={h}>{t}</a>)}</div></div></section>
+</V2Frame>}
