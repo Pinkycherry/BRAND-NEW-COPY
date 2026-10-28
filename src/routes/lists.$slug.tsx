@@ -172,7 +172,7 @@ function Comparison({ ideas }: { ideas: ListIdea[] }) {
   );
 }
 
-export function TopCard({ idea, n }: { idea: ListIdea; n: number }) {
+export function TopCard({ idea, n, actionHref }: { idea: ListIdea; n: number; actionHref?: string }) {
   const need = points(idea.what_you_need, 4);
   const hurts = points(idea.what_hurts, 3);
   return (
@@ -254,7 +254,7 @@ export function TopCard({ idea, n }: { idea: ListIdea; n: number }) {
           </div>
           <div className="mt-5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
             <a
-              href={`/idea/${idea.slug}`}
+              href={actionHref ?? `/idea/${idea.slug}`}
               className={`${BTN} bg-slate-900 hover:bg-slate-700 h-12 rounded-lg px-6 text-base gap-2 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-md hover:shadow-lg hover:scale-[1.02] transition-all w-full sm:w-auto min-h-[44px]`}
             >
               <Lightbulb className="h-4 w-4" />

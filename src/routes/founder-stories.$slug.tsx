@@ -13,7 +13,8 @@ import {
   BookOpen,
 } from "lucide-react";
 
-import { SiteShell, Breadcrumbs } from "@/components/site-shell";
+import { Breadcrumbs } from "@/components/site-shell";
+import { V2Frame } from "@/components/v2/frame";
 import { ExploreRail } from "@/components/explore-rail";
 import { JsonLd, articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { getCaseStudyBySlug, CASE_STUDIES } from "@/lib/case-studies-data";
@@ -40,21 +41,13 @@ export const Route = createFileRoute("/founder-stories/$slug")({
   component: FounderStoryDetailPage,
 });
 
-function formatUsd(val: number): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 0,
-  }).format(val);
-}
-
 function FounderStoryDetailPage() {
   const { slug } = Route.useParams();
   const study = getCaseStudyBySlug(slug);
 
   if (!study) {
     return (
-      <SiteShell tone="instrument">
+      <V2Frame>
         <div className="mx-auto max-w-3xl px-4 py-16 text-center">
           <h1 className="text-2xl font-bold">Case Study not found</h1>
           <p className="mt-2 text-muted-foreground">The story you requested does not exist.</p>
@@ -66,7 +59,7 @@ function FounderStoryDetailPage() {
             Back to Stories
           </Link>
         </div>
-      </SiteShell>
+      </V2Frame>
     );
   }
 
@@ -92,7 +85,7 @@ function FounderStoryDetailPage() {
           ]),
         ]}
       />
-      <SiteShell tone="instrument">
+      <V2Frame>
         <div className="mx-auto max-w-4xl px-3 py-10 sm:px-6 sm:py-14">
           <Breadcrumbs
             items={[
@@ -231,7 +224,7 @@ function FounderStoryDetailPage() {
               Execution Timeline
             </p>
             <h2 className="mt-1 font-display text-2xl font-bold tracking-tight">
-              From $0 to "Premium Pricing"/mo
+              From zero to "Premium Pricing"
             </h2>
 
             <div className="mt-6 space-y-6">
@@ -383,7 +376,7 @@ function FounderStoryDetailPage() {
 
           <ExploreRail exclude="founderStories" heading="Keep exploring" />
         </div>
-      </SiteShell>
+      </V2Frame>
     </>
   );
 }

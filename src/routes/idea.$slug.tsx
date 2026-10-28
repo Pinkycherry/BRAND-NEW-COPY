@@ -10,7 +10,8 @@ import { categoryImage } from "@/config/category-imagery";
 import { getLegacyIdea } from "@/lib/legacy-ideas.functions";
 import { absoluteUrl } from "@/lib/schema";
 import { TAXONOMY } from "@/data/taxonomy";
-import { BAND_LABEL, MODE_LABEL, SKILL_LABEL, TIME_LABEL, getIdea, type Idea } from "@/lib/ideas.functions";
+import { MODE_LABEL, SKILL_LABEL, TIME_LABEL, getIdea, type Idea } from "@/lib/ideas.functions";
+import { TopCard } from "./lists.$slug";
 import "@/components/glass-library.css";
 
 const ideaQuery = (slug: string) => queryOptions({
@@ -66,7 +67,7 @@ function IdeaPage() {
   if (data.kind === "legacy") return <LegacyIdeaPage idea={data.idea} />;
   const idea = data.idea;
   const where = placeOf(idea);
-  const tags = [BAND_LABEL[idea.investment_band], TIME_LABEL[idea.time_needed], SKILL_LABEL[idea.skill_level], MODE_LABEL[idea.work_mode]].filter(Boolean);
+  const tags = [TIME_LABEL[idea.time_needed], SKILL_LABEL[idea.skill_level], MODE_LABEL[idea.work_mode]].filter(Boolean);
   const sections = [
     idea.what_it_is && { id: "what", label: "The idea" },
     idea.who_pays_you && { id: "buyers", label: "Who pays" },
@@ -85,6 +86,7 @@ function IdeaPage() {
     <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/browse">Explore</Link>{where && <><span>/</span><Link to="/category/$categorySlug" params={{ categorySlug: where.category.slug }}>{where.category.short}</Link><span>/</span><Link to="/category/$categorySlug/$subcategorySlug" params={{ categorySlug: where.category.slug, subcategorySlug: where.subcategory.slug }}>{where.subcategory.name.replace(/ Business Ideas$/i, "")}</Link></>}<span>/</span><span>Idea</span></nav>
     <header className="gl-idea-hero"><div><p className="gh-eyebrow">A PUBLISHED IDEA · {idea.code}</p><h1>{idea.title}</h1><p className="gl-idea-hook">{idea.hook}</p><ul className="gl-chips">{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul><p className="gl-idea-summary">{idea.summary}</p><div className="gl-idea-actions"><a href="#validate" className="gh-button gh-button-primary">Validate this idea <ArrowUpRight size={17} /></a><a href="#what" className="gh-button gh-button-secondary">Read the blueprint</a><button type="button" className="gh-button gh-button-secondary" onClick={share}>{copied ? <Check size={17} /> : <Copy size={17} />}{copied ? "Link copied" : "Copy link"}</button></div></div><figure className="gl-idea-feature"><img src={data.image.src} alt={data.image.alt} width={1280} height={549} /><figcaption>{where ? <Link to="/category/$categorySlug" params={{ categorySlug: where.category.slug }}>Explore more {where.category.short} paths <ArrowUpRight size={16} aria-hidden="true" /></Link> : "Artwork for this business idea category"}</figcaption></figure></header>
     <div className="gl-idea-layout"><article className="gl-idea-body">
+      <TopCard idea={{ ...idea, updated_at: null }} n={1} actionHref="#validate" />
       {idea.what_it_is && <IdeaSection id="what" eyebrow="THE IDEA" title="What this business is"><p>{idea.what_it_is}</p></IdeaSection>}
       {idea.who_pays_you && <IdeaSection id="buyers" eyebrow="CUSTOMER" title="Who pays you"><p>{idea.who_pays_you}</p></IdeaSection>}
       {idea.how_money_comes && <IdeaSection id="money" eyebrow="REVENUE" title="How the money comes"><p>{idea.how_money_comes}</p></IdeaSection>}

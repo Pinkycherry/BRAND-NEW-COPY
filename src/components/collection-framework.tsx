@@ -1,7 +1,9 @@
 
 import type { ReactNode } from "react";
 import { ArrowUpRight } from "lucide-react";
+import { V2Frame } from "@/components/v2/frame";
 import "./collection-framework.css";
+import "@/components/v2/legacy-surface.css";
 
 const nav = [
   { href: "/templates", label: "Templates" },
@@ -12,21 +14,11 @@ const nav = [
 ];
 
 export function CollectionFrame({ active, children }: { active: string; children: ReactNode }) {
-  return <div className="cf">
+  return <V2Frame active={active}><div className="cf v2-surface">
     <a className="cf-skip" href="#main-content">Skip to content</a>
-    <header className="cf-header"><div className="cf-wrap cf-header-inner">
-      <a href="/" className="cf-brand" aria-label="BusinessIdea.io home"><b>b<span>.</span></b> businessidea.io</a>
-      <nav aria-label="Collection pages">{nav.map(item => <a key={item.href} href={item.href} aria-current={active === item.href ? "page" : undefined}>{item.label}</a>)}</nav>
-      <a className="cf-header-action" href="/blueprints">Browse ideas <ArrowUpRight size={16}/></a>
-    </div></header>
-    <main id="main-content">{children}</main>
-    <footer className="cf-footer"><div className="cf-wrap">
-      <div><strong>businessidea.io</strong><p>A practical starting place for people building from India.</p><a href="/contact">Contact</a></div>
-      <div><span>Explore</span><a href="/browse">Categories</a><a href="/blueprints">Published blueprints</a><a href="/lists">Idea lists</a></div>
-      <div><span>Work through it</span><a href="/tools">Tools</a><a href="/topics">Topics</a><a href="/templates">Templates</a><a href="/product">Validator</a></div>
-      <div><span>Keep learning</span><a href="/startup-guides">Startup guides</a><a href="/founder-glossary">Glossary</a><a href="/blog">Journal</a></div>
-    </div></footer>
-  </div>;
+    <div aria-hidden="true" style={{ height: "6rem" }} />
+    <div id="main-content">{children}</div>
+  </div></V2Frame>;
 }
 
 export function CollectionLinks({ current }: { current: string }) {
