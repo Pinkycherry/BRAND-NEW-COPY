@@ -26,7 +26,7 @@ export const getCategoryPage = createServerFn({ method: "GET" })
     const client = dbOrNull();
     const [subsResult, ideasResult] = client ? await Promise.all([
       client.from("subcategories").select("code,slug,faq").eq("category_code", code),
-      client.from("ideas").select("slug,title,hook,summary,who_pays_you,how_money_comes,what_you_need,what_hurts,verdict,investment_band,time_needed,skill_level,updated_at,subcategory_code")
+      client.from("ideas").select("slug,title,hook,summary,who_pays_you,how_money_comes,what_you_need,what_hurts,verdict,investment_band,time_needed,skill_level,updated_at,subcategory_code,faq")
         .eq("category_code", code).eq("status", "published").order("position").limit(1000),
     ]) : [{ data: [] }, { data: [] }];
     const rows = (ideasResult.data ?? []) as (ListIdea & { subcategory_code: string })[];
@@ -35,8 +35,12 @@ export const getCategoryPage = createServerFn({ method: "GET" })
     const subRows = new Map(((subsResult.data ?? []) as { code: string; slug: string; faq: unknown }[]).map(s => [s.slug, s]));
     const subs = category.subcategories.map(s => ({ name: s.name, slug: s.slug, count: counts.get(subRows.get(s.slug)?.code ?? "") ?? 0 }));
     const faq = category.subcategories.flatMap(s => {
-      const entry = firstFaq(subRows.get(s.slug)?.faq);
-      return entry ? [{ ...entry, href: `/lists/${s.slug}` }] : [];
+      const source = subRows.get(s.slug);
+      const own = firstFaq(source?.faq);
+      if (own) return [{ ...own, href: `/lists/${s.slug}` }];
+      const idea = rows.find(i => i.subcategory_code === source?.code && firstFaq(i.faq));
+      const fallback = firstFaq(idea?.faq);
+      return fallback && idea ? [{ ...fallback, href: `/idea/${idea.slug}` }] : [];
     });
     return {
       name: category.name,

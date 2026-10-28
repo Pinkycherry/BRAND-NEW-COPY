@@ -179,16 +179,12 @@ export function TopCard({ idea, n, actionHref }: { idea: ListIdea; n: number; ac
     <div className="rounded-lg border bg-card text-card-foreground premium-card overflow-hidden border-border/60 shadow-sm hover:shadow-md transition-shadow">
       <div className="p-0">
         <div className="relative flex items-start gap-3 sm:gap-5 p-4 sm:p-6 bg-card border-b border-border/60">
-          {n === 1 && <span aria-hidden="true" className="absolute left-0 top-0 bottom-0 w-1 bg-amber-400" />}
           <div className="shrink-0 w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-primary text-primary-foreground flex items-center justify-center text-lg sm:text-2xl font-extrabold shadow-[0_6px_18px_-6px_hsl(var(--primary)/0.6)] ring-1 ring-primary/30">{n}</div>
           <div className="flex-1 min-w-0">
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-1.5">
               <h3 className="text-lg sm:text-2xl font-bold text-foreground break-words leading-tight">
                 {n}. {idea.title}
               </h3>
-              {n === 1 && (
-                <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 transition-colors bg-amber-400 text-amber-950 border-transparent font-semibold uppercase tracking-wide text-[10px]">Top Pick</div>
-              )}
             </div>
             <p className="text-sm text-muted-foreground break-words">
               <span className="font-semibold text-foreground/80">Best for:</span> {sentences(idea.who_pays_you, 1)}
