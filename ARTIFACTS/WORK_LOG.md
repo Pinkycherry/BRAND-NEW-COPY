@@ -757,3 +757,10 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Added a shared Add/Remove shortlist control to the published idea detail template. It records the page's available published fields locally and shows the user's current shortlist count and Compare/FInd-more action. The original per-idea ValidateButton is retained.
 - No original article/guide/calculator/glossary route, seller file/image, shared global CSS or production data was modified. Source-level check completed; deployed interaction and phone screenshot remain pending.
 - Next completion: replace the read-only checklist on /startup-idea-comparison with a real multi-idea comparison matrix using the saved shortlist.
+
+
+## 2026-10-30 03:38:18 IST — Batch 1 (4/5): Real idea comparison
+- Before: https://bbinewcopy.vercel.app/startup-idea-comparison (read-only checklist and static examples).
+- After: same route renders a side-by-side table from selected two-to-four published ideas, marks missing fields as research gaps, lets the founder choose which record has stronger current evidence per lens, and adds observation/source notes plus a next action. Notes are included in a prepared prompt; provider links open ChatGPT, Claude, Grok or Perplexity. BBI does not run the model.
+- User shortlist and shared context persist locally; comparison lens notes are included in the handoff prompt from the current page session. No database mutation or seller asset/source changes.
+- Source review only; build/deployment/desktop-phone screenshot QA remains pending. Next: /product, the practical Validation Workbench.

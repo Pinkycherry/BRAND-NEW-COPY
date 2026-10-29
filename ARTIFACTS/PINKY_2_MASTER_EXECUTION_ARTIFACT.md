@@ -116,3 +116,8 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 ## 2026-10-30 03:36:06 IST — Batch 1, page edit 3/5: Published idea detail
 - Updated shared `IdeaArticle` so every published idea detail page can add/remove its actual idea from the same browser-local shortlist. The saved object includes available source fields (summary, buyer/revenue/cost fields when present, risks and first steps) and does not query or mutate the database.
 - The idea-detail header now offers a next action to compare the saved shortlist once there are at least two ideas, or return to Browse to find another candidate. Existing ValidateButton and four provider-prefilled prompt paths remain unchanged. Count 3/5; next is making comparison itself a real interactive comparison.
+
+
+## 2026-10-30 03:38:18 IST — Batch 1, page edit 4/5: Real comparison workspace
+- Replaced the two read-only checklist panels in `/startup-idea-comparison` with an actual two-to-four idea comparison sourced from the browser-local shortlist. The table only displays saved/published fields; missing information is visible as a research gap, not filled with invented claims.
+- Added five evidence lenses with idea choices and notes, a next action/review field, and a four-provider prefilled prompt carrying the selected records and personal context. No BBI AI API and no database writes. Count 4/5; next is the central Validation Workbench.

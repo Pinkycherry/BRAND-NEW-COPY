@@ -237,3 +237,7 @@ The five specific-field models are the four original calculators plus CAC. The 5
 
 ### 2026-10-30 03:36:06 IST — Batch 1, completion 3/5
 - The shared published idea detail component now adds an idea to the same local shortlist and offers compare/find-more navigation. Verify with a real published idea and confirm saved selection survives reload after deployment.
+
+
+### 2026-10-30 03:38:18 IST — Batch 1, completion 4/5
+- `/startup-idea-comparison` compares selected records using only available fields, with evidence notes and a provider-prefilled handoff. It does not rank the ideas or invent missing facts. Verify the deployed route and mobile table-scroll before closure.
