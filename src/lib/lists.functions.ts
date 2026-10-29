@@ -145,8 +145,13 @@ export const getListPage = createServerFn({ method: "GET" })
     const faq = faqEntries(s.faq);
     const [{ STARTUP_GUIDES }, { READY_CALCULATORS }] = await Promise.all([import('./guides-data'), import('./calculators')]);
     const terms = `${s.name} ${(cat as {name:string}|null)?.name ?? ''}`.toLocaleLowerCase().split(/\W+/).filter(term=>term.length>3 && !['ideas','business'].includes(term));
-    const relevance = (text: string) => terms.reduce((score,term)=>score+(text.toLocaleLowerCase().includes(term)?1:0),0);
-    const guides = [...STARTUP_GUIDES].sort((a,b)=>relevance(b.title+' '+b.description)-relevance(a.title+' '+a.description)).slice(0,4).map(guide=>({label:guide.title,href:`/startup-guides/${guide.slug}`,note:guide.description}));
+    const relevance = (guide: typeof STARTUP_GUIDES[number]) => {
+      const text = `${guide.title} ${guide.description}`.toLocaleLowerCase();
+      const general = guide.category === 'Validation' ? 4 : guide.category === 'Launch & Ops' ? 3 : guide.category === 'Bootstrapping' ? 2 : 0;
+      const softwareSpecific = /b2b|saas/i.test(guide.title) && !/software|saas|digital|online/.test(`${s.name} ${terms.join(' ')}`.toLowerCase());
+      return terms.reduce((score,term)=>score+(text.includes(term)?3:0),general) - (softwareSpecific ? 50 : 0);
+    };
+    const guides = [...STARTUP_GUIDES].sort((a,b)=>relevance(b)-relevance(a)).slice(0,4).map(guide=>({label:guide.title,href:`/startup-guides/${guide.slug}`,note:guide.description}));
     const calculators = READY_CALCULATORS.slice(0,4).map(tool=>({label:tool.title,href:`/calculator/${tool.slug}`,note:tool.answers}));
     return {
       code: s.code,
