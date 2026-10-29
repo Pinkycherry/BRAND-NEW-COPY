@@ -3,6 +3,8 @@ import { ArrowLeft, ArrowRight, ChevronRight, Check, ShieldCheck, ThumbsUp, Tria
 import { V2Frame } from './frame';
 import { SellerFaq } from './faq';
 import { ValidateButton } from '@/components/validate-button';
+import { ShortlistToggle } from '@/components/founder-workspace/shortlist-toggle';
+import { useFounderWorkspace, type WorkspaceIdea } from '@/lib/founder-workspace';
 import { IDEA_PAGE as copy } from '@/config/idea-page';
 import type { ContentLink } from './content-page';
 import './idea-article.css';
@@ -33,6 +35,20 @@ function LinkGroup({ title, links }: { title: string; links: ContentLink[] }) {
 
 export function IdeaArticle({ data }: { data: IdeaArticleData }) {
   const browseList = data.lists[0]?.href ?? '/lists';
+  const { shortlist } = useFounderWorkspace();
+  const workspaceIdea: WorkspaceIdea = {
+    slug: data.slug,
+    title: data.title,
+    hook: data.hook,
+    summary: data.summary,
+    description: data.summary,
+    categoryName: data.categoryName,
+    targetCustomer: data.fields.find(field => /buyer|customer|who pays/i.test(field.title))?.text,
+    revenueModel: data.fields.find(field => /revenue|money|pricing/i.test(field.title))?.text,
+    startupCost: data.fields.find(field => /cost|capital|investment/i.test(field.title))?.text,
+    risks: data.risks.join('; ').slice(0, 1200),
+    firstSteps: data.steps.slice(0, 8),
+  };
   return <V2Frame>
     <div className="seller-idea">
       <nav className="seller-idea-breadcrumb" aria-label="Breadcrumb">{data.breadcrumbs.map(link => <span key={link.href}><a href={link.href}>{link.label}</a><ChevronRight size={14}/></span>)}<span aria-current="page">{data.title}</span></nav>
@@ -42,6 +58,7 @@ export function IdeaArticle({ data }: { data: IdeaArticleData }) {
           <h1>{data.title}</h1>
           {data.hook && <Prose text={data.hook}/>}
           <div className="seller-idea-actions"><a className="seller-idea-primary" href="#idea-validate">{copy.validate}<ArrowRight size={17}/></a><a className="seller-idea-secondary" href={browseList}>Browse related ideas</a></div>
+          <div className="mt-4 flex flex-wrap items-center gap-3"><ShortlistToggle idea={workspaceIdea}/><a href={shortlist.length>=2?"/startup-idea-comparison":"/browse"} className="inline-flex min-h-10 items-center rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 transition hover:border-blue-500">{shortlist.length>=2?`Compare saved ideas (${shortlist.length}/4)`:"Find ideas to compare"}</a></div>
           <div className="seller-idea-source"><ShieldCheck size={18}/><div><a href="/about">BusinessIdea.io</a>{data.published && <span> · Published {new Date(data.published).toLocaleDateString('en-IN', {day:'numeric',month:'long',year:'numeric'})}</span>}<p>Read the business, buyer, costs and risks before deciding what to test.</p></div></div>
         </header>
         <section id="idea-summary" className="seller-idea-summary"><h2>{copy.summary}</h2><Prose text={data.summary}/></section>

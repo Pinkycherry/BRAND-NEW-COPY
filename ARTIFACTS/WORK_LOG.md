@@ -750,3 +750,10 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Hardened shared workspace normalisation and provider component: safe assignment of saved fields, visible prompt preview, and fallback for a prompt URL exceeding a conservative length threshold. Four-provider prefill remains the default.
 - No seller asset/brand, source archive, authored article/guide/calculator, or production data changed. Source-level review only; deployment and phone screenshots remain open QA.
 - Next completion: add shortlist action to the shared published idea-detail component.
+
+
+## 2026-10-30 03:36:06 IST — Batch 1 (3/5): Idea detail shortlist
+- Before/after: https://bbinewcopy.vercel.app/idea/ (append any published idea slug to inspect a full record).
+- Added a shared Add/Remove shortlist control to the published idea detail template. It records the page's available published fields locally and shows the user's current shortlist count and Compare/FInd-more action. The original per-idea ValidateButton is retained.
+- No original article/guide/calculator/glossary route, seller file/image, shared global CSS or production data was modified. Source-level check completed; deployed interaction and phone screenshot remain pending.
+- Next completion: replace the read-only checklist on /startup-idea-comparison with a real multi-idea comparison matrix using the saved shortlist.

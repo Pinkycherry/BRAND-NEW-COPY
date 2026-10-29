@@ -233,3 +233,7 @@ The five specific-field models are the four original calculators plus CAC. The 5
 
 ### 2026-10-30 03:34:55 IST — Batch 1, completion 2/5
 - `/blueprints` shares the local idea shortlist and offers compare/validation continuation. Shared prompt component now shows the exact prompt and falls back when a prefilled URL is too long.
+
+
+### 2026-10-30 03:36:06 IST — Batch 1, completion 3/5
+- The shared published idea detail component now adds an idea to the same local shortlist and offers compare/find-more navigation. Verify with a real published idea and confirm saved selection survives reload after deployment.

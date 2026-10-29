@@ -111,3 +111,8 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Updated `src/routes/blueprints.index.tsx` so published legacy blueprints can be added to the same browser-local shortlist and removed/cleared from a visible selection panel. It shows the selected count and links to comparison when at least two are selected, otherwise to validation.
 - Hardened shared workspace normalisation and provider handoff: safe object assignment for stored idea fields; visible prompt preview; direct provider-prefill links preserved, with a copy/open fallback for overly long URLs. The approved providers remain ChatGPT, Claude, Grok and Perplexity.
 - Original published records and BBI-owned category imagery remain intact; seller source files/images are untouched. Count 2/5 complete; next is the shared idea-detail action.
+
+
+## 2026-10-30 03:36:06 IST — Batch 1, page edit 3/5: Published idea detail
+- Updated shared `IdeaArticle` so every published idea detail page can add/remove its actual idea from the same browser-local shortlist. The saved object includes available source fields (summary, buyer/revenue/cost fields when present, risks and first steps) and does not query or mutate the database.
+- The idea-detail header now offers a next action to compare the saved shortlist once there are at least two ideas, or return to Browse to find another candidate. Existing ValidateButton and four provider-prefilled prompt paths remain unchanged. Count 3/5; next is making comparison itself a real interactive comparison.
