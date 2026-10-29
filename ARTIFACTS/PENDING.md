@@ -214,10 +214,9 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - P0 hypothesis: local browser shortlist/context plus a real 2–4 idea comparison and transparent provider handoff will create more unique user value than additional redirect pages. Persist only the user's selected items/context locally, not in Supabase. Include explicit review before sending, provider-specific deep links with copy/open fallback, clear-data/export controls and no promise of unlimited free model usage.
 - Before closing the card-stretch defect on /business-idea-pivot-or-stop, inspect the deployed screenshot and mobile/desktop geometry. Source patch is in main, but live visual confirmation is still pending.
 
-### 2026-10-30 — Founder correction: provider URL prompt prefill
-- Founder correctly pointed out that the current implementation already hands a prefilled prompt into the selected provider. Source inspection confirms `validate.functions.ts` URL-encodes the idea-specific prompt and appends it to ChatGPT (`?q=`), Claude (`/new?q=`), Perplexity (`/search?q=`) and Grok (`/?q=`) destinations.
-- Correct the audit's earlier cautious language: don't treat prompt prefill as merely a future possibility or force manual paste as the primary flow. Preserve direct prefilled provider handoff; add Gemini as the missing fifth provider using its own provider URL scheme. Keep copy/open fallback only for actual failure, unsupported browser/service behaviour or length limits. Distinguish prefilled composer from auto-submitted prompt/result.
-- Official Claude deep-link reference confirms `q` prefills the prompt field: https://support.claude.com/en/articles/14729294-open-claude-desktop-with-a-link. Browser-level validation across all providers remains an explicit QA item, not a reason to discard the current direct-link design.
+### 2026-10-30 — Provider prefill correction
+- Preserve the four existing prefilled provider destinations: ChatGPT, Claude, Grok and Perplexity. No Gemini is allowed in the product. Prefill must not be described as automatic submission.
+
 
 ## 2026-10-30 02:47:18 IST — Standing seller-rebuild and provider rules from founder
 
@@ -227,3 +226,6 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Preserve existing authored articles, guides, calculators and glossary. Focus this pass on generated workbench/hub pages that lack practical interactions.
 - First build a browser-local shortlist/context and connect it to real multi-idea comparison and validation handoff. Do not save shortlist/notes in Supabase. Map blast radius before shared-component edits.
 - Page-by-page plan and source inventory: `ARTIFACTS/PINKY_2_MASTER_EXECUTION_ARTIFACT.md`. Update it with every implementation commit alongside WORK_LOG.
+
+### 2026-10-30 03:32:28 IST — Batch 1, completion 1/5
+- `/browse` now stores selected published records locally and exposes add/remove/clear plus compare/validation next steps. Shared workspace and provider prompt-action utilities were added for the remaining four page edits. Verify deployed browser persistence, mobile width, and Vercel status before marking final QA closed.

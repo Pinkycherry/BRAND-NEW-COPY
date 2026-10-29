@@ -100,3 +100,8 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - The end-user audit lives at `ARTIFACTS/END_USER_VALUE_AUDIT_2026-10-30.md`.
 - **First implementation target:** build the reusable local shortlist/context foundation, then wire Browse/Blueprints → Compare → Validation Workbench. Do not start by adding more directory pages or rewriting existing authored content.
 - Update this artifact and `ARTIFACTS/WORK_LOG.md` at every implementation commit. Send the founder the before URL and after URL, exact changed page URL, and honest screenshot/QA status. Do not lead with commit IDs.
+
+## 2026-10-30 03:32:28 IST — Batch 1, page edit 1/5: Browse shortlist
+- Added browser-local workspace storage and reusable shortlist/provider handoff components. The workspace stores only the user's shortlist/context in localStorage; it does not call or write to Supabase. Maximum shortlist is four published ideas. Provider list remains ChatGPT, Claude, Grok and Perplexity; prepared prompts are passed via URL query prefill with a copy fallback.
+- Updated `src/routes/browse.tsx`: users can add/remove actual published records from the shortlist in result cards/table, see selected ideas, clear the list, and continue to comparison or validation. Original search/filter/paging and links are preserved.
+- This is completion 1 of 5. Next: wire the same shortlist into the purchased blueprint library, then idea detail, comparison, and workbench. Validation/deployment evidence is recorded separately per completion; don't infer visual success from a push alone.

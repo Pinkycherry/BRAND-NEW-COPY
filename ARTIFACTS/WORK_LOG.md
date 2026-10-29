@@ -735,3 +735,10 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Added `ARTIFACTS/PINKY_2_MASTER_EXECUTION_ARTIFACT.md` with seller-source inventory, page-by-page plan, one-week work order and QA acceptance rules. Corrected the prior end-user-value audit so it no longer recommends adding another provider.
 - This planning commit changes no React route, CSS, database row/schema or original seller source. First implementation target is the browser-local shortlist/context, then Browse/Blueprints → Compare → Validation Workbench.
 - Status: source/document review only; no new live screenshot/provider browser QA. Pivot-or-Stop visual closure remains open until verified on the deployed page.
+
+## 2026-10-30 03:32:28 IST — Batch 1 (1/5): Browse shortlist foundation
+- Page before/after: https://bbinewcopy.vercel.app/browse
+- Updated Browse with local shortlist actions and a selected-ideas panel; actual published browse rows are saved in browser localStorage only. Added `src/lib/founder-workspace.ts`, reusable `ShortlistToggle`, and reusable `ProviderPromptActions` for the upcoming pages. The provider list is ChatGPT, Claude, Grok and Perplexity only.
+- Browse filters, paging, links and original data records preserved. No seller asset/file, authored guide/article/calculator, global style, or database record changed.
+- Static source-level checks: bounded shortlist max 4; storage read/write wrapped in try/catch; duplicate slugs removed; provider prompt uses URL-encoded direct prefill; no inference/API call; copy fallback exists. No local build run (repository unavailable as a working checkout); Vercel status must be checked after this push.
+- Next completion: update `/blueprints` with the same shortlist action and status.
