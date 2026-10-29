@@ -248,3 +248,12 @@ The five specific-field models are the four original calculators plus CAC. The 5
 
 ### 2026-10-30 03:42:18 IST — Batch 1 deployed-build status (visual QA still open)
 - Vercel status is success for the fifth page-edit commit and prior page commits. Public-page browser fetch and direct HTTP DNS lookup were unavailable in this execution environment. Keep route rendering, real interaction, and desktop/phone screenshots marked pending until independently inspected.
+
+## 2026-10-30 04:36:38 IST — New founder screenshots: issues and next gates
+- Comparison table: hydrate full records before displaying buyer/revenue/risk/steps; group genuine missing details and provide one selected-AI research CTA for all ideas. The current shortlist does not carry all fields being requested.
+- Grok: current provider component opens the bare base URL above the shared 7,200-character URL limit, dropping the encoded prompt. Preserve provider prefill and fix the over-limit path; test single idea and four ideas. Remove “your AI account” wording.
+- Category/list card design: replace saturated green/red and violet blocks with restrained neutral surfaces and one accent. Every idea card needs Read full idea, Add to compare, and Validate this idea. Comparison selection must travel through a persistent visible tray, show titles/count, and include one-click removal/clear.
+- Product validation: make the sequence obvious; add output-intent choices and retain free-form multilingual context. Prompt polishing stays pending until the final release stage.
+- Cash flow/startup costs: keep working calculators; reduce repeated section padding and redundant content. Add contextual actions only next to relevant inputs/results.
+- Brand marks: no 3D effects applied to trademark artwork unless a provider's current published guidance expressly allows it. Cards may have tasteful depth; logo artwork stays unmodified.
+- Plan and batch order: ARTIFACTS/PINKY_2_REVISED_EXECUTION_PLAN_2026-10-30.md. First next code change is the comparison data/hydration and missing-information CTA. No code changed in this planning commit.
