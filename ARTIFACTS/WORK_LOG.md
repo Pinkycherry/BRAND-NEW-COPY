@@ -843,3 +843,11 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - The comparison repair, list-card/tray, Browse, Blueprints and Validation Workbench commits all report Vercel success.
 - Live HTML/browser rendering and screenshots could not be captured from this environment: direct fetch of https://bbinewcopy.vercel.app/browse and /product returned DNS resolution failure. Visual QA is therefore explicitly still open; no screenshots were fabricated. The same canonical URLs are provided as live after links.
 - API key/OpenRouter integration remains future planning only; this batch uses external-provider deep links and local browser shortlist state.
+
+
+## 2026-10-30 05:28:05 IST — Next batch, page edit 1: Individual idea validation customization
+- Before: https://bbinewcopy.vercel.app/idea/small-office-pantry-refill-box#idea-validate
+- After: https://bbinewcopy.vercel.app/idea/small-office-pantry-refill-box#idea-validate
+- Replaced the immediate provider-button-only flow with a practical brief: location, INR budget, hours/time availability, skills, buyer, recent problem, workaround, proposed offer, response language, and optional free text. Context is stored in the existing browser workspace only when fields blur/prepare the prompt; selected context is reused when the founder returns.
+- Added selectable report, roadmap, HTML prototype, chart/infographic and image outputs. Image intent filters to ChatGPT/Grok only. Provider selection appears after the full and compact handoff prompts are prepared; full prompt is reviewable/copyable and the compact URL prompt carries the key idea fields/constraints with encoded-length trimming.
+- Updated src/lib/validate.functions.ts and src/components/validate-button.tsx. No API-key/OpenRouter integration, AI model API call, production schema change or seller-archive mutation. This source commit still needs Vercel status, SSR/page rendering and provider link tests. Screenshot capture is unavailable via the current tools; none fabricated.

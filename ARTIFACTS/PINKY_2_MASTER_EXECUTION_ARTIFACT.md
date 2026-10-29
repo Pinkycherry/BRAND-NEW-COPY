@@ -189,3 +189,10 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - All five page-edit/repair statuses report Vercel success. This confirms deployment checks, not end-to-end browser interaction or visual correctness.
 - A direct live-page fetch and screenshot attempt failed because this environment could not resolve bbinewcopy.vercel.app (DNS temporary failure). Do not invent or present synthetic screenshots as before/after captures. Before URLs are the original canonical routes; no historical snapshot URL was created.
 - No API-key/OpenRouter integration was built. It remains documented for a later decision only.
+
+
+## 2026-10-30 05:28:05 IST — Individual idea validation flow: prompt configuration
+- The validation section now collects city/town/state, budget in INR, hours/time availability, skills, target buyer, recent problem, current workaround, proposed offer, response language and optional free text before a prompt is prepared.
+- Added selectable deliverables: detailed report, action roadmap, HTML prototype, chart/infographic and image generation. Image output exposes ChatGPT/Grok only, without promising that every session/plan will create the artifact.
+- Prompt service returns full prompt for review/copy plus a compact provider-prefill prompt that is checked against URL-encoding length. It reads the existing published record only and prepares a prompt; it does not call a model or store any response. The API/OpenRouter option stays future planning only. Browser context remains local.
+- Public preview rendering/screenshots unavailable from this environment; Vercel status and browser checks remain required.

@@ -213,3 +213,10 @@ The external prompt should be explicit that:
 - Validation Workbench outputs: Vercel success (https://vercel.com/pinky12/bbinewcopy/FLPfLJg1wsLy4LUtQ3Q8S3YmJbtk)
 - All five Vercel statuses are success. The UI changes are deployed according to the Vercel check, but rendered browser/mobile verification is not marked complete because live fetch was blocked by DNS resolution in this environment. No before/after screenshots were created.
 - Next batch starts after the normal page-by-page flow resumes. API integration remains documentation-only.
+
+
+## 2026-10-30 05:28:05 IST — Next batch page 6/5? Correction: individual idea validation flow
+- Reworked the existing idea-detail validation panel so the founder can set town/state, INR budget, weekly availability, skills, buyer, recent problem, current workaround, proposed offer, response language and optional free-form notes before preparing a prompt.
+- Added selectable outputs: report, roadmap, HTML prototype, chart/infographic and images. Image intent offers only ChatGPT and Grok. Output features are requested, not guaranteed; provider session/plan limits still apply.
+- Prompt preparation now returns a full review/copy prompt and a compact prefill prompt. The request remains a prepared external-provider deep link; there is no model inference API, OpenRouter integration, API key store, or new auth logic in this edit. Founder context is saved locally in the browser through the existing workspace utility.
+- Reference: direct public preview could not be opened through the available browser tool; use Google Search Central's people-first guidance as the quality lens, with special focus on substantive interactive work rather than an explanatory-only page. This is page 1 of the next five-page set in source order (idea detail / validation).

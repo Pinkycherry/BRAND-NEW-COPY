@@ -307,3 +307,10 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Build/deployment status checks are green across all five page edits/repair.
 - Still pending: founder/browser visual check on desktop and 360/390px mobile, actual provider deep-link smoke tests including long Grok prompts, and before/after screenshots. This runtime failed DNS resolution for the preview domain, so screenshots are unavailable here.
 - No API-key implementation was added; it stays a future option pending the founder's decision.
+
+
+## 2026-10-30 05:28:05 IST — Individual idea validation panel verification open
+- New fields and output selections are source-implemented; verify the form at 360/390px and desktop, then verify all provider query links and copied full prompt. Include long Telugu/free-text cases and check the encoded URL length. If a provider URL cannot carry the compact prompt, it must show the copy fallback rather than claim it prefilled.
+- Image request exposes ChatGPT/Grok only. Artifact generation depends on the chosen provider session and plan; wording must not imply a guaranteed attachment.
+- API/OpenRouter integration is explicitly NOT part of this edit. No API keys are requested or stored; this is an external-link prompt builder only.
+- Live preview direct fetch failed in this environment; do not fabricate screenshots. Vercel status and actual browser QA remain open.
