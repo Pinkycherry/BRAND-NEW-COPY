@@ -764,3 +764,10 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - After: same route renders a side-by-side table from selected two-to-four published ideas, marks missing fields as research gaps, lets the founder choose which record has stronger current evidence per lens, and adds observation/source notes plus a next action. Notes are included in a prepared prompt; provider links open ChatGPT, Claude, Grok or Perplexity. BBI does not run the model.
 - User shortlist and shared context persist locally; comparison lens notes are included in the handoff prompt from the current page session. No database mutation or seller asset/source changes.
 - Source review only; build/deployment/desktop-phone screenshot QA remains pending. Next: /product, the practical Validation Workbench.
+
+
+## 2026-10-30 03:40:00 IST — Batch 1 (5/5): Practical Validation Workbench
+- Before: https://bbinewcopy.vercel.app/product (intro/checklists/redirects, no actual validation form or provider action).
+- After: same route is a working local founder workspace: selected ideas, add/remove/clear, persisted India-first constraints, four task modes (validate, compare, red-team, field-test), and prefilled handoff buttons for ChatGPT, Claude, Grok and Perplexity. Prompt preview and long-URL fallback are included. No model API request or Supabase write from this flow.
+- Original published records remain read-only; authored guides/articles/calculators/glossary and seller source files/images remain untouched. Noindex metadata retained.
+- Batch page-edit count: 5/5. Source review only; deployment state to be checked next, then test live routes and screenshots. No claim of visual success until Vercel/HTTP and phone layout checks pass.

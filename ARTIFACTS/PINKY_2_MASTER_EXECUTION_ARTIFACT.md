@@ -121,3 +121,8 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 ## 2026-10-30 03:38:18 IST — Batch 1, page edit 4/5: Real comparison workspace
 - Replaced the two read-only checklist panels in `/startup-idea-comparison` with an actual two-to-four idea comparison sourced from the browser-local shortlist. The table only displays saved/published fields; missing information is visible as a research gap, not filled with invented claims.
 - Added five evidence lenses with idea choices and notes, a next action/review field, and a four-provider prefilled prompt carrying the selected records and personal context. No BBI AI API and no database writes. Count 4/5; next is the central Validation Workbench.
+
+
+## 2026-10-30 03:40:00 IST — Batch 1, page edit 5/5: Practical Validation Workbench
+- Rebuilt `/product` into the core founder workspace. It now shows/adds/clears the browser-local shortlist, captures location, INR budget, weekly hours, skills, buyer, language, recent problem, existing workaround and proposed offer; offers four real tasks; and prepares a source-conscious prompt for the four approved providers. All saved constraints use localStorage; no BBI AI/API call or database write.
+- The prompt includes the selected published record(s), constraints and user-written task notes. The provider composer opens prefilled where the URL format is accepted; the user presses send in their account. The provider component provides prompt preview and long-URL fallback. Count 5/5 page edits committed; live build/interaction/mobile verification remains the next gate.

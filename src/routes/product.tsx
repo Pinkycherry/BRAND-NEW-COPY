@@ -1,13 +1,26 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, X } from "lucide-react";
 import { V2Frame } from "@/components/v2/frame";
 import { SellerFaq } from "@/components/v2/faq";
+import { ShortlistToggle } from "@/components/founder-workspace/shortlist-toggle";
+import { ProviderPromptActions } from "@/components/founder-workspace/provider-prompt-actions";
+import {
+  buildFounderPrompt,
+  clearShortlist,
+  removeShortlistIdea,
+  saveFounderContext,
+  useFounderWorkspace,
+  type FounderContext,
+  type FounderPromptTask,
+  type WorkspaceIdea,
+} from "@/lib/founder-workspace";
 import { getBrowseIdeas } from "@/lib/browse.functions";
 
 export const Route = createFileRoute("/product")({
   head: () => ({ meta: [
     { title: "Business Idea Validation Workbench in India | BusinessIdea.io" },
-    { name: "description", content: "Use buyer, problem, current workaround and small-offer questions in a real conversation, with published ideas and working research paths." },
+    { name: "description", content: "Build a practical, India-focused validation prompt from published business ideas and your real constraints. Continue in your own AI account without paying BusinessIdea.io for AI credits." },
     { name: "robots", content: "noindex,nofollow,noarchive,noimageindex" },
   ] }),
   loader: async () => {
@@ -16,43 +29,131 @@ export const Route = createFileRoute("/product")({
   },
   component: ProductPage,
 });
-const prompts = [
-  { label: "Who is the buyer?", hint: "A person in a situation, not everybody" },
-  { label: "What happened recently?", hint: "A specific recurring problem, not a broad trend" },
-  { label: "What do they do now?", hint: "Include a purchase, time cost or existing alternative" },
-  { label: "What small offer will you test?", hint: "An outcome, delivery window and stated price" },
-] as const;
+
 const wrap = "mx-auto max-w-6xl px-4 md:px-6";
-const card = "rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-500";
-const button = "inline-flex min-h-11 items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700";
+const card = "rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6";
+const input = "mt-2 block min-h-11 w-full min-w-0 rounded-xl border border-slate-300 bg-white px-3 py-2.5 font-normal text-slate-950 outline-none transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100";
+const button = "inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-blue-700 px-5 py-3 font-semibold text-white transition hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700";
+
+const tasks: { value: FounderPromptTask; label: string; description: string }[] = [
+  { value: "validate", label: "Pressure-test one idea", description: "Find the strongest assumptions to verify before spending." },
+  { value: "compare", label: "Compare saved ideas", description: "Assess two to four ideas using the same evidence and constraints." },
+  { value: "red-team", label: "Make the strongest case against it", description: "Expose the reasons the current idea might not work." },
+  { value: "field-test", label: "Prepare a small field test", description: "Create a buyer question script and a reversible next experiment." },
+];
+
 function ProductPage() {
   const { ideas } = Route.useLoaderData();
+  const workspace = useFounderWorkspace();
+  const [task, setTask] = useState<FounderPromptTask>("validate");
+  const [activeIdeaSlug, setActiveIdeaSlug] = useState("");
+  const [extraNotes, setExtraNotes] = useState("");
+
+  const asWorkspaceIdea = (idea: (typeof ideas)[number]): WorkspaceIdea => ({
+    slug: idea.slug,
+    title: idea.title,
+    hook: idea.hook,
+    summary: idea.summary,
+    description: idea.summary || idea.hook,
+    categoryCode: idea.category_code,
+    investmentBand: idea.investment_band,
+    timeNeeded: idea.time_needed,
+    skillLevel: idea.skill_level,
+    workMode: idea.work_mode,
+  });
+
+  const activeIdea = workspace.shortlist.find(idea => idea.slug === activeIdeaSlug) || workspace.shortlist[0];
+  const promptIdeas = task === "compare" ? workspace.shortlist : activeIdea ? [activeIdea] : [];
+  const needed = task === "compare" ? 2 : 1;
+  const promptReady = promptIdeas.length >= needed;
+  const updateContext = (key: keyof FounderContext, value: string) => {
+    saveFounderContext({ [key]: value } as Partial<FounderContext>);
+  };
+  const prompt = buildFounderPrompt(task, promptIdeas, workspace.context) +
+    (extraNotes.trim() ? "\n\nEXTRA FOUNDER CONTEXT (user-written):\n" + extraNotes.trim().slice(0, 1600) : "");
+
   return <V2Frame active="/product">
-    <div className="bg-slate-50 pt-24 lg:pt-28"><nav className={`${wrap} flex flex-wrap items-center gap-2 py-3 text-sm text-slate-600`} aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={15}/><span>Validation workbench</span></nav></div>
-    <section className="bg-gradient-to-b from-blue-50 to-white py-12 lg:py-16"><div className={wrap}><span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-bold text-blue-800">The validation workbench</span><h1 className="mt-5 max-w-3xl text-4xl font-bold leading-tight md:text-5xl">A sharper idea starts with <span className="text-blue-700">a buyer you can name.</span></h1><p className="mt-5 max-w-3xl text-lg text-slate-600">Write down the person, the last occurrence, the current workaround and a small offer. These questions help you ask a better question. It does not produce an AI score or claim a market verdict.</p><div className="mt-7 flex flex-wrap gap-3"><a href="/browse" className={button}>Browse published ideas <ArrowRight size={17}/></a><a href="#workbench" className="inline-flex min-h-11 items-center rounded-xl border bg-white px-6 py-3 font-semibold hover:border-blue-500">Review the questions</a></div></div></section>
-    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Evidence before a confident answer.</h2><p className="mt-3 max-w-3xl text-slate-600">The current workbench prepares your next test. Research models and reports require their own working integrations; this page does not simulate either.</p><div className="mt-6 grid gap-4 md:grid-cols-3">{[
-      ["Describe the situation.", "Name a buyer and the last time they encountered the problem."],
-      ["Inspect the alternative.", "Find what they already do, including inconvenience and money spent."],
-      ["Ask for commitment.", "Take a clear offer into an appropriate conversation, booking or small test."],
-    ].map(([title, copy], index) => <article className={card} key={title}><span className="text-sm font-bold text-blue-700">0{index + 1}</span><h3 className="mt-3 text-xl font-bold">{title}</h3><p className="mt-3 text-slate-600">{copy}</p></article>)}</div></div></section>
-    <section id="workbench" className="scroll-mt-28 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Put the assumption into words.</h2><ol className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">{prompts.map((item, index) => <li className={card} key={item.label}><span className="text-sm font-bold text-blue-700">0{index + 1}</span><h3 className="mt-3 font-bold">{item.label}</h3><p className="mt-3 text-slate-600">{item.hint}</p></li>)}</ol></div></section>
-    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Take the brief to a buyer.</h2><p className="mt-3 max-w-3xl text-slate-600">Ask about a recent event before describing your offer. Keep the buyer's own words separate from your interpretation. A polite reaction is weaker than a specific booking, purchase or agreed next step.</p><p className="mt-3 max-w-3xl text-slate-600">Then put your price, delivery cost and cash timing beside the field evidence. A buyer's yes can still lead to a losing sale.</p><div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">{[
-      ["Find one reachable buyer", "/first-customer-india"],
-      ["Design a small demand test", "/business-demand-test-india"],
-      ["Check cash at risk", "/startup-costs-india"],
-      ["Preview the evidence tracker", "/templates"],
-    ].map(([title, href]) => <a className={card} href={href} key={href}><h3 className="font-bold">{title}</h3><ArrowRight className="mt-4 text-blue-700" size={17}/></a>)}</div></div></section>
-    <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Research a completed blueprint.</h2><p className="mt-3 max-w-3xl text-slate-600">Published idea pages offer research prompts for external models. Each provider has its own account and rules. Check any cited source yourself and bring the questions back to a buyer.</p><div className="mt-6 grid gap-4 md:grid-cols-3">{[
-      ["Select a published idea", "/blueprints"],
-      ["Read the full validation field guide", "/startup-idea-validation"],
-      ["Set a stop boundary", "/business-idea-risk-check"],
-    ].map(([title, href]) => <a className={card} href={href} key={href}><h3 className="font-bold">{title}</h3><ArrowRight className="mt-4 text-blue-700" size={17}/></a>)}</div></div></section>
-    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Published ideas to inspect</h2><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{ideas.map(idea => <a className={card} href={`/idea/${idea.slug}`} key={idea.slug}><h3 className="text-xl font-bold">{idea.title}</h3><p className="mt-3 line-clamp-3 text-slate-600">{idea.hook || idea.summary}</p><span className="mt-4 inline-flex items-center gap-2 font-semibold text-blue-700">Read idea <ArrowRight size={17}/></span></a>)}</div></div></section>
-    <SellerFaq title="What this workbench can tell you" faq={[
-      { q: "Is this an AI validation result?", a: "No. It structures your own claim and shows working next steps. It does not estimate market size, score viability or generate a report." },
-      { q: "Are my answers stored?", a: "No. This page presents questions to take into a real buyer conversation." },
-      { q: "What if I cannot answer a question?", a: "That is a useful research gap. Speak to a person who recently faced the problem and ask about what happened last time." },
-    ]} />
-    <section className="bg-blue-700 py-12 text-white lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Take one question into the world.</h2><p className="mt-3 max-w-3xl text-blue-100">Choose a published idea, identify a buyer and compare what they do today with a small offer you can deliver.</p><a href="/browse" className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-blue-800 hover:bg-blue-50">Browse ideas <ArrowRight size={17}/></a></div></section>
+    <div className="bg-slate-50 pt-24 lg:pt-28">
+      <nav className={`${wrap} flex flex-wrap items-center gap-2 py-3 text-sm text-slate-600`} aria-label="Breadcrumb">
+        <a href="/" className="hover:text-blue-700">Home</a><ChevronRight size={15}/><span>Validation workbench</span>
+      </nav>
+    </div>
+    <main className="text-slate-900">
+      <section className="bg-gradient-to-b from-blue-50 to-white py-12 lg:py-16">
+        <div className={wrap}>
+          <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-bold text-blue-800">Your founder workspace</span>
+          <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-tight tracking-tight md:text-5xl">Take your idea and your real constraints into the next decision.</h1>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">Choose a published idea, add your own location, budget and available time, then prepare a specific research prompt for ChatGPT, Claude, Grok or Perplexity. BusinessIdea.io does not charge you AI credits or run the model request.</p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <a href="#my-ideas" className={button}>Use my saved ideas <ArrowRight size={17}/></a>
+            <a href="#founder-context" className="inline-flex min-h-11 items-center rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-800 hover:border-blue-500">Set my constraints</a>
+          </div>
+          <p className="mt-4 text-sm text-slate-500">Your shortlist and context are stored in this browser only. They are not uploaded to BusinessIdea.io.</p>
+        </div>
+      </section>
+
+      <section id="my-ideas" className="scroll-mt-28 py-12 lg:py-16">
+        <div className={wrap}>
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div><p className="text-sm font-bold uppercase tracking-wide text-blue-700">Start from published records</p><h2 className="mt-2 text-3xl font-bold">Your shortlist</h2><p className="mt-2 text-slate-600">{workspace.shortlist.length} of 4 ideas saved in this browser.</p></div>
+            <div className="flex flex-wrap gap-2">
+              <a href="/browse" className="inline-flex min-h-10 items-center rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-semibold">Browse all ideas</a>
+              {workspace.shortlist.length>0&&<button type="button" onClick={clearShortlist} className="inline-flex min-h-10 items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-semibold"><X size={15}/>Clear</button>}
+            </div>
+          </div>
+          {workspace.shortlist.length>0 ? <ul className="mt-6 grid gap-3 sm:grid-cols-2">{workspace.shortlist.map(idea=><li key={idea.slug} className={`${card} flex items-start justify-between gap-3`}><div className="min-w-0"><a href={`/idea/${idea.slug}`} className="font-bold text-slate-950 hover:underline">{idea.title}</a><p className="mt-2 text-sm leading-6 text-slate-600">{idea.summary||idea.hook||idea.description||"Published idea record"}</p><p className="mt-2 text-xs text-slate-500">{idea.categoryName||idea.categoryCode||"Published idea"}</p></div><button type="button" onClick={()=>removeShortlistIdea(idea.slug)} className="shrink-0 text-sm font-semibold text-slate-600 hover:text-slate-950">Remove</button></li>)}</ul>
+          : <div className="mt-6 rounded-2xl border border-dashed border-slate-300 bg-white p-6"><h3 className="text-lg font-bold">Start with one actual published idea</h3><p className="mt-2 max-w-2xl leading-6 text-slate-600">You can add ideas below or go to Browse and use its filters. The saved selection will follow you to Compare and this workbench on the same browser.</p><a href="/browse" className={`${button} mt-4`}>Find published ideas <ArrowRight size={17}/></a></div>}
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-12 lg:py-16">
+        <div className={wrap}>
+          <div className="max-w-3xl"><p className="text-sm font-bold uppercase tracking-wide text-blue-700">Need a starting point?</p><h2 className="mt-2 text-3xl font-bold">Add an idea directly from this page</h2><p className="mt-2 leading-7 text-slate-600">These are real published records returned by the existing idea library. Add one to your shortlist; the data remains read-only.</p></div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{ideas.map(idea=><article key={idea.slug} className={card}><span className="text-xs font-bold uppercase tracking-wide text-blue-700">{idea.category_code}</span><h3 className="mt-2 text-lg font-bold">{idea.title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{idea.hook||idea.summary}</p><ShortlistToggle className="mt-4" idea={asWorkspaceIdea(idea)}/><a className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:underline" href={`/idea/${idea.slug}`}>Open full idea <ArrowRight size={15}/></a></article>)}</div>
+        </div>
+      </section>
+
+      <section id="founder-context" className="scroll-mt-28 py-12 lg:py-16">
+        <div className={wrap}>
+          <div className="max-w-3xl"><p className="text-sm font-bold uppercase tracking-wide text-blue-700">Use your actual situation</p><h2 className="mt-2 text-3xl font-bold">What should the research know about you?</h2><p className="mt-2 leading-7 text-slate-600">Fill in only what you know. Your entries are stored in this browser with your shortlist. The prompt will tell the outside model to mark unknowns and cite evidence instead of inventing data.</p></div>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            <label className={`${card} block text-sm font-semibold`}>City or target market<input className={input} value={workspace.context.location} onChange={event=>updateContext("location",event.target.value)} placeholder="e.g. Pune, a nearby industrial area, or online India"/></label>
+            <label className={`${card} block text-sm font-semibold`}>Budget available (₹)<input className={input} type="number" min="0" step="any" inputMode="decimal" value={workspace.context.budgetINR} onChange={event=>updateContext("budgetINR",event.target.value)} placeholder="Your real cash limit"/></label>
+            <label className={`${card} block text-sm font-semibold`}>Reliable hours per week<input className={input} type="number" min="0" step="1" value={workspace.context.hoursPerWeek} onChange={event=>updateContext("hoursPerWeek",event.target.value)} placeholder="Hours you can repeat"/></label>
+            <label className={`${card} block text-sm font-semibold`}>Skills and experience<input className={input} value={workspace.context.skills} onChange={event=>updateContext("skills",event.target.value)} placeholder="Skills you already have"/></label>
+            <label className={`${card} block text-sm font-semibold`}>Who might pay?<input className={input} value={workspace.context.buyer} onChange={event=>updateContext("buyer",event.target.value)} placeholder="A reachable type of buyer, not everyone"/></label>
+            <label className={`${card} block text-sm font-semibold`}>Preferred response language<select className={input} value={workspace.context.language} onChange={event=>updateContext("language",event.target.value)}><option>English</option><option>Hindi</option><option>Marathi</option><option>Another Indian language</option></select></label>
+            <label className={`${card} block text-sm font-semibold md:col-span-2`}>What problem happened recently?<textarea className={input} rows={3} value={workspace.context.recentProblem} onChange={event=>updateContext("recentProblem",event.target.value)} placeholder="A real recent event you want to investigate"/></label>
+            <label className={`${card} block text-sm font-semibold md:col-span-2`}>What do people do now instead?<textarea className={input} rows={3} value={workspace.context.currentWorkaround} onChange={event=>updateContext("currentWorkaround",event.target.value)} placeholder="Existing seller, workaround, family help, spreadsheet, or doing nothing"/></label>
+            <label className={`${card} block text-sm font-semibold md:col-span-2`}>What small offer might you test?<textarea className={input} rows={3} value={workspace.context.proposedOffer} onChange={event=>updateContext("proposedOffer",event.target.value)} placeholder="Outcome, scope, a price to test, and a delivery window"/></label>
+          </div>
+          <p className="mt-4 text-sm text-slate-500" role="status">Your constraints save locally as you type. Clear browser site data or changing devices can remove them.</p>
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-12 lg:py-16">
+        <div className={wrap}>
+          <div className="max-w-3xl"><p className="text-sm font-bold uppercase tracking-wide text-blue-700">Choose the job</p><h2 className="mt-2 text-3xl font-bold">What should the outside model help you do?</h2><p className="mt-2 leading-7 text-slate-600">The same saved idea can support different prompts. No provider is called until you click its link.</p></div>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" role="group" aria-label="Choose validation task">{tasks.map(item=><button key={item.value} type="button" aria-pressed={task===item.value} onClick={()=>setTask(item.value)} className={`rounded-2xl border p-4 text-left transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 ${task===item.value?"border-blue-700 bg-blue-50 ring-2 ring-blue-100":"border-slate-200 bg-white hover:border-blue-400"}`}><span className="block font-bold text-slate-950">{item.label}</span><span className="mt-2 block text-sm leading-6 text-slate-600">{item.description}</span></button>)}</div>
+          {task!=="compare"&&workspace.shortlist.length>0&&<label className="mt-6 block max-w-2xl text-sm font-semibold">Idea to use for this task<select className={input} value={activeIdea?.slug||""} onChange={event=>setActiveIdeaSlug(event.target.value)}>{workspace.shortlist.map(idea=><option key={idea.slug} value={idea.slug}>{idea.title}</option>)}</select></label>}
+          <label className="mt-6 block max-w-3xl text-sm font-semibold">Anything else the model should know? (optional)<textarea className={input} rows={3} value={extraNotes} onChange={event=>setExtraNotes(event.target.value)} placeholder="An assumption to challenge, a limitation, or a question not covered above"/></label>
+          {promptReady ? <div className="mt-6"><ProviderPromptActions title={task==="compare"?"Compare your saved ideas in your AI account":"Continue with a prepared research prompt"} prompt={prompt}/></div>
+          : <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5"><h3 className="font-bold text-slate-950">{task==="compare"?"Add two or more ideas before comparing":"Choose a published idea before preparing a prompt"}</h3><p className="mt-2 leading-6 text-slate-700">{task==="compare"?"The comparison prompt needs at least two records from your shortlist. Add more in Browse, Blueprints or the idea cards above.":"Add one published idea to your local shortlist to prepare a prompt. Nothing is sent until you choose a provider."}</p><div className="mt-4 flex flex-wrap gap-3"><a className={button} href="/browse">Find ideas <ArrowRight size={16}/></a><a className="inline-flex min-h-11 items-center rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold" href="/blueprints">Browse blueprints</a></div></div>}
+        </div>
+      </section>
+
+      <section className="py-12 lg:py-16">
+        <div className={wrap}><div className="grid gap-8 lg:grid-cols-2 lg:items-center"><div><p className="text-sm font-bold uppercase tracking-wide text-blue-700">The honest boundary</p><h2 className="mt-2 text-3xl font-bold">A prompt is not proof of demand.</h2><p className="mt-3 leading-7 text-slate-600">The prepared prompt asks for source links and dates, but the model may still be wrong or out of date. Verify consequential claims, then ask a real potential buyer about what happened last time. BusinessIdea.io does not store the external model's answer or charge for its inference.</p><div className="mt-5 flex flex-wrap gap-3"><a href="/business-idea-research-india" className="inline-flex min-h-11 items-center rounded-xl bg-blue-700 px-5 py-3 font-semibold text-white hover:bg-blue-800">Open the evidence desk</a><a href="/business-idea-pivot-or-stop" className="inline-flex min-h-11 items-center rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold">Set a stop boundary</a></div></div><div className={card}><h3 className="text-lg font-bold">What gets carried into the prompt</h3><ul className="mt-4 list-disc space-y-2 pl-5 leading-6 text-slate-600"><li>Selected published record(s)</li><li>Your chosen city/market and actual rupee budget, if supplied</li><li>Available hours, skills and target buyer, if supplied</li><li>Your problem, current workaround and proposed small offer</li><li>Your selected task and optional extra notes</li></ul><p className="mt-4 text-sm text-slate-500">The prompt is prefilled in the provider URL when supported; you review it and press send in your account.</p></div></div></div>
+      </section>
+
+      <SellerFaq title="How this workbench handles your data" faq={[
+        { q: "Does BusinessIdea.io run the AI analysis?", a: "No. It prepares a prompt and opens ChatGPT, Claude, Grok or Perplexity in your account. You review the prompt and press send yourself." },
+        { q: "Are my ideas and constraints saved to a server?", a: "No. The selected ideas and context are stored in browser local storage. They are not uploaded to BusinessIdea.io by this workbench. Browser data or device changes can remove them." },
+        { q: "Can I use the result as proof that customers will buy?", a: "No. Use the outside model to find assumptions and research sources. Verify the source/date and run a suitable test with real buyers before committing money." },
+        { q: "Do all outside AI accounts have the same free limits?", a: "No. Access and usage limits vary by provider and account. This site does not guarantee unlimited free use or pay the provider for you." },
+      ]} />
+
+      <section className="bg-blue-800 py-12 text-white lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">One idea, one useful next action.</h2><p className="mt-3 max-w-3xl leading-7 text-blue-100">Save the idea, state your constraints, then take the prepared question into your chosen account. Keep the evidence and decision with you—not in another credit meter.</p><div className="mt-6 flex flex-wrap gap-3"><a href="/startup-idea-comparison" className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-white px-5 py-3 font-semibold text-blue-900 hover:bg-blue-50">Compare your shortlist <ArrowRight size={17}/></a><a href="/browse" className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-blue-300 px-5 py-3 font-semibold text-white hover:bg-blue-700">Find another idea <ArrowRight size={17}/></a></div></div></section>
+    </main>
   </V2Frame>;
 }
