@@ -229,3 +229,7 @@ The five specific-field models are the four original calculators plus CAC. The 5
 
 ### 2026-10-30 03:32:28 IST — Batch 1, completion 1/5
 - `/browse` now stores selected published records locally and exposes add/remove/clear plus compare/validation next steps. Shared workspace and provider prompt-action utilities were added for the remaining four page edits. Verify deployed browser persistence, mobile width, and Vercel status before marking final QA closed.
+
+
+### 2026-10-30 03:34:55 IST — Batch 1, completion 2/5
+- `/blueprints` shares the local idea shortlist and offers compare/validation continuation. Shared prompt component now shows the exact prompt and falls back when a prefilled URL is too long.

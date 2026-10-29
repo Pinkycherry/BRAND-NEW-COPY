@@ -77,7 +77,7 @@ function normaliseIdea(value: unknown): WorkspaceIdea | null {
   for (const field of stringFields) {
     const valueAtField = raw[field];
     if (typeof valueAtField === "string" && valueAtField.trim()) {
-      (idea[field] as string | undefined) = text(valueAtField, 1200);
+      Object.assign(idea, { [field]: text(valueAtField, 1200) });
     }
   }
   if (Array.isArray(raw.firstSteps)) {

@@ -10,6 +10,7 @@ const providers = [
 
 export function ProviderPromptActions({ prompt, title = "Continue with your chosen AI", className = "" }: { prompt: string; title?: string; className?: string }) {
   const [copyState, setCopyState] = useState<"idle" | "copied" | "failed">("idle");
+  const linkLimit = 7200;
   const copyPrompt = async () => {
     try {
       await navigator.clipboard.writeText(prompt);
@@ -22,10 +23,12 @@ export function ProviderPromptActions({ prompt, title = "Continue with your chos
     <h3 className="text-xl font-bold text-slate-950">{title}</h3>
     <p className="mt-2 text-sm leading-6 text-slate-600">Your prepared prompt opens in your own provider account. Review it there and press send yourself. BusinessIdea.io does not run the AI request or save its answer.</p>
     <div className="mt-4 grid gap-3 sm:grid-cols-2">
-      {providers.map(provider => <a key={provider.id} href={provider.base + encodeURIComponent(prompt)} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 font-semibold text-slate-900 transition hover:border-blue-400 hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">
-        <span>Open {provider.label} with prepared prompt</span><ArrowUpRight size={17} className="shrink-0 text-blue-700"/>
-      </a>)}
+      {providers.map(provider => { const href = provider.base + encodeURIComponent(prompt); const canPrefill = href.length <= linkLimit; return <a key={provider.id} href={canPrefill ? href : provider.base.split("?")[0]} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 font-semibold text-slate-900 transition hover:border-blue-400 hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">
+        <span>{canPrefill ? `Open ${provider.label} with prepared prompt` : `Open ${provider.label} (prompt too long to prefill)`}</span><ArrowUpRight size={17} className="shrink-0 text-blue-700"/>
+      </a>; })}
     </div>
+    <details className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4"><summary className="cursor-pointer font-semibold text-slate-800">Review prepared prompt</summary><pre className="mt-3 max-h-80 overflow-auto whitespace-pre-wrap break-words text-sm leading-6 text-slate-700">{prompt}</pre></details>
+    {prompt.length > linkLimit && <p className="mt-3 text-sm text-amber-800">This prompt may exceed a provider URL limit. Copy the full prompt below, then paste it into your own account.</p>}
     <div className="mt-4 flex flex-wrap items-center gap-3">
       <button type="button" onClick={()=>void copyPrompt()} className="inline-flex min-h-10 items-center gap-2 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-800 hover:border-blue-500">{copyState==="copied"?<Check size={16}/>:<Copy size={16}/>} {copyState==="copied"?"Prompt copied":"Copy prepared prompt"}</button>
       {copyState==="copied"&&<p role="status" className="text-sm text-green-700">Ready to paste wherever you need it.</p>}

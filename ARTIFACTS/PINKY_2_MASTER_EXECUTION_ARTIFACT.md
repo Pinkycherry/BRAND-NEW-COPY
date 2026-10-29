@@ -105,3 +105,9 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Added browser-local workspace storage and reusable shortlist/provider handoff components. The workspace stores only the user's shortlist/context in localStorage; it does not call or write to Supabase. Maximum shortlist is four published ideas. Provider list remains ChatGPT, Claude, Grok and Perplexity; prepared prompts are passed via URL query prefill with a copy fallback.
 - Updated `src/routes/browse.tsx`: users can add/remove actual published records from the shortlist in result cards/table, see selected ideas, clear the list, and continue to comparison or validation. Original search/filter/paging and links are preserved.
 - This is completion 1 of 5. Next: wire the same shortlist into the purchased blueprint library, then idea detail, comparison, and workbench. Validation/deployment evidence is recorded separately per completion; don't infer visual success from a push alone.
+
+
+## 2026-10-30 03:34:55 IST — Batch 1, page edit 2/5: Blueprints shortlist
+- Updated `src/routes/blueprints.index.tsx` so published legacy blueprints can be added to the same browser-local shortlist and removed/cleared from a visible selection panel. It shows the selected count and links to comparison when at least two are selected, otherwise to validation.
+- Hardened shared workspace normalisation and provider handoff: safe object assignment for stored idea fields; visible prompt preview; direct provider-prefill links preserved, with a copy/open fallback for overly long URLs. The approved providers remain ChatGPT, Claude, Grok and Perplexity.
+- Original published records and BBI-owned category imagery remain intact; seller source files/images are untouched. Count 2/5 complete; next is the shared idea-detail action.

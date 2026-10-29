@@ -742,3 +742,11 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Browse filters, paging, links and original data records preserved. No seller asset/file, authored guide/article/calculator, global style, or database record changed.
 - Static source-level checks: bounded shortlist max 4; storage read/write wrapped in try/catch; duplicate slugs removed; provider prompt uses URL-encoded direct prefill; no inference/API call; copy fallback exists. No local build run (repository unavailable as a working checkout); Vercel status must be checked after this push.
 - Next completion: update `/blueprints` with the same shortlist action and status.
+
+
+## 2026-10-30 03:34:55 IST — Batch 1 (2/5): Blueprints shortlist
+- Before/after page: https://bbinewcopy.vercel.app/blueprints
+- Added Add/Remove-to-shortlist controls to real published blueprint cards and a local selection panel with remove, clear and compare/validate next action. Search and pagination preserved; no database write.
+- Hardened shared workspace normalisation and provider component: safe assignment of saved fields, visible prompt preview, and fallback for a prompt URL exceeding a conservative length threshold. Four-provider prefill remains the default.
+- No seller asset/brand, source archive, authored article/guide/calculator, or production data changed. Source-level review only; deployment and phone screenshots remain open QA.
+- Next completion: add shortlist action to the shared published idea-detail component.
