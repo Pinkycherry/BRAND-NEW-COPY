@@ -257,3 +257,12 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Cash flow/startup costs: keep working calculators; reduce repeated section padding and redundant content. Add contextual actions only next to relevant inputs/results.
 - Brand marks: no 3D effects applied to trademark artwork unless a provider's current published guidance expressly allows it. Cards may have tasteful depth; logo artwork stays unmodified.
 - Plan and batch order: ARTIFACTS/PINKY_2_REVISED_EXECUTION_PLAN_2026-10-30.md. First next code change is the comparison data/hydration and missing-information CTA. No code changed in this planning commit.
+
+
+## 2026-10-30 05:03:59 IST — Comparison hydration, provider handoff, hybrid/API security
+- Comparison now requests full selected records from the existing current/legacy read-only sources. It must distinguish a true source gap from a compact localStorage record that had not carried all fields.
+- Comparison mobile mode uses per-idea cards. The desktop matrix remains scrollable. Verify at 360px/390px and wide desktop after deploy.
+- Compact prefill is separate from the full review/copy prompt. When a provider URL would be too long, the action must visibly tell the user to copy the prompt; it must not silently open a bare page while claiming it prefilled the prompt.
+- Founder rule: full idea details and validation require sign-in. Home/category taxonomy and public educational resources may remain public. Proper server-side access-token verification and a reviewed idea-content RLS migration are required; a frontend-only gate is insufficient. The current sign-in page says disabled, so confirm live env and Google OAuth callback before calling auth live.
+- OpenRouter BYOK is a future protected mode. Never persist raw API credentials in client-readable rows or logs. Use encrypted server-side storage, per-user ownership, a limited provider proxy, usage controls, key deletion and no cross-provider reuse. Keep deep links separate and no BBI inference cost for that route. Enforce device limits with actual session rules, not email-only checks.
+- Canonical plan: ARTIFACTS/PINKY_2_REVISED_EXECUTION_PLAN_2026-10-30.md. Prompt polish remains a final release gate.

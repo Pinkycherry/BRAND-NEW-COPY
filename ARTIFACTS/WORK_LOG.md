@@ -785,3 +785,12 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Official logo guidance reviewed: OpenAI marks must not be distorted or modified with effects/textures (https://openai.com/brand/); xAI says its logos must be used as provided (https://x.ai/legal/brand-guidelines). Make the cards dimensional but retain permitted unaltered marks.
 - Saved full plan to ARTIFACTS/PINKY_2_REVISED_EXECUTION_PLAN_2026-10-30.md and linked it in the master artifact. No route, CSS, production data, authored content or seller archive was changed in this commit.
 - Next implementation: /startup-idea-comparison full-record hydration and multi-idea missing-information research CTA, then continue through the next 5 page-edit batch. Prompt polish remains pending until the user journey is stable.
+
+
+## 2026-10-30 05:03:59 IST — Screenshot-led batch, completion 1/5: Comparison source detail and prefill
+- Before: https://bbinewcopy.vercel.app/startup-idea-comparison
+- After: https://bbinewcopy.vercel.app/startup-idea-comparison
+- Added src/lib/comparison.functions.ts to rehydrate up to four slugs from existing published idea and blueprint read-only sources. The table receives buyer/revenue/risk/steps fields where present; missing fields are grouped by selected idea and passed into a dedicated “Research missing details for all selected ideas” action.
+- Replaced the wide desktop-only table on phones with per-idea cards; tightened spacing and removed “your AI account.” Full prompt stays reviewable/copyable; URL handoff is compact and contains each selected idea, source fields, founder constraints and missing-data research instructions. The provider component no longer silently claims a prefilled link if it opens a bare provider page.
+- Source review only; no local build or live screenshot captured. Vercel/SSR, actual provider prefill and phone layout remain pending. Data remains read-only; no database rows/schema changed.
+- Founder expansion recorded: sign-in required for full idea detail/validation; hybrid deep links plus OpenRouter BYOK; keys must be encrypted/server-only and device cap needs real session enforcement. The revised plan and prerequisites were added to the execution artifact.

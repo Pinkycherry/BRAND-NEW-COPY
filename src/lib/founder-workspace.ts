@@ -7,6 +7,7 @@ export const MAX_SHORTLIST = 4;
 export type WorkspaceIdea = {
   slug: string;
   title: string;
+  source?: "published" | "blueprint";
   hook?: string;
   summary?: string;
   description?: string;
@@ -70,6 +71,7 @@ function normaliseIdea(value: unknown): WorkspaceIdea | null {
   const title = text(raw.title, 200);
   if (!slug || !title) return null;
   const idea: WorkspaceIdea = { slug, title };
+  if (raw.source === "published" || raw.source === "blueprint") idea.source = raw.source;
   const stringFields: (keyof WorkspaceIdea)[] = [
     "hook", "summary", "description", "categoryCode", "categoryName", "investmentBand",
     "timeNeeded", "skillLevel", "workMode", "targetCustomer", "revenueModel", "startupCost", "risks",
@@ -236,4 +238,56 @@ export function buildFounderPrompt(task: FounderPromptTask, ideas: WorkspaceIdea
     "- Citations/links and dates for factual market or competitor claims. Label estimates and assumptions distinctly.",
     "- End with one action the founder can take next; do not present AI judgement as proof of real demand.",
   ].join("\n").slice(0, 12000);
+}
+
+
+/**
+ * Compact URL handoff. Keeps the selected idea titles, essential source facts,
+ * founder constraints and gaps while the full prompt remains reviewable/copyable.
+ */
+export function buildProviderHandoffPrompt(
+  task: FounderPromptTask,
+  ideas: WorkspaceIdea[],
+  context: FounderContext,
+  extraNotes = "",
+): string {
+  const clean = (value: string | undefined, max: number) =>
+    (value || "").replace(/\s+/g, " ").trim().slice(0, max);
+  const taskNames: Record<FounderPromptTask, string> = {
+    validate: "validate this idea",
+    compare: "compare all selected ideas fairly",
+    "red-team": "challenge the selected idea",
+    "field-test": "design a small, reversible field test",
+  };
+  const contextRows: [string, string][] = [
+    ["Market/location", context.location],
+    ["Budget in INR", context.budgetINR],
+    ["Hours per week", context.hoursPerWeek],
+    ["Skills", context.skills],
+    ["Target buyer", context.buyer],
+    ["Output language", context.language],
+    ["Recent problem", context.recentProblem],
+    ["Current workaround", context.currentWorkaround],
+    ["Proposed offer", context.proposedOffer],
+  ];
+  const ideaRows = ideas.slice(0, MAX_SHORTLIST).map((idea, index) => [
+    \`IDEA \${index + 1}: \${clean(idea.title, 90)}\`,
+    \`Category: \${clean(idea.categoryName || idea.categoryCode, 35) || "not specified"}\`,
+    \`Description: \${clean(idea.description || idea.summary || idea.hook, 90) || "verify the published source"}\`,
+    \`Cost/time/skill/work mode: \${[idea.startupCost || idea.investmentBand, idea.timeNeeded, idea.skillLevel, idea.workMode].map(v => clean(v, 24)).filter(Boolean).join(" / ") || "research"}\`,
+    \`Buyer: \${clean(idea.targetCustomer, 48) || "not listed; research"}\`,
+    \`Revenue: \${clean(idea.revenueModel, 48) || "not listed; research"}\`,
+    \`Risks: \${clean(idea.risks, 48) || "not listed; research"}\`,
+    \`First steps: \${clean(idea.firstSteps?.join("; "), 48) || "not listed; research"}\`,
+  ].join("\n")).join("\n\n");
+  const contextText = contextRows.filter(([, value]) => value.trim())
+    .map(([label, value]) => "- " + label + ": " + clean(value, 70)).join("\n") || "- No personal context supplied";
+  return [
+    "Act as a skeptical, source-conscious business researcher for an Indian founder. Task: " + taskNames[task] + ".",
+    "Use current sources with URLs and dates. Separate published facts, current research and assumptions. Never invent demand, market size, buyers, costs, legal rules or success odds. Ask concise questions only when a missing answer materially changes the recommendation.",
+    "FOUNDER CONTEXT:\n" + contextText,
+    "SELECTED PUBLISHED IDEAS:\n" + (ideaRows || "No selected idea; ask the founder to define one."),
+    extraNotes.trim() ? "FOUNDER NOTES / SOURCE GAPS:\n" + clean(extraNotes, 400) : "",
+    "Compare buyer access, observed problem, cash before collection, revenue/pricing, delivery burden, risks and cheapest next test. Label unknowns and end with one practical action.",
+  ].filter(Boolean).join("\n\n").slice(0, 3600);
 }

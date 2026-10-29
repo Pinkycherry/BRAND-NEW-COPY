@@ -152,3 +152,28 @@ The external prompt should be explicit that:
 - The user's new screenshots show the comparison, list-card design and spacing issues remain worth correcting; treat source-code edits and user-visible correctness separately.
 - This plan update changes documentation only. No React route, CSS, database data or seller archive file was edited.
 - **The first code change after this plan:** fix full-record hydration and “research missing details for all selected ideas” on /startup-idea-comparison. Then proceed through the five Page-edit entries in the next-batch table and update this artifact after each completion.
+
+
+## 2026-10-30 05:03:59 IST — Hybrid AI, account gate and BYOK expansion
+
+### Product modes
+1. Deep-link mode: keep ChatGPT, Claude, Grok and Perplexity prefilled links. This is the no-BBI-inference-cost option. Provider limits and consumer-account entitlements remain controlled by the provider.
+2. OpenRouter API mode: authenticated users can connect an OpenRouter key and choose a model to get in-app results. API use is billed to the user's OpenRouter usage. A consumer ChatGPT/Claude subscription does not automatically pay for separate API requests.
+3. Future provider-specific BYOK: support directly supplied provider keys only after OpenRouter mode is safe and working; use one shared credential interface and server-side model adapter.
+4. Future extension: only after web workflows are proven. An extension adds distribution, permission, privacy and maintenance costs, so it is not needed for the initial hybrid.
+
+### Mandatory account rule
+- Public: home, marketing, category taxonomy, authored articles, guides, glossary and other public educational routes.
+- Sign-in required: individual idea details, full idea records, comparisons including full source details, validation actions and in-platform/API output.
+- Signed-out visitors may see category names and high-level descriptions, but must not receive full idea text in SSR HTML or an unauthenticated server-function response.
+- A visual login redirect alone is insufficient. Protected data functions must authenticate the Supabase access token; the idea-content RLS policy needs a reviewed migration before claiming full protection. Do not apply a production schema change from this session; record the migration and dashboard prerequisite before release.
+- Current auth discovery: src/lib/auth-client.ts has a PKCE Google OAuth helper and src/hooks/use-auth.ts exists, but src/routes/sign-in.tsx currently says sign-in is disabled. Verify VITE_IDEAVAULT_DB_URL, VITE_IDEAVAULT_DB_ANON_KEY and Google OAuth callback on live deployment before declaring sign-in usable.
+
+### User-owned API keys — security design
+- Never store a raw OpenRouter/provider API key in plaintext in a normal profile table, local logs, analytics, URL, or client-readable row.
+- Preferred design: an authenticated server-side credential service with a user-to-secret reference, strict ownership, key encryption at rest (Supabase Vault or envelope encryption with a deployment-held key), RLS denying client reads, and a server-only inference proxy. Decrypted keys exist only for provider requests, are never returned to the browser, and are never logged.
+- Provide set/replace, connection test, masked status, usage/limit preview if exposed by provider, revoke/delete, and explicit billing/provider-limit warning. Never send one provider's key to another provider.
+- Each request needs per-user rate/size limits, timeout, model allowlist, prompt limit, abuse controls, usage transparency and prompt/body redaction from app logs. Keep deep links separate so auth/API outage cannot break them.
+- OpenRouter has an OpenAI-compatible endpoint and one key for many models; its API key creation docs say the plaintext key is returned only once. Key-loss/recovery and secure connection flows are therefore explicit requirements. References: https://openrouter.ai/developers and https://openrouter.ai/docs/api/api-reference/api-keys/create-a-new-api-key.
+- Device cap: one active session is available through Supabase session controls on eligible plans; exactly two active devices needs custom session/device tracking and enforcement. Do not promise a two-device limit based only on comparing emails.
+- Auth gate and BYOK need a dedicated implementation/verification batch before public rollout. This planning note does not modify auth settings or production database.
