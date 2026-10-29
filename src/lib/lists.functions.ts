@@ -141,6 +141,16 @@ export async function getListResources(name: string, categoryName: string) {
   };
 }
 
+async function publishedListIdeas(client:NonNullable<ReturnType<typeof dbOrNull>>,code:string) {
+  const rows:ListIdea[]=[];
+  for(let from=0;;from+=1000){
+    const {data,error}=await client.from('ideas').select(IDEA_COLUMNS).eq('subcategory_code',code).eq('status','published').order('position').order('code').range(from,from+999);
+    if(error)throw error;
+    rows.push(...((data??[]) as ListIdea[]));
+    if(!data||data.length<1000)return {data:rows};
+  }
+}
+
 /** One subcategory list page by its slug, or null. */
 export const getListPage = createServerFn({ method: "GET" })
   .inputValidator((input: unknown) => z.object({ slug: z.string().min(1).max(200) }).parse(input))
@@ -155,7 +165,7 @@ export const getListPage = createServerFn({ method: "GET" })
     if (!sub) return null;
     const s = sub as { code: string; category_code: string; name: string; slug: string; intro: string | null; how_to_choose: string | null; faq: unknown };
     const [{ data: ideas }, { data: cat }, { data: sibs }, { count: total }] = await Promise.all([
-      client.from("ideas").select(IDEA_COLUMNS).eq("subcategory_code", s.code).eq("status", "published").order("position"),
+      publishedListIdeas(client,s.code),
       client.from("categories").select("name,slug").eq("code", s.category_code).maybeSingle(),
       client.from("subcategories").select("code,name,slug").eq("category_code", s.category_code).order("code"),
       client.from("ideas").select("code", { count: "exact", head: true }).eq("status", "published"),
@@ -165,8 +175,12 @@ export const getListPage = createServerFn({ method: "GET" })
     const sibCodes = ((sibs ?? []) as { code: string }[]).map((x) => x.code).filter((c) => c !== s.code);
     const sibCounts: Record<string, number> = {};
     if (sibCodes.length) {
-      const { data: rows } = await client.from("ideas").select("subcategory_code").in("subcategory_code", sibCodes).eq("status", "published");
-      for (const r of (rows ?? []) as { subcategory_code: string }[]) sibCounts[r.subcategory_code] = (sibCounts[r.subcategory_code] ?? 0) + 1;
+      for(let from=0;;from+=1000){
+        const { data: rows,error } = await client.from("ideas").select("subcategory_code").in("subcategory_code", sibCodes).eq("status", "published").order('code').range(from,from+999);
+        if(error)throw error;
+        for (const r of (rows ?? []) as { subcategory_code: string }[]) sibCounts[r.subcategory_code] = (sibCounts[r.subcategory_code] ?? 0) + 1;
+        if(!rows||rows.length<1000)break;
+      }
     }
     const faq = faqEntries(s.faq);
     const resources = await getListResources(s.name,(cat as {name:string}|null)?.name ?? '');
