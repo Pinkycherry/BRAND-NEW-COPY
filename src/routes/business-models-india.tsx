@@ -1,12 +1,11 @@
-import { SellerFaq } from "@/components/v2/faq";
-import { ReadOnlyChecklist } from "@/components/v2/read-only-checklist";
-import { V2PageComparison, V2PageCta, V2PageFaq, V2PageHero, V2PageSection } from "@/components/v2/page-sections";
 import { useState } from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, Calculator, Compass } from "lucide-react";
-import { GlassShell } from "@/components/glass-shell";
+import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { V2Frame } from "@/components/v2/frame";
+import { SellerFaq } from "@/components/v2/faq";
+import { getListsHub } from "@/lib/lists.functions";
+import { getBrowseIdeas } from "@/lib/browse.functions";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
-import "@/components/business-models.css";
 
 const models = [
   { id: "service", name: "Service", promise: "Sell work you can deliver.", buyer: "A person or company with a task they cannot or do not want to do themselves.", firstSale: "A scoped job with an outcome, date and price.", work: "Your time, skill, scheduling and quality control.", cash: "Deposit or payment after delivery; the timing needs to be agreed.", pressure: "Your available hours cap delivery unless you can document and delegate the work.", test: "Offer one small job to a real buyer and track all hours, including finding and serving them." },
@@ -16,57 +15,79 @@ const models = [
   { id: "licensing", name: "Licensing", promise: "Let another party use something you own.", buyer: "A business that can use a defined method, design, brand or intellectual property.", firstSale: "A specific permitted use, term, territory and payment arrangement.", work: "Creating the asset, documenting rights and supporting permitted use.", cash: "Upfront or recurring fees depend on the actual agreement and collection.", pressure: "Rights, enforcement and support obligations need specialist review.", test: "Speak to a likely licensee about the exact use and commercial terms; obtain qualified advice before signing." },
 ] as const;
 type ModelId = (typeof models)[number]["id"];
-const formatRupees = (value: number) => new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(value);
-const clean = (value: string) => Math.max(0, Number(value) || 0);
+const wrap = "mx-auto max-w-6xl px-4 md:px-6";
+const card = "rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-500";
+const primary = "inline-flex min-h-11 items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700";
 
 export const Route = createFileRoute("/business-models-india")({
   head: () => ({ meta: [
     { title: "Business Models in India: Compare How an Idea Earns | BusinessIdea.io" },
-    { name: "description", content: "Compare service, product, subscription, marketplace and licensing models for a business idea in India. See the buyer, delivery work, cash timing and a transparent rupee worksheet." },
+    { name: "description", content: "Compare service, product, subscription, marketplace and licensing models for a business idea in India. See the buyer, delivery work and cash timing." },
     { property: "og:title", content: "Business Models in India | BusinessIdea.io" },
-    { property: "og:description", content: "The model changes who pays, when cash arrives and what work your startup must carry." },
     { property: "og:type", content: "article" },
   ] }),
+  loader: async () => {
+    const hub = await getListsHub();
+    const category = hub.categories.find(item => /service|food processing|e-commerce/i.test(item.name));
+    const result = await getBrowseIdeas({ data: { q: "", category: category?.code ?? "", investment: "", time: "", skill: "", page: 1 } });
+    return { categories: hub.categories, ideas: result.ideas };
+  },
   component: BusinessModelsPage,
 });
 
 function BusinessModelsPage() {
+  const { categories, ideas } = Route.useLoaderData();
   const [first, setFirst] = useState<ModelId>("service");
   const [second, setSecond] = useState<ModelId>("product");
-  const [price, setPrice] = useState("1000");
-  const [direct, setDirect] = useState("350");
-  const [fees, setFees] = useState("100");
-  const [monthly, setMonthly] = useState("5000");
-  const [sales, setSales] = useState("10");
-  const left = models.find((model) => model.id === first)!;
-  const right = models.find((model) => model.id === second)!;
-  const contribution = clean(price) - clean(direct) - clean(fees);
-  const afterFixed = contribution * clean(sales) - clean(monthly);
-  return <>
+  const left = models.find(model => model.id === first)!;
+  const right = models.find(model => model.id === second)!;
+  const related = categories.filter(item => /service|food processing|e-commerce|handmade/i.test(item.name)).slice(0, 6);
+  const fields = [
+    ["Buyer", "buyer"], ["First sale", "firstSale"], ["Work you carry", "work"],
+    ["Cash timing", "cash"], ["Breaking point", "pressure"], ["Smallest sensible test", "test"],
+  ] as const;
+  return <V2Frame active="/startup-guides">
     <JsonLd schema={[
       webPageSchema({ path: "/business-models-india", name: "Business models for an idea in India", description: "Compare who pays, how delivery works, when cash arrives and what could make the model fail." }),
       breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Business models in India", path: "/business-models-india" }]),
     ]} />
-    <GlassShell><div className="bm-page">
-      <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><span>Business models in India</span></nav>
-      <V2PageHero className="bm-hero"><p className="gh-eyebrow">THE MONEY PATH · INDIA</p><h1>How does this <em>business idea</em> earn?</h1><div><p>The same customer problem can become a service, a stocked product or a recurring offer. The model decides what you must deliver, when cash reaches you and which risk you carry first.</p><a href="#compare-models" className="gh-button gh-button-primary">Compare two models <ArrowRight size={17} /></a></div></V2PageHero>
-
-      <V2PageSection className="bm-frame" aria-labelledby="bm-frame-title"><div><p className="gh-eyebrow">THE THREE QUESTIONS</p><h2 id="bm-frame-title">A model is a set of obligations.</h2></div><ol><li><strong>Who pays?</strong><p>Identify the person who makes the decision and the account the payment leaves.</p></li><li><strong>What do you owe them?</strong><p>Name the work, product, access or match you must keep delivering.</p></li><li><strong>When is cash yours?</strong><p>Track supplier payments, collection, refunds and the next cycle.</p></li></ol></V2PageSection>
-
-      <V2PageComparison id="compare-models" className="bm-compare" aria-labelledby="bm-compare-title"><div className="bm-section-intro"><p className="gh-eyebrow">SIDE BY SIDE</p><h2 id="bm-compare-title">Compare the work behind the money.</h2><p>Pick two models. These are operating patterns, not rankings or a prediction that one will succeed in your market.</p></div><div className="bm-selectors"><label>First model<select value={first} onChange={(event) => setFirst(event.target.value as ModelId)}>{models.map((model) => <option key={model.id} value={model.id}>{model.name}</option>)}</select></label><label>Second model<select value={second} onChange={(event) => setSecond(event.target.value as ModelId)}>{models.map((model) => <option key={model.id} value={model.id}>{model.name}</option>)}</select></label></div><div className="bm-comparison" aria-live="polite"><div className="bm-comparison-head"><span>THE QUESTION</span><strong>{left.name}</strong><strong>{right.name}</strong></div>{([
-        ["Buyer","buyer"],["First sale","firstSale"],["Work you carry","work"],["Cash timing","cash"],["Breaking point","pressure"],["Smallest sensible test","test"]
-      ] as const).map(([label,key]) => <div className="bm-comparison-row" key={key}><strong>{label}</strong><p>{left[key]}</p><p>{right[key]}</p></div>)}</div></V2PageComparison>
-
-      <ReadOnlyChecklist eyebrow="PUT YOUR RUPEES IN" title="The price is not the money you keep." intro="Use your own assumptions to see contribution per sale and a simple monthly amount after fixed costs. This illustration excludes tax, financing, unpaid owner time and the timing of collections. It is arithmetic, not a profit forecast." items={["Price per sale (₹)","Direct delivery cost (₹)","Fees and returns allowance (₹)","Monthly fixed costs (₹)","Sales in a month"]} />
-
-      <V2PageSection className="bm-patterns" aria-labelledby="bm-patterns-title"><div className="bm-section-intro"><p className="gh-eyebrow">FIVE WAYS TO DELIVER VALUE</p><h2 id="bm-patterns-title">What each model asks of a founder.</h2><p>Start with the delivery burden you can carry. A clever revenue label cannot remove stock, customer support or the hours required to serve someone well.</p></div><div className="bm-pattern-list">{models.map((model) => <article key={model.id}><div><h3>{model.name}</h3><strong>{model.promise}</strong></div><p>{model.pressure}</p></article>)}</div></V2PageSection>
-
-      <V2PageSection className="bm-reality" aria-labelledby="bm-reality-title"><div><p className="gh-eyebrow">THE INDIA CHECK</p><h2 id="bm-reality-title">Follow the cash before you admire the margin.</h2><p>Depending on your model, stock may be purchased before a sale, an invoice may be paid later, or a returned order may reverse a collection. Local fulfilment and owner time can matter more than a neat margin percentage. Write down the actual order of payments in your case.</p></div><div className="bm-reality-list"><div><strong>Money out</strong><span>Supplier, labour, delivery, platform, rent, equipment.</span></div><div><strong>Work done</strong><span>Finding the buyer, making or sourcing, serving, resolving a problem.</span></div><div><strong>Money in</strong><span>Deposit, delivery payment, credit period, renewal or commission.</span></div><div><strong>What can reverse it</strong><span>Refund, return, cancellation, failed collection or unplanned rework.</span></div></div></V2PageSection>
-
-      <V2PageSection className="bm-interview" aria-labelledby="bm-interview-title"><div className="bm-section-intro"><p className="gh-eyebrow">ASK BEFORE YOU BUILD</p><h2 id="bm-interview-title">Four questions for a real buyer.</h2></div><div className="bm-interview-grid"><blockquote>“What did you do the last time this problem happened?”<small>Find the existing workaround.</small></blockquote><blockquote>“Who approved and paid for that?”<small>Separate the user from the buyer.</small></blockquote><blockquote>“What went wrong with the current option?”<small>Locate the reason to change.</small></blockquote><blockquote>“Would you try this defined offer at this price and date?”<small>Watch for a concrete action, not a compliment.</small></blockquote></div><Link to="/startup-idea-validation" className="bm-interview-next">Use the validation field notebook <ArrowUpRight size={17} /></Link></V2PageSection>
-
-      <SellerFaq title="Questions that change the choice." faq={[{q:"Can one business use more than one model?",a:<><p>Yes. A service can add a product, or a product can include ongoing support. Test the first delivery and cash path before adding another operational promise.</p></>},{q:"Is a subscription always better than a one-time sale?",a:<><p>No. A recurring payment needs recurring value, retention and support. Compare collection after cancellations and delivery costs, not just the appeal of a monthly price.</p></>},{q:"Does a marketplace need an app first?",a:<><p>A narrow manual match can test whether both sides will participate. Software becomes useful when a real matching process repeats and the economics can support it.</p></>}]} />
-      <V2PageCta className="bm-final"><h2>Take the model into a real idea.</h2><p>Read a completed blueprint for the buyer, costs and first steps. Then test the part that could make you stop.</p><div><Link to="/blueprints" className="gh-button gh-button-primary">Search completed business ideas <Compass size={17} /></Link><Link to="/business-pricing-india" className="gh-button gh-button-secondary">Work through a first price <Calculator size={17} /></Link></div></V2PageCta>
-    </div></GlassShell>
-  </>;
+    <div className="bg-slate-50 pt-24 lg:pt-28"><nav className={`${wrap} flex flex-wrap items-center gap-2 py-3 text-sm text-slate-600`} aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={15}/><a href="/startup-guides">Guides</a><ChevronRight size={15}/><span>Business models in India</span></nav></div>
+    <section className="bg-gradient-to-b from-blue-50 to-white py-12 lg:py-16"><div className={wrap}>
+      <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-bold text-blue-800">The money path · India</span>
+      <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-tight md:text-5xl">How does this <span className="text-blue-700">business idea</span> earn?</h1>
+      <p className="mt-5 max-w-3xl text-lg text-slate-600">The same customer problem can become a service, a stocked product or a recurring offer. The model decides what you must deliver, when cash reaches you and which risk you carry first.</p>
+      <div className="mt-7 flex flex-wrap gap-3"><a href="/browse" className={primary}>Browse ideas <ArrowRight size={17}/></a><a href="#compare-models" className="inline-flex min-h-11 items-center rounded-xl border bg-white px-6 py-3 font-semibold hover:border-blue-500">Compare models</a></div>
+    </div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">A model is a set of obligations.</h2><div className="mt-6 grid gap-4 md:grid-cols-3">{[
+      ["Who pays?", "Identify the person who makes the decision and the account the payment leaves."],
+      ["What do you owe them?", "Name the work, product, access or match you must keep delivering."],
+      ["When is cash yours?", "Track supplier payments, collection, refunds and the next cycle."],
+    ].map(([title, copy], index) => <article className={card} key={title}><span className="text-sm font-bold text-blue-700">0{index + 1}</span><h3 className="mt-3 text-xl font-bold">{title}</h3><p className="mt-3 text-slate-600">{copy}</p></article>)}</div></div></section>
+    <section id="compare-models" className="scroll-mt-28 py-12 lg:py-16"><div className={wrap}>
+      <h2 className="text-3xl font-bold">Compare the work behind the money.</h2><p className="mt-3 max-w-3xl text-slate-600">Pick two models. These are operating patterns, not rankings or a prediction that one will succeed in your market.</p>
+      <div className="mt-6 grid gap-4 sm:grid-cols-2">{[[first, setFirst, "First model"], [second, setSecond, "Second model"]].map(([value, update, label]) => <label className="font-semibold" key={label as string}>{label as string}<select className="mt-2 block min-h-11 w-full rounded-xl border bg-white px-3" value={value as string} onChange={event => (update as (value: ModelId) => void)(event.target.value as ModelId)}>{models.map(model => <option key={model.id} value={model.id}>{model.name}</option>)}</select></label>)}</div>
+      <div className="mt-6 overflow-x-auto rounded-2xl border bg-white" aria-live="polite"><table className="w-full min-w-[600px] text-left"><thead className="bg-blue-50"><tr><th className="p-4">The question</th><th className="p-4">{left.name}</th><th className="p-4">{right.name}</th></tr></thead><tbody>{fields.map(([label, key]) => <tr className="border-t" key={key}><th className="p-4 align-top">{label}</th><td className="p-4 align-top">{left[key]}</td><td className="p-4 align-top">{right[key]}</td></tr>)}</tbody></table></div>
+    </div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">What each model asks of a founder.</h2><p className="mt-3 max-w-3xl text-slate-600">Start with the delivery burden you can carry. A clever revenue label cannot remove stock, customer support or the hours required to serve someone well.</p><div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">{models.map(model => <article className={card} key={model.id}><h3 className="text-xl font-bold">{model.name}</h3><strong className="mt-3 block text-blue-700">{model.promise}</strong><p className="mt-3 text-slate-600">{model.pressure}</p></article>)}</div></div></section>
+    <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Follow the cash before you admire the margin.</h2><p className="mt-3 max-w-3xl text-slate-600">Depending on your model, stock may be purchased before a sale, an invoice may be paid later, or a returned order may reverse a collection. Local fulfilment and owner time can matter more than a neat margin percentage. Write down the actual order of payments in your case.</p><div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">{[
+      ["Money out", "Supplier, labour, delivery, platform, rent, equipment."],
+      ["Work done", "Finding the buyer, making or sourcing, serving, resolving a problem."],
+      ["Money in", "Deposit, delivery payment, credit period, renewal or commission."],
+      ["What can reverse it", "Refund, return, cancellation, failed collection or unplanned rework."],
+    ].map(([title, copy]) => <article className={card} key={title}><h3 className="font-bold">{title}</h3><p className="mt-2 text-slate-600">{copy}</p></article>)}</div></div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Four questions for a real buyer.</h2><div className="mt-6 grid gap-4 md:grid-cols-2">{[
+      ["What did you do the last time this problem happened?", "Find the existing workaround."],
+      ["Who approved and paid for that?", "Separate the user from the buyer."],
+      ["What went wrong with the current option?", "Locate the reason to change."],
+      ["Would you try this defined offer at this price and date?", "Watch for a concrete action, not a compliment."],
+    ].map(([question, purpose], index) => <article className={card} key={question}><span className="text-sm font-bold text-blue-700">0{index + 1}</span><h3 className="mt-3 text-xl font-bold">“{question}”</h3><p className="mt-3 text-slate-600">{purpose}</p></article>)}</div><a href="/startup-idea-validation" className="mt-6 inline-flex font-semibold text-blue-700 hover:underline">Use the validation field notebook <ArrowRight className="ml-2" size={17}/></a></div></section>
+    <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Published ideas to inspect</h2><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{ideas.map(idea => <a className={card} href={`/idea/${idea.slug}`} key={idea.slug}><h3 className="text-xl font-bold">{idea.title}</h3><p className="mt-3 line-clamp-3 text-slate-600">{idea.hook || idea.summary}</p><span className="mt-4 inline-flex items-center gap-2 font-semibold text-blue-700">Read idea <ArrowRight size={17}/></span></a>)}</div></div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Related categories</h2><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{related.map(category => <a className={card} href={`/category/${category.slug}`} key={category.slug}><h3 className="text-xl font-bold">{category.name}</h3><span className="mt-4 inline-flex items-center gap-2 font-semibold text-blue-700">Explore category <ArrowRight size={17}/></span></a>)}</div></div></section>
+    <SellerFaq title="Questions that change the choice" faq={[
+      { q: "Can one business use more than one model?", a: "Yes. A service can add a product, or a product can include ongoing support. Test the first delivery and cash path before adding another operational promise." },
+      { q: "Is a subscription always better than a one-time sale?", a: "No. A recurring payment needs recurring value, retention and support. Compare collection after cancellations and delivery costs, not just the appeal of a monthly price." },
+      { q: "Does a marketplace need an app first?", a: "A narrow manual match can test whether both sides will participate. Software becomes useful when a real matching process repeats and the economics can support it." },
+    ]} />
+    <section className="bg-blue-700 py-12 text-white lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Take the model into a real idea.</h2><p className="mt-3 max-w-3xl text-blue-100">Read a completed blueprint for the buyer, costs and first steps. Then test the part that could make you stop.</p><a href="/blueprints" className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-blue-800 hover:bg-blue-50">Search completed business ideas <ArrowRight size={17}/></a></div></section>
+  </V2Frame>;
 }
