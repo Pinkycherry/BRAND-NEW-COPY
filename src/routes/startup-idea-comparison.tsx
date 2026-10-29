@@ -88,7 +88,7 @@ function ComparisonPage() {
   const choiceLines = lenses.map(lens => {
     const chosen = selectedRecords.find(idea => idea.slug === choices[lens.title]);
     const note = notes[lens.title]?.trim();
-    return \`- \${lens.title}: \${chosen ? chosen.title : "unclear / more evidence needed"}.\${note ? " Founder note: " + note : ""}\`;
+    return `- ${lens.title}: ${chosen ? chosen.title : "unclear / more evidence needed"}.${note ? " Founder note: " + note : ""}`;
   }).join("\n");
   const comparisonNotes = choiceLines + (nextStep.trim() ? "\nFounder-defined next step / review date: " + nextStep.trim() : "");
   const prompt = buildFounderPrompt("compare", selectedRecords, context) +
@@ -117,7 +117,7 @@ function ComparisonPage() {
           : recordState === "loading" ? <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5" role="status"><p className="font-semibold text-slate-900">Loading the full published details for all {shortlist.length} selected ideas…</p><p className="mt-2 text-sm text-slate-600">The shortlist itself is unchanged while details load.</p></div>
           : recordState === "error" ? <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-5" role="alert"><h3 className="font-bold text-slate-950">We could not load every selected idea</h3><p className="mt-2 text-sm text-slate-700">{recordError}</p><button type="button" onClick={()=>{setRecordState("idle");setFullRecords([]);}} className="mt-4 inline-flex min-h-10 items-center rounded-lg border border-amber-400 bg-white px-4 py-2 text-sm font-semibold">Try loading again</button></div>
           : recordsReady && <>
-            <ul className="mt-5 grid gap-3 sm:grid-cols-2">{selectedRecords.map(idea=><li key={idea.slug} className="flex min-w-0 items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 p-3"><div className="min-w-0"><a href={\`/idea/\${idea.slug}\`} className="font-semibold text-slate-950 hover:underline">{idea.title}</a><p className="mt-1 text-xs text-slate-500">{idea.categoryName || idea.categoryCode || "Published idea"}</p></div><button type="button" onClick={()=>removeShortlistIdea(idea.slug)} className="shrink-0 text-sm font-semibold text-slate-600 hover:text-slate-950">Remove</button></li>)}</ul>
+            <ul className="mt-5 grid gap-3 sm:grid-cols-2">{selectedRecords.map(idea=><li key={idea.slug} className="flex min-w-0 items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 p-3"><div className="min-w-0"><a href={`/idea/${idea.slug}`} className="font-semibold text-slate-950 hover:underline">{idea.title}</a><p className="mt-1 text-xs text-slate-500">{idea.categoryName || idea.categoryCode || "Published idea"}</p></div><button type="button" onClick={()=>removeShortlistIdea(idea.slug)} className="shrink-0 text-sm font-semibold text-slate-600 hover:text-slate-950">Remove</button></li>)}</ul>
 
             <div className="mt-5 hidden overflow-x-auto rounded-xl border border-slate-200 md:block">
               <table className="w-full min-w-[780px] border-collapse text-left text-sm">

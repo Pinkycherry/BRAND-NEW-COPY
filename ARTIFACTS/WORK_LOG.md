@@ -794,3 +794,9 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Replaced the wide desktop-only table on phones with per-idea cards; tightened spacing and removed “your AI account.” Full prompt stays reviewable/copyable; URL handoff is compact and contains each selected idea, source fields, founder constraints and missing-data research instructions. The provider component no longer silently claims a prefilled link if it opens a bare provider page.
 - Source review only; no local build or live screenshot captured. Vercel/SSR, actual provider prefill and phone layout remain pending. Data remains read-only; no database rows/schema changed.
 - Founder expansion recorded: sign-in required for full idea detail/validation; hybrid deep links plus OpenRouter BYOK; keys must be encrypted/server-only and device cap needs real session enforcement. The revised plan and prerequisites were added to the execution artifact.
+
+
+## 2026-10-30 05:08:07 IST — Repair: template-literal escaping in comparison/handoff source
+- Vercel check for the comparison edit was failure. Root cause identified by source inspection: a raw-string code-generation step wrote literal backslashes before TypeScript template delimiters/interpolations in `src/lib/founder-workspace.ts` and `src/routes/startup-idea-comparison.tsx`.
+- Removed only the unintended escaping. A source scan confirms no remaining `\\`` or `\\${` sequences in those two files. No data/schema/seller assets changed.
+- This repair must pass a fresh Vercel check before the next page edit proceeds. No live screenshot was captured.

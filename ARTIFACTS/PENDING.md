@@ -266,3 +266,7 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Founder rule: full idea details and validation require sign-in. Home/category taxonomy and public educational resources may remain public. Proper server-side access-token verification and a reviewed idea-content RLS migration are required; a frontend-only gate is insufficient. The current sign-in page says disabled, so confirm live env and Google OAuth callback before calling auth live.
 - OpenRouter BYOK is a future protected mode. Never persist raw API credentials in client-readable rows or logs. Use encrypted server-side storage, per-user ownership, a limited provider proxy, usage controls, key deletion and no cross-provider reuse. Keep deep links separate and no BBI inference cost for that route. Enforce device limits with actual session rules, not email-only checks.
 - Canonical plan: ARTIFACTS/PINKY_2_REVISED_EXECUTION_PLAN_2026-10-30.md. Prompt polish remains a final release gate.
+
+
+### 2026-10-30 05:08:07 IST — Failed deployment repair pending verification
+- The initial comparison/handoff commit's Vercel status failed. Found and corrected stray backslashes in generated template literals/interpolations. Wait for the new repair commit's Vercel check and inspect its deployment before proceeding to page edit 2/5.

@@ -271,14 +271,14 @@ export function buildProviderHandoffPrompt(
     ["Proposed offer", context.proposedOffer],
   ];
   const ideaRows = ideas.slice(0, MAX_SHORTLIST).map((idea, index) => [
-    \`IDEA \${index + 1}: \${clean(idea.title, 90)}\`,
-    \`Category: \${clean(idea.categoryName || idea.categoryCode, 35) || "not specified"}\`,
-    \`Description: \${clean(idea.description || idea.summary || idea.hook, 90) || "verify the published source"}\`,
-    \`Cost/time/skill/work mode: \${[idea.startupCost || idea.investmentBand, idea.timeNeeded, idea.skillLevel, idea.workMode].map(v => clean(v, 24)).filter(Boolean).join(" / ") || "research"}\`,
-    \`Buyer: \${clean(idea.targetCustomer, 48) || "not listed; research"}\`,
-    \`Revenue: \${clean(idea.revenueModel, 48) || "not listed; research"}\`,
-    \`Risks: \${clean(idea.risks, 48) || "not listed; research"}\`,
-    \`First steps: \${clean(idea.firstSteps?.join("; "), 48) || "not listed; research"}\`,
+    `IDEA ${index + 1}: ${clean(idea.title, 90)}`,
+    `Category: ${clean(idea.categoryName || idea.categoryCode, 35) || "not specified"}`,
+    `Description: ${clean(idea.description || idea.summary || idea.hook, 90) || "verify the published source"}`,
+    `Cost/time/skill/work mode: ${[idea.startupCost || idea.investmentBand, idea.timeNeeded, idea.skillLevel, idea.workMode].map(v => clean(v, 24)).filter(Boolean).join(" / ") || "research"}`,
+    `Buyer: ${clean(idea.targetCustomer, 48) || "not listed; research"}`,
+    `Revenue: ${clean(idea.revenueModel, 48) || "not listed; research"}`,
+    `Risks: ${clean(idea.risks, 48) || "not listed; research"}`,
+    `First steps: ${clean(idea.firstSteps?.join("; "), 48) || "not listed; research"}`,
   ].join("\n")).join("\n\n");
   const contextText = contextRows.filter(([, value]) => value.trim())
     .map(([label, value]) => "- " + label + ": " + clean(value, 70)).join("\n") || "- No personal context supplied";

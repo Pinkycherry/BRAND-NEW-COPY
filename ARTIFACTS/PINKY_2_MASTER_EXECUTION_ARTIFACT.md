@@ -145,3 +145,8 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Founder requires sign-in for full idea details and validation, with category taxonomy and public educational resources remaining public. The revised plan records protected-data, Supabase RLS and Google OAuth configuration requirements.
 - Hybrid model recorded: provider deep links for no BBI inference cost; optional OpenRouter BYOK in-platform mode with encrypted server-only credentials, per-user rate/usage limits and delete/disconnect. Consumer subscriptions do not automatically cover separate API use. The two-device limit requires custom logic; built-in Supabase single-session is a one-session feature.
 - Code edit 1/5 in the screenshot-led batch: startup-idea-comparison. Full source fields, mobile comparison cards, grouped gaps and compact provider prefill are implemented in source. Build/live rendering still needs verification.
+
+
+## 2026-10-30 05:08:07 IST — Repair following failed Vercel check
+- The first comparison/handoff edit triggered a failed Vercel status. A static source review found raw-string generation had left backslashes before TypeScript template literal delimiters/interpolations in `buildProviderHandoffPrompt` and the comparison route. Removed those literal escapes from the affected TypeScript source.
+- This is a corrective commit for page edit 1/5, not a new page edit. Keep the page-1 deployment and visual QA open until Vercel returns success and the rendered route is checked.
