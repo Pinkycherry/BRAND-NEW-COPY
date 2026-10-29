@@ -187,7 +187,7 @@ export function LearnPanel() {
       <div className="mm-cols" style={{ gridTemplateColumns: "repeat(3,minmax(0,1fr))" }}>
         <div>
           <div className="mm-label mm-dot o" style={{ marginTop: 0 }}>Startup ideas</div>
-          <Banner tone="o" title="All Idea Lists" sub="Every business idea list in one place" href="/lists" />
+          <Banner tone="o" title="All Idea Lists" sub="Every business idea list in one place" href="/all-business-ideas" />
           <Links items={OUR_IDEAS} />
         </div>
         <div>
@@ -290,7 +290,7 @@ export function ToolsPanel() {
           />
           <A className="mm-pill g" href="/useful-tools">See all tools →</A>
           <div className="mm-label mm-dot">Idea lists</div>
-          <Banner title="All Idea Lists" sub="Every business idea list in one place" href="/lists" />
+          <Banner title="All Idea Lists" sub="Every business idea list in one place" href="/all-business-ideas" />
           <Links className="mm-two mm-list" items={[cat(1), cat(2), cat(3), cat(4), cat(5), cat(10)]} />
         </div>
       </div>

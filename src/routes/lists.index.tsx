@@ -1,6 +1,6 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, ChevronRight, CircleCheck, Library, Search } from "lucide-react";
+import { ArrowRight, ChevronRight, CircleCheck, Library } from "lucide-react";
 import { SellerFaq } from "@/components/v2/faq";
 import { V2Frame } from "@/components/v2/frame";
 import { getListsHub } from "@/lib/lists.functions";
@@ -26,9 +26,7 @@ function ResourceCards({ items }: { items: string[][] }) {
 }
 function ListsPage() {
   const hub = Route.useLoaderData();
-  const [query, setQuery] = useState("");
   const all = useMemo(() => hub.categories.flatMap(category => category.subs.map(sub => ({ ...sub, category: category.name, categoryCode: category.code }))), [hub.categories]);
-  const matches = useMemo(() => all.filter(item => `${item.name} ${item.category}`.toLowerCase().includes(query.trim().toLowerCase())), [all, query]);
   const top = useMemo(() => [...all].sort((a, b) => b.count - a.count || a.name.localeCompare(b.name)), [all]);
   const used = new Set<string>();
   const pick = (terms: string[]) => {
@@ -72,7 +70,7 @@ function ListsPage() {
 
     <section className="py-12 lg:py-16"><div className={wrap}><h2 className="mb-6 text-2xl font-bold">Strategy &amp; Metrics</h2><ResourceCards items={[["Find your first customer","","/first-customer-india"],["Price your first offer","","/business-pricing-india"],["Check unit economics","","/unit-economics-india"],["Plan startup cash flow","","/startup-cash-flow-india"],["Know when to pivot or stop","","/business-idea-pivot-or-stop"],["Research an idea","","/business-idea-research-india"]]}/></div></section>
 
-    <section id="all-lists" className="scroll-mt-24 border-t py-12 lg:py-16"><div className={wrap}><div className="flex flex-wrap items-end justify-between gap-4"><h2 className="text-2xl font-bold">Complete index — every list</h2><label className="flex min-w-64 items-center gap-2 rounded-lg border bg-card px-3"><Search size={19}/><span className="sr-only">Search every list</span><input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Search every list" className="min-h-11 min-w-0 flex-1 bg-transparent outline-none"/></label></div><ul className="mt-6 grid gap-x-6 gap-y-2 text-sm sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">{[...matches].sort((a,b) => a.name.localeCompare(b.name)).map(item => <li key={item.code}><a className="hover:text-primary hover:underline" href={`/lists/${item.slug}`}>{item.name}</a></li>)}</ul>{matches.length === 0 && <p className="mt-6 rounded-xl border p-5 text-muted-foreground">No published list matches that search.</p>}</div></section>
+    <section id="all-lists" className="scroll-mt-24 py-12 lg:py-16"><div className={wrap}><div className="flex flex-wrap items-end justify-between gap-4"><div><p className="text-xs font-bold uppercase tracking-wide text-primary">Explore more</p><h2 className="mt-2 text-2xl font-bold">Business idea list index</h2></div><a className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-md" href="/all-business-ideas">View all lists <ArrowRight size={17}/></a></div><div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">{[...all].sort((a,b) => a.name.localeCompare(b.name)).slice(0,12).map(item => <a className="flex min-h-12 items-center rounded-xl border bg-card px-4 py-3 text-sm font-semibold leading-snug transition hover:-translate-y-0.5 hover:border-primary/60 hover:text-primary hover:shadow-sm" href={`/lists/${item.slug}`} key={item.code}>{item.name}</a>)}</div></div></section>
 
     <SellerFaq title="Frequently asked questions" faq={faq}/>
 

@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AllBusinessIdeasRouteImport } from './routes/all-business-ideas'
 import { Route as BrowseRouteImport } from './routes/browse'
 import { Route as BusinessDemandTestIndiaRouteImport } from './routes/business-demand-test-india'
 import { Route as BusinessIdeaPivotOrStopRouteImport } from './routes/business-idea-pivot-or-stop'
@@ -93,6 +94,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AllBusinessIdeasRoute = AllBusinessIdeasRouteImport.update({
+  id: '/all-business-ideas',
+  path: '/all-business-ideas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BrowseRoute = BrowseRouteImport.update({
@@ -472,6 +478,7 @@ const CategoryCategorySlugSubcategorySlugRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/all-business-ideas': typeof AllBusinessIdeasRoute
   '/browse': typeof BrowseRoute
   '/business-demand-test-india': typeof BusinessDemandTestIndiaRoute
   '/business-idea-pivot-or-stop': typeof BusinessIdeaPivotOrStopRoute
@@ -549,6 +556,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/all-business-ideas': typeof AllBusinessIdeasRoute
   '/browse': typeof BrowseRoute
   '/business-demand-test-india': typeof BusinessDemandTestIndiaRoute
   '/business-idea-pivot-or-stop': typeof BusinessIdeaPivotOrStopRoute
@@ -627,6 +635,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/all-business-ideas': typeof AllBusinessIdeasRoute
   '/browse': typeof BrowseRoute
   '/business-demand-test-india': typeof BusinessDemandTestIndiaRoute
   '/business-idea-pivot-or-stop': typeof BusinessIdeaPivotOrStopRoute
@@ -706,6 +715,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/all-business-ideas'
     | '/browse'
     | '/business-demand-test-india'
     | '/business-idea-pivot-or-stop'
@@ -783,6 +793,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/all-business-ideas'
     | '/browse'
     | '/business-demand-test-india'
     | '/business-idea-pivot-or-stop'
@@ -860,6 +871,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/all-business-ideas'
     | '/browse'
     | '/business-demand-test-india'
     | '/business-idea-pivot-or-stop'
@@ -938,6 +950,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AllBusinessIdeasRoute: typeof AllBusinessIdeasRoute
   BrowseRoute: typeof BrowseRoute
   BusinessDemandTestIndiaRoute: typeof BusinessDemandTestIndiaRoute
   BusinessIdeaPivotOrStopRoute: typeof BusinessIdeaPivotOrStopRoute
@@ -1027,6 +1040,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/all-business-ideas': {
+      id: '/all-business-ideas'
+      path: '/all-business-ideas'
+      fullPath: '/all-business-ideas'
+      preLoaderRoute: typeof AllBusinessIdeasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/browse': {
@@ -1546,6 +1566,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AllBusinessIdeasRoute: AllBusinessIdeasRoute,
   BrowseRoute: BrowseRoute,
   BusinessDemandTestIndiaRoute: BusinessDemandTestIndiaRoute,
   BusinessIdeaPivotOrStopRoute: BusinessIdeaPivotOrStopRoute,
