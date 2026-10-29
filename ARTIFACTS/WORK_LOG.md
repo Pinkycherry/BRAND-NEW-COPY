@@ -771,3 +771,8 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - After: same route is a working local founder workspace: selected ideas, add/remove/clear, persisted India-first constraints, four task modes (validate, compare, red-team, field-test), and prefilled handoff buttons for ChatGPT, Claude, Grok and Perplexity. Prompt preview and long-URL fallback are included. No model API request or Supabase write from this flow.
 - Original published records remain read-only; authored guides/articles/calculators/glossary and seller source files/images remain untouched. Noindex metadata retained.
 - Batch page-edit count: 5/5. Source review only; deployment state to be checked next, then test live routes and screenshots. No claim of visual success until Vercel/HTTP and phone layout checks pass.
+
+## 2026-10-30 03:42:18 IST — Batch 1 deployment status follow-up
+- Vercel check for code commit `5d8d3a316d602852395741b44d6ab363f9a4588c` reports success. The four preceding page commits also report success.
+- Attempted to verify `https://bbinewcopy.vercel.app/product` in the browser tool; it was inaccessible there. A direct HTTP request from the execution container failed DNS resolution for the host. Thus deployment check is green, but no claim is made about actual page rendering, SSR response, interaction QA or visual screenshots.
+- Five page edits are committed: Browse, Blueprints, published idea detail template, Startup Idea Comparison, Validation Workbench. Live/manual visual QA remains open.
