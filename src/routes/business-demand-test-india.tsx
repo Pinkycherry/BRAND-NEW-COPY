@@ -1,19 +1,14 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { V2Frame } from "@/components/v2/frame";
 import { SellerFaq } from "@/components/v2/faq";
-import { ReadOnlyChecklist } from "@/components/v2/read-only-checklist";
-import { V2PageCta, V2PageFaq, V2PageHero, V2PageSection } from "@/components/v2/page-sections";
-import { useState } from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { GlassShell } from "@/components/glass-shell";
+import { getListsHub } from "@/lib/lists.functions";
+import { getBrowseIdeas } from "@/lib/browse.functions";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
-import "@/components/demand-test.css";
 
-const tests = [
-  { name: "A conversation", promise: "Show one precise offer, price and delivery date; ask the buyer what they would do next.", evidence: "Write the actual objection or action. A compliment is not a booking.", cost: "Keep outreach respectful. Do not imply a product is ready if it is not." },
-  { name: "A booking", promise: "Offer a limited real slot or pilot you can fulfil; spell out scope and cancellation terms.", evidence: "Record accepted date and conditions. A person requesting details is one step earlier.", cost: "Reserve only what you can deliver. Confirm before buying supplies." },
-  { name: "A paid trial", promise: "Sell a small useful outcome with a clear price, receipt and refund/cancellation terms.", evidence: "Record money actually collected and the cost to deliver, not merely an intention to pay.", cost: "Check the obligations that apply to your specific activity before collecting money." },
-] as const;
-const asCount = (s: string) => Math.max(0, Math.floor(Number(s) || 0));
+const wrap = "mx-auto max-w-6xl px-4 md:px-6";
+const card = "rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-500";
+const primary = "inline-flex min-h-11 items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700";
 export const Route = createFileRoute("/business-demand-test-india")({
   head: () => ({ meta: [
     { title: "Test Demand for a Business Idea in India | BusinessIdea.io" },
@@ -21,44 +16,55 @@ export const Route = createFileRoute("/business-demand-test-india")({
     { property: "og:title", content: "Test demand for a business idea in India | BusinessIdea.io" },
     { property: "og:type", content: "article" },
   ] }),
+  loader: async () => {
+    const hub = await getListsHub();
+    const category = hub.categories.find(item => /local service|home service|online service/i.test(item.name));
+    const result = await getBrowseIdeas({ data: { q: "", category: category?.code ?? "", investment: "", time: "", skill: "", page: 1 } });
+    return { categories: hub.categories, ideas: result.ideas };
+  },
   component: DemandPage,
 });
 function DemandPage() {
-  const [test, setTest] = useState(0);
-  const [offer, setOffer] = useState("");
-  const [audience, setAudience] = useState("");
-  const [date, setDate] = useState("");
-  const [stop, setStop] = useState("");
-  const [asked, setAsked] = useState("");
-  const [details, setDetails] = useState("");
-  const [actions, setActions] = useState("");
-  const a = asCount(asked), d = asCount(details), c = asCount(actions);
-  const inconsistent = d > a || c > a || c > d;
-  return <>
+  const { categories, ideas } = Route.useLoaderData();
+  const related = categories.filter(item => /local|service|online/i.test(item.name)).slice(0, 6);
+  return <V2Frame active="/startup-guides">
     <JsonLd schema={[
       webPageSchema({ path: "/business-demand-test-india", name: "Test demand for a business idea in India", description: "Define a small offer and record the difference between people approached, requests for details and meaningful commitments." }),
       breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Business demand test in India", path: "/business-demand-test-india" }]),
     ]} />
-    <GlassShell><div className="dt-page">
-      <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><span>Business demand test in India</span></nav>
-      <V2PageHero className="dt-hero"><div><p className="gh-eyebrow">THE MOMENT AFTER “SOUNDS GOOD”</p><h1>Will anyone make a <em>real move?</em></h1><p>Your business idea deserves a fair test before it takes your savings and weekends. Put one useful offer in front of the right person, ask for a specific action, and record what happened without rounding a maybe up to a yes.</p><a href="#design-test" className="gh-button gh-button-primary">Design a small test <ArrowRight size={17}/></a></div><aside><strong>Three different answers</strong><div><span>HEARD</span><p>They say the problem matters.</p></div><div><span>ASKED</span><p>They request the exact offer.</p></div><div><span>ACTED</span><p>They book, start a purchasing step, or pay under clear terms.</p></div></aside></V2PageHero>
-
-      <V2PageSection className="dt-before" aria-labelledby="dt-before-title"><div><p className="gh-eyebrow">KNOW WHAT YOU ARE TESTING</p><h2 id="dt-before-title">A busy conversation can test the wrong thing.</h2><p>Interest in the problem, interest in your proposed solution and willingness to pay are separate questions. Name one for this round. If you ask a cousin whether your logo looks good, you have learned about a logo, not a paying customer.</p></div><div className="dt-before-list"><p><strong>Problem:</strong> Can the buyer describe a recent, costly workaround?</p><p><strong>Offer:</strong> Do they choose your specific scope over that workaround?</p><p><strong>Commitment:</strong> Will they take a suitable next step at a stated price and date?</p><Link to="/business-idea-research-india">First check the buyer and current alternatives <ArrowUpRight size={17}/></Link></div></V2PageSection>
-
-      <ReadOnlyChecklist id="design-test" eyebrow="BUILD ONE SMALL ASK" title="Choose what a yes would mean." items={["One defined offer","Who will see it?","When will you check the response?","What outcome would make you change the offer?"]} />
-
-      <V2PageSection className="dt-friction" aria-labelledby="dt-friction-title"><div><p className="gh-eyebrow">ASK WITHOUT TRICKING PEOPLE</p><h2 id="dt-friction-title">Make the decision easy to understand.</h2><p>A polished teaser may attract clicks that vanish when price, delivery or trust becomes real. Include the inconvenient details early enough that the answer means something.</p></div><ol><li><span>PRICE</span><strong>State the amount.</strong><p>Include what is and is not covered. If you cannot quote it yet, use the <Link to="/business-pricing-india">first-price workbench</Link>.</p></li><li><span>DELIVERY</span><strong>Name the work and date.</strong><p>Promise only what you can serve in the first small version.</p></li><li><span>TRUST</span><strong>Explain the terms.</strong><p>Show identity, contact, cancellation and refund conditions where relevant.</p></li></ol></V2PageSection>
-
-      <ReadOnlyChecklist eyebrow="READ THE REPLIES" title="Count actions without inventing a verdict." items={["People who saw the offer","Asked for details","Took the agreed action"]} />
-
-      <V2PageSection className="dt-art-section" aria-labelledby="dt-art-title"><div className="dt-art"><img src="/images/blog/how-to-find-your-first-paying-customer-without-spending-on-ads.webp" alt="Original featured artwork for the first paying customer journal article, fully shown in a 16:9 frame" loading="lazy"/></div><div><p className="gh-eyebrow">IF NOBODY ANSWERS</p><h2 id="dt-art-title">Check the route before blaming the idea.</h2><p>Did the message reach the payer, or just the person who likes the concept? Could they understand the price and next step? Silence is evidence about this offer and route. Try a clearer or smaller version before buying more reach.</p><Link to="/first-customer-india">Map the first payer and approach <ArrowUpRight size={17}/></Link><Link to="/blog/find-first-paying-customer-without-ads">Read the original first-customer article <ArrowUpRight size={17}/></Link></div></V2PageSection>
-
-      <V2PageSection className="dt-interpret" aria-labelledby="dt-interpret-title"><div><p className="gh-eyebrow">WHAT TO DO WITH A RESPONSE</p><h2 id="dt-interpret-title">One yes is a beginning. One no is a clue.</h2></div><div><article><span>NO RESPONSE</span><p>Check the audience, channel and clarity. Do not pay for scale until the right person understands the ask.</p></article><article><span>DETAILS, NO ACTION</span><p>Ask what prevented a decision: price, timing, trust, scope or a weaker problem than expected.</p></article><article><span>ACTION</span><p>Deliver the small promise, record all costs and follow up on whether they would choose it again. A first sale is evidence, not automatic repeat demand.</p></article></div></V2PageSection>
-
-      <V2PageSection className="dt-cash" aria-labelledby="dt-cash-title"><div><p className="gh-eyebrow">A YES CAN STILL HURT</p><h2 id="dt-cash-title">Can you afford to fulfil the test?</h2><p>If a customer pays after delivery, the first order may still require cash you do not have. Check supplies, travel, refunds and payment timing before you invite a second order.</p></div><div className="dt-cash-links"><Link to="/startup-costs-india"><strong>Upfront need</strong><span>Map cash before opening</span><ArrowUpRight size={17}/></Link><Link to="/startup-cash-flow-india"><strong>Payment timing</strong><span>Put due dates beside collections</span><ArrowUpRight size={17}/></Link></div></V2PageSection>
-
-      <SellerFaq title="Questions a small test can answer." faq={[{q:"Is a waitlist enough to validate demand?",a:<><p>It shows interest in a promise, not a purchase. State what happens next and compare later actions against those sign-ups.</p></>},{q:"Should I take money before the product exists?",a:<><p>Only if you can describe the offer honestly, fulfil it, and meet the rules and obligations for your specific activity. A small real pilot is often clearer than a vague pre-order.</p></>},{q:"How many people should I ask?",a:<><p>Choose a reachable buyer group and a stopping condition in advance. The goal is to learn the objection and behaviour, not hit an arbitrary universal interview count.</p></>}]} />
-      <V2PageCta className="dt-final"><div><p className="gh-eyebrow">THE NEXT SMALL MOVE</p><h2>Take the answer seriously.</h2><p>Record what the buyer actually did and what it cost you. If the result is uncertain, narrow the promise and test again before taking on fixed expense.</p></div><div><Link to="/startup-idea-validation" className="gh-button gh-button-primary">Use the validation field guide <ArrowUpRight size={17}/></Link><Link to="/business-idea-research-india" className="gh-button gh-button-secondary">Check the countercase <ArrowUpRight size={17}/></Link></div></V2PageCta>
-    </div></GlassShell>
-  </>;
+    <div className="bg-slate-50 pt-24 lg:pt-28"><nav className={`${wrap} flex flex-wrap items-center gap-2 py-3 text-sm text-slate-600`} aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={15}/><a href="/startup-guides">Guides</a><ChevronRight size={15}/><span>Business demand test in India</span></nav></div>
+    <section className="bg-gradient-to-b from-blue-50 to-white py-12 lg:py-16"><div className={wrap}><span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-bold text-blue-800">The moment after “sounds good”</span><h1 className="mt-5 max-w-3xl text-4xl font-bold leading-tight md:text-5xl">Will anyone make a <span className="text-blue-700">real move?</span></h1><p className="mt-5 max-w-3xl text-lg text-slate-600">Your business idea deserves a fair test before it takes your savings and weekends. Put one useful offer in front of the right person, ask for a specific action, and record what happened without rounding a maybe up to a yes.</p><div className="mt-7 flex flex-wrap gap-3"><a href="/browse" className={primary}>Browse ideas <ArrowRight size={17}/></a><a href="#design-test" className="inline-flex min-h-11 items-center rounded-xl border bg-white px-6 py-3 font-semibold hover:border-blue-500">Design a small test</a></div></div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">A busy conversation can test the wrong thing.</h2><p className="mt-3 max-w-3xl text-slate-600">Interest in the problem, interest in your proposed solution and willingness to pay are separate questions. Name one for this round. If you ask a cousin whether your logo looks good, you have learned about a logo, not a paying customer.</p><div className="mt-6 grid gap-4 md:grid-cols-3">{[
+      ["Problem", "Can the buyer describe a recent, costly workaround?"],
+      ["Offer", "Do they choose your specific scope over that workaround?"],
+      ["Commitment", "Will they take a suitable next step at a stated price and date?"],
+    ].map(([title, copy]) => <article className={card} key={title}><h3 className="text-xl font-bold">{title}</h3><p className="mt-3 text-slate-600">{copy}</p></article>)}</div><a href="/business-idea-research-india" className="mt-6 inline-flex font-semibold text-blue-700 hover:underline">First check the buyer and current alternatives <ArrowRight className="ml-2" size={17}/></a></div></section>
+    <section id="design-test" className="scroll-mt-28 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Choose what a yes would mean.</h2><p className="mt-3 text-slate-600">Build one small ask with a defined offer and a response you can observe.</p><ol className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">{["One defined offer", "Who will see it?", "When will you check the response?", "What outcome would make you change the offer?"].map((question, index) => <li className={card} key={question}><span className="text-sm font-bold text-blue-700">0{index + 1}</span><p className="mt-3 font-semibold">{question}</p></li>)}</ol></div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Make the decision easy to understand.</h2><p className="mt-3 max-w-3xl text-slate-600">A polished teaser may attract clicks that vanish when price, delivery or trust becomes real. Include the inconvenient details early enough that the answer means something.</p><div className="mt-6 grid gap-4 md:grid-cols-3">{[
+      ["Price", "State the amount.", "Include what is and is not covered. If you cannot quote it yet, use the first-price workbench."],
+      ["Delivery", "Name the work and date.", "Promise only what you can serve in the first small version."],
+      ["Trust", "Explain the terms.", "Show identity, contact, cancellation and refund conditions where relevant."],
+    ].map(([label, title, copy], index) => <article className={card} key={label}><span className="text-sm font-bold uppercase text-blue-700">0{index + 1} · {label}</span><h3 className="mt-3 text-xl font-bold">{title}</h3><p className="mt-3 text-slate-600">{copy}</p></article>)}</div><a href="/business-pricing-india" className="mt-6 inline-flex font-semibold text-blue-700 hover:underline">Use the first-price workbench <ArrowRight className="ml-2" size={17}/></a></div></section>
+    <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Count actions without inventing a verdict.</h2><p className="mt-3 text-slate-600">Keep these observations separate; a request for details is not a booking.</p><ol className="mt-6 grid gap-4 md:grid-cols-3">{["People who saw the offer", "Asked for details", "Took the agreed action"].map((question, index) => <li className={card} key={question}><span className="text-sm font-bold text-blue-700">0{index + 1}</span><p className="mt-3 font-semibold">{question}</p></li>)}</ol></div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={`${wrap} grid items-center gap-8 lg:grid-cols-2`}><img className="w-full rounded-2xl object-cover" src="/images/blog/how-to-find-your-first-paying-customer-without-spending-on-ads.webp" alt="Original featured artwork for the first paying customer article" loading="lazy" /><div><h2 className="text-3xl font-bold">Check the route before blaming the idea.</h2><p className="mt-3 text-slate-600">Did the message reach the payer, or just the person who likes the concept? Could they understand the price and next step? Silence is evidence about this offer and route. Try a clearer or smaller version before buying more reach.</p><div className="mt-5 flex flex-col gap-3"><a href="/first-customer-india" className="font-semibold text-blue-700 hover:underline">Map the first payer and approach <ArrowRight className="inline" size={17}/></a><a href="/blog/find-first-paying-customer-without-ads" className="font-semibold text-blue-700 hover:underline">Read the original first-customer article <ArrowRight className="inline" size={17}/></a></div></div></div></section>
+    <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">One yes is a beginning. One no is a clue.</h2><div className="mt-6 grid gap-4 md:grid-cols-3">{[
+      ["No response", "Check the audience, channel and clarity. Do not pay for scale until the right person understands the ask."],
+      ["Details, no action", "Ask what prevented a decision: price, timing, trust, scope or a weaker problem than expected."],
+      ["Action", "Deliver the small promise, record all costs and follow up on whether they would choose it again. A first sale is evidence, not automatic repeat demand."],
+    ].map(([title, copy]) => <article className={card} key={title}><h3 className="text-xl font-bold">{title}</h3><p className="mt-3 text-slate-600">{copy}</p></article>)}</div></div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Can you afford to fulfil the test?</h2><p className="mt-3 max-w-3xl text-slate-600">If a customer pays after delivery, the first order may still require cash you do not have. Check supplies, travel, refunds and payment timing before you invite a second order.</p><div className="mt-6 grid gap-4 md:grid-cols-2">{[
+      ["Upfront need", "Map cash before opening", "/startup-costs-india"],
+      ["Payment timing", "Put due dates beside collections", "/startup-cash-flow-india"],
+    ].map(([title, copy, href]) => <a className={card} href={href} key={href}><h3 className="text-xl font-bold">{title}</h3><p className="mt-3 text-slate-600">{copy}</p><ArrowRight className="mt-4 text-blue-700" size={17}/></a>)}</div></div></section>
+    <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Published ideas to inspect</h2><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{ideas.map(idea => <a className={card} href={`/idea/${idea.slug}`} key={idea.slug}><h3 className="text-xl font-bold">{idea.title}</h3><p className="mt-3 line-clamp-3 text-slate-600">{idea.hook || idea.summary}</p><span className="mt-4 inline-flex items-center gap-2 font-semibold text-blue-700">Read idea <ArrowRight size={17}/></span></a>)}</div></div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Related categories</h2><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{related.map(category => <a className={card} href={`/category/${category.slug}`} key={category.slug}><h3 className="text-xl font-bold">{category.name}</h3><span className="mt-4 inline-flex items-center gap-2 font-semibold text-blue-700">Explore category <ArrowRight size={17}/></span></a>)}</div></div></section>
+    <SellerFaq title="Questions a small test can answer" faq={[
+      { q: "Is a waitlist enough to validate demand?", a: "It shows interest in a promise, not a purchase. State what happens next and compare later actions against those sign-ups." },
+      { q: "Should I take money before the product exists?", a: "Only if you can describe the offer honestly, fulfil it, and meet the rules and obligations for your specific activity. A small real pilot is often clearer than a vague pre-order." },
+      { q: "How many people should I ask?", a: "Choose a reachable buyer group and a stopping condition in advance. The goal is to learn the objection and behaviour, not hit an arbitrary universal interview count." },
+    ]} />
+    <section className="bg-blue-700 py-12 text-white lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Take the answer seriously.</h2><p className="mt-3 max-w-3xl text-blue-100">Record what the buyer actually did and what it cost you. If the result is uncertain, narrow the promise and test again before taking on fixed expense.</p><div className="mt-6 grid gap-4 sm:grid-cols-3">{[
+      ["Use the validation field guide", "/startup-idea-validation"], ["Check the countercase", "/business-idea-research-india"], ["Browse ideas", "/browse"],
+    ].map(([label, href]) => <a href={href} key={href} className="flex min-h-11 items-center justify-between rounded-xl bg-white p-4 font-semibold text-blue-800 hover:bg-blue-50">{label}<ArrowRight size={17}/></a>)}</div></div></section>
+  </V2Frame>;
 }
