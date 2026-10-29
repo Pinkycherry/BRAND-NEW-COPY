@@ -18,7 +18,7 @@ const paths=[
 ] as const;
 export const Route=createFileRoute("/side-business-ideas-india")({
  head:()=>({meta:[{title:"Side Business Ideas in India That Fit Your Real Week | BusinessIdea.io"},{name:"description",content:"Explore real part-time business idea blueprints, evening and weekend work patterns, source articles, first-sale tests and an honest time-fit worksheet."},{property:"og:title",content:"Side business ideas for the week you have | BusinessIdea.io"}]}),
- loader:async()=>{const [hub,ideas]=await Promise.all([getListsHub(),getBrowseIdeas({data:{q:"part-time",category:"",investment:"",time:"",skill:"",page:1}})]);return {hub,ideas:ideas.ideas};},
+ loader:async()=>{const hub=await getListsHub();const category=hub.categories.find(item=>/side|part.time/i.test(item.name));const ideas=await getBrowseIdeas({data:{q:"",category:category?.code??"",investment:"",time:"",skill:"",page:1}});return {hub,ideas:ideas.ideas};},
  component:SideBusinessPage
 });
 const wrap="mx-auto max-w-6xl px-4 md:px-6";
