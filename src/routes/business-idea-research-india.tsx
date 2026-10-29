@@ -23,7 +23,7 @@ export const Route = createFileRoute("/business-idea-research-india")({
 });
 function ResearchPage() {
   const [setting, setSetting] = useState(0);
-  const current = settings[setting];
+  const current = settings[setting] ?? settings[0]!;
   return <V2Frame active="/startup-guides">
     <JsonLd schema={[webPageSchema({ path: "/business-idea-research-india", name: "Research a business idea in India", description: "Observe buyers, compare alternatives, and keep a claim and source ledger before committing to a startup idea." }), breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Business idea research in India", path: "/business-idea-research-india" }])]} />
     <div className="bg-slate-50 pt-24 lg:pt-28"><nav className={`${wrap} flex flex-wrap items-center gap-2 py-3 text-sm text-slate-600`} aria-label="Breadcrumb"><a href="/" className="hover:text-blue-700">Home</a><ChevronRight size={15}/><a href="/startup-guides" className="hover:text-blue-700">Guides</a><ChevronRight size={15}/><span>Business idea research in India</span></nav></div>
