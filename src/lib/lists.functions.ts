@@ -126,6 +126,21 @@ export const getListsHub = createServerFn({ method: "GET" }).handler(async (): P
   };
 });
 
+export async function getListResources(name: string, categoryName: string) {
+  const [{ STARTUP_GUIDES }, { READY_CALCULATORS }] = await Promise.all([import('./guides-data'), import('./calculators')]);
+  const terms = `${name} ${categoryName}`.toLocaleLowerCase().split(/\W+/).filter(term=>term.length>3 && !['ideas','business'].includes(term));
+  const relevance = (guide: typeof STARTUP_GUIDES[number]) => {
+    const text = `${guide.title} ${guide.description}`.toLocaleLowerCase();
+    const general = guide.category === 'Validation' ? 4 : guide.category === 'Launch & Ops' ? 3 : guide.category === 'Bootstrapping' ? 2 : 0;
+    const softwareSpecific = /b2b|saas/i.test(guide.title) && !/software|saas|digital|online/.test(`${name} ${terms.join(' ')}`.toLowerCase());
+    return terms.reduce((score,term)=>score+(text.includes(term)?3:0),general) - (softwareSpecific ? 50 : 0);
+  };
+  return {
+    guides:[...STARTUP_GUIDES].sort((a,b)=>relevance(b)-relevance(a)).slice(0,4).map(guide=>({label:guide.title,href:`/startup-guides/${guide.slug}`,note:guide.description})),
+    calculators:READY_CALCULATORS.slice(0,4).map(tool=>({label:tool.title,href:`/calculator/${tool.slug}`,note:tool.answers})),
+  };
+}
+
 /** One subcategory list page by its slug, or null. */
 export const getListPage = createServerFn({ method: "GET" })
   .inputValidator((input: unknown) => z.object({ slug: z.string().min(1).max(200) }).parse(input))
@@ -154,16 +169,7 @@ export const getListPage = createServerFn({ method: "GET" })
       for (const r of (rows ?? []) as { subcategory_code: string }[]) sibCounts[r.subcategory_code] = (sibCounts[r.subcategory_code] ?? 0) + 1;
     }
     const faq = faqEntries(s.faq);
-    const [{ STARTUP_GUIDES }, { READY_CALCULATORS }] = await Promise.all([import('./guides-data'), import('./calculators')]);
-    const terms = `${s.name} ${(cat as {name:string}|null)?.name ?? ''}`.toLocaleLowerCase().split(/\W+/).filter(term=>term.length>3 && !['ideas','business'].includes(term));
-    const relevance = (guide: typeof STARTUP_GUIDES[number]) => {
-      const text = `${guide.title} ${guide.description}`.toLocaleLowerCase();
-      const general = guide.category === 'Validation' ? 4 : guide.category === 'Launch & Ops' ? 3 : guide.category === 'Bootstrapping' ? 2 : 0;
-      const softwareSpecific = /b2b|saas/i.test(guide.title) && !/software|saas|digital|online/.test(`${s.name} ${terms.join(' ')}`.toLowerCase());
-      return terms.reduce((score,term)=>score+(text.includes(term)?3:0),general) - (softwareSpecific ? 50 : 0);
-    };
-    const guides = [...STARTUP_GUIDES].sort((a,b)=>relevance(b)-relevance(a)).slice(0,4).map(guide=>({label:guide.title,href:`/startup-guides/${guide.slug}`,note:guide.description}));
-    const calculators = READY_CALCULATORS.slice(0,4).map(tool=>({label:tool.title,href:`/calculator/${tool.slug}`,note:tool.answers}));
+    const resources = await getListResources(s.name,(cat as {name:string}|null)?.name ?? '');
     return {
       code: s.code,
       name: s.name,
@@ -173,7 +179,7 @@ export const getListPage = createServerFn({ method: "GET" })
       faq: uniqueFaqBySource(faq, list.map((idea) => faqEntries(idea.faq).map((entry) => ({ ...entry, href: `/idea/${idea.slug}` })))),
       categoryName: (cat as { name: string } | null)?.name ?? "",
       categorySlug: (cat as { slug: string } | null)?.slug,
-      resources: {guides,calculators},
+      resources,
       ideas: list,
       siblings: ((sibs ?? []) as { code: string; name: string; slug: string }[])
         .filter((x) => x.code !== s.code && (sibCounts[x.code] ?? 0) > 0)

@@ -314,11 +314,11 @@ function ListPageView() {
   return <ListPageBody p={Route.useLoaderData()} />;
 }
 
-export function ListPageBody({ p, categorySlug }: { p: ListPage; categorySlug?: string }) {
+export function ListPageBody({ p, categorySlug, canonicalPath, parent, directory }: { p: ListPage; categorySlug?: string; canonicalPath?: string; parent?:{label:string;href:string}; directory?:{name:string;slug:string}[] }) {
   const latest = p.ideas.map((i) => i.updated_at ?? "").sort().pop() ?? "";
   const d = latest ? new Date(latest) : new Date();
-  const updated = d.toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" });
-  const month = d.toLocaleDateString("en-IN", { month: "short", year: "numeric" });
+  const updated = d.toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric", timeZone:'Asia/Kolkata' });
+  const month = d.toLocaleDateString("en-IN", { month: "short", year: "numeric", timeZone:'Asia/Kolkata' });
   const title = p.name;
   const words = p.ideas.reduce((n, i) => n + [i.summary, i.who_pays_you, i.how_money_comes, i.verdict].join(" ").split(/\s+/).length, 0);
   const top = p.ideas.slice(0, 5);
@@ -337,7 +337,7 @@ export function ListPageBody({ p, categorySlug }: { p: ListPage; categorySlug?: 
               </li>
               <li aria-hidden="true" className="mx-1 text-muted-foreground"><ChevronRight className="h-4 w-4" /></li>
               <li className="inline-flex items-center gap-1.5">
-                <a href={categorySlug ? `/category/${categorySlug}` : "/lists"} className="flex items-center transition-colors text-muted-foreground hover:text-primary">{categorySlug ? p.categoryName : "Lists"}</a>
+                <a href={parent?.href ?? (categorySlug ? `/category/${categorySlug}` : "/lists")} className="flex items-center transition-colors text-muted-foreground hover:text-primary">{parent?.label ?? (categorySlug ? p.categoryName : "Lists")}</a>
               </li>
               <li aria-hidden="true" className="mx-1 text-muted-foreground"><ChevronRight className="h-4 w-4" /></li>
               <li className="inline-flex items-center gap-1.5">
@@ -353,6 +353,7 @@ export function ListPageBody({ p, categorySlug }: { p: ListPage; categorySlug?: 
           <Head p={p} title={title} words={words} updated={updated} />
           <Tldr p={p} title={title} month={month} />
           <Intro p={p} />
+          {directory && directory.length>0 && <section id="focused-lists" className="mb-12 scroll-mt-28"><h2 className="mb-5 text-2xl font-bold">Focused lists</h2><div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">{directory.map(sub=><a key={sub.slug} href={`/lists/${sub.slug}`} className="group flex min-h-14 min-w-0 items-center justify-between gap-3 rounded-xl border bg-card px-4 py-3 text-sm font-semibold transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-sm"><span className="min-w-0 break-words">{sub.name}</span><ArrowRight className="shrink-0 text-primary" size={16}/></a>)}</div></section>}
           <ListReportPromo p={p}/>
           <Comparison ideas={top} />
           <section className="space-y-8 mb-12">
@@ -371,7 +372,7 @@ export function ListPageBody({ p, categorySlug }: { p: ListPage; categorySlug?: 
               ))}
             </section>
           )}
-          <ListCitation p={p} updated={updated}/>
+          <ListCitation p={p} updated={updated} path={canonicalPath}/>
           <Faq faq={p.faq} />
           <ListDeeperAnswers p={p}/>
           <RelatedLists p={p} />

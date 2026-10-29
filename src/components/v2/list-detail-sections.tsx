@@ -16,8 +16,8 @@ export function ListReportPromo({p}:{p:ListPage}) {
   return <aside className="mb-8 flex flex-col gap-4 rounded-xl border border-primary/20 bg-primary/5 p-5 sm:flex-row sm:items-center"><BookOpen className="shrink-0 text-primary" size={26}/><div className="min-w-0 flex-1"><h2 className="font-bold">{guide.label}</h2><p className="mt-1 text-sm text-muted-foreground">{guide.note}</p></div><a className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white" href={guide.href}>Read guide<ArrowRight size={16}/></a></aside>;
 }
 
-export function ListCitation({p,updated}:{p:ListPage;updated:string}) {
-  return <section id="cite-this-page" className="mt-10 rounded-xl border bg-muted/20 p-5"><h2 className="text-base font-semibold">Cite this page</h2><p className="mt-2 break-words text-sm leading-7 text-muted-foreground">BusinessIdea.io. “{p.name}.” Updated {updated}. <a className="text-primary underline" href={`/lists/${p.slug}`}>bbinewcopy.vercel.app/lists/{p.slug}</a></p></section>;
+export function ListCitation({p,updated,path=`/lists/${p.slug}`}:{p:ListPage;updated:string;path?:string}) {
+  return <section id="cite-this-page" className="mt-10 rounded-xl border bg-muted/20 p-5"><h2 className="text-base font-semibold">Cite this page</h2><p className="mt-2 break-words text-sm leading-7 text-muted-foreground">BusinessIdea.io. “{p.name}.” Updated {updated}. <a className="text-primary underline" href={path}>bbinewcopy.vercel.app{path}</a></p></section>;
 }
 
 export function ListDeeperAnswers({p}:{p:ListPage}) {
