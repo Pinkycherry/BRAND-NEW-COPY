@@ -1,54 +1,94 @@
-import { SellerFaq } from "@/components/v2/faq";
-import { ReadOnlyChecklist } from "@/components/v2/read-only-checklist";
-import { V2PageCta, V2PageFaq, V2PageHero, V2PageSection } from "@/components/v2/page-sections";
 import { useState } from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, Plus, Trash2 } from "lucide-react";
-import { GlassShell } from "@/components/glass-shell";
+import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, ChevronRight, Plus, Trash2 } from "lucide-react";
+import { V2Frame } from "@/components/v2/frame";
+import { SellerFaq } from "@/components/v2/faq";
+import { getListsHub } from "@/lib/lists.functions";
+import { getBrowseIdeas } from "@/lib/browse.functions";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
-import "@/components/cash-flow.css";
 
-type CashEvent={id:number;date:string;label:string;incoming:string;outgoing:string};
-type EventField="date"|"label"|"incoming"|"outgoing";
-const money=(n:number)=>new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(n);
-const amount=(s:string)=>Math.max(0,Number(s)||0);
-export const Route=createFileRoute("/startup-cash-flow-india")({
-  head:()=>({meta:[
-    {title:"Startup Cash Flow in India: See the Payment Gap | BusinessIdea.io"},
-    {name:"description",content:"Make a dated rupee cash flow map for a startup idea in India. Enter money expected in, bills due out and opening cash to see when a shortfall appears."},
-    {property:"og:title",content:"Startup cash flow in India | BusinessIdea.io"},
-    {property:"og:type",content:"article"},
-  ]}),
-  component:CashFlowPage,
+type CashEvent = { id: number; date: string; label: string; incoming: string; outgoing: string };
+type EventField = "date" | "label" | "incoming" | "outgoing";
+const money = (n: number) => new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 }).format(n);
+const amount = (s: string) => Math.max(0, Number(s) || 0);
+const wrap = "mx-auto max-w-6xl px-4 md:px-6";
+const card = "rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-500";
+const primary = "inline-flex min-h-11 items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700";
+const input = "mt-2 block min-h-11 w-full rounded-xl border bg-white px-3 outline-none focus:border-blue-600";
+
+export const Route = createFileRoute("/startup-cash-flow-india")({
+  head: () => ({ meta: [
+    { title: "Startup Cash Flow in India: See the Payment Gap | BusinessIdea.io" },
+    { name: "description", content: "Make a dated rupee cash flow map for a startup idea in India. Enter money expected in, bills due out and opening cash to see when a shortfall appears." },
+    { property: "og:title", content: "Startup cash flow in India | BusinessIdea.io" },
+    { property: "og:type", content: "article" },
+  ] }),
+  loader: async () => {
+    const hub = await getListsHub();
+    const category = hub.categories.find(item => /local service|food processing|home service/i.test(item.name));
+    const result = await getBrowseIdeas({ data: { q: "", category: category?.code ?? "", investment: "", time: "", skill: "", page: 1 } });
+    return { categories: hub.categories, ideas: result.ideas };
+  },
+  component: CashFlowPage,
 });
-function CashFlowPage(){
-  const [opening,setOpening]=useState("");
-  const [events,setEvents]=useState<CashEvent[]>([{id:1,date:"",label:"",incoming:"",outgoing:""}]);
-  const [late,setLate]=useState(false);
-  const [note,setNote]=useState("");
-  const ordered=events.filter(e=>e.date&&e.label.trim()).slice().sort((a,b)=>a.date.localeCompare(b.date)||a.id-b.id);
-  let running=amount(opening),lowest=running;
-  const rows=ordered.map(e=>{const before=running;running+=amount(e.incoming)-amount(e.outgoing);lowest=Math.min(lowest,running);return{...e,before,balance:running}});
-  let delayed=amount(opening),delayedLow=delayed;
-  for(const e of ordered){delayed-=amount(e.outgoing);delayedLow=Math.min(delayedLow,delayed);}
-  const totalIn=ordered.reduce((n,e)=>n+amount(e.incoming),0),totalOut=ordered.reduce((n,e)=>n+amount(e.outgoing),0);
-  function update(id:number,key:EventField,text:string){setEvents(all=>all.map(e=>e.id===id?{...e,[key]:text}:e))}
-  function add(){setEvents(all=>[...all,{id:Date.now(),date:"",label:"",incoming:"",outgoing:""}])}
-  return <>
+
+function CashFlowPage() {
+  const { categories, ideas } = Route.useLoaderData();
+  const related = categories.filter(item => /service|food processing|e-commerce/i.test(item.name)).slice(0, 6);
+  const [opening, setOpening] = useState("");
+  const [events, setEvents] = useState<CashEvent[]>([{ id: 1, date: "", label: "", incoming: "", outgoing: "" }]);
+  const [late, setLate] = useState(false);
+  const ordered = events.filter(event => event.date && event.label.trim()).slice().sort((a, b) => a.date.localeCompare(b.date) || a.id - b.id);
+  let running = amount(opening), lowest = running;
+  const rows = ordered.map(event => {
+    const before = running;
+    running += amount(event.incoming) - amount(event.outgoing);
+    lowest = Math.min(lowest, running);
+    return { ...event, before, balance: running };
+  });
+  let delayed = amount(opening), delayedLow = delayed;
+  for (const event of ordered) { delayed -= amount(event.outgoing); delayedLow = Math.min(delayedLow, delayed); }
+  const totalIn = ordered.reduce((sum, event) => sum + amount(event.incoming), 0);
+  const totalOut = ordered.reduce((sum, event) => sum + amount(event.outgoing), 0);
+  function update(id: number, key: EventField, text: string) { setEvents(all => all.map(event => event.id === id ? { ...event, [key]: text } : event)); }
+  function add() { setEvents(all => [...all, { id: Date.now(), date: "", label: "", incoming: "", outgoing: "" }]); }
+  return <V2Frame active="/startup-guides">
     <JsonLd schema={[
-      webPageSchema({path:"/startup-cash-flow-india",name:"Startup cash flow in India",description:"A dated event ledger to distinguish sales from money actually available when bills are due."}),
-      breadcrumbSchema([{name:"Home",path:"/"},{name:"Startup cash flow in India",path:"/startup-cash-flow-india"}]),
-    ]}/>
-    <GlassShell><div className="cf-page">
-      <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><span>Startup cash flow in India</span></nav>
-      <V2PageHero className="cf-hero"><div><p className="gh-eyebrow">THE DAYS BETWEEN · INDIA</p><h1>The bill has a date. <em>Does the payment?</em></h1><p>A business idea can earn on paper and still run short of cash on Thursday. Put expected collections beside actual due dates before you promise a delivery or sign a fixed commitment.</p><a href="#cash-calendar" className="gh-button gh-button-primary">Open the cash calendar <ArrowRight size={17}/></a></div><aside><span>FOLLOW THE ORDER</span><div><b>Money in</b><strong>When collected</strong></div><div><b>Money out</b><strong>When due</strong></div><p>The difference is what you can actually use on that day.</p></aside></V2PageHero>
-      <V2PageSection className="cf-distinction" aria-labelledby="cf-distinction-title"><div><p className="gh-eyebrow">THE QUIET GAP</p><h2 id="cf-distinction-title">Three dates can belong to one sale.</h2><p>A client agrees to pay. You deliver. The money clears later. The invoice amount is not a balance in your account while you are buying materials, travelling or paying rent.</p></div><div className="cf-three"><article><span>01</span><h3>Order agreed</h3><p>Record any deposit actually collected, not just a promise.</p></article><article><span>02</span><h3>Work delivered</h3><p>List each bill that comes due before the full payment arrives.</p></article><article><span>03</span><h3>Cash collected</h3><p>Use the amount and date you realistically expect; mark uncertainty separately.</p></article></div></V2PageSection>
-      <V2PageSection id="cash-calendar" className="cf-calendar" aria-labelledby="cf-calendar-title"><div className="cf-calendar-intro"><p className="gh-eyebrow">YOUR DATED RUPEES</p><h2 id="cf-calendar-title">Build a cash calendar.</h2><p>Enter an opening balance and the dated events in the order you expect. The calculation sorts valid dated rows by date. Blank or undated rows stay in the form but do not enter the totals. All entries remain in this browser tab only.</p></div><div className="cf-workspace"><div className="cf-entry"><label className="cf-opening">Opening cash available (₹)<input type="number" min="0" inputMode="decimal" value={opening} onChange={e=>setOpening(e.target.value)} placeholder="Your actual starting amount"/></label><div className="cf-entry-head"><h3>Expected events</h3><p>Use separate rows when money leaves and returns on different dates.</p></div>{events.map((event,index)=><div className="cf-event" key={event.id}><div className="cf-event-top"><strong>Event {index+1}</strong><button type="button" onClick={()=>setEvents(all=>all.filter(e=>e.id!==event.id))} aria-label={"Remove event "+(index+1)}><Trash2 size={16}/></button></div><label>Date<input type="date" value={event.date} onChange={e=>update(event.id,"date",e.target.value)}/></label><label>What happens?<input value={event.label} onChange={e=>update(event.id,"label",e.target.value)} placeholder="Supplier bill, deposit collected, rent due..."/></label><div className="cf-event-money"><label>Money collected (₹)<input type="number" min="0" inputMode="decimal" value={event.incoming} onChange={e=>update(event.id,"incoming",e.target.value)} placeholder="0"/></label><label>Money paid (₹)<input type="number" min="0" inputMode="decimal" value={event.outgoing} onChange={e=>update(event.id,"outgoing",e.target.value)} placeholder="0"/></label></div></div>)}<button type="button" className="cf-add" onClick={add}><Plus size={17}/> Add another dated event</button></div><aside className="cf-result" aria-live="polite"><p className="gh-eyebrow">AFTER EACH EVENT</p><div className="cf-totals"><div><span>Expected in</span><strong>{money(totalIn)}</strong></div><div><span>Expected out</span><strong>{money(totalOut)}</strong></div></div>{rows.length?<ol>{rows.map(row=><li key={row.id}><span>{row.date} · {row.label}</span><strong className={row.balance<0?"cf-negative":""}>{money(row.balance)}</strong><small>{money(row.before)} + {money(amount(row.incoming))} − {money(amount(row.outgoing))}</small></li>)}</ol>:<p className="cf-empty">Add a date and description to an event to see the running balance. Zero is an empty worksheet, not proof that the business has no cash need.</p>}<div className="cf-low"><span>Lowest cash balance in this sequence</span><strong>{rows.length?money(lowest):"—"}</strong><small>A negative balance shows an amount that must be funded or rescheduled under these assumptions.</small></div><label className="cf-stress"><input type="checkbox" checked={late} onChange={e=>setLate(e.target.checked)}/>Show if all expected collections arrive after listed bills</label>{late&&<p className="cf-stress-result">With planned collections delayed beyond these events, the lowest balance would be <strong>{money(delayedLow)}</strong>. This is a stress case, not a prediction.</p>}</aside></div></V2PageSection>
-      <V2PageSection className="cf-gaps" aria-labelledby="cf-gaps-title"><div><p className="gh-eyebrow">FOUR PLACES CASH HIDES</p><h2 id="cf-gaps-title">Look beyond the invoice.</h2></div><div><article><span>Deposit</span><h3>Cash tied to a place</h3><p>A refundable premises deposit may return later, but it cannot pay today's supplier while held elsewhere.</p></article><article><span>Stock</span><h3>Cash sitting on a shelf</h3><p>A bulk purchase may reduce unit cost but delay the next useful purchase if demand is slower than expected.</p></article><article><span>Credit</span><h3>Work done before collection</h3><p>Write the actual customer payment terms beside supplier due dates.</p></article><article><span>Returns</span><h3>Cash that may reverse</h3><p>Leave room for rework, refunds and payment failures where they apply.</p></article></div></V2PageSection>
-      <V2PageSection className="cf-remedies" aria-labelledby="cf-remedies-title"><div><p className="gh-eyebrow">IF THE LINE GOES BELOW ZERO</p><h2 id="cf-remedies-title">Change the first promise.</h2><p>The shortfall is information. Before borrowing or accepting a long lease, ask what can be tested at a smaller scale while still serving a buyer well.</p></div><ol><li><strong>Move the money in.</strong><p>For suitable work, agree a fair deposit or milestone payment in writing; only enter it as cash when collected.</p></li><li><strong>Move the money out.</strong><p>Ask about a smaller supplier batch or a rental slot instead of an upfront permanent setup.</p></li><li><strong>Move the promise.</strong><p>Offer a narrower delivery window, scope or geography that your current cash can support.</p></li><li><strong>Keep household needs visible.</strong><p>Business timing cannot quietly consume the money needed for living obligations.</p></li></ol></V2PageSection>
-      <ReadOnlyChecklist eyebrow="THE RESULT IS A QUESTION" title="A positive line still needs a buyer." intro="The calendar tells you what happens if those listed payments occur. It cannot confirm a sale, collection date, taxes, financing, future price or return rate. Keep a separate version with only money already received and bills contractually due." items={["My next cash question"]} />
-      <SellerFaq title="Cash questions worth asking." faq={[{q:"Is revenue the same as cash flow?",a:<><p>No. A sale may be recorded before the money reaches your account. The dated balance matters when a bill is due.</p></>},{q:"Should I include a promised advance?",a:<><p>Make one scenario with the advance on the expected date and another without it. Until collected, it is an assumption, not available cash.</p></>},{q:"Does this replace a formal forecast or accounting advice?",a:<><p>No. It is a simple event map for a first decision. It omits taxes, financing, obligations not entered and complex accounting treatment. Use qualified advice for your actual business.</p></>}]} />
-      <V2PageCta className="cf-final"><div><p className="gh-eyebrow">THE NEXT DECISION</p><h2>Can you fund the first useful promise?</h2><p>Map your full startup commitments, then ask a real buyer to commit to a defined offer before expanding the fixed costs.</p></div><div><Link to="/startup-costs-india" className="gh-button gh-button-primary">Map all startup costs <ArrowUpRight size={17}/></Link><Link to="/first-customer-india" className="gh-button gh-button-secondary">Find the first buyer <ArrowUpRight size={17}/></Link></div></V2PageCta>
-    </div></GlassShell>
-  </>;
+      webPageSchema({ path: "/startup-cash-flow-india", name: "Startup cash flow in India", description: "A dated event ledger to distinguish sales from money actually available when bills are due." }),
+      breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Startup cash flow in India", path: "/startup-cash-flow-india" }]),
+    ]} />
+    <div className="bg-slate-50 pt-24 lg:pt-28"><nav className={`${wrap} flex flex-wrap items-center gap-2 py-3 text-sm text-slate-600`} aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={15}/><a href="/startup-guides">Guides</a><ChevronRight size={15}/><span>Startup cash flow in India</span></nav></div>
+    <section className="bg-gradient-to-b from-blue-50 to-white py-12 lg:py-16"><div className={wrap}><span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-bold text-blue-800">The days between · India</span><h1 className="mt-5 max-w-3xl text-4xl font-bold leading-tight md:text-5xl">The bill has a date. <span className="text-blue-700">Does the payment?</span></h1><p className="mt-5 max-w-3xl text-lg text-slate-600">A business idea can earn on paper and still run short of cash on Thursday. Put expected collections beside actual due dates before you promise a delivery or sign a fixed commitment.</p><div className="mt-7 flex flex-wrap gap-3"><a href="/browse" className={primary}>Browse ideas <ArrowRight size={17}/></a><a href="#cash-calendar" className="inline-flex min-h-11 items-center rounded-xl border bg-white px-6 py-3 font-semibold hover:border-blue-500">Open the cash calendar</a></div></div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Three dates can belong to one sale.</h2><p className="mt-3 max-w-3xl text-slate-600">A client agrees to pay. You deliver. The money clears later. The invoice amount is not a balance in your account while you are buying materials, travelling or paying rent.</p><div className="mt-6 grid gap-4 md:grid-cols-3">{[
+      ["Order agreed", "Record any deposit actually collected, not just a promise."],
+      ["Work delivered", "List each bill that comes due before the full payment arrives."],
+      ["Cash collected", "Use the amount and date you realistically expect; mark uncertainty separately."],
+    ].map(([title, copy], index) => <article className={card} key={title}><span className="text-sm font-bold text-blue-700">0{index + 1}</span><h3 className="mt-3 text-xl font-bold">{title}</h3><p className="mt-3 text-slate-600">{copy}</p></article>)}</div></div></section>
+    <section id="cash-calendar" className="scroll-mt-28 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Build a cash calendar.</h2><p className="mt-3 max-w-3xl text-slate-600">Enter an opening balance and dated events in the order you expect. The calculation sorts valid rows by date. Blank or undated rows do not enter the totals. Entries remain in this browser tab only.</p><div className="mt-6 grid items-start gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+      <div className={card}><label className="block font-semibold">Opening cash available (₹)<input className={input} type="number" min="0" inputMode="decimal" value={opening} onChange={event => setOpening(event.target.value)} /></label><h3 className="mt-6 text-xl font-bold">Expected events</h3><p className="mt-2 text-slate-600">Use separate rows when money leaves and returns on different dates.</p><div className="mt-4 grid gap-4">{events.map((event, index) => <div className="rounded-xl border bg-slate-50 p-4" key={event.id}><div className="flex items-center justify-between"><strong>Event {index + 1}</strong><button type="button" onClick={() => setEvents(all => all.filter(item => item.id !== event.id))} aria-label={`Remove event ${index + 1}`} className="rounded-lg p-2 text-slate-600 hover:bg-white hover:text-red-700"><Trash2 size={17}/></button></div><div className="mt-3 grid gap-4 sm:grid-cols-2"><label className="text-sm font-semibold">Date<input className={input} type="date" value={event.date} onChange={e => update(event.id, "date", e.target.value)} /></label><label className="text-sm font-semibold">What happens?<input className={input} value={event.label} onChange={e => update(event.id, "label", e.target.value)} /></label><label className="text-sm font-semibold">Money collected (₹)<input className={input} type="number" min="0" inputMode="decimal" value={event.incoming} onChange={e => update(event.id, "incoming", e.target.value)} /></label><label className="text-sm font-semibold">Money paid (₹)<input className={input} type="number" min="0" inputMode="decimal" value={event.outgoing} onChange={e => update(event.id, "outgoing", e.target.value)} /></label></div></div>)}</div><button type="button" className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-xl border px-5 py-3 font-semibold hover:border-blue-500" onClick={add}><Plus size={17}/>Add another dated event</button></div>
+      <aside className={`${card} bg-blue-50`} aria-live="polite"><h3 className="text-xl font-bold">After each event</h3><dl className="mt-5 grid gap-3 sm:grid-cols-2"><div><dt>Expected in</dt><dd className="font-bold text-blue-700">{money(totalIn)}</dd></div><div><dt>Expected out</dt><dd className="font-bold text-blue-700">{money(totalOut)}</dd></div></dl>{rows.length ? <ol className="mt-5 grid gap-3">{rows.map(row => <li className="rounded-xl bg-white p-3" key={row.id}><span className="block break-words">{row.date} · {row.label}</span><strong className={`mt-1 block ${row.balance < 0 ? "text-red-700" : "text-blue-700"}`}>{money(row.balance)}</strong><small className="break-words text-slate-600">{money(row.before)} + {money(amount(row.incoming))} − {money(amount(row.outgoing))}</small></li>)}</ol> : <p className="mt-5 text-slate-600">Add a date and description to an event to see the running balance. Zero is an empty worksheet, not proof that the business has no cash need.</p>}<div className="mt-5 rounded-xl bg-white p-4"><span className="block">Lowest cash balance in this sequence</span><strong className="mt-1 block text-xl text-blue-700">{rows.length ? money(lowest) : "—"}</strong><small className="text-slate-600">A negative balance shows an amount that must be funded or rescheduled under these assumptions.</small></div><label className="mt-5 flex items-start gap-3 text-sm font-semibold"><input className="mt-1" type="checkbox" checked={late} onChange={event => setLate(event.target.checked)} />Show if all expected collections arrive after listed bills</label>{late && <p className="mt-3 text-sm">With planned collections delayed beyond these events, the lowest balance would be <strong>{money(delayedLow)}</strong>. This is a stress case, not a prediction.</p>}</aside>
+    </div></div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Look beyond the invoice.</h2><div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">{[
+      ["Deposit", "Cash tied to a place", "A refundable premises deposit may return later, but it cannot pay today's supplier while held elsewhere."],
+      ["Stock", "Cash sitting on a shelf", "A bulk purchase may reduce unit cost but delay the next useful purchase if demand is slower than expected."],
+      ["Credit", "Work done before collection", "Write the actual customer payment terms beside supplier due dates."],
+      ["Returns", "Cash that may reverse", "Leave room for rework, refunds and payment failures where they apply."],
+    ].map(([label, title, copy]) => <article className={card} key={label}><span className="text-sm font-bold uppercase text-blue-700">{label}</span><h3 className="mt-3 text-xl font-bold">{title}</h3><p className="mt-3 text-slate-600">{copy}</p></article>)}</div></div></section>
+    <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Change the first promise.</h2><p className="mt-3 max-w-3xl text-slate-600">The shortfall is information. Before borrowing or accepting a long lease, ask what can be tested at a smaller scale while still serving a buyer well.</p><div className="mt-6 grid gap-4 md:grid-cols-2">{[
+      ["Move the money in.", "For suitable work, agree a fair deposit or milestone payment in writing; only enter it as cash when collected."],
+      ["Move the money out.", "Ask about a smaller supplier batch or a rental slot instead of an upfront permanent setup."],
+      ["Move the promise.", "Offer a narrower delivery window, scope or geography that your current cash can support."],
+      ["Keep household needs visible.", "Business timing cannot quietly consume the money needed for living obligations."],
+    ].map(([title, copy], index) => <article className={card} key={title}><span className="text-sm font-bold text-blue-700">0{index + 1}</span><h3 className="mt-3 text-xl font-bold">{title}</h3><p className="mt-3 text-slate-600">{copy}</p></article>)}</div><p className="mt-6 text-slate-600">The calendar tells you what happens if those listed payments occur. It cannot confirm a sale, collection date, taxes, financing, future price or return rate. Keep a separate version with only money already received and bills contractually due.</p></div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Published ideas to inspect</h2><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{ideas.map(idea => <a className={card} href={`/idea/${idea.slug}`} key={idea.slug}><h3 className="text-xl font-bold">{idea.title}</h3><p className="mt-3 line-clamp-3 text-slate-600">{idea.hook || idea.summary}</p><span className="mt-4 inline-flex items-center gap-2 font-semibold text-blue-700">Read idea <ArrowRight size={17}/></span></a>)}</div></div></section>
+    <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Related categories</h2><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{related.map(category => <a className={card} href={`/category/${category.slug}`} key={category.slug}><h3 className="text-xl font-bold">{category.name}</h3><span className="mt-4 inline-flex items-center gap-2 font-semibold text-blue-700">Explore category <ArrowRight size={17}/></span></a>)}</div></div></section>
+    <SellerFaq title="Cash questions worth asking" faq={[
+      { q: "Is revenue the same as cash flow?", a: "No. A sale may be recorded before the money reaches your account. The dated balance matters when a bill is due." },
+      { q: "Should I include a promised advance?", a: "Make one scenario with the advance on the expected date and another without it. Until collected, it is an assumption, not available cash." },
+      { q: "Does this replace a formal forecast or accounting advice?", a: "No. It is a simple event map for a first decision. It omits taxes, financing, obligations not entered and complex accounting treatment. Use qualified advice for your actual business." },
+    ]} />
+    <section className="bg-blue-700 py-12 text-white lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Can you fund the first useful promise?</h2><p className="mt-3 max-w-3xl text-blue-100">Map your full startup commitments, then ask a real buyer to commit to a defined offer before expanding the fixed costs.</p><div className="mt-6 grid gap-4 sm:grid-cols-3">{[
+      ["Map all startup costs", "/startup-costs-india"], ["Find the first buyer", "/first-customer-india"], ["Browse published ideas", "/browse"],
+    ].map(([label, href]) => <a href={href} key={href} className="flex min-h-11 items-center justify-between rounded-xl bg-white p-4 font-semibold text-blue-800 hover:bg-blue-50">{label}<ArrowRight size={17}/></a>)}</div></div></section>
+  </V2Frame>;
 }
