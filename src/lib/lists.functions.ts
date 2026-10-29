@@ -29,6 +29,8 @@ export type ListPage = {
   howToChoose: string | null;
   faq: { q: string; a: string; href?: string }[];
   categoryName: string;
+  categorySlug?: string;
+  resources?: { guides: { label: string; href: string; note: string }[]; calculators: { label: string; href: string; note: string }[] };
   ideas: ListIdea[];
   siblings: { name: string; slug: string; count: number }[];
   totalIdeas: number;
@@ -128,7 +130,7 @@ export const getListPage = createServerFn({ method: "GET" })
     const s = sub as { code: string; category_code: string; name: string; slug: string; intro: string | null; how_to_choose: string | null; faq: unknown };
     const [{ data: ideas }, { data: cat }, { data: sibs }, { count: total }] = await Promise.all([
       client.from("ideas").select(IDEA_COLUMNS).eq("subcategory_code", s.code).eq("status", "published").order("position"),
-      client.from("categories").select("name").eq("code", s.category_code).maybeSingle(),
+      client.from("categories").select("name,slug").eq("code", s.category_code).maybeSingle(),
       client.from("subcategories").select("code,name,slug").eq("category_code", s.category_code).order("code"),
       client.from("ideas").select("code", { count: "exact", head: true }).eq("status", "published"),
     ]);
@@ -141,6 +143,11 @@ export const getListPage = createServerFn({ method: "GET" })
       for (const r of (rows ?? []) as { subcategory_code: string }[]) sibCounts[r.subcategory_code] = (sibCounts[r.subcategory_code] ?? 0) + 1;
     }
     const faq = faqEntries(s.faq);
+    const [{ STARTUP_GUIDES }, { READY_CALCULATORS }] = await Promise.all([import('./guides-data'), import('./calculators')]);
+    const terms = `${s.name} ${(cat as {name:string}|null)?.name ?? ''}`.toLocaleLowerCase().split(/\W+/).filter(term=>term.length>3 && !['ideas','business'].includes(term));
+    const relevance = (text: string) => terms.reduce((score,term)=>score+(text.toLocaleLowerCase().includes(term)?1:0),0);
+    const guides = [...STARTUP_GUIDES].sort((a,b)=>relevance(b.title+' '+b.description)-relevance(a.title+' '+a.description)).slice(0,4).map(guide=>({label:guide.title,href:`/startup-guides/${guide.slug}`,note:guide.description}));
+    const calculators = READY_CALCULATORS.slice(0,4).map(tool=>({label:tool.title,href:`/calculator/${tool.slug}`,note:tool.answers}));
     return {
       code: s.code,
       name: s.name,
@@ -149,6 +156,8 @@ export const getListPage = createServerFn({ method: "GET" })
       howToChoose: s.how_to_choose,
       faq: uniqueFaqBySource(faq, list.map((idea) => faqEntries(idea.faq).map((entry) => ({ ...entry, href: `/idea/${idea.slug}` })))),
       categoryName: (cat as { name: string } | null)?.name ?? "",
+      categorySlug: (cat as { slug: string } | null)?.slug,
+      resources: {guides,calculators},
       ideas: list,
       siblings: ((sibs ?? []) as { code: string; name: string; slug: string }[])
         .filter((x) => x.code !== s.code && (sibCounts[x.code] ?? 0) > 0)

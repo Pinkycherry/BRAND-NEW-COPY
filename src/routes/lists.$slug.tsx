@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 import { V2Frame } from "@/components/v2/frame";
+import { ListReportPromo, ListCitation, ListDeeperAnswers, ListBeforeBuild, ListRelatedResources, ListRecentResearch } from "@/components/v2/list-detail-sections";
 import { getListPage, type ListIdea, type ListPage } from "@/lib/lists.functions";
 
 export const Route = createFileRoute("/lists/$slug")({
@@ -318,7 +319,7 @@ export function ListPageBody({ p, categorySlug }: { p: ListPage; categorySlug?: 
   const d = latest ? new Date(latest) : new Date();
   const updated = d.toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" });
   const month = d.toLocaleDateString("en-IN", { month: "short", year: "numeric" });
-  const title = `${p.name} for ${d.getFullYear()}`;
+  const title = p.name;
   const words = p.ideas.reduce((n, i) => n + [i.summary, i.who_pays_you, i.how_money_comes, i.verdict].join(" ").split(/\s+/).length, 0);
   const top = p.ideas.slice(0, 5);
   const more = p.ideas.slice(5);
@@ -347,38 +348,43 @@ export function ListPageBody({ p, categorySlug }: { p: ListPage; categorySlug?: 
         </div>
       </div>
 
-      <article className="pt-6 pb-8 px-4">
+      <article className="pt-6 pb-8 px-4 hover:!translate-y-0 hover:!shadow-none">
         <div className="container mx-auto max-w-5xl">
           <Head p={p} title={title} words={words} updated={updated} />
           <Tldr p={p} title={title} month={month} />
           <Intro p={p} />
+          <ListReportPromo p={p}/>
           <Comparison ideas={top} />
-          <div className="space-y-8 mb-12">
+          <section className="space-y-8 mb-12">
             <h2 className="text-2xl font-bold flex items-center gap-2">
               Featured {p.name.toLowerCase()}
             </h2>
             {top.map((i, n) => (
               <TopCard key={i.slug} idea={i} n={n + 1} />
             ))}
-          </div>
+          </section>
           {more.length > 0 && (
-            <div className="space-y-6 mb-12">
+            <section className="space-y-6 mb-12">
               <h2 className="text-2xl font-bold">More Options</h2>
               {more.map((i, n) => (
                 <MoreCard key={i.slug} idea={i} n={n + 6} />
               ))}
-            </div>
+            </section>
           )}
+          <ListCitation p={p} updated={updated}/>
           <Faq faq={p.faq} />
+          <ListDeeperAnswers p={p}/>
           <RelatedLists p={p} />
+          <ListBeforeBuild p={p}/>
           <Conclusion p={p} />
         </div>
       </article>
-      <section className="py-12 lg:py-16"><div className="mx-auto max-w-6xl px-4 md:px-6"><h2 className="text-2xl font-bold">Related resources</h2><div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{[["Browse all idea lists","/lists"],["Startup cost calculator","/calculator/startup-cost"],["Business idea validation guide","/startup-idea-validation"],["Compare two ideas","/startup-idea-comparison"],["Explore all tools","/tools"]].map(([t,h])=><a key={h} href={h} className="rounded-xl border bg-card p-4 font-semibold hover:border-primary/50">{t} <ArrowRight size={16} className="ml-1 inline text-primary"/></a>)}</div><h2 className="mt-10 text-2xl font-bold">People also search for</h2><div className="mt-4 flex flex-wrap gap-2">{p.siblings.slice(0,8).map(s=><a key={s.slug} href={`/lists/${s.slug}`} className="rounded-full border bg-card px-4 py-2 text-sm hover:border-primary/50">{s.name}</a>)}</div></div></section>
+      <ListRelatedResources p={p}/>
       <div className="sr-only">
         <h2>Quick Answer: {title}</h2>
         <p>{p.intro}</p>
       </div>
+      <ListRecentResearch p={p}/>
     </V2Frame>
   );
 }
