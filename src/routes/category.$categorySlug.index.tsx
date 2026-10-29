@@ -1,5 +1,5 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
-import { ArrowRight, ChevronRight, House, Library } from "lucide-react";
+import { ArrowRight, ChevronRight, House, Library, List } from "lucide-react";
 
 import { V2Frame } from "@/components/v2/frame";
 import { getCategoryPage } from "@/lib/category-page.functions";
