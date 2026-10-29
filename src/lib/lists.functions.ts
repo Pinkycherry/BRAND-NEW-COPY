@@ -38,7 +38,7 @@ export type ListPage = {
 
 export type ListsHub = {
   total: number;
-  categories: { code: string; name: string; subs: { code: string; name: string; slug: string; count: number }[] }[];
+  categories: { code: string; name: string; slug: string; subs: { code: string; name: string; slug: string; count: number }[] }[];
 };
 
 const IDEA_COLUMNS =
@@ -80,18 +80,29 @@ export function uniqueFaqBySource(primary: { q: string; a: string; href?: string
 /** Published idea counts per subcategory code, read in pages of 1,000. */
 async function subcategoryCounts(client: NonNullable<ReturnType<typeof dbOrNull>>) {
   const counts: Record<string, number> = {};
-  for (let from = 0; from < 100000; from += 1000) {
+  for (let from = 0; ; from += 1000) {
     const { data, error } = await client
       .from("ideas")
       .select("subcategory_code")
       .eq("status", "published")
       .order("code", { ascending: true })
       .range(from, from + 999);
-    if (error || !data) break;
+    if (error) throw error;
+    if (!data) break;
     for (const r of data as { subcategory_code: string }[]) counts[r.subcategory_code] = (counts[r.subcategory_code] ?? 0) + 1;
     if (data.length < 1000) break;
   }
   return counts;
+}
+
+async function catalogPages<T>(client: NonNullable<ReturnType<typeof dbOrNull>>, table: string, columns: string): Promise<T[]> {
+  const rows: T[] = [];
+  for (let from=0;;from+=1000) {
+    const {data,error}=await client.from(table).select(columns).order('code').range(from,from+999);
+    if(error)throw error;
+    rows.push(...((data??[]) as unknown as T[]));
+    if(!data || data.length<1000)return rows;
+  }
 }
 
 /** Every category that has published ideas, with its subcategories and counts. */
@@ -99,12 +110,12 @@ export const getListsHub = createServerFn({ method: "GET" }).handler(async (): P
   const client = dbOrNull();
   if (!client) return { total: 0, categories: [] };
   const counts = await subcategoryCounts(client);
-  const [{ data: cats }, { data: subs }] = await Promise.all([
-    client.from("categories").select("code,name").order("code"),
-    client.from("subcategories").select("code,category_code,name,slug").order("code"),
+  const [cats, subs] = await Promise.all([
+    catalogPages<{code:string;name:string;slug:string}>(client,'categories','code,name,slug'),
+    catalogPages<{code:string;category_code:string;name:string;slug:string}>(client,'subcategories','code,category_code,name,slug'),
   ]);
   const byCat = new Map<string, ListsHub["categories"][number]>();
-  for (const c of (cats ?? []) as { code: string; name: string }[]) byCat.set(c.code, { code: c.code, name: c.name, subs: [] });
+  for (const c of cats) byCat.set(c.code, { code: c.code, name: c.name, slug: c.slug, subs: [] });
   for (const s of (subs ?? []) as { code: string; category_code: string; name: string; slug: string }[]) {
     const n = counts[s.code] ?? 0;
     if (n > 0) byCat.get(s.category_code)?.subs.push({ code: s.code, name: s.name, slug: s.slug, count: n });
