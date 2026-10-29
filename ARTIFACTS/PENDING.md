@@ -193,3 +193,10 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - The unused static list component has no importer and contains unsupported market claims and placeholder anchors. Remove it rather than retain unreachable seller content. Verify `/lists/<slug>` still renders after main deployment.
 ### 29/10/2026 00:05 IST — Subcategory route shared list body
 - Data mapping uses the taxonomy code to ensure the subcategory slug matches the published list row. This changes the subcategory route and exports the existing list body from `/lists/<slug>`. Check a published subcategory live and its breadcrumb/idea links after push.
+
+### 2026-10-30 — Pinky 2 pivot-or-stop review (implementation verification pending)
+- Scoped target: `/business-idea-pivot-or-stop`.
+- Source inspection found the route still used `GlassShell` and legacy `gl-breadcrumb`, `gh-*`, and `ps-*` styling. It declared cash-related state but did not render a working calculator; the checklist panels were explanatory content rather than inputs.
+- Research/hypothesis: use the existing seller `V2Frame`, a descriptive single H1, a responsive split hero with original guide artwork, a live three-field budget boundary check, four selectable diagnostic patterns, four non-prescriptive outcomes, contextual links to existing guides/tools and the shared one-open-at-a-time `SellerFaq`. Avoid shared CSS and data contracts.
+- Sources: Google Search Central people-first content guidance (https://developers.google.com/search/docs/fundamentals/creating-helpful-content) and NN/g information scent (https://www.nngroup.com/articles/information-scent/). The current live route could not be fetched by the available browser tool before editing, so before/after live screenshots remain an evidence gate, not a claim.
+- Do not mark this page complete until the main commit's Vercel deployment, HTTP/SSR, title/robots metadata, image, calculator behavior, destination links, desktop layout and 360/390px overflow are verified.
