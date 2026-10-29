@@ -808,3 +808,11 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Rebuilt shared TopCard/MoreCard on category, subcategory and focused-list routes: neutral white/slate surfaces; restrained blue/amber semantics; three actions Read full idea, Add to compare, Validate this idea. The validation action anchors to the existing idea detail validation section. Source-only modules render only when data exists.
 - Added fixed, responsive global tray in V2Frame for routes without an inline shortlist: titles/count, remove-one, Clear all and Compare selected/Add one more. Added safe-area positioning and bottom clearance; existing inline-shortlist routes disable the global duplicate.
 - No local build or genuine screenshot captured. The template-escape repair commit's Vercel check succeeded; this page edit still needs its own Vercel/live check and phone validation. No production DB rows/schema or seller files changed.
+
+
+## 2026-10-30 05:14:40 IST — Screenshot-led batch, completion 3/5: Browse idea actions and visible shortlist
+- Before: https://bbinewcopy.vercel.app/browse
+- After: https://bbinewcopy.vercel.app/browse
+- Enabled the shared V2Frame compare tray on Browse. It follows scrolling and filter changes and shows the selected titles/count, remove-one, Clear all and Compare selected. Removed the old inline shortlist panel that appeared only after the idea table, which made the selected ideas hard to see from the picker.
+- Added explicit Read full idea, Add to compare, and Validate this idea actions to the top picker cards and each published-record row. Validate links to the idea details' #idea-validate section. Existing filters/query remain unchanged.
+- No API integration or API-key handling built; founder explicitly reserved that as a later decision. No local screenshot yet; Vercel and mobile QA are pending.

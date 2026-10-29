@@ -156,3 +156,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Shared TopCard/MoreCard renderer used by category, subcategory and focused-list routes now has neutral surfaces and three actions per idea: Read full idea, Add to compare, Validate this idea (links to the detail page validation section). Conditional sections only render when source values exist.
 - Added global comparison tray in V2Frame for routes without their own shortlist panel: all selected titles, remove one, Clear all and Compare selected. Mobile uses a two-column tray and safe-area bottom offset; main content has reserved space while visible. Browse, Blueprints, Product and Comparison hide the global tray where inline panels already exist.
 - Vercel check for the preceding comparison edit failed because template-literal escapes remained in the generated source; a repair commit is made and its fresh Vercel check succeeded. This second edit must also pass Vercel and live layout checks.
+
+
+## 2026-10-30 05:14:40 IST — Founder clarification: BYOK/API is not implementation scope
+- OpenRouter API mode, user API-key entry/storage, and in-platform inference are future-option planning only. No key-entry UX, credential schema, vault/API proxy, or API inference code should be implemented until the founder decides after the deep-link workflow is complete.
+- The active work continues with deep-link handoff, list actions, mobile shortlist continuity, validation prompt UX, India-focused tools and sign-in/route policy. Keep future API feasibility documented, not deployed.
+
+## 2026-10-30 05:14:40 IST — Screenshot-led batch, page edit 3/5: Browse interaction
+- Browse now uses the shared persistent tray rather than placing its only full shortlist block far below the idea picker/table. The tray is available during search/filter and scroll. Removed the duplicate local shortlist panel.
+- Top picker cards and table rows now have explicit Read full idea, Add to compare and Validate this idea controls. Validate anchors to the detail page validation section.

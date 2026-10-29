@@ -276,3 +276,10 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Category/list/subcategory cards now contain Read full idea, Add to compare and Validate this idea with neutral styling. Verify on /category/footwear-and-bag-business-ideas, one /lists/:slug route and one /category/:category/:subcategory route after deploy.
 - Global V2Frame tray shows selected titles, remove-one, Clear all and Compare selected; hidden on Browse/Blueprints/Product/Comparison where inline shortlist panels already exist. Confirm it doesn't cover controls/footer at 360px/390px.
 - Previous comparison edit failed Vercel because generated template-literal escaping remained; repair commit now reports success. Validate this page edit independently before proceeding to page edit 3/5.
+
+
+### 2026-10-30 05:14:40 IST — Browse comparison visibility and three actions, verification open
+- Browse uses the shared sticky tray instead of a duplicated shortlist panel hidden below the table. Verify tray stays clear and usable while searching, filtering and scrolling at 360px/390px and desktop.
+- Both picker cards and table rows have Read full idea, Add to compare, and Validate this idea. Validate must land at the detail validation section.
+- OpenRouter/user API-key integration is explicitly future planning only; do not implement keys, storage, proxy or inference until founder makes the final choice. Current product work remains deep-link-based.
+- Vercel and visual QA for this edit are pending; no screenshot claimed.

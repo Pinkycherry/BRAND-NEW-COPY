@@ -182,3 +182,12 @@ The external prompt should be explicit that:
 ## 2026-10-30 05:12:16 IST — Screenshot-led batch, page edit 2/5: Shared list cards and travelling compare tray
 - Rebuilt the shared TopCard/MoreCard system used by category, subcategory and focused-list routes. The former saturated positive/risk panels are replaced with calm white/slate surfaces and restrained blue/amber cues. Every published idea card exposes Read full idea, Add to compare, and Validate this idea.
 - Added one global comparison tray in V2Frame for routes without an inline shortlist panel: visible selected titles/count, remove-one, Clear all, and Compare selected/Add one more. It uses mobile-safe bottom positioning and page-bottom clearance. Routes that already show their own shortlist hide the global tray to avoid duplicate controls.
+
+
+## 2026-10-30 05:14:40 IST — Founder clarification: API keys remain planning-only
+- Do not implement OpenRouter BYOK, direct-provider API keys, credential storage, or in-platform model calls during this rebuild batch. No new key table, secret storage, API proxy, key entry UI or model execution is authorized now.
+- Keep the architecture notes for possible future expansion only. The active product work remains the user-owned AI deep-link flow, website interactions, account/route flow, India tools, mobile experience and source-backed content. A later business decision will choose whether API mode is added.
+
+## 2026-10-30 05:14:40 IST — Screenshot-led batch, page edit 3/5: Browse ideas stays with the shortlist
+- Enabled the shared comparison tray on Browse, removed the duplicated deep-page shortlist panel, and added three explicit actions to the picker cards and published idea table: Read full idea, Add to compare, Validate this idea. The fixed tray keeps selected titles/count, remove-one, Clear all and Compare selected visible while filtering or scrolling.
+- This fixes the specific browse interaction where the user added ideas near the top but had to scroll to discover the full saved selection.
