@@ -18,7 +18,7 @@ export function ShortlistToggle({ idea, compact = false, className = "" }: { ide
       className={`inline-flex min-h-10 items-center justify-center gap-2 rounded-xl border px-3 py-2 font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 ${compact ? "text-xs" : "text-sm"} ${selected ? "border-blue-300 bg-blue-50 text-blue-900" : "border-slate-300 bg-white text-slate-800 hover:border-blue-500"}`}
     >
       {selected ? <Check size={16}/> : <Plus size={16}/>}
-      {selected ? "Saved to shortlist" : "Add to shortlist"}
+      {selected ? "Added to compare" : "Add to compare"}
     </button>
     {notice && <p role="status" className="mt-2 text-xs leading-5 text-slate-600">{notice}</p>}
   </div>;

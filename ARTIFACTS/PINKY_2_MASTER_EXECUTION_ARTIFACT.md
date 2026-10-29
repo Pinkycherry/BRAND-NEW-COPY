@@ -150,3 +150,9 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 ## 2026-10-30 05:08:07 IST — Repair following failed Vercel check
 - The first comparison/handoff edit triggered a failed Vercel status. A static source review found raw-string generation had left backslashes before TypeScript template literal delimiters/interpolations in `buildProviderHandoffPrompt` and the comparison route. Removed those literal escapes from the affected TypeScript source.
 - This is a corrective commit for page edit 1/5, not a new page edit. Keep the page-1 deployment and visual QA open until Vercel returns success and the rendered route is checked.
+
+
+## 2026-10-30 05:12:16 IST — Screenshot-led batch, page edit 2/5: List cards and comparison tray
+- Shared TopCard/MoreCard renderer used by category, subcategory and focused-list routes now has neutral surfaces and three actions per idea: Read full idea, Add to compare, Validate this idea (links to the detail page validation section). Conditional sections only render when source values exist.
+- Added global comparison tray in V2Frame for routes without their own shortlist panel: all selected titles, remove one, Clear all and Compare selected. Mobile uses a two-column tray and safe-area bottom offset; main content has reserved space while visible. Browse, Blueprints, Product and Comparison hide the global tray where inline panels already exist.
+- Vercel check for the preceding comparison edit failed because template-literal escapes remained in the generated source; a repair commit is made and its fresh Vercel check succeeded. This second edit must also pass Vercel and live layout checks.

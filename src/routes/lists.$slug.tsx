@@ -5,17 +5,17 @@ import {
   ArrowRight,
   ChevronRight,
   CircleCheck,
-  CircleX,
   House,
   Lightbulb,
   Star,
-  ThumbsDown,
-  ThumbsUp,
+  TriangleAlert,
   Wallet,
   Zap,
 } from "lucide-react";
 
 import { V2Frame } from "@/components/v2/frame";
+import { ShortlistToggle } from "@/components/founder-workspace/shortlist-toggle";
+import type { WorkspaceIdea } from "@/lib/founder-workspace";
 import { ListReportPromo, ListCitation, ListDeeperAnswers, ListBeforeBuild, ListRelatedResources, ListRecentResearch } from "@/components/v2/list-detail-sections";
 import { getListPage, type ListIdea, type ListPage } from "@/lib/lists.functions";
 
@@ -150,130 +150,67 @@ function Comparison({ ideas }: { ideas: ListIdea[] }) {
   );
 }
 
+function asWorkspaceIdea(idea: ListIdea): WorkspaceIdea {
+  return {
+    slug: idea.slug,
+    title: idea.title,
+    source: "published",
+    hook: idea.hook || undefined,
+    summary: idea.summary || undefined,
+    description: idea.summary || idea.hook || undefined,
+    investmentBand: idea.investment_band || undefined,
+    timeNeeded: idea.time_needed || undefined,
+    skillLevel: idea.skill_level || undefined,
+    targetCustomer: idea.who_pays_you || undefined,
+    revenueModel: idea.how_money_comes || undefined,
+    risks: idea.what_hurts || undefined,
+  };
+}
+
+function ListIdeaActions({ idea, readHref }: { idea: ListIdea; readHref?: string }) {
+  return <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-3">
+    <a href={readHref || ("/idea/" + idea.slug)} className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl bg-blue-700 px-3 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"><Lightbulb size={15}/>Read full idea</a>
+    <ShortlistToggle idea={asWorkspaceIdea(idea)} compact className="w-full [&>button]:w-full"/>
+    <a href={"/idea/" + idea.slug + "#idea-validate"} className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-blue-500 hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"><Star size={15}/>Validate this idea</a>
+  </div>;
+}
+
 export function TopCard({ idea, actionHref, showAction = true }: { idea: ListIdea; n?: number; actionHref?: string; showAction?: boolean }) {
   const need = points(idea.what_you_need, 4);
   const hurts = points(idea.what_hurts, 3);
-  return (
-    <div className="rounded-lg border bg-card text-card-foreground premium-card overflow-hidden border-border/60 shadow-sm hover:shadow-md transition-shadow">
-      <div className="p-0">
-        <div className="relative flex items-start gap-3 sm:gap-5 p-4 sm:p-6 bg-card border-b border-border/60">
-          <div className="flex-1 min-w-0">
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-1.5">
-              <h3 className="text-lg sm:text-2xl font-bold text-foreground break-words leading-tight">
-                {idea.title}
-              </h3>
-            </div>
-            <p className="text-sm text-muted-foreground break-words">
-              <span className="font-semibold text-foreground/80">Best for:</span> {sentences(idea.who_pays_you, 1)}
-            </p>
-            <p className="mt-2 text-sm sm:hidden">
-              <span className="text-muted-foreground">Money to start: </span>
-              <span className="font-bold text-foreground">{band(idea)}</span>
-            </p>
-          </div>
-          <div className="hidden sm:flex flex-col items-end shrink-0 rounded-lg border border-border/70 bg-muted/40 px-3 py-2">
-            <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">Money to start</p>
-            <p className="font-bold text-base text-foreground leading-tight">{band(idea)}</p>
-          </div>
-        </div>
-        <div className="p-6">
-          <div className="mb-6">
-            <p className="text-muted-foreground leading-relaxed">
-              <span>{idea.summary ?? idea.hook}</span>
-            </p>
-            <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-4">
-              <div className="rounded-lg bg-primary/5 border border-primary/15 px-3 py-2">
-                <div className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-primary/80 mb-0.5">
-                  <Wallet className="h-3.5 w-3.5" />
-                  Revenue
-                </div>
-                <div className="text-sm text-foreground leading-snug">{sentences(idea.how_money_comes, 1)}</div>
-              </div>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-2 gap-4 mb-6">
-            <div className="bg-green-50 dark:bg-green-950/20 rounded-xl p-4 border border-green-100 dark:border-green-900">
-              <h4 className="font-semibold flex items-center gap-2 mb-3 text-green-700 dark:text-green-400">
-                <ThumbsUp className="h-4 w-4" />
-                What you need
-              </h4>
-              <ul className="space-y-2">
-                {need.map((t) => (
-                  <li key={t} className="flex items-start gap-2 text-sm">
-                    <CircleCheck className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-red-50 dark:bg-red-950/20 rounded-xl p-4 border border-red-100 dark:border-red-900">
-              <h4 className="font-semibold flex items-center gap-2 mb-3 text-red-700 dark:text-red-400">
-                <ThumbsDown className="h-4 w-4" />
-                What hurts
-              </h4>
-              <ul className="space-y-2">
-                {hurts.map((t) => (
-                  <li key={t} className="flex items-start gap-2 text-sm">
-                    <CircleX className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="rounded-xl border-l-4 border-primary bg-primary/5 px-4 py-3">
-            <p className="text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Our Verdict</p>
-            <p className="text-sm text-foreground/85 leading-relaxed">{sentences(idea.verdict, 2)}</p>
-          </div>
-          {showAction && <div className="mt-5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
-            <a
-              href={actionHref ?? `/idea/${idea.slug}`}
-              className={`${BTN} bg-slate-900 hover:bg-slate-700 h-12 rounded-lg px-6 text-base gap-2 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-md hover:shadow-lg hover:scale-[1.02] transition-all w-full sm:w-auto min-h-[44px]`}
-            >
-              <Lightbulb className="h-4 w-4" />
-              Read this idea
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>}
-        </div>
+  const summary = idea.summary || idea.hook || "";
+  return <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:border-slate-300 hover:shadow-md">
+    <header className="flex min-w-0 flex-col gap-3 border-b border-slate-100 p-4 sm:flex-row sm:items-start sm:justify-between sm:p-5">
+      <div className="min-w-0 flex-1">
+        <h3 className="break-words text-lg font-bold leading-snug text-slate-950 sm:text-xl">{idea.title}</h3>
+        {idea.who_pays_you && <p className="mt-2 text-sm leading-5 text-slate-600"><strong className="font-semibold text-slate-800">Best for:</strong> {sentences(idea.who_pays_you, 1)}</p>}
       </div>
+      {band(idea) && <span className="inline-flex w-fit shrink-0 items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold text-slate-700 sm:max-w-48 sm:text-right">Money to start: {band(idea)}</span>}
+    </header>
+    <div className="p-4 sm:p-5">
+      {summary && <p className="break-words text-sm leading-6 text-slate-600 sm:text-base">{summary}</p>}
+      {idea.how_money_comes && <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-3"><div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-blue-800"><Wallet size={14}/>Revenue model</div><p className="mt-1 text-sm leading-5 text-slate-700">{sentences(idea.how_money_comes, 1)}</p></div>}
+      {(need.length > 0 || hurts.length > 0) && <div className="mt-3 grid gap-3 sm:grid-cols-2">
+        {need.length > 0 && <section className="rounded-xl border border-slate-200 bg-slate-50 p-3"><h4 className="mb-2 flex items-center gap-2 text-sm font-bold text-slate-800"><CircleCheck size={15} className="text-blue-700"/>What you need</h4><ul className="space-y-1.5 text-sm leading-5 text-slate-600">{need.map((text,index) => <li key={index} className="flex items-start gap-2"><span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600"/><span>{text}</span></li>)}</ul></section>}
+        {hurts.length > 0 && <section className="rounded-xl border border-slate-200 bg-slate-50 p-3"><h4 className="mb-2 flex items-center gap-2 text-sm font-bold text-slate-800"><TriangleAlert size={15} className="text-amber-700"/>What can go wrong</h4><ul className="space-y-1.5 text-sm leading-5 text-slate-600">{hurts.map((text,index) => <li key={index} className="flex items-start gap-2"><span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-600"/><span>{text}</span></li>)}</ul></section>}
+      </div>}
+      {idea.verdict && <div className="mt-3 rounded-xl border-l-4 border-blue-500 bg-blue-50/60 px-4 py-3"><p className="text-[10px] font-bold uppercase tracking-wide text-blue-800">Editorial view</p><p className="mt-1 text-sm leading-5 text-slate-700">{sentences(idea.verdict, 2)}</p></div>}
+      {showAction && <ListIdeaActions idea={idea} readHref={actionHref}/>}
     </div>
-  );
+  </article>;
 }
 
 function MoreCard({ idea }: { idea: ListIdea; n?: number }) {
-  return (
-    <div className="rounded-lg border bg-card text-card-foreground shadow-sm premium-card">
-      <div className="p-6">
-        <div className="flex items-start gap-4">
-          <div className="flex-1 min-w-0">
-            <h3 className="text-xl font-bold mb-2">
-              {idea.title}
-            </h3>
-            <p className="text-muted-foreground">
-              <span>{idea.summary ?? idea.hook}</span>
-            </p>
-            <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-4">
-              <div className="rounded-lg bg-primary/5 border border-primary/15 px-3 py-2">
-                <div className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-primary/80 mb-0.5">
-                  <Wallet className="h-3.5 w-3.5" />
-                  Revenue
-                </div>
-                <div className="text-sm text-foreground leading-snug">{sentences(idea.how_money_comes, 1)}</div>
-              </div>
-            </div>
-          </div>
-          <a
-            href={`/idea/${idea.slug}`}
-            className={`${BTN} border bg-white hover:border-slate-400 shadow-sm h-10 rounded-lg px-3 text-sm flex-shrink-0 gap-1.5 text-primary border-primary/30 hover:bg-primary/10 min-h-[40px]`}
-          >
-            <Lightbulb className="h-4 w-4" />
-            <span className="hidden sm:inline">Read idea</span>
-          </a>
-        </div>
-      </div>
+  const summary = idea.summary || idea.hook || "";
+  return <article className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-slate-300 hover:shadow-md sm:p-5">
+    <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+      <h3 className="min-w-0 break-words text-base font-bold leading-snug text-slate-950 sm:text-lg">{idea.title}</h3>
+      {band(idea) && <span className="w-fit shrink-0 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700">{band(idea)}</span>}
     </div>
-  );
+    {summary && <p className="mt-2 text-sm leading-6 text-slate-600">{summary}</p>}
+    {idea.how_money_comes && <p className="mt-3 rounded-lg bg-slate-50 p-3 text-sm leading-5 text-slate-600"><strong className="text-slate-800">Revenue:</strong> {sentences(idea.how_money_comes, 1)}</p>}
+    <ListIdeaActions idea={idea}/>
+  </article>;
 }
 
 function RelatedLists({ p }: { p: ListPage }) {

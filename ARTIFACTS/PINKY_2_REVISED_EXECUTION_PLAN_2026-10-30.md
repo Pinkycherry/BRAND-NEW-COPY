@@ -177,3 +177,8 @@ The external prompt should be explicit that:
 - OpenRouter has an OpenAI-compatible endpoint and one key for many models; its API key creation docs say the plaintext key is returned only once. Key-loss/recovery and secure connection flows are therefore explicit requirements. References: https://openrouter.ai/developers and https://openrouter.ai/docs/api/api-reference/api-keys/create-a-new-api-key.
 - Device cap: one active session is available through Supabase session controls on eligible plans; exactly two active devices needs custom session/device tracking and enforcement. Do not promise a two-device limit based only on comparing emails.
 - Auth gate and BYOK need a dedicated implementation/verification batch before public rollout. This planning note does not modify auth settings or production database.
+
+
+## 2026-10-30 05:12:16 IST — Screenshot-led batch, page edit 2/5: Shared list cards and travelling compare tray
+- Rebuilt the shared TopCard/MoreCard system used by category, subcategory and focused-list routes. The former saturated positive/risk panels are replaced with calm white/slate surfaces and restrained blue/amber cues. Every published idea card exposes Read full idea, Add to compare, and Validate this idea.
+- Added one global comparison tray in V2Frame for routes without an inline shortlist panel: visible selected titles/count, remove-one, Clear all, and Compare selected/Add one more. It uses mobile-safe bottom positioning and page-bottom clearance. Routes that already show their own shortlist hide the global tray to avoid duplicate controls.

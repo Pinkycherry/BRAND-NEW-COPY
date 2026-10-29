@@ -800,3 +800,11 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Vercel check for the comparison edit was failure. Root cause identified by source inspection: a raw-string code-generation step wrote literal backslashes before TypeScript template delimiters/interpolations in `src/lib/founder-workspace.ts` and `src/routes/startup-idea-comparison.tsx`.
 - Removed only the unintended escaping. A source scan confirms no remaining `\\`` or `\\${` sequences in those two files. No data/schema/seller assets changed.
 - This repair must pass a fresh Vercel check before the next page edit proceeds. No live screenshot was captured.
+
+
+## 2026-10-30 05:12:16 IST — Screenshot-led batch, completion 2/5: List cards and comparison tray
+- Before: https://bbinewcopy.vercel.app/category/footwear-and-bag-business-ideas
+- After: https://bbinewcopy.vercel.app/category/footwear-and-bag-business-ideas
+- Rebuilt shared TopCard/MoreCard on category, subcategory and focused-list routes: neutral white/slate surfaces; restrained blue/amber semantics; three actions Read full idea, Add to compare, Validate this idea. The validation action anchors to the existing idea detail validation section. Source-only modules render only when data exists.
+- Added fixed, responsive global tray in V2Frame for routes without an inline shortlist: titles/count, remove-one, Clear all and Compare selected/Add one more. Added safe-area positioning and bottom clearance; existing inline-shortlist routes disable the global duplicate.
+- No local build or genuine screenshot captured. The template-escape repair commit's Vercel check succeeded; this page edit still needs its own Vercel/live check and phone validation. No production DB rows/schema or seller files changed.

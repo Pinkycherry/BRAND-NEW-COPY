@@ -114,6 +114,6 @@ export function GlassFooter() {
   );
 }
 
-export function GlassShell({ children }: { children: ReactNode }) {
-  return <V2Frame><div className="glass-home v2-surface"><a className="gh-skip" href="#main">Skip to content</a><div aria-hidden="true" style={{ height: "6rem" }} /><div id="main">{children}</div></div></V2Frame>;
+export function GlassShell({ children, showShortlistTray = true }: { children: ReactNode; showShortlistTray?: boolean }) {
+  return <V2Frame showShortlistTray={showShortlistTray}><div className="glass-home v2-surface"><a className="gh-skip" href="#main">Skip to content</a><div aria-hidden="true" style={{ height: "6rem" }} /><div id="main">{children}</div></div></V2Frame>;
 }

@@ -105,7 +105,7 @@ function ComparisonPage() {
       webPageSchema({ path: "/startup-idea-comparison", name: "Compare Two Startup Ideas in India", description: "Compare selected published business ideas using real source fields and the founder's evidence notes." }),
       breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Startup idea comparison", path: "/startup-idea-comparison" }]),
     ]} />
-    <GlassShell><div className="ic-page">
+    <GlassShell showShortlistTray={false}><div className="ic-page">
       <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><span>Startup idea comparison</span></nav>
       <V2PageHero className="ic-hero"><div><p className="gh-eyebrow">TWO TO FOUR IDEAS · ONE REAL LIFE</p><h1>Which idea deserves <em>your next Tuesday?</em></h1><p>Compare actual published details, then research what the source does not tell you. This page does not invent a winner or score.</p><a href="#compare-board" className="gh-button gh-button-primary">Compare my saved ideas <ArrowRight size={17}/></a></div><aside><strong>Your shortlist travels with you on this browser.</strong><p className="mt-2">Add published ideas from Browse or Blueprints. Your selection is stored locally.</p><p className="mt-3 font-semibold">{shortlist.length} of 4 ideas saved</p></aside></V2PageHero>
 

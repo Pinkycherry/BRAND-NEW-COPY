@@ -72,7 +72,7 @@ function ProductPage() {
   const prompt = buildFounderPrompt(task, promptIdeas, workspace.context) +
     (extraNotes.trim() ? "\n\nEXTRA FOUNDER CONTEXT (user-written):\n" + extraNotes.trim().slice(0, 1600) : "");
 
-  return <V2Frame active="/product">
+  return <V2Frame active="/product" showShortlistTray={false}>
     <div className="bg-slate-50 pt-24 lg:pt-28">
       <nav className={`${wrap} flex flex-wrap items-center gap-2 py-3 text-sm text-slate-600`} aria-label="Breadcrumb">
         <a href="/" className="hover:text-blue-700">Home</a><ChevronRight size={15}/><span>Validation workbench</span>

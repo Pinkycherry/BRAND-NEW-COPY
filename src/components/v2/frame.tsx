@@ -4,6 +4,7 @@ import { ArrowRight, BookOpen, Calculator, ChartNoAxesCombined, ChevronDown, Cli
 import { TAXONOMY } from "@/data/taxonomy";
 
 import "./v2.css";
+import { useFounderWorkspace, removeShortlistIdea, clearShortlist, MAX_SHORTLIST } from "@/lib/founder-workspace";
 
 /**
  * Header and footer of the purchased page architecture, converted to React.
@@ -448,12 +449,41 @@ export function Footer() {
   );
 }
 
-export function V2Frame({ active, children }: { active?: string | undefined; children: ReactNode }) {
+function FounderShortlistTray({ shortlist }: { shortlist: ReturnType<typeof useFounderWorkspace>["shortlist"] }) {
+  if (!shortlist.length) return null;
+  return <aside
+    aria-label="Your comparison shortlist"
+    className="fixed inset-x-2 z-[70] mx-auto w-auto max-w-5xl overflow-hidden rounded-2xl border border-slate-200 bg-white/95 shadow-[0_18px_55px_rgba(15,23,42,0.18)] backdrop-blur-xl sm:inset-x-4"
+    style={{ bottom: "calc(0.5rem + env(safe-area-inset-bottom))" }}
+  >
+    <div className="p-3 sm:p-4">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="min-w-0"><h2 className="text-sm font-bold text-slate-950 sm:text-base">Your comparison</h2><p className="text-xs text-slate-600">{shortlist.length} of {MAX_SHORTLIST} ideas selected · saved on this browser</p></div>
+        <div className="flex shrink-0 gap-2">
+          <button type="button" onClick={clearShortlist} className="inline-flex min-h-9 items-center rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-700 hover:border-slate-500 sm:text-sm">Clear all</button>
+          <a href={shortlist.length >= 2 ? "/startup-idea-comparison" : "/browse"} aria-disabled={shortlist.length < 2} className={"inline-flex min-h-9 items-center justify-center rounded-lg px-3 py-2 text-xs font-semibold sm:text-sm " + (shortlist.length >= 2 ? "bg-blue-700 text-white hover:bg-blue-800" : "border border-blue-200 bg-blue-50 text-blue-800")}>{shortlist.length >= 2 ? "Compare selected" : "Add one more"}</a>
+        </div>
+      </div>
+      <ul className="mt-2 grid grid-cols-2 gap-2 sm:mt-3 sm:grid-cols-4">
+        {shortlist.map((idea,index) => <li key={idea.slug} className="flex min-w-0 items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-2 py-2">
+          <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-white text-[10px] font-bold text-blue-800 ring-1 ring-slate-200">{index + 1}</span>
+          <a href={"/idea/" + idea.slug} title={idea.title} className="min-w-0 flex-1 break-words text-xs font-semibold leading-4 text-slate-800 hover:underline line-clamp-2">{idea.title}</a>
+          <button type="button" onClick={() => removeShortlistIdea(idea.slug)} aria-label={"Remove " + idea.title + " from comparison"} className="grid h-7 w-7 shrink-0 place-items-center rounded-md text-slate-500 hover:bg-white hover:text-slate-950">×</button>
+        </li>)}
+      </ul>
+    </div>
+  </aside>;
+}
+
+export function V2Frame({ active, children, showShortlistTray = true }: { active?: string | undefined; children: ReactNode; showShortlistTray?: boolean }) {
+  const { shortlist } = useFounderWorkspace();
+  const trayVisible = showShortlistTray && shortlist.length > 0;
   return (
     <div className="v2 min-h-screen flex flex-col bg-background">
       <Header active={active} />
-      <main className="flex-grow">{children}</main>
+      <main className={"flex-grow " + (trayVisible ? "pb-56 sm:pb-40" : "")}>{children}</main>
       <Footer />
+      {trayVisible && <FounderShortlistTray shortlist={shortlist} />}
     </div>
   );
 }

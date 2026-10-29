@@ -22,7 +22,7 @@ function BlueprintLibrary(){
  const pages=Math.ceil(total/24);
  const {shortlist}=useFounderWorkspace();
  const asWorkspaceIdea=(item:typeof items[number]):WorkspaceIdea=>({slug:item.slug,title:item.title,description:item.description,categoryName:item.categoryName,categoryCode:item.categorySlug});
- return <V2Frame active="/lists">
+ return <V2Frame active="/lists" showShortlistTray={false}>
   <div className="border-b bg-slate-50 pt-24 lg:pt-28"><nav className={`${wrap} flex items-center gap-2 py-3 text-sm text-slate-600`} aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={15}/><a href="/browse">Browse</a><ChevronRight size={15}/><span>Blueprints</span></nav></div>
   <main><section className="border-b bg-gradient-to-b from-violet-50 to-white py-10 lg:py-14"><div className={wrap}>
    <span className="inline-flex rounded-full bg-violet-100 px-3 py-1 text-xs font-bold text-violet-800">Published idea library</span>

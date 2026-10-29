@@ -270,3 +270,9 @@ The five specific-field models are the four original calculators plus CAC. The 5
 
 ### 2026-10-30 05:08:07 IST — Failed deployment repair pending verification
 - The initial comparison/handoff commit's Vercel status failed. Found and corrected stray backslashes in generated template literals/interpolations. Wait for the new repair commit's Vercel check and inspect its deployment before proceeding to page edit 2/5.
+
+
+### 2026-10-30 05:12:16 IST — List-card/tray implementation, verification open
+- Category/list/subcategory cards now contain Read full idea, Add to compare and Validate this idea with neutral styling. Verify on /category/footwear-and-bag-business-ideas, one /lists/:slug route and one /category/:category/:subcategory route after deploy.
+- Global V2Frame tray shows selected titles, remove-one, Clear all and Compare selected; hidden on Browse/Blueprints/Product/Comparison where inline shortlist panels already exist. Confirm it doesn't cover controls/footer at 360px/390px.
+- Previous comparison edit failed Vercel because generated template-literal escaping remained; repair commit now reports success. Validate this page edit independently before proceeding to page edit 3/5.
