@@ -18,6 +18,7 @@ import { catalogQuery } from "../lib/catalog";
 import { getPageResources } from "../lib/resources.functions";
 import { JsonLd, organisationSchema } from "@/lib/schema";
 import { canonicalUrl, siteIndexable } from "../lib/site-config";
+import { SiteInteractions } from "@/components/v2/site-interactions";
 
 /**
  * The 404 and error screens render outside every route's SiteShell, so they
@@ -311,6 +312,7 @@ function RootComponent() {
           the GSAP SplitText headline reveal in use-text-reveal.ts, switched
           off for breaking layout on any heading that wrapped to two lines. */}
       <PageTransition>
+        <SiteInteractions />
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
         <Outlet />
       </PageTransition>
