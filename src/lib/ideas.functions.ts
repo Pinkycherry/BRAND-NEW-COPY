@@ -47,6 +47,8 @@ export type Idea = IdeaCard & {
   gender_fit: string;
   life_stage: string[];
   place: string[];
+  created_at?: string;
+  updated_at?: string;
 };
 
 const CARD_COLUMNS =
@@ -80,6 +82,18 @@ export const getIdea = createServerFn({ method: "GET" })
       .maybeSingle();
     if (error || !row) return null;
     return row as Idea;
+  });
+
+/** Route labels and slugs come from the same database as the idea. */
+export const getIdeaPlace = createServerFn({ method: "GET" })
+  .inputValidator((input: unknown) => z.object({ category: z.string(), subcategory: z.string() }).parse(input))
+  .handler(async ({ data }) => {
+    const db = client();
+    const [category, subcategory] = await Promise.all([
+      db.from('categories').select('code,name,slug').eq('code', data.category).maybeSingle(),
+      db.from('subcategories').select('code,name,slug').eq('code', data.subcategory).maybeSingle(),
+    ]);
+    return { category: category.data as {code:string;name:string;slug:string}|null, subcategory: subcategory.data as {code:string;name:string;slug:string}|null };
   });
 
 /** Readable labels for the fixed tag values. */
