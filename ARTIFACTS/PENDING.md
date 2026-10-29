@@ -283,3 +283,9 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Both picker cards and table rows have Read full idea, Add to compare, and Validate this idea. Validate must land at the detail validation section.
 - OpenRouter/user API-key integration is explicitly future planning only; do not implement keys, storage, proxy or inference until founder makes the final choice. Current product work remains deep-link-based.
 - Vercel and visual QA for this edit are pending; no screenshot claimed.
+
+
+### 2026-10-30 05:16:23 IST — Blueprints card and shortlist verification open
+- Blueprints now uses the shared comparison tray and three explicit actions per card. Verify selected state follows search and pagination; validate route should land at /idea/:slug#idea-validate.
+- New saved blueprint entries carry source=blueprint; test mixed comparisons (current and legacy records) because the table rehydrates records from two read-only sources.
+- API-key/OpenRouter features remain planning only. Vercel and phone-layout QA pending.

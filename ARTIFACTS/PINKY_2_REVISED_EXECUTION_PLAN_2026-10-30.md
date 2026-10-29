@@ -191,3 +191,8 @@ The external prompt should be explicit that:
 ## 2026-10-30 05:14:40 IST — Screenshot-led batch, page edit 3/5: Browse ideas stays with the shortlist
 - Enabled the shared comparison tray on Browse, removed the duplicated deep-page shortlist panel, and added three explicit actions to the picker cards and published idea table: Read full idea, Add to compare, Validate this idea. The fixed tray keeps selected titles/count, remove-one, Clear all and Compare selected visible while filtering or scrolling.
 - This fixes the specific browse interaction where the user added ideas near the top but had to scroll to discover the full saved selection.
+
+
+## 2026-10-30 05:16:23 IST — Screenshot-led batch, page edit 4/5: Blueprints follows the same shortlist
+- Enabled the global sticky comparison tray on Blueprints and removed the duplicate shortlist panel that required users to scroll beneath the search area. Blueprint cards now have Read full idea, Add to compare and Validate this idea actions.
+- Marked saved records as source=blueprint so the comparison rehydrates the matching legacy blueprint record rather than assuming it belongs to the current idea catalog. The selected title stays visible in the shared tray during pagination/search and navigation.

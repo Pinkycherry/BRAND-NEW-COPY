@@ -165,3 +165,9 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 ## 2026-10-30 05:14:40 IST — Screenshot-led batch, page edit 3/5: Browse interaction
 - Browse now uses the shared persistent tray rather than placing its only full shortlist block far below the idea picker/table. The tray is available during search/filter and scroll. Removed the duplicate local shortlist panel.
 - Top picker cards and table rows now have explicit Read full idea, Add to compare and Validate this idea controls. Validate anchors to the detail page validation section.
+
+
+## 2026-10-30 05:16:23 IST — Screenshot-led batch, page edit 4/5: Blueprints shortlist and source identity
+- Blueprints now uses the global comparison tray rather than a duplicate local block. Cards expose Read full idea, Add to compare and Validate this idea. The validation action links to the same detail page validation section.
+- Blueprint selections now persist with source identity `blueprint` so comparison reloads the correct legacy record. Search, pagination and card image links remain unchanged.
+- OpenRouter/API key mode remains future planning only; no key integration has been implemented.

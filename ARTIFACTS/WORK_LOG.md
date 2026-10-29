@@ -816,3 +816,11 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Enabled the shared V2Frame compare tray on Browse. It follows scrolling and filter changes and shows the selected titles/count, remove-one, Clear all and Compare selected. Removed the old inline shortlist panel that appeared only after the idea table, which made the selected ideas hard to see from the picker.
 - Added explicit Read full idea, Add to compare, and Validate this idea actions to the top picker cards and each published-record row. Validate links to the idea details' #idea-validate section. Existing filters/query remain unchanged.
 - No API integration or API-key handling built; founder explicitly reserved that as a later decision. No local screenshot yet; Vercel and mobile QA are pending.
+
+
+## 2026-10-30 05:16:23 IST — Screenshot-led batch, completion 4/5: Blueprints actions and travelling selection
+- Before: https://bbinewcopy.vercel.app/blueprints
+- After: https://bbinewcopy.vercel.app/blueprints
+- Enabled the shared V2Frame tray on Blueprints and removed the duplicate inline shortlist panel. Selection stays visible while searching/paginating and includes titles, remove-one, Clear all and Compare selected.
+- Added Read full idea, Add to compare and Validate this idea actions on each blueprint card. Saved blueprint records now set `source: "blueprint"` so the comparison rehydrates the full legacy published record. Existing search, pagination, imagery and read route remain intact.
+- No API-key features were implemented. Vercel status and visual QA still need this edit's own check; no screenshot captured.
