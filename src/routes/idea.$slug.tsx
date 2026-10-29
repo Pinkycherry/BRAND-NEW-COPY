@@ -1,6 +1,5 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { queryOptions } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 
 import { V2Frame } from "@/components/v2/frame";
@@ -35,7 +34,10 @@ export const Route = createFileRoute("/idea/$slug")({
       return { kind: "new" as const, idea, place, related: related.filter(item => item.slug !== idea.slug).slice(0,4), title: idea.title, summary: idea.summary, image: categoryImage(place.category?.slug ?? "") };
     }
     const legacy = await context.queryClient.ensureQueryData(legacyQuery(params.slug));
-    if (!legacy) throw notFound();
+    if (!legacy) {
+      const result = await getBrowseIdeas({ data: { q: "", category: "", investment: "", time: "", skill: "", page: 1 } });
+      return { kind: "missing" as const, ideas: result.ideas.slice(0, 6), title: "Idea not published", summary: "Explore recently published ideas from the library.", image: undefined };
+    }
     const related = await getLegacyIdeaCards({data:{q:'',page:1}});
     return { kind: "legacy" as const, idea: legacy, related: related.items.filter(item=>item.slug!==legacy.slug).slice(0,4), title: legacy.seoTitle || legacy.title, summary: legacy.metaDescription || legacy.summary, image: categoryImage(legacy.categorySlug) };
   },
@@ -51,19 +53,11 @@ export const Route = createFileRoute("/idea/$slug")({
     ],
   }),
   component: IdeaPage,
-  notFoundComponent: UnavailableIdea,
+  notFoundComponent: () => <V2Frame><SellerHero breadcrumbs={[{label:"Home",href:"/"}]} badge="IDEA LIBRARY" title="This idea could not load." intro="Browse the published library." primary={{label:"Browse ideas",href:"/browse"}} /></V2Frame>,
   errorComponent: () => <V2Frame><SellerHero breadcrumbs={[{label:"Home",href:"/"}]} badge="IDEA LIBRARY" title="This idea could not load." intro="Please try again shortly." primary={{label:"Browse ideas",href:"/browse"}} /></V2Frame>,
 });
 
-function UnavailableIdea() {
-  const [ideas, setIdeas] = useState<IdeaCard[]>([]);
-  useEffect(() => {
-    let active = true;
-    getBrowseIdeas({ data: { q: "", category: "", investment: "", time: "", skill: "", page: 1 } })
-      .then(result => { if (active) setIdeas(result.ideas.slice(0, 6)); })
-      .catch(() => {});
-    return () => { active = false; };
-  }, []);
+function UnavailableIdea({ ideas }: { ideas: IdeaCard[] }) {
   return <V2Frame active="/browse">
     <div className="pt-24 lg:pt-28"><SellerHero breadcrumbs={[{label:"Home",href:"/"},{label:"Browse",href:"/browse"}]} badge="IDEA LIBRARY" title="This idea is not published." intro="Explore published ideas from the library." primary={{label:"Browse ideas",href:"/browse"}} /></div>
     <section className="bg-slate-50 py-12 lg:py-16"><div className="mx-auto max-w-6xl px-4 md:px-6"><h2 className="text-3xl font-bold">Recently published ideas</h2><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{ideas.map(idea => <a key={idea.slug} href={`/idea/${idea.slug}`} className="rounded-2xl border bg-white p-6 shadow-sm transition hover:border-blue-500"><h3 className="text-xl font-bold">{idea.title}</h3><p className="mt-3 line-clamp-3 text-slate-600">{idea.hook || idea.summary}</p><span className="mt-4 inline-flex items-center gap-2 font-semibold text-blue-700">Read idea <ArrowRight size={17}/></span></a>)}</div></div></section>
@@ -72,6 +66,7 @@ function UnavailableIdea() {
 
 function IdeaPage() {
   const data = Route.useLoaderData();
+  if (data.kind === "missing") return <UnavailableIdea ideas={data.ideas} />;
   if (data.kind === "legacy") return <LegacyIdeaPage idea={data.idea} related={data.related} />;
   const { idea, related } = data;
   const where = data.place;
