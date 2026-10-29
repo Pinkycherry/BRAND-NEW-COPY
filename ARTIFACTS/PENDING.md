@@ -218,3 +218,12 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Founder correctly pointed out that the current implementation already hands a prefilled prompt into the selected provider. Source inspection confirms `validate.functions.ts` URL-encodes the idea-specific prompt and appends it to ChatGPT (`?q=`), Claude (`/new?q=`), Perplexity (`/search?q=`) and Grok (`/?q=`) destinations.
 - Correct the audit's earlier cautious language: don't treat prompt prefill as merely a future possibility or force manual paste as the primary flow. Preserve direct prefilled provider handoff; add Gemini as the missing fifth provider using its own provider URL scheme. Keep copy/open fallback only for actual failure, unsupported browser/service behaviour or length limits. Distinguish prefilled composer from auto-submitted prompt/result.
 - Official Claude deep-link reference confirms `q` prefills the prompt field: https://support.claude.com/en/articles/14729294-open-claude-desktop-with-a-link. Browser-level validation across all providers remains an explicit QA item, not a reason to discard the current direct-link design.
+
+## 2026-10-30 02:47:18 IST — Standing seller-rebuild and provider rules from founder
+
+- **No Gemini in the product.** The only approved outside-AI destinations are ChatGPT, Claude, Grok and Perplexity. Do not add another provider unless the founder explicitly changes this rule.
+- Preserve the current prefilled-prompt URL workflow. Do not downgrade the main action to manual copy/paste. A prefilled prompt is not auto-submitted.
+- Seller files are paid rebuild sources. Do not use seller branding, logo or images on the website. Keep `src/bought/` files unchanged as the source archive; do not serve raw seller HTML as finished pages.
+- Preserve existing authored articles, guides, calculators and glossary. Focus this pass on generated workbench/hub pages that lack practical interactions.
+- First build a browser-local shortlist/context and connect it to real multi-idea comparison and validation handoff. Do not save shortlist/notes in Supabase. Map blast radius before shared-component edits.
+- Page-by-page plan and source inventory: `ARTIFACTS/PINKY_2_MASTER_EXECUTION_ARTIFACT.md`. Update it with every implementation commit alongside WORK_LOG.
