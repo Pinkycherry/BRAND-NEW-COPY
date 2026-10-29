@@ -200,3 +200,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Research/hypothesis: use the existing seller `V2Frame`, a descriptive single H1, a responsive split hero with original guide artwork, a live three-field budget boundary check, four selectable diagnostic patterns, four non-prescriptive outcomes, contextual links to existing guides/tools and the shared one-open-at-a-time `SellerFaq`. Avoid shared CSS and data contracts.
 - Sources: Google Search Central people-first content guidance (https://developers.google.com/search/docs/fundamentals/creating-helpful-content) and NN/g information scent (https://www.nngroup.com/articles/information-scent/). The current live route could not be fetched by the available browser tool before editing, so before/after live screenshots remain an evidence gate, not a claim.
 - Do not mark this page complete until the main commit's Vercel deployment, HTTP/SSR, title/robots metadata, image, calculator behavior, destination links, desktop layout and 360/390px overflow are verified.
+
+### 2026-10-30 02:10 IST — Pivot-or-stop card-height defect
+- **Before evidence:** founder screenshot shows the right-hand Observation / Interpretation / Boundary cards stretched to the entire height of the left text column, creating an excessive empty card area.
+- **Cause:** grid-item stretch on the nested card grid. **Patch:** top-align the outer two-column section and make the nested cards grid/content cards size to their content.
+- Live screenshot, deployed result, mobile widths and production build still need confirmation; do not treat the source change alone as closure.

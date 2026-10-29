@@ -162,7 +162,7 @@ function PivotPage() {
 
       <main className="text-slate-900">
         <section className="py-12 lg:py-16">
-          <div className={`${wrap} grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-14`}>
+          <div className={`${wrap} grid items-start gap-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-14`}>
             <div>
               <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Start with the evidence</p>
               <h2 className="mt-3 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">Do not let yesterday’s spend make tomorrow’s decision.</h2>
@@ -174,16 +174,16 @@ function PivotPage() {
                 Set a personal risk boundary <ArrowUpRight size={17} />
               </a>
             </div>
-            <div className="grid gap-4 sm:grid-cols-3">
-              <article className={`${card} border-t-4 border-t-blue-600`}>
+            <div className="grid h-fit content-start items-start gap-4 self-start sm:grid-cols-3">
+              <article className={`${card} h-fit self-start border-t-4 border-t-blue-600`}>
                 <h3 className="text-lg font-bold">Observation</h3>
                 <p className="mt-2 leading-6 text-slate-600">Record buyer actions, dates, prices, costs and delivery outcomes.</p>
               </article>
-              <article className={`${card} border-t-4 border-t-indigo-500`}>
+              <article className={`${card} h-fit self-start border-t-4 border-t-indigo-500`}>
                 <h3 className="text-lg font-bold">Interpretation</h3>
                 <p className="mt-2 leading-6 text-slate-600">Mark what is inferred, and what evidence could prove your explanation wrong.</p>
               </article>
-              <article className={`${card} border-t-4 border-t-slate-400`}>
+              <article className={`${card} h-fit self-start border-t-4 border-t-slate-400`}>
                 <h3 className="text-lg font-bold">Boundary</h3>
                 <p className="mt-2 leading-6 text-slate-600">Set a maximum next spend or number of hours before the next test.</p>
               </article>
