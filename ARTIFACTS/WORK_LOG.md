@@ -824,3 +824,11 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Enabled the shared V2Frame tray on Blueprints and removed the duplicate inline shortlist panel. Selection stays visible while searching/paginating and includes titles, remove-one, Clear all and Compare selected.
 - Added Read full idea, Add to compare and Validate this idea actions on each blueprint card. Saved blueprint records now set `source: "blueprint"` so the comparison rehydrates the full legacy published record. Existing search, pagination, imagery and read route remain intact.
 - No API-key features were implemented. Vercel status and visual QA still need this edit's own check; no screenshot captured.
+
+
+## 2026-10-30 05:18:30 IST — Screenshot-led batch, completion 5/5: Validation Workbench task/output flow
+- Before: https://bbinewcopy.vercel.app/product
+- After: https://bbinewcopy.vercel.app/product
+- Added the four-step workflow and selectable outputs: detailed report, roadmap, HTML prototype, infographic/chart, image. Selected output instructions are included in the full prompt and a compact provider-safe handoff. Image intent filters to ChatGPT and Grok; other output modes retain all four providers but do not guarantee a specific tier feature.
+- Workbench idea cards now include Read full idea, Add to compare, and Validate this idea. Expanded response-language selections for Indian languages; clarified mixed free-form context. Removed AI “account” language. Provider cards now have depth without altering logo assets; Grok uses the site's original favicon.
+- No OpenRouter/API-key integration built; the idea remains documented for a future decision. No live browser screenshot captured; Vercel status, prefill behavior and responsive visual QA remain pending.

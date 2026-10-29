@@ -10,9 +10,12 @@ const providers = [
   { id: "perplexity", label: "Perplexity", base: "https://www.perplexity.ai/search?q=", Icon: SiPerplexity },
 ] as const;
 
-export function ProviderPromptActions({ prompt, prefillPrompt, title = "Continue with AI", className = "" }: { prompt: string; prefillPrompt?: string; title?: string; className?: string }) {
+type ProviderId = (typeof providers)[number]["id"];
+
+export function ProviderPromptActions({ prompt, prefillPrompt, title = "Continue with AI", className = "", allowedProviders }: { prompt: string; prefillPrompt?: string; title?: string; className?: string; allowedProviders?: readonly ProviderId[] }) {
   const [copyState, setCopyState] = useState<"idle" | "copied" | "failed">("idle");
   const linkPrompt = prefillPrompt || prompt;
+  const visibleProviders = providers.filter(provider => !allowedProviders || allowedProviders.includes(provider.id));
   const linkLimit = 7200;
   const copyPrompt = async () => {
     try {
@@ -26,12 +29,12 @@ export function ProviderPromptActions({ prompt, prefillPrompt, title = "Continue
     <h3 className="text-xl font-bold text-slate-950">{title}</h3>
     <p className="mt-2 text-sm leading-6 text-slate-600">The selected AI tool opens with a prepared question when its link supports it. Review the prompt and confirm sending there. BusinessIdea.io does not run the AI request or store the response.</p>
     <div className="mt-4 grid gap-3 sm:grid-cols-2">
-      {providers.map(provider => { const href = provider.base + encodeURIComponent(linkPrompt); const canPrefill = href.length <= linkLimit; const Icon = provider.Icon; return <a key={provider.id} href={canPrefill ? href : provider.base.split("?")[0]} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 font-semibold text-slate-900 transition hover:border-blue-400 hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">
-        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl border border-slate-200 bg-white shadow-sm" aria-hidden="true">{Icon ? <Icon size={21}/> : <span className="text-xs font-black tracking-tight">GROK</span>}</span><span className="min-w-0 flex-1">{canPrefill ? `Open ${provider.label} with prepared prompt` : `Open ${provider.label} (copy prompt first)`}</span><ArrowUpRight size={17} className="shrink-0 text-blue-700"/>
+      {visibleProviders.map(provider => { const href = provider.base + encodeURIComponent(linkPrompt); const canPrefill = href.length <= linkLimit; const Icon = provider.Icon; return <a key={provider.id} href={canPrefill ? href : provider.base.split("?")[0]} target="_blank" rel="noopener noreferrer" className="group inline-flex min-h-14 items-center gap-3 rounded-xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 px-4 py-3 font-semibold text-slate-900 shadow-[0_3px_0_rgba(15,23,42,0.06),0_10px_20px_rgba(15,23,42,0.08)] transition hover:-translate-y-0.5 hover:border-blue-400 hover:shadow-[0_4px_0_rgba(15,23,42,0.06),0_14px_24px_rgba(15,23,42,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-slate-200 bg-white shadow-[0_2px_0_rgba(15,23,42,0.08),0_6px_12px_rgba(15,23,42,0.08)]" aria-hidden="true">{Icon ? <Icon size={22}/> : <img src="https://grok.com/images/favicon.svg" width="24" height="24" alt="" loading="lazy" className="h-6 w-6 object-contain"/>}</span><span className="min-w-0 flex-1">{canPrefill ? `Open ${provider.label} with prepared prompt` : `Open ${provider.label} (copy prompt first)`}</span><ArrowUpRight size={17} className="shrink-0 text-blue-700"/>
       </a>; })}
     </div>
     <details className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4"><summary className="cursor-pointer font-semibold text-slate-800">Review prepared prompt</summary><pre className="mt-3 max-h-80 overflow-auto whitespace-pre-wrap break-words text-sm leading-6 text-slate-700">{prompt}</pre></details>
-    {providers.some(provider => (provider.base + encodeURIComponent(linkPrompt)).length > linkLimit) && <p className="mt-3 text-sm text-amber-800">At least one provider link is too long to carry this prompt. Copy the full prompt first, open that provider, and paste it there. We will not label a blank provider page as a prefilled handoff.</p>}
+    {visibleProviders.some(provider => (provider.base + encodeURIComponent(linkPrompt)).length > linkLimit) && <p className="mt-3 text-sm text-amber-800">At least one provider link is too long to carry this prompt. Copy the full prompt first, open that provider, and paste it there. We will not label a blank provider page as a prefilled handoff.</p>}
     {prefillPrompt && prefillPrompt !== prompt && <p className="mt-2 text-xs text-slate-500">Provider links use a compact handoff to keep the selected ideas in the URL. Full detail stays available in the prompt preview and Copy action.</p>}
     <div className="mt-4 flex flex-wrap items-center gap-3">
       <button type="button" onClick={()=>void copyPrompt()} className="inline-flex min-h-10 items-center gap-2 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-800 hover:border-blue-500">{copyState==="copied"?<Check size={16}/>:<Copy size={16}/>} {copyState==="copied"?"Prompt copied":"Copy prepared prompt"}</button>

@@ -289,3 +289,10 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Blueprints now uses the shared comparison tray and three explicit actions per card. Verify selected state follows search and pagination; validate route should land at /idea/:slug#idea-validate.
 - New saved blueprint entries carry source=blueprint; test mixed comparisons (current and legacy records) because the table rehydrates records from two read-only sources.
 - API-key/OpenRouter features remain planning only. Vercel and phone-layout QA pending.
+
+
+### 2026-10-30 05:18:30 IST — Workbench final batch edit verification open
+- Workbench has task and output choices, output included in full and compact prompts, Indian response languages, three actions on suggested idea cards, and provider-specific ChatGPT/Grok-only visibility for image intent. Test every output choice, task and prompt handoff in browser after deploy.
+- Check provider card visuals and official Grok service favicon loads correctly. Brand art must stay undistorted; elevated treatment belongs to its surrounding card.
+- BYOK/OpenRouter/user API-key storage and in-platform inference remain future planning only and must not be implemented before explicit founder decision.
+- No screenshot captured here. Check Vercel and live page before closing QA.

@@ -171,3 +171,10 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Blueprints now uses the global comparison tray rather than a duplicate local block. Cards expose Read full idea, Add to compare and Validate this idea. The validation action links to the same detail page validation section.
 - Blueprint selections now persist with source identity `blueprint` so comparison reloads the correct legacy record. Search, pagination and card image links remain unchanged.
 - OpenRouter/API key mode remains future planning only; no key integration has been implemented.
+
+
+## 2026-10-30 05:18:30 IST — Screenshot-led batch, page edit 5/5: Workbench sequence and output choice
+- Added explicit step labels for choose ideas, add constraints, choose task and output, and review/continue. Added selectable Detailed report, Action roadmap, HTML prototype, Charts/infographic, and Image intent. Image intent filters provider buttons to ChatGPT and Grok; other output choices remain provider-neutral and ask the selected tool to state capability limits.
+- The selected output request is included in both the full prompt and compact provider handoff. Extra notes and Indian response-language choices are supported. Workbench suggestion cards now include Read full idea, Add to compare, and Validate this idea. Removed references to “your AI account.”
+- Provider cards use dimensional surfaces while leaving logo art untouched; Grok mark is sourced from its own website favicon. OpenRouter and user API-key integration remain planning-only; no credentials or in-platform inference added.
+- Batch 1/5 edit list now includes Comparison, Category/list cards + tray, Browse, Blueprints, and Validation Workbench. Final Vercel and visual QA remain to be confirmed for each commit.

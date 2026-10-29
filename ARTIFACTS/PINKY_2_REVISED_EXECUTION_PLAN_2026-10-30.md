@@ -196,3 +196,10 @@ The external prompt should be explicit that:
 ## 2026-10-30 05:16:23 IST — Screenshot-led batch, page edit 4/5: Blueprints follows the same shortlist
 - Enabled the global sticky comparison tray on Blueprints and removed the duplicate shortlist panel that required users to scroll beneath the search area. Blueprint cards now have Read full idea, Add to compare and Validate this idea actions.
 - Marked saved records as source=blueprint so the comparison rehydrates the matching legacy blueprint record rather than assuming it belongs to the current idea catalog. The selected title stays visible in the shared tray during pagination/search and navigation.
+
+
+## 2026-10-30 05:18:30 IST — Screenshot-led batch, page edit 5/5: Validation Workbench sequence and output intent
+- The Workbench now explicitly numbers the flow: 1 choose ideas, 2 add context, 3 choose task and output, 4 review prompt and continue. Added report, roadmap, HTML prototype, infographic/chart, and image-generation intent options. Image-generation intent exposes only ChatGPT and Grok buttons. Prompts ask for supported artifacts while retaining source/date discipline and avoiding fabricated results.
+- Added explicit three actions to the workbench's suggested idea cards. Added more Indian response-language choices, an example of mixed free-form context, and removed “your AI account” wording.
+- Provider card visuals have raised dimensional cards with undistorted icons. Grok uses the live service's own favicon asset as its original mark; its art itself is not transformed.
+- API-key/OpenRouter integration is not part of this implementation. It remains a documented option only, pending a later founder decision.
