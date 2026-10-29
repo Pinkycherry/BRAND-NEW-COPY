@@ -45,7 +45,7 @@ function SearchPage() {
           </label>
           <button type="submit" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-violet-700 px-6 py-3 font-semibold text-white hover:bg-violet-800">Search <ArrowRight size={17}/></button>
         </form>
-        {submitted && <p className="mt-5 text-sm text-slate-600">{hits.length} {hits.length===1?"result":"results"} for “{q}”</p>}
+        {submitted && <p className="mt-5 text-sm text-slate-600">Results for “{q}”</p>}
         {submitted && (hits.length ? <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {hits.map(hit=> {
             const href=hit.kind==="category" ? `/category/${hit.categorySlug}` : `/category/${hit.categorySlug}/${hit.subcategorySlug}`;

@@ -71,7 +71,7 @@ export const Route = createFileRoute("/sitemap")({
   head: () =>
     metaFor(
       "Site Map | BBI – Bro Business Ideas",
-      "Every page on BBI in one place: 100 business idea categories, 1,000 subcategories, calculators, startup guides, founder stories and reference pages.",
+      "Every page on BBI in one place: business idea categories, focused paths, calculators, startup guides, founder stories and reference pages.",
     ),
   loader: () => getSitemapData(),
   component: SitemapPage,
@@ -182,8 +182,6 @@ function packByWidth<T>(items: readonly T[], label: (item: T) => string): T[] {
 
 function SitemapPage() {
   const { blogPosts } = Route.useLoaderData();
-  const subcategoryTotal = TAXONOMY.reduce((sum, c) => sum + c.subcategories.length, 0);
-
   return (
     <ContentPage
       wide
@@ -191,7 +189,7 @@ function SitemapPage() {
       eyebrow="Site map"
       title="Every page on"
       highlight="BBI"
-      intro={`${TAXONOMY.length} business idea categories and ${subcategoryTotal} subcategories, plus ${CALCULATORS.length} calculators, ${STARTUP_GUIDES.length} startup guides, ${CASE_STUDIES.length} founder stories and ${blogPosts.length} blog posts. Search the separate index of completed source blueprints from the links below.`}
+      intro="Browse the business idea categories, focused paths, calculators, startup guides, founder stories and journal posts. Search the separate index of completed source blueprints from the links below."
     >
       {PAGE_GROUPS.map((group) => (
         <Section key={group.heading} heading={group.heading}>
@@ -203,7 +201,7 @@ function SitemapPage() {
         </Section>
       ))}
 
-      <Section heading={`Calculators (${CALCULATORS.length})`}>
+      <Section heading="Calculators">
         <PillRow>
           {packByWidth(CALCULATORS, (c) => c.title).map((calculator) => (
             <Chip
@@ -216,7 +214,7 @@ function SitemapPage() {
         </PillRow>
       </Section>
 
-      <Section heading={`Startup guides (${STARTUP_GUIDES.length})`}>
+      <Section heading="Startup guides">
         <PillRow>
           {packByWidth(STARTUP_GUIDES, (g) => g.title).map((guide) => (
             <Chip
@@ -229,7 +227,7 @@ function SitemapPage() {
         </PillRow>
       </Section>
 
-      <Section heading={`Founder stories (${CASE_STUDIES.length})`}>
+      <Section heading="Founder stories">
         <PillRow>
           {packByWidth(CASE_STUDIES, (c) => c.title).map((study) => (
             <Chip
@@ -242,7 +240,7 @@ function SitemapPage() {
         </PillRow>
       </Section>
 
-      <Section heading={`Blog posts (${blogPosts.length})`}>
+      <Section heading="Blog posts">
         <PillRow>
           {packByWidth(blogPosts, (p) => p.title).map((post) => (
             <Chip
@@ -255,7 +253,7 @@ function SitemapPage() {
         </PillRow>
       </Section>
 
-      <Section heading={`Categories and subcategories (${TAXONOMY.length} × 10)`}>
+      <Section heading="Categories and subcategories">
         <div className="space-y-5">
           {TAXONOMY.map((category) => (
             <div key={category.slug}>

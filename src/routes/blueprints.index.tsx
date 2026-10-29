@@ -21,13 +21,13 @@ function BlueprintLibrary(){
  return <V2Frame active="/lists">
   <div className="border-b bg-slate-50 pt-24 lg:pt-28"><nav className={`${wrap} flex items-center gap-2 py-3 text-sm text-slate-600`} aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={15}/><a href="/browse">Browse</a><ChevronRight size={15}/><span>Blueprints</span></nav></div>
   <main><section className="border-b bg-gradient-to-b from-violet-50 to-white py-10 lg:py-14"><div className={wrap}>
-   <span className="inline-flex rounded-full bg-violet-100 px-3 py-1 text-xs font-bold text-violet-800">{total.toLocaleString("en-IN")} published results</span>
+   <span className="inline-flex rounded-full bg-violet-100 px-3 py-1 text-xs font-bold text-violet-800">Published idea library</span>
    <h1 className="mt-4 max-w-3xl text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">Published business idea blueprints</h1>
    <p className="mt-3 max-w-2xl text-slate-600">Examine published ideas, their buyers, money model and practical challenges.</p>
    <div className="mt-5 flex flex-wrap gap-3"><a href="/browse" className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-violet-700 px-5 py-3 font-semibold text-white hover:bg-violet-800">Browse categories <ArrowRight size={17}/></a><a href="/lists" className="inline-flex min-h-11 items-center rounded-xl border bg-white px-5 py-3 font-semibold">Explore lists</a></div>
   </div></section>
   <section className="py-12 lg:py-16"><div className={wrap}>
-   <div className="flex flex-wrap items-end justify-between gap-3"><h2 className="text-2xl font-bold text-slate-950">Find an idea</h2><span className="text-sm text-slate-600">{total.toLocaleString("en-IN")} results</span></div>
+   <div className="flex flex-wrap items-end justify-between gap-3"><h2 className="text-2xl font-bold text-slate-950">Find an idea</h2></div>
    <form role="search" onSubmit={e=>{e.preventDefault();navigate({search:{q:term.trim()||undefined,page:1}});}} className="mt-5 flex max-w-3xl flex-wrap gap-3">
     <label className="flex min-h-12 min-w-0 flex-1 items-center gap-2 rounded-xl border border-slate-300 bg-white px-4"><Search size={19} className="shrink-0 text-slate-500"/><span className="sr-only">Search published blueprint titles</span><input type="search" maxLength={80} value={term} onChange={e=>setTerm(e.target.value)} placeholder="Try farming, repair or tuition" className="min-w-0 flex-1 bg-transparent text-slate-950 outline-none"/></label>
     <button type="submit" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-violet-700 px-6 py-3 font-semibold text-white hover:bg-violet-800">Search <ArrowRight size={17}/></button>

@@ -540,9 +540,6 @@ function CategoryMega() {
                   className="mo-row flex items-baseline justify-between gap-3 rounded-lg px-2 py-2 text-sm normal-case tracking-normal text-muted-foreground"
                 >
                   <span className="min-w-0 leading-snug">{c.categoryName}</span>
-                  <span className="shrink-0 text-[11px] tabular-nums opacity-70">
-                    {c.subcategoryCount}
-                  </span>
                 </Link>
               </li>
             ))}
@@ -550,7 +547,7 @@ function CategoryMega() {
 
           <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 border-t border-border pt-3">
             <Link to="/browse" onClick={close} className="mo-link t-eyebrow">
-              {hasMore ? `All ${all.length} categories` : "The full library"}
+              {hasMore ? "All categories" : "The full library"}
             </Link>
             <Link to="/search" search={{ q: "" }} onClick={close} className="mo-link t-eyebrow">
               Search categories

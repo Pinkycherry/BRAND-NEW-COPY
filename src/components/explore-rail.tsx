@@ -38,7 +38,7 @@ const REGISTRY: Record<ExploreDestination, Entry> = {
   ideas: {
     to: "/browse",
     label: "Browse business categories",
-    blurb: "100 categories and 1,000 subcategories of business ideas for India.",
+    blurb: "Categories and focused paths for exploring business ideas in India.",
     Icon: Compass,
     tint: "--hl-teal",
   },

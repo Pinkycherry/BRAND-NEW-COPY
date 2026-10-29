@@ -119,7 +119,7 @@ export function ValidatePanel() {
       </div>
       <div className="mm-cols" style={{ gridTemplateColumns: "repeat(2,minmax(0,1fr))" }}>
         <div>
-          <div className="mm-label mm-dot" style={{ marginTop: 0 }}>Founder tools (11)</div>
+          <div className="mm-label mm-dot" style={{ marginTop: 0 }}>Founder tools</div>
           <div className="mm-tiles">
             <Tile label="Startup Cost" href="/calculator/startup-cost" />
             <Tile label="Break-even" href="/calculator/break-even" />
@@ -160,7 +160,7 @@ export function ValidatePanel() {
               <Links items={[cat(16), cat(27), cat(30), cat(37), cat(47)]} />
             </div>
           </div>
-          <A className="mm-pill" href="/browse">See all 100 categories →</A>
+          <A className="mm-pill" href="/browse">See all categories →</A>
         </div>
       </div>
     </>
@@ -171,7 +171,7 @@ export function LearnPanel() {
   return (
     <>
       <div>
-        <Hero tone="orange" badge="100 CATEGORIES" badgeTone="o" icon="💡" title="Business Ideas Database" body={["Researched business ideas for India, sorted into 100 categories."]} cta="Browse →" href="/browse" />
+        <Hero tone="orange" badge="IDEA LIBRARY" badgeTone="o" icon="💡" title="Business Ideas Database" body={["Researched business ideas for India, organised by category."]} cta="Browse →" href="/browse" />
         <div className="mm-label">Start here</div>
         <Links
           items={[
@@ -206,7 +206,7 @@ export function LearnPanel() {
           />
           <div className="mm-label">More categories</div>
           <Links className="mm-two mm-list" items={[cat(17), cat(19), cat(28), cat(38)]} />
-          <A className="mm-pill" href="/browse">See all 100 categories →</A>
+          <A className="mm-pill" href="/browse">See all categories →</A>
         </div>
         <div>
           <div className="mm-label mm-dot b" style={{ marginTop: 0 }}>Knowledge</div>

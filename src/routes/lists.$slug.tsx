@@ -26,7 +26,7 @@ export const Route = createFileRoute("/lists/$slug")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: loaderData ? `${loaderData.ideas.length} ${loaderData.name} (2026) | BusinessIdea.io` : "Business idea list | BusinessIdea.io" },
+      { title: loaderData ? `${loaderData.name} | BusinessIdea.io` : "Business idea list | BusinessIdea.io" },
       { name: "robots", content: "noindex,nofollow,noarchive,noimageindex" },
     ],
   }),
@@ -68,9 +68,7 @@ function Head({ p, title, words, updated }: { p: ListPage; title: string; words:
           <ArrowRight className="h-3.5 w-3.5" />
         </a>
       </div>
-      <p className="mt-2 text-xs text-muted-foreground/80">
-        {Math.max(1, Math.round(words / 220))} min read · {p.ideas.length} items · Updated {updated}
-      </p>
+      <p className="mt-2 text-xs text-muted-foreground/80">Updated {updated}</p>
     </div>
   );
 }
@@ -85,9 +83,8 @@ function Tldr({ p, title, month }: { p: ListPage; title: string; month: string }
         </span>
       </div>
       <p className="text-base lg:text-lg leading-relaxed text-foreground/90">
-        As of {month}, this page tracks {p.ideas.length} entries for {title}. Each entry lists the opportunity, who it is for, the money
-        needed to start and the main risk, reviewed against BusinessIdea.io&apos;s catalog of {p.totalIdeas.toLocaleString("en-IN")} published
-        business ideas.
+        As of {month}, this page presents published entries for {title}. Each entry lists the opportunity, who it is for, the money
+        needed to start and the main risk, using the live BusinessIdea.io library.
       </p>
     </div>
   );
@@ -124,10 +121,10 @@ function Comparison({ ideas }: { ideas: ListIdea[] }) {
             <thead>
               <tr className="border-b border-border/50">
                 <th className="px-3 py-2 text-left text-xs font-bold uppercase tracking-wider text-foreground bg-muted/40 w-32 sm:w-40 sticky left-0 z-10">Feature</th>
-                {ideas.map((i, n) => (
+                {ideas.map((i) => (
                   <th key={i.slug} className="px-3 py-2 text-center text-[11px] font-semibold text-foreground/80 border-l border-border/40 min-w-[110px] max-w-[180px]">
                     <span className="block leading-tight">
-                      {n + 1}. {i.title}
+                      {i.title}
                     </span>
                   </th>
                 ))}
@@ -152,18 +149,17 @@ function Comparison({ ideas }: { ideas: ListIdea[] }) {
   );
 }
 
-export function TopCard({ idea, n, actionHref, showAction = true }: { idea: ListIdea; n: number; actionHref?: string; showAction?: boolean }) {
+export function TopCard({ idea, actionHref, showAction = true }: { idea: ListIdea; n?: number; actionHref?: string; showAction?: boolean }) {
   const need = points(idea.what_you_need, 4);
   const hurts = points(idea.what_hurts, 3);
   return (
     <div className="rounded-lg border bg-card text-card-foreground premium-card overflow-hidden border-border/60 shadow-sm hover:shadow-md transition-shadow">
       <div className="p-0">
         <div className="relative flex items-start gap-3 sm:gap-5 p-4 sm:p-6 bg-card border-b border-border/60">
-          <div className="shrink-0 w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-primary text-primary-foreground flex items-center justify-center text-lg sm:text-2xl font-extrabold shadow-[0_6px_18px_-6px_hsl(var(--primary)/0.6)] ring-1 ring-primary/30">{n}</div>
           <div className="flex-1 min-w-0">
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-1.5">
               <h3 className="text-lg sm:text-2xl font-bold text-foreground break-words leading-tight">
-                {n}. {idea.title}
+                {idea.title}
               </h3>
             </div>
             <p className="text-sm text-muted-foreground break-words">
@@ -244,17 +240,14 @@ export function TopCard({ idea, n, actionHref, showAction = true }: { idea: List
   );
 }
 
-function MoreCard({ idea, n }: { idea: ListIdea; n: number }) {
+function MoreCard({ idea }: { idea: ListIdea; n?: number }) {
   return (
     <div className="rounded-lg border bg-card text-card-foreground shadow-sm premium-card">
       <div className="p-6">
         <div className="flex items-start gap-4">
-          <div className="flex-shrink-0">
-            <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-muted-foreground font-bold">{n}</div>
-          </div>
           <div className="flex-1 min-w-0">
             <h3 className="text-xl font-bold mb-2">
-              {n}. {idea.title}
+              {idea.title}
             </h3>
             <p className="text-muted-foreground">
               <span>{idea.summary ?? idea.hook}</span>
@@ -294,7 +287,7 @@ function RelatedLists({ p }: { p: ListPage }) {
             <a key={s.slug} href={`/lists/${s.slug}`} className="group flex items-center justify-between gap-2 rounded-lg border border-border bg-card/50 px-4 py-3 text-sm font-medium hover:border-primary/40 hover:bg-primary/5 hover:text-primary transition-colors">
               <span>{s.name}</span>
               <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                {s.count} ideas <ChevronRight className="h-4 w-4" />
+                Explore <ChevronRight className="h-4 w-4" />
               </span>
             </a>
           ))}
@@ -325,7 +318,7 @@ export function ListPageBody({ p, categorySlug }: { p: ListPage; categorySlug?: 
   const d = latest ? new Date(latest) : new Date();
   const updated = d.toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" });
   const month = d.toLocaleDateString("en-IN", { month: "short", year: "numeric" });
-  const title = `${p.ideas.length} ${p.name} for ${d.getFullYear()}`;
+  const title = `${p.name} for ${d.getFullYear()}`;
   const words = p.ideas.reduce((n, i) => n + [i.summary, i.who_pays_you, i.how_money_comes, i.verdict].join(" ").split(/\s+/).length, 0);
   const top = p.ideas.slice(0, 5);
   const more = p.ideas.slice(5);
@@ -362,7 +355,7 @@ export function ListPageBody({ p, categorySlug }: { p: ListPage; categorySlug?: 
           <Comparison ideas={top} />
           <div className="space-y-8 mb-12">
             <h2 className="text-2xl font-bold flex items-center gap-2">
-              Top {top.length} {p.name.toLowerCase()}
+              Featured {p.name.toLowerCase()}
             </h2>
             {top.map((i, n) => (
               <TopCard key={i.slug} idea={i} n={n + 1} />

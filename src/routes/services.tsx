@@ -12,7 +12,7 @@ export const Route = createFileRoute("/services")({
 });
 
 const paths = [
-  { name: "Find a business direction", description: "Start in the 100-category map, then search the separate index of completed source blueprints for a published idea you can read in full.", to: "/blueprints", action: "Explore published ideas", icon: Compass },
+  { name: "Find a business direction", description: "Start in the category map, then search the separate index of completed source blueprints for a published idea you can read in full.", to: "/blueprints", action: "Explore published ideas", icon: Compass },
   { name: "Run the numbers", description: "Bring your own costs and assumptions to the live calculators. The formula and input fields stay visible so you can question the output.", to: "/calculator", action: "Open calculators", icon: Calculator },
   { name: "Learn before you spend", description: "Read the existing startup guides, journal articles and glossary alongside a blueprint. Move from the broad idea to the first practical test.", to: "/startup-guides", action: "Read startup guides", icon: BookOpen },
   { name: "Ask a human", description: "If your question needs a person, contact the team. Explain your market and what you have already checked so the reply can be useful.", to: "/contact", action: "Contact the team", icon: MessagesSquare },
@@ -34,7 +34,7 @@ function ServicesPage() {
       </article>)}
     </div>
     <Section heading="Start with your situation">
-      <p>Time, location, starting money and skills all change which idea is sensible. Browse the 100-category map if you are still deciding what kind of work fits. Its ten paths per category are a way to narrow the question, not a promise that each path already has published ideas.</p>
+      <p>Time, location, starting money and skills all change which idea is sensible. Browse the category map if you are still deciding what kind of work fits. Its focused paths are a way to narrow the question, not a promise that each path already has published ideas.</p>
       <p><Link to="/browse">Browse categories</Link> or <Link to="/blueprints">search completed blueprints</Link>. The latter is a separate index because the source catalog and the new category map do not yet have a verified one-to-one assignment.</p>
     </Section>
     <Section heading="Read the full blueprint">
@@ -52,7 +52,7 @@ function ServicesPage() {
       <p><Link to="/calculator">Open the calculator library</Link>, then <Link to="/startup-guides">read the matching guide</Link> when a formula needs context.</p>
     </Section>
     <Section heading="Keep learning as you decide">
-      <p>The 20 existing startup guides cover validation, market sizing, cash flow, hiring, pricing and more. The 23 published journal articles offer practical examples, while the 159-term glossary explains the language behind the numbers.</p>
+      <p>The startup guides cover validation, market sizing, cash flow, hiring, pricing and more. Published journal articles offer practical examples, while the glossary explains the language behind the numbers.</p>
       <p><Link to="/learning-resources">Open the learning hub</Link> to choose the next resource. You can also <Link to="/contact">write to the team</Link> about a specific question.</p>
     </Section>
   </ContentPage>;
