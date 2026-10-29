@@ -1,105 +1,41 @@
-import { SellerFaq } from "@/components/v2/faq";
-import { V2PageCta, V2PageFaq, V2PageHero, V2PageSection } from "@/components/v2/page-sections";
-import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowRight, ArrowUpRight, BookOpen, Calculator, Compass, Search } from "lucide-react";
-import { GlassShell } from "@/components/glass-shell";
-import { categoryImage } from "@/config/category-imagery";
-import { findCategory } from "@/lib/catalog";
+import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, BookOpen, Calculator, ChevronRight, Compass, Search } from "lucide-react";
+import { V2Frame } from "@/components/v2/frame";
+import { SellerFaq } from "@/components/v2/faq";
+import { getListsHub } from "@/lib/lists.functions";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
-import "@/components/india-decision.css";
 
 const startingPoints = [
-  {
-    id: "job", label: "I have a job", cue: "Time is your tightest resource",
-    headline: "Your salary pays the bills. Your first experiment should fit around it.",
-    body: "A business idea that needs you available all day may cost more than the cash you put in. Begin by asking what can be tested after work without promising customers a schedule you cannot keep.",
-    categorySlugs: ["side-hustle-business-ideas", "online-business-ideas", "work-from-home-business-ideas"],
-    next: "List the hours you can protect each week, then read one blueprint for the customer and first sale.",
-    path: "/startup-idea-comparison", action: "Compare two ideas against those hours",
-  },
-  {
-    id: "home", label: "I need to stay close to home", cue: "Place and care come first",
-    headline: "The right starting point should respect the people who depend on you.",
-    body: "Home is not a limitation to hide. It changes the delivery model, customer radius and how often you can be away. Compare paths that can be examined from where you already are.",
-    categorySlugs: ["work-from-home-business-ideas", "women-friendly-business-ideas", "online-business-ideas"],
-    next: "Check the actual work, not the label. A home-based idea can still require stock, visits or a fixed daily window.",
-    path: "/startup-costs-india", action: "See cash tied up before a home sale",
-  },
-  {
-    id: "town", label: "I know my town", cue: "Local trust is an advantage",
-    headline: "The gap may be on the road you walk every day.",
-    body: "People already travel, wait or settle for a poor workaround. A local business starts by finding that repeated inconvenience and learning who would pay to remove it.",
-    categorySlugs: ["village-and-small-town-business-ideas", "agriculture-and-farming-business-ideas", "side-hustle-business-ideas"],
-    next: "Speak to potential customers where the problem occurs. Ask what they did last time and what it cost them.",
-    path: "/business-idea-research-india", action: "Observe a local workaround",
-  },
-  {
-    id: "student", label: "I am studying", cue: "Protect your learning and your cash",
-    headline: "You can test a skill before it becomes a full company.",
-    body: "A small first customer teaches more than a polished name or logo. Look for a problem you can solve well while keeping the time you need to study.",
-    categorySlugs: ["student-business-ideas", "side-hustle-business-ideas", "online-business-ideas"],
-    next: "Try one clear offer with one real buyer before buying equipment or committing to a recurring expense.",
-    path: "/business-demand-test-india", action: "Ask for one real buyer action",
-  },
+  {id:"job",label:"I have a job",cue:"Time is your tightest resource",headline:"Your salary pays the bills. Your first experiment should fit around it.",body:"A business idea that needs you available all day may cost more than the cash you put in. Begin by asking what can be tested after work without promising customers a schedule you cannot keep.",categoryNames:/side|online|home/i,next:"List the hours you can protect each week, then read one blueprint for the customer and first sale.",path:"/startup-idea-comparison",action:"Compare two ideas against those hours"},
+  {id:"home",label:"I need to stay close to home",cue:"Place and care come first",headline:"The right starting point should respect the people who depend on you.",body:"Home is not a limitation to hide. It changes the delivery model, customer radius and how often you can be away. Compare paths that can be examined from where you already are.",categoryNames:/home|online|women/i,next:"Check the actual work, not the label. A home-based idea can still require stock, visits or a fixed daily window.",path:"/startup-costs-india",action:"See cash tied up before a home sale"},
+  {id:"town",label:"I know my town",cue:"Local trust is an advantage",headline:"The gap may be on the road you walk every day.",body:"People already travel, wait or settle for a poor workaround. A local business starts by finding that repeated inconvenience and learning who would pay to remove it.",categoryNames:/village|agriculture|farming|local/i,next:"Speak to potential customers where the problem occurs. Ask what they did last time and what it cost them.",path:"/business-idea-research-india",action:"Observe a local workaround"},
+  {id:"student",label:"I am studying",cue:"Protect your learning and your cash",headline:"You can test a skill before it becomes a full company.",body:"A small first customer teaches more than a polished name or logo. Look for a problem you can solve well while keeping the time you need to study.",categoryNames:/student|side|online/i,next:"Try one clear offer with one real buyer before buying equipment or committing to a recurring expense.",path:"/business-demand-test-india",action:"Ask for one real buyer action"},
 ] as const;
-
-export const Route = createFileRoute("/business-ideas-india")({
-  head: () => ({ meta: [
-    { title: "Business Ideas in India for Real Life | BusinessIdea.io" },
-    { name: "description", content: "Explore business ideas in India by your time, place and obligations. Read completed blueprints, test customer demand and check startup costs before you commit." },
-    { property: "og:title", content: "Business Ideas in India for Real Life | BusinessIdea.io" },
-    { property: "og:description", content: "Start with the life you have. Find a business direction, read the hard parts and make one useful test." },
-    { property: "og:type", content: "website" },
-  ] }),
-  component: IndiaBusinessIdeasPage,
+const wrap="mx-auto max-w-6xl px-4 md:px-6";
+const card="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-500";
+const primary="inline-flex min-h-11 items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700";
+export const Route=createFileRoute("/business-ideas-india")({
+  loader:()=>getListsHub(),
+  head:()=>({meta:[{title:"Business Ideas in India for Real Life | BusinessIdea.io"},{name:"description",content:"Explore business ideas in India by your time, place and obligations. Read completed blueprints, test customer demand and check startup costs before you commit."},{property:"og:title",content:"Business Ideas in India for Real Life | BusinessIdea.io"},{property:"og:type",content:"website"}]}),
+  component:IndiaBusinessIdeasPage,
 });
-
-function IndiaBusinessIdeasPage() {
-  const [choice, setChoice] = useState<(typeof startingPoints)[number]["id"]>("job");
-  const selected = startingPoints.find((point) => point.id === choice)!;
-  const categories = selected.categorySlugs.map((slug) => findCategory(slug)).filter((category): category is NonNullable<typeof category> => Boolean(category));
-  return <>
-    <JsonLd schema={[
-      webPageSchema({ path: "/business-ideas-india", name: "Business ideas in India for real life", description: "A founder's decision path from situation to first proof." }),
-      breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Business ideas in India", path: "/business-ideas-india" }]),
-    ]} />
-    <GlassShell><div className="gl-india">
-      <nav className="gl-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><span>Business ideas in India</span></nav>
-      <V2PageHero className="gl-india-hero">
-        <div className="gl-india-hero-copy">
-          <p className="gh-eyebrow">THE FIRST MOVE · INDIA</p>
-          <h1>Business ideas for <em>the life you actually have.</em></h1>
-          <p>A salary you cannot leave. A family that needs you. A town you know by heart. Start there. Then find an idea that can survive contact with your real life.</p>
-          <div className="gl-india-hero-actions"><a href="#choose-your-start" className="gh-button gh-button-primary">Find your starting point <ArrowRight size={18} /></a><Link to="/blueprints" className="gh-button gh-button-secondary">Read published ideas</Link></div>
-        </div>
-        <aside className="gl-india-hero-path"><strong>Pick the question that is keeping you awake</strong><Link to="/startup-idea-comparison"><span>Two ideas in mind?</span>Compare them with the same evidence <ArrowUpRight size={17}/></Link><Link to="/first-customer-india"><span>No buyer yet?</span>Trace the first person who may pay <ArrowUpRight size={17}/></Link><Link to="/startup-costs-india"><span>Money is tight?</span>See the cash you must risk first <ArrowUpRight size={17}/></Link></aside>
-      </V2PageHero>
-
-      <V2PageSection className="gl-india-statement" aria-labelledby="gl-india-statement-title"><div><span>01 / BEFORE THE IDEA</span><h2 id="gl-india-statement-title">The cost of a wrong start is personal.</h2><p>A month of savings, evenings you cannot get back, or a promise to someone who trusts you. Decide what this business can ask of your life before you choose the attractive idea.</p></div><div className="gl-india-statement-checks"><Link to="/startup-costs-india"><strong>Cash you can risk</strong><span>Write the amount before the first sale.</span><ArrowUpRight size={17}/></Link><Link to="/first-customer-india"><strong>A buyer you can reach</strong><span>Find the last workaround, not a compliment.</span><ArrowUpRight size={17}/></Link><Link to="/startup-idea-comparison"><strong>Two possible directions</strong><span>Give both ideas the same five questions.</span><ArrowUpRight size={17}/></Link></div></V2PageSection>
-
-      <V2PageSection id="choose-your-start" className="gl-india-choice" aria-labelledby="gl-india-choice-title">
-        <div className="gl-india-choice-intro"><p className="gh-eyebrow">02 / CHOOSE YOUR REALITY</p><h2 id="gl-india-choice-title">What must this business work around?</h2><p>Choose the constraint that matters most today. These are starting directions, not guarantees of income or fit.</p><a href="#first-proof">What happens next <ArrowRight size={16} /></a></div>
-        <div className="gl-india-choice-stage">
-          <div className="gl-india-tabs" role="group" aria-label="Choose a starting situation">{startingPoints.map((point) => <button key={point.id} type="button" aria-pressed={choice === point.id} onClick={() => setChoice(point.id)}>{point.label}</button>)}</div>
-          <div className="gl-india-choice-story" key={choice}><div className="gl-india-choice-copy"><p className="gh-eyebrow">{selected.cue.toUpperCase()}</p><h3>{selected.headline}</h3><p>{selected.body}</p><div className="gl-india-note"><strong>One useful next step</strong><span>{selected.next}</span></div></div><aside className="gl-india-choice-next"><span>DO THIS WITH YOUR SITUATION</span><strong>{selected.action}</strong><p>Use the page to turn this direction into a question you can answer before a bigger spend.</p><Link to={selected.path}>Open the working page <ArrowUpRight size={17}/></Link></aside></div>
-          <div className="gl-india-category-picks">{categories.map((category) => { const art = categoryImage(category.slug); return <Link key={category.slug} to="/category/$categorySlug" params={{ categorySlug: category.slug }}><img src={art.src} alt={art.alt} loading="lazy" /><span>{category.name}<ArrowUpRight size={16} /></span></Link>; })}</div>
-        </div>
-      </V2PageSection>
-
-      <V2PageFaq className="gl-india-questions" aria-labelledby="gl-india-questions-title"><div><p className="gh-eyebrow">03 / THREE THINGS TO PROTECT</p><h2 id="gl-india-questions-title">Before you spend a rupee, make the risk visible.</h2></div><div className="gl-india-question-list">
-        <article><span>01</span><div><h3>Who has the problem today?</h3><p>Ask about the last time it happened. A compliment about your idea is not the same as a customer paying for the solution.</p><Link to="/business-idea-research-india">Look for the last purchase <ArrowUpRight size={16}/></Link></div></article>
-        <article><span>02</span><div><h3>When does cash come back?</h3><p>Stock, rent, credit and late payment can defeat a busy business. Put your own numbers into a calculator before you trust a headline margin.</p><Link to="/startup-cash-flow-india">Compare bill dates with collections <ArrowUpRight size={16} /></Link></div></article>
-        <article><span>03</span><div><h3>What would make you stop?</h3><p>Write down a failure condition in advance. A researched blueprint should help you say no to the wrong opportunity as well as yes to the right one.</p><Link to="/business-idea-risk-check">Set your cash and time boundary <ArrowUpRight size={16} /></Link></div></article>
-      </div></V2PageFaq>
-
-      <V2PageSection id="first-proof" className="gl-india-proof" aria-labelledby="gl-india-proof-title"><p className="gh-eyebrow">04 / FROM HOPE TO EVIDENCE</p><h2 id="gl-india-proof-title">A first proof you can do this week.</h2><p>Pick one idea, one customer question and one number. You do not need a company name to learn whether a problem is real.</p><div className="gl-india-proof-path"><Link to="/blueprints"><Compass size={25} /><strong>Open a completed idea</strong><span>Read the actual buyer, work and risk in a published blueprint.</span><ArrowUpRight size={18} /></Link><Link to="/business-demand-test-india"><BookOpen size={25} /><strong>Ask for one real move</strong><span>Choose a conversation, booking or paid trial and count the action.</span><ArrowUpRight size={18} /></Link><Link to="/business-pricing-india"><Calculator size={25} /><strong>Put a price on the promise</strong><span>Count delivery, owner time and fixed costs for one sale.</span><ArrowUpRight size={18} /></Link></div></V2PageSection>
-
-      <V2PageSection className="gl-india-lens" aria-labelledby="gl-india-lens-title"><div className="gl-india-lens-art"><img src="/images/guides/business-idea-validation-framework-test-before-you-build.webp" alt="Original business idea validation framework guide artwork in a complete 16:9 display" loading="lazy" /></div><div><p className="gh-eyebrow">05 / KEEP THE RIGHT QUESTION</p><h2 id="gl-india-lens-title">A model can challenge the idea. Your customers must answer it.</h2><p>On a completed blueprint, the Validate button prepares a research prompt for Claude, Perplexity, ChatGPT or Grok. Ask it for opposing evidence and missing assumptions. Then verify the answer with people and sources in your market.</p><div className="gl-india-lens-actions"><Link to="/startup-idea-validation" className="gh-button gh-button-primary">Work through the validation field guide <ArrowUpRight size={17} /></Link><Link to="/business-idea-research-india" className="gh-button gh-button-secondary">Check the buyer and countercase</Link></div></div></V2PageSection>
-
-      <SellerFaq title="Questions worth asking first." faq={[{q:"Are all category paths filled with ideas?",a:<><p>No. The approved map contains categories with focused paths. The separate published-blueprint index shows completed source records you can read now. We do not label an empty path as a published idea.</p></>},{q:"Does “work from home” mean zero startup cost?",a:<><p>No. It describes where work may happen, not what it costs. Check the specific blueprint and your own inputs before spending.</p></>},{q:"Will an AI model tell me if my business will succeed?",a:<><p>No model can promise that. Use the prepared prompt to find questions and possible risks, then speak to buyers, test demand and check your numbers.</p></>},{q:"Where can I ask a person?",a:<><p><Link to="/contact">Contact the BBI team</Link> with your question and the market you are considering. A person reads the inbox.</p></>}]} />
-
-      <V2PageCta className="gl-india-final"><p className="gh-eyebrow">THE NEXT STEP IS SMALL ON PURPOSE</p><h2>Find one idea worth testing. Keep the rest of your life intact.</h2><div><Link to="/blueprints" className="gh-button gh-button-primary">Search published business ideas <Search size={17} /></Link><Link to="/browse" className="gh-button gh-button-secondary">Explore all categories</Link></div></V2PageCta>
-    </div></GlassShell>
-  </>;
+function IndiaBusinessIdeasPage(){
+  const hub=Route.useLoaderData();
+  const [choice,setChoice]=useState<(typeof startingPoints)[number]["id"]>("job");
+  const selected=startingPoints.find(point=>point.id===choice)!;
+  const matching=hub.categories.filter(category=>selected.categoryNames.test(category.name));
+  const categories=(matching.length?matching:hub.categories).slice(0,6);
+  return <V2Frame active="/startup-guides">
+    <JsonLd schema={[webPageSchema({path:"/business-ideas-india",name:"Business ideas in India for real life",description:"A founder's decision path from situation to first proof."}),breadcrumbSchema([{name:"Home",path:"/"},{name:"Business ideas in India",path:"/business-ideas-india"}])]} />
+    <div className="bg-slate-50 pt-24 lg:pt-28"><nav className={`${wrap} flex flex-wrap items-center gap-2 py-3 text-sm text-slate-600`} aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={15}/><a href="/startup-guides">Guides</a><ChevronRight size={15}/><span>Business ideas in India</span></nav></div>
+    <section className="bg-gradient-to-b from-blue-50 to-white py-12 lg:py-16"><div className={`${wrap} grid items-center gap-8 lg:grid-cols-2`}><div><span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-bold text-blue-800">The first move · India</span><h1 className="mt-5 text-4xl font-bold leading-tight md:text-5xl">Business ideas for <span className="text-blue-700">the life you actually have.</span></h1><p className="mt-5 max-w-2xl text-lg text-slate-600">A salary you cannot leave. A family that needs you. A town you know by heart. Start there. Then find an idea that can survive contact with your real life.</p><div className="mt-7 flex flex-wrap gap-3"><a href="#choose-your-start" className={primary}>Find your starting point <ArrowRight size={17}/></a><a href="/blueprints" className="inline-flex min-h-11 items-center rounded-xl border bg-white px-6 py-3 font-semibold hover:border-blue-500">Read published ideas</a></div></div><aside className={card}><h2 className="text-xl font-bold">Pick the question that is keeping you awake</h2><div className="mt-4 grid gap-3">{[["Two ideas in mind?","Compare them with the same evidence","/startup-idea-comparison"],["No buyer yet?","Trace the first person who may pay","/first-customer-india"],["Money is tight?","See the cash you must risk first","/startup-costs-india"]].map(([question,answer,href])=><a className="rounded-xl border bg-slate-50 p-4 hover:border-blue-500" href={href} key={href}><strong className="block">{question}</strong><span className="mt-1 block text-sm text-slate-600">{answer}</span></a>)}</div></aside></div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">The cost of a wrong start is personal.</h2><p className="mt-3 max-w-3xl text-slate-600">A month of savings, evenings you cannot get back, or a promise to someone who trusts you. Decide what this business can ask of your life before you choose the attractive idea.</p><div className="mt-6 grid gap-4 md:grid-cols-3">{[["Cash you can risk","Write the amount before the first sale.","/startup-costs-india"],["A buyer you can reach","Find the last workaround, not a compliment.","/first-customer-india"],["Two possible directions","Give both ideas the same five questions.","/startup-idea-comparison"]].map(([title,copy,href])=><a className={card} href={href} key={href}><h3 className="font-bold">{title}</h3><p className="mt-2 text-slate-600">{copy}</p><ArrowRight className="mt-4 text-blue-700" size={17}/></a>)}</div></div></section>
+    <section id="choose-your-start" className="scroll-mt-28 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">What must this business work around?</h2><p className="mt-3 max-w-3xl text-slate-600">Choose the constraint that matters most today. These are starting directions, not guarantees of income or fit.</p><div role="group" aria-label="Choose a starting situation" className="mt-6 flex flex-wrap gap-2">{startingPoints.map(point=><button key={point.id} type="button" aria-pressed={choice===point.id} onClick={()=>setChoice(point.id)} className={`min-h-11 rounded-xl border px-5 py-3 font-semibold ${choice===point.id?"border-blue-600 bg-blue-600 text-white":"bg-white hover:border-blue-500"}`}>{point.label}</button>)}</div><div className="mt-6 grid gap-5 md:grid-cols-[1.4fr_1fr]" aria-live="polite"><article className={card}><span className="text-sm font-bold uppercase text-blue-700">{selected.cue}</span><h3 className="mt-3 text-2xl font-bold">{selected.headline}</h3><p className="mt-3 text-slate-600">{selected.body}</p><h4 className="mt-5 font-bold">One useful next step</h4><p className="mt-2 text-slate-600">{selected.next}</p></article><aside className={`${card} bg-blue-50`}><span className="text-sm font-bold text-blue-700">Do this with your situation</span><h3 className="mt-3 text-xl font-bold">{selected.action}</h3><p className="mt-3 text-slate-600">Use the page to turn this direction into a question you can answer before a bigger spend.</p><a href={selected.path} className="mt-5 inline-flex items-center gap-2 font-semibold text-blue-700 hover:underline">Open the working page <ArrowRight size={17}/></a></aside></div><div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{categories.map(category=><a className={card} href={`/category/${category.slug}`} key={category.slug}><h3 className="font-bold">{category.name}</h3><span className="mt-3 inline-flex items-center gap-2 text-blue-700">Explore category <ArrowRight size={16}/></span></a>)}</div></div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Before you spend a rupee, make the risk visible.</h2><div className="mt-6 grid gap-4 md:grid-cols-3">{[["Who has the problem today?","Ask about the last time it happened. A compliment about your idea is not the same as a customer paying for the solution.","/business-idea-research-india"],["When does cash come back?","Stock, rent, credit and late payment can defeat a busy business. Put your own numbers into a calculator before you trust a headline margin.","/startup-cash-flow-india"],["What would make you stop?","Write down a failure condition in advance. A researched blueprint should help you say no to the wrong opportunity as well as yes to the right one.","/business-idea-risk-check"]].map(([title,copy,href],index)=><a className={card} key={href} href={href}><span className="text-sm font-bold text-blue-700">0{index+1}</span><h3 className="mt-3 text-xl font-bold">{title}</h3><p className="mt-3 text-slate-600">{copy}</p><ArrowRight className="mt-4 text-blue-700" size={17}/></a>)}</div></div></section>
+    <section id="first-proof" className="scroll-mt-28 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">A first proof you can do this week.</h2><p className="mt-3 max-w-3xl text-slate-600">Pick one idea, one customer question and one number. You do not need a company name to learn whether a problem is real.</p><div className="mt-6 grid gap-4 md:grid-cols-3">{([[Compass,"Open a completed idea","Read the actual buyer, work and risk in a published blueprint.","/blueprints"],[BookOpen,"Ask for one real move","Choose a conversation, booking or paid trial and count the action.","/business-demand-test-india"],[Calculator,"Put a price on the promise","Count delivery, owner time and fixed costs for one sale.","/business-pricing-india"]] as const).map(([Icon,title,copy,href])=><a className={card} key={href} href={href}><Icon className="text-blue-700" size={25}/><h3 className="mt-4 text-xl font-bold">{title}</h3><p className="mt-3 text-slate-600">{copy}</p><ArrowRight className="mt-4 text-blue-700" size={17}/></a>)}</div></div></section>
+    <section className="bg-slate-50 py-12 lg:py-16"><div className={`${wrap} grid items-center gap-7 md:grid-cols-2`}><img className="w-full rounded-2xl object-cover" src="/images/guides/business-idea-validation-framework-test-before-you-build.webp" alt="Business idea validation framework guide" loading="lazy"/><div><h2 className="text-3xl font-bold">A model can challenge the idea. Your customers must answer it.</h2><p className="mt-4 text-slate-600">On a completed blueprint, the Validate button prepares a research prompt for Claude, Perplexity, ChatGPT or Grok. Ask it for opposing evidence and missing assumptions. Then verify the answer with people and sources in your market.</p><a href="/startup-idea-validation" className="mt-5 inline-flex items-center gap-2 font-semibold text-blue-700 hover:underline">Work through the validation field guide <ArrowRight size={17}/></a></div></div></section>
+    <SellerFaq title="Questions worth asking first" faq={[{q:"Are all category paths filled with ideas?",a:"The approved map contains categories with focused paths. The published idea index shows source records you can read now."},{q:"Does ‘work from home’ mean zero startup cost?",a:"No. It describes where work may happen, not what it costs. Check the specific idea and your own inputs before spending."},{q:"Will an AI model tell me if my business will succeed?",a:"No model can promise that. Use the prepared prompt to find questions and possible risks, then speak to buyers, test demand and check your numbers."},{q:"Where can I ask a person?",a:<a href="/contact" className="font-semibold text-blue-700 underline">Contact the team with your question and market.</a>}]} />
+    <section className="bg-blue-700 py-12 text-white lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Find one idea worth testing. Keep the rest of your life intact.</h2><a href="/blueprints" className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-blue-800 hover:bg-blue-50">Search published business ideas <Search size={17}/></a></div></section>
+  </V2Frame>;
 }
