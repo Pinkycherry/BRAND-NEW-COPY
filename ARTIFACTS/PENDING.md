@@ -331,3 +331,9 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Preserve the current working formulas. Add an editable first-quote brief and an AI deep-link prompt using actual entered calculator figures, with estimates clearly labelled and no invented tax/regulatory conclusion. Add three actions to published idea cards and reduce repeated section padding.
 - Vercel check for First Customer is success; browser visual screenshots remain unavailable. Test the pricing calculation with hand-checked examples, mobile layout at 360/390px, quote copy/provider URLs and local data behavior after deploy.
 - No API integration, auth logic or database changes.
+
+
+### 2026-10-30 06:20 IST — Business Pricing India implementation QA
+- Implemented a first-quote brief and prepared AI handoff using entered calculator values, selected shortlist and quote terms. Existing calculator formulas were left unchanged.
+- Added the standard three actions to published idea cards. No API keys, AI API, sign-in gate or database write.
+- PENDING: confirm CI/Vercel result; manually regression-test calculations; test long and Unicode prompt handoff to ChatGPT, Claude, Grok and Perplexity; inspect 360/390px layout and genuine before/after screenshots.
