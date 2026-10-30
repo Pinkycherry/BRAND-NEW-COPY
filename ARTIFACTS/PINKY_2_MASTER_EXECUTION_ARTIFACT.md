@@ -212,3 +212,13 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 ## 2026-10-30 05:37:36 IST — Business Pricing India pre-edit hypothesis
 - Current source has a functioning price worksheet and offer type selector. Preserve the formulas. Proposed practical upgrade: quote terms generator and AI deep-link prompt, then give each published idea card three real actions. Middle spacing tightened, no unrelated filler.
 - Current public preview could not be rendered in the browser tool; screenshot verification remains open. First Customer commit e5728bb5fcfdb9ee79189a617c7b41623c08199c Vercel status is success. No API integration is in scope.
+
+
+## 2026-10-30 06:20 IST — Business Pricing India: first-quote workflow
+- Before: https://bbinewcopy.vercel.app/business-pricing-india
+- After: https://bbinewcopy.vercel.app/business-pricing-india
+- Code commit: https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/1974f4a238ecf1d3a71f2877446cea232318f3c6
+- Preserved the existing pricing worksheet and arithmetic. Added a structured first-quote brief for buyer, promised outcome, included/excluded scope, delivery and collection terms.
+- Added a reviewable provider handoff carrying the actual entered calculator figures and locally selected idea shortlist. Full prompt and compact URL prompt are available through the existing four-provider component. No AI API call, API-key storage, authentication gate or database write.
+- Published idea cards now expose Read full idea, Add to compare and Validate this idea.
+- Build, live deployment and 360/390px visual QA are not verified in this environment. Verify Vercel deployment, arithmetic regression, provider URL behavior and mobile form/card layout before calling this page complete.
