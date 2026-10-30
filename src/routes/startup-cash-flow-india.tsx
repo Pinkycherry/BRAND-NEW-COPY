@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, ChevronRight, Plus, Trash2 } from "lucide-react";
+import { ArrowRight, ChevronRight, Download, Plus, Trash2 } from "lucide-react";
 import { V2Frame } from "@/components/v2/frame";
 import { SellerFaq } from "@/components/v2/faq";
 import { getListsHub } from "@/lib/lists.functions";
@@ -9,6 +9,13 @@ import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 type CashEvent = { id: number; date: string; label: string; incoming: string; outgoing: string };
 type EventField = "date" | "label" | "incoming" | "outgoing";
+const CASH_FLOW_STORAGE_KEY = "bbi-startup-cash-flow-v1";
+function shiftDate(date: string, days: number) {
+  const [year, month, day] = date.split("-").map(Number);
+  const shifted = new Date(Date.UTC(year, month - 1, day + days));
+  return shifted.toISOString().slice(0, 10);
+}
+function csvCell(value: string | number) { return `"${String(value).replace(/"/g, '""')}"`; }
 const money = (n: number) => new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 }).format(n);
 const amount = (s: string) => Math.max(0, Number(s) || 0);
 const wrap = "mx-auto max-w-6xl px-4 md:px-6";
@@ -38,6 +45,29 @@ function CashFlowPage() {
   const [opening, setOpening] = useState("");
   const [events, setEvents] = useState<CashEvent[]>([{ id: 1, date: "", label: "", incoming: "", outgoing: "" }]);
   const [late, setLate] = useState(false);
+  const [delayDays, setDelayDays] = useState("14");
+  const [storageReady, setStorageReady] = useState(false);
+  useEffect(() => {
+    try {
+      const saved = JSON.parse(window.localStorage.getItem(CASH_FLOW_STORAGE_KEY) || "null") as { opening?: unknown; events?: unknown } | null;
+      if (saved && typeof saved === "object") {
+        if (typeof saved.opening === "string") setOpening(saved.opening);
+        if (Array.isArray(saved.events)) {
+          const valid = saved.events.filter((item): item is CashEvent =>
+            Boolean(item) && typeof item.id === "number" && typeof item.date === "string" &&
+            typeof item.label === "string" && typeof item.incoming === "string" && typeof item.outgoing === "string"
+          ).slice(0, 100);
+          if (valid.length) setEvents(valid);
+        }
+      }
+    } catch { /* Keep the empty worksheet if browser storage is unavailable. */ }
+    setStorageReady(true);
+  }, []);
+  useEffect(() => {
+    if (!storageReady) return;
+    try { window.localStorage.setItem(CASH_FLOW_STORAGE_KEY, JSON.stringify({ opening, events })); }
+    catch { /* The worksheet remains usable for this visit if storage is full or blocked. */ }
+  }, [opening, events, storageReady]);
   const ordered = events.filter(event => event.date && event.label.trim()).slice().sort((a, b) => a.date.localeCompare(b.date) || a.id - b.id);
   let running = amount(opening), lowest = running;
   const rows = ordered.map(event => {
@@ -46,12 +76,40 @@ function CashFlowPage() {
     lowest = Math.min(lowest, running);
     return { ...event, before, balance: running };
   });
-  let delayed = amount(opening), delayedLow = delayed;
-  for (const event of ordered) { delayed -= amount(event.outgoing); delayedLow = Math.min(delayedLow, delayed); }
+  const delay = Number(delayDays) || 0;
+  const delayedEvents = ordered.flatMap(event => {
+    const outgoing = amount(event.outgoing), incoming = amount(event.incoming);
+    return [
+      ...(outgoing > 0 ? [{ date: event.date, label: event.label + " — payment due", change: -outgoing, id: event.id * 2 }] : []),
+      ...(incoming > 0 ? [{ date: shiftDate(event.date, delay), label: event.label + " — delayed collection", change: incoming, id: event.id * 2 + 1 }] : []),
+    ];
+  }).sort((a, b) => a.date.localeCompare(b.date) || a.id - b.id);
+  let delayedBalance = amount(opening), delayedLow = delayedBalance;
+  const delayedRows = delayedEvents.map(event => {
+    delayedBalance += event.change;
+    delayedLow = Math.min(delayedLow, delayedBalance);
+    return { ...event, balance: delayedBalance };
+  });
+  const fundingGap = Math.max(0, -lowest);
+  const delayedFundingGap = Math.max(0, -delayedLow);
   const totalIn = ordered.reduce((sum, event) => sum + amount(event.incoming), 0);
   const totalOut = ordered.reduce((sum, event) => sum + amount(event.outgoing), 0);
   function update(id: number, key: EventField, text: string) { setEvents(all => all.map(event => event.id === id ? { ...event, [key]: text } : event)); }
   function add() { setEvents(all => [...all, { id: Date.now(), date: "", label: "", incoming: "", outgoing: "" }]); }
+  function exportForecast() {
+    const header = ["Date", "Event", "Opening balance before event (INR)", "Money collected (INR)", "Money paid (INR)", "Closing balance (INR)"];
+    const data = rows.map(row => [row.date, row.label, row.before, amount(row.incoming), amount(row.outgoing), row.balance]);
+    const csv = [header, ...data].map(row => row.map(csvCell).join(",")).join("\n");
+    const blob = new Blob(["\\uFEFF", csv], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "businessidea-startup-cash-flow-forecast.csv";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  }
   return <V2Frame active="/startup-guides">
     <JsonLd schema={[
       webPageSchema({ path: "/startup-cash-flow-india", name: "Startup cash flow in India", description: "A dated event ledger to distinguish sales from money actually available when bills are due." }),
@@ -64,9 +122,9 @@ function CashFlowPage() {
       ["Work delivered", "List each bill that comes due before the full payment arrives."],
       ["Cash collected", "Use the amount and date you realistically expect; mark uncertainty separately."],
     ].map(([title, copy], index) => <article className={card} key={title}><span className="text-sm font-bold text-blue-700">0{index + 1}</span><h3 className="mt-3 text-xl font-bold">{title}</h3><p className="mt-3 text-slate-600">{copy}</p></article>)}</div></div></section>
-    <section id="cash-calendar" className="scroll-mt-28 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Build a cash calendar.</h2><p className="mt-3 max-w-3xl text-slate-600">Enter an opening balance and dated events in the order you expect. The calculation sorts valid rows by date. Blank or undated rows do not enter the totals. Entries remain in this browser tab only.</p><div className="mt-6 grid items-start gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-      <div className={card}><label className="block font-semibold">Opening cash available (₹)<input className={input} type="number" min="0" inputMode="decimal" value={opening} onChange={event => setOpening(event.target.value)} /></label><h3 className="mt-6 text-xl font-bold">Expected events</h3><p className="mt-2 text-slate-600">Use separate rows when money leaves and returns on different dates.</p><div className="mt-4 grid gap-4">{events.map((event, index) => <div className="rounded-xl border bg-slate-50 p-4" key={event.id}><div className="flex items-center justify-between"><strong>Event {index + 1}</strong><button type="button" onClick={() => setEvents(all => all.filter(item => item.id !== event.id))} aria-label={`Remove event ${index + 1}`} className="rounded-lg p-2 text-slate-600 hover:bg-white hover:text-red-700"><Trash2 size={17}/></button></div><div className="mt-3 grid gap-4 sm:grid-cols-2"><label className="text-sm font-semibold">Date<input className={input} type="date" value={event.date} onChange={e => update(event.id, "date", e.target.value)} /></label><label className="text-sm font-semibold">What happens?<input className={input} value={event.label} onChange={e => update(event.id, "label", e.target.value)} /></label><label className="text-sm font-semibold">Money collected (₹)<input className={input} type="number" min="0" inputMode="decimal" value={event.incoming} onChange={e => update(event.id, "incoming", e.target.value)} /></label><label className="text-sm font-semibold">Money paid (₹)<input className={input} type="number" min="0" inputMode="decimal" value={event.outgoing} onChange={e => update(event.id, "outgoing", e.target.value)} /></label></div></div>)}</div><button type="button" className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-xl border px-5 py-3 font-semibold hover:border-blue-500" onClick={add}><Plus size={17}/>Add another dated event</button></div>
-      <aside className={`${card} bg-blue-50`} aria-live="polite"><h3 className="text-xl font-bold">After each event</h3><dl className="mt-5 grid gap-3 sm:grid-cols-2"><div><dt>Expected in</dt><dd className="font-bold text-blue-700">{money(totalIn)}</dd></div><div><dt>Expected out</dt><dd className="font-bold text-blue-700">{money(totalOut)}</dd></div></dl>{rows.length ? <ol className="mt-5 grid gap-3">{rows.map(row => <li className="rounded-xl bg-white p-3" key={row.id}><span className="block break-words">{row.date} · {row.label}</span><strong className={`mt-1 block ${row.balance < 0 ? "text-red-700" : "text-blue-700"}`}>{money(row.balance)}</strong><small className="break-words text-slate-600">{money(row.before)} + {money(amount(row.incoming))} − {money(amount(row.outgoing))}</small></li>)}</ol> : <p className="mt-5 text-slate-600">Add a date and description to an event to see the running balance. Zero is an empty worksheet, not proof that the business has no cash need.</p>}<div className="mt-5 rounded-xl bg-white p-4"><span className="block">Lowest cash balance in this sequence</span><strong className="mt-1 block text-xl text-blue-700">{rows.length ? money(lowest) : "—"}</strong><small className="text-slate-600">A negative balance shows an amount that must be funded or rescheduled under these assumptions.</small></div><label className="mt-5 flex items-start gap-3 text-sm font-semibold"><input className="mt-1" type="checkbox" checked={late} onChange={event => setLate(event.target.checked)} />Show if all expected collections arrive after listed bills</label>{late && <p className="mt-3 text-sm">With planned collections delayed beyond these events, the lowest balance would be <strong>{money(delayedLow)}</strong>. This is a stress case, not a prediction.</p>}</aside>
+    <section id="cash-calendar" className="scroll-mt-28 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Build a cash calendar.</h2><p className="mt-3 max-w-3xl text-slate-600">Enter an opening balance and dated events in the order you expect. The calculation sorts valid rows by date. Blank or undated rows do not enter the totals. Your opening balance and dated events are saved in this browser only. They are not sent to the BusinessIdea.io database.</p><div className="mt-6 grid items-start gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+      <div className={card}><label className="block font-semibold">Opening cash available (₹)<input className={input} type="number" min="0" inputMode="decimal" value={opening} onChange={event => setOpening(event.target.value)} /></label><h3 className="mt-6 text-xl font-bold">Expected events</h3><p className="mt-2 text-slate-600">Use separate rows when money leaves and returns on different dates.</p><div className="mt-4 grid gap-4">{events.map((event, index) => <div className="rounded-xl border bg-slate-50 p-4" key={event.id}><div className="flex items-center justify-between"><strong>Event {index + 1}</strong><button type="button" onClick={() => setEvents(all => all.filter(item => item.id !== event.id))} aria-label={`Remove event ${index + 1}`} className="rounded-lg p-2 text-slate-600 hover:bg-white hover:text-red-700"><Trash2 size={17}/></button></div><div className="mt-3 grid gap-4 sm:grid-cols-2"><label className="text-sm font-semibold">Date<input className={input} type="date" value={event.date} onChange={e => update(event.id, "date", e.target.value)} /></label><label className="text-sm font-semibold">What happens?<input className={input} value={event.label} onChange={e => update(event.id, "label", e.target.value)} /></label><label className="text-sm font-semibold">Money collected (₹)<input className={input} type="number" min="0" inputMode="decimal" value={event.incoming} onChange={e => update(event.id, "incoming", e.target.value)} /></label><label className="text-sm font-semibold">Money paid (₹)<input className={input} type="number" min="0" inputMode="decimal" value={event.outgoing} onChange={e => update(event.id, "outgoing", e.target.value)} /></label></div></div>)}</div><div className="mt-4 flex flex-wrap gap-3"><button type="button" className="inline-flex min-h-11 items-center gap-2 rounded-xl border px-5 py-3 font-semibold hover:border-blue-500" onClick={add}><Plus size={17}/>Add another dated event</button><button type="button" disabled={!rows.length} className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-blue-200 bg-blue-50 px-5 py-3 font-semibold text-blue-800 hover:bg-blue-100 disabled:cursor-not-allowed disabled:opacity-50" onClick={exportForecast}><Download size={17}/>Download forecast CSV</button></div></div>
+      <aside className={`${card} bg-blue-50`} aria-live="polite"><h3 className="text-xl font-bold">After each event</h3><dl className="mt-5 grid gap-3 sm:grid-cols-2"><div><dt>Expected in</dt><dd className="font-bold text-blue-700">{money(totalIn)}</dd></div><div><dt>Expected out</dt><dd className="font-bold text-blue-700">{money(totalOut)}</dd></div></dl>{rows.length ? <ol className="mt-5 grid gap-3">{rows.map(row => <li className="rounded-xl bg-white p-3" key={row.id}><span className="block break-words">{row.date} · {row.label}</span><strong className={`mt-1 block ${row.balance < 0 ? "text-red-700" : "text-blue-700"}`}>{money(row.balance)}</strong><small className="break-words text-slate-600">{money(row.before)} + {money(amount(row.incoming))} − {money(amount(row.outgoing))}</small></li>)}</ol> : <p className="mt-5 text-slate-600">Add a date and description to an event to see the running balance. Zero is an empty worksheet, not proof that the business has no cash need.</p>}<div className="mt-5 rounded-xl bg-white p-4"><span className="block">Lowest cash balance in this sequence</span><strong className="mt-1 block text-xl text-blue-700">{rows.length ? money(lowest) : "—"}</strong><small className="text-slate-600">A negative balance shows an amount that must be funded or rescheduled under these assumptions.</small><div className="mt-3 border-t border-blue-100 pt-3"><span className="block text-sm text-slate-700">Extra cash needed to avoid a negative balance</span><strong className="mt-1 block text-xl text-blue-800">{money(fundingGap)}</strong></div></div><label className="mt-5 flex items-start gap-3 text-sm font-semibold"><input className="mt-1" type="checkbox" checked={late} onChange={event => setLate(event.target.checked)} />Test delayed customer collections</label>{late && <div className="mt-3 rounded-xl border border-amber-200 bg-amber-50 p-4"><label className="block text-sm font-semibold">Delay incoming payments by<select className={input} value={delayDays} onChange={event => setDelayDays(event.target.value)}><option value="7">7 days</option><option value="14">14 days</option><option value="30">30 days</option></select></label><p className="mt-3 text-sm text-slate-700">Bills stay on their original dates; each expected collection moves by {delayDays} days.</p><p className="mt-2 text-sm">Lowest balance in this delayed scenario: <strong>{money(delayedLow)}</strong></p><p className="mt-1 text-sm">Extra cash needed to cover the delayed-payment gap: <strong>{money(delayedFundingGap)}</strong></p>{delayedRows.length>0&&<ol className="mt-3 grid gap-2">{delayedRows.map(row=><li className="flex flex-wrap justify-between gap-2 rounded-lg bg-white p-2 text-sm" key={row.id}><span>{row.date} · {row.label}</span><strong className={row.balance<0?"text-red-700":"text-blue-700"}>{money(row.balance)}</strong></li>)}</ol>}</div>}</aside>
     </div></div></section>
     <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Look beyond the invoice.</h2><div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">{[
       ["Deposit", "Cash tied to a place", "A refundable premises deposit may return later, but it cannot pay today's supplier while held elsewhere."],
