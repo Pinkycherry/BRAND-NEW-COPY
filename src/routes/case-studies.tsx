@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CaseStudiesPage } from "@/components/case-studies/case-studies-page";
+import purchasedPage from "@/bought/case-studies.html?raw";
+import { boughtPage } from "@/bought/serve";
 
 export const Route = createFileRoute("/case-studies")({
-  component: CaseStudiesPage,
+  server: {
+    handlers: {
+      GET: async () => boughtPage(purchasedPage, "case-studies"),
+    },
+  },
 });
