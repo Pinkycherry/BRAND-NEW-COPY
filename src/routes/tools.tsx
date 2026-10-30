@@ -1,54 +1,11 @@
-import { SellerFaq } from "@/components/v2/faq";
-import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Calculator, ClipboardCheck, Search, Wrench } from "lucide-react";
-
-import { V2Frame } from "@/components/v2/frame";
-import { READY_CALCULATORS } from "@/lib/calculators";
+import purchasedPage from "@/bought/tools.html?raw";
+import { boughtPage } from "@/bought/serve";
 
 export const Route = createFileRoute("/tools")({
-  head: () => ({ meta: [{ title: "Free Business Idea Tools and Worksheets | BusinessIdea.io" }, { name: "description", content: "Working calculators, practical worksheets and research guides for testing a business idea in India." }] }),
-  component: ToolsPage,
+  server: {
+    handlers: {
+      GET: async () => boughtPage(purchasedPage, "tools"),
+    },
+  },
 });
-
-const wrap = "mx-auto max-w-6xl px-4 md:px-6";
-const card = "premium-card rounded-xl border border-border bg-card p-5 shadow-sm transition hover:border-primary/50 hover:-translate-y-0.5";
-type ToolStage = "Discover" | "Validate" | "Plan" | "Decide";
-const worksheets: { title: string; href: string; note: string; stage: ToolStage }[] = [
-  { title: "Browse published business ideas", href: "/browse", note: "Search real published records by category and constraints.", stage: "Discover" },
-  { title: "Business idea research brief", href: "/business-idea-research-india", note: "Record the buyer, problem, alternatives and sources.", stage: "Discover" },
-  { title: "Business demand test", href: "/business-demand-test-india", note: "Set an offer, buyer, deadline and observable action.", stage: "Validate" },
-  { title: "Startup idea validation brief", href: "/startup-idea-validation", note: "Capture evidence, assumptions and the next reversible test.", stage: "Validate" },
-  { title: "First customer worksheet", href: "/first-customer-india", note: "Prepare buyer questions and record what happened.", stage: "Validate" },
-  { title: "Compare two to four ideas", href: "/startup-idea-comparison", note: "Compare the same evidence and record what is missing.", stage: "Decide" },
-  { title: "Founder decision journal", href: "/founder-decision-journal", note: "Record claims, counterevidence and decisions.", stage: "Decide" },
-  { title: "Startup costs India", href: "/startup-costs-india", note: "Separate setup cash, monthly commitments and the funding gap.", stage: "Plan" },
-  { title: "Business pricing India", href: "/business-pricing-india", note: "Check direct cost, founder time and a first quote.", stage: "Plan" },
-  { title: "Startup cash flow India", href: "/startup-cash-flow-india", note: "Map dated collections, bills and delayed payments.", stage: "Plan" },
-  { title: "Startup launch plan", href: "/startup-launch-plan-india", note: "Work through four evidence gates.", stage: "Plan" },
-  { title: "Weekend stall profit check", href: "/weekend-market-stall-profit-check", note: "Check one market day with your figures.", stage: "Plan" },
-  { title: "Coaching batch check", href: "/coaching-batch-business-idea-india", note: "Test seats, preparation and a class slot.", stage: "Plan" },
-];
-
-function ToolsPage() {
-  const [query, setQuery] = useState("");
-  const [stage, setStage] = useState<"All" | ToolStage>("All");
-  const match = (s: string) => s.toLowerCase().includes(query.trim().toLowerCase());
-  const calculators = READY_CALCULATORS.filter(t => match(`${t.title} ${t.answers}`));
-  const sheets = worksheets.filter(t => match(`${t.title} ${t.note} ${t.stage}`) && (stage === "All" || t.stage === stage));
-  return <V2Frame active="/tools">
-    {/* Purchased tools order: hero, search, journey, filter, directories,
-        own tools, catalogue, why, method, FAQ, CTA, related reading. */}
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-primary/5 to-white pt-28 pb-12 lg:pt-32 lg:pb-16"><div className={`${wrap} text-center`}><span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary"><Wrench size={16}/> Free founder tools</span><h1 className="mx-auto mt-5 max-w-4xl text-balance text-4xl font-bold md:text-6xl">Tools to test the next step in your business idea.</h1><p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">Use working calculators with your own numbers, worksheets for decisions, and guides for the research outside the screen.</p><div className="mt-7 flex flex-wrap justify-center gap-3"><a className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700" href="#tool-catalog">Explore tools <ArrowRight size={17}/></a><a className="inline-flex min-h-11 items-center rounded-xl border border-border bg-card px-6 py-3 font-semibold hover:border-blue-500" href="/calculator">All calculators</a></div></div></section>
-    <section id="tools-search" className="bg-background py-7"><div className={`${wrap} max-w-3xl`}><label className="flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-2 shadow-sm"><Search size={19} className="text-muted-foreground"/><span className="sr-only">Search available tools</span><input value={query} onChange={e=>setQuery(e.target.value)} type="search" placeholder="Search calculators and worksheets" className="min-w-0 w-full bg-transparent py-3 outline-none"/></label><div className="mt-4 flex flex-wrap gap-2" role="group" aria-label="Filter worksheets by founder stage">{(["All","Discover","Validate","Plan","Decide"] as const).map(item=><button key={item} type="button" aria-pressed={stage===item} onClick={()=>setStage(item)} className={`min-h-10 rounded-full border px-4 py-2 text-sm font-semibold ${stage===item?"border-blue-700 bg-blue-700 text-white":"border-border bg-card hover:border-blue-500"}`}>{item}</button>)}</div></div></section>
-    <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-2xl font-bold">Choose by the question you face</h2><div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{[["Validate", "What evidence would show demand?", "/business-demand-test-india"],["Plan", "What happens in the first month?", "/startup-launch-plan-india"],["Calculate", "What do the numbers say?", "/calculator"],["Decide", "What would change your mind?", "/founder-decision-journal"]].map(([t,d,h])=><a className={card} href={h} key={t}><h3 className="font-bold text-primary">{t}</h3><p className="mt-2 text-sm text-muted-foreground">{d}</p></a>)}</div></div></section>
-    <nav className="sticky top-20 z-30 bg-background/95 py-3 backdrop-blur" aria-label="Tool sections"><div className={`${wrap} flex flex-wrap gap-2 text-sm font-semibold`}><a className="rounded-full border px-4 py-2 hover:border-primary" href="#calculators">Calculators</a><a className="rounded-full border px-4 py-2 hover:border-primary" href="#worksheets">Worksheets</a><a className="rounded-full border px-4 py-2 hover:border-primary" href="#more-resources">More resources</a></div></nav>
-    <section className="py-12 lg:py-16"><div className={wrap}><span className="text-xs font-bold uppercase tracking-widest text-primary">Built into this library</span><h2 className="mt-3 text-3xl font-bold">Start with our available tools.</h2><div className="mt-7 grid gap-4 md:grid-cols-3">{([ ["Working calculators", "Inspect the inputs, formula and result.", "/calculator", Calculator], ["Business idea toolkit", "Choose the question before the tool.", "/business-idea-toolkit", ClipboardCheck], ["Validation workbench", "Explore an idea and its next checks.", "/product", Wrench] ] as const).map(([t,d,h,Icon])=><a className={card} href={h} key={h}><Icon className="text-primary"/><h3 className="mt-4 text-xl font-bold">{t}</h3><p className="mt-2 text-sm text-muted-foreground">{d}</p><span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Explore <ArrowRight size={15}/></span></a>)}</div></div></section>
-    <section id="tool-catalog" className="py-14"><div className={wrap}><div id="calculators" className="scroll-mt-40"><h2 className="text-3xl font-bold">Working calculators</h2><p className="mt-2 text-muted-foreground">Enter your own figures and inspect the working. The calculators below compute a result on screen.</p><div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{calculators.map(t=><a className={card} href={`/calculator/${t.slug}`} key={t.slug}><Calculator className="text-primary"/><h3 className="mt-3 text-lg font-bold">{t.title}</h3><p className="mt-2 text-sm text-muted-foreground">{t.answers}</p><span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Open calculator <ArrowRight size={15}/></span></a>)}</div></div><div id="worksheets" className="mt-14 scroll-mt-40"><div className="flex flex-wrap items-end justify-between gap-3"><div><h2 className="text-3xl font-bold">Worksheets and decision checks</h2><p className="mt-2 text-sm text-muted-foreground">{sheets.length} matching worksheet(s) · {stage === "All" ? "all founder stages" : stage}</p></div></div><div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{sheets.map(t=><a className={card} href={t.href} key={t.href}><ClipboardCheck className="text-primary"/><h3 className="mt-3 text-lg font-bold">{t.title}</h3><p className="mt-2 text-sm text-muted-foreground">{t.note}</p><span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Open worksheet <ArrowRight size={15}/></span></a>)}</div></div>{!calculators.length && !sheets.length && <p className="mt-6 text-muted-foreground">No available tool matches. Try a different term.</p>}</div></section>
-    <section className="bg-muted/30 py-12 lg:py-16"><div className={wrap}><h2 className="text-2xl font-bold">Use a tool for the decision in front of you</h2><p className="mt-3 max-w-3xl text-muted-foreground">A calculator gives a result from the numbers you enter. A worksheet lists questions for evidence and the next decision. Neither replaces a conversation with a buyer.</p></div></section>
-    <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-2xl font-bold">How to use the results</h2><div className="mt-6 grid gap-4 md:grid-cols-3">{["Name the decision before choosing a tool.", "Check every input against a real source.", "Record what would change the conclusion."].map((s,i)=><div className={card} key={s}><span className="font-bold text-primary">0{i+1}</span><p className="mt-3 font-medium">{s}</p></div>)}</div></div></section>
-    <SellerFaq title="Frequently asked questions" faq={[{q:"Are the calculators free to use?",a:"The available calculators can be opened without a purchase. Enter your own assumptions and check the formula."},{q:"Will a tool prove demand?",a:"No. Demand needs a real buyer action, such as a conversation, booking or suitable small trial."},{q:"Which tool should I start with?",a:"Choose the decision you need to make, then open the matching calculator or checklist above."}]} />
-    <section className="bg-primary/5 py-12 lg:py-16"><div className={`${wrap} text-center`}><h2 className="text-3xl font-bold">One question, one check outside the screen.</h2><p className="mx-auto mt-3 max-w-xl text-muted-foreground">Start with a real idea, then use a tool for the next commitment.</p><a className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700" href="/browse">Browse ideas <ArrowRight size={16}/></a></div></section>
-    <section id="more-resources" className="py-12"><div className={wrap}><h2 className="text-2xl font-bold">More resources</h2><div className="mt-6 grid gap-4 md:grid-cols-3">{[["Useful tools", "/useful-tools"],["Business idea toolkit", "/business-idea-toolkit"],["Validation workbench", "/product"]].map(([t,h])=><a className={card} href={h} key={h}><BookOpen className="text-primary"/><span className="mt-3 flex items-center justify-between font-semibold">{t}<ArrowRight size={16}/></span></a>)}</div></div></section>
-  </V2Frame>;
-}
