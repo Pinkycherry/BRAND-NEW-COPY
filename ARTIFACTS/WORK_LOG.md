@@ -1080,3 +1080,13 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Examples are illustrative, not claims about named businesses or verified market research. Existing source guide content and idea records unchanged.
 - Commit: https://github.com/PinkyCherry/BRAND-NEW-COPY/commit/85758ffd950e199f3c5a79adef631877c43ddacc
 - QA pending: Vercel, 360/390px and desktop layout, selector combinations, buyer-question section, internal routes and noindex.
+
+
+## 2026-10-30 10:41 IST — Restore authored BBI renderers for purchased page routes
+- Founder clarified that source HTML and assets are already transferred; task is editing actual site pages, not moving files.
+- Read the site brief, design reference, page system, SEO/URL framework, current pending list, work log and butterfly-effect instructions before editing.
+- Found that the transferred purchased HTML snapshots were currently served wholesale by 13 route wrappers, exposing seller IdeaProof branding and stale product-specific claims while authored BusinessIdea.io React page components already existed for these destinations.
+- Reconnected these route entry points to authored BusinessIdea.io page components: FAQ, Case Studies, India Startup Failures, Startup Failure Database, Frameworks Comparison, Market Research, Open Source Research, Business Idea Lists, Coaching Business Ideas, Templates, Tools Directory, Alternate Tools and Topics Hub.
+- Kept all purchased source snapshots and their assets untouched as template reference material. No copying, moving or deletion. Homepage remains unchanged pending its own mapping/review.
+- No API key integration, AI API calls, Supabase schema/row changes, shared shell/global CSS edits or route slug changes.
+- Verification not yet complete: confirm all component imports/exports; run offline typecheck/build; test route SSR and responsive states; verify preview noindex and Vercel deployment. Do not describe as live-verified until these checks pass.
