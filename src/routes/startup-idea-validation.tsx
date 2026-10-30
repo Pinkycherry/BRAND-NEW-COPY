@@ -2,7 +2,7 @@ import { SellerFaq } from "@/components/v2/faq";
 import { V2PageCard, V2PageCta, V2PageFaq, V2PageHero, V2PageSection } from "@/components/v2/page-sections";
 import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, BookOpen, Calculator, Compass } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BookOpen, Calculator, Compass, Download, Trash2 } from "lucide-react";
 import { ProviderPromptActions } from "@/components/founder-workspace/provider-prompt-actions";
 import { useFounderWorkspace } from "@/lib/founder-workspace";
 import { GlassShell } from "@/components/glass-shell";
@@ -68,7 +68,57 @@ function ValidationFieldPage() {
       window.localStorage.setItem(VALIDATION_BRIEF_KEY, JSON.stringify({ buyer, problem, workaround, offer, evidence, proposedTest, price, choice }));
     } catch { /* The brief remains usable for this visit if storage is unavailable. */ }
   }, [buyer, problem, workaround, offer, evidence, proposedTest, price, choice, storageReady]);
+
   const completed = [buyer, problem, workaround, offer, evidence, proposedTest, price].filter((value) => value.trim().length > 0).length;
+  const exportValidationBrief = () => {
+    const content = [
+      "# Startup idea validation brief",
+      "",
+      "## Buyer",
+      buyer || "Not recorded",
+      "",
+      "## Problem or recent incident",
+      problem || "Not recorded",
+      "",
+      "## Current alternative or workaround",
+      workaround || "Not recorded",
+      "",
+      "## Proposed offer",
+      offer || "Not recorded",
+      "",
+      "## Price to test (INR)",
+      price || "Not specified",
+      "",
+      "## Evidence and source",
+      evidence || "Not recorded",
+      "",
+      "## Proposed small test",
+      proposedTest || "Not recorded",
+      "",
+      "## Next-step decision",
+      decisionCopy[choice].title,
+      decisionCopy[choice].next,
+      "",
+      "Completeness: " + completed + " of 7 fields. This is not a validation score.",
+    ].join("\\n");
+    const url = URL.createObjectURL(new Blob([content], { type: "text/markdown;charset=utf-8" }));
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = "businessidea-startup-validation-brief.md";
+    anchor.click();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+  };
+  const clearValidationBrief = () => {
+    if (!window.confirm("Clear the saved validation brief from this browser?")) return;
+    setBuyer("");
+    setProblem("");
+    setWorkaround("");
+    setOffer("");
+    setEvidence("");
+    setProposedTest("");
+    setPrice("");
+    setChoice("wait");
+  };
   const validationPrompt = [
     "Act as a careful startup validation research partner for an Indian founder. Do not invent evidence, market size, demand or legal conclusions. Separate founder observations, external sources, assumptions and unanswered questions. Ask for missing critical context before making a recommendation.",
     "Selected published idea shortlist: " + (workspace.shortlist.map(item => item.title).join("; ") || "none selected"),
@@ -115,7 +165,12 @@ function ValidationFieldPage() {
             <p className="text-xs text-slate-500">Saved in this browser only. Do not enter private customer identifiers or confidential business information.</p>
           </div>
         </div>
-        <aside className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><p className="gh-eyebrow">BRIEF COMPLETION</p><strong className="mt-2 block text-3xl text-blue-700">{completed}/7</strong><p className="mt-1 text-sm text-slate-600">Fields completed. This is a completeness check, not a validation score.</p><div className="mt-5 h-2 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-blue-600" style={{width:(completed/7*100)+"%"}}/></div><div className="mt-5"><h3 className="font-bold">Carry the brief into an AI review</h3><p className="mt-2 text-sm text-slate-600">Ask for missing assumptions and a reversible test. Verify sources and speak to buyers; an AI response is not proof of demand.</p></div><ProviderPromptActions title="Prepare validation questions" prompt={validationPrompt} prefillPrompt={compactValidationPrompt}/></aside>
+        <aside className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><p className="gh-eyebrow">BRIEF COMPLETION</p><strong className="mt-2 block text-3xl text-blue-700">{completed}/7</strong><p className="mt-1 text-sm text-slate-600">Fields completed. This is a completeness check, not a validation score.</p><div className="mt-5 h-2 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-blue-600" style={{width:(completed/7*100)+"%"}}/></div><div className="mt-5"><h3 className="font-bold">Carry the brief into an AI review</h3><p className="mt-2 text-sm text-slate-600">Ask for missing assumptions and a reversible test. Verify sources and speak to buyers; an AI response is not proof of demand.</p></div><ProviderPromptActions title="Prepare validation questions" prompt={validationPrompt} prefillPrompt={compactValidationPrompt}/>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <button type="button" onClick={exportValidationBrief} className="inline-flex min-h-10 items-center gap-2 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-800 hover:border-blue-500"><Download size={15}/> Download brief</button>
+              <button type="button" onClick={clearValidationBrief} className="inline-flex min-h-10 items-center gap-2 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-800 hover:border-red-400"><Trash2 size={15}/> Clear brief</button>
+            </div>
+            <p className="mt-2 text-xs text-slate-500">Download creates a Markdown copy on your device. Clear resets this browser's saved fields and decision.</p></aside>
       </div></V2PageSection>
 
       <V2PageSection className="vf-cash" aria-labelledby="vf-cash-title"><div><p className="gh-eyebrow">THE RUPEE QUESTION</p><h2 id="vf-cash-title">A sale can still lose cash.</h2><p>Write down what you pay before the buyer pays you. Include stock, travel, packaging, delivery, refunds, platform fees and your own time where they apply. A margin on paper does not pay a bill due before collection.</p><Link to="/startup-costs-india" className="gh-button gh-button-secondary">Map cash before your first sale <Calculator size={17} /></Link></div><div className="vf-cash-ledger"><strong>One order, in your own numbers</strong><div><span>Price the buyer actually pays</span><b>₹ ______</b></div><div><span>Direct cost to deliver it</span><b>− ₹ ______</b></div><div><span>Fees, returns and collection delay</span><b>− ₹ ______</b></div><div className="vf-cash-result"><span>Cash left before fixed costs</span><b>= ₹ ______</b></div><small>This is a worksheet, not an estimate or market benchmark. Use the live calculator for arithmetic.</small></div></V2PageSection>

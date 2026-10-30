@@ -376,3 +376,11 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Added six research steps and curated existing guide records by explicit slugs. No guide body or database record changed.
 - QA pending: calculation and boundary tests, mobile/desktop, links, noindex and Vercel.
 - Next: continue audit of idea validation and comparison routes to ensure evidence states and missing-data handling are consistent.
+
+## 2026-10-30 — Startup Idea Validation: keep and move the founder's work
+- Route: `/startup-idea-validation`.
+- Existing buyer interview guide, evidence ladder, seven-field local validation brief, wait/change/test choice and external provider handoff were preserved.
+- Added a Markdown download with all founder inputs plus the selected next-step decision. Added a confirmation-protected clear action that resets the local brief and returns the decision to "wait for more evidence".
+- No numerical validation score, arbitrary threshold, BBI AI API, database write or API-key integration.
+- QA pending: file contents, reset/cancel, browser persistence, provider prompt and responsive behavior.
+- Next: review comparison workspace for clear removal, data gaps, decision export and mobile/desktop usability; change only demonstrated gaps.

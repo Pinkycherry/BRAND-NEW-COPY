@@ -1034,3 +1034,9 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Added source guidance for India's Open Government Data Platform, MoSPI publications and RBI Database on Indian Economy, with explicit limitations that macro/sector data do not prove demand for a specific offer.
 - Added a six-step evidence workflow and curated existing guide links by explicit slugs. Existing guide content/database unchanged.
 - Tests not run yet. Pending: calculation boundaries, zero/empty/decimal inputs, reset, mobile/desktop layout, official source links, guide links, noindex and Vercel.
+
+## 2026-10-30 — Startup Idea Validation: portable brief and reset
+- Added a Markdown download containing all seven founder-entered fields, the selected wait/change/test decision and its next action.
+- Added a confirmed clear action that resets the brief and decision in the current browser. Existing auto-save and external-provider handoff are unchanged.
+- No new score, thresholds, API call, database write or key handling.
+- Tests not run yet. Pending: download contents, clear confirmation/cancel/reset, reload persistence, mobile layout, prompt handoff and Vercel.

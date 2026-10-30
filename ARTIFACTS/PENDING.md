@@ -427,3 +427,7 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Added TAM/SAM/SOM scenario calculator from founder-entered assumptions, official India data-source directory and evidence sequence.
 - Outputs clearly state they are not verified market estimates or forecasts; inputs are session-only and not transmitted.
 - QA pending: calculation examples, 0/100% boundaries, invalid/empty values, reset, mobile/desktop, source/guide links, noindex and Vercel.
+
+### 2026-10-30 — Startup Idea Validation brief export/reset; QA pending
+- Added Markdown export of the seven-field validation brief and current decision. Added confirmed clear/reset.
+- QA pending: export content, confirm/cancel/reset, localStorage reload, provider handoff, responsive layout and Vercel.
