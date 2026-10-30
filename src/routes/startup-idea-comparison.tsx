@@ -11,7 +11,9 @@ import { useFounderWorkspace, removeShortlistIdea, clearShortlist, buildFounderP
 import { getComparisonRecords } from "@/lib/comparison.functions";
 import { ProviderPromptActions } from "@/components/founder-workspace/provider-prompt-actions";
 
-const ASSESSMENT_KEY_PREFIX = "bbi-idea-comparison-v1:";\n\nconst lenses = [
+const ASSESSMENT_KEY_PREFIX = "bbi-idea-comparison-v1:";
+
+const lenses = [
   { title: "A buyer you can reach", prompt: "Can you name a real group and reach a decision-maker this week?", next: "/first-customer-india", link: "Map the first payer" },
   { title: "A problem that has happened", prompt: "Have you heard a recent workaround or seen an actual purchase?", next: "/business-idea-research-india", link: "Check the evidence" },
   { title: "Cash before collection", prompt: "Which idea ties up more money before a buyer pays?", next: "/startup-costs-india", link: "Map startup cash" },
@@ -138,7 +140,7 @@ function ComparisonPage() {
     const ideaSections = selectedRecords.map(idea => [
       "## " + idea.title,
       ...comparisonRows.map(row => "- " + row.label + ": " + (row.value(idea).trim() || "Needs research")),
-    ].join("\\n")).join("\\n\\n");
+    ].join("\n")).join("\n\n");
     const assessmentSections = lenses.map(lens => {
       const chosen = selectedRecords.find(idea => idea.slug === choices[lens.title]);
       return [
@@ -146,9 +148,9 @@ function ComparisonPage() {
         "Question: " + lens.prompt,
         "Evidence points to: " + (chosen?.title || "Unclear — need evidence"),
         "Founder note: " + (notes[lens.title] || "Not recorded"),
-      ].join("\\n");
-    }).join("\\n\\n");
-    const gapSection = gaps.map(item => "- " + item.title + ": " + item.fields.join(", ")).join("\\n");
+      ].join("\n");
+    }).join("\n\n");
+    const gapSection = gaps.map(item => "- " + item.title + ": " + item.fields.join(", ")).join("\n");
     const content = [
       "# Startup idea comparison brief",
       "",
@@ -165,7 +167,7 @@ function ComparisonPage() {
       nextStep || "Not recorded",
       "",
       "This brief records source fields and founder observations. It is not a success prediction or validation score.",
-    ].join("\\n");
+    ].join("\n");
     const url = URL.createObjectURL(new Blob([content], { type: "text/markdown;charset=utf-8" }));
     const anchor = document.createElement("a");
     anchor.href = url;

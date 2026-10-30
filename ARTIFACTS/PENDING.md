@@ -438,3 +438,6 @@ The five specific-field models are the four original calculators plus CAC. The 5
 
 ### 2026-10-30 — Comparison source escaping correction; QA pending
 - Fixed literal line-break escapes in the route declaration and Markdown export. Recheck Vercel build and exported file content.
+
+### 2026-10-30 — Comparison route final newline correction; QA pending
+- Fixed the final declaration separator and normalized export newline joins. Verify Vercel build and downloaded Markdown.

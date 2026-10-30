@@ -1052,3 +1052,8 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Corrected literal line-break escape characters in the comparison route declaration and Markdown export separators. Export now writes real line breaks.
 - No feature or data behavior changed.
 - Pending: Vercel build and browser QA of shortlist-keyed persistence/export/reset.
+
+## 2026-10-30 — Comparison route final newline correction
+- Replaced the remaining escaped separator between the assessment key and lenses with real source line breaks.
+- Normalized Markdown export joins to a single newline escape in the TypeScript source.
+- Source assertions now pass for both the declaration and export string. Deployment/browser QA remains pending.

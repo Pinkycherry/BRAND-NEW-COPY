@@ -397,3 +397,7 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 ## 2026-10-30 — Comparison route escaping correction
 - Fixed source-level literal newline escapes introduced in the previous comparison assessment commit, including the declaration separator and Markdown export separators.
 - No additional behavior or data changes. Vercel and browser QA remain pending.
+
+## 2026-10-30 — Comparison route final newline correction
+- Corrected the final top-level declaration separator and normalized export joins. Source assertions pass for the separate declaration and single newline escape.
+- Vercel/browser QA pending.
