@@ -393,3 +393,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Kept database-derived FAQ items and source links; search covers both groups. Curated product answers remain visible if the FAQ query returns an empty result or fails.
 - Did not import seller credit, pricing, report-generation or success-probability claims from the purchased FAQ archive.
 - QA pending: search terms and no-results state, source links, loader fallback, accordion keyboard behavior, 360px/390px/desktop layout, noindex and Vercel status.
+
+### 2026-10-30 — Topics / Startup Knowledge Hub implementation; QA pending
+- Added decision-led navigation, curated featured guides, search across existing guide metadata and category-specific no-results filtering. Removed visible ordinal section numbering.
+- Preserved all published guide routes and source content.
+- QA pending: search/filter, featured/category links, mobile/desktop layout, noindex and Vercel status.

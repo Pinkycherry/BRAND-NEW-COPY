@@ -320,3 +320,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Reviewed the purchased FAQ archive only for broad question themes. Did not reuse seller branding, credit plans, pricing, report-generation promises or success-probability claims. Purchased archive and database untouched.
 - No AI API, user API keys, auth changes or database writes. Deployment and responsive/functional QA remain pending.
 - Next: continue with the source-backed FAQ/Topics and open-source research page family, beginning with a route inventory and source audit.
+
+## 2026-10-30 — Topics / Startup Knowledge Hub: decision-led navigation
+- Route: `/topics`.
+- Reframed the hub around four founder decisions: validate buyer evidence, understand the market, protect cash, and prepare to launch or grow.
+- Curated featured guides by known slugs rather than array order. Preserved the full published guide catalogue and route destinations.
+- Added search over title, description, category and keywords; filtered category sections and a clear empty state. Removed visible ordinal numbering and added explanatory copy for each existing category.
+- Added paths to current BusinessIdea.io workspaces and FAQ. No purchased source archive or guide body changed.
+- Functional, responsive and deployment QA remain pending.
+- Next: build the open-source research page as a practical competitor-discovery and due-diligence desk; do not reuse the seller's unsupported tool count or seller branding.

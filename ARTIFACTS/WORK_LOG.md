@@ -977,3 +977,12 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Search now filters both curated and published-record questions. The page retains curated answers if the FAQ database query returns no rows or errors.
 - Inspected the purchased FAQ archive for its question themes, but did not copy its seller brand, credit plans, pricing, success-probability claims or other seller-only promises. Archive and database unchanged.
 - No AI API, API keys, database writes or auth changes. Tests not run yet; verify search, source links, empty database fallback, mobile/desktop accordion behavior, noindex and Vercel deployment.
+
+## 2026-10-30 — Topics / Startup Knowledge Hub
+- Before: https://bbinewcopy.vercel.app/topics
+- After: https://bbinewcopy.vercel.app/topics
+- Reframed the landing page around founder decisions: buyer validation, market understanding, cash protection and launch/growth.
+- Replaced automatic first-three guide highlights with four deliberately selected guides by purpose. Preserved all published guide records and their existing destinations.
+- Added search across guide title, description, category and keywords; filtered category sections and a no-results state. Removed decorative numbered section headings and added concise descriptions for the five existing categories.
+- Added direct paths to the existing research, comparison, cash-flow, risk and FAQ workspaces. No guide source content or database records changed.
+- Tests not run yet. Pending: guide search, featured links, category anchors, all guide destinations, 360px/390px/desktop layout, noindex and Vercel status.
