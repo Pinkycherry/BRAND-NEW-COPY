@@ -222,3 +222,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Added a reviewable provider handoff carrying the actual entered calculator figures and locally selected idea shortlist. Full prompt and compact URL prompt are available through the existing four-provider component. No AI API call, API-key storage, authentication gate or database write.
 - Published idea cards now expose Read full idea, Add to compare and Validate this idea.
 - Build, live deployment and 360/390px visual QA are not verified in this environment. Verify Vercel deployment, arithmetic regression, provider URL behavior and mobile form/card layout before calling this page complete.
+
+
+## 2026-10-30 06:25 IST — Startup Cash Flow India: saved forecast and payment-delay scenario
+- Before: https://bbinewcopy.vercel.app/startup-cash-flow-india
+- After: https://bbinewcopy.vercel.app/startup-cash-flow-india
+- Code commit: https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/46ae8840afb356e98d8951f46cf585c9458f2830
+- Added browser-local persistence for opening cash and dated events; no database write. Added an exportable CSV of the dated cash forecast, explicit extra cash required to avoid a negative balance, and a configurable 7/14/30-day delayed-collection stress scenario that keeps bills on their original dates.
+- Existing event ledger, running balance and cash calculation remain in place.
+- Build, live deployment and 360/390px visual QA are not verified here. Test persistence, date sorting, negative-balance math, delay dates, CSV contents and mobile layout before closure.
