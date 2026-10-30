@@ -303,3 +303,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Preserved the original guide, setting selector, FAQs, source links and onward paths. Seller source archive remains unchanged.
 - Verification status: source edit and documentation committed; functional/browser/mobile/deployment QA still pending. Do not call the route complete until save/reload, deletion, export, provider handoff, 360/390px layout, live route and noindex are checked.
 - Next page: Failed-startup research. Verify every case and source before exposing it as a fact; do not publish seller headline totals or unsupported loss estimates.
+
+## 2026-10-30 — Batch 4, page edit 2: Failed-startup research in India
+- Route: `/failed-startups/india`.
+- Replaced the thin risk-guide link page with three source-checked service shutdown/pause records: Koo (3 July 2024), Stayzilla (23–24 February 2017) and Doodhwala (14–16 October 2019).
+- Each record separates the reported event, public explanation, practical founder checks and evidence limitations. Koo's public explanation is attributed to founders via Reuters; Stayzilla links the founder's own account and contemporaneous Business Standard coverage; Doodhwala links Mint and The Times of India and does not assert a definitive cause.
+- Added cross-case questions about local supply/demand density, transaction contribution after fulfilment/discounts, funding/partnership dependency and operating metrics. No broad failure totals, capital-loss totals or unsupported insolvency claims.
+- Existing illustrative placeholder records in `data/case-studies.json` were not promoted or edited. Seller archives under `src/bought/` and staging remain unchanged.
+- Verification: source research completed and route/docs committed; deployment, responsive, noindex and public-placeholder QA remain open.
+- Next: review the FAQ destination. Replace any empty or generic answers with specific source-backed founder answers while preserving the original FAQ archive.

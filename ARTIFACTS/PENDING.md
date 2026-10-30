@@ -382,3 +382,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Added a browser-local research notebook with dated buyer observations, evidence/source reference, observed spend, workaround/alternative, counter-evidence and next question.
 - Added local save/reload, per-entry removal, clear-all, Markdown export and four-provider prepared research handoff. The full prompt carries current shortlist and founder context; provider links use the compact prompt. No API inference, key storage or database writes.
 - QA still required: storage reload, add/remove/clear, export contents, prompt/shortlist/context accuracy, all four provider prefill/fallback paths, 360px/390px/desktop layout, Vercel status, live route and noindex.
+
+### 2026-10-30 — Failed-startup research page implementation; QA pending
+- Added three source-checked public service shutdown/pause records: Koo, Stayzilla and Doodhwala, with dated source links and explicit limits on what each record proves.
+- The placeholder composite records remain excluded. No unsupported "87+ cases" or "$24B+ lost" seller claims were used.
+- QA pending: Vercel/build, route rendering, each external source link, noindex, phone/desktop layout, and verify placeholder records remain absent from all public case-study routes and counts.

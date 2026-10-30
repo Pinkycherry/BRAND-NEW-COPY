@@ -960,3 +960,12 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Added per-entry removal, clear-all, Markdown export and a prepared four-provider research handoff. The full prompt includes the selected published-idea shortlist, founder context and up to six recent observations; the compact provider handoff is used for URL prefill. No external AI request occurs on BusinessIdea.io.
 - Existing research-setting guidance, interview questions, competition guidance, FAQ and original guide links remain in place. No database writes, API keys, authentication changes or seller archive edits.
 - Tests not run in this environment yet. Pending: verify save/reload, remove/clear/export, prompt contents and provider URL fallback; inspect 360px/390px/desktop layout; confirm Vercel deployment and route noindex before closing QA.
+
+## 2026-10-30 — Failed-startup research in India: source-checked case page
+- Before: https://bbinewcopy.vercel.app/failed-startups/india
+- After: https://bbinewcopy.vercel.app/failed-startups/india
+- Replaced the link-only risk landing page with three narrowly described, source-linked service shutdowns/pauses: Koo (July 2024), Stayzilla (February 2017) and Doodhwala (October 2019).
+- Kept reported facts separate from founder checks and explicit limitations. Stayzilla's founder statement is linked directly; Reuters covers Koo; Mint and The Times of India cover Doodhwala's delivery transition. Doodhwala's underlying cause is explicitly marked unknown in the available reporting.
+- Added cross-case operating questions around local marketplace density, contribution after fulfilment/discounts, runway if funding/partnerships do not arrive, and decision-useful metrics. No seller headline totals, unsupported capital-loss claims or placeholder composite stories were published.
+- The existing placeholder case-study JSON and all purchased source files remain unchanged. No database, API, auth or user-key work.
+- Tests not run in this environment yet. Pending: route/build status, live content and source links, noindex, 360px/390px/desktop layout, and confirmation that no placeholder case is exposed.
