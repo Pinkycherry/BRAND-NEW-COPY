@@ -240,3 +240,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Replaced the theory-only test-design cards with a browser-local experiment planner: buyer, offer, price, channel, deadline, requested action, founder-defined success condition, response counts and observation notes. Added live count/rate summaries with explicit caveats and a prepared four-provider prompt. Added the standard three actions to published idea cards.
 - Plan and observations are stored in this browser only. No database writes, API integration, provider keys or authentication gate.
 - Build, live deployment and 360/390px visual QA remain unverified. Test persistence, counters, prompt handoff and mobile form behavior before closing.
+
+
+## 2026-10-30 06:38 IST — Startup Idea Validation: working brief added to the authored guide
+- Before: https://bbinewcopy.vercel.app/startup-idea-validation
+- After: https://bbinewcopy.vercel.app/startup-idea-validation
+- Code commit: https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/d9dcbabb5219cece02d86b4d5f1092660e4f5461
+- Preserved the existing authored validation guide and its interview/evidence/decision content. Replaced its read-only checklist with a distinct practical brief covering buyer, problem, current workaround, offer, price, evidence/source and proposed test. Added browser-local save/load, a completeness indicator (not a validation score), and a prepared four-provider prompt handoff.
+- No AI API call, API-key storage, authentication gate or database write.
+- Build, live deployment and mobile visual QA remain unverified. Confirm guide regression, persistence, prompt output and 360/390px layout before closure.
