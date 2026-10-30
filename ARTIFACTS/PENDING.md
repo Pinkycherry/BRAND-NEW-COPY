@@ -347,3 +347,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-10-30 06:31 IST — Business Demand Test India QA
 - Interactive planner, local save/load, observed response counts/rates, user-defined success condition, provider prompt handoff and standard idea-card actions implemented.
 - PENDING: confirm CI/Vercel result; test save/reload; check count/rate behavior at zero and nonzero values; test long Unicode prompt handoff; inspect 360/390px layout and genuine screenshots.
+
+
+### 2026-10-30 06:38 IST — Startup Idea Validation QA
+- Added a practical local validation brief without rewriting or duplicating the authored guide. Added evidence/source capture, proposed test, price, persistence and prepared AI prompt.
+- PENDING: confirm CI/Vercel result; test saved fields after reload; verify prompt contains all entered fields and selected shortlist; inspect 360/390px form and provider cards; verify existing guide links and sections remain intact.
