@@ -342,3 +342,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-10-30 06:25 IST — Startup Cash Flow India QA
 - Implemented local browser persistence, CSV export, explicit funding-gap calculation and 7/14/30-day delayed-receipt scenario. No database storage or API integration.
 - PENDING: confirm CI/Vercel result; test opening cash and events persist after reload; verify date ordering and cash math; verify delayed receipts shift while bills remain due; inspect CSV output and 360/390px layout; capture genuine screenshots if browser capture is available.
+
+
+### 2026-10-30 06:31 IST — Business Demand Test India QA
+- Interactive planner, local save/load, observed response counts/rates, user-defined success condition, provider prompt handoff and standard idea-card actions implemented.
+- PENDING: confirm CI/Vercel result; test save/reload; check count/rate behavior at zero and nonzero values; test long Unicode prompt handoff; inspect 360/390px layout and genuine screenshots.
