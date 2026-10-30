@@ -352,3 +352,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-10-30 06:38 IST — Startup Idea Validation QA
 - Added a practical local validation brief without rewriting or duplicating the authored guide. Added evidence/source capture, proposed test, price, persistence and prepared AI prompt.
 - PENDING: confirm CI/Vercel result; test saved fields after reload; verify prompt contains all entered fields and selected shortlist; inspect 360/390px form and provider cards; verify existing guide links and sections remain intact.
+
+
+### 2026-10-30 06:45 IST — Startup Costs India QA
+- Added browser-local persistence, CSV export and prepared four-provider cost-plan review. Existing calculations remain unchanged.
+- PENDING: confirm CI/Vercel; test save/reload and all totals; verify CSV rows and currency values; test long/Unicode prompt handoff; inspect 360/390px layout and genuine screenshots.
