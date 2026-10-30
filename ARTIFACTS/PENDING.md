@@ -377,3 +377,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-10-30 07:25 IST — Templates QA
 - Editable template editor with six original starter templates, copy, .txt download and reset committed.
 - PENDING: confirm CI/Vercel; test each template selection, edit, copy, download filename/content and reset; inspect 360/390px editor and buttons; capture genuine screenshots.
+
+### 2026-10-30 — Business Idea Research India implementation; QA pending
+- Added a browser-local research notebook with dated buyer observations, evidence/source reference, observed spend, workaround/alternative, counter-evidence and next question.
+- Added local save/reload, per-entry removal, clear-all, Markdown export and four-provider prepared research handoff. The full prompt carries current shortlist and founder context; provider links use the compact prompt. No API inference, key storage or database writes.
+- QA still required: storage reload, add/remove/clear, export contents, prompt/shortlist/context accuracy, all four provider prefill/fallback paths, 360px/390px/desktop layout, Vercel status, live route and noindex.

@@ -952,3 +952,11 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Added six editable original founder templates: buyer profile, customer interview, competitor/alternative matrix, demand test, one-page business plan and pitch deck outline. Template editor supports editing, copy, plain-text download and reset. Existing connected workspace links preserved.
 - No seller brand/image reuse, API integration or database write.
 - Build, browser, screenshots and live route not verified here; deployment and mobile QA remain pending.
+
+## 2026-10-30 — Business Idea Research India: field notebook implementation
+- Before: https://bbinewcopy.vercel.app/business-idea-research-india
+- After: https://bbinewcopy.vercel.app/business-idea-research-india
+- Added a browser-local field notebook to the existing authored research guide. Each dated observation captures buyer/role, market, recent problem, workaround, alternative, observed spend, source/reference, direct observation, counter-evidence and next question.
+- Added per-entry removal, clear-all, Markdown export and a prepared four-provider research handoff. The full prompt includes the selected published-idea shortlist, founder context and up to six recent observations; the compact provider handoff is used for URL prefill. No external AI request occurs on BusinessIdea.io.
+- Existing research-setting guidance, interview questions, competition guidance, FAQ and original guide links remain in place. No database writes, API keys, authentication changes or seller archive edits.
+- Tests not run in this environment yet. Pending: verify save/reload, remove/clear/export, prompt contents and provider URL fallback; inspect 360px/390px/desktop layout; confirm Vercel deployment and route noindex before closing QA.

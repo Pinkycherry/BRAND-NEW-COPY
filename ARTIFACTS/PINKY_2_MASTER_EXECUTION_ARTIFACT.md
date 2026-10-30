@@ -294,3 +294,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Replaced the read-only-checklist positioning with an editable template studio. Added six original templates: buyer profile, customer interview script, alternative/competitor matrix, demand test brief, one-page business plan and pitch deck outline. Users can edit, copy, download as .txt or reset a draft.
 - Existing linked founder workspaces remain available. No seller branding/assets or fake download promises; no API, database or authentication changes.
 - Build, live deployment and mobile visual QA remain unverified. Test edit/reset/copy/download and 360/390px textarea/button layout.
+
+## 2026-10-30 — Batch 4, page edit 1: Business Idea Research India
+- Route: `/business-idea-research-india`.
+- The existing page already teaches buyer observation, recent purchase questions, direct/indirect alternatives and evidence discipline. Its missing product capability was a way to keep the founder's own observations on the page.
+- Added a field notebook for one buyer episode at a time. It records buyer role, market/location, problem trigger, workaround, alternative, observed spend, source/reference, direct observation, evidence against the idea and the next question.
+- Entries stay in browser localStorage, with individual deletion, clear-all and Markdown export. The prepared prompt combines the current local shortlist, founder context and up to six recent observations. The external provider handoff remains user-initiated; no BBI AI inference, API key, database write or auth change.
+- Preserved the original guide, setting selector, FAQs, source links and onward paths. Seller source archive remains unchanged.
+- Verification status: source edit and documentation committed; functional/browser/mobile/deployment QA still pending. Do not call the route complete until save/reload, deletion, export, provider handoff, 360/390px layout, live route and noindex are checked.
+- Next page: Failed-startup research. Verify every case and source before exposing it as a fact; do not publish seller headline totals or unsupported loss estimates.
