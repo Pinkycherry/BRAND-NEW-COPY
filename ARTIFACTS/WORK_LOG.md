@@ -857,3 +857,11 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - The validation form initially saved structured constraints in the local workspace, but the optional free-text notes were not part of the shared FounderContext and therefore did not travel to later pages. Added `additionalContext` to normalization/defaults and the full/compact shared prompt builders; hydration and blur/prepare save now preserve those notes in this browser.
 - Replaced `React.FormEvent` with a direct `FormEvent` type import. This is a correction to the just-completed idea-detail validation edit, not a new page. No API key integration or server-stored user notes.
 - Previous validation source commit Vercel status was success. This correction requires a fresh Vercel check. Live visual screenshots remain unavailable in this runtime.
+
+
+## 2026-10-30 05:35:21 IST — Next batch, completion 2/5: First Customer India
+- Before: https://bbinewcopy.vercel.app/first-customer-india
+- After: https://bbinewcopy.vercel.app/first-customer-india
+- Replaced the read-only checklist with a practical field worksheet: idea/offer, target buyer, city/market, recent problem, current workaround, offer, trial price, language, conversation date, outcome and notes. Added local observation records with per-entry deletion and Clear all; no database storage. The AI handoff uses the current shortlist/founder context and opens through the four external providers, with no API inference call.
+- Published idea suggestion cards now have Read full idea, Add to compare, and Validate this idea actions. Repeated middle-section spacing tightened while preserving the hero and final CTA.
+- This route's Vercel check and actual browser/mobile screenshot remain pending. The live preview direct fetch was inaccessible through the browser tool; no screenshots fabricated. API/OpenRouter remains future-only.

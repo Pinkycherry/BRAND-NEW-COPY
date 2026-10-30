@@ -201,3 +201,9 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 ## 2026-10-30 05:30:54 IST — Validation context persistence correction
 - Added the free-text validation notes to `FounderContext.additionalContext`, browser normalization/defaults and shared full/compact prompt builders. The validation form hydrates the saved notes when the founder returns and persists them with the rest of the local context.
 - Changed the form event type to an explicit `FormEvent` import. This is a correctness fix to the individual idea validation edit. No API integration, new database storage or external AI call.
+
+
+## 2026-10-30 05:35:21 IST — First Customer India: interactive buyer conversation workflow
+- Added a field brief for business idea, buyer group, market, recent trigger, workaround, small offer, trial price and response language. User can record date, outcome, and a direct observation note. Entries are stored only in browser localStorage, with remove-one and Clear all actions.
+- Added an AI handoff built from the current local shortlist and founder constraints, including neutral interview questions, an outreach message, a simple evidence log and a reversible next test. This calls no AI API; it prepares provider deep links only.
+- The published idea cards on this page now have Read full idea, Add to compare and Validate this idea actions. Reduced empty vertical spacing in repeated middle sections. Deployment and mobile visual checks remain open.

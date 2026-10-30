@@ -319,3 +319,9 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-10-30 05:30:54 IST — Validation additional-context persistence correction
 - Optional free-text validation notes now belong to the local browser FounderContext, load when returning and are included in subsequent prompt builders. Confirm the full text appears in prompt preview after navigation/reload and remains local only.
 - Fresh Vercel check is pending for this correction; test report/roadmap/HTML/chart/image output selections and long Unicode prompts after deployment. API integration remains deferred.
+
+
+### 2026-10-30 05:35:21 IST — First Customer India worksheet verification pending
+- New local conversation log should save/load at page reload, allow deleting one entry and Clear all, and never write to the database. Check overflow and tap targets at 360/390px.
+- AI handoff should include the manually entered offer/context plus selected idea titles and founder locale/budget/language. Check provider URL length in Telugu/mixed-language notes and full prompt copy fallback.
+- Idea cards carry Read full idea, Add to compare and Validate this idea. Verify action destinations. No API integration was implemented; only prompt/deep-link generation.

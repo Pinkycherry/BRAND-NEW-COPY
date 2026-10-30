@@ -224,3 +224,9 @@ The external prompt should be explicit that:
 
 ## 2026-10-30 05:30:54 IST — Validation workspace continuity correction
 - Validation optional notes are included in the same local browser FounderContext as location/budget/language and reused by later prompts. No backend data persistence was added. User API integration remains future-only.
+
+
+## 2026-10-30 05:35:21 IST — Next batch, page 2: First Customer India action worksheet
+- Replaced the read-only checklist with a working conversation worksheet: idea/offer, buyer, market, recent trigger, workaround, offer/price, response language, date, outcome and observation notes. Users can prepare an AI handoff and record what actually happened.
+- Added a local conversation log with per-entry delete and Clear all. Notes stay in this browser and are not sent to the BBI database. Current shortlist and founder constraints travel into the field-test prompt through the existing external provider links.
+- Published idea cards now provide Read full idea, Add to compare, and Validate this idea. Reduced repeated middle-section whitespace while retaining the hero and final CTA. API integration remains future-only.
