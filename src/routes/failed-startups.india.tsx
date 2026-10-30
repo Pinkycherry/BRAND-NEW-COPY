@@ -82,6 +82,34 @@ const records: FailureRecord[] = [
       { label: "The Times of India · 16 October 2019", url: "https://timesofindia.indiatimes.com/business/india-business/doodhwala-ceases-operations-freshtohome-takes-over-delivery/articleshow/71605096.cms" },
     ],
   },
+  {
+    name: "Lido Learning",
+    sector: "Online school tutoring",
+    event: "Business operations shut down",
+    date: "February 2022",
+    summary: "Lido Learning's shutdown was reported in February 2022 after employees described a sudden closure, delayed salaries and uncertainty for tutors and families. Contemporary reporting said the founder told staff the company did not have funds to continue and was exploring a fundraise or acquisition. The public reports do not provide an audited account of the company's finances.",
+    reported: ["Business Standard reported concerns about delayed salary and vendor payments.", "The Indian Express reported that staff, tutors, parents and students were affected and described funding difficulties.", "Reports mentioned a proposed fundraise or acquisition search but do not establish that either completed before operations stopped."],
+    founderChecks: ["If customers pay in advance, what cash is reserved for classes, refunds and tutor payments?", "Can payroll and delivery commitments be met if a funding round is delayed?", "What is the smallest reliable delivery model that can serve paying students without an oversized fixed team?"],
+    limitation: "The sources report employee/customer accounts and statements attributed to the company. They do not establish a complete audited cash position, every refund outcome or one single cause of closure.",
+    sources: [
+      { label: "The Indian Express · 24 February 2022", url: "https://indianexpress.com/article/business/companies/lido-learning-shuts-staff-clients-in-the-lurch-7788113/lite/" },
+      { label: "Business Standard · 24 February 2022", url: "https://www.business-standard.com/article/companies/ronnie-screwvala-backed-startup-lido-learning-shuts-shop-workers-seek-help-122022300602_1.html" },
+    ],
+  },
+  {
+    name: "Udayy",
+    sector: "Live online learning for school students",
+    event: "Operations shut down",
+    date: "April 2022; reported 1 June 2022",
+    summary: "Udayy shut operations after the return to in-person schooling changed the conditions under which its live online learning model had grown. Co-founder Saumya Yadav told the Economic Times that customer acquisition had become expensive and parents were asking for refunds as children returned to school. She said the founders did not see a sufficiently viable path to continue.",
+    reported: ["The co-founder connected the slowdown to schools reopening and children having less time for online classes.", "She cited higher customer acquisition costs and refund requests.", "The company said it returned around $8–8.5 million to investors; this is an attributed founder statement, not an independent performance measure."],
+    founderChecks: ["Was demand temporary, or did buyers still need the service when routines returned to normal?", "How much does it cost to acquire a paying family, and how long does that family remain?", "What refund, cancellation and teacher-payment obligations remain when enrolment slows?"],
+    limitation: "These reasons are attributed to the co-founder and contemporary reporting. They are not a universal explanation for edtech shutdowns or proof that all online learning demand disappears when schools reopen.",
+    sources: [
+      { label: "Economic Times · 1 June 2022", url: "https://economictimes.indiatimes.com/tech/startups/edtech-startup-udayy-shuts-down-lays-off-entire-staff/articleshow/91943698.cms" },
+      { label: "YourStory · 2 June 2022", url: "https://yourstory.com/2022/06/udayy-edtech-startup-shuts--lays-off-entire-workforce" },
+    ],
+  },
 ];
 
 const wrap = "mx-auto max-w-6xl px-4 md:px-6";
@@ -94,7 +122,7 @@ export const Route = createFileRoute("/failed-startups/india")({
       { title: "Indian Startup Shutdowns: Source-Checked Cases and Founder Lessons | BusinessIdea.io" },
       { name: "description", content: "Read source-checked Indian startup service shutdowns, what founders publicly said, what remains unknown, and the operating questions to test before spending." },
       { property: "og:title", content: "Indian startup shutdowns: evidence, limits and founder checks | BusinessIdea.io" },
-      { property: "og:description", content: "Three documented service shutdowns, with source links and clear limits on what the public record proves." },
+      { property: "og:description", content: "Five documented Indian service shutdowns or pauses, with source links and clear limits on what the public record proves." },
       { property: "og:type", content: "article" },
     ],
   }),
@@ -107,7 +135,7 @@ function FailedStartupsPage() {
       webPageSchema({
         path: "/failed-startups/india",
         name: "Indian startup shutdowns: source-checked cases",
-        description: "A source-led review of three Indian startup service shutdowns, the founders' public explanations and what remains unknown.",
+        description: "A source-led review of five Indian startup service shutdowns or pauses, the founders' public explanations and what remains unknown.",
       }),
       breadcrumbSchema([
         { name: "Home", path: "/" },
@@ -129,7 +157,7 @@ function FailedStartupsPage() {
           <a href="#case-records" className={primary}>Read the documented cases <ArrowRight size={17}/></a>
           <a href="/business-idea-risk-check" className="inline-flex min-h-11 items-center rounded-xl border bg-card px-5 py-3 font-semibold">Check your own risks</a>
         </div>
-        <p className="mt-5 text-sm text-muted-foreground">This page currently reviews three source-checked service shutdowns or pauses. It is not a count of all Indian startup failures.</p>
+        <p className="mt-5 text-sm text-muted-foreground">This page currently reviews five source-checked service shutdowns or pauses. Two of the five examples are from edtech, so this is not a balanced sector sample or a count of all Indian startup failures.</p>
       </div>
     </section>
 
