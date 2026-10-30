@@ -267,3 +267,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Rebuilt the homepage hero with the requested “An idea is a start” direction and four practical paths: Prompt, Plan, Test and Build. Added soft responsive action panels, clear Browse/Validate actions and search.
 - Added a slow-moving practical guide carousel and a technology-stack strip. Motion pauses on hover/focus and is disabled for reduced-motion users. All new links point to existing routes.
 - Build, live deployment and visual/mobile QA remain unverified. Check homepage first fold, carousel, reduced-motion behavior and 360/390px layout.
+
+
+## 2026-10-30 07:03 IST — Learning Resources: moving guide and journal carousels
+- Before: https://bbinewcopy.vercel.app/learning-resources
+- After: https://bbinewcopy.vercel.app/learning-resources
+- Code commit: https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/cbadbd6f5600b3178e9a031b84762ba517a49607
+- Added two data-backed horizontal carousels: existing startup guides and published founder-journal articles, with real titles, descriptions, featured images and route links. Added links to the full guide and article collections.
+- Motion pauses on hover/focus and is disabled for reduced-motion preferences. Existing framework/book/resource content remains intact.
+- Build, live deployment and mobile visual QA remain unverified. Confirm the article query, image loading, all route links, reduced-motion behavior and 360/390px overflow.
