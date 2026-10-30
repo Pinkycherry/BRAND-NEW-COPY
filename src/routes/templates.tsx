@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, ChevronRight, ClipboardList, Copy, Download, Check } from "lucide-react";
+import { ArrowRight, ChevronRight, ClipboardList, Copy, Download } from "lucide-react";
 import { V2Frame } from "@/components/v2/frame";
 
 export const Route=createFileRoute("/templates")({head:()=>({meta:[{title:"Founder Checklists | BusinessIdea.io"},{name:"description",content:"Read practical founder checklists for planning, comparison, demand and risk."}]}),component:TemplatesPage});
