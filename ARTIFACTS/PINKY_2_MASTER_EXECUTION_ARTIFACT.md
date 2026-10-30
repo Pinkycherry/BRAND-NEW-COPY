@@ -276,3 +276,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Added two data-backed horizontal carousels: existing startup guides and published founder-journal articles, with real titles, descriptions, featured images and route links. Added links to the full guide and article collections.
 - Motion pauses on hover/focus and is disabled for reduced-motion preferences. Existing framework/book/resource content remains intact.
 - Build, live deployment and mobile visual QA remain unverified. Confirm the article query, image loading, all route links, reduced-motion behavior and 360/390px overflow.
+
+
+## 2026-10-30 07:14 IST — Tools Directory: founder-stage worksheet catalogue
+- Before: https://bbinewcopy.vercel.app/tools
+- After: https://bbinewcopy.vercel.app/tools
+- Code commit: https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/62b640acd1ab142d73734b4083c1197ac35a9b7d
+- Expanded the directory from six worksheets to a practical catalogue spanning Discover, Validate, Plan and Decide. Added direct entries for idea research, validation brief, first customer, demand test, comparison, startup costs, pricing and cash flow, while retaining the verified READY_CALCULATORS catalogue.
+- Added stage filters and made worksheet actions explicit. No unverified 1,059+ seller headline count or unsupported calculator claims were published; original purchased seller files remain unchanged.
+- Build, deployment and mobile visual QA remain unverified. Verify all worksheet routes, filter/search behavior and 360/390px layout.
