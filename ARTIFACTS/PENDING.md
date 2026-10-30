@@ -367,3 +367,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-10-30 07:03 IST — Learning Resources QA
 - Guide and journal carousels implemented with actual published data, real links and featured images. Reduced-motion and hover/focus pause behavior included.
 - PENDING: confirm CI/Vercel; verify blog data query and empty state; inspect image loading and card layout; test carousel pause and reduced-motion; inspect 360/390px overflow and capture genuine screenshots.
+
+
+### 2026-10-30 07:14 IST — Tools Directory QA
+- Expanded founder-stage worksheet list and stage filters; existing verified calculator list retained.
+- PENDING: confirm CI/Vercel; verify each worksheet route; test combined search + stage filters and empty state; inspect 360/390px layout and genuine screenshots.
