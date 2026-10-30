@@ -329,3 +329,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Added paths to current BusinessIdea.io workspaces and FAQ. No purchased source archive or guide body changed.
 - Functional, responsive and deployment QA remain pending.
 - Next: build the open-source research page as a practical competitor-discovery and due-diligence desk; do not reuse the seller's unsupported tool count or seller branding.
+
+## 2026-10-30 — Open-source research: competitor discovery and due-diligence desk
+- Route: `/open-source`.
+- Replaced a three-link placeholder with keyword-based GitHub, GitLab and SourceForge discovery plus practical checks for licence, maintenance/release activity, security signals, deployment, support, total operating cost and buyer fit.
+- Added a browser-local candidate notebook: project name and URL, licence, last activity, maintenance signal, deployment model, restrictions, problem served, buyer gap, evidence and next question. Supports local persistence, per-record removal, clear-all and Markdown export.
+- Added a user-controlled red-team handoff to the existing four external providers using saved candidates and founder context. No BBI AI API, key storage, database write or authentication changes.
+- Linked the OSI approved licence list, GitHub licensing guidance, GitLab project activity guide and OpenSSF Best Practices Badge. The purchased archive was used only as a candidate discovery reference; its "1665" headline count and seller branding were not reused.
+- Verification: source edit and docs committed; live search URLs, local storage, export, provider handoff, responsive layout, noindex and Vercel QA remain open.
+- Next: continue with framework comparison and research directory routes; inspect whether the purchased framework comparison can be rebuilt without unsupported feature or pricing claims.

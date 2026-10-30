@@ -986,3 +986,12 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Added search across guide title, description, category and keywords; filtered category sections and a no-results state. Removed decorative numbered section headings and added concise descriptions for the five existing categories.
 - Added direct paths to the existing research, comparison, cash-flow, risk and FAQ workspaces. No guide source content or database records changed.
 - Tests not run yet. Pending: guide search, featured links, category anchors, all guide destinations, 360px/390px/desktop layout, noindex and Vercel status.
+
+## 2026-10-30 — Open-source competitor research desk
+- Before: https://bbinewcopy.vercel.app/open-source
+- After: https://bbinewcopy.vercel.app/open-source
+- Replaced the three-link placeholder with a working competitor-discovery page: problem-keyword searches on GitHub, GitLab and SourceForge; licence, maintenance, security, deployment, total operating cost and buyer-gap checks.
+- Added a browser-local candidate notebook with project URL, licence, activity, maintenance signal, deployment model, restrictions, buyer gap, evidence and next question; supports save/reload, remove, clear and Markdown export.
+- Added a user-initiated four-provider red-team handoff using selected founder context and saved candidate notes. No external model request from BBI, no database writes or API-key handling.
+- Linked official OSI licence list, GitHub licensing guidance, GitLab project activity documentation and OpenSSF Best Practices Badge. Reviewed seller archive's candidate names as discovery context only; did not use its "1665 tools" count or seller branding.
+- Tests not run yet. Pending: query URL behavior on all three directories, local save/reload/remove/clear/export, prompt content and provider fallback, source links, 360px/390px/desktop layout, noindex and Vercel deployment.

@@ -398,3 +398,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Added decision-led navigation, curated featured guides, search across existing guide metadata and category-specific no-results filtering. Removed visible ordinal section numbering.
 - Preserved all published guide routes and source content.
 - QA pending: search/filter, featured/category links, mobile/desktop layout, noindex and Vercel status.
+
+### 2026-10-30 — Open-source competitor research desk implementation; QA pending
+- Added repository search links, due-diligence checks, browser-local candidate records, Markdown export and four-provider user-initiated prompt handoff.
+- Official licence/security/maintenance references linked. Seller's "1665 tools" headline not repeated; no project is labelled verified by BBI.
+- QA pending: GitHub/GitLab/SourceForge query links, local storage actions, export, prompt and provider URL behavior, source links, mobile/desktop, noindex and Vercel status.
