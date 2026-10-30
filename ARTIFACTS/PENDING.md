@@ -403,3 +403,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Added repository search links, due-diligence checks, browser-local candidate records, Markdown export and four-provider user-initiated prompt handoff.
 - Official licence/security/maintenance references linked. Seller's "1665 tools" headline not repeated; no project is labelled verified by BBI.
 - QA pending: GitHub/GitLab/SourceForge query links, local storage actions, export, prompt and provider URL behavior, source links, mobile/desktop, noindex and Vercel status.
+
+### 2026-10-30 — Frameworks comparison implementation; QA pending
+- Added seven method cards with purpose, best use, output, limitation and primary-source links. Added a decision selector with complementary method pairs and an illustrative India-first retailer workflow.
+- No weighted framework score or seller scorecard reused.
+- QA pending: selector recommendations, all external/internal links, 360px/390px/desktop layout, noindex and Vercel status.

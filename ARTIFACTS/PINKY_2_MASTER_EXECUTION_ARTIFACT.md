@@ -338,3 +338,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Linked the OSI approved licence list, GitHub licensing guidance, GitLab project activity guide and OpenSSF Best Practices Badge. The purchased archive was used only as a candidate discovery reference; its "1665" headline count and seller branding were not reused.
 - Verification: source edit and docs committed; live search URLs, local storage, export, provider handoff, responsive layout, noindex and Vercel QA remain open.
 - Next: continue with framework comparison and research directory routes; inspect whether the purchased framework comparison can be rebuilt without unsupported feature or pricing claims.
+
+## 2026-10-30 — Frameworks comparison: choose by founder question
+- Route: `/frameworks-comparison`.
+- Rebuilt the generic guide directory as a seven-method comparison: The Mom Test, Customer Development, Jobs-to-be-Done, Design Thinking, Lean Startup, Business Model Canvas and Blue Ocean Strategy.
+- Each card covers the method's lens, when it is useful, what it produces, a limitation and a primary-source link. Added a question-based selector that suggests a complementary pair without scores or universal rankings.
+- Added an explicitly illustrative neighbourhood-retailer scenario showing how discovery, buyer motivation, business model mapping, prototyping, experiments and positioning can work together.
+- Sources link to original/primary sources: Rob Fitzpatrick, Steve Blank, Christensen Institute, IDEO, Eric Ries/Lean Startup, Strategyzer and Blue Ocean Strategy. No seller weighted scorecard, unsupported rankings or seller claims reused. Purchased archive and authored guide content unchanged.
+- QA remains pending: selector, links, responsive layout, noindex and Vercel.
+- Next: audit the remaining purchased research pages and route families against source availability before choosing the next implementation.

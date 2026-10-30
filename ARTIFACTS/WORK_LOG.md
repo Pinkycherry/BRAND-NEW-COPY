@@ -995,3 +995,12 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Added a user-initiated four-provider red-team handoff using selected founder context and saved candidate notes. No external model request from BBI, no database writes or API-key handling.
 - Linked official OSI licence list, GitHub licensing guidance, GitLab project activity documentation and OpenSSF Best Practices Badge. Reviewed seller archive's candidate names as discovery context only; did not use its "1665 tools" count or seller branding.
 - Tests not run yet. Pending: query URL behavior on all three directories, local save/reload/remove/clear/export, prompt content and provider fallback, source links, 360px/390px/desktop layout, noindex and Vercel deployment.
+
+## 2026-10-30 — Frameworks comparison: decision-led source comparison
+- Before: https://bbinewcopy.vercel.app/frameworks-comparison
+- After: https://bbinewcopy.vercel.app/frameworks-comparison
+- Replaced a generic guide-card directory with a comparison of seven methods: The Mom Test, Customer Development, Jobs-to-be-Done, Design Thinking, Lean Startup, Business Model Canvas and Blue Ocean Strategy.
+- Each method now states its lens, best use, expected output, limitation and primary source. Added an interactive decision chooser that suggests a complementary pair without assigning scores or claiming a universal winner.
+- Added a clearly illustrative neighbourhood-retailer workflow showing how methods can be combined. Preserved links to existing BusinessIdea.io guides/workspaces.
+- Source references: Mom Test author site, Steve Blank, Christensen Institute, IDEO, Eric Ries/Lean Startup, Strategyzer and Blue Ocean Strategy official sources. Purchased comparison archive and authored guide files remain unchanged; seller's weighted scorecard was not reused.
+- No database, AI API, user API key or authentication changes. Tests not run yet; pending selector, source links, internal routes, mobile/desktop layout, noindex and Vercel.
