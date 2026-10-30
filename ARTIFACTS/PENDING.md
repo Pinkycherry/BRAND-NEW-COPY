@@ -422,3 +422,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-10-30 — Founder story noindex guard; QA pending
 - Unknown, placeholder and otherwise unpublished story slugs now receive noindex,nofollow; publishable source-backed records retain normal indexing.
 - Verify head metadata for both states after deployment.
+
+### 2026-10-30 — Market Research bottom-up sizing workspace; QA pending
+- Added TAM/SAM/SOM scenario calculator from founder-entered assumptions, official India data-source directory and evidence sequence.
+- Outputs clearly state they are not verified market estimates or forecasts; inputs are session-only and not transmitted.
+- QA pending: calculation examples, 0/100% boundaries, invalid/empty values, reset, mobile/desktop, source/guide links, noindex and Vercel.

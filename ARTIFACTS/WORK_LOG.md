@@ -1025,3 +1025,12 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Added robots noindex,nofollow only to founder-story slugs that fail the shared source-backed publication gate. Published stories that pass the gate retain normal indexing.
 - Placeholder JSON and the shared source filter remain unchanged.
 - Pending: verify generated head metadata for both missing and publishable slugs after deployment.
+
+## 2026-10-30 — Market Research: bottom-up sizing workspace
+- Before: https://bbinewcopy.vercel.app/market-research
+- After: https://bbinewcopy.vercel.app/market-research
+- Replaced the thin guide-only directory with a bottom-up TAM/SAM/SOM scenario calculator. Inputs are user-entered: buyer count in a defined geography, target-segment share, annual spend on the current solution, first-year reach and expected capture.
+- Outputs are labelled scenario arithmetic, not verified market data or a revenue forecast. No inputs are stored or transmitted.
+- Added source guidance for India's Open Government Data Platform, MoSPI publications and RBI Database on Indian Economy, with explicit limitations that macro/sector data do not prove demand for a specific offer.
+- Added a six-step evidence workflow and curated existing guide links by explicit slugs. Existing guide content/database unchanged.
+- Tests not run yet. Pending: calculation boundaries, zero/empty/decimal inputs, reset, mobile/desktop layout, official source links, guide links, noindex and Vercel.

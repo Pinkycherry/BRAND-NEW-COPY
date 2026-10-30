@@ -367,3 +367,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 ## 2026-10-30 — Founder story URL indexing guard
 - Added `noindex,nofollow` metadata only when a requested slug is absent from the shared source-backed CASE_STUDIES collection. Published records that pass the evidence gate remain indexable.
 - Placeholder JSON and the filter remain unchanged. Deployment metadata QA pending.
+
+## 2026-10-30 — Market Research: bottom-up sizing and evidence workflow
+- Route: `/market-research`.
+- Replaced keyword-filtered guide cards with a founder workflow and a bottom-up TAM/SAM/SOM scenario calculator using five user inputs: defined-area buyer count, target-segment share, annual current spend, reachable share and expected capture.
+- Formula outputs are explicitly labelled scenario arithmetic, not externally verified market size, demand or revenue forecast. Inputs are session-only and are not saved or transmitted.
+- Added official India data references: Open Government Data catalog, MoSPI publications and RBI Database on Indian Economy. Explained that macro/sector datasets do not establish demand for a specific product.
+- Added six research steps and curated existing guide records by explicit slugs. No guide body or database record changed.
+- QA pending: calculation and boundary tests, mobile/desktop, links, noindex and Vercel.
+- Next: continue audit of idea validation and comparison routes to ensure evidence states and missing-data handling are consistent.
