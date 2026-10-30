@@ -409,3 +409,11 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - No database writes, API integration or customer identifiers.
 - QA pending: export, clear/cancel, individual deletion, reload, prompt and responsive layout.
 - Next: continue the pending route audit using the project backlog; do not reopen already completed pages unless QA finds a specific defect.
+
+## 2026-10-30 — Failed Startup Research India: seven source-backed records
+- Route: `/failed-startups/india`.
+- Expanded the collection from three to seven records: added Lido Learning, Udayy, FrontRow and Bluelearn.
+- Each addition carries two sources, a dated event, reported facts, founder diligence questions and an explicit limit on what the sources establish.
+- Added editorial context distinguishing the four education/learning cases. The page discloses that four of seven records are edtech and the collection is not a balanced or exhaustive sample.
+- Existing Koo, Stayzilla and Doodhwala records remain unchanged. Preview QA and Vercel checks remain open.
+- Next content work: Business Idea Reading Room and Startup Knowledge Hub. Homepage remains out of scope.
