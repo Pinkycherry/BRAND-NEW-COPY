@@ -1063,3 +1063,11 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Added confirmation before clearing the entire local conversation log. Individual deletion and existing browser persistence remain.
 - Existing founder context and four-provider handoff unchanged. No database writes, API requests or customer identifiers added.
 - Tests not run yet. Pending: export all fields, clear confirm/cancel, per-entry delete, reload persistence, prompt handoff, mobile/desktop and Vercel.
+
+## 2026-10-30 — Failed Startup Research India: seven source-checked cases
+- Page: https://bbinewcopy.vercel.app/failed-startups/india
+- Expanded the page from three to seven records. Added Lido Learning, Udayy, FrontRow and Bluelearn. Each addition includes a dated event, reported facts, founder diligence questions, explicit limitations and two source links.
+- Sources: Indian Express and Business Standard (Lido); Economic Times and YourStory (Udayy); Moneycontrol and TechCrunch (FrontRow); founder winding-down note and Moneycontrol (Bluelearn).
+- Added editorial synthesis distinguishing the four education/learning cases. Disclosed that four of seven examples are edtech and the sample is neither sector-balanced nor exhaustive.
+- Page commits: https://github.com/PinkyCherry/BRAND-NEW-COPY/commit/d5d08e03a826c61cf0f0490bd9fbd2c9cab738fa and https://github.com/PinkyCherry/BRAND-NEW-COPY/commit/9e232c05cb3e4d0f5e8a9bfbcc372d4be9aa2477
+- QA pending: verify all 14 source URLs, route rendering, event dates, structured data, 360/390px and desktop layouts, noindex response and Vercel build.
