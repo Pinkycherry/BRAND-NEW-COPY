@@ -1012,3 +1012,11 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Rewrote the page promise and added an explicit no-verified-cases state, the publication evidence standard and links to source-checked shutdown research and founder workspaces.
 - Preserved the existing CASE_STUDIES filter, case JSON, story route, sitemap/count logic and purchased archive. No placeholder composite was promoted or counted.
 - Tests not run yet. Pending: verify zero-case rendering, future non-empty card rendering, sitemap/story-route exclusion, 360px/390px/desktop layout, noindex and Vercel.
+
+## 2026-10-30 — Founder story detail: remove unsupported claims and gate publication
+- Before: https://bbinewcopy.vercel.app/founder-stories
+- After: https://bbinewcopy.vercel.app/founder-stories
+- Removed hardcoded "Verified Operator", "Global", "Premium Pricing", "High Margin", "Bootstrapped", "Rapid Validation", "Organic Growth", "Audited Operator Breakdown" and fixed publication date from the detail template.
+- Replaced the generic financial scorecard with only fields present in a publishable case record: problem, offer, reported sequence, acquisition approaches, tools, bottleneck, takeaways, evidence notes and source links. Founder/location appear only when supplied.
+- Tightened the shared CASE_STUDIES publication gate: a record must be non-placeholder, non-composite, include an evidence note and have at least one labelled HTTPS source. Sitemap, list and slug lookup all reuse this filtered collection.
+- Current five composites remain excluded; case JSON untouched. Tests not run yet. Pending: verify all five slugs return not-published, sitemap/count exclusion, valid future source record rendering, Vercel and responsive layout.

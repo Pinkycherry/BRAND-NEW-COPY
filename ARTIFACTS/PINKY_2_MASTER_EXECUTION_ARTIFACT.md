@@ -355,3 +355,11 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Preserved the data filter and did not edit `data/case-studies.json`, `src/lib/case-studies-data.ts`, founder-story routes, sitemap logic or seller archive.
 - Deployment and responsive/functional QA remain pending.
 - Next: continue route inventory for source-backed research and case-study pages; check that no placeholder route is indexable or reachable by slug.
+
+## 2026-10-30 — Founder story detail: data-only claims and source gate
+- Route: `/founder-stories/$slug`; shared data layer: `src/lib/case-studies-data.ts`.
+- Removed template-generated claims ("Verified Operator", "Global", "Premium Pricing", "High Margin", "Bootstrapped", "Rapid Validation", "Organic Growth", "Audited Operator Breakdown") and the fixed publication date. None were present as supported data fields.
+- Detail page now renders only fields in the case record, with founder/location shown only when explicitly supplied. Removed the fake financial scorecard; added visible evidence notes and HTTPS source links.
+- Publication gate now requires: not PLACEHOLDER, not marked composite, non-empty evidence note and at least one labelled HTTPS source. Directory, sitemap/count and slug lookup share the same filtered CASE_STUDIES collection.
+- Five existing composite records remain excluded; JSON not edited. Functional and responsive QA pending.
+- Next: review market-research directory and remaining guide routes for empty states, unsupported promises and missing source links.

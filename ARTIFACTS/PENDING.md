@@ -413,3 +413,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Clarified that no current founder story passes publication review; the five illustrative composites remain excluded by the existing data-layer filter.
 - Added visible evidence requirements and links to verified shutdown research and practical founder tools.
 - QA pending: empty state, future non-empty state, story URL/sitemap exclusion, mobile/desktop, noindex and Vercel.
+
+### 2026-10-30 — Founder story detail and publication gate; QA pending
+- Removed unsupported operator identity, location, financial performance labels and fixed publication date. Detail page now renders only data fields and evidence links.
+- CASE_STUDIES now requires non-placeholder/non-composite status, an evidence note and at least one labelled HTTPS source before a record can appear in directory, sitemap or slug lookup.
+- QA pending: all five current placeholder slugs must be unavailable; no sitemap entries; future sourced record test; Vercel and responsive layout.
