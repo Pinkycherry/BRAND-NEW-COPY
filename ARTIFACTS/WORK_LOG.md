@@ -1071,3 +1071,12 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Added editorial synthesis distinguishing the four education/learning cases. Disclosed that four of seven examples are edtech and the sample is neither sector-balanced nor exhaustive.
 - Page commits: https://github.com/PinkyCherry/BRAND-NEW-COPY/commit/d5d08e03a826c61cf0f0490bd9fbd2c9cab738fa and https://github.com/PinkyCherry/BRAND-NEW-COPY/commit/9e232c05cb3e4d0f5e8a9bfbcc372d4be9aa2477
 - QA pending: verify all 14 source URLs, route rendering, event dates, structured data, 360/390px and desktop layouts, noindex response and Vercel build.
+
+## 2026-10-30 — Business Models in India: concrete operating examples
+- Page: https://bbinewcopy.vercel.app/business-models-india
+- Added five clearly illustrative India-first scenarios: appliance repair service, small-batch regional spice product, office pantry subscription, neighbourhood service marketplace and textile-design licence.
+- Expanded the model comparison with scenario, first evidence to collect and often-missed costs. Added a section explaining when service/product, product/subscription, marketplace/service and licence/implementation combinations create extra obligations.
+- Replaced decorative numbered labels with descriptive prompts. Expanded buyer questions to cover repeat frequency.
+- Examples are illustrative, not claims about named businesses or verified market research. Existing source guide content and idea records unchanged.
+- Commit: https://github.com/PinkyCherry/BRAND-NEW-COPY/commit/85758ffd950e199f3c5a79adef631877c43ddacc
+- QA pending: Vercel, 360/390px and desktop layout, selector combinations, buyer-question section, internal routes and noindex.
