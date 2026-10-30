@@ -372,3 +372,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-10-30 07:14 IST — Tools Directory QA
 - Expanded founder-stage worksheet list and stage filters; existing verified calculator list retained.
 - PENDING: confirm CI/Vercel; verify each worksheet route; test combined search + stage filters and empty state; inspect 360/390px layout and genuine screenshots.
+
+
+### 2026-10-30 07:25 IST — Templates QA
+- Editable template editor with six original starter templates, copy, .txt download and reset committed.
+- PENDING: confirm CI/Vercel; test each template selection, edit, copy, download filename/content and reset; inspect 360/390px editor and buttons; capture genuine screenshots.
