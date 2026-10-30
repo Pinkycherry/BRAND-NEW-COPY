@@ -401,3 +401,11 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 ## 2026-10-30 — Comparison route final newline correction
 - Corrected the final top-level declaration separator and normalized export joins. Source assertions pass for the separate declaration and single newline escape.
 - Vercel/browser QA pending.
+
+## 2026-10-30 — First Customer in India: export real conversation notes
+- Route: `/first-customer-india`.
+- Preserved the existing buyer field brief, founder-context save, local observation schema, individual deletion and four-provider handoff.
+- Added a Markdown export of all saved observations (date, buyer role, location, trigger, workaround, offer, outcome, amount and notes) and a confirmation-protected clear-all action.
+- No database writes, API integration or customer identifiers.
+- QA pending: export, clear/cancel, individual deletion, reload, prompt and responsive layout.
+- Next: continue the pending route audit using the project backlog; do not reopen already completed pages unless QA finds a specific defect.

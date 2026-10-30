@@ -441,3 +441,7 @@ The five specific-field models are the four original calculators plus CAC. The 5
 
 ### 2026-10-30 — Comparison route final newline correction; QA pending
 - Fixed the final declaration separator and normalized export newline joins. Verify Vercel build and downloaded Markdown.
+
+### 2026-10-30 — First Customer conversation log export; QA pending
+- Added Markdown export of all local observations and confirmation-protected clear-all. Individual deletion and auto-save remain.
+- QA pending: export contents, clear confirm/cancel, per-entry delete, reload persistence, provider handoff, responsive layout and Vercel.

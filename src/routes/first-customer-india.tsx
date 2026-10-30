@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Check, ChevronRight, Trash2 } from "lucide-react";
+import { ArrowRight, Check, ChevronRight, Trash2, Download } from "lucide-react";
 import { ShortlistToggle } from "@/components/founder-workspace/shortlist-toggle";
 import { ProviderPromptActions } from "@/components/founder-workspace/provider-prompt-actions";
 import { buildFounderPrompt, buildProviderHandoffPrompt, saveFounderContext, useFounderWorkspace, type WorkspaceIdea } from "@/lib/founder-workspace";
@@ -102,6 +102,34 @@ function FirstCustomerPage() {
     setOffer(workspace.context.proposedOffer);
     setResponseLanguage(workspace.context.language || "English");
   }, [workspace.context]);
+  const exportObservations = () => {
+    const body = observations.map((item,index) => [
+      "## Conversation " + (index+1),
+      "- Date: " + (item.date || "Not recorded"),
+      "- Buyer / role: " + (item.buyer || "Not recorded"),
+      "- Market / location: " + (item.location || "Not recorded"),
+      "- Recent trigger: " + (item.trigger || "Not recorded"),
+      "- Current workaround: " + (item.workaround || "Not recorded"),
+      "- Offer tested: " + (item.offer || "Not recorded"),
+      "- Response: " + item.outcome,
+      "- Amount discussed (INR): " + (item.amount || "Not recorded"),
+      "- Observation: " + (item.notes || "Not recorded"),
+    ].join("\n")).join("\n\n");
+    const content = "# BusinessIdea.io first-customer conversation log\n\n" + body + "\n\nThese are founder-entered observations, not independently verified customer commitments.";
+    const url = URL.createObjectURL(new Blob([content], { type: "text/markdown;charset=utf-8" }));
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = "businessidea-first-customer-observations.md";
+    anchor.click();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+  };
+  const clearObservations = () => {
+    if (!window.confirm("Clear all saved conversation observations from this browser?")) return;
+    setObservations([]);
+    setLogMessage("The local conversation log was cleared.");
+    setLogError("");
+  };
+
   const saveCurrentContext = () => saveFounderContext({
     buyer: buyerGroup, location: marketLocation, recentProblem: trigger,
     currentWorkaround: workaround, proposedOffer: offer, language: responseLanguage,
@@ -195,7 +223,7 @@ function FirstCustomerPage() {
             <ProviderPromptActions title="Continue with AI" prompt={firstCustomerPrompt} prefillPrompt={firstCustomerPrefill}/>
           </article>
           <article className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5">
-            <div className="flex items-start justify-between gap-3"><div><h3 className="text-lg font-bold text-slate-950">Your local conversation log</h3><p className="mt-1 text-sm text-slate-600">{observations.length} saved observation(s) in this browser.</p></div>{observations.length>0&&<button type="button" onClick={()=>{setObservations([]);setLogMessage("The local conversation log was cleared.");setLogError("");}} className="shrink-0 rounded-lg border border-slate-300 px-3 py-2 text-xs font-semibold text-slate-700 hover:border-slate-500">Clear all</button>}</div>
+            <div className="flex items-start justify-between gap-3"><div><h3 className="text-lg font-bold text-slate-950">Your local conversation log</h3><p className="mt-1 text-sm text-slate-600">{observations.length} saved observation(s) in this browser.</p></div>{observations.length>0&&<div className="flex shrink-0 flex-wrap gap-2"><button type="button" onClick={exportObservations} className="inline-flex min-h-9 items-center gap-1 rounded-lg border border-slate-300 px-3 py-2 text-xs font-semibold text-slate-700 hover:border-blue-500"><Download size={14}/> Export</button><button type="button" onClick={clearObservations} className="inline-flex min-h-9 items-center gap-1 rounded-lg border border-slate-300 px-3 py-2 text-xs font-semibold text-slate-700 hover:border-red-400"><Trash2 size={14}/> Clear all</button></div>}</div>
             {observations.length===0 ? <p className="mt-4 rounded-xl bg-slate-50 p-3 text-sm text-slate-600">No conversations recorded yet. After speaking with a buyer, record the date, problem and strongest action they took.</p> : <ul className="mt-4 space-y-3">{observations.map(item=><li key={item.id} className="rounded-xl border border-slate-200 p-3"><div className="flex items-start justify-between gap-3"><div className="min-w-0"><p className="break-words font-semibold text-slate-950">{item.buyer || "Buyer not labelled"}{item.date ? " · " + item.date : ""}</p><p className="mt-1 text-xs font-semibold uppercase tracking-wide text-blue-700">{({ "not-contacted":"Not contacted",heard:"Heard interest",asked:"Asked for details",booked:"Trial / next step",paid:"Paid / deposit",declined:"Declined" } as Record<string,string>)[item.outcome] || item.outcome}</p></div><button type="button" aria-label="Delete this observation" onClick={()=>setObservations(all=>all.filter(saved=>saved.id!==item.id))} className="grid h-8 w-8 shrink-0 place-items-center rounded-lg text-slate-500 hover:bg-slate-50 hover:text-slate-950"><Trash2 size={15}/></button></div>{item.trigger && <p className="mt-2 text-sm text-slate-700"><strong>Problem:</strong> {item.trigger}</p>}{item.workaround && <p className="mt-1 text-sm text-slate-700"><strong>Alternative:</strong> {item.workaround}</p>}{item.offer && <p className="mt-1 text-sm text-slate-700"><strong>Offer:</strong> {item.offer}</p>}{item.amount && <p className="mt-1 text-sm text-slate-700"><strong>Price:</strong> ₹ {item.amount}</p>}{item.notes && <p className="mt-2 whitespace-pre-wrap break-words rounded-lg bg-slate-50 p-2 text-sm text-slate-700">{item.notes}</p>}</li>)}</ul>}
           </article>
         </div>

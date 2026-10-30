@@ -1057,3 +1057,9 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Replaced the remaining escaped separator between the assessment key and lenses with real source line breaks.
 - Normalized Markdown export joins to a single newline escape in the TypeScript source.
 - Source assertions now pass for both the declaration and export string. Deployment/browser QA remains pending.
+
+## 2026-10-30 — First Customer in India: portable conversation log
+- Added Markdown export for all saved customer observations, including date, buyer role, market, trigger, workaround, offer, response outcome, amount and notes.
+- Added confirmation before clearing the entire local conversation log. Individual deletion and existing browser persistence remain.
+- Existing founder context and four-provider handoff unchanged. No database writes, API requests or customer identifiers added.
+- Tests not run yet. Pending: export all fields, clear confirm/cancel, per-entry delete, reload persistence, prompt handoff, mobile/desktop and Vercel.
