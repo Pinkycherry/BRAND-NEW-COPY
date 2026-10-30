@@ -431,3 +431,7 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-10-30 — Startup Idea Validation brief export/reset; QA pending
 - Added Markdown export of the seven-field validation brief and current decision. Added confirmed clear/reset.
 - QA pending: export content, confirm/cancel/reset, localStorage reload, provider handoff, responsive layout and Vercel.
+
+### 2026-10-30 — Startup Idea Comparison assessment persistence/export; QA pending
+- Added shortlist-keyed local persistence for evidence choices, notes and next step. Added Markdown export and confirmed clear of active assessment only.
+- QA pending: refresh, switch shortlist combinations, remove/re-add, export, clear/cancel, AI prompt, responsive layout and Vercel.

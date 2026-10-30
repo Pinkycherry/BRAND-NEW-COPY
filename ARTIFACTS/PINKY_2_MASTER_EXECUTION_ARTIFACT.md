@@ -384,3 +384,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - No numerical validation score, arbitrary threshold, BBI AI API, database write or API-key integration.
 - QA pending: file contents, reset/cancel, browser persistence, provider prompt and responsive behavior.
 - Next: review comparison workspace for clear removal, data gaps, decision export and mobile/desktop usability; change only demonstrated gaps.
+
+## 2026-10-30 — Startup Idea Comparison: portable evidence assessment
+- Route: `/startup-idea-comparison`.
+- Existing published-record comparison, four-idea shortlist, missing-field warnings and no-score approach preserved.
+- Added browser-local persistence for the five evidence choices, per-lens notes and next action/review date. Each record is keyed by the exact selected shortlist combination so changing the selected ideas loads a separate assessment.
+- Added Markdown export with selected idea fields, source gaps, founder notes and next action; added confirmed clear for the active assessment without clearing the idea shortlist.
+- No database writes, AI API calls, user API keys or invented ranking.
+- QA pending: persistence across refresh and shortlist changes, export, clear/cancel, provider handoff and responsive behavior.
+- Next: continue QA on recent commits and audit the next unfinished page based on PENDING.

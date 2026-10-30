@@ -3,7 +3,7 @@ import { V2PageCta, V2PageHero, V2PageSection } from "@/components/v2/page-secti
 import { useEffect, useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Download, Trash2 } from "lucide-react";
 import { GlassShell } from "@/components/glass-shell";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import "@/components/idea-comparison.css";
@@ -11,7 +11,7 @@ import { useFounderWorkspace, removeShortlistIdea, clearShortlist, buildFounderP
 import { getComparisonRecords } from "@/lib/comparison.functions";
 import { ProviderPromptActions } from "@/components/founder-workspace/provider-prompt-actions";
 
-const lenses = [
+const ASSESSMENT_KEY_PREFIX = "bbi-idea-comparison-v1:";\n\nconst lenses = [
   { title: "A buyer you can reach", prompt: "Can you name a real group and reach a decision-maker this week?", next: "/first-customer-india", link: "Map the first payer" },
   { title: "A problem that has happened", prompt: "Have you heard a recent workaround or seen an actual purchase?", next: "/business-idea-research-india", link: "Check the evidence" },
   { title: "Cash before collection", prompt: "Which idea ties up more money before a buyer pays?", next: "/startup-costs-india", link: "Map startup cash" },
@@ -36,7 +36,42 @@ function ComparisonPage() {
   const [choices, setChoices] = useState<Record<string, string>>({});
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [nextStep, setNextStep] = useState("");
+
   const shortlistKey = shortlist.map(idea => (idea.source || "auto") + ":" + idea.slug).join("|");
+  const [assessmentKey, setAssessmentKey] = useState("");
+  useEffect(() => {
+    if (!shortlistKey) {
+      setAssessmentKey("");
+      setChoices({});
+      setNotes({});
+      setNextStep("");
+      return;
+    }
+    try {
+      const saved = JSON.parse(window.localStorage.getItem(ASSESSMENT_KEY_PREFIX + shortlistKey) || "null") as {
+        choices?: Record<string, string>;
+        notes?: Record<string, string>;
+        nextStep?: string;
+      } | null;
+      setChoices(saved?.choices && typeof saved.choices === "object" ? saved.choices : {});
+      setNotes(saved?.notes && typeof saved.notes === "object" ? saved.notes : {});
+      setNextStep(typeof saved?.nextStep === "string" ? saved.nextStep : "");
+    } catch {
+      setChoices({});
+      setNotes({});
+      setNextStep("");
+    }
+    setAssessmentKey(shortlistKey);
+  }, [shortlistKey]);
+
+  useEffect(() => {
+    if (!assessmentKey || assessmentKey !== shortlistKey) return;
+    try {
+      window.localStorage.setItem(ASSESSMENT_KEY_PREFIX + assessmentKey, JSON.stringify({ choices, notes, nextStep }));
+    } catch {
+      // Keep the current comparison usable if browser storage is unavailable.
+    }
+  }, [assessmentKey, shortlistKey, choices, notes, nextStep]);
 
   useEffect(() => {
     const items = shortlist.map(({ slug, source }) => ({ slug, source }));
@@ -97,7 +132,54 @@ function ComparisonPage() {
   const prefillPrompt = buildProviderHandoffPrompt("compare", selectedRecords, context,
     comparisonNotes + (gaps.length ? "\nSource gaps to research: " + gaps.map(item => item.title + " — " + item.fields.join(", ")).join("; ") : ""));
   const updateChoice = (lens: string, slug: string) => setChoices(current => ({ ...current, [lens]: slug }));
+
   const updateNote = (lens: string, note: string) => setNotes(current => ({ ...current, [lens]: note }));
+  const exportComparisonBrief = () => {
+    const ideaSections = selectedRecords.map(idea => [
+      "## " + idea.title,
+      ...comparisonRows.map(row => "- " + row.label + ": " + (row.value(idea).trim() || "Needs research")),
+    ].join("\\n")).join("\\n\\n");
+    const assessmentSections = lenses.map(lens => {
+      const chosen = selectedRecords.find(idea => idea.slug === choices[lens.title]);
+      return [
+        "### " + lens.title,
+        "Question: " + lens.prompt,
+        "Evidence points to: " + (chosen?.title || "Unclear — need evidence"),
+        "Founder note: " + (notes[lens.title] || "Not recorded"),
+      ].join("\\n");
+    }).join("\\n\\n");
+    const gapSection = gaps.map(item => "- " + item.title + ": " + item.fields.join(", ")).join("\\n");
+    const content = [
+      "# Startup idea comparison brief",
+      "",
+      "## Selected ideas and published fields",
+      ideaSections || "No idea details loaded.",
+      "",
+      "## Source gaps",
+      gapSection || "No missing fields identified in the loaded records.",
+      "",
+      "## Founder evidence assessment",
+      assessmentSections,
+      "",
+      "## Next action and review date",
+      nextStep || "Not recorded",
+      "",
+      "This brief records source fields and founder observations. It is not a success prediction or validation score.",
+    ].join("\\n");
+    const url = URL.createObjectURL(new Blob([content], { type: "text/markdown;charset=utf-8" }));
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = "businessidea-startup-idea-comparison.md";
+    anchor.click();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+  };
+  const clearAssessment = () => {
+    if (!assessmentKey || assessmentKey !== shortlistKey) return;
+    if (!window.confirm("Clear the notes and decisions for this comparison only? Your saved idea shortlist will stay unchanged.")) return;
+    setChoices({});
+    setNotes({});
+    setNextStep("");
+  };
   const recordsReady = recordState === "ready" && fullRecords.length === shortlist.length;
 
   return <>
@@ -137,7 +219,12 @@ function ComparisonPage() {
         </div>
       </section>
 
-      {shortlist.length>=2 && <V2PageSection className="ic-assessment" aria-labelledby="ic-assessment-title"><div><p className="gh-eyebrow">YOUR EVIDENCE, NOT A SCORE</p><h2 id="ic-assessment-title">Which idea has stronger evidence for this question?</h2><p>Pick the record with stronger evidence, or leave it unclear. Add an observation or source you can check; these notes are included in the full prompt below.</p></div><div className="mt-5 grid gap-3 md:grid-cols-2">{lenses.map(lens=><article key={lens.title} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"><h3 className="text-lg font-bold">{lens.title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{lens.prompt}</p><label className="mt-4 block text-sm font-semibold text-slate-800">Current evidence points to<select value={choices[lens.title]||""} onChange={event=>updateChoice(lens.title,event.target.value)} className="mt-2 block min-h-11 w-full rounded-xl border border-slate-300 bg-white px-3 font-normal"><option value="">Unclear — need evidence</option>{selectedRecords.map(idea=><option key={idea.slug} value={idea.slug}>{idea.title}</option>)}</select></label><label className="mt-3 block text-sm font-semibold text-slate-800">Observation or source note<textarea rows={2} value={notes[lens.title]||""} onChange={event=>updateNote(lens.title,event.target.value)} placeholder="What happened, when, and where can you verify it?" className="mt-2 block w-full rounded-xl border border-slate-300 bg-white p-3 font-normal leading-6"/></label></article>)}</div><label className="mt-5 block text-sm font-semibold text-slate-800">Your next action and review date<textarea rows={2} value={nextStep} onChange={event=>setNextStep(event.target.value)} placeholder="Example: speak to two likely buyers before placing a stock order; review Friday." className="mt-2 block w-full rounded-xl border border-slate-300 bg-white p-3 font-normal leading-6"/></label><div className="mt-4"><ProviderPromptActions title="Continue this comparison with AI" prompt={prompt} prefillPrompt={prefillPrompt}/></div></V2PageSection>}
+      {shortlist.length>=2 && <V2PageSection className="ic-assessment" aria-labelledby="ic-assessment-title"><div><p className="gh-eyebrow">YOUR EVIDENCE, NOT A SCORE</p><h2 id="ic-assessment-title">Which idea has stronger evidence for this question?</h2><p>Pick the record with stronger evidence, or leave it unclear. Add an observation or source you can check; these notes are included in the full prompt below.</p></div><div className="mt-5 grid gap-3 md:grid-cols-2">{lenses.map(lens=><article key={lens.title} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"><h3 className="text-lg font-bold">{lens.title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{lens.prompt}</p><label className="mt-4 block text-sm font-semibold text-slate-800">Current evidence points to<select value={choices[lens.title]||""} onChange={event=>updateChoice(lens.title,event.target.value)} className="mt-2 block min-h-11 w-full rounded-xl border border-slate-300 bg-white px-3 font-normal"><option value="">Unclear — need evidence</option>{selectedRecords.map(idea=><option key={idea.slug} value={idea.slug}>{idea.title}</option>)}</select></label><label className="mt-3 block text-sm font-semibold text-slate-800">Observation or source note<textarea rows={2} value={notes[lens.title]||""} onChange={event=>updateNote(lens.title,event.target.value)} placeholder="What happened, when, and where can you verify it?" className="mt-2 block w-full rounded-xl border border-slate-300 bg-white p-3 font-normal leading-6"/></label></article>)}</div><label className="mt-5 block text-sm font-semibold text-slate-800">Your next action and review date<textarea rows={2} value={nextStep} onChange={event=>setNextStep(event.target.value)} placeholder="Example: speak to two likely buyers before placing a stock order; review Friday." className="mt-2 block w-full rounded-xl border border-slate-300 bg-white p-3 font-normal leading-6"/></label><div className="mt-4 flex flex-wrap gap-2">
+          <button type="button" onClick={exportComparisonBrief} disabled={!assessmentKey || assessmentKey!==shortlistKey} className="inline-flex min-h-10 items-center gap-2 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold disabled:opacity-50"><Download size={15}/> Download comparison</button>
+          <button type="button" onClick={clearAssessment} disabled={!assessmentKey || assessmentKey!==shortlistKey} className="inline-flex min-h-10 items-center gap-2 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold disabled:opacity-50"><Trash2 size={15}/> Clear assessment</button>
+          <span className="self-center text-xs text-slate-500">Notes save in this browser for this exact shortlist.</span>
+        </div>
+        <div className="mt-4"><ProviderPromptActions title="Continue this comparison with AI" prompt={prompt} prefillPrompt={prefillPrompt}/></div></V2PageSection>}
 
       <V2PageSection className="ic-cost" aria-labelledby="ic-cost-title"><div><p className="gh-eyebrow">THE RISK YOU FEEL AT HOME</p><h2 id="ic-cost-title">A rupee at risk is personal.</h2><p>A deposit, unsold stock or four nights a week can take room from a household. Compare the smallest useful version of each idea, then check the timing of bills rather than only total cost.</p></div><div className="ic-cost-actions"><Link to="/startup-costs-india"><strong>What must I spend first?</strong><span>Map one-time and monthly cash requirements.</span><ArrowUpRight size={17}/></Link><Link to="/startup-cash-flow-india"><strong>When does cash run out?</strong><span>Place bills beside the date customer payment arrives.</span><ArrowUpRight size={17}/></Link></div></V2PageSection>
 

@@ -1040,3 +1040,10 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Added a confirmed clear action that resets the brief and decision in the current browser. Existing auto-save and external-provider handoff are unchanged.
 - No new score, thresholds, API call, database write or key handling.
 - Tests not run yet. Pending: download contents, clear confirmation/cancel/reset, reload persistence, mobile layout, prompt handoff and Vercel.
+
+## 2026-10-30 — Startup Idea Comparison: persist and export founder assessment
+- Added browser-local persistence for the five evidence choices, their notes and the next action/review date. Each assessment is keyed to the exact selected shortlist combination so notes are not silently carried into a different comparison.
+- Added Markdown export containing selected published fields, missing source gaps, five founder assessments and the next action.
+- Added a confirmed clear action for the active assessment only; the saved shortlist is not changed.
+- Existing source-record loading, missing-field handling, four-idea shortlist and external AI handoff remain unchanged.
+- Tests not run yet. Pending: refresh persistence, switch shortlist combinations, remove/re-add idea, export contents, clear confirmation/cancel, provider prompt, mobile/desktop and Vercel.
