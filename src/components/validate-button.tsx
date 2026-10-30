@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { ArrowRight, Check, ChevronDown, FileText, MapPin, Clock3, Coins, Languages, Image as ImageIcon } from "lucide-react";
 import { ProviderPromptActions } from "@/components/founder-workspace/provider-prompt-actions";
@@ -54,11 +54,12 @@ export function ValidateButton({ slug }: { slug: string }) {
     setRecentProblem(workspace.context.recentProblem);
     setCurrentWorkaround(workspace.context.currentWorkaround);
     setProposedOffer(workspace.context.proposedOffer);
+    setContext(workspace.context.additionalContext);
   }, [workspace.context, dirty]);
 
   const currentContext = {
     location, budgetINR, hoursPerWeek, skills, buyer, language,
-    recentProblem, currentWorkaround, proposedOffer,
+    recentProblem, currentWorkaround, proposedOffer, additionalContext: context,
   };
   const saveContext = () => saveFounderContext(currentContext);
   const resetPrepared = () => { setPrepared(null); setError(""); setDirty(true); };
@@ -70,7 +71,7 @@ export function ValidateButton({ slug }: { slug: string }) {
       ? (current.length > 1 ? current.filter(value => value !== output) : current)
       : [...current, output]);
   };
-  const prepare = async (event: React.FormEvent<HTMLFormElement>) => {
+  const prepare = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (loading) return;
     setLoading(true);
@@ -78,7 +79,7 @@ export function ValidateButton({ slug }: { slug: string }) {
     setPrepared(null);
     saveContext();
     try {
-      const result = await getPrompt({ data: { slug, ...currentContext, context, outputs } });
+      const result = await getPrompt({ data: { slug, location, budgetINR, hoursPerWeek, skills, buyer, language, recentProblem, currentWorkaround, proposedOffer, context, outputs } });
       setPrepared(result);
     } catch (e) {
       setError(e instanceof Error ? e.message : "We could not prepare this validation. Please try again.");
@@ -128,7 +129,7 @@ export function ValidateButton({ slug }: { slug: string }) {
 
       <label className="block text-sm font-semibold">Anything else? (optional)
         <span className="mt-1 block text-xs font-normal text-slate-500">You can write naturally or separate details with commas. The AI will interpret clear constraints and ask if a key detail is ambiguous.</span>
-        <textarea className={fieldClass + " min-h-28"} maxLength={1800} rows={4} value={context} onChange={event => { setContext(event.target.value); resetPrepared(); }} placeholder="Example: Telugu, part-time, start from home, avoid borrowing, and I can travel only within 5 km." />
+        <textarea className={fieldClass + " min-h-28"} maxLength={1800} rows={4} value={context} onChange={event => { setContext(event.target.value); resetPrepared(); }} onBlur={saveContext} placeholder="Example: Telugu, part-time, start from home, avoid borrowing, and I can travel only within 5 km." />
       </label>
 
       <fieldset>

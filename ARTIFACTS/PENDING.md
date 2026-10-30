@@ -314,3 +314,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Image request exposes ChatGPT/Grok only. Artifact generation depends on the chosen provider session and plan; wording must not imply a guaranteed attachment.
 - API/OpenRouter integration is explicitly NOT part of this edit. No API keys are requested or stored; this is an external-link prompt builder only.
 - Live preview direct fetch failed in this environment; do not fabricate screenshots. Vercel status and actual browser QA remain open.
+
+
+### 2026-10-30 05:30:54 IST — Validation additional-context persistence correction
+- Optional free-text validation notes now belong to the local browser FounderContext, load when returning and are included in subsequent prompt builders. Confirm the full text appears in prompt preview after navigation/reload and remains local only.
+- Fresh Vercel check is pending for this correction; test report/roadmap/HTML/chart/image output selections and long Unicode prompts after deployment. API integration remains deferred.

@@ -196,3 +196,8 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Added selectable deliverables: detailed report, action roadmap, HTML prototype, chart/infographic and image generation. Image output exposes ChatGPT/Grok only, without promising that every session/plan will create the artifact.
 - Prompt service returns full prompt for review/copy plus a compact provider-prefill prompt that is checked against URL-encoding length. It reads the existing published record only and prepares a prompt; it does not call a model or store any response. The API/OpenRouter option stays future planning only. Browser context remains local.
 - Public preview rendering/screenshots unavailable from this environment; Vercel status and browser checks remain required.
+
+
+## 2026-10-30 05:30:54 IST — Validation context persistence correction
+- Added the free-text validation notes to `FounderContext.additionalContext`, browser normalization/defaults and shared full/compact prompt builders. The validation form hydrates the saved notes when the founder returns and persists them with the rest of the local context.
+- Changed the form event type to an explicit `FormEvent` import. This is a correctness fix to the individual idea validation edit. No API integration, new database storage or external AI call.

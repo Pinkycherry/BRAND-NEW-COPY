@@ -220,3 +220,7 @@ The external prompt should be explicit that:
 - Added selectable outputs: report, roadmap, HTML prototype, chart/infographic and images. Image intent offers only ChatGPT and Grok. Output features are requested, not guaranteed; provider session/plan limits still apply.
 - Prompt preparation now returns a full review/copy prompt and a compact prefill prompt. The request remains a prepared external-provider deep link; there is no model inference API, OpenRouter integration, API key store, or new auth logic in this edit. Founder context is saved locally in the browser through the existing workspace utility.
 - Reference: direct public preview could not be opened through the available browser tool; use Google Search Central's people-first guidance as the quality lens, with special focus on substantive interactive work rather than an explanatory-only page. This is page 1 of the next five-page set in source order (idea detail / validation).
+
+
+## 2026-10-30 05:30:54 IST — Validation workspace continuity correction
+- Validation optional notes are included in the same local browser FounderContext as location/budget/language and reused by later prompts. No backend data persistence was added. User API integration remains future-only.

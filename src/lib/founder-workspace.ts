@@ -34,6 +34,7 @@ export type FounderContext = {
   recentProblem: string;
   currentWorkaround: string;
   proposedOffer: string;
+  additionalContext: string;
 };
 
 export type FounderWorkspace = {
@@ -52,6 +53,7 @@ export const emptyFounderContext: FounderContext = {
   recentProblem: "",
   currentWorkaround: "",
   proposedOffer: "",
+  additionalContext: "",
 };
 
 const emptyWorkspace = (): FounderWorkspace => ({
@@ -101,6 +103,7 @@ function normaliseContext(value: unknown): FounderContext {
     recentProblem: text(raw.recentProblem, 800),
     currentWorkaround: text(raw.currentWorkaround, 800),
     proposedOffer: text(raw.proposedOffer, 800),
+    additionalContext: text(raw.additionalContext, 1800),
   };
 }
 
@@ -197,6 +200,7 @@ export function buildFounderPrompt(task: FounderPromptTask, ideas: WorkspaceIdea
     ["Recent problem or trigger", context.recentProblem],
     ["Current workaround/alternative", context.currentWorkaround],
     ["Proposed small offer", context.proposedOffer],
+    ["Additional founder notes", context.additionalContext],
   ];
   const taskInstruction: Record<FounderPromptTask, string> = {
     validate: "Pressure-test the selected business idea for a first-time founder in India. Identify what must be verified before spending money.",
@@ -269,6 +273,7 @@ export function buildProviderHandoffPrompt(
     ["Recent problem", context.recentProblem],
     ["Current workaround", context.currentWorkaround],
     ["Proposed offer", context.proposedOffer],
+    ["Additional notes", context.additionalContext],
   ];
   const ideaRows = ideas.slice(0, MAX_SHORTLIST).map((idea, index) => [
     `IDEA ${index + 1}: ${clean(idea.title, 90)}`,
