@@ -258,3 +258,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Preserved the existing one-time/monthly cost calculations and service/product/local scenario guidance. Added browser-local save/load for entered costs, months, buffer, expected collections and scenario; added CSV export of line items and totals; added a reviewable prepared prompt using the figures and founder context through the existing four-provider handoff.
 - No database write, AI API, API key or sign-in gate.
 - Build, live deployment and mobile QA remain unverified. Test restore, totals, CSV content, prompt length and 360/390px layout before closure.
+
+
+## 2026-10-30 06:54 IST — Homepage: Prompt · Plan · Test · Build hero
+- Before: https://bbinewcopy.vercel.app/
+- After: https://bbinewcopy.vercel.app/
+- Code commit: https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/ffdd12f1b4e5fc6a00728b2910c6d96e72b6afc9
+- Rebuilt the homepage hero with the requested “An idea is a start” direction and four practical paths: Prompt, Plan, Test and Build. Added soft responsive action panels, clear Browse/Validate actions and search.
+- Added a slow-moving practical guide carousel and a technology-stack strip. Motion pauses on hover/focus and is disabled for reduced-motion users. All new links point to existing routes.
+- Build, live deployment and visual/mobile QA remain unverified. Check homepage first fold, carousel, reduced-motion behavior and 360/390px layout.
