@@ -890,3 +890,12 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Code commit: https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/46ae8840afb356e98d8951f46cf585c9458f2830
 - Added browser-local save/load for the opening balance and dated cash events, with no database write. Added CSV export, cash top-up required to avoid a negative balance, and configurable 7/14/30-day collection-delay scenario with the outgoing bills retained on their due dates.
 - No build, browser, screenshot or live-route test was run in this environment. Deployment and functional/mobile QA remain pending.
+
+
+## 2026-10-30 06:31 IST — Business Demand Test India implementation
+- Before: https://bbinewcopy.vercel.app/business-demand-test-india
+- After: https://bbinewcopy.vercel.app/business-demand-test-india
+- Code commit: https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/a8fa3234572f5bd07fd6e68441d81975eed956e1
+- Replaced the passive four-question design section with an interactive demand-test planner covering buyer, offer, price, channel, deadline, action request, founder-defined success condition, observed counts and notes. Added local browser persistence and a reviewable prompt handoff through the four existing providers.
+- Added Read full idea, Add to compare and Validate this idea to published idea cards. No AI API, API keys, database writes or login changes.
+- Build, browser, screenshots and live-route checks were not run here; deployment and mobile QA remain pending.
