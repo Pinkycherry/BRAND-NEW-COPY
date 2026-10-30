@@ -451,3 +451,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Added Lido Learning, Udayy, FrontRow and Bluelearn to the three existing records.
 - Four of seven are education/learning examples; the collection is not sector-balanced or exhaustive.
 - Still verify sources, dates, metadata, responsive layout, preview indexing and deployment before closing this item.
+
+### 2026-10-30 — Business Models in India: editorial depth added; QA pending
+- Added five illustrative India-first model scenarios, evidence to collect, often-missed costs and hybrid-model trade-offs.
+- Replaced decorative numbering with descriptive prompts and added buyer questions about repeat purchase.
+- Still verify build, selector combinations, 360/390px and desktop layout, internal routes and preview indexing before closing.
