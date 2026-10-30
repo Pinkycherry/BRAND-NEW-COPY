@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { OpenSourceResearchPage } from "@/components/open-source/open-source-research-page";
+import purchasedPage from "@/bought/open-source.html?raw";
+import { boughtPage } from "@/bought/serve";
 
 export const Route = createFileRoute("/open-source")({
-  component: OpenSourceResearchPage,
+  server: {
+    handlers: {
+      GET: async () => boughtPage(purchasedPage, "open-source"),
+    },
+  },
 });
