@@ -362,3 +362,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-10-30 06:54 IST — Homepage QA
 - Homepage hero, four founder actions, guide carousel and technology strip committed. Reduced-motion and hover/focus pause behavior added.
 - PENDING: confirm CI/Vercel; inspect desktop/mobile hero and first fold; verify all carousel links; test pause/focus and reduced-motion behavior; capture genuine before/after screenshots.
+
+
+### 2026-10-30 07:03 IST — Learning Resources QA
+- Guide and journal carousels implemented with actual published data, real links and featured images. Reduced-motion and hover/focus pause behavior included.
+- PENDING: confirm CI/Vercel; verify blog data query and empty state; inspect image loading and card layout; test carousel pause and reduced-motion; inspect 360/390px overflow and capture genuine screenshots.
