@@ -969,3 +969,11 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Added cross-case operating questions around local marketplace density, contribution after fulfilment/discounts, runway if funding/partnerships do not arrive, and decision-useful metrics. No seller headline totals, unsupported capital-loss claims or placeholder composite stories were published.
 - The existing placeholder case-study JSON and all purchased source files remain unchanged. No database, API, auth or user-key work.
 - Tests not run in this environment yet. Pending: route/build status, live content and source links, noindex, 360px/390px/desktop layout, and confirmation that no placeholder case is exposed.
+
+## 2026-10-30 — FAQ: product and research answers
+- Before: https://bbinewcopy.vercel.app/faq
+- After: https://bbinewcopy.vercel.app/faq
+- Kept the existing database-derived idea/subcategory FAQ questions and their source links. Added a curated set of product answers grounded in the current code: four-idea shortlist, browser-local storage, external provider handoff, prompt prefill/copy fallback, buyer evidence and source limitations.
+- Search now filters both curated and published-record questions. The page retains curated answers if the FAQ database query returns no rows or errors.
+- Inspected the purchased FAQ archive for its question themes, but did not copy its seller brand, credit plans, pricing, success-probability claims or other seller-only promises. Archive and database unchanged.
+- No AI API, API keys, database writes or auth changes. Tests not run yet; verify search, source links, empty database fallback, mobile/desktop accordion behavior, noindex and Vercel deployment.

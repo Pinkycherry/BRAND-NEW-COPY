@@ -387,3 +387,9 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Added three source-checked public service shutdown/pause records: Koo, Stayzilla and Doodhwala, with dated source links and explicit limits on what each record proves.
 - The placeholder composite records remain excluded. No unsupported "87+ cases" or "$24B+ lost" seller claims were used.
 - QA pending: Vercel/build, route rendering, each external source link, noindex, phone/desktop layout, and verify placeholder records remain absent from all public case-study routes and counts.
+
+### 2026-10-30 — FAQ product answers implementation; QA pending
+- Added 15 original answers based on current BusinessIdea.io behavior and linked each to the relevant workspace or guide.
+- Kept database-derived FAQ items and source links; search covers both groups. Curated product answers remain visible if the FAQ query returns an empty result or fails.
+- Did not import seller credit, pricing, report-generation or success-probability claims from the purchased FAQ archive.
+- QA pending: search terms and no-results state, source links, loader fallback, accordion keyboard behavior, 360px/390px/desktop layout, noindex and Vercel status.

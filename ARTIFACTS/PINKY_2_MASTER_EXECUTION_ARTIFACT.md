@@ -312,3 +312,11 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Existing illustrative placeholder records in `data/case-studies.json` were not promoted or edited. Seller archives under `src/bought/` and staging remain unchanged.
 - Verification: source research completed and route/docs committed; deployment, responsive, noindex and public-placeholder QA remain open.
 - Next: review the FAQ destination. Replace any empty or generic answers with specific source-backed founder answers while preserving the original FAQ archive.
+
+## 2026-10-30 — FAQ page: curated product answers and resilient search
+- Route: `/faq`.
+- Added 15 original answers about the actual BusinessIdea.io product: four-idea comparison, browser-local notes, prompt handoff, the four supported external providers, prefill limits, buyer evidence and the limitations of the startup-shutdown research page.
+- Retained database-derived questions and their original idea/list destinations. Search now filters both sources. A failed or empty FAQ query no longer leaves the entire FAQ page blank because the curated answers remain.
+- Reviewed the purchased FAQ archive only for broad question themes. Did not reuse seller branding, credit plans, pricing, report-generation promises or success-probability claims. Purchased archive and database untouched.
+- No AI API, user API keys, auth changes or database writes. Deployment and responsive/functional QA remain pending.
+- Next: continue with the source-backed FAQ/Topics and open-source research page family, beginning with a route inventory and source audit.
