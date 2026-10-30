@@ -917,3 +917,11 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Existing startup-cost arithmetic and scenario guidance preserved. Added browser-local persistence, CSV export of cost lines and summary totals, and a prepared AI review prompt containing the actual figures and founder context.
 - No API integration, key storage, database write or authentication change.
 - Build, browser, screenshots and live route not verified here. Deployment and mobile QA remain pending.
+
+
+## 2026-10-30 06:54 IST — Homepage hero and practical path
+- Before: https://bbinewcopy.vercel.app/
+- After: https://bbinewcopy.vercel.app/
+- Code commit: https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/ffdd12f1b4e5fc6a00728b2910c6d96e72b6afc9
+- Rebuilt the hero around “An idea is a start” and the Prompt/Plan/Test/Build journey, using responsive soft panels and direct routes to existing tools. Added a slow guide carousel and technology strip; animation pauses on hover/focus and respects reduced-motion preferences.
+- No backend, database or API integration changes. Build, browser, screenshots and live route not verified here; visual QA remains pending.
