@@ -337,3 +337,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Implemented a first-quote brief and prepared AI handoff using entered calculator values, selected shortlist and quote terms. Existing calculator formulas were left unchanged.
 - Added the standard three actions to published idea cards. No API keys, AI API, sign-in gate or database write.
 - PENDING: confirm CI/Vercel result; manually regression-test calculations; test long and Unicode prompt handoff to ChatGPT, Claude, Grok and Perplexity; inspect 360/390px layout and genuine before/after screenshots.
+
+
+### 2026-10-30 06:25 IST — Startup Cash Flow India QA
+- Implemented local browser persistence, CSV export, explicit funding-gap calculation and 7/14/30-day delayed-receipt scenario. No database storage or API integration.
+- PENDING: confirm CI/Vercel result; test opening cash and events persist after reload; verify date ordering and cash math; verify delayed receipts shift while bills remain due; inspect CSV output and 360/390px layout; capture genuine screenshots if browser capture is available.
