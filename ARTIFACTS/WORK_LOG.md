@@ -925,3 +925,12 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Code commit: https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/ffdd12f1b4e5fc6a00728b2910c6d96e72b6afc9
 - Rebuilt the hero around “An idea is a start” and the Prompt/Plan/Test/Build journey, using responsive soft panels and direct routes to existing tools. Added a slow guide carousel and technology strip; animation pauses on hover/focus and respects reduced-motion preferences.
 - No backend, database or API integration changes. Build, browser, screenshots and live route not verified here; visual QA remains pending.
+
+
+## 2026-10-30 07:03 IST — Learning Resources carousels
+- Before: https://bbinewcopy.vercel.app/learning-resources
+- After: https://bbinewcopy.vercel.app/learning-resources
+- Code commit: https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/cbadbd6f5600b3178e9a031b84762ba517a49607
+- Added moving carousels backed by the actual STARTUP_GUIDES data and published blog-post query. Each card links to its real guide/article and uses the published featured image when available. Added full-collection links.
+- Motion pauses on hover/focus and respects reduced-motion settings. Existing resource, framework and book sections preserved.
+- Build, browser, screenshots and live route not verified here; deployment and mobile QA remain pending.
