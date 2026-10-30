@@ -1,9 +1,10 @@
 import { SellerFaq } from "@/components/v2/faq";
-import { ReadOnlyChecklist } from "@/components/v2/read-only-checklist";
 import { V2PageCard, V2PageCta, V2PageFaq, V2PageHero, V2PageSection } from "@/components/v2/page-sections";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, BookOpen, Calculator, ClipboardCheck, Compass } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BookOpen, Calculator, Compass } from "lucide-react";
+import { ProviderPromptActions } from "@/components/founder-workspace/provider-prompt-actions";
+import { useFounderWorkspace } from "@/lib/founder-workspace";
 import { GlassShell } from "@/components/glass-shell";
 import { JsonLd, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import "@/components/validation-field.css";
@@ -26,6 +27,7 @@ const interviewQuestions = [
   { prompt: "Who decides and who pays?", reason: "The user and buyer can be different people. A founder needs to know whose approval and cash are involved." },
 ] as const;
 
+const VALIDATION_BRIEF_KEY = "bbi-startup-validation-brief-v1";
 type Choice = "wait" | "change" | "test";
 const decisionCopy: Record<Choice, { title: string; body: string; next: string }> = {
   wait: { title: "Pause before spending.", body: "You have a theory, but too little buyer evidence. Keep your fixed costs at zero while you look for a recent, repeated problem and a person who has already tried to solve it.", next: "Your next action: ask for two concrete stories of the last time the problem occurred." },
@@ -34,12 +36,53 @@ const decisionCopy: Record<Choice, { title: string; body: string; next: string }
 };
 
 function ValidationFieldPage() {
+  const workspace = useFounderWorkspace();
   const [buyer, setBuyer] = useState("");
   const [problem, setProblem] = useState("");
   const [workaround, setWorkaround] = useState("");
   const [offer, setOffer] = useState("");
+  const [evidence, setEvidence] = useState("");
+  const [proposedTest, setProposedTest] = useState("");
+  const [price, setPrice] = useState("");
   const [choice, setChoice] = useState<Choice>("wait");
-  const completed = [buyer, problem, workaround, offer].filter((value) => value.trim().length > 0).length;
+  const [storageReady, setStorageReady] = useState(false);
+  useEffect(() => {
+    try {
+      const saved = JSON.parse(window.localStorage.getItem(VALIDATION_BRIEF_KEY) || "null") as Record<string, unknown> | null;
+      if (saved) {
+        if (typeof saved.buyer === "string") setBuyer(saved.buyer);
+        if (typeof saved.problem === "string") setProblem(saved.problem);
+        if (typeof saved.workaround === "string") setWorkaround(saved.workaround);
+        if (typeof saved.offer === "string") setOffer(saved.offer);
+        if (typeof saved.evidence === "string") setEvidence(saved.evidence);
+        if (typeof saved.proposedTest === "string") setProposedTest(saved.proposedTest);
+        if (typeof saved.price === "string") setPrice(saved.price);
+        if (saved.choice === "wait" || saved.choice === "change" || saved.choice === "test") setChoice(saved.choice);
+      }
+    } catch { /* Keep the blank brief if browser storage is unavailable. */ }
+    setStorageReady(true);
+  }, []);
+  useEffect(() => {
+    if (!storageReady) return;
+    try {
+      window.localStorage.setItem(VALIDATION_BRIEF_KEY, JSON.stringify({ buyer, problem, workaround, offer, evidence, proposedTest, price, choice }));
+    } catch { /* The brief remains usable for this visit if storage is unavailable. */ }
+  }, [buyer, problem, workaround, offer, evidence, proposedTest, price, choice, storageReady]);
+  const completed = [buyer, problem, workaround, offer, evidence, proposedTest, price].filter((value) => value.trim().length > 0).length;
+  const validationPrompt = [
+    "Act as a careful startup validation research partner for an Indian founder. Do not invent evidence, market size, demand or legal conclusions. Separate founder observations, external sources, assumptions and unanswered questions. Ask for missing critical context before making a recommendation.",
+    "Selected published idea shortlist: " + (workspace.shortlist.map(item => item.title).join("; ") || "none selected"),
+    "Target buyer: " + buyer,
+    "Problem / recent incident: " + problem,
+    "Current alternative or workaround: " + workaround,
+    "Proposed offer: " + offer,
+    "Price to test (INR): " + (price || "not specified"),
+    "Evidence already collected and its source: " + evidence,
+    "Proposed small, reversible test: " + proposedTest,
+    "Founder’s current next-step choice: " + choice,
+    "Prepare: (1) a concise validation brief, (2) assumptions ranked by risk, (3) evidence still missing, (4) neutral buyer interview questions, (5) a small test with observable actions and a stopping condition, and (6) what finding would make the founder pause or change the offer. Do not claim an idea is validated from desk research alone."
+  ].join("\n");
+  const compactValidationPrompt = "Help an Indian founder validate an idea without inventing demand. Buyer: " + buyer + ". Problem: " + problem + ". Current alternative: " + workaround + ". Offer: " + offer + ". Price INR: " + price + ". Evidence/source: " + evidence + ". Proposed test: " + proposedTest + ". Selected ideas: " + workspace.shortlist.map(item => item.title).join(", ") + ". Return key assumptions, missing evidence, neutral questions, small reversible test and stopping condition.";
 
   return <>
     <JsonLd schema={[
@@ -59,7 +102,21 @@ function ValidationFieldPage() {
 
       <V2PageSection className="vf-evidence" aria-labelledby="vf-evidence-title"><div><p className="gh-eyebrow">THE EVIDENCE LADDER</p><h2 id="vf-evidence-title">Move from words to behavior.</h2><p>No rung guarantees a viable business. Each one asks a more expensive question of reality while keeping your own experiment reversible.</p></div><ol><li><div><strong>Problem story</strong><p>Someone can describe a recent inconvenience without prompting.</p></div></li><li><div><strong>Existing workaround</strong><p>They already spend time, money or effort getting around it.</p></div></li><li><div><strong>Specific offer</strong><p>They react to a clear outcome, delivery date and stated price.</p></div></li><li><div><strong>Real commitment</strong><p>They take an appropriate next action: a paid trial, a scheduled pilot or a documented purchasing step.</p></div></li></ol></V2PageSection>
 
-      <ReadOnlyChecklist id="field-notebook" eyebrow="YOUR FIELD NOTEBOOK" title="Put the assumption on the page." items={["Who has the problem?","What happened the last time?","What do they do now?","What small offer will you test?"]} />
+      <V2PageSection id="field-notebook" className="vf-notebook" aria-labelledby="vf-notebook-title"><div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <div><p className="gh-eyebrow">YOUR WORKING VALIDATION BRIEF</p><h2 id="vf-notebook-title">Turn the assumption into something you can test.</h2><p>Fill in what you know. Leave unknowns blank instead of guessing. Your brief stays in this browser and can travel into a prepared AI prompt for further questions.</p>
+          <div className="mt-5 grid gap-4">
+            <label className="grid gap-2 text-sm font-semibold">Who is the specific buyer?<input className="min-h-11 rounded-xl border border-slate-300 bg-white px-3 font-normal" value={buyer} onChange={event=>setBuyer(event.target.value)} placeholder="A reachable buyer group, role and place"/></label>
+            <label className="grid gap-2 text-sm font-semibold">What problem or recent incident are you checking?<textarea className="min-h-20 rounded-xl border border-slate-300 bg-white p-3 font-normal" rows={2} value={problem} onChange={event=>setProblem(event.target.value)} placeholder="What happened, when and what did it cost?"/></label>
+            <label className="grid gap-2 text-sm font-semibold">What do they use or do instead today?<textarea className="min-h-20 rounded-xl border border-slate-300 bg-white p-3 font-normal" rows={2} value={workaround} onChange={event=>setWorkaround(event.target.value)} placeholder="Existing provider, workaround, delay or doing nothing"/></label>
+            <label className="grid gap-2 text-sm font-semibold">What small offer will you put in front of them?<textarea className="min-h-20 rounded-xl border border-slate-300 bg-white p-3 font-normal" rows={2} value={offer} onChange={event=>setOffer(event.target.value)} placeholder="One defined outcome, quantity and delivery boundary"/></label>
+            <label className="grid gap-2 text-sm font-semibold">What price will you test? (₹)<input className="min-h-11 rounded-xl border border-slate-300 bg-white px-3 font-normal" type="number" min="0" value={price} onChange={event=>setPrice(event.target.value)} placeholder="Leave blank if not decided"/></label>
+            <label className="grid gap-2 text-sm font-semibold">What evidence have you collected, and where did it come from?<textarea className="min-h-24 rounded-xl border border-slate-300 bg-white p-3 font-normal" rows={3} value={evidence} onChange={event=>setEvidence(event.target.value)} placeholder="Buyer quote, observed purchase, public source and date; separate fact from assumption"/></label>
+            <label className="grid gap-2 text-sm font-semibold">What small test will you run next?<textarea className="min-h-20 rounded-xl border border-slate-300 bg-white p-3 font-normal" rows={2} value={proposedTest} onChange={event=>setProposedTest(event.target.value)} placeholder="Who will see the offer, what action will you ask for and by when?"/></label>
+            <p className="text-xs text-slate-500">Saved in this browser only. Do not enter private customer identifiers or confidential business information.</p>
+          </div>
+        </div>
+        <aside className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><p className="gh-eyebrow">BRIEF COMPLETION</p><strong className="mt-2 block text-3xl text-blue-700">{completed}/7</strong><p className="mt-1 text-sm text-slate-600">Fields completed. This is a completeness check, not a validation score.</p><div className="mt-5 h-2 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-blue-600" style={{width:(completed/7*100)+"%"}}/></div><div className="mt-5"><h3 className="font-bold">Carry the brief into an AI review</h3><p className="mt-2 text-sm text-slate-600">Ask for missing assumptions and a reversible test. Verify sources and speak to buyers; an AI response is not proof of demand.</p></div><ProviderPromptActions title="Prepare validation questions" prompt={validationPrompt} prefillPrompt={compactValidationPrompt}/></aside>
+      </div></V2PageSection>
 
       <V2PageSection className="vf-cash" aria-labelledby="vf-cash-title"><div><p className="gh-eyebrow">THE RUPEE QUESTION</p><h2 id="vf-cash-title">A sale can still lose cash.</h2><p>Write down what you pay before the buyer pays you. Include stock, travel, packaging, delivery, refunds, platform fees and your own time where they apply. A margin on paper does not pay a bill due before collection.</p><Link to="/startup-costs-india" className="gh-button gh-button-secondary">Map cash before your first sale <Calculator size={17} /></Link></div><div className="vf-cash-ledger"><strong>One order, in your own numbers</strong><div><span>Price the buyer actually pays</span><b>₹ ______</b></div><div><span>Direct cost to deliver it</span><b>− ₹ ______</b></div><div><span>Fees, returns and collection delay</span><b>− ₹ ______</b></div><div className="vf-cash-result"><span>Cash left before fixed costs</span><b>= ₹ ______</b></div><small>This is a worksheet, not an estimate or market benchmark. Use the live calculator for arithmetic.</small></div></V2PageSection>
 
