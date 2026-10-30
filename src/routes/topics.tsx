@@ -19,7 +19,7 @@ const featuredSlugs = ["business-idea-validation-framework","competitor-analysis
 export const Route = createFileRoute("/topics")({
   head: () => ({ meta: [
     { title: "Startup Knowledge Hub: Validation, Market Research and Growth | BusinessIdea.io" },
-    { name: "description", content: "Find practical startup guides by the decision you need to make: validate a buyer problem, research a market, bootstrap, measure growth or prepare to launch." },
+    { name: "description", content: "Explore 20 original startup guides across customer evidence, market research, pricing, cash flow, distribution, product development, retention, hiring and bootstrapping. Follow the subject map or search the original guide collection." },
     { property: "og:title", content: "Startup Knowledge Hub | BusinessIdea.io" },
     { property: "og:type", content: "website" },
   ] }),
@@ -42,7 +42,7 @@ function TopicsPage() {
       <div className={wrap}>
         <span className="rounded-full bg-secondary px-3 py-1 text-xs font-bold">Founder decision library</span>
         <h1 className="mt-4 max-w-4xl text-3xl font-bold leading-tight md:text-5xl">Start with the decision you need to make.</h1>
-        <p className="mt-4 max-w-3xl text-lg text-muted-foreground">A useful guide should move one decision forward. Find out whether a buyer problem is real, understand the market, protect your cash, or plan the next stage of execution.</p>
+        <p className="mt-4 max-w-3xl text-lg text-muted-foreground">A useful guide should help you understand a business decision in context. This library connects customer evidence, market choices, money, distribution, product work, retention and the responsibilities of building a team.</p>
         <div className="mt-6 flex flex-wrap gap-3"><a href="/business-idea-research-india" className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white">Research a buyer problem <ArrowRight size={17}/></a><a href="/startup-guides" className="inline-flex min-h-11 items-center rounded-lg border bg-card px-6 py-3 font-semibold">Browse all guides</a></div>
       </div>
     </section>
@@ -52,12 +52,35 @@ function TopicsPage() {
         <h2 className="text-2xl font-bold">Choose your next decision</h2>
         <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            ["I have an idea, but little buyer evidence","Start with a recent customer problem, a workaround and a small test.","/startup-idea-validation","/business-idea-research-india"],
-            ["I need to understand the market","Map alternatives, market boundaries and a narrow entry point.","/market-research","/startup-guides/competitor-analysis-framework"],
-            ["I need to protect cash","Understand pricing, startup costs and when money actually arrives.","/business-pricing-india","/startup-cash-flow-india"],
-            ["I am preparing to launch or grow","Choose a focused MVP, acquisition path and measures that matter.","/tools","/startup-guides/minimum-viable-product-development"],
-          ].map(([title,copy,href,secondary])=><article key={title} className={card}><h3 className="text-lg font-bold">{title}</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">{copy}</p><div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm font-semibold"><a href={href} className="inline-flex items-center gap-1 text-primary hover:underline">Start here <ArrowRight size={15}/></a><a href={secondary} className="text-muted-foreground underline-offset-4 hover:underline">Related guide</a></div></article>)}
+            ["I have an idea, but little buyer evidence","Start with a recent customer problem, a workaround, the person who paid and a small test.","/business-idea-research-india","/startup-guides/business-idea-validation-framework"],
+            ["I need to understand the market","Map the actual alternatives, the reachable buyer group and a narrow entry point.","/market-research","/startup-guides/competitor-analysis-framework"],
+            ["I need to protect cash","Follow the full payment sequence: supplier, delivery, collection, refund and tax reserve.","/startup-cash-flow-india","/startup-guides/startup-cash-flow-management"],
+            ["I am preparing a first offer","Define one customer promise and the smallest test that can prove or disprove it.","/startup-idea-validation","/startup-guides/minimum-viable-product-development"],
+            ["I need a route to first customers","Choose a reachable buyer and a channel you can operate consistently before increasing volume.","/first-customer-india","/startup-guides/go-to-market-strategy-b2b"],
+            ["Customers try it but do not return","Study the reason for repeat use, cancellation or switching before adding more acquisition.","/founder-decision-journal","/startup-guides/user-retention-strategies-saas"],
+            ["I want to start with limited capital","Compare what each model asks you to deliver, pay for and carry before the first sale.","/business-models-india","/startup-guides/zero-investment-business-models"],
+            ["I am bringing in a co-founder or first hire","Clarify contribution, decision rights, responsibilities and incentives before commitments are made.","/startup-launch-plan-india","/startup-guides/startup-equity-split-guide"],
+          ].map(([title,copy,href,secondary])=><article key={title} className={card}><h3 className="text-lg font-bold">{title}</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">{copy}</p><div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm font-semibold"><a href={href} className="inline-flex items-center gap-1 text-primary hover:underline">Explore this decision <ArrowRight size={15}/></a><a href={secondary} className="text-muted-foreground underline-offset-4 hover:underline">Read the source guide</a></div></article>)}
         </div>
+      </div>
+    </section>
+
+    <section className="py-10 lg:py-12">
+      <div className={wrap}>
+        <div className="max-w-3xl"><h2 className="text-2xl font-bold">Explore the subject, not just the next task.</h2><p className="mt-2 leading-7 text-muted-foreground">The guide collection covers more than idea validation. It includes customer discovery, market boundaries, pricing, cash discipline, distribution, product development, retention, hiring and founder ownership. These subjects connect: a pricing decision changes cash timing; a channel decision changes acquisition work; a hiring decision changes the cost and pace of delivery.</p></div>
+        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            ["Customer evidence","Problem interviews, first buyers, willingness to pay and validation.","/startup-guides/business-idea-validation-framework"],
+            ["Market and alternatives","Competitor positioning, reachable markets and market sizing.","/startup-guides/tam-sam-som-market-sizing"],
+            ["Pricing and cash","Pricing structure, working capital, runway and collection timing.","/startup-guides/startup-cash-flow-management"],
+            ["Sales and distribution","B2B outreach, inbound discovery and go-to-market choices.","/startup-guides/go-to-market-strategy-b2b"],
+            ["Product and launch","MVP scope, pre-launch checks and the first usable customer outcome.","/startup-guides/minimum-viable-product-development"],
+            ["Retention and growth","Activation, repeat use, churn and product-market-fit evidence.","/startup-guides/product-market-fit-metrics"],
+            ["People and ownership","Early hiring, founder roles, equity and long-term commitments.","/startup-guides/startup-equity-split-guide"],
+            ["Bootstrapping","Low-capital offers, productized services and operating discipline.","/startup-guides/zero-investment-business-models"],
+          ].map(([title,copy,href])=><a key={title} href={href} className={card}><h3 className="font-bold">{title}</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">{copy}</p><span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Open a relevant guide <ArrowRight size={15}/></span></a>)}
+        </div>
+        <p className="mt-5 max-w-4xl text-sm leading-6 text-muted-foreground">Context note: several source guides are written for B2B or SaaS businesses. Their original examples and assumptions remain specific to those settings. For a local service, physical product or small offline business, use the underlying question only where it transfers; do not copy software metrics, acquisition benchmarks or subscription logic without evidence.</p>
       </div>
     </section>
 
