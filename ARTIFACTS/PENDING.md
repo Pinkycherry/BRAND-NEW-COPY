@@ -456,3 +456,9 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Added five illustrative India-first model scenarios, evidence to collect, often-missed costs and hybrid-model trade-offs.
 - Replaced decorative numbering with descriptive prompts and added buyer questions about repeat purchase.
 - Still verify build, selector combinations, 360/390px and desktop layout, internal routes and preview indexing before closing.
+
+
+### 2026-10-30 10:41 IST — Authored page renderer reconnection QA open
+- Restored the authored BusinessIdea.io React page renderers for 13 routes previously serving the purchased IdeaProof HTML snapshots wholesale.
+- Source snapshots and assets remain untouched as references; no transfer, overwrite or deletion performed.
+- PENDING: verify each imported component file and export exists; offline typecheck/build; check all 13 routes load through SSR; audit 360px/390px/desktop layouts, route links and empty states; verify noindex headers/meta; confirm Vercel deploy and visual output. Keep page status open until evidenced.
