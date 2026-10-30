@@ -325,3 +325,9 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - New local conversation log should save/load at page reload, allow deleting one entry and Clear all, and never write to the database. Check overflow and tap targets at 360/390px.
 - AI handoff should include the manually entered offer/context plus selected idea titles and founder locale/budget/language. Check provider URL length in Telugu/mixed-language notes and full prompt copy fallback.
 - Idea cards carry Read full idea, Add to compare and Validate this idea. Verify action destinations. No API integration was implemented; only prompt/deep-link generation.
+
+
+### 2026-10-30 05:37:36 IST — Business Pricing India pre-edit findings
+- Preserve the current working formulas. Add an editable first-quote brief and an AI deep-link prompt using actual entered calculator figures, with estimates clearly labelled and no invented tax/regulatory conclusion. Add three actions to published idea cards and reduce repeated section padding.
+- Vercel check for First Customer is success; browser visual screenshots remain unavailable. Test the pricing calculation with hand-checked examples, mobile layout at 360/390px, quote copy/provider URLs and local data behavior after deploy.
+- No API integration, auth logic or database changes.

@@ -207,3 +207,8 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Added a field brief for business idea, buyer group, market, recent trigger, workaround, small offer, trial price and response language. User can record date, outcome, and a direct observation note. Entries are stored only in browser localStorage, with remove-one and Clear all actions.
 - Added an AI handoff built from the current local shortlist and founder constraints, including neutral interview questions, an outreach message, a simple evidence log and a reversible next test. This calls no AI API; it prepares provider deep links only.
 - The published idea cards on this page now have Read full idea, Add to compare and Validate this idea actions. Reduced empty vertical spacing in repeated middle sections. Deployment and mobile visual checks remain open.
+
+
+## 2026-10-30 05:37:36 IST — Business Pricing India pre-edit hypothesis
+- Current source has a functioning price worksheet and offer type selector. Preserve the formulas. Proposed practical upgrade: quote terms generator and AI deep-link prompt, then give each published idea card three real actions. Middle spacing tightened, no unrelated filler.
+- Current public preview could not be rendered in the browser tool; screenshot verification remains open. First Customer commit e5728bb5fcfdb9ee79189a617c7b41623c08199c Vercel status is success. No API integration is in scope.
