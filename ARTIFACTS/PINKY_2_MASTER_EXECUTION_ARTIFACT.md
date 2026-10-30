@@ -231,3 +231,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Added browser-local persistence for opening cash and dated events; no database write. Added an exportable CSV of the dated cash forecast, explicit extra cash required to avoid a negative balance, and a configurable 7/14/30-day delayed-collection stress scenario that keeps bills on their original dates.
 - Existing event ledger, running balance and cash calculation remain in place.
 - Build, live deployment and 360/390px visual QA are not verified here. Test persistence, date sorting, negative-balance math, delay dates, CSV contents and mobile layout before closure.
+
+
+## 2026-10-30 06:31 IST — Business Demand Test India: interactive test planner
+- Before: https://bbinewcopy.vercel.app/business-demand-test-india
+- After: https://bbinewcopy.vercel.app/business-demand-test-india
+- Code commit: https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/a8fa3234572f5bd07fd6e68441d81975eed956e1
+- Replaced the theory-only test-design cards with a browser-local experiment planner: buyer, offer, price, channel, deadline, requested action, founder-defined success condition, response counts and observation notes. Added live count/rate summaries with explicit caveats and a prepared four-provider prompt. Added the standard three actions to published idea cards.
+- Plan and observations are stored in this browser only. No database writes, API integration, provider keys or authentication gate.
+- Build, live deployment and 360/390px visual QA remain unverified. Test persistence, counters, prompt handoff and mobile form behavior before closing.
