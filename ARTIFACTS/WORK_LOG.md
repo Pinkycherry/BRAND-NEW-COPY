@@ -1047,3 +1047,8 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Added a confirmed clear action for the active assessment only; the saved shortlist is not changed.
 - Existing source-record loading, missing-field handling, four-idea shortlist and external AI handoff remain unchanged.
 - Tests not run yet. Pending: refresh persistence, switch shortlist combinations, remove/re-add idea, export contents, clear confirmation/cancel, provider prompt, mobile/desktop and Vercel.
+
+## 2026-10-30 — Comparison route source escaping correction
+- Corrected literal line-break escape characters in the comparison route declaration and Markdown export separators. Export now writes real line breaks.
+- No feature or data behavior changed.
+- Pending: Vercel build and browser QA of shortlist-keyed persistence/export/reset.

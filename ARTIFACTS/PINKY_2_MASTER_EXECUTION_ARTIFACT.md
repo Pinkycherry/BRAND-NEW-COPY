@@ -393,3 +393,7 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - No database writes, AI API calls, user API keys or invented ranking.
 - QA pending: persistence across refresh and shortlist changes, export, clear/cancel, provider handoff and responsive behavior.
 - Next: continue QA on recent commits and audit the next unfinished page based on PENDING.
+
+## 2026-10-30 — Comparison route escaping correction
+- Fixed source-level literal newline escapes introduced in the previous comparison assessment commit, including the declaration separator and Markdown export separators.
+- No additional behavior or data changes. Vercel and browser QA remain pending.

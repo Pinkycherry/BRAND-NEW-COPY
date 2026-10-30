@@ -435,3 +435,6 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-10-30 — Startup Idea Comparison assessment persistence/export; QA pending
 - Added shortlist-keyed local persistence for evidence choices, notes and next step. Added Markdown export and confirmed clear of active assessment only.
 - QA pending: refresh, switch shortlist combinations, remove/re-add, export, clear/cancel, AI prompt, responsive layout and Vercel.
+
+### 2026-10-30 — Comparison source escaping correction; QA pending
+- Fixed literal line-break escapes in the route declaration and Markdown export. Recheck Vercel build and exported file content.
