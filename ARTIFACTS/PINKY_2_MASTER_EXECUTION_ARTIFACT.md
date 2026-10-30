@@ -249,3 +249,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Preserved the existing authored validation guide and its interview/evidence/decision content. Replaced its read-only checklist with a distinct practical brief covering buyer, problem, current workaround, offer, price, evidence/source and proposed test. Added browser-local save/load, a completeness indicator (not a validation score), and a prepared four-provider prompt handoff.
 - No AI API call, API-key storage, authentication gate or database write.
 - Build, live deployment and mobile visual QA remain unverified. Confirm guide regression, persistence, prompt output and 360/390px layout before closure.
+
+
+## 2026-10-30 06:45 IST — Startup Costs India: saved/exportable cost plan and AI review
+- Before: https://bbinewcopy.vercel.app/startup-costs-india
+- After: https://bbinewcopy.vercel.app/startup-costs-india
+- Code commit: https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/d2fc4855966b983b08c7c62281c3ed3524d8095d
+- Preserved the existing one-time/monthly cost calculations and service/product/local scenario guidance. Added browser-local save/load for entered costs, months, buffer, expected collections and scenario; added CSV export of line items and totals; added a reviewable prepared prompt using the figures and founder context through the existing four-provider handoff.
+- No database write, AI API, API key or sign-in gate.
+- Build, live deployment and mobile QA remain unverified. Test restore, totals, CSV content, prompt length and 360/390px layout before closure.
