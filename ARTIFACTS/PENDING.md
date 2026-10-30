@@ -408,3 +408,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Added seven method cards with purpose, best use, output, limitation and primary-source links. Added a decision selector with complementary method pairs and an illustrative India-first retailer workflow.
 - No weighted framework score or seller scorecard reused.
 - QA pending: selector recommendations, all external/internal links, 360px/390px/desktop layout, noindex and Vercel status.
+
+### 2026-10-30 — Founder Case Studies transparency update; QA pending
+- Clarified that no current founder story passes publication review; the five illustrative composites remain excluded by the existing data-layer filter.
+- Added visible evidence requirements and links to verified shutdown research and practical founder tools.
+- QA pending: empty state, future non-empty state, story URL/sitemap exclusion, mobile/desktop, noindex and Vercel.

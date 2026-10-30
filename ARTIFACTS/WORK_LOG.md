@@ -1004,3 +1004,11 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Added a clearly illustrative neighbourhood-retailer workflow showing how methods can be combined. Preserved links to existing BusinessIdea.io guides/workspaces.
 - Source references: Mom Test author site, Steve Blank, Christensen Institute, IDEO, Eric Ries/Lean Startup, Strategyzer and Blue Ocean Strategy official sources. Purchased comparison archive and authored guide files remain unchanged; seller's weighted scorecard was not reused.
 - No database, AI API, user API key or authentication changes. Tests not run yet; pending selector, source links, internal routes, mobile/desktop layout, noindex and Vercel.
+
+## 2026-10-30 — Founder Case Studies: evidence-standard empty state
+- Before: https://bbinewcopy.vercel.app/case-studies
+- After: https://bbinewcopy.vercel.app/case-studies
+- The public data layer already filters every record marked PLACEHOLDER. The route previously hid the empty list without explaining why while promising "Verified founder stories".
+- Rewrote the page promise and added an explicit no-verified-cases state, the publication evidence standard and links to source-checked shutdown research and founder workspaces.
+- Preserved the existing CASE_STUDIES filter, case JSON, story route, sitemap/count logic and purchased archive. No placeholder composite was promoted or counted.
+- Tests not run yet. Pending: verify zero-case rendering, future non-empty card rendering, sitemap/story-route exclusion, 360px/390px/desktop layout, noindex and Vercel.

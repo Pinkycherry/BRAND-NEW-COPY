@@ -347,3 +347,11 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Sources link to original/primary sources: Rob Fitzpatrick, Steve Blank, Christensen Institute, IDEO, Eric Ries/Lean Startup, Strategyzer and Blue Ocean Strategy. No seller weighted scorecard, unsupported rankings or seller claims reused. Purchased archive and authored guide content unchanged.
 - QA remains pending: selector, links, responsive layout, noindex and Vercel.
 - Next: audit the remaining purchased research pages and route families against source availability before choosing the next implementation.
+
+## 2026-10-30 — Founder Case Studies: transparent empty state
+- Route: `/case-studies`.
+- The data layer already filters all five records because they are marked PLACEHOLDER. The page was still promising "Verified founder stories" while hiding the empty list.
+- Changed the page promise and added an explicit empty state explaining that no founder case studies currently pass the publication check. Added the evidence standard: traceable identity/source, dated milestones, supported numbers, separation of founder statements from independent corroboration, and visible limitations.
+- Preserved the data filter and did not edit `data/case-studies.json`, `src/lib/case-studies-data.ts`, founder-story routes, sitemap logic or seller archive.
+- Deployment and responsive/functional QA remain pending.
+- Next: continue route inventory for source-backed research and case-study pages; check that no placeholder route is indexable or reachable by slug.
