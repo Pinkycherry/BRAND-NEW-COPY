@@ -285,3 +285,12 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Expanded the directory from six worksheets to a practical catalogue spanning Discover, Validate, Plan and Decide. Added direct entries for idea research, validation brief, first customer, demand test, comparison, startup costs, pricing and cash flow, while retaining the verified READY_CALCULATORS catalogue.
 - Added stage filters and made worksheet actions explicit. No unverified 1,059+ seller headline count or unsupported calculator claims were published; original purchased seller files remain unchanged.
 - Build, deployment and mobile visual QA remain unverified. Verify all worksheet routes, filter/search behavior and 360/390px layout.
+
+
+## 2026-10-30 07:25 IST — Templates: editable founder template studio
+- Before: https://bbinewcopy.vercel.app/templates
+- After: https://bbinewcopy.vercel.app/templates
+- Code commit: https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/2ee8526ddb72ec516d4e3f92de6fb69875a4fc36
+- Replaced the read-only-checklist positioning with an editable template studio. Added six original templates: buyer profile, customer interview script, alternative/competitor matrix, demand test brief, one-page business plan and pitch deck outline. Users can edit, copy, download as .txt or reset a draft.
+- Existing linked founder workspaces remain available. No seller branding/assets or fake download promises; no API, database or authentication changes.
+- Build, live deployment and mobile visual QA remain unverified. Test edit/reset/copy/download and 360/390px textarea/button layout.
