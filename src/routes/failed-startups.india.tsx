@@ -110,6 +110,34 @@ const records: FailureRecord[] = [
       { label: "YourStory · 2 June 2022", url: "https://yourstory.com/2022/06/udayy-edtech-startup-shuts--lays-off-entire-workforce" },
     ],
   },
+  {
+    name: "FrontRow",
+    sector: "Hobby and skill learning",
+    event: "Daily operations ceased",
+    date: "30 June 2023",
+    summary: "FrontRow's co-founder confirmed that the learning platform stopped daily operations on 30 June 2023. He said the company had not found a market large enough to support the business at the scale it pursued, and discussed the cost of marketing and sales expansion. The team had already reduced its workforce and explored possible acquisition of its intellectual property.",
+    reported: ["The co-founder confirmed the shutdown and said continuing to spend money did not make sense.", "He discussed market size and the difficulty of scaling the model.", "The company had reduced its workforce and considered an IP sale or return of unused capital."],
+    founderChecks: ["How many people will repeatedly pay for this learning outcome after the first course or event?", "Does retention and referral support acquisition spending, or does every cohort require another large campaign?", "Can revenue already demonstrated support team and content costs?"],
+    limitation: "The market-size and growth observations are attributed to the co-founder and reporting, not a third-party market study. The shutdown does not prove hobby learning is unviable.",
+    sources: [
+      { label: "Moneycontrol · 10 July 2023", url: "https://www.moneycontrol.com/news/business/startup/lightspeed-backed-frontrow-shuts-operations-10933371.html" },
+      { label: "TechCrunch · 10 July 2023", url: "https://techcrunch.com/2023/07/10/frontrow-shutdown/" },
+    ],
+  },
+  {
+    name: "Bluelearn",
+    sector: "Student learning and career community",
+    event: "Founders announced closure of operations",
+    date: "21–22 July 2024",
+    summary: "Bluelearn began as a student community and grew into an upskilling and job-finding platform. In July 2024, co-founder Shreyans Sancheti published a winding-down note saying the founders had decided to shut the business and return 70% of the funding raised. He described the challenge as building a venture-scale business; the note does not provide an audited breakdown of revenue or unit economics.",
+    reported: ["The founder's account says the team chose to wind down and return 70% of the capital raised.", "Contemporary reporting described a community-led platform for students to learn skills, network and find opportunities.", "The founders' statement does not publish a full financial or cohort-retention analysis."],
+    founderChecks: ["Does a large community convert into repeat paid use, or is most engagement free?", "Which customer group has an urgent problem and budget, and what repeatable offer will it pay for?", "Can revenue per active customer support the team and acquisition costs at sustainable scale?"],
+    limitation: "The capital-return figure and founder explanation are reported statements. They do not prove the company was profitable or reveal every reason behind the board's decision.",
+    sources: [
+      { label: "Shreyans Sancheti · founder's winding-down note · 21 July 2024", url: "https://www.linkedin.com/pulse/winding-down-bluelearn-shreyans-sancheti-b33yc" },
+      { label: "Moneycontrol · 22 July 2024", url: "https://www.moneycontrol.com/technology/elevation-capital-backed-edtech-startup-bluelearn-shuts-down-article-12774167.html" },
+    ],
+  },
 ];
 
 const wrap = "mx-auto max-w-6xl px-4 md:px-6";
@@ -122,7 +150,7 @@ export const Route = createFileRoute("/failed-startups/india")({
       { title: "Indian Startup Shutdowns: Source-Checked Cases and Founder Lessons | BusinessIdea.io" },
       { name: "description", content: "Read source-checked Indian startup service shutdowns, what founders publicly said, what remains unknown, and the operating questions to test before spending." },
       { property: "og:title", content: "Indian startup shutdowns: evidence, limits and founder checks | BusinessIdea.io" },
-      { property: "og:description", content: "Five documented Indian service shutdowns or pauses, with source links and clear limits on what the public record proves." },
+      { property: "og:description", content: "Seven documented Indian service shutdowns or pauses, with source links and clear limits on what the public record proves." },
       { property: "og:type", content: "article" },
     ],
   }),
@@ -135,7 +163,7 @@ function FailedStartupsPage() {
       webPageSchema({
         path: "/failed-startups/india",
         name: "Indian startup shutdowns: source-checked cases",
-        description: "A source-led review of five Indian startup service shutdowns or pauses, the founders' public explanations and what remains unknown.",
+        description: "A source-led review of seven Indian startup service shutdowns or pauses, the founders' public explanations and what remains unknown.",
       }),
       breadcrumbSchema([
         { name: "Home", path: "/" },
@@ -157,7 +185,7 @@ function FailedStartupsPage() {
           <a href="#case-records" className={primary}>Read the documented cases <ArrowRight size={17}/></a>
           <a href="/business-idea-risk-check" className="inline-flex min-h-11 items-center rounded-xl border bg-card px-5 py-3 font-semibold">Check your own risks</a>
         </div>
-        <p className="mt-5 text-sm text-muted-foreground">This page currently reviews five source-checked service shutdowns or pauses. Two of the five examples are from edtech, so this is not a balanced sector sample or a count of all Indian startup failures.</p>
+        <p className="mt-5 text-sm text-muted-foreground">This page currently reviews seven source-checked service shutdowns or pauses. Four of the seven examples are from edtech, so this is not a balanced sector sample or a count of all Indian startup failures.</p>
       </div>
     </section>
 
@@ -193,6 +221,17 @@ function FailedStartupsPage() {
               {record.sources.map(source=><a key={source.url} href={source.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-primary underline-offset-4 hover:underline">{source.label}<ExternalLink size={14}/></a>)}
             </div>
           </article>)}
+        </div>
+      </div>
+    </section>
+
+    <section className="py-12 lg:py-16">
+      <div className={wrap}>
+        <h2 className="text-3xl font-bold">Do not flatten the four edtech cases into one story</h2>
+        <p className="mt-3 max-w-3xl leading-7 text-muted-foreground">Lido Learning, Udayy, FrontRow and Bluelearn all operated in education or learning, but their public records describe different circumstances. Lido's reporting centres on a distressed closure and unpaid obligations. Udayy's co-founder described changed family behaviour after schools reopened and rising acquisition costs. FrontRow's co-founder discussed market size and scaling costs. Bluelearn's founders described difficulty building a venture-scale business and chose to return a portion of the capital. These are not interchangeable explanations and do not establish one cause for the wider sector.</p>
+        <div className="mt-5 grid gap-4 md:grid-cols-2">
+          <article className={card}><h3 className="font-bold">Separate demand from distribution</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">A large community, a spike in online usage or a low-cost first cohort may not prove customers will keep paying when routines, alternatives or acquisition channels change.</p></article>
+          <article className={card}><h3 className="font-bold">Separate growth from a durable business</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">Ask whether repeat revenue can support teaching, content, service, refunds, sales and support. A shutdown does not prove the underlying customer need disappeared.</p></article>
         </div>
       </div>
     </section>
