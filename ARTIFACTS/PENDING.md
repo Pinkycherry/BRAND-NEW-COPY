@@ -445,3 +445,9 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-10-30 — First Customer conversation log export; QA pending
 - Added Markdown export of all local observations and confirmation-protected clear-all. Individual deletion and auto-save remain.
 - QA pending: export contents, clear confirm/cancel, per-entry delete, reload persistence, provider handoff, responsive layout and Vercel.
+
+
+### 2026-10-30 — India shutdown research: seven records; verification open
+- Added Lido Learning, Udayy, FrontRow and Bluelearn to the three existing records.
+- Four of seven are education/learning examples; the collection is not sector-balanced or exhaustive.
+- Still verify sources, dates, metadata, responsive layout, preview indexing and deployment before closing this item.
