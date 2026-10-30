@@ -19,6 +19,7 @@ export const Route = createFileRoute("/founder-stories/$slug")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "article" },
+      ...(!study ? [{ name: "robots", content: "noindex,nofollow" }] : []),
     ] };
   },
   component: FounderStoryDetailPage,

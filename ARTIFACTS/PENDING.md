@@ -418,3 +418,7 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Removed unsupported operator identity, location, financial performance labels and fixed publication date. Detail page now renders only data fields and evidence links.
 - CASE_STUDIES now requires non-placeholder/non-composite status, an evidence note and at least one labelled HTTPS source before a record can appear in directory, sitemap or slug lookup.
 - QA pending: all five current placeholder slugs must be unavailable; no sitemap entries; future sourced record test; Vercel and responsive layout.
+
+### 2026-10-30 — Founder story noindex guard; QA pending
+- Unknown, placeholder and otherwise unpublished story slugs now receive noindex,nofollow; publishable source-backed records retain normal indexing.
+- Verify head metadata for both states after deployment.

@@ -363,3 +363,7 @@ No dead anchors, empty buttons, invented stories, fabricated scores, generic pla
 - Publication gate now requires: not PLACEHOLDER, not marked composite, non-empty evidence note and at least one labelled HTTPS source. Directory, sitemap/count and slug lookup share the same filtered CASE_STUDIES collection.
 - Five existing composite records remain excluded; JSON not edited. Functional and responsive QA pending.
 - Next: review market-research directory and remaining guide routes for empty states, unsupported promises and missing source links.
+
+## 2026-10-30 — Founder story URL indexing guard
+- Added `noindex,nofollow` metadata only when a requested slug is absent from the shared source-backed CASE_STUDIES collection. Published records that pass the evidence gate remain indexable.
+- Placeholder JSON and the filter remain unchanged. Deployment metadata QA pending.

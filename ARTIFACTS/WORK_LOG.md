@@ -1020,3 +1020,8 @@ Public handoff for [businessidea.io](https://businessidea.io) development in [BR
 - Replaced the generic financial scorecard with only fields present in a publishable case record: problem, offer, reported sequence, acquisition approaches, tools, bottleneck, takeaways, evidence notes and source links. Founder/location appear only when supplied.
 - Tightened the shared CASE_STUDIES publication gate: a record must be non-placeholder, non-composite, include an evidence note and have at least one labelled HTTPS source. Sitemap, list and slug lookup all reuse this filtered collection.
 - Current five composites remain excluded; case JSON untouched. Tests not run yet. Pending: verify all five slugs return not-published, sitemap/count exclusion, valid future source record rendering, Vercel and responsive layout.
+
+## 2026-10-30 — Founder story missing-slug indexing guard
+- Added robots noindex,nofollow only to founder-story slugs that fail the shared source-backed publication gate. Published stories that pass the gate retain normal indexing.
+- Placeholder JSON and the shared source filter remain unchanged.
+- Pending: verify generated head metadata for both missing and publishable slugs after deployment.
