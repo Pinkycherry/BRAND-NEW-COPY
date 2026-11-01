@@ -8,7 +8,10 @@ export function boughtPage(html: string, assetFolder: string): Response {
   const base = `/bought/${assetFolder}`;
   const prepared = html
     .replace(/(["'(=])\.\/(images|scripts|styles)\//g, `$1${base}/$2/`)
-    .replace(/(["'(=])\/images\//g, `$1${base}/images/`)
+    // The authored homepage uses the site's existing featured images and
+    // transparent golden tree under /images/. Other purchased snapshots keep
+    // their original namespaced assets.
+    .replace(/(["'(=])\/images\//g, assetFolder === "home" ? "$1/images/" : `$1${base}/images/`)
     .replaceAll(`${base}/scripts/~flock.js`, `${base}/scripts/flock.js`);
   return new Response(prepared, {
     headers: { "Content-Type": "text/html; charset=utf-8" },

@@ -73,7 +73,7 @@ if navs:
         move_link(anchors[0], '/', 'BusinessIdea.io')
     for button in nav.xpath('.//button'):
         label = ' '.join(button.itertext()).strip()
-        target = {'Validate':'/startup-idea-validation', 'Learn':'/startup-guides', 'Free Tools':'/tools', 'Sign up Get Report':'/browse'}.get(label)
+        target = {'Validate':'/blueprints', 'Learn':'/startup-guides', 'Free Tools':'/tools', 'Sign up Get Report':'/blueprints'}.get(label)
         if target:
             button.tag = 'a'
             button.attrib.pop('type', None)
@@ -93,22 +93,29 @@ if len(navs)>1:
     remove(navs[1])  # Seller-only screen-reader sitemap with unrelated destinations.
 
 hero = node('hero')
-put(hero, './/h1', 'A business idea should fit your life, not just look good on a list.')
+put(hero, './/h1', 'Tired of paying for generic answers to your business idea?')
 hero_ps = hero.xpath('.//p')
 if hero_ps:
-    text(hero_ps[0], 'Business ideas for people starting from zero')
+    text(hero_ps[0], 'The truth about business ideas')
 if len(hero_ps)>1:
-    text(hero_ps[1], 'Explore researched ideas, see who pays and what can go wrong, then decide what to test before spending.')
+    text(hero_ps[1], 'We paid three platforms to test four ideas and got generic answers back. BBI tells you who pays, how money works and what may hurt in year one, so you can decide what to test next.')
 for el in hero.xpath('.//*[contains(text(),"We built a free home")]'):
     if len(el) == 0: text(el, 'Start with your time, skills and place. Follow the questions to a business you can actually try.')
 for form in hero.xpath('.//form'):
-    form.set('action','/search'); form.set('method','get')
-    for field in form.xpath('.//input'):
-        field.set('name','q'); field.set('placeholder','Search business ideas'); field.attrib.pop('disabled',None)
-    for button in form.xpath('.//button'):
-        button.attrib.pop('disabled',None); button.set('type','submit'); text(button,'Search ideas')
+    form.set('action','/blueprints'); form.set('method','get')
+    for child in list(form): form.remove(child)
+    form.append(html.fragment_fromstring('''<div class="flex w-full items-center gap-3 rounded-2xl bg-white p-2 shadow-xl ring-1 ring-slate-200"><input type="search" name="q" aria-label="Search business ideas" placeholder="Search business ideas by title" class="min-w-0 flex-1 bg-transparent px-4 py-3 text-base text-slate-900 outline-none"><button type="submit" class="shrink-0 rounded-xl bg-[#7c3aed] px-5 py-3 font-semibold text-white transition hover:bg-[#6d28d9]">Search ideas</button></div>'''))
 for a in hero.xpath('.//a'):
-    move_link(a,'/browse','Browse the idea library')
+    move_link(a,'/blueprints','Browse published blueprints')
+hero_core=hero.xpath('./div[contains(@class,"max-w-5xl")]/div[contains(@class,"text-center")]')
+if hero_core:
+    core=hero_core[0]
+    for child in list(core):
+        classes=child.get('class','')
+        if 'flex flex-col sm:flex-row items-center' in classes:
+            child.clear(); child.set('class','mb-6 text-center font-display text-xs font-bold uppercase tracking-[.18em] text-[#7c3aed]'); child.text='The truth about business ideas'
+        elif 'flex flex-wrap items-center justify-center gap-2' in classes:
+            child.clear(); child.set('class','mb-5 text-center text-xs text-slate-500'); child.text='Start with one honest blueprint. Follow the buyer, the money and the risks.'
 
 # Keep the purchased report section and six-tab/card treatment. The content
 # within the report slot is a real published BBI idea, substituted per request.
@@ -305,26 +312,34 @@ fill('reports',intro('01','A published idea','See the work behind an idea.','Thi
   <div class="mb-6 flex flex-wrap items-center justify-center gap-2">'''+''.join(f'<span class="rounded-full bg-white px-4 py-2 text-xs font-semibold text-slate-700 ring-1 ring-slate-200">{x}</span>' for x in ['What it is','Who pays','How money comes','What you need','What hurts','Verdict'])+'''</div>
   <article class="relative mx-auto max-w-5xl overflow-hidden rounded-2xl bg-white p-6 ring-1 ring-slate-200 shadow-2xl sm:p-10"><p class="text-xs font-bold uppercase tracking-widest text-[#7c3aed]">Published business idea</p><h3 class="mt-3 font-display text-3xl font-semibold text-[#0f172a]">{{BBI_IDEA_TITLE}}</h3><p class="mt-5 text-base leading-7 text-slate-600">{{BBI_IDEA_SUMMARY}}</p><div class="mt-7 grid gap-4 md:grid-cols-3"><div class="rounded-xl bg-slate-50 p-5"><h4 class="font-semibold">Who pays</h4><p class="mt-2 text-sm leading-6 text-slate-600">{{BBI_IDEA_BUYER}}</p></div><div class="rounded-xl bg-slate-50 p-5"><h4 class="font-semibold">How money comes</h4><p class="mt-2 text-sm leading-6 text-slate-600">{{BBI_IDEA_MONEY}}</p></div><div class="rounded-xl bg-slate-50 p-5"><h4 class="font-semibold">What hurts</h4><p class="mt-2 text-sm leading-6 text-slate-600">{{BBI_IDEA_RISK}}</p></div></div><a class="mt-8 inline-flex rounded-xl bg-[#7c3aed] px-6 py-3 font-semibold text-white transition hover:bg-[#6d28d9]" href="{{BBI_IDEA_URL}}">Read this idea →</a></article>''')
 
-fill('how-it-works',intro('02','How it works','An idea is a starting point. The next step is evidence.','Choose a direction, understand the buyer, check the cost and test a small first offer.')+'''<div class="grid gap-4 md:grid-cols-2 lg:grid-cols-5">'''+''.join(card(t,d,u,'Open') for (t,d),u in zip(steps,['/browse','/lists','{{BBI_IDEA_URL}}','/business-demand-test-india','/calculator/startup-cost','/business-pricing-india','/first-customer-india','/business-idea-risk-check','/founder-decision-journal','/startup-guides']))+'''</div>''')
+fill('how-it-works',intro('02','Step by step','Grab the idea. Find the buyer. Test the difficult part.','The useful question is whether you can make the first sale with the time, money and place you actually have.')+'''
+  <ol class="mx-auto max-w-5xl divide-y divide-slate-200/70">'''+''.join(f'''<li class="grid gap-4 py-8 md:grid-cols-[5rem_1fr_1fr] md:items-start"><span class="font-display text-3xl text-[#7c3aed]">0{i}</span><h3 class="font-display text-2xl font-semibold text-[#0f172a]">{title}</h3><p class="text-base leading-7 text-slate-600">{body} <a class="font-semibold text-[#7c3aed] underline-offset-4 hover:underline" href="{url}">{action} →</a></p></li>''' for i,title,body,url,action in [
+ (1,'Browse','Search by industry, place or the work you can do alongside your current life.','/blueprints','Read blueprints'),
+ (2,'Read the honest version','See who buys, how the money works and what tends to hurt before you spend.','{{BBI_IDEA_URL}}','Open an idea'),
+ (3,'Test your next move','Take one question into the field, then use your own numbers to decide what comes next.','/startup-idea-validation','Work through validation'),
+ ])+'''</ol>''')
 
-fill('under-the-hood',intro('03','The BBI lens','Look past the exciting headline.','A useful idea explains who pays, what you have to do and what could make it hard.')+'''<div class="grid gap-6 md:grid-cols-3">'''+card('Who is the buyer?','Start with a real person and a specific problem.','/business-idea-research-india')+card('Can it make money?','Put the price, costs and time beside each other.','/unit-economics-india')+card('What could go wrong?','Take difficult delivery and slow sales seriously.','/business-idea-risk-check')+'''</div>''')
+fill('under-the-hood',intro('03','Why the library exists','We got tired of the same ideas recycled into infinity.','A headline about dropshipping or an online business is easy to publish. The buyer, first order, costs and risks are the part you actually need.')+'''
+  <div class="mx-auto grid max-w-5xl gap-10 py-8 lg:grid-cols-[1.15fr_.85fr] lg:items-center"><p class="font-display text-2xl leading-relaxed text-[#0f172a] sm:text-3xl">A genuine business blueprint is worth more than a hundred recycled suggestions.</p><div class="border-l-2 border-[#7c3aed] pl-6 text-base leading-8 text-slate-600">We research who pays, how the work is delivered and when the answer should be to walk away. <a href="/about" class="font-semibold text-[#7c3aed] hover:underline">Why we built BBI →</a></div></div>''')
 
-fill('ai-generators',intro('04','Founder tools','Use a tool when you reach a real question.','Our calculators and practical workspaces help you test costs, price and demand.')+'''<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">'''+''.join(card(t,d,u,'Open tool') for t,d,u in tool_cards)+'''</div>''')
+fill('ai-generators',intro('04','Run the numbers','Make your next move add up.','When a blueprint sounds possible, check the money with your own figures. The calculators show the workings on screen.')+'''
+  <div class="mx-auto max-w-5xl overflow-hidden rounded-2xl bg-white/90 p-6 ring-1 ring-slate-200 sm:p-9"><div class="grid gap-x-9 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">'''+''.join(f'''<a class="group flex items-center justify-between gap-4 border-b border-slate-200 pb-4 font-display font-semibold text-[#0f172a] transition hover:text-[#7c3aed]" href="{url}">{name}<span aria-hidden="true" class="text-[#7c3aed] transition group-hover:translate-x-1">↗</span></a>''' for name,url in [('Break-even','/calculator/break-even'),('Startup cost','/calculator/startup-cost'),('Return on investment','/calculator/roi'),('Funding needed','/calculator/funding-needed'),('Unit economics','/unit-economics-india'),('Cash flow','/startup-cash-flow-india')])+'''</div><a class="mt-7 inline-flex font-semibold text-[#7c3aed] hover:underline" href="/tools">All tools →</a></div>''')
 
-fill('learn-hub',intro('05','The library','Follow the subject that fits your situation.','The categories come from our live library; the reading rows link to our published guides and articles.')+'''
-  <h3 class="font-display text-2xl font-semibold">Explore categories</h3><div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{{BBI_CATEGORY_CARDS}}</div>
+fill('learn-hub',intro('05','The library','Every category, and what it actually holds.','Start with a subject that makes sense for your life, then read a published blueprint rather than a list of promises.')+'''
+  <h3 class="font-display text-2xl font-semibold">Ways into the library</h3><div class="mt-5 flex flex-wrap gap-3">{{BBI_CATEGORY_CARDS}}</div>
   <div class="mt-12 flex items-center justify-between gap-4"><h3 class="font-display text-2xl font-semibold">Business guides</h3><a class="text-sm font-semibold text-[#7c3aed]" href="/startup-guides">All guides →</a></div><div class="bbi-home-rail mt-5">{{BBI_GUIDE_CARDS}}</div>
   <div class="mt-12 flex items-center justify-between gap-4"><h3 class="font-display text-2xl font-semibold">From the blog</h3><a class="text-sm font-semibold text-[#7c3aed]" href="/blog">All articles →</a></div><div class="bbi-home-rail mt-5">{{BBI_BLOG_CARDS}}</div>''')
 
-fill('social-proof',intro('06','The golden tree','Start with a direction and follow the branches.','Our golden tree belongs to the original BBI story. Follow an interest into a category, a focused list and a practical idea.')+'''
-  <div class="grid items-center gap-8 lg:grid-cols-2"><img src="/images/golden-tree@2x.webp" width="1400" height="793" loading="lazy" alt="The original transparent golden business-idea tree" class="w-full object-contain"><div class="rounded-2xl bg-white p-8 ring-1 ring-slate-200"><h3 class="font-display text-2xl font-semibold">Find your branch.</h3><p class="mt-4 leading-7 text-slate-600">Begin with your time, place and skills. The library gives you ways to narrow the choice without pretending that one idea is right for everyone.</p><a href="/browse" class="mt-6 inline-flex rounded-xl bg-[#7c3aed] px-6 py-3 font-semibold text-white hover:bg-[#6d28d9]">Explore categories →</a></div></div>
-  <div class="mt-12"><h3 class="font-display text-xl font-semibold">Useful tools around the web</h3><p class="mt-2 text-sm text-slate-600">External resources; each link opens its own website.</p><div class="bbi-home-rail mt-5">'''+''.join(card(name,description,url,'Visit website') for name,description,url in [('Node.js','JavaScript runtime for building online tools.','https://nodejs.org/'),('GitHub','Keep code and collaborate on a project.','https://github.com/'),('Supabase','Database and application services.','https://supabase.com/'),('Vercel','Publish and host web projects.','https://vercel.com/')])+'''</div></div>''')
+fill('social-proof',intro('06','Interactive canopy map','The Golden Tree of Business Growth.','The transparent tree from the original BBI homepage now lives here too. Follow one branch into a real published idea.')+'''
+  <div class="mx-auto max-w-5xl"><img src="/images/golden-tree@2x.webp" width="1400" height="793" loading="lazy" alt="The original transparent golden business-idea tree" class="mx-auto w-full object-contain"><div class="mt-4 flex flex-wrap justify-center gap-3">{{BBI_TREE_CARDS}}</div></div>
+  <div class="mt-16 overflow-hidden border-y border-slate-200 py-6"><span class="font-display text-xs font-bold tracking-[.18em] text-slate-500">BUILT WITH</span><div class="bbi-logo-track mt-5">'''+''.join(f'''<a class="font-display text-xl font-semibold text-[#0f172a] transition hover:text-[#7c3aed]" href="{url}" target="_blank" rel="noopener noreferrer">{name}</a>''' for name,url in [('React','https://react.dev/'),('TypeScript','https://www.typescriptlang.org/'),('Node.js','https://nodejs.org/'),('GitHub','https://github.com/'),('Supabase','https://supabase.com/'),('Vercel','https://vercel.com/')])*2+'''</div></div>''')
 
-fill('testimonials',intro('07','Our origin','Why we built BBI.','The founder tried paid validation platforms for his own ideas and received answers that felt too generic to act on.')+'''<div class="grid gap-6 md:grid-cols-3">'''+card('A personal starting point','A business decision affects time, money and the people around you.','/about','Read our story')+card('An honest answer','The idea page should discuss the hard parts as plainly as the promise.','/lists','Browse ideas')+card('Meet the team','Read the original About story and the people behind the work.','/about','Meet the team')+'''</div>''')
+fill('testimonials',intro('07','Who is behind this','We have been where you are.','Our founder paid three platforms to check four ideas and received answers too generic to act on. That experience shaped the questions we ask in every blueprint.')+'''
+  <div class="mx-auto max-w-4xl border-l-4 border-[#7c3aed] pl-6 sm:pl-10"><blockquote class="font-display text-2xl leading-relaxed text-[#0f172a] sm:text-3xl">“We tell you who will actually pay you, how the money works, and what will hurt in year one. Then we give it to you straight.”</blockquote><p class="mt-7 text-sm text-slate-600">From the original BBI founder promise. <a href="/about" class="font-semibold text-[#7c3aed] hover:underline">Read the full story and meet the team →</a></p></div>''')
 
-fill('live-radar',intro('08','Keep exploring','New ideas give you new questions.','Browse recently published ideas from the live library and decide which one deserves a closer look.')+'''<div class="bbi-home-rail mt-5">{{BBI_RECENT_CARDS}}</div>''')
+fill('live-radar',intro('08','Featured blueprints','Blueprints worth your afternoon.','These are real ideas from our source library. Open one and follow the buyer, money and difficult parts through the full article.')+'''<div class="bbi-home-rail mt-5">{{BBI_RECENT_CARDS}}</div><a class="mt-7 inline-flex font-semibold text-[#7c3aed] hover:underline" href="/blueprints">Browse the full blueprint library →</a>''')
 
-fill('pricing-teaser',intro('09','Pricing','Two ways to continue.','The plan prices are ₹199 and ₹299. Their exact inclusions will be specified before checkout.')+'''<div class="grid items-stretch gap-7 pt-8 md:grid-cols-2">'''+card('₹199','Paid plan. The included features are pending confirmation.','/pricing','See pricing')+card('₹299','Paid plan. The included features are pending confirmation.','/pricing','See pricing')+'''</div>''')
+fill('pricing-teaser',intro('09','Pricing, honestly','Two prices. The details must be clear first.','BBI now has paid plans at ₹199 and ₹299. We will state the exact benefits before asking you to purchase.')+'''<div class="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-10 border-y border-slate-200 py-10"><span class="font-display text-5xl font-semibold text-[#0f172a]">₹199</span><span class="text-sm uppercase tracking-[.2em] text-slate-400">or</span><span class="font-display text-5xl font-semibold text-[#0f172a]">₹299</span></div><p class="mt-7 text-center text-slate-600">No checkout is offered until the plan terms are published. <a href="/pricing" class="font-semibold text-[#7c3aed] hover:underline">See the pricing page →</a></p>''')
 
 # The seller's original research strip uses a horizontal card row. Turn the
 # same row into our own published blog carousel instead of seller articles.
@@ -332,7 +347,7 @@ for section in doc.xpath('//main/section[not(@id)]'):
     if 'Most-read research on IdeaProof' in ' '.join(section.itertext()):
         section.clear()
         section.set('class','py-12')
-        section.append(html.fragment_fromstring('''<div class="relative mx-auto w-full max-w-6xl px-5 sm:px-8"><h2 class="font-display text-2xl font-semibold">More from the BBI blog</h2><div class="bbi-home-rail mt-5">{{BBI_BLOG_CARDS}}</div></div>'''))
+        section.append(html.fragment_fromstring('''<div class="relative mx-auto w-full max-w-6xl px-5 sm:px-8"><h2 class="font-display text-2xl font-semibold">More from the BBI blog</h2><div class="bbi-home-rail mt-5">{{BBI_BLOG_MORE_CARDS}}</div></div>'''))
 
 style=html.Element('style')
 style.text='''

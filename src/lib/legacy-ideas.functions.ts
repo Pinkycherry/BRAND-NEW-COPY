@@ -63,6 +63,41 @@ export const getLegacyIdea = createServerFn({ method: "GET" })
 export type LegacyIdeaCard = {
   slug: string; title: string; description: string; categoryName: string; categorySlug: string;
 };
+
+/** Homepage source pool until the editorial `published` table is populated.
+ * This is the same completed blueprint source already served by /idea and
+ * /blueprints. The category links open a real idea in that category rather
+ * than an empty category route.
+ */
+export const getHomeLegacyContent = createServerFn({ method: "GET" }).handler(async () => {
+  const client = source();
+  const { data: recent, error } = await client.from("ideas")
+    .select("slug,title,summary,business_description,target_customer,how_you_make_money,cons_json,category_name,category_slug")
+    .eq("status", "completed").order("created_at", { ascending: false }).limit(6);
+  if (error) return { ideas: [], categories: [] };
+  const categories: { name: string; slug: string; ideaSlug: string }[] = [];
+  const seen = new Set<string>();
+  for (let from = 0; categories.length < 16; from += 1000) {
+    const { data: rows, error: categoryError } = await client.from("ideas")
+      .select("slug,category_name,category_slug").eq("status", "completed")
+      .order("created_at", { ascending: false }).range(from, from + 999);
+    if (categoryError || !rows?.length) break;
+    for (const row of rows) {
+      if (!row.category_slug || seen.has(row.category_slug)) continue;
+      seen.add(row.category_slug);
+      categories.push({ name: row.category_name || row.category_slug, slug: row.category_slug, ideaSlug: row.slug });
+      if (categories.length === 16) break;
+    }
+    if (rows.length < 1000) break;
+  }
+  return {
+    ideas: (recent ?? []).map(row => ({
+      slug: row.slug, title: row.title, summary: row.summary || row.business_description || "",
+      buyer: row.target_customer || "", money: row.how_you_make_money || "",
+      risk: strings(row.cons_json)[0] || "", categorySlug: row.category_slug || "",
+    })), categories,
+  };
+});
 export const getLegacyIdeaCards = createServerFn({ method: "GET" })
   .inputValidator((input: unknown) => z.object({
     q: z.string().trim().max(80).default(""),
