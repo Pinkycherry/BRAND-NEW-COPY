@@ -12,6 +12,11 @@
 - **Defects caught live:** The purchased filter strip survived outside the section nodes with old labels and dead click behavior. The featured card used a full long database intro, overwhelming the seller's compact card. Repair keeps the filter's pill component but relabels it to the six actual shelves and binds click/pressed/section visibility; featured teaser now uses the first sentence from the real intro, with the full text still on list detail. `npm run build` passes after repair; no local server started.
 - **Pending:** Publish repair as a separate main commit and check it live. Then stop for the founder's assessment. Other purchased families remain pending: list detail, calculator hub/detail, tools and later purchased pages. Homepage body remains paused. Idea templates remain owner-locked.
 
+## 2026-11-01 20:01 UTC — `/lists` rail overflow containment
+- **Published repair:** [`d5e890e8`](https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/d5e890e81e04c30be9f82f21495b2e75192c1d90) on `main`; [live page](https://bbinewcopy.vercel.app/lists). Deployment pending at the time of this entry. Build passed.
+- **Live QA of first deployment:** 18 section nodes, real link targets without dead `#` or seller domain, eight actual list FAQ questions, image/title rail populated. Browser DOM measured horizontal `scrollWidth` far wider than viewport because the moving rail escaped its section. Repair adds overflow containment to that purchased final section and a manual horizontal path under reduced motion; no change to its cards or order. Regenerate the purchased snapshot and build before publishing.
+- **Exact resume point:** Publish overflow repair as a separate main commit, check Vercel and live `/lists` filter plus horizontal containment, then stop. Homepage body is paused; idea pages are owner-locked. List detail, calculator, tools and other purchased page families are pending owner review.
+
 Public handoff for [businessidea.io](https://businessidea.io) development in [BRAND-NEW-COPY](https://github.com/Pinkycherry/BRAND-NEW-COPY). Times use **Asia/Kolkata (IST)**. Append new entries in chronological order. Give exact file paths/links, outcomes, commit SHA, test result, demo result, unresolved issues, and next action. Never record secrets.
 
 ## 2026-10-22 08:20 IST — Founder instruction recorded

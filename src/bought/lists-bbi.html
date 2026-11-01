@@ -211,11 +211,12 @@ body { overflow-x: clip; }
 main { padding-top: 96px; }
 main > section { scroll-margin-top: 96px; }
 .bbi-lists-rail { display:flex; gap:1rem; width:max-content; animation:bbi-lists-scroll 35s linear infinite; }
+section[aria-labelledby="most-read-heading"] { overflow:hidden; }
 .bbi-lists-rail:hover, .bbi-lists-rail:focus-within { animation-play-state:paused; }
 .bbi-lists-rail > a { width: min(75vw, 260px); flex:none; }
 [data-lists-filter][aria-pressed="true"] { background: hsl(var(--primary)); color:white; }
 @keyframes bbi-lists-scroll { to { transform:translateX(-50%); } }
-@media (prefers-reduced-motion:reduce) { .bbi-lists-rail { animation:none; } }
+@media (prefers-reduced-motion:reduce) { .bbi-lists-rail { animation:none; } section[aria-labelledby="most-read-heading"] { overflow-x:auto; } }
 </style></head>
 
   <body>
