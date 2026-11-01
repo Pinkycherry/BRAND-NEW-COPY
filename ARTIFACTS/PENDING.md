@@ -470,6 +470,7 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Tools: preserve the purchased external tool categories, logos, details and outgoing destinations. Rewrite its BBI narrative and ordering without replacing seller composition. https://bbinewcopy.vercel.app/tools.
 - Image system: plan 100–200 reusable non-human 3D component images for main categories and subcategories. Inventory seller assets and shapes first, then define one coherent material, lighting and crop system; create category master concepts and reusable subject variants; map images to data slugs or one config with fallbacks and test mobile card crops. No image batch generated yet. Golden tree is already carried to the new homepage.
 - Exact next action after live QA: stop and wait for founder feedback; no independent edit to About, tools, pricing details or image batch.
+- Homepage deployed at commit `971df21d102f5477a2b793d51d4563133a831717`; Vercel success and live image/idea verification completed on 2026-11-01. Founder visual acceptance is PENDING. Resume only from the founder's homepage feedback; About/team, Tools, pricing inclusions and category/subcategory image production remain PENDING.
 
 ### 2026-11-01 22:42 IST — Homepage correction in progress
 - First pass rejected by founder: do not mark https://bbinewcopy.vercel.app/ done from commit 8706afe. The editorial repair is built locally and must be pushed and live-checked. Exact resume: publish, verify images/data/hero/tree/guide/blog links, record result, then stop.
