@@ -53,6 +53,7 @@ names = [
 ]
 for index, (title, intro) in enumerate(names, 5):
     inner(sections[index], shell(heading(title, intro, '{{BBI_SHELF_' + str(index) + '}}')))
+    sections[index].set('id', 'bbi-shelf-' + str(index))
 inner(sections[11], shell(heading('Tools &amp; resources', 'Use a calculator or explore the tools library.', '{{BBI_TOOLS}}')))
 inner(sections[12], shell(heading('Strategy &amp; guides', 'Read our published guides before taking the next step.', '{{BBI_GUIDES}}')))
 inner(sections[13], shell('''<h2 class="text-2xl font-bold mb-2">Explore more lists</h2><p class="text-muted-foreground mb-6 text-sm">Continue into the complete list index.</p><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">{{BBI_INDEX}}</div><a href="/all-business-ideas" class="inline-flex min-h-11 items-center rounded-lg bg-slate-900 px-6 mt-6 text-white font-semibold transition hover:bg-slate-700">View all business idea lists →</a>'''))
@@ -62,6 +63,19 @@ inner(sections[16], '<h2>BusinessIdea.io business idea lists</h2><p>Browse publi
 inner(sections[17], shell('''<h2 id="most-read-heading" class="text-2xl md:text-3xl font-bold mb-2">Business guides and articles</h2><p class="text-muted-foreground mb-6 max-w-2xl">Read more before you choose your next step.</p><div class="bbi-lists-rail" aria-label="Business guides and articles">{{BBI_ARTICLES}}</div>'''))
 for section in sections:
     section.set('class', section.get('class', '').replace(' border-b border-border', '').replace(' border-t border-border', '').replace(' border-y border-border', ''))
+
+# Keep the purchased filter strip and its pill treatment. Its original React
+# handlers are gone with the seller bundle; our small handler is added below.
+for button in page.xpath('//button'):
+    if (button.text or '').strip() == 'All Lists':
+        strip = button.getparent()
+        buttons = strip.xpath('./button')
+        for index, item in enumerate(buttons):
+            item.text = ['All lists', *[title for title, _ in names]][index]
+            item.set('type', 'button')
+            item.set('data-lists-filter', str(index))
+            item.set('aria-pressed', 'true' if index == 0 else 'false')
+        break
 
 for script in page.xpath('//script'):
     script.drop_tree()
@@ -119,6 +133,7 @@ main > section { scroll-margin-top: 96px; }
 .bbi-lists-rail { display:flex; gap:1rem; width:max-content; animation:bbi-lists-scroll 35s linear infinite; }
 .bbi-lists-rail:hover, .bbi-lists-rail:focus-within { animation-play-state:paused; }
 .bbi-lists-rail > a { width: min(75vw, 260px); flex:none; }
+[data-lists-filter][aria-pressed="true"] { background: hsl(var(--primary)); color:white; }
 @keyframes bbi-lists-scroll { to { transform:translateX(-50%); } }
 @media (prefers-reduced-motion:reduce) { .bbi-lists-rail { animation:none; } }
 '''

@@ -7,6 +7,11 @@
 - **Checks:** `npm run build` passed. `bun` is absent in this environment. Static parse shows 18 sections, no seller brand term or external links in the transformed page head, no `href="#"`, no dollar price, and no blank section. No local server was started. Live behavior must be checked after deployment.
 - **Resume point:** Publish these files to `main`, record commit SHA and live `/lists` link, check Vercel deployment and live rendering/links, then stop for the founder's assessment before opening another family. The homepage remains paused. `/idea/<slug>` is owner-locked.
 
+## 2026-11-01 19:59 UTC — `/lists` live review and filter repair
+- **Published:** [`3fb0d398`](https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/3fb0d398b47f2d3540367fe39f4e83fef7bd9cb3) on `main`; Vercel status succeeded. Live [lists page](https://bbinewcopy.vercel.app/lists) shows the shared dropdown header, purchased hero artwork, real published category chips and list links, and no seller counts in its first screen.
+- **Defects caught live:** The purchased filter strip survived outside the section nodes with old labels and dead click behavior. The featured card used a full long database intro, overwhelming the seller's compact card. Repair keeps the filter's pill component but relabels it to the six actual shelves and binds click/pressed/section visibility; featured teaser now uses the first sentence from the real intro, with the full text still on list detail. `npm run build` passes after repair; no local server started.
+- **Pending:** Publish repair as a separate main commit and check it live. Then stop for the founder's assessment. Other purchased families remain pending: list detail, calculator hub/detail, tools and later purchased pages. Homepage body remains paused. Idea templates remain owner-locked.
+
 Public handoff for [businessidea.io](https://businessidea.io) development in [BRAND-NEW-COPY](https://github.com/Pinkycherry/BRAND-NEW-COPY). Times use **Asia/Kolkata (IST)**. Append new entries in chronological order. Give exact file paths/links, outcomes, commit SHA, test result, demo result, unresolved issues, and next action. Never record secrets.
 
 ## 2026-10-22 08:20 IST — Founder instruction recorded
