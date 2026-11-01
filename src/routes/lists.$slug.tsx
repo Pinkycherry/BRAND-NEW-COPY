@@ -109,22 +109,22 @@ function Comparison({ ideas }: { ideas: ListIdea[] }) {
   ];
   return (
     <div className="rounded-lg bg-card text-card-foreground overflow-hidden border border-border/60 shadow-sm mb-8">
-      <div className="px-4 py-3 bg-primary/[0.03] border-b border-border/50 flex items-center gap-2">
+      <div className="px-5 py-4 bg-primary/[0.03] border-b border-border/50 flex items-center gap-3">
         <Star className="h-4 w-4 text-primary fill-primary" />
         <div>
-          <h2 className="text-sm font-bold text-foreground leading-none">Quick Comparison</h2>
-          <p className="text-[11px] text-muted-foreground mt-0.5 leading-none">Compare top options at a glance</p>
+          <h2 className="text-base font-bold text-foreground leading-snug">Quick Comparison</h2>
+          <p className="text-sm text-muted-foreground mt-1 leading-snug">Compare top options at a glance</p>
         </div>
       </div>
       <div className="p-0">
         <div className="overflow-x-auto scrollbar-thin">
-          <table className="w-full text-sm">
+          <table className="w-full min-w-max border-separate border-spacing-0 text-sm">
             <thead>
               <tr className="border-b border-border/50">
-                <th className="px-3 py-2 text-left text-xs font-bold uppercase tracking-wider text-foreground bg-muted/40 w-32 sm:w-40 sticky left-0 z-10">Feature</th>
+                <th className="sticky left-0 z-10 min-w-[124px] bg-muted px-4 py-4 text-left text-xs font-bold uppercase tracking-wider text-foreground sm:min-w-[160px]">Feature</th>
                 {ideas.map((i) => (
-                  <th key={i.slug} className="px-3 py-2 text-center text-[11px] font-semibold text-foreground/80 border-l border-border/40 min-w-[110px] max-w-[180px]">
-                    <span className="block leading-tight">
+                  <th key={i.slug} className="min-w-[180px] max-w-[220px] border-l border-border/40 px-4 py-4 text-center text-sm font-semibold leading-snug text-foreground/80">
+                    <span className="block whitespace-normal break-words leading-snug">
                       {i.title}
                     </span>
                   </th>
@@ -134,10 +134,10 @@ function Comparison({ ideas }: { ideas: ListIdea[] }) {
             <tbody>
               {rows.map(([label, get]) => (
                 <tr key={label} className="border-b border-border/30 last:border-b-0 hover:bg-primary/[0.02] transition-colors">
-                  <td className="px-3 py-2 text-xs font-bold uppercase tracking-wide text-foreground sticky left-0 bg-muted/40 z-10 border-r border-border/20">{label}</td>
+                  <td className="sticky left-0 z-10 min-w-[124px] border-r border-border/20 bg-muted px-4 py-4 text-xs font-bold uppercase leading-snug tracking-wide text-foreground sm:min-w-[160px]">{label}</td>
                   {ideas.map((i) => (
-                    <td key={i.slug} className="px-3 py-2 text-center text-[13px] text-foreground/90 border-l border-border/20">
-                      <span className="font-medium">{get(i)}</span>
+                    <td key={i.slug} className="min-w-[180px] max-w-[220px] border-l border-border/20 px-4 py-4 text-center text-sm leading-relaxed text-foreground/90">
+                      <span className="block whitespace-normal break-words font-medium">{get(i)}</span>
                     </td>
                   ))}
                 </tr>
@@ -185,7 +185,7 @@ export function TopCard({ idea, actionHref, showAction = true }: { idea: ListIde
         <h3 className="break-words text-lg font-bold leading-snug text-slate-950 sm:text-xl">{idea.title}</h3>
         {idea.who_pays_you && <p className="mt-2 text-sm leading-5 text-slate-600"><strong className="font-semibold text-slate-800">Best for:</strong> {sentences(idea.who_pays_you, 1)}</p>}
       </div>
-      {band(idea) && <span className="inline-flex w-fit shrink-0 items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold text-slate-700 sm:max-w-48 sm:text-right">Money to start: {band(idea)}</span>}
+      {band(idea) && <span className="inline-flex max-w-full items-center rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-left text-sm font-semibold leading-snug text-slate-700 sm:max-w-[220px] sm:flex-none sm:break-words">Money to start: {band(idea)}</span>}
     </header>
     <div className="p-4 sm:p-5">
       {summary && <p className="break-words text-sm leading-6 text-slate-600 sm:text-base">{summary}</p>}
@@ -205,7 +205,7 @@ function MoreCard({ idea }: { idea: ListIdea; n?: number }) {
   return <article className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-slate-300 hover:shadow-md sm:p-5">
     <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
       <h3 className="min-w-0 break-words text-base font-bold leading-snug text-slate-950 sm:text-lg">{idea.title}</h3>
-      {band(idea) && <span className="w-fit shrink-0 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700">{band(idea)}</span>}
+      {band(idea) && <span className="max-w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold leading-snug text-slate-700 sm:flex-none">{band(idea)}</span>}
     </div>
     {summary && <p className="mt-2 text-sm leading-6 text-slate-600">{summary}</p>}
     {idea.how_money_comes && <p className="mt-3 rounded-lg bg-slate-50 p-3 text-sm leading-5 text-slate-600"><strong className="text-slate-800">Revenue:</strong> {sentences(idea.how_money_comes, 1)}</p>}
