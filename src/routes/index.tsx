@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import purchasedPage from "@/bought/home-bbi.html?raw";
+import menuPanels from "@/bought/menu-panels.json";
+import menuBindings from "@/bought/menus.html?raw";
+import sharedHeaderStyles from "@/components/v2/v2.css?raw";
 import { boughtPage } from "@/bought/serve";
 import { getRecentIdeas } from "@/lib/home.functions";
 import { getListsHub } from "@/lib/lists.functions";
@@ -63,6 +66,12 @@ async function homeResponse() {
   };
   let page = purchasedPage.replace(/\{\{(BBI_[A-Z_]+)\}\}/g, (_, key: string) => values[key] === undefined ? "" : key.endsWith("_CARDS") ? values[key] : safe(values[key]));
   if (!selected) page = page.replace(/<section id="reports"[\s\S]*?<\/section>/, "");
+  // The homepage is raw purchased HTML, while the other pages render Header
+  // from the shared React frame. Use its generated markup, styles and binding
+  // script here so desktop and mobile disclosures behave identically.
+  page = page.replace(/<nav\b[\s\S]*?<\/nav>/, menuPanels.header);
+  page = page.replace("</head>", `<style id="bbi-shared-header-styles">${sharedHeaderStyles}</style></head>`);
+  page = page.replace("</body>", `${menuBindings}</body>`);
   return boughtPage(page, "home");
 }
 

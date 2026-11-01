@@ -477,3 +477,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Dedicated featured images for startup guides are not present in current source; the repair reuses existing related BBI artwork for those carousel slides. Founder should review their visual relevance. Final 100–200 image system remains PENDING.
 - Correction: `src/config/guide-imagery.ts` already maps guides to their dedicated local featured images. The follow-up homepage commit switches its guide carousel to that mapping. The broader 100–200 category/subcategory image system remains PENDING.
 - Source database has completed idea rows and no `published` status rows; the full site migration/status alignment remains PENDING. Homepage uses the same completed source as `/blueprints` and `/idea/<slug>` until that alignment is done.
+
+### 2026-11-02 01:03 IST — Owner warning and next review
+- **OWNER WARNING: Do not edit any `/idea/<slug>` page, its template, its data loader or its styling until the founder explicitly says to.** The founder considers the current idea layout better than other page families and wants it preserved.
+- The homepage body is rejected and PAUSED. Restore only its shared header and dropdown behavior, check the live desktop/mobile menu, then return with a concrete five-page plan. Do not start those five pages before the founder responds.
+- The existing shared header contains some inherited “FREE” wording in its menu panels. The header restoration matches other pages exactly; review site-wide product wording as a separate, owner-approved task rather than silently changing every route.
