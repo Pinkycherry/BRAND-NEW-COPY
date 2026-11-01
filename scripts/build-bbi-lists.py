@@ -72,6 +72,9 @@ for button in page.xpath('//button'):
     if (button.text or '').strip() == 'All Lists':
         strip = button.getparent()
         inner(strip, '<span class="text-xs font-semibold text-muted-foreground uppercase tracking-wide pr-2">Categories</span><div class="bbi-category-nav" aria-label="Jump to a category">{{BBI_CATEGORY_FILTER}}</div>')
+        strip.set('class', 'flex items-center gap-2 min-w-0')
+        sticky = strip.getparent().getparent()
+        sticky.set('class', sticky.get('class','').replace('sticky','').replace('top-20','').replace('z-30','').replace('backdrop-blur',''))
         break
 
 for script in page.xpath('//script'):
@@ -129,9 +132,8 @@ main { padding-top: 96px; }
 main > section, .bbi-category-block { scroll-margin-top: 112px; }
 .bbi-category-groups { display:grid; gap:3rem; }
 .bbi-category-block { min-width:0; }
-.bbi-category-nav { display:flex; gap:.6rem; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:.4rem; scrollbar-width:thin; }
+.bbi-category-nav { display:flex; gap:.6rem; flex:1; min-width:0; max-width:100%; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:.4rem; scrollbar-width:thin; }
 .bbi-category-nav a { scroll-snap-align:start; flex:none; white-space:nowrap; }
-@media(min-width:768px) { .bbi-category-nav { flex-wrap:wrap; } }
 .bbi-lists-rail { display:flex; gap:1rem; width:max-content; animation:bbi-lists-scroll 35s linear infinite; }
 section:has(.bbi-lists-rail) { overflow:hidden; }
 .bbi-lists-rail:hover, .bbi-lists-rail:focus-within { animation-play-state:paused; }

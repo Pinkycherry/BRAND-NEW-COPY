@@ -1,5 +1,9 @@
 # Pinky 1 / Pinky 2 — site build work log
 
+## 2026-11-02 01:53 IST — Founder screenshot shows `/lists` scroll overlay
+- **Report:** The 42 category pills in the purchased sticky filter grew into a viewport-height overlay; later sections became obscured. The screenshot shows list cards bleeding behind the pill block. The previous live list-detail spacing fix is published at [`197aa343`](https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/197aa3431cf38f9059c440d0bd624a035bf9dc9d); Vercel succeeded and the summer drink cart page shows padded badges and comparison cells.
+- **Fix:** Scope the purchased `/lists` filter to a non-sticky, single-row horizontal pill strip with its own sideways scrolling on phone/desktop; remove the desktop wrap rule. Category blocks and full list coverage remain. Files: `scripts/build-bbi-lists.py`, regenerated `src/bought/lists-bbi.html`. Calculator hub work remains unpushed until this scroll repair is live. `npm run build` passed; no local server. PENDING push and live scroll verification, then calculator hub.
+
 ## 2026-11-02 01:49 IST — Summer drink cart list spacing repair ready to publish
 - **Previous push:** [`b3fff355`](https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/b3fff3558418f018b312c4056bddf94c9d4969c8) Vercel success. Live `/lists` verified 42 category groups and 420 published subcategory links, two separate guide/article rails, 61 resource links, FAQ last, no desktop overflow at 1363px.
 - **Founder issue:** The `Money to start: Lower startup cost` badge in the summer drink cart list compresses and the Quick Comparison table has small text and insufficient padding. Live screenshot confirmed table columns crowded and its subtitle tiny. The affected code is the shared list detail route, so this repair applies to all `/lists/<slug>` instances; `/idea/<slug>` remains untouched.
