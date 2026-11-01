@@ -462,3 +462,11 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Restored the authored BusinessIdea.io React page renderers for 13 routes previously serving the purchased IdeaProof HTML snapshots wholesale.
 - Source snapshots and assets remain untouched as references; no transfer, overwrite or deletion performed.
 - PENDING: verify each imported component file and export exists; offline typecheck/build; check all 13 routes load through SSR; audit 360px/390px/desktop layouts, route links and empty states; verify noindex headers/meta; confirm Vercel deploy and visual output. Keep page status open until evidenced.
+
+### 2026-11-01 22:25 IST — Founder review after homepage
+- Homepage is the active change; push and live QA must be completed before stopping. Live: https://bbinewcopy.vercel.app/; code: https://github.com/Pinkycherry/BRAND-NEW-COPY/blob/main/src/routes/index.tsx.
+- Pricing: ₹199 and ₹299 are confirmed prices only. Inclusions, access terms and checkout are pending founder specification; the current pricing page is a temporary truth correction, not a purchased-layout conversion. https://bbinewcopy.vercel.app/pricing.
+- About/team: carry the factual original story and team into the purchased composition after founder review. https://bbusiness.online/about and https://bbinewcopy.vercel.app/about.
+- Tools: preserve the purchased external tool categories, logos, details and outgoing destinations. Rewrite its BBI narrative and ordering without replacing seller composition. https://bbinewcopy.vercel.app/tools.
+- Image system: plan 100–200 reusable non-human 3D component images for main categories and subcategories. Inventory seller assets and shapes first, then define one coherent material, lighting and crop system; create category master concepts and reusable subject variants; map images to data slugs or one config with fallbacks and test mobile card crops. No image batch generated yet. Golden tree is already carried to the new homepage.
+- Exact next action after live QA: stop and wait for founder feedback; no independent edit to About, tools, pricing details or image batch.

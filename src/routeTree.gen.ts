@@ -28,6 +28,7 @@ import { Route as CoachingBatchBusinessIdeaIndiaRouteImport } from './routes/coa
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as FailedStartupsRouteImport } from './routes/failed-startups'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FirstCustomerIndiaRouteImport } from './routes/first-customer-india'
 import { Route as FounderDecisionJournalRouteImport } from './routes/founder-decision-journal'
@@ -80,8 +81,10 @@ import { Route as IdeaSlugRouteImport } from './routes/idea.$slug'
 import { Route as LearningResourcesIndexRouteImport } from './routes/learning-resources.index'
 import { Route as ListsIndexRouteImport } from './routes/lists.index'
 import { Route as ListsSlugRouteImport } from './routes/lists.$slug'
+import { Route as ListsCoachingBusinessIdeasRouteImport } from './routes/lists.coaching-business-ideas'
 import { Route as StartupGuidesIndexRouteImport } from './routes/startup-guides.index'
 import { Route as StartupGuidesSlugRouteImport } from './routes/startup-guides.$slug'
+import { Route as ToolsAlternateRouteImport } from './routes/tools.alternate'
 import { Route as UsefulToolsIndexRouteImport } from './routes/useful-tools.index'
 import { Route as CategoryCategorySlugIndexRouteImport } from './routes/category.$categorySlug.index'
 import { Route as CategoryCategorySlugSubcategorySlugRouteImport } from './routes/category.$categorySlug.$subcategorySlug'
@@ -181,6 +184,11 @@ const CookiePolicyRoute = CookiePolicyRouteImport.update({
 const DisclaimerRoute = DisclaimerRouteImport.update({
   id: '/disclaimer',
   path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FailedStartupsRoute = FailedStartupsRouteImport.update({
+  id: '/failed-startups',
+  path: '/failed-startups',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
@@ -408,9 +416,9 @@ const CalculatorSlugRoute = CalculatorSlugRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const FailedStartupsIndiaRoute = FailedStartupsIndiaRouteImport.update({
-  id: '/failed-startups/india',
-  path: '/failed-startups/india',
-  getParentRoute: () => rootRouteImport,
+  id: '/india',
+  path: '/india',
+  getParentRoute: () => FailedStartupsRoute,
 } as any)
 const FounderGlossaryIndexRoute = FounderGlossaryIndexRouteImport.update({
   id: '/founder-glossary/',
@@ -447,6 +455,12 @@ const ListsSlugRoute = ListsSlugRouteImport.update({
   path: '/lists/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ListsCoachingBusinessIdeasRoute =
+  ListsCoachingBusinessIdeasRouteImport.update({
+    id: '/lists/coaching-business-ideas',
+    path: '/lists/coaching-business-ideas',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const StartupGuidesIndexRoute = StartupGuidesIndexRouteImport.update({
   id: '/startup-guides/',
   path: '/startup-guides/',
@@ -456,6 +470,11 @@ const StartupGuidesSlugRoute = StartupGuidesSlugRouteImport.update({
   id: '/startup-guides/$slug',
   path: '/startup-guides/$slug',
   getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsAlternateRoute = ToolsAlternateRouteImport.update({
+  id: '/alternate',
+  path: '/alternate',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const UsefulToolsIndexRoute = UsefulToolsIndexRouteImport.update({
   id: '/useful-tools/',
@@ -495,6 +514,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/failed-startups': typeof FailedStartupsRouteWithChildren
   '/faq': typeof FaqRoute
   '/first-customer-india': typeof FirstCustomerIndiaRoute
   '/founder-decision-journal': typeof FounderDecisionJournalRoute
@@ -529,7 +549,7 @@ export interface FileRoutesByFullPath {
   '/startup-terms-india': typeof StartupTermsIndiaRoute
   '/templates': typeof TemplatesRoute
   '/terms': typeof TermsRoute
-  '/tools': typeof ToolsRoute
+  '/tools': typeof ToolsRouteWithChildren
   '/topics': typeof TopicsRoute
   '/unit-economics-india': typeof UnitEconomicsIndiaRoute
   '/version.json': typeof VersionDotjsonRoute
@@ -540,7 +560,9 @@ export interface FileRoutesByFullPath {
   '/founder-stories/$slug': typeof FounderStoriesSlugRoute
   '/idea/$slug': typeof IdeaSlugRoute
   '/lists/$slug': typeof ListsSlugRoute
+  '/lists/coaching-business-ideas': typeof ListsCoachingBusinessIdeasRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
+  '/tools/alternate': typeof ToolsAlternateRoute
   '/blog/': typeof BlogIndexRoute
   '/blueprints/': typeof BlueprintsIndexRoute
   '/calculator/': typeof CalculatorIndexRoute
@@ -573,6 +595,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/failed-startups': typeof FailedStartupsRouteWithChildren
   '/faq': typeof FaqRoute
   '/first-customer-india': typeof FirstCustomerIndiaRoute
   '/founder-decision-journal': typeof FounderDecisionJournalRoute
@@ -607,7 +630,7 @@ export interface FileRoutesByTo {
   '/startup-terms-india': typeof StartupTermsIndiaRoute
   '/templates': typeof TemplatesRoute
   '/terms': typeof TermsRoute
-  '/tools': typeof ToolsRoute
+  '/tools': typeof ToolsRouteWithChildren
   '/topics': typeof TopicsRoute
   '/unit-economics-india': typeof UnitEconomicsIndiaRoute
   '/version.json': typeof VersionDotjsonRoute
@@ -618,7 +641,9 @@ export interface FileRoutesByTo {
   '/founder-stories/$slug': typeof FounderStoriesSlugRoute
   '/idea/$slug': typeof IdeaSlugRoute
   '/lists/$slug': typeof ListsSlugRoute
+  '/lists/coaching-business-ideas': typeof ListsCoachingBusinessIdeasRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
+  '/tools/alternate': typeof ToolsAlternateRoute
   '/blog': typeof BlogIndexRoute
   '/blueprints': typeof BlueprintsIndexRoute
   '/calculator': typeof CalculatorIndexRoute
@@ -652,6 +677,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/failed-startups': typeof FailedStartupsRouteWithChildren
   '/faq': typeof FaqRoute
   '/first-customer-india': typeof FirstCustomerIndiaRoute
   '/founder-decision-journal': typeof FounderDecisionJournalRoute
@@ -686,7 +712,7 @@ export interface FileRoutesById {
   '/startup-terms-india': typeof StartupTermsIndiaRoute
   '/templates': typeof TemplatesRoute
   '/terms': typeof TermsRoute
-  '/tools': typeof ToolsRoute
+  '/tools': typeof ToolsRouteWithChildren
   '/topics': typeof TopicsRoute
   '/unit-economics-india': typeof UnitEconomicsIndiaRoute
   '/version.json': typeof VersionDotjsonRoute
@@ -697,7 +723,9 @@ export interface FileRoutesById {
   '/founder-stories/$slug': typeof FounderStoriesSlugRoute
   '/idea/$slug': typeof IdeaSlugRoute
   '/lists/$slug': typeof ListsSlugRoute
+  '/lists/coaching-business-ideas': typeof ListsCoachingBusinessIdeasRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
+  '/tools/alternate': typeof ToolsAlternateRoute
   '/blog/': typeof BlogIndexRoute
   '/blueprints/': typeof BlueprintsIndexRoute
   '/calculator/': typeof CalculatorIndexRoute
@@ -732,6 +760,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/cookie-policy'
     | '/disclaimer'
+    | '/failed-startups'
     | '/faq'
     | '/first-customer-india'
     | '/founder-decision-journal'
@@ -777,7 +806,9 @@ export interface FileRouteTypes {
     | '/founder-stories/$slug'
     | '/idea/$slug'
     | '/lists/$slug'
+    | '/lists/coaching-business-ideas'
     | '/startup-guides/$slug'
+    | '/tools/alternate'
     | '/blog/'
     | '/blueprints/'
     | '/calculator/'
@@ -810,6 +841,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/cookie-policy'
     | '/disclaimer'
+    | '/failed-startups'
     | '/faq'
     | '/first-customer-india'
     | '/founder-decision-journal'
@@ -855,7 +887,9 @@ export interface FileRouteTypes {
     | '/founder-stories/$slug'
     | '/idea/$slug'
     | '/lists/$slug'
+    | '/lists/coaching-business-ideas'
     | '/startup-guides/$slug'
+    | '/tools/alternate'
     | '/blog'
     | '/blueprints'
     | '/calculator'
@@ -888,6 +922,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/cookie-policy'
     | '/disclaimer'
+    | '/failed-startups'
     | '/faq'
     | '/first-customer-india'
     | '/founder-decision-journal'
@@ -933,7 +968,9 @@ export interface FileRouteTypes {
     | '/founder-stories/$slug'
     | '/idea/$slug'
     | '/lists/$slug'
+    | '/lists/coaching-business-ideas'
     | '/startup-guides/$slug'
+    | '/tools/alternate'
     | '/blog/'
     | '/blueprints/'
     | '/calculator/'
@@ -967,6 +1004,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
   DisclaimerRoute: typeof DisclaimerRoute
+  FailedStartupsRoute: typeof FailedStartupsRouteWithChildren
   FaqRoute: typeof FaqRoute
   FirstCustomerIndiaRoute: typeof FirstCustomerIndiaRoute
   FounderDecisionJournalRoute: typeof FounderDecisionJournalRoute
@@ -1001,17 +1039,17 @@ export interface RootRouteChildren {
   StartupTermsIndiaRoute: typeof StartupTermsIndiaRoute
   TemplatesRoute: typeof TemplatesRoute
   TermsRoute: typeof TermsRoute
-  ToolsRoute: typeof ToolsRoute
+  ToolsRoute: typeof ToolsRouteWithChildren
   TopicsRoute: typeof TopicsRoute
   UnitEconomicsIndiaRoute: typeof UnitEconomicsIndiaRoute
   VersionDotjsonRoute: typeof VersionDotjsonRoute
   WeekendMarketStallProfitCheckRoute: typeof WeekendMarketStallProfitCheckRoute
   BlogSlugRoute: typeof BlogSlugRoute
   CalculatorSlugRoute: typeof CalculatorSlugRoute
-  FailedStartupsIndiaRoute: typeof FailedStartupsIndiaRoute
   FounderStoriesSlugRoute: typeof FounderStoriesSlugRoute
   IdeaSlugRoute: typeof IdeaSlugRoute
   ListsSlugRoute: typeof ListsSlugRoute
+  ListsCoachingBusinessIdeasRoute: typeof ListsCoachingBusinessIdeasRoute
   StartupGuidesSlugRoute: typeof StartupGuidesSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
   BlueprintsIndexRoute: typeof BlueprintsIndexRoute
@@ -1159,6 +1197,13 @@ declare module '@tanstack/react-router' {
       path: '/disclaimer'
       fullPath: '/disclaimer'
       preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/failed-startups': {
+      id: '/failed-startups'
+      path: '/failed-startups'
+      fullPath: '/failed-startups'
+      preLoaderRoute: typeof FailedStartupsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faq': {
@@ -1471,10 +1516,10 @@ declare module '@tanstack/react-router' {
     }
     '/failed-startups/india': {
       id: '/failed-startups/india'
-      path: '/failed-startups/india'
+      path: '/india'
       fullPath: '/failed-startups/india'
       preLoaderRoute: typeof FailedStartupsIndiaRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof FailedStartupsRoute
     }
     '/founder-glossary/': {
       id: '/founder-glossary/'
@@ -1525,6 +1570,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ListsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lists/coaching-business-ideas': {
+      id: '/lists/coaching-business-ideas'
+      path: '/lists/coaching-business-ideas'
+      fullPath: '/lists/coaching-business-ideas'
+      preLoaderRoute: typeof ListsCoachingBusinessIdeasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/startup-guides/': {
       id: '/startup-guides/'
       path: '/startup-guides'
@@ -1538,6 +1590,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/startup-guides/$slug'
       preLoaderRoute: typeof StartupGuidesSlugRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/tools/alternate': {
+      id: '/tools/alternate'
+      path: '/alternate'
+      fullPath: '/tools/alternate'
+      preLoaderRoute: typeof ToolsAlternateRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/useful-tools/': {
       id: '/useful-tools/'
@@ -1563,6 +1622,28 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface FailedStartupsRouteChildren {
+  FailedStartupsIndiaRoute: typeof FailedStartupsIndiaRoute
+}
+
+const FailedStartupsRouteChildren: FailedStartupsRouteChildren = {
+  FailedStartupsIndiaRoute: FailedStartupsIndiaRoute,
+}
+
+const FailedStartupsRouteWithChildren = FailedStartupsRoute._addFileChildren(
+  FailedStartupsRouteChildren,
+)
+
+interface ToolsRouteChildren {
+  ToolsAlternateRoute: typeof ToolsAlternateRoute
+}
+
+const ToolsRouteChildren: ToolsRouteChildren = {
+  ToolsAlternateRoute: ToolsAlternateRoute,
+}
+
+const ToolsRouteWithChildren = ToolsRoute._addFileChildren(ToolsRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
@@ -1583,6 +1664,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CookiePolicyRoute: CookiePolicyRoute,
   DisclaimerRoute: DisclaimerRoute,
+  FailedStartupsRoute: FailedStartupsRouteWithChildren,
   FaqRoute: FaqRoute,
   FirstCustomerIndiaRoute: FirstCustomerIndiaRoute,
   FounderDecisionJournalRoute: FounderDecisionJournalRoute,
@@ -1617,17 +1699,17 @@ const rootRouteChildren: RootRouteChildren = {
   StartupTermsIndiaRoute: StartupTermsIndiaRoute,
   TemplatesRoute: TemplatesRoute,
   TermsRoute: TermsRoute,
-  ToolsRoute: ToolsRoute,
+  ToolsRoute: ToolsRouteWithChildren,
   TopicsRoute: TopicsRoute,
   UnitEconomicsIndiaRoute: UnitEconomicsIndiaRoute,
   VersionDotjsonRoute: VersionDotjsonRoute,
   WeekendMarketStallProfitCheckRoute: WeekendMarketStallProfitCheckRoute,
   BlogSlugRoute: BlogSlugRoute,
   CalculatorSlugRoute: CalculatorSlugRoute,
-  FailedStartupsIndiaRoute: FailedStartupsIndiaRoute,
   FounderStoriesSlugRoute: FounderStoriesSlugRoute,
   IdeaSlugRoute: IdeaSlugRoute,
   ListsSlugRoute: ListsSlugRoute,
+  ListsCoachingBusinessIdeasRoute: ListsCoachingBusinessIdeasRoute,
   StartupGuidesSlugRoute: StartupGuidesSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
   BlueprintsIndexRoute: BlueprintsIndexRoute,
