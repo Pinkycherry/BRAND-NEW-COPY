@@ -474,4 +474,5 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-11-01 22:42 IST — Homepage correction in progress
 - First pass rejected by founder: do not mark https://bbinewcopy.vercel.app/ done from commit 8706afe. The editorial repair is built locally and must be pushed and live-checked. Exact resume: publish, verify images/data/hero/tree/guide/blog links, record result, then stop.
 - Dedicated featured images for startup guides are not present in current source; the repair reuses existing related BBI artwork for those carousel slides. Founder should review their visual relevance. Final 100–200 image system remains PENDING.
+- Correction: `src/config/guide-imagery.ts` already maps guides to their dedicated local featured images. The follow-up homepage commit switches its guide carousel to that mapping. The broader 100–200 category/subcategory image system remains PENDING.
 - Source database has completed idea rows and no `published` status rows; the full site migration/status alignment remains PENDING. Homepage uses the same completed source as `/blueprints` and `/idea/<slug>` until that alignment is done.

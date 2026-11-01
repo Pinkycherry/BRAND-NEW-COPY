@@ -343,7 +343,7 @@ fill('pricing-teaser',intro('09','Pricing, honestly','Two prices. The details mu
 
 # The seller's original research strip uses a horizontal card row. Turn the
 # same row into our own published blog carousel instead of seller articles.
-for section in doc.xpath('//main/section[not(@id)]'):
+for section in doc.xpath('//section[not(@id)]'):
     if 'Most-read research on IdeaProof' in ' '.join(section.itertext()):
         section.clear()
         section.set('class','py-12')
@@ -407,6 +407,13 @@ for button in node('faq').xpath('.//button'):
     answer=parent[1]
     answer.attrib.pop('style',None)
     answer.set('class','px-5 pb-5 text-sm leading-7 text-slate-600 sm:px-6')
+for panel in node('faq').xpath('.//div[contains(@class,"relative mt-24")]'):
+    put(panel,'.//span[contains(text(),"Founder intelligence")]','From the BBI blog')
+    put(panel,'.//h2','Continue with a practical question.')
+    put(panel,'.//h2/following-sibling::p','Read our guides and articles when the next decision is in front of you.')
+for section in doc.xpath('//section'):
+    for line in section.xpath('.//div[contains(@class,"h-px") and contains(@class,"top-0")]'):
+        remove(line)
 doc.xpath('//head/style')[-1].text += '\n#faq summary{list-style:none}#faq summary::-webkit-details-marker{display:none}\n'
 for form in node('hero').xpath('.//form'):
     buttons=form.xpath('.//button')

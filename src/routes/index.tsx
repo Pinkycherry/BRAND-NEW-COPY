@@ -5,6 +5,7 @@ import { getRecentIdeas } from "@/lib/home.functions";
 import { getListsHub } from "@/lib/lists.functions";
 import { getHomeLegacyContent } from "@/lib/legacy-ideas.functions";
 import { categoryImage } from "@/config/category-imagery";
+import { guideImage } from "@/config/guide-imagery";
 
 function safe(value: string | null | undefined): string {
   return (value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -18,13 +19,6 @@ function card(title: string, description: string, href: string, image?: string |
 
 function chip(title: string, href: string) {
   return `<a class="inline-flex min-h-11 items-center rounded-full border border-slate-300 bg-white px-5 py-2.5 font-display text-sm font-semibold text-slate-800 transition hover:border-[#7c3aed] hover:bg-violet-50 hover:text-[#6d28d9]" href="${safe(href)}">${safe(title)} →</a>`;
-}
-
-function guideArt(slug: string) {
-  if (/validat|customer|competitor/.test(slug)) return "/images/blog/five-contradictory-answers-and-real-liability.webp";
-  if (/pric|freemium|paid/.test(slug)) return "/images/blog/how-to-price-a-side-hustle-with-no-customers-yet.webp";
-  if (/hiring|cold-email|go-to-market/.test(slug)) return "/images/blog/how-to-find-your-first-paying-customer-without-spending-on-ads.webp";
-  return categoryImage("tech-saas-business-ideas").src;
 }
 
 function rail(cards: string[]) {
@@ -62,7 +56,7 @@ async function homeResponse() {
     BBI_TREE_CARDS: categories.length
       ? categories.slice(8, 16).map((c) => chip(c.name, `/category/${encodeURIComponent(c.slug)}`)).join("")
       : legacy.categories.slice(8, 16).map((c) => chip(c.name, `/idea/${encodeURIComponent(c.ideaSlug)}`)).join(""),
-    BBI_GUIDE_CARDS: rail(STARTUP_GUIDES.slice(0, 8).map((g) => card(g.title, g.description, `/startup-guides/${encodeURIComponent(g.slug)}`, guideArt(g.slug)))),
+    BBI_GUIDE_CARDS: rail(STARTUP_GUIDES.slice(0, 8).map((g) => card(g.title, g.description, `/startup-guides/${encodeURIComponent(g.slug)}`, guideImage(g.slug)?.src))),
     BBI_BLOG_CARDS: rail(posts.posts.slice(0, 8).map((p) => card(p.title, p.excerpt, `/blog/${encodeURIComponent(p.slug)}`, p.image))),
     BBI_BLOG_MORE_CARDS: rail(posts.posts.slice(8, 12).map((p) => card(p.title, p.excerpt, `/blog/${encodeURIComponent(p.slug)}`, p.image))),
     BBI_RECENT_CARDS: rail(displayIdeas.map((i) => card(i.title, i.hook || i.summary || "Read this published idea.", `/idea/${encodeURIComponent(i.slug)}`, "categorySlug" in i && i.categorySlug ? categoryImage(i.categorySlug).src : null))),
