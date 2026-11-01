@@ -1,28 +1,21 @@
-import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Calculator, ChevronRight, Search } from "lucide-react";
-import { V2Frame } from "@/components/v2/frame";
-import { SellerFaq } from "@/components/v2/faq";
-import { READY_CALCULATORS, isVerifiedCalculator, defaultInputs, readValues } from "@/lib/calculators";
+import { CalculatorHub } from "@/components/v2/calculator-hub";
+import { getListsHub } from "@/lib/lists.functions";
+import { getBlogPosts } from "@/lib/blog.functions";
 
 export const Route = createFileRoute("/calculator/")({
-  head: () => ({ meta: [{ title: "Startup Calculators | BusinessIdea.io" }, { name: "description", content: "Business calculators with visible source formulas, inputs and results." }] }),
-  component: CalculatorIndex,
+  loader: async () => {
+    const [hub, blog] = await Promise.all([getListsHub(), getBlogPosts({ data: { page: 1 } })]);
+    return { hub, posts: blog.posts };
+  },
+  head: () => ({ meta: [
+    { title: "Startup Calculators | BusinessIdea.io" },
+    { name: "description", content: "Business calculators with visible source formulas, inputs and results." },
+  ] }),
+  component: CalculatorPage,
 });
-const wrap = "mx-auto max-w-6xl px-4 md:px-6";
-const card = "group rounded-xl border bg-white p-6 shadow-sm transition hover:border-blue-500";
-const verified = READY_CALCULATORS.filter(isVerifiedCalculator);
-function CalculatorIndex() {
-  const [query, setQuery] = useState("");
-  const matching = READY_CALCULATORS.filter(tool => (tool.title + " " + tool.answers).toLowerCase().includes(query.trim().toLowerCase()));
-  return <V2Frame active="/tools">
-    <div className="bg-muted/30 pt-24 lg:pt-28"><nav className={`${wrap} flex items-center gap-2 py-3 text-sm`} aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={15}/><span>Calculators</span></nav></div>
-    <section className="bg-gradient-to-b from-blue-50 to-background py-12 lg:py-16"><div className={wrap}><span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-800">Founder tools</span><h1 className="mt-4 text-3xl font-bold md:text-5xl">Startup calculators</h1><p className="mt-4 max-w-2xl text-muted-foreground">Choose a model, enter your own numbers, and inspect the original formula and result. Imported archive formulas are marked where they need review.</p><div className="mt-6 flex flex-wrap gap-3"><a href="/calculator/startup-cost" className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700">Start with startup cost <ArrowRight size={17}/></a><a href="#all-calculators" className="inline-flex min-h-11 items-center gap-2 rounded-lg border bg-card px-6 py-3 font-semibold hover:border-blue-500">Explore calculators</a></div></div></section>
-    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Formulas you can inspect</h2><p className="mt-3 max-w-3xl text-muted-foreground">These models have checked inputs and arithmetic. Open a calculator to change the numbers and inspect the full formula.</p><div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">{verified.map(tool => { const parsed = readValues(tool.fields, defaultInputs(tool)); const result = parsed.issues.length ? undefined : tool.compute(parsed.values).find(reading => reading.primary); return <a key={tool.slug} href={`/calculator/${tool.slug}#formula`} className={card}><h3 className="font-semibold">{tool.title}</h3><p className="mt-3 text-sm text-muted-foreground">{result?.formula ?? tool.answers}</p><span className="mt-4 inline-flex items-center gap-2 font-semibold text-blue-700">See the formula <ArrowRight size={16}/></span></a>; })}</div></div></section>
-    <section id="all-calculators" className="scroll-mt-28 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Explore every calculator</h2><p className="mt-3 max-w-3xl text-muted-foreground">Every source model has its own working page. For imported archive models, read the formula review note before using a result for a decision.</p><label className="mt-6 flex max-w-xl items-center gap-3 rounded-xl border bg-white px-4"><Search className="text-blue-700" size={19}/><span className="sr-only">Search calculators</span><input className="min-h-12 min-w-0 flex-1 bg-transparent outline-none" type="search" placeholder="Search calculators" value={query} onChange={event => setQuery(event.target.value)} /></label><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{matching.map(tool => <a key={tool.slug} href={`/calculator/${tool.slug}`} className={card}><Calculator className="text-blue-700"/><h3 className="mt-4 text-xl font-semibold group-hover:text-blue-700">{tool.title} {tool.highlight}</h3><p className="mt-2 text-sm text-muted-foreground">{tool.answers}</p>{!isVerifiedCalculator(tool)&&<p className="mt-3 text-xs font-semibold text-amber-800">Original archive formula · review note on page</p>}<span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-700">Open calculator <ArrowRight size={16}/></span></a>)}</div>{!matching.length&&<p className="mt-5 text-muted-foreground">No calculator matches this search.</p>}</div></section>
-    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">How to choose a calculator</h2><p className="mt-3 max-w-3xl text-muted-foreground">Start with what you need to decide: upfront cost, break-even, acquisition cost, return on investment or funding runway. The calculation only knows the inputs you provide.</p><div className="mt-6 grid gap-4 md:grid-cols-3">{verified.map(tool => <a href={`/calculator/${tool.slug}`} className={card} key={tool.slug}><h3 className="text-xl font-bold">{tool.title}</h3><p className="mt-3 text-slate-600">{tool.answers}</p><ArrowRight className="mt-4 text-blue-700" size={17}/></a>)}</div></div></section>
-    <section className="py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Numbers, or a decision?</h2><p className="mt-3 max-w-3xl text-muted-foreground">A calculation uses your assumptions. Check them against customers and demand before committing.</p><a href="/business-demand-test-india" className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700">Validate your idea <ArrowRight size={17}/></a></div></section>
-    <section className="bg-slate-50 py-12 lg:py-16"><div className={wrap}><h2 className="text-3xl font-bold">Related resources</h2><div className="mt-5 grid gap-3 md:grid-cols-3">{[["Browse published ideas","/browse"],["Explore tools","/tools"],["Startup guides","/startup-guides"]].map(([title, href]) => <a key={href} href={href} className="rounded-xl border bg-white p-5 font-semibold hover:border-blue-500">{title} <ArrowRight className="ml-1 inline text-blue-700" size={17}/></a>)}</div></div></section>
-    <SellerFaq faq={verified.map(tool => ({ q: `What does the ${tool.title.toLowerCase()} calculate?`, a: <>{tool.answers} <a href={`/calculator/${tool.slug}`} className="font-semibold text-blue-700 underline">Open calculator</a></> }))} />
-  </V2Frame>;
+
+function CalculatorPage() {
+  const { hub, posts } = Route.useLoaderData();
+  return <CalculatorHub hub={hub} posts={posts} />;
 }
