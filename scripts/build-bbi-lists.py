@@ -52,15 +52,17 @@ names = [
     ('Services and business models', 'Explore local services and other business models.'),
 ]
 for index, (title, intro) in enumerate(names, 5):
-    inner(sections[index], shell(heading(title, intro, '{{BBI_SHELF_' + str(index) + '}}')))
+    inner(sections[index], shell('<div class="bbi-category-groups">{{BBI_SHELF_' + str(index) + '}}</div>'))
     sections[index].set('id', 'bbi-shelf-' + str(index))
 inner(sections[11], shell(heading('Tools &amp; resources', 'Use a calculator or explore the tools library.', '{{BBI_TOOLS}}')))
-inner(sections[12], shell(heading('Strategy &amp; guides', 'Read our published guides before taking the next step.', '{{BBI_GUIDES}}')))
+inner(sections[12], shell('<h2 class="text-2xl font-bold mb-2">Startup guides</h2><div class="bbi-lists-rail" aria-label="Startup guides">{{BBI_GUIDE_RAIL}}</div>'))
 inner(sections[13], shell('''<h2 class="text-2xl font-bold mb-2">Explore more lists</h2><p class="text-muted-foreground mb-6 text-sm">Continue into the complete list index.</p><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">{{BBI_INDEX}}</div><a href="/all-business-ideas" class="inline-flex min-h-11 items-center rounded-lg bg-slate-900 px-6 mt-6 text-white font-semibold transition hover:bg-slate-700">View all business idea lists →</a>'''))
 inner(sections[14], '''<div class="container mx-auto max-w-3xl px-4"><div class="text-center mb-8"><span class="inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold mb-3">FAQ</span><h2 class="text-2xl md:text-3xl font-bold text-balance">Frequently asked questions</h2></div><div class="space-y-3">{{BBI_FAQ}}</div></div>''')
 inner(sections[15], '''<div class="container mx-auto max-w-4xl px-4 text-center"><h2 class="text-3xl font-bold mb-4 text-balance">Ready to explore an idea?</h2><p class="text-lg text-muted-foreground mb-8">Start with a published idea, then use the relevant guide to test your decision.</p><div class="flex flex-col sm:flex-row gap-4 justify-center"><a href="/browse" class="inline-flex min-h-12 items-center justify-center rounded-lg bg-slate-900 px-6 text-white font-semibold transition hover:bg-slate-700">Browse ideas</a><a href="/startup-idea-validation" class="inline-flex min-h-12 items-center justify-center rounded-lg border border-border px-6 font-semibold transition hover:border-primary hover:text-primary">How to validate your idea</a></div></div>''')
 inner(sections[16], '<h2>BusinessIdea.io business idea lists</h2><p>Browse published categories, lists and business ideas.</p>')
-inner(sections[17], shell('''<h2 id="most-read-heading" class="text-2xl md:text-3xl font-bold mb-2">Business guides and articles</h2><p class="text-muted-foreground mb-6 max-w-2xl">Read more before you choose your next step.</p><div class="bbi-lists-rail" aria-label="Business guides and articles">{{BBI_ARTICLES}}</div>'''))
+inner(sections[17], shell('''<h2 id="most-read-heading" class="text-2xl md:text-3xl font-bold mb-2">Business articles</h2><div class="bbi-lists-rail" aria-label="Business articles">{{BBI_ARTICLES}}</div>'''))
+sections[14].getparent().remove(sections[14])
+sections[17].addnext(sections[14])
 for section in sections:
     section.set('class', section.get('class', '').replace(' border-b border-border', '').replace(' border-t border-border', '').replace(' border-y border-border', ''))
 
@@ -69,12 +71,7 @@ for section in sections:
 for button in page.xpath('//button'):
     if (button.text or '').strip() == 'All Lists':
         strip = button.getparent()
-        buttons = strip.xpath('./button')
-        for index, item in enumerate(buttons):
-            item.text = ['All lists', *[title for title, _ in names]][index]
-            item.set('type', 'button')
-            item.set('data-lists-filter', str(index))
-            item.set('aria-pressed', 'true' if index == 0 else 'false')
+        inner(strip, '<span class="text-xs font-semibold text-muted-foreground uppercase tracking-wide pr-2">Categories</span><div class="bbi-category-nav" aria-label="Jump to a category">{{BBI_CATEGORY_FILTER}}</div>')
         break
 
 for script in page.xpath('//script'):
@@ -129,14 +126,20 @@ style = html.Element('style')
 style.text = '''
 body { overflow-x: clip; }
 main { padding-top: 96px; }
-main > section { scroll-margin-top: 96px; }
+main > section, .bbi-category-block { scroll-margin-top: 112px; }
+.bbi-category-groups { display:grid; gap:3rem; }
+.bbi-category-block { min-width:0; }
+.bbi-category-nav { display:flex; gap:.6rem; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:.4rem; scrollbar-width:thin; }
+.bbi-category-nav a { scroll-snap-align:start; flex:none; white-space:nowrap; }
+@media(min-width:768px) { .bbi-category-nav { flex-wrap:wrap; } }
 .bbi-lists-rail { display:flex; gap:1rem; width:max-content; animation:bbi-lists-scroll 35s linear infinite; }
-section[aria-labelledby="most-read-heading"] { overflow:hidden; }
+section:has(.bbi-lists-rail) { overflow:hidden; }
 .bbi-lists-rail:hover, .bbi-lists-rail:focus-within { animation-play-state:paused; }
 .bbi-lists-rail > a { width: min(75vw, 260px); flex:none; }
-[data-lists-filter][aria-pressed="true"] { background: hsl(var(--primary)); color:white; }
+.bbi-category-block a:hover, .bbi-lists-rail a:hover { transform:translateY(-3px); box-shadow:0 12px 30px rgba(15,23,42,.12); }
+@media(prefers-reduced-motion:no-preference) { .bbi-reveal { opacity:0; transform:translateY(32px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); } .bbi-reveal.is-visible { opacity:1; transform:none; } }
 @keyframes bbi-lists-scroll { to { transform:translateX(-50%); } }
-@media (prefers-reduced-motion:reduce) { .bbi-lists-rail { animation:none; } section[aria-labelledby="most-read-heading"] { overflow-x:auto; } }
+@media (prefers-reduced-motion:reduce) { .bbi-lists-rail { animation:none; } section:has(.bbi-lists-rail) { overflow-x:auto; } }
 '''
 page.xpath('//head')[0].append(style)
 output = html.tostring(page.getroot(), encoding='unicode', method='html', doctype='<!DOCTYPE html>')
