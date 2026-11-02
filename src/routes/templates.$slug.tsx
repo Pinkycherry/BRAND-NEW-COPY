@@ -4,14 +4,29 @@ import { V2Frame } from "@/components/v2/frame";
 import { SellerFaq } from "@/components/v2/faq";
 import { founderTemplateBySlug, FOUNDER_TEMPLATES } from "@/data/template-library";
 import { TEMPLATE_ARTICLES } from "@/data/template-articles";
+import { getListsHub, getListPage, type ListPage } from "@/lib/lists.functions";
+import { CustomerPersonaPage } from "@/components/v2/customer-persona-page";
 import "@/components/v2/templates-directory.css";
 
 export const Route = createFileRoute("/templates/$slug")({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
     const template = founderTemplateBySlug(params.slug);
     const article = TEMPLATE_ARTICLES[params.slug];
     if (!template || !article) throw notFound();
-    return { template, article };
+    let examples: { list: ListPage; idea: ListPage["ideas"][number] }[] = [];
+    if (params.slug === "customer-persona") {
+      const hub = await getListsHub();
+      const categories = hub.categories;
+      const picks = [categories[0], categories[Math.floor(categories.length / 2)], categories[categories.length - 1]]
+        .filter((category): category is (typeof categories)[number] => Boolean(category))
+        .filter((category, index, selected) => selected.findIndex(item => item.code === category.code) === index);
+      const pages = await Promise.all(picks.map(category => getListPage({ data: { slug: category.subs[0]!.slug } })));
+      examples = pages.filter((page): page is ListPage => Boolean(page)).flatMap(list => {
+        const idea = list.ideas.find(item => item.who_pays_you && item.summary) || list.ideas[0];
+        return idea ? [{ list, idea }] : [];
+      });
+    }
+    return { template, article, examples };
   },
   head: ({ loaderData }) => ({ meta: [
     { title: `${loaderData?.template.title ?? "Template"} Guide for Indian Founders | BusinessIdea.io` },
@@ -25,7 +40,8 @@ export const Route = createFileRoute("/templates/$slug")({
 });
 
 function TemplateArticlePage() {
-  const { template, article } = Route.useLoaderData();
+  const { template, article, examples } = Route.useLoaderData();
+  if (template.slug === "customer-persona") return <CustomerPersonaPage examples={examples} />;
   const related = FOUNDER_TEMPLATES.filter(item => item.slug !== template.slug).slice(0, 3);
   return <V2Frame active="/templates"><main className="tm-page tm-detail tm-article">
     <div className="tm-wrap"><nav className="tm-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={14}/><a href="/templates">Templates</a><ChevronRight size={14}/><span>{template.title}</span></nav></div>

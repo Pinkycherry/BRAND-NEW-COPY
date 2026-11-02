@@ -4,7 +4,7 @@ The founder rejected browser-local writing fields, print/download actions, dupli
 
 | Live route | Available source | Source anatomy carried into the article | Remaining gap |
 |---|---|---|---|
-| `/templates/customer-persona` | `ideaproof.io-templates-customer-persona.zip`, `index.html` | Buyer/setting, trigger, current alternative, decision and evidence; research playbook, practices, FAQ | Full 14-section seller page interaction/composition review; source examples require removal or India replacement. |
+| `/templates/customer-persona` | `ideaproof.io-templates-customer-persona.zip`, `index.html` | Buyer/setting, trigger, current alternative, decision and evidence; research playbook, practices, FAQ | Persona-specific 14-section source composition implemented with dynamic published BBI idea contexts and read-only source/question tabs. Live visual and founder acceptance pending; unsupported seller stats and invented archetypes excluded. |
 | `/templates/customer-interview` | `ideaproof.io-templates-interview-script-template.zip`, `index.html` | Five-stage interview sequence, past behaviour, payment/alternatives, synthesis, FAQ | Full 16-section seller page interaction/composition review. |
 | `/templates/lean-canvas` | `lean-canvas-2026.pdf` | All nine canvas boxes as separate article chapters | Final visual comparison to a seller HTML destination, if supplied. |
 | `/templates/one-page-business-plan` | `1page-business-plan-2026.pdf` | All ten named plan parts as separate article chapters | Final visual comparison to a seller HTML destination, if supplied. |
