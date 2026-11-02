@@ -544,3 +544,6 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-11-02 21:50 IST — Persona layout rejected with screenshots
 - Founder rejects the persona workbench's three dense text columns and long subcategory tabs, and the research playbook's empty left half. Rebuild those two sections only with full-width readable content and a mobile-first case selector. The prior informational 90/100 self-score is not visual approval. Publish on main, verify live, show the link immediately, and await founder assessment.
 - Additional screenshot: persona Field Notes four-column layout and hover plate rejected for wasted width/padding. Include this section in the isolated persona-only repair and check live.
+
+### 2026-11-02 21:54 IST — Persona live review after 00f003e
+- Live desktop QA confirms the research playbook and Field Notes layout repairs. The workbench selector still has empty vertical space below its three options; owner visual acceptance and phone-width QA remain open. FAQ screenshot self-score 6/10 on visible UI only; no answer content was shown, and no FAQ edit was requested. Await founder guidance before further persona changes. Other template details, site-wide SEO, shared footer's free claim remain pending.
