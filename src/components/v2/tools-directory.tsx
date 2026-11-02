@@ -20,7 +20,7 @@ const stages = [
   { id: "stage-grow", title: "Grow", intro: "Acquire, convert and retain." },
   { id: "stage-operate", title: "Operate", intro: "Run the business and raise capital." },
 ] as const;
-const retired = new Set(["alexa.com", "edgewebfonts.adobe.com"]);
+const retired = new Set(["alexa.com", "edgewebfonts.adobe.com", "console.appfog.com", "aerobatic.com"]);
 const toolList = externalData.tools.filter(tool => !retired.has(new URL(tool.url).hostname.replace(/^www\./, "")));
 const byCategory = new Map<string, Tool[]>();
 for (const tool of toolList) {
@@ -28,6 +28,7 @@ for (const tool of toolList) {
   items.push(tool);
   byCategory.set(tool.category, items);
 }
+for (const items of byCategory.values()) items.sort((a, b) => b.name.localeCompare(a.name));
 const featuredCalculators = READY_CALCULATORS.filter(c => ["startup-cost", "break-even", "roi", "funding-needed"].includes(c.slug));
 
 function ToolCard({ tool }: { tool: Tool }) {
@@ -44,7 +45,7 @@ function CategoryBlock({ category, query }: { category: Category; query: string 
   if (!items.length) return null;
   const shown = query || expanded ? items : items.slice(0, 6);
   return <div id={category.id} className="td-category td-reveal">
-    <div className="td-category-head"><div><h3>{category.title}</h3><p>{category.intro}</p></div><a href={`#${category.id}`}>Explore category <ArrowRight size={15} /></a></div>
+    <div className="td-category-head"><div><h3>{category.title}</h3><p>{category.intro}</p></div></div>
     <div className="td-grid">{shown.map(tool => <ToolCard key={tool.url} tool={tool} />)}</div>
     {!query && items.length > 6 && <button type="button" className="td-more" onClick={() => setExpanded(!expanded)}>{expanded ? `Show fewer ${category.title} tools` : `Show all ${category.title} tools`} <ArrowRight size={16} /></button>}
   </div>;
@@ -79,8 +80,8 @@ export function ToolsDirectory({ hub, posts }: { hub: ListsHub; posts: BlogPostC
   ];
   return <V2Frame active="/tools"><div className="td-page" ref={root}>
     <nav className="td-crumb" aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={15} /><span>Tools</span></nav>
-    <section className="td-hero"><div className="td-inner td-hero-grid"><div><span className="td-kicker">Founder resources</span><h1>Tools for the question in front of you</h1><p>Explore the purchased directory's original external tools, then use our calculators, idea lists and guides to turn research into a decision.</p><div className="td-actions"><a className="td-primary" href="#tool-search">Explore tools <ArrowRight size={17} /></a><a className="td-secondary" href="/business-demand-test-india">Validate your idea</a></div></div><div className="td-hero-art"><img src="/bought/tools/images/hero-free-tools-B6hDHrF5.png" alt="Three-dimensional toolbox illustration" width="540" height="420" fetchPriority="high" /></div></div></section>
-    <section className="td-section td-reveal" id="tool-search"><div className="td-inner"><label className="td-search"><Search size={19} /><span className="sr-only">Search tools</span><input type="search" placeholder="Search tools by name or use" value={query} onChange={e => setQuery(e.target.value)} /></label><div className="td-summary"><strong>Start with the need.</strong><p>Search the external directory or choose a founder stage. The cards retain the provider names, descriptions and destinations from the purchased source; provider terms may change.</p></div></div></section>
+    <section className="td-hero"><div className="td-inner td-hero-grid"><div><span className="td-kicker">Founder resources</span><h1>Tools for the question in front of you</h1><p>Find a tool for the work you need to do today. Explore providers, then use our calculators, idea lists and guides to decide what is worth trying.</p><div className="td-actions"><a className="td-primary" href="#tool-search">Explore tools <ArrowRight size={17} /></a><a className="td-secondary" href="/business-demand-test-india">Validate your idea</a></div></div><div className="td-hero-art"><img src="/bought/tools/images/hero-free-tools-B6hDHrF5.png" alt="Three-dimensional toolbox illustration" width="540" height="420" fetchPriority="high" /></div></div></section>
+    <section className="td-section td-reveal" id="tool-search"><div className="td-inner"><label className="td-search"><Search size={19} /><span className="sr-only">Search tools</span><input type="search" placeholder="Search tools by name or use" value={query} onChange={e => setQuery(e.target.value)} /></label><div className="td-summary"><strong>Start with the need.</strong><p>Search by tool or task, or choose the stage you are in. External services set their own features and prices, so check the provider before you commit.</p></div></div></section>
     <section className="td-section td-reveal"><div className="td-inner"><div className="td-heading"><span>Founder journey</span><h2>Choose your stage</h2><p>Find the kind of work you are doing now.</p></div><div className="td-stage-nav">{stages.map(s => <a href={`#${s.id}`} key={s.id}><strong>{s.title}</strong><small>{s.intro}</small><ArrowRight size={18} /></a>)}</div></div></section>
     <section className="td-section td-reveal"><div className="td-inner"><div className="td-heading"><span>Find a category</span><h2>Browse tool categories</h2></div><nav className="td-chips" aria-label="Tool categories">{categories.map(c => <a href={`#${c.id}`} key={c.id}>{c.title}</a>)}</nav></div></section>
     <section className="td-feature td-reveal"><div className="td-inner td-feature-grid"><div><span className="td-kicker">Explore ideas</span><h2>Choose a business direction before choosing a stack.</h2><p>Our category and subcategory pages connect the question to real published idea lists.</p><a className="td-primary" href="/all-business-ideas">Explore business ideas <ArrowRight size={17} /></a></div><div className="td-taxonomy">{hub.categories.slice(0, 8).map(c => <a href={`/category/${encodeURIComponent(c.slug)}`} key={c.slug}>{c.name}<ArrowRight size={16} /></a>)}</div></div></section>
@@ -91,7 +92,7 @@ export function ToolsDirectory({ hub, posts }: { hub: ListsHub; posts: BlogPostC
       {index === 3 && <section className="td-interlude td-reveal"><div className="td-inner"><div className="td-heading"><span>Published articles</span><h2>From the blog</h2></div><ImageRail title="Business articles" items={articles} /><a href="/blog" className="td-text-link">Explore articles <ArrowRight size={16} /></a></div></section>}
     </div>)}</div>
     <section className="td-section td-reveal"><div className="td-inner"><div className="td-heading"><span>Choose with care</span><h2>Use a tool for a real question</h2></div><div className="td-editorial"><p>Start with what you need to learn about buyers, cost or demand. Try the tool that answers that question and read its provider terms before investing time in it.</p><a href="/business-demand-test-india">Test demand first <ArrowRight size={16} /></a></div></div></section>
-    <section className="td-section td-reveal"><div className="td-inner"><div className="td-heading"><span>How this directory works</span><h2>External tools and our resources</h2></div><p className="td-copy">The external directory keeps the purchased source's tool names, descriptions and destinations. BusinessIdea.io calculators, articles, guides, categories and lists are separate resources linked between the stages. Check the provider's current status and pricing before you use an external service.</p></div></section>
+    <section className="td-section td-reveal"><div className="td-inner"><div className="td-heading"><span>How this directory works</span><h2>External tools and our resources</h2></div><p className="td-copy">The directory groups external services by the job they help with. Our calculators, articles, guides, categories and idea lists sit alongside them to help you make a decision. Check a provider's current status and pricing before you use its service.</p></div></section>
     <SellerFaq faq={faq} />
     <section className="td-cta td-reveal"><div className="td-inner"><Sparkles size={28} /><h2>Ready to test the idea behind your tool stack?</h2><p>Use our demand test, then compare ideas and numbers before you commit.</p><a href="/business-demand-test-india" className="td-primary">Validate your idea <ArrowRight size={17} /></a></div></section>
   </div></V2Frame>;
