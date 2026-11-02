@@ -9,21 +9,27 @@ import { CustomerPersonaPage } from "@/components/v2/customer-persona-page";
 import { CustomerInterviewPage } from "@/components/v2/customer-interview-page";
 import { LeanCanvasPage } from "@/components/v2/lean-canvas-page";
 import { OnePagePlanPage } from "@/components/v2/one-page-plan-page";
+import { SaasPlanPage } from "@/components/v2/saas-plan-page";
+import { CompetitiveAnalysisPage } from "@/components/v2/competitive-analysis-page";
 import "@/components/v2/templates-directory.css";
 
 export const Route = createFileRoute("/templates/$slug")({
   loader: async ({ params }) => {
     const template = founderTemplateBySlug(params.slug);
     const article = TEMPLATE_ARTICLES[params.slug];
-    if (!template || !article) throw notFound();
+    if (!template || (!article && params.slug !== "competitive-analysis")) throw notFound();
     let examples: { list: ListPage; idea: ListPage["ideas"][number] }[] = [];
-    if (["customer-persona", "customer-interview", "lean-canvas", "one-page-business-plan"].includes(params.slug)) {
+    if (["customer-persona", "customer-interview", "lean-canvas", "one-page-business-plan", "saas-business-plan", "competitive-analysis"].includes(params.slug)) {
       const hub = await getListsHub();
       const categories = hub.categories;
-      const picks = [categories[0], categories[Math.floor(categories.length / 2)], categories[categories.length - 1]]
+      const softwareCategory = categories.find(category => /software|saas|tech|digital/i.test(category.name));
+      const picks = params.slug === "saas-business-plan"
+        ? [softwareCategory, categories[0], categories[Math.floor(categories.length / 2)]]
+        : [categories[0], categories[Math.floor(categories.length / 2)], categories[categories.length - 1]];
+      const uniquePicks = picks
         .filter((category): category is (typeof categories)[number] => Boolean(category))
         .filter((category, index, selected) => selected.findIndex(item => item.code === category.code) === index);
-      const pages = await Promise.all(picks.map(category => getListPage({ data: { slug: category.subs[0]!.slug } })));
+      const pages = await Promise.all(uniquePicks.map(category => getListPage({ data: { slug: category.subs[0]!.slug } })));
       examples = pages.filter((page): page is ListPage => Boolean(page)).flatMap(list => {
         const idea = list.ideas.find(item => item.who_pays_you && item.summary) || list.ideas[0];
         return idea ? [{ list, idea }] : [];
@@ -48,6 +54,9 @@ function TemplateArticlePage() {
   if (template.slug === "customer-interview") return <CustomerInterviewPage examples={examples} />;
   if (template.slug === "lean-canvas") return <LeanCanvasPage examples={examples} />;
   if (template.slug === "one-page-business-plan") return <OnePagePlanPage examples={examples} />;
+  if (template.slug === "saas-business-plan") return <SaasPlanPage examples={examples} />;
+  if (template.slug === "competitive-analysis") return <CompetitiveAnalysisPage examples={examples} />;
+  if (!article) return null;
   const related = FOUNDER_TEMPLATES.filter(item => item.slug !== template.slug).slice(0, 3);
   return <V2Frame active="/templates"><main className="tm-page tm-detail tm-article">
     <div className="tm-wrap"><nav className="tm-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={14}/><a href="/templates">Templates</a><ChevronRight size={14}/><span>{template.title}</span></nav></div>

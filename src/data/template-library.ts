@@ -54,6 +54,13 @@ export const FOUNDER_TEMPLATES: FounderTemplate[] = [
     ],
   },
   {
+    slug: "competitive-analysis", title: "Competitive analysis", group: "Position & strategy",
+    short: "Understand the buyer's real alternatives and test one difference you can deliver.",
+    outcome: "A sourced comparison of the options the buyer actually considers.",
+    image: templateImages.planning,
+    sections: [],
+  },
+  {
     slug: "lean-canvas", title: "Lean canvas", group: "Position & strategy",
     short: "Put the whole idea on one page, then mark what you still need to test.",
     outcome: "A compact map of assumptions, buyers, costs and revenue.",
