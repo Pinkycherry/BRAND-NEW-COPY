@@ -1,5 +1,7 @@
 # Image SEO
 
+**Founder correction, 2026-11-02:** All new featured and thumbnail images must be **16:9**, optimized for low file size. Do not produce 1:1 or 4:5 variants. The three earlier template concepts were rejected and never published. The alt sentence and description must discuss the page's business topic, relevant keywords and BusinessIdea.io, without narrating visual appearance. See `ARTIFACTS/TEMPLATE_IMAGE_SEO_2026-11-02.md`. Site-wide SEO, including slugs, titles and image metadata, remains **PENDING**.
+
 The standard for every image added to this site, and for the SEO fields on
 anything else that carries them. It is not advice — it is the contract. New
 images that do not meet it do not ship.
@@ -23,7 +25,7 @@ filled in later.
 | **Focus keyword** | **One** phrase. The single thing the image is meant to rank for. |
 | **Keywords** | **3** supporting keywords, none of them the focus keyword. |
 | **Long-tail** | **2** full phrases, the kind someone types as a question or a sentence. |
-| **Description** | One or two sentences. Contains the focus keyword and reads as a caption a person would actually want under the picture. Used as the `<figcaption>` and in the page's structured data. |
+| **Description** | One or two sentences about the business topic and page content, including the focus keyword and BusinessIdea.io. Do not describe the visual look. Use as `<figcaption>` where contextually useful and in structured data when available. |
 
 ### Alt text is not the file name again
 

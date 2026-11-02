@@ -517,3 +517,6 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-11-02 17:17 IST — Templates live QA
 - Initial hub deployed, but live detail URL rendered the hub body due missing parent outlet. Routing fix is built locally and must be pushed and checked live before the template detail family can be called functional.
 - Shared footer still says “A free library,” contradicting the paid-plan direction; do not describe this inherited global copy as approved. Keep it pending for a separate shared-footer change.
+### 2026-11-02 17:21 IST — Templates deployed, owner review pending
+- `/templates` and two detail URLs were observed live after [626d898](https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/626d8983d638eb074e05a04ae3fba9317b413b1d); Vercel success. Founder acceptance, 390px QA and all draft interactions remain pending. Hub: https://bbinewcopy.vercel.app/templates; examples: https://bbinewcopy.vercel.app/templates/customer-persona and https://bbinewcopy.vercel.app/templates/lean-canvas.
+- The shared footer's “free library” line remains inaccurate and pending. The 16:9 image correction is now in `IMAGE_SEO.md`; site-wide SEO remains PENDING.
