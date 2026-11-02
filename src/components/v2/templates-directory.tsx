@@ -19,14 +19,6 @@ const choices = [
   { need: "I am planning a software business", slug: "saas-business-plan" },
   { need: "I need a fuller plan for a shop or service", slug: "standard-business-plan" },
 ];
-const formats = [
-  { name: "Buyer profile", slug: "customer-persona" }, { name: "Trust and objections", slug: "customer-persona" },
-  { name: "Interview questions", slug: "customer-interview" }, { name: "Conversation notes", slug: "customer-interview" },
-  { name: "Problem and solution", slug: "lean-canvas" }, { name: "Revenue and cost", slug: "lean-canvas" },
-  { name: "One-page plan", slug: "one-page-business-plan" }, { name: "First sales path", slug: "one-page-business-plan" },
-  { name: "Software product plan", slug: "saas-business-plan" }, { name: "SaaS economics", slug: "saas-business-plan" },
-  { name: "Local operations", slug: "standard-business-plan" }, { name: "Funding conversation", slug: "standard-business-plan" },
-];
 
 export function TemplatesDirectory() {
   const root = useRef<HTMLElement>(null);
@@ -50,7 +42,6 @@ export function TemplatesDirectory() {
     <section className="pt-quick pt-reveal" aria-label="Jump to a template"><div className="pt-wrap"><p>Start with your question</p><nav>{FOUNDER_TEMPLATES.map(item => <a href={`/templates/${item.slug}`} key={item.slug}>{item.title}<ArrowRight size={14}/></a>)}</nav></div></section>
     <section className="pt-catalog pt-reveal" id="catalog"><div className="pt-wrap"><div className="pt-heading"><span className="pt-eyebrow">The collection</span><h2>Find the page that helps you move.</h2><p>Each template is a working draft. Your words stay in this browser, and you can download or print them when you are ready.</p></div>{groups.map(group => <div className="pt-group" key={group.title}><div className="pt-group-intro"><span>{group.title}</span><h3>{group.title}</h3><p>{group.description}</p></div><div className="pt-card-grid">{FOUNDER_TEMPLATES.filter(item => item.group === group.title).map(item => <a key={item.slug} className="pt-card" href={`/templates/${item.slug}`}><div className="pt-card-image"><img src={item.image.src} alt={item.image.alt} title={item.image.description} loading="lazy" width={item.image.width} height={item.image.height} /></div><div className="pt-card-copy"><span>{item.group}</span><h4>{item.title}</h4><p>{item.short}</p><strong>Open template <ArrowRight size={16}/></strong></div></a>)}</div></div>)}</div></section>
     <section className="pt-choice pt-reveal"><div className="pt-wrap"><div className="pt-heading"><span className="pt-eyebrow">Choose by decision</span><h2>What is holding you back right now?</h2><p>Pick the question closest to your next conversation. You can change templates as your evidence changes.</p></div><div className="pt-choice-grid">{choices.map(choice => {const template=FOUNDER_TEMPLATES.find(item=>item.slug===choice.slug)!;return <a key={choice.slug} href={`/templates/${choice.slug}`}><span>{choice.need}</span><strong>{template.title}</strong><ArrowRight size={19}/></a>;})}</div></div></section>
-    <section className="pt-formats pt-reveal"><div className="pt-wrap"><div className="pt-heading"><span className="pt-eyebrow">Jump to the work</span><h2>Start from the part you need.</h2></div><div className="pt-formats-grid">{formats.map((item,index)=><a href={`/templates/${item.slug}`} key={`${item.slug}-${index}`}>{item.name}<ArrowRight size={16}/></a>)}</div><p className="pt-format-note">All writing pages can be printed or saved as a PDF from your browser.</p></div></section>
     <SellerFaq faq={faq} title="Common questions" />
     <section className="pt-end pt-reveal"><div className="pt-wrap"><span className="pt-eyebrow">Make the next move</span><h2>The template helps you see the gap. A buyer helps you close it.</h2><p>Take the question you could not answer and ask someone who lives with that problem.</p><a href="/templates/customer-interview" className="pt-primary">Prepare a customer conversation <ArrowRight size={18}/></a></div></section>
   </main></V2Frame>;

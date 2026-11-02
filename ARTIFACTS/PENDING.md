@@ -520,3 +520,6 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-11-02 17:21 IST — Templates deployed, owner review pending
 - `/templates` and two detail URLs were observed live after [626d898](https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/626d8983d638eb074e05a04ae3fba9317b413b1d); Vercel success. Founder acceptance, 390px QA and all draft interactions remain pending. Hub: https://bbinewcopy.vercel.app/templates; examples: https://bbinewcopy.vercel.app/templates/customer-persona and https://bbinewcopy.vercel.app/templates/lean-canvas.
 - The shared footer's “free library” line remains inaccurate and pending. The 16:9 image correction is now in `IMAGE_SEO.md`; site-wide SEO remains PENDING.
+### 2026-11-02 17:43 IST — Founder rejection of template family
+- **REJECTED:** The published `/templates` repeated destination links and mobile decision-card layout; six detail pages used long browser-local writing forms and export/print UI. Do not call the family complete.
+- Remove the repeated-link section and fix mobile layout first. Replace detail pages with useful read-only pages grounded in accessible purchased HTML/PDF structures. Map additional source destinations before creating links. Founder visual approval and mobile QA remain open.
