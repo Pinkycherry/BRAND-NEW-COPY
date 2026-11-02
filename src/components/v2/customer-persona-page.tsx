@@ -25,6 +25,11 @@ function buyerLens(idea: Example["idea"]) {
     alternatives: "Which review, shopkeeper, friend or marketplace listing did you trust most? What made that source credible?",
     payment: "Trace the reader's purchase separately from any affiliate payment. A page visit is not a sale.",
     counterevidence: "If readers use the comparison but never change their buying decision, test whether the content solves a real decision problem.",
+    decisions: [
+      ["Readers repeatedly describe confusion about the same comparison", "Build one comparison around that decision and test whether they use it before buying."],
+      ["Readers trust a shopkeeper or marketplace review more than your page", "Investigate the missing trust proof before producing more articles."],
+      ["A reader clicks but no qualifying sale follows", "Treat traffic and affiliate revenue as different tests; do not call the visit a paying customer."],
+    ],
   };
   if (/sev|namkeen|snack|packaged food/.test(model)) return {
     distinction: "A neighbour who accepts a sample is not necessarily a repeat customer. Watch the next paid choice.",
@@ -32,6 +37,11 @@ function buyerLens(idea: Example["idea"]) {
     alternatives: "Did you choose loose namkeen, a packaged brand or something homemade? What would make you switch?",
     payment: "Ask who chooses the snack, who pays, and whether the same household bought it again without a personal request.",
     counterevidence: "Compliments from relatives are encouraging, but a paid reorder is a clearer sign than a courtesy purchase.",
+    decisions: [
+      ["A household buys a sample and orders again without prompting", "Investigate the flavour, pack size and purchase occasion behind that repeat choice."],
+      ["People compliment a free sample but do not buy", "Do not write a loyal-customer persona; test a small paid offer first."],
+      ["The household buys loose sev elsewhere for a different reason", "Compare freshness, trust and convenience before changing the recipe or price."],
+    ],
   };
   if (/dabba|tiffin|lunch|meal subscription/.test(model)) return {
     distinction: "The person eating lunch, the office arranging meals and the person paying may be different buyers.",
@@ -39,6 +49,11 @@ function buyerLens(idea: Example["idea"]) {
     alternatives: "What made you choose the canteen, delivery app, home food or a nearby stall that day?",
     payment: "If the offer is monthly, ask what would justify advance payment and what would make someone cancel after delivery problems.",
     counterevidence: "A first order shows curiosity; a renewal after ordinary working days says more about fit and reliability.",
+    decisions: [
+      ["Workers already prepay another lunch provider", "Find out what would make them switch and what delivery reliability they expect before promising a monthly plan."],
+      ["Workers only need lunch on occasional office days", "Test a paid single-day order before treating them as monthly subscribers."],
+      ["An office administrator chooses and pays for staff meals", "Interview that administrator separately; the eater's preferences alone will not explain the contract."],
+    ],
   };
   return {
     distinction: "Separate the person using the offer, the person choosing it and the person paying. Ask where those roles overlap.",
@@ -46,6 +61,11 @@ function buyerLens(idea: Example["idea"]) {
     alternatives: "What did you use instead, including doing it yourself or postponing the purchase?",
     payment: "Who approved the cost, how did they pay, and what proof did they need before choosing?",
     counterevidence: "Interest alone is not a buying decision. Compare what people say with their last purchase or workaround.",
+    decisions: [
+      ["A person recently paid for the current alternative", "Find the switching trigger and the proof they would need from a new provider."],
+      ["A person only says they might buy someday", "Keep demand unverified and seek someone with a recent buying occasion."],
+      ["A different person approves the purchase", "Research that decision maker before changing price or messaging."],
+    ],
   };
 }
 
@@ -54,7 +74,7 @@ const interviewQuestions = [
   "What did you try first? What else did you consider, including doing nothing?",
   "Who suggested the option you chose? Who made the decision and who paid?",
   "What were you worried might go wrong? What proof or recommendation helped?",
-  "What did it cost you in money, travel, waiting or effort? Ask for the actual last occasion, not an ideal budget.",
+  "On that occasion, what did it cost you in money, travel, waiting or effort?",
   "What happened after you used it? Did you repeat, switch or stop? Why?",
 ];
 
@@ -81,7 +101,7 @@ const faq = [
   { q: "How is it different from an ideal customer profile?", a: "An ideal customer profile describes an organisation or customer segment that fits your offer. A persona focuses on the human making or influencing the decision. For a local business, the payer and the user may be different people." },
   { q: "How is it different from a job to be done?", a: "The job describes the progress someone seeks in a situation. The persona adds who faces that situation, how they decide, where they look and what they need to trust you." },
   { q: "How many personas should I make?", a: "Start with the person you can reach and serve first. Separate a second profile only when the trigger, payer or decision process differs. A parent buying tuition and a school buying a batch may need different profiles even if the student uses both." },
-  { q: "Do I need a fixed number of interviews?", a: "No fixed interview count makes a profile true. Speak with people who recently faced the problem, compare their accounts, and keep testing when decisions or objections still differ." },
+  { q: "Do I need a fixed number of interviews?", a: "No fixed count makes a profile true. Keep talking while new conversations change who pays, the alternative used or the main objection. When those decisions stop changing, test a real offer and watch paid behaviour instead of collecting more agreeable opinions." },
   { q: "Can AI write my persona?", a: "It can help organise questions or summarise notes you supply. It cannot verify that a specific person in your market has a problem or will pay for your offer." },
   { q: "When should I update it?", a: "Update it when a buyer's actual decision contradicts it, when you change the offer or channel, or when a different person starts paying." },
   { q: "What if I have no customers yet?", a: "Start from a published idea, but label its proposed buyer as an assumption. Speak to people who recently used a competing option or handled the problem themselves. Ask about what they did, not what they promise to do for your future business." },
@@ -110,7 +130,7 @@ export function CustomerPersonaPage({ examples }: { examples: Example[] }) {
     {/* 7 · The source's three image examples become three worked decision lenses. */}
     <section id="examples" className="cp-section cp-examples"><div className="cp-wrap"><div className="cp-intro"><p className="cp-kicker">Worked Indian buyer examples</p><h2>Investigate the last choice, not an invented character.</h2><p>Each example starts with a real published BBI idea. The questions and warning are a research plan. They are not quotes from interviewed customers.</p></div><div className="cp-example-grid">{examples.map(({list,idea},i)=>{const lens=buyerLens(idea);return <article key={idea.slug}><a href={ideaUrl(idea.slug)} className="cp-example-image"><img src={images[i]?.src || templateImages.interview.src} alt={`${idea.title} buyer research in India, BusinessIdea.io`} width={1600} height={900} loading="lazy"/></a><div className="cp-example-copy"><span>{list.categoryName}</span><h3><a href={ideaUrl(idea.slug)}>{idea.title}</a></h3><dl><dt>Find the buying moment</dt><dd>{lens.occasion}</dd><dt>Compare the alternative</dt><dd>{lens.alternatives}</dd><dt>Follow the money</dt><dd>{lens.payment}</dd><dt>Do not mistake this for proof</dt><dd>{lens.counterevidence}</dd></dl><a href={ideaUrl(idea.slug)}>Read the source idea <ArrowRight size={16}/></a></div></article>})}</div></div></section>
     {/* 8 · Five-step field workflow with a neutral script and decision memo. */}
-    <section id="research" className="cp-section cp-research"><div className="cp-wrap cp-split"><div className="cp-sticky"><p className="cp-kicker">Research playbook</p><h2>Leave the conversation with a decision, not a fictional biography.</h2><p>Use a recent buying event. Ask the same neutral core questions across interviews, then compare what people actually did.</p><a className="cp-inline" href="/templates/customer-interview">Read the full interview guide <ArrowRight size={17}/></a></div><div><ol className="cp-research-steps">{research.map((s,i)=><li key={s.title}><span>0{i+1}</span><div><h3>{s.title}</h3><p>{s.body}</p>{i===2 && <div className="cp-script"><h4>Questions you can ask, in this order</h4><ol>{interviewQuestions.map(q=><li key={q}>{q}</li>)}</ol><p>Follow up with “What happened next?” Avoid explaining your proposed solution until the story is complete.</p></div>}{i===3 && <div className="cp-script"><h4>Keep these apart</h4><p><b>Observed:</b> the last action or transaction. <b>Quoted:</b> the buyer's actual words. <b>Assumed:</b> your explanation of why it happened. A compliment belongs in the quote column, not the sale column.</p></div>}{i===4 && <a href="/templates/lean-canvas">Carry the revised buyer into a lean canvas <ArrowRight size={16}/></a>}</div></li>)}</ol>{chosen && chosenLens && <aside className="cp-decision-example"><p className="cp-kicker">Worked decision memo · {chosen.idea.title}</p><h3>What you know, what you still need, what you would change</h3><p><b>Source hypothesis:</b> {brief(chosen.idea.who_pays_you || chosen.idea.summary,230)}</p><p><b>Missing evidence:</b> {chosenLens.occasion} {chosenLens.alternatives}</p><p><b>Decision rule:</b> {chosenLens.counterevidence} If the answers point to another buyer, payment path or trust barrier, revise that part of the offer before writing a polished persona.</p><a href={ideaUrl(chosen.idea.slug)}>Open the underlying idea <ArrowRight size={16}/></a></aside>}</div></div></section>
+    <section id="research" className="cp-section cp-research"><div className="cp-wrap cp-split"><div className="cp-sticky"><p className="cp-kicker">Research playbook</p><h2>Leave the conversation with a decision, not a fictional biography.</h2><p>Use a recent buying event. Ask the same neutral core questions across interviews, then compare what people actually did.</p><a className="cp-inline" href="/templates/customer-interview">Read the full interview guide <ArrowRight size={17}/></a></div><div><ol className="cp-research-steps">{research.map((s,i)=><li key={s.title}><span>0{i+1}</span><div><h3>{s.title}</h3><p>{s.body}</p>{i===2 && <div className="cp-script"><h4>Questions you can ask, in this order</h4><ol>{interviewQuestions.map(q=><li key={q}>{q}</li>)}</ol><p>Follow up with “What happened next?” Avoid explaining your proposed solution until the story is complete.</p></div>}{i===3 && <div className="cp-script"><h4>Keep these apart</h4><p><b>Observed:</b> the last action or transaction. <b>Quoted:</b> the buyer's actual words. <b>Assumed:</b> your explanation of why it happened. A compliment belongs in the quote column, not the sale column.</p></div>}{i===4 && <a href="/templates/lean-canvas">Carry the revised buyer into a lean canvas <ArrowRight size={16}/></a>}</div></li>)}</ol>{chosen && chosenLens && <aside className="cp-decision-example"><p className="cp-kicker">Worked decision memo · {chosen.idea.title}</p><h3>What you know, what you still need, what you would change</h3><p><b>Source hypothesis:</b> {brief(chosen.idea.who_pays_you || chosen.idea.summary,230)}</p><p><b>Missing evidence:</b> {chosenLens.occasion} {chosenLens.alternatives}</p><p><b>Decision rule:</b> {chosenLens.counterevidence} The next action depends on what a buyer actually did.</p><ul className="cp-decision-branches">{chosenLens.decisions.map(([signal,action])=><li key={signal}><span>If the interview or purchase shows…</span><strong>{signal}</strong><span>Then test…</span><p>{action}</p></li>)}</ul><a href={ideaUrl(chosen.idea.slug)}>Open the underlying idea <ArrowRight size={16}/></a></aside>}</div></div></section>
     {/* 9 · Do / avoid in source order. */}
     <section className="cp-section cp-practice"><div className="cp-wrap"><div className="cp-intro"><p className="cp-kicker">Best practices</p><h2>Make the profile useful. Keep the uncertainty visible.</h2></div><div className="cp-practice-grid"><div><h3><Check size={21}/> Do this</h3><ul><li>Choose a real buying occasion, not a demographic stereotype.</li><li>Separate the payer, user and influencer when they differ.</li><li>Record the exact words and recent actions of buyers.</li><li>Compare people who bought with people who walked away.</li><li>Update your assumptions after each contradictory conversation.</li></ul></div><div><h3><X size={21}/> Avoid this</h3><ul><li>Invent a name, salary or quote and call it customer research.</li><li>Ask whether someone likes your imagined product.</li><li>Assume an online audience buys through one channel.</li><li>Turn a published idea description into a “verified” buyer.</li><li>Collect details that never change a product or channel decision.</li></ul></div></div></div></section>
     {/* 10 · Four operator tips. */}
