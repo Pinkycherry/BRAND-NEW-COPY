@@ -8,6 +8,7 @@ import { getListsHub, getListPage, type ListPage } from "@/lib/lists.functions";
 import { CustomerPersonaPage } from "@/components/v2/customer-persona-page";
 import { CustomerInterviewPage } from "@/components/v2/customer-interview-page";
 import { LeanCanvasPage } from "@/components/v2/lean-canvas-page";
+import { OnePagePlanPage } from "@/components/v2/one-page-plan-page";
 import "@/components/v2/templates-directory.css";
 
 export const Route = createFileRoute("/templates/$slug")({
@@ -16,7 +17,7 @@ export const Route = createFileRoute("/templates/$slug")({
     const article = TEMPLATE_ARTICLES[params.slug];
     if (!template || !article) throw notFound();
     let examples: { list: ListPage; idea: ListPage["ideas"][number] }[] = [];
-    if (["customer-persona", "customer-interview", "lean-canvas"].includes(params.slug)) {
+    if (["customer-persona", "customer-interview", "lean-canvas", "one-page-business-plan"].includes(params.slug)) {
       const hub = await getListsHub();
       const categories = hub.categories;
       const picks = [categories[0], categories[Math.floor(categories.length / 2)], categories[categories.length - 1]]
@@ -46,6 +47,7 @@ function TemplateArticlePage() {
   if (template.slug === "customer-persona") return <CustomerPersonaPage examples={examples} />;
   if (template.slug === "customer-interview") return <CustomerInterviewPage examples={examples} />;
   if (template.slug === "lean-canvas") return <LeanCanvasPage examples={examples} />;
+  if (template.slug === "one-page-business-plan") return <OnePagePlanPage examples={examples} />;
   const related = FOUNDER_TEMPLATES.filter(item => item.slug !== template.slug).slice(0, 3);
   return <V2Frame active="/templates"><main className="tm-page tm-detail tm-article">
     <div className="tm-wrap"><nav className="tm-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={14}/><a href="/templates">Templates</a><ChevronRight size={14}/><span>{template.title}</span></nav></div>
