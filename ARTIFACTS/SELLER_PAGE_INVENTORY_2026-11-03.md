@@ -156,3 +156,22 @@ The listed detail files share family templates; they are **not** 4,804 distinct 
 ## Page-by-page completion protocol
 
 For each row, compare source and current page section by section, write a source/field/link map and any missing data to `WORK_LOG.md`; make only that page's isolated change; build without running a local server; commit/push to `main`; share the exact commit and live URL immediately; check deployment, render, padding, responsive width, interaction and five real links; record the live outcome and next exact row. Reopen a row if the owner rejects it. Any header/footer edit gets the menu-panel render command and other-page regression review. No invented content, fake evidence or source-domain internal links.
+
+## 2026-11-03 01:35 IST — Founder excludes six pages from the next sequence
+
+The founder explicitly ruled out **/topics, /frameworks-comparison, /market-research (research one), /business-idea-research-india (research two), /open-source and /faq** from the next long-page run. This overrides rows 5–10 above; the historical inventory remains for reference. Do not start these six as the next task.
+
+| New order | Long BBI page/family | Purchased source | Distinct work before calling it done |
+|---:|---|---|---|
+| 1 | `/templates/standard-business-plan` | `standard-business-plan-2026.pdf` plus `businessidea.io/business-plan.html` | Nine source chapters with full Indian operations/cash detail, lender caveats, real links, padded mobile reading. |
+| 2 | `/lists` | `Businessidea.io Lists structure/index.html` and `businessidea.io/lists.html` | Full dynamic published category/subcategory coverage, engaging seller composition, separate image/title guide and article rails, FAQ last. |
+| 3 | `/lists/summer-drink-cart-business-ideas`, then other `/lists/:slug` | `businessidea.io/lists/*.html` and live seller list detail | Fix the startup-cost button and comparison table padding, preserve full long-scroll sections, real list ideas and links. |
+| 4 | `/category/:categorySlug/:subcategorySlug`, then `/category/:categorySlug` | `Businessidea.io sub category-pages-business-ideas/index.html` and seller lists framework | One reusable data-bound long page per family; avoid per-slug hardcoding or empty claims. |
+| 5 | `/calculator` | `businessidea.io/calculators.html` | Make the existing calculator library visible and usable, occupy the available canvas, interleave original guide/article images. |
+| 6 | `/calculator/:slug` | `businessidea.io/calculators/*.html` plus BBI calculator source | One working formula and source-composition check per calculator. Do not claim all 60+ are ported until verified. |
+| 7 | `/tools` | `Businessidea.io tools/index.html` and `businessidea.io/tools.html` | Complete and check the purchased directory, original external links/logos, and contextual BBI sections; existing route needs audit. |
+| 8 | `/browse` | `businessidea.io/business-ideas.html` | Long taxonomy entry with published data and clear category→subcategory paths. |
+| 9 | `/startup-guides`, then one `/startup-guides/:slug` at a time | `businessidea.io/guides.html` and `guides/*.html` | Preserve original BBI guide body/featured image and map relevant seller long-scroll sections. |
+| 10 | `/blog`, then one `/blog/:slug` at a time | `businessidea.io/blog.html` and `blog/*.html` | Keep BBI authored posts/images; source composition and contextual links, no seller articles. |
+
+**Holds remain:** owner-locked `/idea/:slug`; home; case studies; company/policy; reserved `/validate`. This is a queue, not acceptance of the existing routes. Each route gets its own comparison, build, main push, immediate live/commit links, live QA and log entry. The preceding three-route combined commit was an explicit one-time founder override.
