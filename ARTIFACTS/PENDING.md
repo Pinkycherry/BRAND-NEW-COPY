@@ -533,3 +533,4 @@ The five specific-field models are the four original calculators plus CAC. The 5
 
 ### 2026-11-02 14:15 UTC — Customer persona visual review
 - Persona-specific 14-section purchased composition is implemented locally; publish and inspect live, including actual idea data, three examples, tab interaction, 16:9 images, internal routes and phone overflow. Founder acceptance remains PENDING. Do not call the other five template routes source-complete or edit the owner-locked idea family.
+- Live persona verified at desktop after 91b57dd: fourteen sections, three actual published ideas, working tabs, four 16:9 assets and no horizontal overflow. A blank frame on quick scroll triggered a persona-specific animation correction; push and recheck. Phone visual QA and founder acceptance remain pending. Shared footer's inaccurate “free library” sentence remains pending separately.
