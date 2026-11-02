@@ -528,3 +528,5 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - **Not complete:** full 14/16-section seller HTML composition for persona/interview, seven-section hub restoration with a genuinely distinct destination, missing source destinations for competitive analysis/validation/pitch deck, mobile widths, founder approval. No fake button destinations may return.
 ### 2026-11-02 18:10 IST — Moving template rail
 - Founder requested motion for “Start with your question” on `/templates`. Carousel code is built but must be pushed and visually checked live. The six read-only detail pages deployed in 3448d14; three routes were spot-checked, mobile widths and founder acceptance remain open.
+### 2026-11-02 18:15 IST — Carousel deployed
+- `/templates` moving question rail reached Vercel success at 18c0753; desktop visual movement observed. Mobile swipe/motion and 390px layout remain pending owner check. The removed twelve-label section must not return until each label has its own real destination.
