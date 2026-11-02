@@ -523,3 +523,6 @@ The five specific-field models are the four original calculators plus CAC. The 5
 ### 2026-11-02 17:43 IST — Founder rejection of template family
 - **REJECTED:** The published `/templates` repeated destination links and mobile decision-card layout; six detail pages used long browser-local writing forms and export/print UI. Do not call the family complete.
 - Remove the repeated-link section and fix mobile layout first. Replace detail pages with useful read-only pages grounded in accessible purchased HTML/PDF structures. Map additional source destinations before creating links. Founder visual approval and mobile QA remain open.
+### 2026-11-02 18:00 IST — Template detail rebuild
+- Six read-only detail pages are built locally and must be pushed/live-checked. All former long forms, local-save, download and print actions are removed from the route. The companion source map `ARTIFACTS/TEMPLATE_SOURCE_MAP_2026-11-02.md` records exact source and gaps.
+- **Not complete:** full 14/16-section seller HTML composition for persona/interview, seven-section hub restoration with a genuinely distinct destination, missing source destinations for competitive analysis/validation/pitch deck, mobile widths, founder approval. No fake button destinations may return.

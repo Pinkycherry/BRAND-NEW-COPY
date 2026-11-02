@@ -1,76 +1,46 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
-import { ArrowDownToLine, ArrowRight, ChevronRight, Printer, Trash2 } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import { V2Frame } from "@/components/v2/frame";
 import { SellerFaq } from "@/components/v2/faq";
-import { founderTemplateBySlug, FOUNDER_TEMPLATES, type FounderTemplate } from "@/data/template-library";
+import { founderTemplateBySlug, FOUNDER_TEMPLATES } from "@/data/template-library";
+import { TEMPLATE_ARTICLES } from "@/data/template-articles";
 import "@/components/v2/templates-directory.css";
 
 export const Route = createFileRoute("/templates/$slug")({
   loader: ({ params }) => {
     const template = founderTemplateBySlug(params.slug);
-    if (!template) throw notFound();
-    return template;
+    const article = TEMPLATE_ARTICLES[params.slug];
+    if (!template || !article) throw notFound();
+    return { template, article };
   },
   head: ({ loaderData }) => ({ meta: [
-    { title: `${loaderData?.title ?? "Template"} for Indian Founders | BusinessIdea.io` },
-    { name: "description", content: loaderData?.short ?? "Practical founder templates for India." },
-    { property: "og:image", content: loaderData?.image.src ?? "/images/templates/indian-founder-business-planning-template-lean-canvas-businessidea.webp" },
-    { property: "og:image:alt", content: loaderData?.image.alt ?? "Indian business planning templates help founders examine buyers and costs." },
+    { title: `${loaderData?.template.title ?? "Template"} Guide for Indian Founders | BusinessIdea.io` },
+    { name: "description", content: loaderData?.template.short ?? "Practical founder template guide for India." },
+    { property: "og:image", content: loaderData?.template.image.src ?? "/images/templates/indian-founder-business-planning-template-lean-canvas-businessidea.webp" },
+    { property: "og:image:alt", content: loaderData?.template.image.alt ?? "Indian business planning templates help founders examine buyers and costs." },
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:image", content: loaderData?.image.src ?? "/images/templates/indian-founder-business-planning-template-lean-canvas-businessidea.webp" },
+    { name: "twitter:image", content: loaderData?.template.image.src ?? "/images/templates/indian-founder-business-planning-template-lean-canvas-businessidea.webp" },
   ] }),
-  component: TemplateDetailRoute,
+  component: TemplateArticlePage,
 });
 
-function TemplateDetailRoute() {
-  const template = Route.useLoaderData();
-  return <TemplateDetail key={template.slug} template={template} />;
-}
-
-function TemplateDetail({ template }: { template: FounderTemplate }) {
-  const [answers, setAnswers] = useState<Record<string, string>>({});
-  const [ready, setReady] = useState(false);
-  const storageKey = `bbi-template-draft:${template.slug}`;
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem(storageKey);
-      setAnswers(stored ? JSON.parse(stored) as Record<string, string> : {});
-    } catch { setAnswers({}); }
-    setReady(true);
-  }, [storageKey]);
-  useEffect(() => {
-    if (ready) try { localStorage.setItem(storageKey, JSON.stringify(answers)); } catch { /* Browser storage may be unavailable. Export remains usable. */ }
-  }, [answers, ready, storageKey]);
-  const setAnswer = (key: string, value: string) => setAnswers(current => ({ ...current, [key]: value }));
-  const exportDraft = () => {
-    const lines = [`# ${template.title}`, "", ...template.sections.flatMap(section => [
-      `## ${section.title}`, "", ...section.fields.flatMap(field => [
-        `### ${field.label}`, answers[field.label]?.trim() || "(Not filled in)", "",
-      ]),
-    ])];
-    const url = URL.createObjectURL(new Blob([lines.join("\n")], { type: "text/markdown;charset=utf-8" }));
-    const link = document.createElement("a"); link.href = url; link.download = `businessidea-${template.slug}.md`;
-    link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
-  };
-  const clear = () => { if (window.confirm("Clear this template draft from this browser?")) { setAnswers({}); localStorage.removeItem(storageKey); } };
+function TemplateArticlePage() {
+  const { template, article } = Route.useLoaderData();
   const related = FOUNDER_TEMPLATES.filter(item => item.slug !== template.slug).slice(0, 3);
-  const faq = [
-    { q: "Where is my draft saved?", a: "This draft stays in this browser on this device. Download a copy if you want to keep it when you change browsers or devices." },
-    { q: "Can I take this to a mentor or lender?", a: "Yes. Download your written answers or print the page. Separate facts you observed from figures you are still estimating." },
-    { q: "Will BusinessIdea.io fill in the answers for me?", a: "No. The prompts help you organise your own business knowledge and buyer evidence; a blank field is an honest unknown." },
-  ];
-  return <V2Frame active="/templates"><main className="tm-page tm-detail">
+  return <V2Frame active="/templates"><main className="tm-page tm-detail tm-article">
     <div className="tm-wrap"><nav className="tm-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={14}/><a href="/templates">Templates</a><ChevronRight size={14}/><span>{template.title}</span></nav></div>
-    <section className="tm-wrap tm-detail-hero"><div><p className="tm-eyebrow">{template.group}</p><h1>{template.title}</h1><p className="tm-lead">{template.short} {template.outcome}</p><div className="tm-actions"><a className="tm-button tm-button-dark" href="#template-builder">Start writing <ArrowRight size={17}/></a><a className="tm-button tm-button-light" href="/lists">Browse business ideas <ArrowRight size={17}/></a></div></div><img src={template.image.src} alt={template.image.alt} title={template.image.description} width={template.image.width} height={template.image.height} loading="eager" fetchPriority="high" /></section>
-    <section className="tm-detail-intro"><div className="tm-wrap"><p className="tm-eyebrow">Make the page your own</p><h2>Start with what you know. Leave the rest as a question.</h2><p>The strongest plan is not the fullest one. A clear unknown tells you whom to speak to next. Your answers save in this browser as you write, and you can download or print them at any time.</p></div></section>
-    <section id="template-builder" className="tm-wrap tm-builder"><div className="tm-section-title"><p className="tm-eyebrow">Working template</p><h2>Your draft</h2><p>Write in your own words. If a figure is an estimate, label it before sharing.</p></div>
-      <div className="tm-builder-actions"><button type="button" onClick={exportDraft}><ArrowDownToLine size={17}/> Download my draft</button><button type="button" onClick={() => window.print()}><Printer size={17}/> Print or save PDF</button><button type="button" onClick={clear}><Trash2 size={17}/> Clear draft</button></div>
-      {template.sections.map((section, si) => <div className="tm-builder-section" key={section.title}><div className="tm-builder-section-copy"><span>{String(si + 1).padStart(2, "0")}</span><h3>{section.title}</h3><p>{section.intro}</p></div><div className="tm-builder-fields">{section.fields.map(field => <label key={field.label}><strong>{field.label}</strong><small>{field.prompt}</small><textarea rows={4} value={answers[field.label] ?? ""} onChange={event => setAnswer(field.label, event.target.value)} placeholder="Write your answer here" /></label>)}</div></div>)}
-      <div className="tm-builder-actions tm-builder-actions-bottom"><button type="button" onClick={exportDraft}><ArrowDownToLine size={17}/> Download my draft</button><button type="button" onClick={() => window.print()}><Printer size={17}/> Print or save PDF</button></div>
-    </section>
-    <section className="tm-detail-next"><div className="tm-wrap"><p className="tm-eyebrow">Keep moving</p><h2>Choose the next question</h2><div className="tm-detail-related">{related.map(item => <a key={item.slug} href={`/templates/${item.slug}`}><span>{item.group}</span><strong>{item.title}</strong><small>{item.short}</small><ArrowRight size={19}/></a>)}</div></div></section>
-    <SellerFaq faq={faq} title="Using this template" />
-    <section className="tm-end"><div className="tm-wrap"><p className="tm-eyebrow">From plan to evidence</p><h2>Take one assumption into the real world.</h2><p>Read a published business idea, then speak to a buyer before you treat your draft as proof.</p><a className="tm-button tm-button-dark" href="/lists">Explore idea lists <ArrowRight size={17}/></a></div></section>
+    <section className="tm-wrap tm-detail-hero"><div><p className="tm-eyebrow">{template.group}</p><h1>{template.title}</h1><p className="tm-lead">{template.short} {template.outcome}</p><div className="tm-actions"><a className="tm-button tm-button-dark" href="#structure">Explore the template <ArrowRight size={17}/></a><a className="tm-button tm-button-light" href="/lists">Browse business ideas <ArrowRight size={17}/></a></div></div><img src={template.image.src} alt={template.image.alt} title={template.image.description} width={template.image.width} height={template.image.height} loading="eager" fetchPriority="high" /></section>
+    <nav className="tm-article-nav" aria-label="On this page"><div className="tm-wrap">{[["overview","What it means"],["structure","Template sections"],["example","Indian example"],["method","How to check it"],["faq","Questions"]].map(([id,label])=><a href={`#${id}`} key={id}>{label}</a>)}</div></nav>
+    <section id="overview" className="tm-detail-intro"><div className="tm-wrap tm-readable"><p className="tm-eyebrow">Understand the framework</p><h2>{template.title}: what it is for</h2><p>{article.definition}</p><p>{article.use}</p></div></section>
+    <section id="structure" className="tm-article-structure"><div className="tm-wrap"><div className="tm-section-title"><p className="tm-eyebrow">Inside the template</p><h2>Follow the questions that matter.</h2><p>Each part comes from the framework's structure, adapted for a founder working in India. Check the question against an actual buyer or cost.</p></div>
+      {article.chapters.map((chapter,index)=><article className="tm-article-chapter" key={chapter.title} id={`part-${index+1}`}><div className="tm-chapter-index">{String(index+1).padStart(2,"0")}</div><div><h3>{chapter.title}</h3><p>{chapter.explanation}</p><p className="tm-chapter-question"><strong>Ask yourself:</strong> {chapter.question}</p></div></article>)}
+    </div></section>
+    <section id="example" className="tm-article-example"><div className="tm-wrap tm-readable"><p className="tm-eyebrow">Put it in context</p><h2>What this looks like in a business decision</h2><p>{article.example}</p><a href="/lists" className="tm-text-link">Explore published business idea lists <ArrowRight size={18}/></a></div></section>
+    <section id="method" className="tm-article-method"><div className="tm-wrap"><div className="tm-section-title"><p className="tm-eyebrow">Research playbook</p><h2>Move from a page to evidence.</h2></div><ol>{article.method.map(step=><li key={step}>{step}</li>)}</ol></div></section>
+    <section className="tm-article-practice"><div className="tm-wrap"><p className="tm-eyebrow">Best practices</p><h2>Keep the useful part. Avoid the false confidence.</h2><div className="tm-practice-columns"><div><h3>Do this</h3><ul>{article.do.map(item=><li key={item}>{item}</li>)}</ul></div><div><h3>Avoid this</h3><ul>{article.avoid.map(item=><li key={item}>{item}</li>)}</ul></div></div></div></section>
+    <section id="faq" className="tm-article-faq"><SellerFaq faq={article.faq} title="Common questions" /></section>
+    <section className="tm-detail-next"><div className="tm-wrap"><p className="tm-eyebrow">Related templates</p><h2>Choose the next framework</h2><div className="tm-detail-related">{related.map(item=><a key={item.slug} href={`/templates/${item.slug}`}><span>{item.group}</span><strong>{item.title}</strong><small>{item.short}</small><ArrowRight size={19}/></a>)}</div></div></section>
+    <section className="tm-article-resources"><div className="tm-wrap"><p className="tm-eyebrow">Related resources</p><h2>Keep the next decision close to the facts.</h2><div><a href="/lists">Business idea lists <ArrowRight size={18}/></a><a href="/calculator">Business calculators <ArrowRight size={18}/></a><a href="/startup-guides">Startup guides <ArrowRight size={18}/></a></div></div></section>
+    <section className="tm-end"><div className="tm-wrap"><p className="tm-eyebrow">From framework to fieldwork</p><h2>A clearer question is your next move.</h2><p>Take the uncertainty you found here into a buyer conversation or a small, real-world test.</p><a className="tm-button tm-button-dark" href={template.slug === "customer-interview" ? "/lists" : "/templates/customer-interview"}>{template.slug === "customer-interview" ? "Explore business idea lists" : "Read the customer interview guide"} <ArrowRight size={17}/></a></div></section>
   </main></V2Frame>;
 }
