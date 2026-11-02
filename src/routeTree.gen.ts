@@ -84,6 +84,7 @@ import { Route as ListsSlugRouteImport } from './routes/lists.$slug'
 import { Route as ListsCoachingBusinessIdeasRouteImport } from './routes/lists.coaching-business-ideas'
 import { Route as StartupGuidesIndexRouteImport } from './routes/startup-guides.index'
 import { Route as StartupGuidesSlugRouteImport } from './routes/startup-guides.$slug'
+import { Route as TemplatesSlugRouteImport } from './routes/templates.$slug'
 import { Route as ToolsAlternateRouteImport } from './routes/tools.alternate'
 import { Route as UsefulToolsIndexRouteImport } from './routes/useful-tools.index'
 import { Route as CategoryCategorySlugIndexRouteImport } from './routes/category.$categorySlug.index'
@@ -471,6 +472,11 @@ const StartupGuidesSlugRoute = StartupGuidesSlugRouteImport.update({
   path: '/startup-guides/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TemplatesSlugRoute = TemplatesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => TemplatesRoute,
+} as any)
 const ToolsAlternateRoute = ToolsAlternateRouteImport.update({
   id: '/alternate',
   path: '/alternate',
@@ -547,7 +553,7 @@ export interface FileRoutesByFullPath {
   '/startup-idea-validation': typeof StartupIdeaValidationRoute
   '/startup-launch-plan-india': typeof StartupLaunchPlanIndiaRoute
   '/startup-terms-india': typeof StartupTermsIndiaRoute
-  '/templates': typeof TemplatesRoute
+  '/templates': typeof TemplatesRouteWithChildren
   '/terms': typeof TermsRoute
   '/tools': typeof ToolsRouteWithChildren
   '/topics': typeof TopicsRoute
@@ -562,6 +568,7 @@ export interface FileRoutesByFullPath {
   '/lists/$slug': typeof ListsSlugRoute
   '/lists/coaching-business-ideas': typeof ListsCoachingBusinessIdeasRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
+  '/templates/$slug': typeof TemplatesSlugRoute
   '/tools/alternate': typeof ToolsAlternateRoute
   '/blog/': typeof BlogIndexRoute
   '/blueprints/': typeof BlueprintsIndexRoute
@@ -628,7 +635,7 @@ export interface FileRoutesByTo {
   '/startup-idea-validation': typeof StartupIdeaValidationRoute
   '/startup-launch-plan-india': typeof StartupLaunchPlanIndiaRoute
   '/startup-terms-india': typeof StartupTermsIndiaRoute
-  '/templates': typeof TemplatesRoute
+  '/templates': typeof TemplatesRouteWithChildren
   '/terms': typeof TermsRoute
   '/tools': typeof ToolsRouteWithChildren
   '/topics': typeof TopicsRoute
@@ -643,6 +650,7 @@ export interface FileRoutesByTo {
   '/lists/$slug': typeof ListsSlugRoute
   '/lists/coaching-business-ideas': typeof ListsCoachingBusinessIdeasRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
+  '/templates/$slug': typeof TemplatesSlugRoute
   '/tools/alternate': typeof ToolsAlternateRoute
   '/blog': typeof BlogIndexRoute
   '/blueprints': typeof BlueprintsIndexRoute
@@ -710,7 +718,7 @@ export interface FileRoutesById {
   '/startup-idea-validation': typeof StartupIdeaValidationRoute
   '/startup-launch-plan-india': typeof StartupLaunchPlanIndiaRoute
   '/startup-terms-india': typeof StartupTermsIndiaRoute
-  '/templates': typeof TemplatesRoute
+  '/templates': typeof TemplatesRouteWithChildren
   '/terms': typeof TermsRoute
   '/tools': typeof ToolsRouteWithChildren
   '/topics': typeof TopicsRoute
@@ -725,6 +733,7 @@ export interface FileRoutesById {
   '/lists/$slug': typeof ListsSlugRoute
   '/lists/coaching-business-ideas': typeof ListsCoachingBusinessIdeasRoute
   '/startup-guides/$slug': typeof StartupGuidesSlugRoute
+  '/templates/$slug': typeof TemplatesSlugRoute
   '/tools/alternate': typeof ToolsAlternateRoute
   '/blog/': typeof BlogIndexRoute
   '/blueprints/': typeof BlueprintsIndexRoute
@@ -808,6 +817,7 @@ export interface FileRouteTypes {
     | '/lists/$slug'
     | '/lists/coaching-business-ideas'
     | '/startup-guides/$slug'
+    | '/templates/$slug'
     | '/tools/alternate'
     | '/blog/'
     | '/blueprints/'
@@ -889,6 +899,7 @@ export interface FileRouteTypes {
     | '/lists/$slug'
     | '/lists/coaching-business-ideas'
     | '/startup-guides/$slug'
+    | '/templates/$slug'
     | '/tools/alternate'
     | '/blog'
     | '/blueprints'
@@ -970,6 +981,7 @@ export interface FileRouteTypes {
     | '/lists/$slug'
     | '/lists/coaching-business-ideas'
     | '/startup-guides/$slug'
+    | '/templates/$slug'
     | '/tools/alternate'
     | '/blog/'
     | '/blueprints/'
@@ -1037,7 +1049,7 @@ export interface RootRouteChildren {
   StartupIdeaValidationRoute: typeof StartupIdeaValidationRoute
   StartupLaunchPlanIndiaRoute: typeof StartupLaunchPlanIndiaRoute
   StartupTermsIndiaRoute: typeof StartupTermsIndiaRoute
-  TemplatesRoute: typeof TemplatesRoute
+  TemplatesRoute: typeof TemplatesRouteWithChildren
   TermsRoute: typeof TermsRoute
   ToolsRoute: typeof ToolsRouteWithChildren
   TopicsRoute: typeof TopicsRoute
@@ -1591,6 +1603,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StartupGuidesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/templates/$slug': {
+      id: '/templates/$slug'
+      path: '/$slug'
+      fullPath: '/templates/$slug'
+      preLoaderRoute: typeof TemplatesSlugRouteImport
+      parentRoute: typeof TemplatesRoute
+    }
     '/tools/alternate': {
       id: '/tools/alternate'
       path: '/alternate'
@@ -1632,6 +1651,18 @@ const FailedStartupsRouteChildren: FailedStartupsRouteChildren = {
 
 const FailedStartupsRouteWithChildren = FailedStartupsRoute._addFileChildren(
   FailedStartupsRouteChildren,
+)
+
+interface TemplatesRouteChildren {
+  TemplatesSlugRoute: typeof TemplatesSlugRoute
+}
+
+const TemplatesRouteChildren: TemplatesRouteChildren = {
+  TemplatesSlugRoute: TemplatesSlugRoute,
+}
+
+const TemplatesRouteWithChildren = TemplatesRoute._addFileChildren(
+  TemplatesRouteChildren,
 )
 
 interface ToolsRouteChildren {
@@ -1697,7 +1728,7 @@ const rootRouteChildren: RootRouteChildren = {
   StartupIdeaValidationRoute: StartupIdeaValidationRoute,
   StartupLaunchPlanIndiaRoute: StartupLaunchPlanIndiaRoute,
   StartupTermsIndiaRoute: StartupTermsIndiaRoute,
-  TemplatesRoute: TemplatesRoute,
+  TemplatesRoute: TemplatesRouteWithChildren,
   TermsRoute: TermsRoute,
   ToolsRoute: ToolsRouteWithChildren,
   TopicsRoute: TopicsRoute,

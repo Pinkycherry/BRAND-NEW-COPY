@@ -509,3 +509,8 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - Calculator edit is isolated to its component and CSS plus one image, with no arithmetic, data loader, header, homepage or idea template changes. Check build and live desktop/phone scroll, all 60 calculator destinations, rail images, directory links and overflow. The entire taxonomy remains accessible from `/all-business-ideas` and `/lists`.
 - Image scale plan PENDING founder visual review: four different main-category concepts, four different subcategory concepts, including young Indian women and men where relevant, and one reusable visual adapted to two category contexts. Preview first; no bulk image publication yet.
 
+### 2026-11-02 17:13 IST — Image SEO owner correction
+- Founder rejects the three earlier template image attempts; none may go live. Every future featured/thumbnail image must be **16:9 only**, compressed and displayed in a 16:9 box. This supersedes any 4:5 or 1:1 image proposal in earlier notes. See `ARTIFACTS/TEMPLATE_IMAGE_SEO_2026-11-02.md`.
+- **Entire site SEO remains PENDING**, including slugs, titles, descriptions, heading and keyword mapping, social metadata, structured data, and all image SEO. Do not describe the SEO as complete because the templates family implements its own metadata.
+- `/templates` family is IN PROGRESS until build, main push, Vercel deploy and live review. The two larger competitive-analysis/business-plan ZIP source payloads could not be read with the current connector; do not claim those internal files were mapped. The founder has yet to approve final page copy and image direction.
+
