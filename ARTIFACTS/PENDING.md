@@ -1,5 +1,9 @@
 # BusinessIdea.io — founder inputs and unresolved work
 
+## 2026-11-02 13:57 IST — Handover copy closed
+- [x] [Repo handover](https://github.com/Pinkycherry/BRAND-NEW-COPY/blob/main/ARTIFACTS/PINKY_HANDOVER_2026-11-02.md) on `main` in [25ab230](https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/25ab2301db1ff8351b6edf55f5f91ec26d102452); [identical Pinky 2 copy](https://chatgpt.com/library?file_id=libfile_068df87a86d48191960b262e305c4833&account_id=personal). The exact full chat transcript was not available; the artifact is a chronology of accessible instructions and repo evidence.
+- [ ] Tools image live visual check; FAQ category filter and mobile viewport; topics/templates purchased-page integration; shared footer free claim; calculator detail asset/formula audit. Idea page, homepage body and case studies remain owner-paused.
+
 ## 2026-11-02 13:52 IST — Exact handover state
 - [x] FAQ published at [live URL](https://bbinewcopy.vercel.app/faq), [e6aa3d9](https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/e6aa3d914f234f6c58ef874398f063fbd243d5f8); real DB question/answer/source/search verified. Category filter and 390px overflow QA pending due browser timeout.
 - [x] Original tools hero published at [live URL](https://bbinewcopy.vercel.app/tools), [385f876](https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/385f8765313fde75388c0b1448d74525405fd074); build and Vercel succeeded. Live visual image/load and viewport check pending due browser timeout.
