@@ -84,6 +84,7 @@ import { Route as ListsSlugRouteImport } from './routes/lists.$slug'
 import { Route as ListsCoachingBusinessIdeasRouteImport } from './routes/lists.coaching-business-ideas'
 import { Route as StartupGuidesIndexRouteImport } from './routes/startup-guides.index'
 import { Route as StartupGuidesSlugRouteImport } from './routes/startup-guides.$slug'
+import { Route as TemplatesIndexRouteImport } from './routes/templates.index'
 import { Route as TemplatesSlugRouteImport } from './routes/templates.$slug'
 import { Route as ToolsAlternateRouteImport } from './routes/tools.alternate'
 import { Route as UsefulToolsIndexRouteImport } from './routes/useful-tools.index'
@@ -472,6 +473,11 @@ const StartupGuidesSlugRoute = StartupGuidesSlugRouteImport.update({
   path: '/startup-guides/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TemplatesIndexRoute = TemplatesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => TemplatesRoute,
+} as any)
 const TemplatesSlugRoute = TemplatesSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -578,6 +584,7 @@ export interface FileRoutesByFullPath {
   '/learning-resources/': typeof LearningResourcesIndexRoute
   '/lists/': typeof ListsIndexRoute
   '/startup-guides/': typeof StartupGuidesIndexRoute
+  '/templates/': typeof TemplatesIndexRoute
   '/useful-tools/': typeof UsefulToolsIndexRoute
   '/category/$categorySlug/$subcategorySlug': typeof CategoryCategorySlugSubcategorySlugRoute
   '/category/$categorySlug/': typeof CategoryCategorySlugIndexRoute
@@ -635,7 +642,6 @@ export interface FileRoutesByTo {
   '/startup-idea-validation': typeof StartupIdeaValidationRoute
   '/startup-launch-plan-india': typeof StartupLaunchPlanIndiaRoute
   '/startup-terms-india': typeof StartupTermsIndiaRoute
-  '/templates': typeof TemplatesRouteWithChildren
   '/terms': typeof TermsRoute
   '/tools': typeof ToolsRouteWithChildren
   '/topics': typeof TopicsRoute
@@ -660,6 +666,7 @@ export interface FileRoutesByTo {
   '/learning-resources': typeof LearningResourcesIndexRoute
   '/lists': typeof ListsIndexRoute
   '/startup-guides': typeof StartupGuidesIndexRoute
+  '/templates': typeof TemplatesIndexRoute
   '/useful-tools': typeof UsefulToolsIndexRoute
   '/category/$categorySlug/$subcategorySlug': typeof CategoryCategorySlugSubcategorySlugRoute
   '/category/$categorySlug': typeof CategoryCategorySlugIndexRoute
@@ -743,6 +750,7 @@ export interface FileRoutesById {
   '/learning-resources/': typeof LearningResourcesIndexRoute
   '/lists/': typeof ListsIndexRoute
   '/startup-guides/': typeof StartupGuidesIndexRoute
+  '/templates/': typeof TemplatesIndexRoute
   '/useful-tools/': typeof UsefulToolsIndexRoute
   '/category/$categorySlug/$subcategorySlug': typeof CategoryCategorySlugSubcategorySlugRoute
   '/category/$categorySlug/': typeof CategoryCategorySlugIndexRoute
@@ -827,6 +835,7 @@ export interface FileRouteTypes {
     | '/learning-resources/'
     | '/lists/'
     | '/startup-guides/'
+    | '/templates/'
     | '/useful-tools/'
     | '/category/$categorySlug/$subcategorySlug'
     | '/category/$categorySlug/'
@@ -884,7 +893,6 @@ export interface FileRouteTypes {
     | '/startup-idea-validation'
     | '/startup-launch-plan-india'
     | '/startup-terms-india'
-    | '/templates'
     | '/terms'
     | '/tools'
     | '/topics'
@@ -909,6 +917,7 @@ export interface FileRouteTypes {
     | '/learning-resources'
     | '/lists'
     | '/startup-guides'
+    | '/templates'
     | '/useful-tools'
     | '/category/$categorySlug/$subcategorySlug'
     | '/category/$categorySlug'
@@ -991,6 +1000,7 @@ export interface FileRouteTypes {
     | '/learning-resources/'
     | '/lists/'
     | '/startup-guides/'
+    | '/templates/'
     | '/useful-tools/'
     | '/category/$categorySlug/$subcategorySlug'
     | '/category/$categorySlug/'
@@ -1603,6 +1613,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StartupGuidesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/templates/': {
+      id: '/templates/'
+      path: '/'
+      fullPath: '/templates/'
+      preLoaderRoute: typeof TemplatesIndexRouteImport
+      parentRoute: typeof TemplatesRoute
+    }
     '/templates/$slug': {
       id: '/templates/$slug'
       path: '/$slug'
@@ -1655,10 +1672,12 @@ const FailedStartupsRouteWithChildren = FailedStartupsRoute._addFileChildren(
 
 interface TemplatesRouteChildren {
   TemplatesSlugRoute: typeof TemplatesSlugRoute
+  TemplatesIndexRoute: typeof TemplatesIndexRoute
 }
 
 const TemplatesRouteChildren: TemplatesRouteChildren = {
   TemplatesSlugRoute: TemplatesSlugRoute,
+  TemplatesIndexRoute: TemplatesIndexRoute,
 }
 
 const TemplatesRouteWithChildren = TemplatesRoute._addFileChildren(

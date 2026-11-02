@@ -514,3 +514,6 @@ The five specific-field models are the four original calculators plus CAC. The 5
 - **Entire site SEO remains PENDING**, including slugs, titles, descriptions, heading and keyword mapping, social metadata, structured data, and all image SEO. Do not describe the SEO as complete because the templates family implements its own metadata.
 - `/templates` family is IN PROGRESS until build, main push, Vercel deploy and live review. The two larger competitive-analysis/business-plan ZIP source payloads could not be read with the current connector; do not claim those internal files were mapped. The founder has yet to approve final page copy and image direction.
 
+### 2026-11-02 17:17 IST — Templates live QA
+- Initial hub deployed, but live detail URL rendered the hub body due missing parent outlet. Routing fix is built locally and must be pushed and checked live before the template detail family can be called functional.
+- Shared footer still says “A free library,” contradicting the paid-plan direction; do not describe this inherited global copy as approved. Keep it pending for a separate shared-footer change.
