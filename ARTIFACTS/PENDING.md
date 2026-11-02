@@ -1,5 +1,10 @@
 # BusinessIdea.io — founder inputs and unresolved work
 
+## 2026-11-02 13:42 IST — FAQ shipped; image and handover remaining
+- [x] [FAQ](https://bbinewcopy.vercel.app/faq) replaced with published Supabase FAQ via [e6aa3d9](https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/e6aa3d914f234f6c58ef874398f063fbd243d5f8). Search/filter interaction and mobile overflow spot checks pending.
+- [ ] Original tools hero image local build, main push and live check. Calculator hub already has our original image; detail pages need separate asset audit.
+- [ ] Detailed handover file in repo and separate artifact copy; topics/templates integration plan without duplicated data.
+
 ## 2026-11-02 FAQ-first directive (PENDING until live verification)
 - Replace the raw seller FAQ route with the purchased three-section composition: compact hero, searchable/filterable question directory, contact CTA. Populate questions and answers only from the published Supabase subcategory and idea FAQ fields; reuse the existing seller-style shared FAQ card, normalize duplicate questions, and link each answer to its real list or idea route. Do not carry seller product, credit, privacy or support claims. Keep all unique source FAQs accessible by progressive disclosure, without a fixed editorial cap or displayed counts. Verify the deployed page and record the commit/live link.
 - Tools hero still uses the seller toolbox image. Generate one original Indian-context image and replace it in a separate main commit. Calculator hub already uses our generated image at public/images/calculators/founder-calculators-hero.webp; verify live and inspect detail routes for other purchased featured art before claiming all calculator images are ours.
