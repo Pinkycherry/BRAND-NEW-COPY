@@ -550,3 +550,6 @@ The five specific-field models are the four original calculators plus CAC. The 5
 
 ### 2026-11-02 22:03 IST — Founder rejects persona page again
 - Page-wide content and layout correction is active. Preserve the purchased fourteen-section order, dynamic published idea examples and honest evidence boundary, but rewrite opaque text into usable Indian buyer decisions, remove the blank selector column and tighten the FAQ only on this route. Main push, live visual review and founder acceptance remain open. Phone-width QA remains pending. Do not change owner-locked idea pages.
+
+### 2026-11-02 22:13 IST — Persona evidence and final check
+- 546123f live revision is easier to read and five destinations opened, but founder approval is still open. A semantically wrong source label and two jargon-heavy FAQ questions were corrected locally; push and verify live. Strong E-E-A-T is pending actual buyer interviews, attributable editorial review/source citations and honest evidence labels. Do not fabricate these. Phone-width QA and shared-footer free claim remain pending.

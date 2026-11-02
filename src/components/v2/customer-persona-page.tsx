@@ -92,7 +92,7 @@ const research = [
   { title: "Talk to people who bought recently", body: "Selling lunch near offices? Speak to workers in that area who bought lunch elsewhere this week. Also speak to someone who stopped ordering. A friend who never buys office lunch cannot explain that purchase." },
   { title: "Start with the last time", body: "Ask: ‘When did you last need this?’ and ‘What did you do?’ If they can only imagine a future purchase, move on to someone who has made the choice already." },
   { title: "Hear their story before showing your idea", body: "Let them describe the problem, the options they saw, who chose, who paid and what happened next. If you show your offer first, they may be polite instead of telling you how they really buy." },
-  { title: "Separate what they did from what you guessed", body: "‘I bought from the canteen on Tuesday’ is an action. ‘I want healthier food’ is a quote. ‘They will subscribe to my dabba’ is your guess. Keep those separate when deciding what to test." },
+  { title: "Separate the answer from your guess", body: "After each talk, note what the person did, what they said, and what you inferred on separate lines. The example below shows why that difference matters." },
   { title: "Decide what to try next", body: "Write down who buys, when, from whom and why. Then test one change: a different delivery time, a single-day order, a smaller snack pack or a clearer comparison. Do not build a full service from compliments alone." },
 ];
 const tips = [
@@ -103,8 +103,8 @@ const tips = [
 ];
 const faq = [
   { q: "What is a customer persona?", a: "It is a short account of how one kind of buyer chooses. Write when they need the offer, what they use today, who pays, what they worry about and what made them buy last time. Check those details with real people before treating them as facts." },
-  { q: "How is it different from an ideal customer profile?", a: "A customer profile names the group you may serve, such as offices near your lunch route. A persona follows an actual purchase: an office manager compares providers, checks delivery reliability and approves payment. The group gives you a market; the decision tells you what to test." },
-  { q: "How is it different from a job to be done?", a: "The job is what someone needs done, such as getting a reliable lunch at work. The persona adds who feels that need, who chooses the dabba provider, who pays and what made the last option acceptable." },
+  { q: "Who is the customer when someone else pays?", a: "Speak to both people. A student may attend tuition, but a parent may find the teacher and pay the fee. The student can tell you what helps them learn; the parent can tell you why they chose and paid for that class." },
+  { q: "What if many different people could buy?", a: "Start with one group you can reach and serve well. A lunch delivery near offices can begin with workers in that area. If an office manager orders for the whole team, study that as a separate buying path instead of mixing their answers together." },
   { q: "How many personas should I make?", a: "Begin with one buyer you can reach. Add another only when the buying process really changes. A parent choosing evening tuition and a school purchasing a whole batch use the same service but make different decisions." },
   { q: "Do I need a fixed number of interviews?", a: "No number guarantees that your guess is right. Speak to recent buyers and people who chose another option. When you can explain the same buying pattern without forcing the answers, test a small paid offer and see what happens." },
   { q: "Can AI write my persona?", a: "It can arrange notes from conversations you actually had. It cannot interview your neighbourhood, verify a buyer's last purchase or prove that anyone will pay. Do not present generated names, quotes or salaries as research." },
@@ -146,7 +146,7 @@ export function CustomerPersonaPage({ examples }: { examples: Example[] }) {
               {[
                 {label:"Who buys",source:chosen.idea.who_pays_you || chosen.idea.summary,question:chosenLens.payment},
                 {label:"When they need it",source:chosen.idea.summary || chosen.idea.hook,question:chosenLens.occasion},
-                {label:"What they use now",source:chosen.idea.what_hurts || chosen.idea.what_you_need,question:chosenLens.alternatives},
+                {label:"What can go wrong",source:chosen.idea.what_hurts || chosen.idea.what_you_need,question:"What happened the last time your current option let you down? What did you do instead?"},
               ].map((row,i)=><div className="cp-insight-row" key={row.label}>
                 <span className="cp-insight-index">0{i+1}</span>
                 <div className="cp-insight-source"><small>{row.label} · what the idea says</small><p>{sourceSentence(row.source || chosen.idea.title)}</p></div>
