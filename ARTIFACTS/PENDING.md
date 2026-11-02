@@ -553,3 +553,6 @@ The five specific-field models are the four original calculators plus CAC. The 5
 
 ### 2026-11-02 22:13 IST — Persona evidence and final check
 - 546123f live revision is easier to read and five destinations opened, but founder approval is still open. A semantically wrong source label and two jargon-heavy FAQ questions were corrected locally; push and verify live. Strong E-E-A-T is pending actual buyer interviews, attributable editorial review/source citations and honest evidence labels. Do not fabricate these. Phone-width QA and shared-footer free claim remain pending.
+
+### 2026-11-02 22:20 IST — Method research added, experience evidence still missing
+- 6888cca is live and visibly corrected the label/FAQ. Primary Strategyzer and Startup India guidance was reviewed; a source note and data provenance are built locally awaiting main push/live verification. This strengthens methodological traceability, but no actual interview/transaction evidence or named reviewer is available. Owner approval, phone-width QA, shared footer's inaccurate free claim and other template pages remain pending.
