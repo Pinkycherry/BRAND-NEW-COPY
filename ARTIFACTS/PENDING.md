@@ -1,5 +1,11 @@
 # BusinessIdea.io — founder inputs and unresolved work
 
+## 2026-11-02 13:52 IST — Exact handover state
+- [x] FAQ published at [live URL](https://bbinewcopy.vercel.app/faq), [e6aa3d9](https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/e6aa3d914f234f6c58ef874398f063fbd243d5f8); real DB question/answer/source/search verified. Category filter and 390px overflow QA pending due browser timeout.
+- [x] Original tools hero published at [live URL](https://bbinewcopy.vercel.app/tools), [385f876](https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/385f8765313fde75388c0b1448d74525405fd074); build and Vercel succeeded. Live visual image/load and viewport check pending due browser timeout.
+- [x] Dedicated handover file `ARTIFACTS/PINKY_HANDOVER_2026-11-02.md` included in this documentation commit; separate retained artifact copy remains to save.
+- [ ] `/topics` and `/templates` purchased-composition rebuild after checking canonical BBI data and true template deliverables. `/case-studies`, homepage body and `/idea/<slug>` edits paused by founder. Shared footer “free” language and individual calculator asset/formula audit pending. Do not claim closure from deployment alone.
+
 ## 2026-11-02 13:42 IST — FAQ shipped; image and handover remaining
 - [x] [FAQ](https://bbinewcopy.vercel.app/faq) replaced with published Supabase FAQ via [e6aa3d9](https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/e6aa3d914f234f6c58ef874398f063fbd243d5f8). Search/filter interaction and mobile overflow spot checks pending.
 - [ ] Original tools hero image local build, main push and live check. Calculator hub already has our original image; detail pages need separate asset audit.
