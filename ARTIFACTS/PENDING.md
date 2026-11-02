@@ -547,3 +547,6 @@ The five specific-field models are the four original calculators plus CAC. The 5
 
 ### 2026-11-02 21:54 IST — Persona live review after 00f003e
 - Live desktop QA confirms the research playbook and Field Notes layout repairs. The workbench selector still has empty vertical space below its three options; owner visual acceptance and phone-width QA remain open. FAQ screenshot self-score 6/10 on visible UI only; no answer content was shown, and no FAQ edit was requested. Await founder guidance before further persona changes. Other template details, site-wide SEO, shared footer's free claim remain pending.
+
+### 2026-11-02 22:03 IST — Founder rejects persona page again
+- Page-wide content and layout correction is active. Preserve the purchased fourteen-section order, dynamic published idea examples and honest evidence boundary, but rewrite opaque text into usable Indian buyer decisions, remove the blank selector column and tighten the FAQ only on this route. Main push, live visual review and founder acceptance remain open. Phone-width QA remains pending. Do not change owner-locked idea pages.

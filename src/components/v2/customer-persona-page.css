@@ -66,3 +66,40 @@
 .cp-tips .cp-tip-grid article:hover{transform:none;box-shadow:none;background:#f9f7ff}
 @media(max-width:800px){.cp-builder-layout{grid-template-columns:1fr}.cp-case-nav{flex-direction:row;overflow-x:auto;align-items:stretch;padding:11px;scroll-snap-type:x proximity;border-right:0;border-bottom:1px solid #e4dcef}.cp-case-nav>p{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.cp-case-nav button{flex:0 0 185px;scroll-snap-align:start}.cp-research-head{grid-template-columns:1fr;gap:9px}.cp-research-head h2{max-width:720px}}
 @media(max-width:700px){.cp-builder-layout .cp-builder-body{padding:20px}.cp-insight-row{grid-template-columns:27px minmax(0,1fr);gap:6px 10px}.cp-insight-source,.cp-insight-question{grid-column:2}.cp-insight-question{border-left:0;padding:0}.cp-insight-question small{margin-top:5px}.cp-insight-row p{font-size:14px}.cp-research-steps>li{grid-template-columns:38px minmax(0,1fr);gap:0 9px}.cp-research-steps>li>span{font-size:23px}.cp-research-steps .cp-script{grid-column:1/-1;padding:18px}.cp-research-steps .cp-script ol{grid-template-columns:1fr}.cp-tips{padding-block:47px}.cp-tips .cp-tip-grid{grid-template-columns:1fr}.cp-tips .cp-tip-grid article{padding:17px 7px}.cp-tips .cp-tip-grid article+article{border-top:0}}
+
+/* Persona-only density: keep the purchased section sequence, use the canvas. */
+.cp-page .cp-section{padding-block:56px}
+.cp-page .cp-intro{margin-bottom:22px}
+.cp-page .cp-intro h2{max-width:860px}
+.cp-page .cp-hero{padding-block:28px 57px}
+.cp-page .cp-step-grid article{padding:22px 25px}
+.cp-page .cp-step-number{margin-bottom:14px;font-size:27px}
+.cp-page .cp-step-grid h3{font-size:21px}
+.cp-builder-layout{display:block}
+.cp-case-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:14px 18px;background:#f2eefb;border-right:0;border-bottom:1px solid #e4dcef}
+.cp-case-nav>p{grid-column:1/-1;margin:0 4px 3px}
+.cp-case-nav button{display:flex;align-items:center;min-width:0;min-height:58px;padding:11px 14px;border:1px solid #ded5ed;background:#fff;border-radius:10px}
+.cp-case-nav button strong{font-size:14px;line-height:1.3}
+.cp-case-nav button[aria-selected=true]{border-color:#7137e9;box-shadow:inset 0 0 0 1px #7137e9}
+.cp-case-nav button:hover{transform:translateY(-2px);border-color:#9366e5}
+.cp-builder-layout .cp-builder-body{padding:25px clamp(20px,3vw,36px)}
+.cp-builder-brief{max-width:none}
+.cp-insight-row{grid-template-columns:28px minmax(0,1fr) minmax(0,1fr);gap:14px 22px}
+.cp-insight-row p{font-size:15px}
+.cp-example-copy .cp-example-difference{display:block;font-size:15px;line-height:1.55;color:#2d2540;margin:4px 0 13px}
+.cp-example-copy dl{margin:10px 0 16px}
+.cp-example-copy dt{margin:13px 0 3px}
+.cp-tips .cp-tip-grid article{display:block;padding:19px 20px}
+.cp-tips .cp-tip-grid article h3,.cp-tips .cp-tip-grid article p{display:block;margin:0}
+.cp-tips .cp-tip-grid article h3{margin-bottom:6px}
+.cp-decision-example .cp-evidence-disclaimer{font-size:13px;margin-top:-6px}
+.cp-faq>section{padding-block:48px}
+.cp-faq .premium-card{max-width:1010px;margin-inline:auto;padding:25px 32px}
+.cp-faq h2{font-size:clamp(27px,3vw,34px);margin:0 0 9px;line-height:1.2}
+.cp-faq h2 svg{display:none}
+.cp-faq h3{font-size:18px;line-height:1.4;margin:0}
+.cp-faq h3 button{padding:15px 0;min-height:54px;line-height:1.4}
+.cp-faq h3 button svg{width:19px;height:19px;stroke-width:2.2}
+.cp-faq h3+div{font-size:15px;line-height:1.7;padding-bottom:17px}
+@media(max-width:800px){.cp-case-nav{display:flex;overflow-x:auto;scroll-snap-type:x proximity}.cp-case-nav>p{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.cp-case-nav button{flex:0 0 min(72vw,230px);scroll-snap-align:start}.cp-builder-layout .cp-builder-body{padding:22px}}
+@media(max-width:700px){.cp-page .cp-section{padding-block:43px}.cp-page .cp-hero{padding-block:22px 45px}.cp-insight-row{grid-template-columns:27px minmax(0,1fr);gap:6px 10px}.cp-insight-source,.cp-insight-question{grid-column:2}.cp-insight-question{border-left:0;padding:0}.cp-insight-question small{margin-top:8px}.cp-insight-row p{font-size:14px}.cp-tips .cp-tip-grid article{padding:16px 5px}.cp-faq>section{padding-block:40px}.cp-faq .premium-card{padding:21px 20px}.cp-faq h3{font-size:17px}.cp-faq h3 button{padding:14px 0}}
