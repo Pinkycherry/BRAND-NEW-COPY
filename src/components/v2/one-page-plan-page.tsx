@@ -11,8 +11,11 @@ const ideaLink = (slug: string) => `/idea/${encodeURIComponent(slug)}`;
 const listLink = (slug: string) => `/lists/${encodeURIComponent(slug)}`;
 const firstSentence = (value: string | null | undefined, max = 280) => {
   const text = (value ?? "").trim().replace(/\s+/g, " ");
-  const clause = text.match(/^.*?[.!?](?=\s|$)/)?.[0];
-  const candidate = clause && clause.length <= max ? clause : text;
+  const clauses = text.match(/[^.!?]+[.!?]+(?=\s|$)|[^.!?]+$/g) ?? [];
+  const first = clauses[0]?.trim() ?? text;
+  const second = clauses[1]?.trim();
+  const candidate = first.length < 95 && second && `${first} ${second}`.length <= max
+    ? `${first} ${second}` : first;
   return candidate.length <= max ? candidate : `${candidate.slice(0,max).replace(/\s+\S*$/, "").trimEnd()}…`;
 };
 const parts = [
@@ -24,7 +27,7 @@ const parts = [
   { title: "Revenue model and pricing", purpose: "Show the payer, what they buy and when money arrives.", question: "What would a completed first payment look like, and which price is still untested?", field: "how_money_comes" },
   { title: "Go-to-market channels", purpose: "Choose a reachable path to a first buyer, including the trust step.", question: "Where did a recent buyer find and trust their current provider?", field: null },
   { title: "Key metrics", purpose: "Observe the action that would change your decision.", question: "Does a paid order, repeat choice or completed enquiry best show progress here?", field: null },
-  { title: "Cost structure", purpose: "Separate what you need to start from each order's recurring inputs.", question: "Which costs occur before the first sale, and which grow with each customer?", field: "what_you_need" },
+  { title: "Cost structure", purpose: "Separate what you need to start from each order's recurring inputs.", question: "Which costs occur before the first sale, and which grow with each customer?", field: null },
   { title: "Team and unfair advantage", purpose: "Name the work you can deliver now and the access you actually hold.", question: "Who will do the work reliably, and what could a competitor copy tomorrow?", field: null },
 ] as const;
 const guidance = [
@@ -42,6 +45,44 @@ const faq = [
   { q: "When do I update the plan?", a: "After a conversation, real cost quote, order or refusal changes a material assumption. A plan that records what changed is more useful than one that stays neat but untested." },
 ];
 const sectionText = (idea: ListIdea, field: (typeof parts)[number]["field"]) => field ? firstSentence(idea[field]) : "";
+const questionFor = (index: number, idea: ListIdea) => {
+  const title = idea.title.toLowerCase();
+  const questions = /review website|affiliate|content site/.test(title) ? [
+    "Can a reader explain which buying decision this comparison helps them make?",
+    "What confused the last buyer comparing phones, and which source did they trust?",
+    "Which comparison helps the reader decide before visiting a shop or marketplace?",
+    "Who reads the review, who buys the phone, and who pays any qualifying commission?",
+    "Why would the reader trust this review over a marketplace listing or shopkeeper?",
+    "Which completed referral or sale earns a commission, and how is it tracked?",
+    "Which search question brings a buyer here before they choose a phone?",
+    "Which readers make a qualifying purchase after the comparison, beyond simply viewing the page?",
+    "What will research, testing, hosting and publishing actually cost before the first commission?",
+    "Who can test the products and keep the comparisons accurate and independent?",
+  ] : /sev|namkeen|snack|pack/.test(title) ? [
+    "Can a neighbour explain what pack they can order and when they receive it?",
+    "When did a household last buy this kind of snack, and why there?",
+    "Which small paid batch can test taste, freshness and collection?",
+    "Who chooses the household snack and who pays for the repeat pack?",
+    "Why would they switch from loose snacks or a familiar packaged brand?",
+    "Who pays for a pack, and what does a genuine reorder look like?",
+    "Would a neighbourhood introduction or a shop counter produce the first paid orders?",
+    "Which paid reorders happen without a reminder or a free sample?",
+    "What do ingredients, packaging, delivery and unsold stock cost in the actual neighbourhood?",
+    "Who can make, pack and deliver consistently without losing freshness?",
+  ] : /lunch|dabba|tiffin|meal/.test(title) ? [
+    "Can a worker describe the lunch, delivery area and payment rhythm plainly?",
+    "Where did they buy lunch on their last office day, and what disappointed them?",
+    "Can you test a small paid lunch route before promising a monthly service?",
+    "Does the worker, family member or office manager choose and pay?",
+    "What would make them leave the canteen, delivery app or nearby stall?",
+    "Who pays for the order, and what happens on days they work from home?",
+    "Which office-area introduction can lead to a real first order?",
+    "Do customers reorder after ordinary days, delays and missed office days?",
+    "What will groceries, packaging and delivery cost per lunch, and what is fixed?",
+    "Who can cook and deliver reliably at the promised time?",
+  ] : null;
+  return questions?.[index] ?? parts[index]?.question ?? "What evidence would change this part of the plan?";
+};
 export function OnePagePlanPage({ examples }: { examples: Example[] }) {
   const [selected, setSelected] = useState(0);
   const example = examples[selected];
@@ -51,8 +92,18 @@ export function OnePagePlanPage({ examples }: { examples: Example[] }) {
     <section className="op-strip"><div className="op-wrap"><strong>One clear thread</strong><p>Who needs it? What do they do now? What will you offer? How will they find and pay you? What does it cost to deliver? If an answer is unknown, say so and test it.</p></div></section>
     <section className="op-section op-wrap op-intro"><div><p className="op-kicker">Why make a short plan?</p><h2>A partner should be able to explain it back.</h2></div><div><p>The aim is not to compress a long pitch into tiny type. Each part answers a decision question. When a customer, a supplier or a real order contradicts the plan, edit the claim rather than defending the document.</p><p>The original plan separates the opening, buyer, offer, channel, money and team. Those sections belong together: a different payer can change both your sales channel and pricing. This page gives you a readable way through them.</p></div></section>
     <section id="plan" className="op-section op-paper-section"><div className="op-wrap"><div className="op-heading"><p className="op-kicker">Plan anatomy</p><h2>Read every part as a claim to check.</h2><p>The same sequence works for a local service, a product or an online business. Each section says what belongs in the plan and the question that could change it.</p></div><div className="op-paper"><div className="op-paper-title"><span>BUSINESS PLAN / READING COPY</span><strong>From first buyer to the work of delivering</strong></div><ol>{parts.map((part,i)=><li key={part.title}><span>{String(i+1).padStart(2,"0")}</span><div><h3>{part.title}</h3><p>{part.purpose}</p><small>{part.question}</small></div></li>)}</ol><div className="op-paper-foot">Keep the story connected. Check the unknowns outside this page with real people and local quotes.</div></div></div></section>
-    <section id="example" className="op-section op-wrap"><div className="op-heading"><p className="op-kicker">Published Indian ideas</p><h2>See what an idea record can and cannot tell you.</h2><p>Select a published idea. Its own wording fills only the parts it supports; the remaining questions need your local research. No buyer interview or sale is implied.</p></div>{example && <div className="op-example"><div className="op-tabs" role="tablist" aria-label="Published business ideas">{examples.map(({idea},i)=><button key={idea.slug} type="button" role="tab" id={`op-tab-${i}`} aria-selected={selected===i} aria-controls="op-panel" onClick={()=>setSelected(i)}>{idea.title}</button>)}</div><div className="op-example-body" role="tabpanel" id="op-panel" aria-labelledby={`op-tab-${selected}`}><div className="op-example-head"><div><span>{example.list.categoryName}</span><h3>{example.idea.title}</h3></div><a href={ideaLink(example.idea.slug)}>Read the full idea <ArrowRight size={17}/></a></div><p className="op-example-intro">{firstSentence(example.idea.summary||example.idea.hook,340)}</p><ol className="op-example-list">{parts.map((part,i)=>{const source=sectionText(example.idea,part.field);return <li key={part.title}><span>{String(i+1).padStart(2,"0")}</span><div><h4>{part.title}</h4>{source && <p><b>Idea record:</b> {source}</p>}<p className="op-open"><b>{source?"Check next:":"Open question:"}</b> {part.question}</p></div></li>})}</ol><div className="op-example-foot"><p>This is a research starting point, not a completed business plan or verified financial projection.</p><a href={listLink(example.list.slug)}>Explore the related list <ArrowRight size={17}/></a></div></div></div>}</section>
-    <section className="op-section op-soft"><div className="op-wrap"><div className="op-heading"><p className="op-kicker">Make it useful</p><h2>Improve the plan with evidence, one decision at a time.</h2></div><div className="op-guidance">{guidance.map((item,i)=><article key={item.title}><span>{String(i+1).padStart(2,"0")}</span><div><h3>{item.title}</h3><p>{item.body}</p></div></article>)}</div></div></section>
+    <section id="example" className="op-section op-wrap"><div className="op-heading"><p className="op-kicker">Published Indian ideas</p><h2>See what an idea record can and cannot tell you.</h2><p>Select a published idea. Its own wording fills only the parts it supports; the remaining questions need your local research. No buyer interview or sale is implied.</p></div>{example && <div className="op-example"><div className="op-tabs" role="tablist" aria-label="Published business ideas">{examples.map(({idea},i)=><button key={idea.slug} type="button" role="tab" id={`op-tab-${i}`} aria-selected={selected===i} aria-controls="op-panel" onClick={()=>setSelected(i)}>{idea.title}</button>)}</div><div className="op-example-body" role="tabpanel" id="op-panel" aria-labelledby={`op-tab-${selected}`}><div className="op-example-head"><div><span>{example.list.categoryName}</span><h3>{example.idea.title}</h3></div><a href={ideaLink(example.idea.slug)}>Read the full idea <ArrowRight size={17}/></a></div><p className="op-example-intro">{firstSentence(example.idea.summary||example.idea.hook,340)}</p><ol className="op-example-list">{parts.map((part,i)=>{
+          const source=sectionText(example.idea,part.field);
+          return <li key={part.title}>
+            <span>{String(i+1).padStart(2,"0")}</span>
+            <h4>{part.title}</h4>
+            <div className="op-example-detail">
+              {source && <p><b>From the published idea:</b> {source}</p>}
+              <p className="op-open"><b>{source?"Check with buyers:":"Research question:"}</b> {questionFor(i,example.idea)}</p>
+            </div>
+          </li>;
+        })}</ol><div className="op-example-foot"><p>This is a research starting point, not a completed business plan or verified financial projection.</p><a href={listLink(example.list.slug)}>Explore the related list <ArrowRight size={17}/></a></div></div></div>}</section>
+    <section className="op-section op-soft"><div className="op-wrap"><div className="op-heading"><p className="op-kicker">Make it useful</p><h2>Improve the plan with evidence, one decision at a time.</h2></div><div className="op-guidance">{guidance.map((item,i)=><article key={item.title}><span>{String(i+1).padStart(2,"0")}</span><h3>{item.title}</h3><p>{item.body}</p></article>)}</div></div></section>
     <section className="op-section op-wrap"><div className="op-heading"><p className="op-kicker">From plan to fieldwork</p><h2>Choose what to test first.</h2></div><div className="op-next"><div><h3>Do not know the buyer?</h3><p>Ask about a purchase that already happened. Listen for who chose, who paid and which option they trusted.</p><a href="/templates/customer-interview">Customer interview guide <ArrowRight size={17}/></a></div><div><h3>Do not know the money?</h3><p>Get a real cost quote and test a price where the buyer makes a choice. Calculate with those inputs, keeping estimates labelled.</p><a href="/calculator">Business calculators <ArrowRight size={17}/></a></div></div></section>
     <section className="op-section op-soft"><div className="op-wrap"><div className="op-heading"><p className="op-kicker">Practical checks</p><h2>Keep the claim as strong as the evidence.</h2></div><div className="op-practice"><div><h3><Check size={21} aria-hidden="true"/> Do</h3><ul><li>Name the first buyer and present alternative.</li><li>Show how one order reaches payment and delivery.</li><li>Separate a real quote from a proposed price.</li><li>Change the plan when a transaction changes the story.</li></ul></div><div><h3><X size={21} aria-hidden="true"/> Avoid</h3><ul><li>Calling an invented figure a forecast.</li><li>Listing every possible buyer as your first segment.</li><li>Using a confident headline where a test is needed.</li><li>Promising a team or partnership you do not yet have.</li></ul></div></div></div></section>
     <div className="op-faq"><SellerFaq faq={faq} title="One-page plan questions" id="faq"/></div>

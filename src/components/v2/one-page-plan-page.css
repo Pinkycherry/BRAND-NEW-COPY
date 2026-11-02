@@ -2,3 +2,29 @@
 @media(min-width:700px){.op-wrap{width:min(100% - 48px,1152px)}.op-crumb{padding-top:120px}.op-hero{grid-template-columns:1.06fr .94fr;gap:35px;padding-block:35px 59px}.op-strip .op-wrap{display:grid;grid-template-columns:195px 1fr;gap:28px;align-items:center}.op-strip p{margin:0}.op-intro{grid-template-columns:1fr 1fr;gap:36px}.op-paper ol,.op-example-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.op-paper li,.op-example-list li{border-right:1px solid #ebe5ef}.op-paper li:nth-child(2n),.op-example-list li:nth-child(2n){border-right:0}.op-tabs button{flex:1 1 0;min-width:0}.op-example-body{padding:27px 31px}.op-guidance,.op-next,.op-practice{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 23px}.op-next{gap:20px}.op-related,.op-resources{grid-template-columns:repeat(3,minmax(0,1fr))}.op-cta .op-wrap{flex-direction:row;align-items:center;justify-content:space-between;gap:30px}.op-cta .op-primary{flex:none}}
 @media(min-width:1050px){.op-section{padding-block:59px}.op-hero{gap:48px}.op-paper li{min-height:156px;padding:21px 25px}.op-example-list{grid-template-columns:repeat(2,minmax(0,1fr))}.op-example-list li{padding-right:17px}.op-guidance{gap:0 38px}}
 @media(prefers-reduced-motion:no-preference){.op-page section:not(.op-hero):not(.op-strip){animation:op-reveal .36s ease-out both;animation-timeline:view();animation-range:entry 0% entry 16%}@keyframes op-reveal{from{opacity:.78;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}}
+/* Founder review: a full-width reading sheet with real side padding and no hover plate on prose. */
+.op-example-list{display:block!important;grid-template-columns:none!important}
+.op-example-list li,.op-example-list li:nth-child(2n){display:grid;grid-template-columns:30px minmax(0,1fr);gap:4px 12px;align-items:start;min-height:0;padding:19px 18px;border-right:0;border-bottom:1px solid var(--op-border);background:transparent;box-shadow:none}
+.op-example-list li>span{grid-column:1;grid-row:1;padding-top:3px}
+.op-example-list h4{grid-column:2;grid-row:1;font-size:20px;line-height:1.3;margin:0}
+.op-example-detail{grid-column:2;min-width:0}
+.op-example-detail p{margin:5px 0 0;font-size:16px;line-height:1.6;overflow-wrap:anywhere}
+.op-example-detail .op-open{color:#4a3d5c}
+.op-example-detail b{color:#322248}
+.op-guidance{display:grid;grid-template-columns:1fr!important;gap:10px!important}
+.op-guidance article{display:grid;grid-template-columns:34px minmax(0,1fr);gap:4px 12px;align-items:start;min-height:0;padding:18px 20px;border:1px solid #e2d9eb;border-radius:11px;background:#fff;box-shadow:none;transform:none;transition:none}
+.op-guidance article:hover{background:#fff!important;box-shadow:none!important;transform:none!important}
+.op-guidance article span{grid-column:1;grid-row:1;font-size:23px}
+.op-guidance article h3{grid-column:2;grid-row:1;font-size:21px;margin:0}
+.op-guidance article p{grid-column:2;font-size:16px;line-height:1.65;margin:0;color:#514a5d}
+@media(min-width:800px){
+ .op-example-list li,.op-example-list li:nth-child(2n){grid-template-columns:34px minmax(190px,235px) minmax(0,1fr);gap:16px;padding:22px 28px}
+ .op-example-list li>span,.op-example-list h4,.op-example-detail{grid-row:1}
+ .op-example-list h4{grid-column:2}
+ .op-example-detail{grid-column:3}
+ .op-example-detail p:first-child{margin-top:0}
+ .op-guidance article{grid-template-columns:38px minmax(190px,240px) minmax(0,1fr);gap:18px;padding:20px 27px}
+ .op-guidance article span,.op-guidance article h3,.op-guidance article p{grid-row:1}
+ .op-guidance article h3{grid-column:2}
+ .op-guidance article p{grid-column:3}
+}
