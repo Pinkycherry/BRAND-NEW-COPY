@@ -22,6 +22,7 @@ const choices = [
 
 export function TemplatesDirectory() {
   const root = useRef<HTMLElement>(null);
+  const carousel = useRef<HTMLElement>(null);
   useEffect(() => {
     const host = root.current;
     if (!host || !("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -31,6 +32,41 @@ export function TemplatesDirectory() {
     host.querySelectorAll(".pt-reveal").forEach(el => { el.classList.add("motion-ready"); observer.observe(el); });
     return () => observer.disconnect();
   }, []);
+  useEffect(() => {
+    const rail = carousel.current;
+    if (!rail || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let frame = 0;
+    let previous = 0;
+    let resumeAt = 0;
+    let paused = false;
+    const pause = () => { paused = true; };
+    const resume = () => { resumeAt = performance.now() + 1800; paused = false; };
+    const move = (now: number) => {
+      if (previous && !paused && now >= resumeAt) {
+        rail.scrollLeft += Math.min(now - previous, 50) * 0.028;
+        const repeatWidth = rail.scrollWidth / 2;
+        if (repeatWidth && rail.scrollLeft >= repeatWidth) rail.scrollLeft -= repeatWidth;
+      }
+      previous = now;
+      frame = requestAnimationFrame(move);
+    };
+    rail.addEventListener("pointerenter", pause);
+    rail.addEventListener("pointerleave", resume);
+    rail.addEventListener("touchstart", pause, { passive: true });
+    rail.addEventListener("touchend", resume);
+    rail.addEventListener("focusin", pause);
+    rail.addEventListener("focusout", resume);
+    frame = requestAnimationFrame(move);
+    return () => {
+      cancelAnimationFrame(frame);
+      rail.removeEventListener("pointerenter", pause);
+      rail.removeEventListener("pointerleave", resume);
+      rail.removeEventListener("touchstart", pause);
+      rail.removeEventListener("touchend", resume);
+      rail.removeEventListener("focusin", pause);
+      rail.removeEventListener("focusout", resume);
+    };
+  }, []);
   const faq = [
     { q: "Which template should I choose first?", a: "Start with the question you cannot answer yet. Read the customer persona if the buyer is unclear, the interview guide if you need to listen, or a plan when you have evidence to organise." },
     { q: "Do I need to fill in a form?", a: "No. These are read-only explanations of each template and its questions. Use what is relevant to your own research and plans." },
@@ -39,7 +75,7 @@ export function TemplatesDirectory() {
   ];
   return <V2Frame active="/templates"><main className="pt-page" ref={root}>
     <section className="pt-hero"><div className="pt-wrap"><nav className="pt-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={15}/><span>Templates</span></nav><div className="pt-hero-grid"><div><span className="pt-eyebrow">Founder templates</span><h1>Give your idea somewhere to become clear.</h1><p>When the questions are scattered, even a promising idea feels heavy. Choose a template guide, understand each part and take the next unknown into a buyer conversation.</p><div className="pt-actions"><a href="#catalog" className="pt-primary">Browse templates <ArrowRight size={18}/></a><a href="/lists" className="pt-secondary">Explore business ideas <ArrowRight size={17}/></a></div></div><div className="pt-hero-art"><img src={templateImages.planning.src} alt={templateImages.planning.alt} width={1600} height={900} loading="eager" title={templateImages.planning.description} fetchPriority="high" /></div></div></div></section>
-    <section className="pt-quick pt-reveal" aria-label="Jump to a template"><div className="pt-wrap"><p>Start with your question</p><nav>{FOUNDER_TEMPLATES.map(item => <a href={`/templates/${item.slug}`} key={item.slug}>{item.title}<ArrowRight size={14}/></a>)}</nav></div></section>
+    <section className="pt-quick pt-reveal" aria-label="Jump to a template"><div className="pt-wrap"><p>Start with your question</p><nav ref={carousel} aria-label="Template guide carousel"><div className="pt-quick-track"><div className="pt-quick-set">{FOUNDER_TEMPLATES.map(item => <a href={`/templates/${item.slug}`} key={item.slug}>{item.title}<ArrowRight size={14}/></a>)}</div><div className="pt-quick-set" aria-hidden="true">{FOUNDER_TEMPLATES.map(item => <a href={`/templates/${item.slug}`} key={item.slug} tabIndex={-1}>{item.title}<ArrowRight size={14}/></a>)}</div></div></nav></div></section>
     <section className="pt-catalog pt-reveal" id="catalog"><div className="pt-wrap"><div className="pt-heading"><span className="pt-eyebrow">The collection</span><h2>Find the page that helps you move.</h2><p>Each guide explains the purchased framework part by part, with Indian business context and questions worth checking in the field.</p></div>{groups.map(group => <div className="pt-group" key={group.title}><div className="pt-group-intro"><span>{group.title}</span><h3>{group.title}</h3><p>{group.description}</p></div><div className="pt-card-grid">{FOUNDER_TEMPLATES.filter(item => item.group === group.title).map(item => <a key={item.slug} className="pt-card" href={`/templates/${item.slug}`}><div className="pt-card-image"><img src={item.image.src} alt={item.image.alt} title={item.image.description} loading="lazy" width={item.image.width} height={item.image.height} /></div><div className="pt-card-copy"><span>{item.group}</span><h4>{item.title}</h4><p>{item.short}</p><strong>Open template <ArrowRight size={16}/></strong></div></a>)}</div></div>)}</div></section>
     <section className="pt-choice pt-reveal"><div className="pt-wrap"><div className="pt-heading"><span className="pt-eyebrow">Choose by decision</span><h2>What is holding you back right now?</h2><p>Pick the question closest to your next conversation. You can change templates as your evidence changes.</p></div><div className="pt-choice-grid">{choices.map(choice => {const template=FOUNDER_TEMPLATES.find(item=>item.slug===choice.slug)!;return <a key={choice.slug} href={`/templates/${choice.slug}`}><span>{choice.need}</span><strong>{template.title}</strong><ArrowRight size={19}/></a>;})}</div></div></section>
     <SellerFaq faq={faq} title="Common questions" />
