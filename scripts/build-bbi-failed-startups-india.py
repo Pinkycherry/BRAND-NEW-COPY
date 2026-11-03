@@ -108,7 +108,7 @@ fx_note = html.fragment_fromstring('<p class="mt-3 text-xs text-muted-foreground
 hero_pills.addnext(fx_note)
 
 markup = html.tostring(main, encoding="unicode", method="html")
-markup = markup.replace("are computed live from our database", "are reported in the source snapshot")
+markup = markup.replace("computed live from our database", "reported in the source snapshot")
 assert "IdeaProof" not in markup and "ideaproof.io" not in markup
 assert markup.count('class="block"') >= 87
 
