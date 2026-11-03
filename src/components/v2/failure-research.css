@@ -2,3 +2,11 @@
 @media(max-width:800px){.fr-hero-grid,.fr-split,.fr-industry-grid{grid-template-columns:1fr;gap:26px}.fr-hero{padding-bottom:45px}.fr-crumb{margin-bottom:28px}.fr-hero figure{max-width:650px}.fr-scenarios,.fr-timeline{grid-template-columns:1fr}.fr-section{padding:46px 0}.fr-decision-grid,.fr-case-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.fr-wrap{width:min(100% - 32px,1240px)}.fr-hero h1{font-size:clamp(36px,9vw,48px)}.fr-hero-grid{gap:24px}.fr-actions{display:grid}.fr-button{width:100%;justify-content:space-between}.fr-jump .fr-wrap{gap:19px}.fr-pattern{grid-template-columns:1fr;padding:15px;gap:18px}.fr-pattern dl{grid-template-columns:1fr;gap:3px}.fr-pattern dt:not(:first-child){margin-top:8px}.fr-evidence-grid,.fr-check ol,.fr-links{grid-template-columns:1fr}.fr-note,.fr-evidence-grid article,.fr-case-grid article{padding:20px}.fr-heading>p:last-child:not(.fr-kicker){font-size:16px}.fr-controls{display:grid}.fr-controls label:first-child{min-width:0}.fr-controls select{max-width:calc(100vw - 160px)}}
 @media(prefers-reduced-motion:reduce){.fr-page *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+.fr-hero{padding-top:108px}
+.fr-crumb{margin-bottom:30px}
+@supports (animation-timeline:view()){
+  @media(prefers-reduced-motion:no-preference){
+    .fr-pattern,.fr-case-grid article,.fr-decision-grid article{animation:fr-enter both linear;animation-timeline:view();animation-range:entry 0% cover 22%}
+    @keyframes fr-enter{from{opacity:.65;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+  }
+}
