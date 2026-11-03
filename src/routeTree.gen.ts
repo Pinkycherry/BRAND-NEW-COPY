@@ -68,6 +68,7 @@ import { Route as TopicsRouteImport } from './routes/topics'
 import { Route as UnitEconomicsIndiaRouteImport } from './routes/unit-economics-india'
 import { Route as VersionDotjsonRouteImport } from './routes/version[.]json'
 import { Route as WeekendMarketStallProfitCheckRouteImport } from './routes/weekend-market-stall-profit-check'
+import { Route as WhyStartupsFail20262027RouteImport } from './routes/why-startups-fail-2026-2027'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as BlueprintsIndexRouteImport } from './routes/blueprints.index'
@@ -392,6 +393,11 @@ const WeekendMarketStallProfitCheckRoute =
     path: '/weekend-market-stall-profit-check',
     getParentRoute: () => rootRouteImport,
   } as any)
+const WhyStartupsFail20262027Route = WhyStartupsFail20262027RouteImport.update({
+  id: '/why-startups-fail-2026-2027',
+  path: '/why-startups-fail-2026-2027',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
@@ -566,6 +572,7 @@ export interface FileRoutesByFullPath {
   '/unit-economics-india': typeof UnitEconomicsIndiaRoute
   '/version.json': typeof VersionDotjsonRoute
   '/weekend-market-stall-profit-check': typeof WeekendMarketStallProfitCheckRoute
+  '/why-startups-fail-2026-2027': typeof WhyStartupsFail20262027Route
   '/blog/$slug': typeof BlogSlugRoute
   '/calculator/$slug': typeof CalculatorSlugRoute
   '/failed-startups/india': typeof FailedStartupsIndiaRoute
@@ -648,6 +655,7 @@ export interface FileRoutesByTo {
   '/unit-economics-india': typeof UnitEconomicsIndiaRoute
   '/version.json': typeof VersionDotjsonRoute
   '/weekend-market-stall-profit-check': typeof WeekendMarketStallProfitCheckRoute
+  '/why-startups-fail-2026-2027': typeof WhyStartupsFail20262027Route
   '/blog/$slug': typeof BlogSlugRoute
   '/calculator/$slug': typeof CalculatorSlugRoute
   '/failed-startups/india': typeof FailedStartupsIndiaRoute
@@ -732,6 +740,7 @@ export interface FileRoutesById {
   '/unit-economics-india': typeof UnitEconomicsIndiaRoute
   '/version.json': typeof VersionDotjsonRoute
   '/weekend-market-stall-profit-check': typeof WeekendMarketStallProfitCheckRoute
+  '/why-startups-fail-2026-2027': typeof WhyStartupsFail20262027Route
   '/blog/$slug': typeof BlogSlugRoute
   '/calculator/$slug': typeof CalculatorSlugRoute
   '/failed-startups/india': typeof FailedStartupsIndiaRoute
@@ -817,6 +826,7 @@ export interface FileRouteTypes {
     | '/unit-economics-india'
     | '/version.json'
     | '/weekend-market-stall-profit-check'
+    | '/why-startups-fail-2026-2027'
     | '/blog/$slug'
     | '/calculator/$slug'
     | '/failed-startups/india'
@@ -899,6 +909,7 @@ export interface FileRouteTypes {
     | '/unit-economics-india'
     | '/version.json'
     | '/weekend-market-stall-profit-check'
+    | '/why-startups-fail-2026-2027'
     | '/blog/$slug'
     | '/calculator/$slug'
     | '/failed-startups/india'
@@ -982,6 +993,7 @@ export interface FileRouteTypes {
     | '/unit-economics-india'
     | '/version.json'
     | '/weekend-market-stall-profit-check'
+    | '/why-startups-fail-2026-2027'
     | '/blog/$slug'
     | '/calculator/$slug'
     | '/failed-startups/india'
@@ -1066,6 +1078,7 @@ export interface RootRouteChildren {
   UnitEconomicsIndiaRoute: typeof UnitEconomicsIndiaRoute
   VersionDotjsonRoute: typeof VersionDotjsonRoute
   WeekendMarketStallProfitCheckRoute: typeof WeekendMarketStallProfitCheckRoute
+  WhyStartupsFail20262027Route: typeof WhyStartupsFail20262027Route
   BlogSlugRoute: typeof BlogSlugRoute
   CalculatorSlugRoute: typeof CalculatorSlugRoute
   FounderStoriesSlugRoute: typeof FounderStoriesSlugRoute
@@ -1501,6 +1514,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WeekendMarketStallProfitCheckRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/why-startups-fail-2026-2027': {
+      id: '/why-startups-fail-2026-2027'
+      path: '/why-startups-fail-2026-2027'
+      fullPath: '/why-startups-fail-2026-2027'
+      preLoaderRoute: typeof WhyStartupsFail20262027RouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/blog'
@@ -1754,6 +1774,7 @@ const rootRouteChildren: RootRouteChildren = {
   UnitEconomicsIndiaRoute: UnitEconomicsIndiaRoute,
   VersionDotjsonRoute: VersionDotjsonRoute,
   WeekendMarketStallProfitCheckRoute: WeekendMarketStallProfitCheckRoute,
+  WhyStartupsFail20262027Route: WhyStartupsFail20262027Route,
   BlogSlugRoute: BlogSlugRoute,
   CalculatorSlugRoute: CalculatorSlugRoute,
   FounderStoriesSlugRoute: FounderStoriesSlugRoute,
