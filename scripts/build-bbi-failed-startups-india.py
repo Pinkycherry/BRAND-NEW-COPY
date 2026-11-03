@@ -6,6 +6,8 @@ The original remains untouched for comparison and future editorial work.
 
 from pathlib import Path
 from lxml import html
+from decimal import Decimal
+import re
 
 root = Path(__file__).resolve().parents[1]
 source = root / "src/bought/research-2.html"
@@ -38,6 +40,24 @@ for anchor in main.xpath('.//a[@href="/"]'):
     if "Validate" in anchor.text_content():
         anchor.set("href", "/startup-idea-validation")
 
+# The snapshot's company favicon collection contains empty files and missing
+# paths. Use neutral initials in the same 48px position rather than broken or
+# misleading logos. The supplied hero illustration remains as exported.
+for image in main.xpath('.//img'):
+    if "hero-failure-india" in image.get("src", ""):
+        image.set("src", "./images/failure-india-original.webp")
+        image.set("alt", "Original illustration of a founder's rupee ledger and startup notes")
+        image.set("width", "1752")
+        image.set("height", "897")
+        continue
+    company = image.get("alt", "").removesuffix(" logo").strip()
+    initials = "".join(word[0] for word in company.split()[:2] if word).upper()[:2] or "•"
+    image.tag = "span"
+    image.attrib.clear()
+    image.set("class", "bbi-case-initial shrink-0")
+    image.set("aria-hidden", "true")
+    image.text = initials
+
 for node in main.xpath('.//text()[contains(., "IdeaProof")]'):
     parent = node.getparent()
     if node.is_tail:
@@ -45,7 +65,50 @@ for node in main.xpath('.//text()[contains(., "IdeaProof")]'):
     else:
         parent.text = (parent.text or "").replace("IdeaProof database", "source database")
 
+# Editorial display conversion only. The purchased source retains every
+# original figure. A fixed rate avoids pretending these are live FX quotes.
+RATES = {"$": Decimal("85"), "£": Decimal("110")}
+UNITS = {"B": Decimal("1000000000"), "M": Decimal("1000000"), "K": Decimal("1000"), "": Decimal(1)}
+RANGE = re.compile(r"(?P<symbol>[$£])(?P<start>\d+(?:\.\d+)?)[-–](?P<end>\d+(?:\.\d+)?)(?P<unit>[BMK])\b", re.I)
+AMOUNT = re.compile(r"(?P<symbol>[$£])(?P<number>\d[\d,]*(?:\.\d+)?)(?P<unit>[BMK])?(?P<plus>\+)?(?P<per>/month)?", re.I)
+
+def rupees(value):
+    if value >= 10**12:
+        amount, unit = value / Decimal(10**12), " lakh crore"
+    elif value >= 10**7:
+        amount, unit = value / Decimal(10**7), " crore"
+    elif value >= 10**5:
+        amount, unit = value / Decimal(10**5), " lakh"
+    else:
+        amount, unit = value, ""
+    rounded = amount.quantize(Decimal("0.01"))
+    return "₹" + f"{rounded:,.2f}".rstrip("0").rstrip(".") + unit
+
+def convert(text):
+    def range_replace(match):
+        factor = RATES[match["symbol"]] * UNITS[match["unit"].upper()]
+        return rupees(Decimal(match["start"]) * factor) + "–" + rupees(Decimal(match["end"]) * factor)
+    text = RANGE.sub(range_replace, text)
+    def amount_replace(match):
+        factor = RATES[match["symbol"]] * UNITS[(match["unit"] or "").upper()]
+        return rupees(Decimal(match["number"].replace(",", "")) * factor) + (match["plus"] or "") + (match["per"] or "")
+    return AMOUNT.sub(amount_replace, text).replace("USD millions raised", "Approximate rupees raised")
+
+for node in main.xpath('.//text()'):
+    if "$" not in node and "£" not in node and "USD millions" not in node:
+        continue
+    parent = node.getparent()
+    if node.is_tail:
+        parent.tail = convert(parent.tail or "")
+    else:
+        parent.text = convert(parent.text or "")
+
+hero_pills = main.xpath('.//h1')[0].getparent().xpath('./ul')[0]
+fx_note = html.fragment_fromstring('<p class="mt-3 text-xs text-muted-foreground">Rupee amounts are approximate display conversions at fixed rates of US$1 = ₹85 and £1 = ₹110. Original figures remain in the purchased source.</p>')
+hero_pills.addnext(fx_note)
+
 markup = html.tostring(main, encoding="unicode", method="html")
+markup = markup.replace("are computed live from our database", "are reported in the source snapshot")
 assert "IdeaProof" not in markup and "ideaproof.io" not in markup
 assert markup.count('class="block"') >= 87
 
@@ -62,6 +125,7 @@ page = '''<!doctype html><html lang="en"><head><meta charset="utf-8">
 @font-face{font-family:Outfit;src:url('./images/s_outfit_v15_QGYvz_MVcBeNP4NJtEtq.woff2.bin') format('woff2');font-display:swap;font-weight:600 700}
 body{margin:0;font-family:Inter,system-ui,sans-serif}h1,h2,h3{font-family:Outfit,Inter,system-ui,sans-serif}
 #india-case-search{font-family:inherit}
+.bbi-case-initial{display:inline-grid;place-items:center;width:48px;height:48px;flex:none;border-radius:9px;background:#f1edfa;color:#633bb0;font:700 13px Inter,system-ui,sans-serif;box-shadow:inset 0 0 0 1px #e3dbee}
 </style></head><body><div id="bbi-india-header"></div><div class="min-h-screen flex flex-col bg-background">'''+markup+'''</div><div id="bbi-india-footer"></div>
 <script>(function(){const input=document.getElementById('india-case-search');if(!input)return;const cards=[...input.closest('section').querySelectorAll('.space-y-2 > .block')];input.addEventListener('input',()=>{const q=input.value.trim().toLocaleLowerCase();for(const card of cards)card.hidden=!!q&&!card.textContent.toLocaleLowerCase().includes(q)})})()</script>
 </body></html>'''
