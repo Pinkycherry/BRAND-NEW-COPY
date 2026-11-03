@@ -22,6 +22,19 @@ main = main[0]
 comparison = main.xpath('.//h2[contains(., "Failure Reasons: India vs Global Average")]')[0].getparent().getparent().getparent()
 comparison.insert(1, html.fragment_fromstring('<figure class="my-5"><img src="./images/failure-reasons-india-global-original.webp" alt="Two startup teams studying customer and cash decisions in different markets" loading="lazy" width="1672" height="941" class="w-full rounded-xl border border-border/60 object-cover" style="aspect-ratio:16/9;object-fit:cover"></figure>'))
 
+# The exported Recharts SVGs serialize as raw nested markup in this static
+# conversion and leave fixed-height blank areas. Replace only those three chart
+# wrappers; keep their surrounding source headings, legends, and commentary.
+charts = main.xpath('.//*[contains(concat(" ",normalize-space(@class)," ")," recharts-responsive-container ")]')
+assert len(charts) == 3
+industry, comparison_chart, capital = charts
+industry.addprevious(html.fragment_fromstring('<figure><img src="./images/failure-industries-original.webp" alt="Indian founders examine several different business sectors" loading="lazy" width="1672" height="941" class="w-full rounded-xl border border-border/60 object-cover" style="aspect-ratio:16/9;object-fit:cover"></figure>'))
+industry.drop_tree()
+comparison_chart.drop_tree()
+capital_slot = capital.getparent()  # The source fixes this wrapper to 320px.
+capital_slot.addprevious(html.fragment_fromstring('<figure><img src="./images/failure-capital-original.webp" alt="Indian founder reviewing cash records with a colleague" loading="lazy" width="1672" height="941" class="w-full rounded-xl border border-border/60 object-cover" style="aspect-ratio:16/9;object-fit:cover"></figure>'))
+capital_slot.drop_tree()
+
 # The seller's 87 case links point to detail pages that were not supplied with
 # this export. Keep each source card and its data visible, without dead links.
 case_section = main.xpath('.//h2[contains(., "Failed Startups (87)")]')[0].getparent().getparent()
@@ -54,8 +67,9 @@ for image in main.xpath('.//img'):
         image.set("alt", "Original illustration of a founder's rupee ledger and startup notes")
         image.set("width", "1752")
         image.set("height", "897")
+        image.set("style", "aspect-ratio:16/9;object-fit:contain")
         continue
-    if "failure-reasons-india-global-original" in image.get("src", ""):
+    if any(name in image.get("src", "") for name in ("failure-reasons-india-global-original", "failure-industries-original", "failure-capital-original")):
         continue
     company = image.get("alt", "").removesuffix(" logo").strip()
     initials = "".join(word[0] for word in company.split()[:2] if word).upper()[:2] or "•"
@@ -112,6 +126,7 @@ for node in main.xpath('.//text()'):
 
 markup = html.tostring(main, encoding="unicode", method="html")
 assert "IdeaProof" not in markup and "ideaproof.io" not in markup
+assert "recharts-" not in markup
 assert markup.count('class="block"') >= 87
 
 # Reuse the purchased stylesheet, spacing, cards, chart rendering, illustrations
