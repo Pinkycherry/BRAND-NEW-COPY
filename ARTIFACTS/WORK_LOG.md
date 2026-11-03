@@ -1,5 +1,9 @@
 # Pinky 1 / Pinky 2 — site build work log
 
+## 2026-11-03 21:59 IST — India failure page restored from purchased export
+- Founder rejected the invented case research and inconsistent typography. Rebuilt `/failed-startups/india` directly from the repo's `src/bought/research-2.html`, preserving the purchased main content, section order, 87 case cards, chart markup, hero image, stylesheet, Inter and Outfit files. Only the seller site frame/branding and dead detail-page links are replaced; the source export stays intact.
+- The conversion is reproducible with `scripts/build-bbi-failed-startups-india.py`; the route injects the existing BusinessIdea.io header/footer. Case search is a small local filter of the 87 source cards. No outside data was added. Offline `npm run build` passed. Main deploy/live visual check pending.
+
 ## 2026-11-02 13:57 IST — Pinky 2 copy retained
 - [Repo handover](https://github.com/Pinkycherry/BRAND-NEW-COPY/blob/main/ARTIFACTS/PINKY_HANDOVER_2026-11-02.md) published on `main` in [25ab230](https://github.com/Pinkycherry/BRAND-NEW-COPY/commit/25ab2301db1ff8351b6edf55f5f91ec26d102452). Identical SHA-256 copy stored as [Pinky 2 handover](https://chatgpt.com/library?file_id=libfile_068df87a86d48191960b262e305c4833&account_id=personal). It summarizes the accessible conversation; a verbatim full chat export was unavailable. No credentials/private details added to public repo.
 - **Exact next step:** On a fresh browser session, visually inspect `/tools` original hero and FAQ category-filter/mobile behavior; then present the topics/templates canonical-source mapping and seek founder direction on the next purchased page. Do not touch owner-locked idea routes, paused homepage body or case studies. Work on `main` only, no local server; send live and commit links after any page edit.

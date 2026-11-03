@@ -564,3 +564,7 @@ The five specific-field models are the four original calculators plus CAC. The 5
 
 ### 2026-11-03 21:52 IST — Failure pages live, follow-up gates
 - `/why-startups-fail-2026-2027` and `/failed-startups/india` render on the public Vercel demo at commit 8e55b38; the old `/failed-startups` URL redirects. Seven cases have exact status/source links; the 2027 analysis is scenario-labelled. Desktop visual and search check passed. Phone-width QA and founder acceptance remain pending. Additional cases require source-backed verification before publication; do not copy the seller export's operating-company “failures.” The inherited paid-versus-free footer inconsistency remains a separate shared-shell correction.
+
+### 2026-11-03 21:59 IST — Founder correction: India purchased data only
+- The previous failure-page research and visual adaptation were rejected. For `/failed-startups/india`, the purchased `src/bought/research-2.html` is now the sole content source. Restore its section order, copy, 87 cards, art, layout, and Inter/Outfit fonts; remove seller branding and dead seller-only detail links. Do not add independent research or revise source claims. The source is preserved unchanged for the founder's later research/editing.
+- The 2026–2027 page is outside this narrowed India-only request and remains pending founder direction. The previous editorial interpretation and approval notes above are superseded for the India page.

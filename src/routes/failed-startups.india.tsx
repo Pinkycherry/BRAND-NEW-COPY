@@ -1,12 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { FailedStartupsIndiaPage } from "@/components/v2/failure-research";
+import purchasedIndiaPage from "@/bought/research-2-bbi.html?raw";
+import { boughtPage } from "@/bought/serve";
+import menuPanels from "@/bought/menu-panels.json";
+import menuBindings from "@/bought/menus.html?raw";
+import sharedHeaderStyles from "@/components/v2/v2.css?raw";
 
 export const Route = createFileRoute("/failed-startups/india")({
-  head: () => ({ meta: [
-    { title: "Failed Startups in India: Founder Accounts and Lessons | BusinessIdea.io" },
-    { name: "description", content: "Verified Indian startup shutdowns, founder accounts, exact status, and practical questions for your own business." },
-    { name: "robots", content: "noindex,nofollow" },
-    { property: "og:image", content: "/images/failure-india.svg" },
-  ] }),
-  component: FailedStartupsIndiaPage,
+  server: {
+    handlers: {
+      GET: async () => {
+        const page = purchasedIndiaPage
+          .replace('<div id="bbi-india-header"></div>', menuPanels.header)
+          .replace('<div id="bbi-india-footer"></div>', menuPanels.footer)
+          .replace("</head>", `<style id="bbi-shared-header-styles">${sharedHeaderStyles}</style></head>`)
+          .replace("</body>", `${menuBindings}</body>`);
+        return boughtPage(page, "research-2");
+      },
+    },
+  },
 });
