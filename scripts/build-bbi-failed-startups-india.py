@@ -61,9 +61,9 @@ for image in main.xpath('.//img'):
 for node in main.xpath('.//text()[contains(., "IdeaProof")]'):
     parent = node.getparent()
     if node.is_tail:
-        parent.tail = (parent.tail or "").replace("IdeaProof database", "source database")
+        parent.tail = (parent.tail or "").replace("IdeaProof database", "database")
     else:
-        parent.text = (parent.text or "").replace("IdeaProof database", "source database")
+        parent.text = (parent.text or "").replace("IdeaProof database", "database")
 
 # Editorial display conversion only. The purchased source retains every
 # original figure. A fixed rate avoids pretending these are live FX quotes.
@@ -103,12 +103,7 @@ for node in main.xpath('.//text()'):
     else:
         parent.text = convert(parent.text or "")
 
-hero_pills = main.xpath('.//h1')[0].getparent().xpath('./ul')[0]
-fx_note = html.fragment_fromstring('<p class="mt-3 text-xs text-muted-foreground">Rupee amounts are approximate display conversions at fixed rates of US$1 = ₹85 and £1 = ₹110. Original figures remain in the purchased source.</p>')
-hero_pills.addnext(fx_note)
-
 markup = html.tostring(main, encoding="unicode", method="html")
-markup = markup.replace("computed live from our database", "reported in the source snapshot")
 assert "IdeaProof" not in markup and "ideaproof.io" not in markup
 assert markup.count('class="block"') >= 87
 
