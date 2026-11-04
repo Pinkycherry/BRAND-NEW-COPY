@@ -1,0 +1,304 @@
+import type { TopicPage } from "@/bought/topic-page";
+import { PARENT, UPDATED, IMG, SRC, questionSections } from "./topic-pages-shared";
+
+/** Seller layout: question page (/questions/what-is-pmf). */
+export const pmf: TopicPage = {
+  slug: "product-market-fit-india",
+  sellerRef: "https://ideaproof.io/questions/what-is-pmf",
+  parent: PARENT,
+  seo: {
+    title: "What is Product-Market Fit? Signs Your Business Has It in India",
+    description: "Product-market fit in simple words for Indian founders: the signs you have it, how to measure it with repeat orders and referrals, and what to do if you don't yet.",
+  },
+  hero: {
+    eyebrow: "Product-market fit",
+    h1: "What is product-market fit, and do you have it?",
+    highlight: "product-market fit",
+    intro: "Product-market fit is the moment buyers pull your product out of your hands. They come back, they tell their friends, and they complain loudly when you run out. Before that moment, you are pushing. After it, you are keeping up.",
+    updated: UPDATED,
+    primary: { label: "Check my signs", href: "#check" },
+    secondary: { label: "Validate first", href: "/how-to-validate-business-idea-india" },
+    image: IMG.validation,
+    imageAlt: "Customers coming back for repeat orders",
+  },
+  sections: questionSections({
+    takeaways: [
+      "Product-market fit means a clear group of buyers wants what you sell enough to pay, return and recommend it.",
+      "The strongest signs are **repeat purchases** and **referrals you did not ask for**.",
+      "You can have fit in one city or one type of buyer and not in another. That is normal.",
+      "Do not spend heavily on growth until you see the signs.",
+    ],
+    steps: {
+      heading: "How to measure product-market fit",
+      items: [
+        { title: "Track repeat buyers", body: "Of the customers who bought last month, how many bought again this month? Write it every month.", check: "Count your repeat buyers from last month's UPI or order list." },
+        { title: "Ask the disappointment question", body: "Ask regular buyers: \"How would you feel if you could no longer buy this?\" Many founders use the Sean Ellis question: if a large share say \"very disappointed\", you are close." },
+        { title: "Count unasked referrals", body: "\"My neighbour told me about you\" is the best sentence you can hear. Note each one." },
+        { title: "Watch what happens when you stop pushing", body: "Pause promotion for a week. Do orders hold up? Pull, not push, is the sign." },
+        { title: "Check the money", body: "Buyers accept your price without heavy discounts, and each order makes a profit. See [unit economics](/unit-economics-india)." },
+      ],
+    },
+    table: {
+      heading: "Signs you have fit, and signs you don't yet",
+      columns: ["You are close to fit", "You are not there yet"],
+      rows: [
+        ["Buyers reorder without reminders", "Every sale needs a discount or a follow-up call"],
+        ["New buyers say a friend told them", "New buyers come only from ads"],
+        ["People complain when you are out of stock", "Nobody notices when you take a break"],
+        ["You can raise the price a little and most stay", "A small price rise and buyers disappear"],
+      ],
+    },
+    mistakes: {
+      heading: "Product-market fit mistakes",
+      items: [
+        { title: "Calling launch-week sales fit", body: "First orders come from curiosity and friends. Fit shows in month three and four." },
+        { title: "Scaling to new cities too early", body: "Win one area first. What works in Chennai may need changes in Guwahati." },
+        { title: "Adding features instead of listening", body: "Ask why people leave. The answer is often price, delivery or trust, not features." },
+      ],
+    },
+    situations: [
+      { title: "A healthy snacks brand in Hyderabad", body: "Office canteens reordered every week while kirana stores did not. The founder focused on offices, where the fit was." },
+      { title: "A spoken English batch in Varanasi", body: "Students brought their cousins without being asked. That pull was the signal to start a second batch." },
+      { title: "A home cleaning service in Gurugram", body: "Bookings dropped whenever ads stopped. The founder went back to fix trust and timing before spending more." },
+    ],
+    check: {
+      heading: "Quick product-market fit check",
+      intro: "Tick what is true for your business this month.",
+      items: [
+        "At least some of last month's buyers bought again this month.",
+        "Someone came to me because a customer recommended me.",
+        "Buyers pay my full price without asking for a discount.",
+        "Orders did not crash when I paused promotion.",
+        "I can describe exactly which type of buyer loves this most.",
+      ],
+      result: "Fewer than four ticks? Keep improving for one buyer group before you scale.",
+    },
+    faq: {
+      heading: "Product-market fit FAQ",
+      items: [
+        { q: "How long does it take to find product-market fit?", a: "There is no fixed time. Some local services see the signs within a few months; products that need habits to change can take longer. Watch the signs, not the calendar." },
+        { q: "Can a small local business have product-market fit?", a: "Yes. A chai stall with a queue every evening has fit with the people who pass that corner." },
+        { q: "What is the Sean Ellis test?", a: "A one-question survey asking users how they would feel if they could no longer use the product. A high share of \"very disappointed\" answers suggests strong fit." },
+      ],
+    },
+    tips: [
+      "Talk to your best ten customers every month. Ask what they would miss.",
+      "Talk to people who stopped buying. Ask what changed.",
+      "Write the one buyer type you serve best on top of every plan.",
+    ],
+    sources: [SRC.npci, SRC.udyam],
+    related: [
+      { label: "How to validate a business idea", href: "/how-to-validate-business-idea-india" },
+      { label: "Customer interviews", href: "/customer-interviews-india" },
+      { label: "Customer acquisition cost", href: "/customer-acquisition-cost-india" },
+    ],
+    keepReading: [
+      { title: "Product-market fit metrics", body: "A deeper guide to measuring fit.", href: "/startup-guides/product-market-fit-metrics", cta: "Read" },
+      { title: "Pivot or stop", body: "What to do if the signs are not coming.", href: "/business-idea-pivot-or-stop", cta: "Decide" },
+      { title: "Launch evidence plan", body: "What proof to collect before launch.", href: "/startup-launch-plan-india", cta: "Plan" },
+    ],
+    deeper: [
+      { label: "Unit economics", href: "/unit-economics-india" },
+      { label: "How to build an MVP", href: "/how-to-build-mvp-india" },
+      { label: "Bootstrapping in India", href: "/bootstrapping-business-india" },
+    ],
+  }),
+};
+
+/** Seller layout: question page (/questions/conduct-customer-interviews). */
+export const interviews: TopicPage = {
+  slug: "customer-interviews-india",
+  sellerRef: "https://ideaproof.io/questions/conduct-customer-interviews",
+  parent: PARENT,
+  seo: {
+    title: "How to Do Customer Interviews to Validate a Business Idea in India",
+    description: "How to talk to customers in India before you start: who to meet, where to find them, questions to ask in Hindi, English or your language, and how to read the answers.",
+  },
+  hero: {
+    eyebrow: "Customer interviews",
+    h1: "How to do customer interviews for your business idea",
+    highlight: "customer interviews",
+    intro: "The fastest way to know if your idea will work is to sit with ten people who would pay and listen. Not pitch. Listen. Here is exactly what to ask, and where to find them in your town or city.",
+    updated: UPDATED,
+    primary: { label: "Get the questions", href: "#steps" },
+    secondary: { label: "Plan a demand test", href: "/business-demand-test-india" },
+    image: IMG.validation,
+    imageAlt: "A founder listening to a potential customer",
+  },
+  sections: questionSections({
+    takeaways: [
+      "Talk to people who fit your buyer line, not friends and family.",
+      "Ask about their past behaviour and spending, not about your idea.",
+      "Ten good conversations usually show you a pattern.",
+      "End with a small ask: a pre-order, a trial, or an introduction to someone else.",
+    ],
+    steps: {
+      heading: "How to run a customer interview",
+      items: [
+        { title: "Find the right ten people", body: "Go where they already are: the vegetable market, a society WhatsApp group, the PG near the college, the wholesale lane, a clinic waiting room, a farmers' meeting. Ask shop owners at quiet hours.", check: "Write down three places you will visit this week." },
+        { title: "Speak their language", body: "Talk in Hindi, English, Tamil, Bengali or whatever they are comfortable in. People open up in their own language." },
+        { title: "Ask about the past, not the future", body: "\"When did this last happen to you?\" \"What did you do?\" \"How much did you spend?\" Past actions are honest; future promises are not." },
+        { title: "Keep quiet and take notes", body: "Let silences sit. Write their exact words. Do not defend your idea." },
+        { title: "Close with a small ask", body: "\"Can I send you a sample next week?\" \"Would you pay ₹100 now to book the first batch?\" \"Who else should I speak to?\"", check: "Decide your closing ask before the first interview." },
+      ],
+    },
+    table: {
+      heading: "Questions to ask, and questions to avoid",
+      columns: ["Ask this", "Not this", "Why"],
+      rows: [
+        ["When did you last face this problem?", "Would you have this problem?", "Real past events, not guesses"],
+        ["What did you do about it?", "Would you use my product?", "Shows what they already spend time or money on"],
+        ["How much did that cost you?", "How much would you pay?", "People overstate what they would pay"],
+        ["What was hardest about it?", "Don't you think my idea is good?", "You want problems, not compliments"],
+        ["Who else deals with this?", "Can you share my page?", "Gets you the next interview"],
+      ],
+    },
+    mistakes: {
+      heading: "Interview mistakes to avoid",
+      items: [
+        { title: "Pitching instead of listening", body: "The moment you pitch, people get polite. Save the idea for the end, if at all." },
+        { title: "Only asking people like you", body: "If you sell to shopkeepers, meet shopkeepers, not your college friends." },
+        { title: "Believing \"I'll definitely buy\"", body: "Only money or time committed counts." },
+        { title: "Not writing it down", body: "Memory edits what you hear. Note exact words straight after." },
+      ],
+    },
+    situations: [
+      { title: "A laundry pickup idea in a Noida society", body: "Residents said they wanted it, but when asked about last week, most used the press-wala downstairs and were happy. The founder looked at office-goers in PGs instead." },
+      { title: "Seed supply for farmers near Nashik", body: "Talking at the mandi showed farmers trusted their local dealer. The founder partnered with dealers instead of selling directly." },
+      { title: "A kids' coding class in Mysuru", body: "Parents' real worry was screen time, not coding. The founder changed the class to offline weekend sessions." },
+    ],
+    faq: {
+      heading: "Customer interview FAQ",
+      items: [
+        { q: "How many customer interviews do I need?", a: "Start with ten people who match your buyer. If the same problem comes up again and again, you have a pattern. If answers are all different, your buyer line is too broad." },
+        { q: "Can I do interviews on WhatsApp or phone?", a: "Yes. A call or voice note works well. Video or face to face is better for reading reactions." },
+        { q: "Should I pay people for interviews?", a: "Usually not needed. Buying someone a chai and respecting their time is enough. For busy professionals, a small thank-you is fine." },
+        { q: "What if everyone says my idea is good?", a: "That usually means you asked about your idea. Go back and ask about their past behaviour and spending instead." },
+      ],
+    },
+    tips: [
+      "Do interviews in pairs if you can: one asks, one writes.",
+      "Interview at the time and place the problem happens: the morning rush, month-end, harvest time.",
+      "After ten interviews, write the three sentences you heard most.",
+    ],
+    sources: [{ label: "Open Government Data Platform India", href: "https://data.gov.in/", note: "Useful for finding where your buyers are, by district." }],
+    related: [
+      { label: "How to validate a business idea", href: "/how-to-validate-business-idea-india" },
+      { label: "Get your first customer", href: "/first-customer-india" },
+      { label: "Product-market fit", href: "/product-market-fit-india" },
+    ],
+    keepReading: [
+      { title: "Validation field guide", body: "More ways to test before you build.", href: "/startup-idea-validation", cta: "Read" },
+      { title: "Business idea validation framework", body: "A full framework from problem to price.", href: "/startup-guides/business-idea-validation-framework", cta: "Read" },
+      { title: "Founder decision journal", body: "Write what you learned after each interview.", href: "/founder-decision-journal", cta: "Open" },
+    ],
+    deeper: [
+      { label: "TAM, SAM, SOM", href: "/tam-sam-som-india" },
+      { label: "Startup mistakes to avoid", href: "/startup-mistakes-to-avoid-india" },
+      { label: "Demand test for India", href: "/business-demand-test-india" },
+    ],
+  }),
+};
+
+/** Seller layout: question page (/questions/how-to-build-mvp). */
+export const mvp: TopicPage = {
+  slug: "how-to-build-mvp-india",
+  sellerRef: "https://ideaproof.io/questions/how-to-build-mvp",
+  parent: PARENT,
+  seo: {
+    title: "How to Build an MVP in India: Start Small With WhatsApp, UPI and Your Own Hands",
+    description: "Build a minimum viable product in India without big spending: a WhatsApp catalogue, a Google Form, a UPI QR code, a first batch or a manual service. Steps and examples.",
+  },
+  hero: {
+    eyebrow: "Build an MVP",
+    h1: "How to build an MVP for your business in India",
+    highlight: "MVP",
+    intro: "An MVP (minimum viable product) is the smallest thing you can sell to learn if people want it. In India it is often not an app at all. It is a WhatsApp catalogue, a UPI QR code and you, doing the work by hand.",
+    updated: UPDATED,
+    primary: { label: "Build mine", href: "#steps" },
+    secondary: { label: "Validate first", href: "/how-to-validate-business-idea-india" },
+    image: IMG.hub,
+    imageAlt: "A simple first version of a product",
+  },
+  sections: questionSections({
+    takeaways: [
+      "Your MVP must be something people can **pay for**, not just look at.",
+      "Do things that don't scale first: deliver yourself, take orders on WhatsApp, track in a notebook.",
+      "Build only what tests your riskiest guess.",
+      "Spend on an app, a shop or machines only after the MVP shows real demand.",
+    ],
+    steps: {
+      heading: "How to build your MVP, step by step",
+      items: [
+        { title: "Pick the one guess that could kill your idea", body: "Will people pay this price? Will shops stock it? Will students come every week? Your MVP tests that one thing.", check: "Write your riskiest guess in one line." },
+        { title: "Choose the simplest form", body: "A WhatsApp Business catalogue, an Instagram page, a Google Form, a printed menu, a single sample batch, a free trial class, a manual service." },
+        { title: "Set up payment", body: "A UPI QR code on a business account is enough to start. Real payment is the test." },
+        { title: "Launch to your interview list first", body: "The people you spoke to in [customer interviews](/customer-interviews-india) are your first buyers." },
+        { title: "Measure and change one thing at a time", body: "Orders, repeat orders, complaints, time per order. Change price, menu, delivery area or product, one at a time." },
+      ],
+    },
+    table: {
+      heading: "MVP options for common Indian businesses",
+      columns: ["Business", "Simple MVP", "What it tests"],
+      rows: [
+        ["Cloud kitchen", "A fixed weekly menu on WhatsApp, pre-orders only", "Taste, price and repeat orders"],
+        ["Clothing brand", "Ten designs, made to order, sold on Instagram", "Which designs and sizes sell"],
+        ["Local service app", "A phone number and a Google Sheet of service partners", "Whether customers book and pay"],
+        ["B2B supply", "Deliver to five shops yourself", "Whether shops reorder"],
+        ["Online course", "A live batch on a video call before recording anything", "Whether students pay and finish"],
+      ],
+    },
+    mistakes: {
+      heading: "MVP mistakes",
+      items: [
+        { title: "Building an app first", body: "Many Indian buyers are happy to order on WhatsApp or by phone. Test demand before code." },
+        { title: "Making it free", body: "Free tells you little. Charge something, even a small amount." },
+        { title: "Perfect packaging before proof", body: "Plain, clean and labelled is enough for the first batch." },
+        { title: "Testing too many things at once", body: "If you change price, menu and area together, you will not know what worked." },
+      ],
+    },
+    situations: [
+      { title: "A millet breakfast brand in Chennai", body: "Sold 30 jars to office colleagues through a Google Form and UPI before talking to any shop." },
+      { title: "A tractor rental idea in rural Punjab", body: "The founder took bookings on phone calls for his own tractor for one season before building any app." },
+      { title: "A wedding planning service in Jaipur", body: "Planned two small family functions at cost to build a portfolio and testimonials before charging full fees." },
+    ],
+    faq: {
+      heading: "MVP FAQ",
+      items: [
+        { q: "How much does an MVP cost in India?", a: "It depends on the business, but many service and food MVPs cost little beyond your time, a phone and a small first batch. Only spend on what tests your riskiest guess." },
+        { q: "No-code or custom app for an MVP?", a: "Start with no-code tools or no app at all. Build custom software only once people are paying and the manual way is breaking." },
+        { q: "Do I need registrations for an MVP?", a: "For a small test, often not, but check the rules that apply to you, such as FSSAI for food. Register on Udyam for free once you start selling regularly." },
+      ],
+    },
+    tips: [
+      "Set a deadline: launch your MVP within 14 days.",
+      "Keep a notebook of every order and every complaint.",
+      "Call every first-time buyer after a week and ask what to improve.",
+    ],
+    sources: [{ label: "WhatsApp Business", href: "https://business.whatsapp.com/", note: "Catalogue and quick replies for small businesses." }, SRC.npci, SRC.udyam, { label: "FSSAI: Food business registration", href: "https://foscos.fssai.gov.in/" }],
+    compare: {
+      heading: "Compare your options",
+      columns: ["Approach", "Cost", "Speed", "When to choose"],
+      rows: [
+        ["Manual service + WhatsApp", "Very low", "Days", "Almost always, first"],
+        ["No-code tools (forms, sheets, site builders)", "Low", "A week or two", "When orders grow beyond what you can track by hand"],
+        ["Custom app or software", "High", "Months", "After proven demand, when the manual way breaks"],
+      ],
+    },
+    related: [
+      { label: "Customer interviews", href: "/customer-interviews-india" },
+      { label: "Product-market fit", href: "/product-market-fit-india" },
+      { label: "Money needed to start", href: "/money-needed-to-start-business-india" },
+    ],
+    keepReading: [
+      { title: "MVP development guide", body: "A longer guide to building your first version.", href: "/startup-guides/minimum-viable-product-development", cta: "Read" },
+      { title: "Online business ideas", body: "Ideas you can test with a phone and a catalogue.", href: "/online-business-ideas-india", cta: "Browse" },
+      { title: "Weekend market stall check", body: "Test a product with real buyers in one weekend.", href: "/weekend-market-stall-profit-check", cta: "Check" },
+    ],
+    deeper: [
+      { label: "How to validate a business idea", href: "/how-to-validate-business-idea-india" },
+      { label: "First-price workbench", href: "/business-pricing-india" },
+      { label: "Startup mistakes to avoid", href: "/startup-mistakes-to-avoid-india" },
+    ],
+  }),
+};
