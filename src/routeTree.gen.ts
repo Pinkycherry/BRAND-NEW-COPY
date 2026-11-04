@@ -42,6 +42,7 @@ import { Route as HowToCalculateTamSamSomForABusinessInIndiaRouteImport } from '
 import { Route as HowToCheckIfYourBusinessIdeaIsGoodInIndiaRouteImport } from './routes/how-to-check-if-your-business-idea-is-good-in-india'
 import { Route as HowToGetFundingForASmallBusinessInIndiaRouteImport } from './routes/how-to-get-funding-for-a-small-business-in-india'
 import { Route as HowToKnowIfYourBusinessHasProductMarketFitInIndiaRouteImport } from './routes/how-to-know-if-your-business-has-product-market-fit-in-india'
+import { Route as HowToRaiseFundsForAStartupInIndiaRouteImport } from './routes/how-to-raise-funds-for-a-startup-in-india'
 import { Route as HowToStartABusinessWithoutInvestorsInIndiaRouteImport } from './routes/how-to-start-a-business-without-investors-in-india'
 import { Route as HowToTalkToCustomersBeforeStartingABusinessInIndiaRouteImport } from './routes/how-to-talk-to-customers-before-starting-a-business-in-india'
 import { Route as HowToValidateABusinessIdeaInIndiaRouteImport } from './routes/how-to-validate-a-business-idea-in-india'
@@ -275,6 +276,12 @@ const HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute =
   HowToKnowIfYourBusinessHasProductMarketFitInIndiaRouteImport.update({
     id: '/how-to-know-if-your-business-has-product-market-fit-in-india',
     path: '/how-to-know-if-your-business-has-product-market-fit-in-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HowToRaiseFundsForAStartupInIndiaRoute =
+  HowToRaiseFundsForAStartupInIndiaRouteImport.update({
+    id: '/how-to-raise-funds-for-a-startup-in-india',
+    path: '/how-to-raise-funds-for-a-startup-in-india',
     getParentRoute: () => rootRouteImport,
   } as any)
 const HowToStartABusinessWithoutInvestorsInIndiaRoute =
@@ -623,6 +630,7 @@ export interface FileRoutesByFullPath {
   '/how-to-check-if-your-business-idea-is-good-in-india': typeof HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute
   '/how-to-get-funding-for-a-small-business-in-india': typeof HowToGetFundingForASmallBusinessInIndiaRoute
   '/how-to-know-if-your-business-has-product-market-fit-in-india': typeof HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute
+  '/how-to-raise-funds-for-a-startup-in-india': typeof HowToRaiseFundsForAStartupInIndiaRoute
   '/how-to-start-a-business-without-investors-in-india': typeof HowToStartABusinessWithoutInvestorsInIndiaRoute
   '/how-to-talk-to-customers-before-starting-a-business-in-india': typeof HowToTalkToCustomersBeforeStartingABusinessInIndiaRoute
   '/how-to-validate-a-business-idea-in-india': typeof HowToValidateABusinessIdeaInIndiaRoute
@@ -718,6 +726,7 @@ export interface FileRoutesByTo {
   '/how-to-check-if-your-business-idea-is-good-in-india': typeof HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute
   '/how-to-get-funding-for-a-small-business-in-india': typeof HowToGetFundingForASmallBusinessInIndiaRoute
   '/how-to-know-if-your-business-has-product-market-fit-in-india': typeof HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute
+  '/how-to-raise-funds-for-a-startup-in-india': typeof HowToRaiseFundsForAStartupInIndiaRoute
   '/how-to-start-a-business-without-investors-in-india': typeof HowToStartABusinessWithoutInvestorsInIndiaRoute
   '/how-to-talk-to-customers-before-starting-a-business-in-india': typeof HowToTalkToCustomersBeforeStartingABusinessInIndiaRoute
   '/how-to-validate-a-business-idea-in-india': typeof HowToValidateABusinessIdeaInIndiaRoute
@@ -813,6 +822,7 @@ export interface FileRoutesById {
   '/how-to-check-if-your-business-idea-is-good-in-india': typeof HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute
   '/how-to-get-funding-for-a-small-business-in-india': typeof HowToGetFundingForASmallBusinessInIndiaRoute
   '/how-to-know-if-your-business-has-product-market-fit-in-india': typeof HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute
+  '/how-to-raise-funds-for-a-startup-in-india': typeof HowToRaiseFundsForAStartupInIndiaRoute
   '/how-to-start-a-business-without-investors-in-india': typeof HowToStartABusinessWithoutInvestorsInIndiaRoute
   '/how-to-talk-to-customers-before-starting-a-business-in-india': typeof HowToTalkToCustomersBeforeStartingABusinessInIndiaRoute
   '/how-to-validate-a-business-idea-in-india': typeof HowToValidateABusinessIdeaInIndiaRoute
@@ -910,6 +920,7 @@ export interface FileRouteTypes {
     | '/how-to-check-if-your-business-idea-is-good-in-india'
     | '/how-to-get-funding-for-a-small-business-in-india'
     | '/how-to-know-if-your-business-has-product-market-fit-in-india'
+    | '/how-to-raise-funds-for-a-startup-in-india'
     | '/how-to-start-a-business-without-investors-in-india'
     | '/how-to-talk-to-customers-before-starting-a-business-in-india'
     | '/how-to-validate-a-business-idea-in-india'
@@ -1005,6 +1016,7 @@ export interface FileRouteTypes {
     | '/how-to-check-if-your-business-idea-is-good-in-india'
     | '/how-to-get-funding-for-a-small-business-in-india'
     | '/how-to-know-if-your-business-has-product-market-fit-in-india'
+    | '/how-to-raise-funds-for-a-startup-in-india'
     | '/how-to-start-a-business-without-investors-in-india'
     | '/how-to-talk-to-customers-before-starting-a-business-in-india'
     | '/how-to-validate-a-business-idea-in-india'
@@ -1099,6 +1111,7 @@ export interface FileRouteTypes {
     | '/how-to-check-if-your-business-idea-is-good-in-india'
     | '/how-to-get-funding-for-a-small-business-in-india'
     | '/how-to-know-if-your-business-has-product-market-fit-in-india'
+    | '/how-to-raise-funds-for-a-startup-in-india'
     | '/how-to-start-a-business-without-investors-in-india'
     | '/how-to-talk-to-customers-before-starting-a-business-in-india'
     | '/how-to-validate-a-business-idea-in-india'
@@ -1195,6 +1208,7 @@ export interface RootRouteChildren {
   HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute: typeof HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute
   HowToGetFundingForASmallBusinessInIndiaRoute: typeof HowToGetFundingForASmallBusinessInIndiaRoute
   HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute: typeof HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute
+  HowToRaiseFundsForAStartupInIndiaRoute: typeof HowToRaiseFundsForAStartupInIndiaRoute
   HowToStartABusinessWithoutInvestorsInIndiaRoute: typeof HowToStartABusinessWithoutInvestorsInIndiaRoute
   HowToTalkToCustomersBeforeStartingABusinessInIndiaRoute: typeof HowToTalkToCustomersBeforeStartingABusinessInIndiaRoute
   HowToValidateABusinessIdeaInIndiaRoute: typeof HowToValidateABusinessIdeaInIndiaRoute
@@ -1484,6 +1498,13 @@ declare module '@tanstack/react-router' {
       path: '/how-to-know-if-your-business-has-product-market-fit-in-india'
       fullPath: '/how-to-know-if-your-business-has-product-market-fit-in-india'
       preLoaderRoute: typeof HowToKnowIfYourBusinessHasProductMarketFitInIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-to-raise-funds-for-a-startup-in-india': {
+      id: '/how-to-raise-funds-for-a-startup-in-india'
+      path: '/how-to-raise-funds-for-a-startup-in-india'
+      fullPath: '/how-to-raise-funds-for-a-startup-in-india'
+      preLoaderRoute: typeof HowToRaiseFundsForAStartupInIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/how-to-start-a-business-without-investors-in-india': {
@@ -1986,6 +2007,8 @@ const rootRouteChildren: RootRouteChildren = {
     HowToGetFundingForASmallBusinessInIndiaRoute,
   HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute:
     HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute,
+  HowToRaiseFundsForAStartupInIndiaRoute:
+    HowToRaiseFundsForAStartupInIndiaRoute,
   HowToStartABusinessWithoutInvestorsInIndiaRoute:
     HowToStartABusinessWithoutInvestorsInIndiaRoute,
   HowToTalkToCustomersBeforeStartingABusinessInIndiaRoute:
