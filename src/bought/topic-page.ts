@@ -62,12 +62,15 @@ const STYLE = (() => {
 
 const esc = (v: string) => v.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c] ?? c);
 /** Inline emphasis: **bold** only. */
+/** Internal research markers ([Data pending: ...]) are tracked in India Topic Pages Review and never shown on the public page. */
+const stripPending = (v: string) => v.replace(/\s*\[Data pending: [^\]]+\]/g, "").trim();
 const rich = (v: string) =>
-  esc(v)
-    .replace(/\[Data pending: ([^\]]+)\]/g, '<mark class="rounded px-1.5 py-0.5 font-medium" style="background:#fef3c7;color:#78350f;box-shadow:0 0 0 1px #fcd34d;font-size:.85em" data-pending="$1">[Data pending: $1]</mark>')
+  esc(stripPending(v))
     .replace(/\*\*(.+?)\*\*/g, '<strong class="text-foreground">$1</strong>')
     .replace(/\[([^\]]+)\]\((\/[^)\s]*|#[^)\s]*)\)/g, '<a class="text-primary underline-offset-2 hover:underline" href="$2">$1</a>')
     .replace(/\[([^\]]+)\]\((https:\/\/[^)\s]+)\)/g, '<a class="text-primary underline-offset-2 hover:underline" href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+/** A table cell whose only content was a pending figure becomes a fill-in prompt for the reader. */
+const cell = (v: string) => (stripPending(v) ? rich(v) : '<em class="text-muted-foreground">Your local figure</em>');
 
 const ICON = {
   arrow: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>',
@@ -91,9 +94,9 @@ function head(title: string, sub?: string) {
 function block(b: Block): string {
   switch (b.kind) {
     case "p": return `<p>${rich(b.text)}</p>`;
-    case "h3": return `<h3 id="${b.text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60)}" class="pt-4 text-lg font-semibold text-foreground scroll-mt-24">${esc(b.text)}</h3>`;
-    case "list": { const tag = b.ordered ? "ol" : "ul"; return `<${tag} class="${b.ordered ? "list-decimal" : "list-disc"} pl-6 space-y-1.5">${b.items.map((i) => `<li>${rich(i)}</li>`).join("")}</${tag}>`; }
-    case "table": return `<div class="overflow-x-auto rounded-xl border border-border/60 bg-white"><table class="w-full text-sm"><thead class="bg-muted/40"><tr>${b.columns.map((c) => `<th class="text-left font-semibold text-foreground px-4 py-3">${esc(c)}</th>`).join("")}</tr></thead><tbody>${b.rows.map((r) => `<tr class="border-t border-border/50">${r.map((c, k) => `<td class="px-4 py-3 align-top ${k === 0 ? "font-medium text-foreground" : ""}">${rich(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>${b.note ? `<p class="text-xs">${rich(b.note)}</p>` : ""}`;
+    case "h3": return `<h3 id="${slugId(b.text)}" class="pt-4 text-lg font-semibold text-foreground scroll-mt-24">${esc(b.text)}</h3>`;
+    case "list": { const tag = b.ordered ? "ol" : "ul"; return `<${tag} class="${b.ordered ? "list-decimal" : "list-disc"} pl-6 space-y-1.5">${b.items.filter((i) => stripPending(i)).map((i) => `<li>${rich(i)}</li>`).join("")}</${tag}>`; }
+    case "table": return `<div class="overflow-x-auto rounded-xl border border-border/60 bg-white"><table class="w-full text-sm"><thead class="bg-muted/40"><tr>${b.columns.map((c) => `<th class="text-left font-semibold text-foreground px-4 py-3">${esc(c)}</th>`).join("")}</tr></thead><tbody>${b.rows.map((r) => `<tr class="border-t border-border/50">${r.map((c, k) => `<td class="px-4 py-3 align-top ${k === 0 ? "font-medium text-foreground" : ""}">${cell(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>${b.note ? `<p class="text-xs">${rich(b.note)}</p>` : ""}`;
     case "checklist": return `<div class="rounded-xl border border-border/60 bg-white p-5" data-topic-quiz><p class="font-semibold text-foreground mb-3">${esc(b.title)}</p><ul class="space-y-2">${b.items.map((q, n) => `<li><label class="flex gap-3 items-start cursor-pointer"><input type="checkbox" class="mt-1 h-4 w-4" data-q="${n}"><span>${rich(q)}</span></label></li>`).join("")}</ul><p class="mt-3 text-sm" data-quiz-out data-total="${b.items.length}">Tick each line as you finish it.</p></div>`;
     case "callout": return `<div class="rounded-xl border border-primary/20 bg-primary/5 p-5"><p class="font-semibold text-foreground mb-1">${esc(b.title)}</p><p>${rich(b.text)}</p></div>`;
     case "steps": return `<ol class="space-y-3">${b.items.map((st, n) => `<li class="rounded-lg border bg-card p-4"><div class="flex gap-3"><span class="w-7 h-7 shrink-0 rounded-md bg-primary/10 text-primary font-bold flex items-center justify-center text-sm">${n + 1}</span><div><p class="font-semibold text-foreground">${esc(st.title)}</p><p class="mt-1">${rich(st.body)}</p></div></div></li>`).join("")}</ol>`;
@@ -101,12 +104,13 @@ function block(b: Block): string {
 }
 
 let faqId = 0;
+const slugId = (t: string) => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
 const ANCHOR: Partial<Record<Section["type"], string>> = { steps: "steps", list: "mistakes", quiz: "check" };
 let used = new Set<string>();
 function anchorFor(s: Section): string {
   const BY_HEADING: [RegExp, string][] = [[/^compare/i, "compare"], [/stages/i, "stages"], [/quick reference/i, "numbers"], [/^register/i, "register"], [/funding questions/i, "questions"]];
   const h = "heading" in s ? s.heading : "";
-  const id = BY_HEADING.find(([re]) => re.test(h))?.[1] ?? ANCHOR[s.type];
+  const id = BY_HEADING.find(([re]) => re.test(h))?.[1] ?? ANCHOR[s.type] ?? (s.type === "rich" ? slugId(h) : undefined);
   if (!id || used.has(id)) return "";
   used.add(id);
   return ` id="${id}"`;
@@ -122,7 +126,7 @@ function section(s: Section, i: number): string {
     case "steps":
       return wrap(`${head(s.heading, s.intro)}<ol class="space-y-3">${s.items.map((st, n) => `<li class="${CARD} p-5"><div class="flex gap-4"><span class="w-9 h-9 shrink-0 rounded-lg bg-primary/10 text-primary font-bold flex items-center justify-center">${n + 1}</span><div><h3 class="font-semibold text-[16px] mb-1">${esc(st.title)}</h3><p class="text-sm text-muted-foreground leading-relaxed">${rich(st.body)}</p>${st.check ? `<p class="mt-3 text-sm rounded-md bg-primary/5 border border-primary/15 px-3 py-2"><span class="font-semibold text-foreground">Try this now:</span> ${rich(st.check)}</p>` : ""}</div></div></li>`).join("")}</ol>`, "max-w-4xl");
     case "table":
-      return wrap(`${head(s.heading, s.intro)}<div class="overflow-x-auto rounded-xl border border-border/60 bg-white"><table class="w-full text-sm"><thead class="bg-muted/40"><tr>${s.columns.map((c) => `<th class="text-left font-semibold px-4 py-3">${esc(c)}</th>`).join("")}</tr></thead><tbody>${s.rows.map((r) => `<tr class="border-t border-border/50">${r.map((c, k) => `<td class="px-4 py-3 align-top ${k === 0 ? "font-medium text-foreground" : "text-muted-foreground"}">${rich(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>${s.note ? `<p class="text-xs text-muted-foreground mt-3">${rich(s.note)}</p>` : ""}`, "max-w-5xl");
+      return wrap(`${head(s.heading, s.intro)}<div class="overflow-x-auto rounded-xl border border-border/60 bg-white"><table class="w-full text-sm"><thead class="bg-muted/40"><tr>${s.columns.map((c) => `<th class="text-left font-semibold px-4 py-3">${esc(c)}</th>`).join("")}</tr></thead><tbody>${s.rows.map((r) => `<tr class="border-t border-border/50">${r.map((c, k) => `<td class="px-4 py-3 align-top ${k === 0 ? "font-medium text-foreground" : "text-muted-foreground"}">${cell(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>${s.note ? `<p class="text-xs text-muted-foreground mt-3">${rich(s.note)}</p>` : ""}`, "max-w-5xl");
     case "list":
       return wrap(`${head(s.heading, s.intro)}<div class="grid md:grid-cols-2 gap-3">${s.items.map((m) => `<div class="${CARD} p-5"><div class="flex gap-3">${ICON.alert}<div><h3 class="font-semibold text-[15px] mb-1">${esc(m.title)}</h3><p class="text-sm text-muted-foreground leading-relaxed">${rich(m.body)}</p></div></div></div>`).join("")}</div>`, "max-w-5xl");
     case "cards":
