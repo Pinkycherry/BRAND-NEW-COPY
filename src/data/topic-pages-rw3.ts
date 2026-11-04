@@ -35,7 +35,7 @@ export const mistakes: TopicPage = {
       heading: "What failed founders tell us",
       blocks: [
         { kind: "p", text: "When Indian founders look back at a business that closed, the same few stories come up again and again in our [India startup failure research](/failed-startups/india) and in the patterns we track for [why startups fail](/why-startups-fail-2026-2027). The business was built before anyone paid for it. The founder trusted relatives' encouragement over strangers' wallets. The price looked fine until delivery, packing, platform fees and GST were added. The money ran out in a slow month, often around a festival or the monsoon, because there was no buffer." },
-        { kind: "p", text: "We will not quote numbers we cannot source. What we can do is show you the decisions behind those stories, and how to check each one before it is too late." },
+        { kind: "p", text: "We will not quote numbers we cannot source. [Data pending: share of new MSMEs that stop operating within a few years, and the main reasons, Ministry of MSME or SIDBI survey, 2026–27] What we can do is show you the decisions behind those stories, and how to check each one before it is too late." },
       ],
     },
     {

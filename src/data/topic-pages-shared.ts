@@ -15,12 +15,12 @@ export const IMG = {
 
 export const SRC = {
   udyam: { label: "Udyam Registration portal (Ministry of MSME)", href: "https://udyamregistration.gov.in/", note: "Free, online, Aadhaar-based registration for micro, small and medium enterprises." },
-  msmeLimits: { label: "Revised MSME classification (News On AIR)", href: "https://newsonair.gov.in/govt-notifies-revised-criteria-for-classifying-msmes", note: "Micro: investment up to ₹2.5 crore and turnover up to ₹10 crore." },
+  msmeLimits: { label: "Revised MSME classification (News On AIR)", href: "https://newsonair.gov.in/govt-notifies-revised-criteria-for-classifying-msmes", note: "Revised investment and turnover limits for micro, small and medium enterprises." },
   mudra: { label: "Pradhan Mantri MUDRA Yojana", href: "https://www.mudra.org.in/", note: "Shishu, Kishore, Tarun and Tarun Plus loans through banks, NBFCs and MFIs." },
-  mudraPlus: { label: "PIB: MUDRA limit raised to ₹20 lakh (Tarun Plus)", href: "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/oct/doc20241029426401.pdf" },
-  seedFund: { label: "Startup India Seed Fund Scheme", href: "https://seedfund.startupindia.gov.in/", note: "Up to ₹20 lakh for proof of concept and up to ₹50 lakh for market entry, through selected incubators." },
+  mudraPlus: { label: "PIB: MUDRA Tarun Plus category", href: "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/oct/doc20241029426401.pdf" },
+  seedFund: { label: "Startup India Seed Fund Scheme", href: "https://seedfund.startupindia.gov.in/", note: "Grants and convertible debt for DPIIT-recognised startups, through selected incubators." },
   dpiit: { label: "Startup India: DPIIT recognition", href: "https://www.startupindia.gov.in/content/sih/en/startupgov/startup_recognition_page.html" },
-  standUp: { label: "Stand-Up India", href: "https://www.standupmitra.in/", note: "Bank loans from ₹10 lakh to ₹1 crore for SC/ST and women entrepreneurs starting a new enterprise." },
+  standUp: { label: "Stand-Up India", href: "https://www.standupmitra.in/", note: "Bank loans for SC/ST and women entrepreneurs starting a new enterprise." },
   pmegp: { label: "PMEGP (KVIC)", href: "https://www.kviconline.gov.in/pmegpeportal/pmegphome/index.jsp", note: "Margin-money subsidy on bank loans for new micro enterprises." },
   cgtmse: { label: "CGTMSE credit guarantee", href: "https://www.cgtmse.in/", note: "Guarantee cover that lets banks lend to micro and small units without collateral." },
   gst: { label: "GST portal: registration", href: "https://www.gst.gov.in/", note: "Registration thresholds and the composition scheme." },
