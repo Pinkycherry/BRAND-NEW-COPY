@@ -26,6 +26,12 @@ function withSharedFooter(html: string): string {
   return page;
 }
 
+/** The whole site stays out of search until the founder releases it. */
+function withNoindex(html: string): string {
+  const page = html.replace(/<meta[^>]+name=["']robots["'][^>]*>/gi, "");
+  return page.replace(/<head([^>]*)>/i, `<head$1><meta name="robots" content="noindex, nofollow, noarchive, noimageindex">`);
+}
+
 /**
  * Serve a purchased page snapshot without redesigning its original frame.
  * Preserve the supplied header, page markup, copy and interactions.
@@ -34,7 +40,7 @@ function withSharedFooter(html: string): string {
  */
 export function boughtPage(html: string, assetFolder: string): Response {
   const base = `/bought/${assetFolder}`;
-  const prepared = withSharedFooter(html)
+  const prepared = withNoindex(withSharedFooter(html))
     .replace(/(["'(=])\.\/(images|scripts|styles)\//g, `$1${base}/$2/`)
     // The authored homepage uses the site's existing featured images and
     // transparent golden tree under /images/. Other purchased snapshots keep

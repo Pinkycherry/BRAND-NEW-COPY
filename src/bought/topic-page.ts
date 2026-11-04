@@ -4,7 +4,7 @@
  * Markup and class names are the seller's topics components (breadcrumb bar,
  * hero, card grid, accordion FAQ, CTA band) and the page loads the seller's
  * own stylesheet from public/bought/topics/. Every word, link and SEO field
- * comes from the page's data file in src/data/topic-pages/, so titles and
+ * comes from the page's data file in src/data/topic-pages*.ts, so titles and
  * slugs can be renamed there without touching this file. Header and footer
  * are the shared site header and footer.
  */
@@ -12,7 +12,7 @@ import menuPanels from "./menu-panels.json";
 import menuBindings from "./menus.html?raw";
 import sharedHeaderStyles from "@/components/v2/v2.css?raw";
 import sellerShell from "./topics.html?raw";
-import { canonicalUrl } from "@/lib/site-config";
+import { canonicalUrl, CO_FOUNDER, TEAM } from "@/lib/site-config";
 
 export type Link = { label: string; href: string; note?: string };
 export type Section =
@@ -30,6 +30,8 @@ export type Section =
 export type TopicPage = {
   slug: string;
   sellerRef: string;
+  /** ISO date of the last content review, shown on the page and in schema. */
+  updated: string;
   parent: Link;
   seo: { title: string; description: string };
   hero: { eyebrow: string; h1: string; highlight?: string; intro: string; sub?: string; updated: string; primary: Link; secondary?: Link; image: string; imageAlt: string };
@@ -114,7 +116,13 @@ function section(s: Section, i: number): string {
 function hero(p: TopicPage) {
   const h = p.hero;
   const title = h.highlight ? esc(h.h1).replace(esc(h.highlight), `<span class="gradient-text">${esc(h.highlight)}</span>`) : esc(h.h1);
-  return `<section class="relative overflow-hidden bg-gradient-to-br from-white via-slate-50/60 to-white py-8 md:py-10 lg:py-14 border-b border-border/40" aria-labelledby="topic-hero"><div aria-hidden="true" class="absolute -top-10 -right-20 w-[28rem] h-[28rem] bg-brand-500/10 rounded-full blur-[120px] pointer-events-none animate-glow-float"></div><div class="container mx-auto max-w-6xl px-4 relative z-10"><div class="grid lg:grid-cols-12 gap-6 lg:gap-12 items-center"><div class="lg:col-span-7 order-2 lg:order-1"><div class="flex items-center gap-2 mb-3 animate-fade-up flex-wrap"><span class="text-sm font-semibold tracking-tight text-slate-900">${esc(h.eyebrow)}</span><div class="inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold border-transparent bg-secondary text-secondary-foreground ml-auto sm:ml-2 text-[10px] sm:text-xs">${esc(h.updated)}</div></div><h1 id="topic-hero" class="text-[1.75rem] sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-[1.1] tracking-tight mb-3 md:mb-4 animate-fade-up" style="animation-delay: 0.05s;">${title}</h1><p class="text-[15px] md:text-lg text-muted-foreground max-w-2xl mb-3 md:mb-4 animate-fade-up" style="animation-delay: 0.1s;">${rich(h.intro)}</p>${h.sub ? `<p class="text-[13px] md:text-sm text-muted-foreground mb-5 md:mb-6 animate-fade-up leading-relaxed" style="animation-delay: 0.15s;">${rich(h.sub)}</p>` : ""}<div class="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 animate-fade-up" style="animation-delay: 0.2s;"><a class="${BTN_DARK}" href="${esc(h.primary.href)}">${esc(h.primary.label)} ${ICON.arrow}</a>${h.secondary ? `<a class="${BTN_LIGHT}" href="${esc(h.secondary.href)}">${esc(h.secondary.label)}</a>` : ""}</div></div><div class="lg:col-span-5 order-1 lg:order-2"><div class="relative rounded-2xl overflow-hidden border border-border/60 shadow-lg animate-fade-up"><img src="${esc(h.image)}" alt="${esc(h.imageAlt)}" width="640" height="420" class="w-full h-auto object-cover" loading="eager" decoding="async"></div></div></div></div></section>`;
+  return `<section class="relative overflow-hidden bg-gradient-to-br from-white via-slate-50/60 to-white py-8 md:py-10 lg:py-14 border-b border-border/40" aria-labelledby="topic-hero"><div aria-hidden="true" class="absolute -top-10 -right-20 w-[28rem] h-[28rem] bg-brand-500/10 rounded-full blur-[120px] pointer-events-none animate-glow-float"></div><div class="container mx-auto max-w-6xl px-4 relative z-10"><div class="grid lg:grid-cols-12 gap-6 lg:gap-12 items-center"><div class="lg:col-span-7 order-2 lg:order-1"><div class="flex items-center gap-2 mb-3 animate-fade-up flex-wrap"><span class="text-sm font-semibold tracking-tight text-slate-900">${esc(h.eyebrow)}</span><div class="inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold border-transparent bg-secondary text-secondary-foreground ml-auto sm:ml-2 text-[10px] sm:text-xs">${esc(h.updated)}</div></div><h1 id="topic-hero" class="text-[1.75rem] sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-[1.1] tracking-tight mb-3 md:mb-4 animate-fade-up" style="animation-delay: 0.05s;">${title}</h1><p class="text-[15px] md:text-lg text-muted-foreground max-w-2xl mb-3 md:mb-4 animate-fade-up" style="animation-delay: 0.1s;">${rich(h.intro)}</p>${h.sub ? `<p class="text-[13px] md:text-sm text-muted-foreground mb-5 md:mb-6 animate-fade-up leading-relaxed" style="animation-delay: 0.15s;">${rich(h.sub)}</p>` : ""}<div class="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 animate-fade-up" style="animation-delay: 0.2s;"><a class="${BTN_DARK}" href="${esc(h.primary.href)}">${esc(h.primary.label)} ${ICON.arrow}</a>${h.secondary ? `<a class="${BTN_LIGHT}" href="${esc(h.secondary.href)}">${esc(h.secondary.label)}</a>` : ""}</div>${byline(p)}</div><div class="lg:col-span-5 order-1 lg:order-2"><div class="relative rounded-2xl overflow-hidden border border-border/60 shadow-lg animate-fade-up"><img src="${esc(h.image)}" alt="${esc(h.imageAlt)}" width="640" height="420" class="w-full h-auto object-cover" loading="eager" decoding="async"></div></div></div></div></section>`;
+}
+
+const REVIEWER = TEAM.find((m) => /verification/i.test(m.role)) ?? TEAM[0];
+const longDate = (iso: string) => new Date(iso + "T00:00:00Z").toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+function byline(p: TopicPage) {
+  return `<p class="mt-5 text-[13px] text-muted-foreground leading-relaxed animate-fade-up" style="animation-delay: 0.25s;">Written by <a class="font-medium text-foreground hover:text-primary" href="/about">${esc(CO_FOUNDER.name)}</a>, editorial lead · Reviewed by <a class="font-medium text-foreground hover:text-primary" href="/about">${esc(REVIEWER.name)}</a>, research and verification · Last updated <time datetime="${esc(p.updated)}">${esc(longDate(p.updated))}</time></p>`;
 }
 
 function crumbs(p: TopicPage) {
@@ -125,7 +133,7 @@ function schema(p: TopicPage) {
   const url = canonicalUrl(`/${p.slug}`);
   const faq = p.sections.find((s) => s.type === "faq") as Extract<Section, { type: "faq" }> | undefined;
   const graph: unknown[] = [
-    { "@type": "Article", headline: p.hero.h1, description: p.seo.description, inLanguage: "en-IN", mainEntityOfPage: url, publisher: { "@type": "Organization", name: "BusinessIdea.io" } },
+    { "@type": "Article", headline: p.hero.h1, description: p.seo.description, inLanguage: "en-IN", mainEntityOfPage: url, dateModified: p.updated, author: { "@type": "Person", name: CO_FOUNDER.name, url: canonicalUrl("/about") }, reviewedBy: { "@type": "Person", name: REVIEWER.name, url: canonicalUrl("/about") }, publisher: { "@type": "Organization", name: "BusinessIdea.io" } },
     { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: canonicalUrl("/") }, { "@type": "ListItem", position: 2, name: p.parent.label, item: canonicalUrl(p.parent.href) }, { "@type": "ListItem", position: 3, name: p.hero.eyebrow, item: url }] },
   ];
   if (faq) graph.push({ "@type": "FAQPage", mainEntity: faq.items.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a.replace(/\*\*/g, "").replace(/\[([^\]]+)\]\([^)]*\)/g, "$1") } })) });
@@ -139,6 +147,6 @@ export function renderTopicPage(p: TopicPage): Response {
   used = new Set();
   const url = canonicalUrl(`/${p.slug}`);
   const main = `<main class="flex-1">${crumbs(p)}${hero(p)}${p.sections.map(section).join("")}</main>`;
-  const html = `<!DOCTYPE html><html lang="en-IN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>${esc(p.seo.title)}</title><meta name="description" content="${esc(p.seo.description)}"><link rel="canonical" href="${esc(url)}"><meta property="og:type" content="article"><meta property="og:title" content="${esc(p.seo.title)}"><meta property="og:description" content="${esc(p.seo.description)}"><meta property="og:url" content="${esc(url)}"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="BusinessIdea.io"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">${schema(p)}</script><style>${STYLE}</style><link rel="stylesheet" href="/bought/topics/styles/index-BpDyUYDe.css"><style id="bbi-shared-header-styles">${sharedHeaderStyles}</style></head><body><div id="root"><div class="min-h-screen flex flex-col">${menuPanels.header}${main}${menuPanels.footer}</div></div>${menuBindings}${SCRIPT}</body></html>`;
+  const html = `<!DOCTYPE html><html lang="en-IN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="robots" content="noindex, nofollow, noarchive, noimageindex"><title>${esc(p.seo.title)}</title><meta name="description" content="${esc(p.seo.description)}"><link rel="canonical" href="${esc(url)}"><meta property="og:type" content="article"><meta property="og:title" content="${esc(p.seo.title)}"><meta property="og:description" content="${esc(p.seo.description)}"><meta property="og:url" content="${esc(url)}"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="BusinessIdea.io"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">${schema(p)}</script><style>${STYLE}</style><link rel="stylesheet" href="/bought/topics/styles/index-BpDyUYDe.css"><style id="bbi-shared-header-styles">${sharedHeaderStyles}</style></head><body><div id="root"><div class="min-h-screen flex flex-col">${menuPanels.header}${main}${menuPanels.footer}</div></div>${menuBindings}${SCRIPT}</body></html>`;
   return new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, max-age=300" } });
 }
