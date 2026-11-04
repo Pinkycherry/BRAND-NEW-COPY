@@ -54,9 +54,9 @@ Saved 4 Nov 2026 at the founder's request. When the founder says "recall", re-re
 - **India Topic Pages Review**: https://claude.ai/artifact/Cxg3dZVdJ1DsLEDqMVVwFP. The page tracker. Mark a page "completed" only when layout, content, links, images and E-E-A-T are all done. Backup data: `data/topics-roadmap.json`, updated with the tracker.
 - No other logs. The Codex log is reference only, for work up to 4 Nov 2026, 10:00 IST.
 
-### Push rule
+### Push rule (updated 4 Nov 2026, replaces "wait for my reply")
 
-One page at a time: commit, push to main, reply with only the live URL, then wait for the founder's reply before the next page. If the founder sends a fix, apply it to that page and to every page after it. (git push is refused from the Claude sandbox; commits go through the GitHub web upload page in the founder's browser, one existing folder per upload.)
+Within a batch, do not stop after a page and do not wait for a reply: build the page, push it to main, post only its full live URL in one line, then go straight to the next page until every page in the batch is done. Do not open or update the logs after each page; keep track yourself and update both logs once, at the end of the batch. The founder checks each URL live and may interrupt with a fix: apply it to that page and every page after it, then carry on. (git push is refused from the Claude sandbox; commits go through the GitHub web upload page in the founder's browser, one existing folder per upload.)
 
 ### Slugs and SEO (100% ours)
 
