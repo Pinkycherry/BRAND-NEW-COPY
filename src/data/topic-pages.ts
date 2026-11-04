@@ -6,7 +6,7 @@ import { validateIdea } from "./topic-pages-rw1";
 import { cac } from "./topic-pages-rw4";
 import { tam } from "./topic-pages-rw5";
 import { moneyToStart } from "./topic-pages-rw6";
-import { bootstrapping } from "./topic-pages-b";
+import { bootstrapping } from "./topic-pages-rw7";
 import { pmf, interviews, mvp } from "./topic-pages-c";
 import { isIdeaGood, raiseFunds } from "./topic-pages-d";
 import { businessNumbers, businessPlan, competitors, fundingQuestions, adsTest, govResources, validateFood, validateOnline } from "./topic-pages-e";
