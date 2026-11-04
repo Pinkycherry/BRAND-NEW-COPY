@@ -1,19 +1,20 @@
 import type { TopicPage } from "@/bought/topic-page";
-import { PARENT, UPDATED, IMG, SRC, questionSections } from "./topic-pages-shared";
+import { PARENT, UPDATED, UPDATED_ON, IMG, SRC, questionSections } from "./topic-pages-shared";
 
 /** Seller layout: question page (/questions/what-is-cac). */
 export const cac: TopicPage = {
-  slug: "customer-acquisition-cost-india",
+  slug: "what-is-customer-acquisition-cost-for-a-small-business-in-india",
+  updated: UPDATED_ON,
   sellerRef: "https://ideaproof.io/questions/what-is-cac",
   parent: PARENT,
   seo: {
-    title: "What is Customer Acquisition Cost (CAC)? Meaning, Formula & India Examples",
+    title: "What Is Customer Acquisition Cost for a Small Business in India? Formula and Examples",
     description: "Customer acquisition cost in plain words for Indian small businesses: the formula, what to count (ads, commission, free samples, your time) and how to bring it down.",
   },
   hero: {
     eyebrow: "Customer acquisition cost",
-    h1: "What is customer acquisition cost (CAC)?",
-    highlight: "CAC",
+    h1: "What Is Customer Acquisition Cost for a Small Business in India?",
+    highlight: "Customer Acquisition Cost",
     intro: "CAC is what you spend to get one new paying customer. If it costs you ₹300 in ads and discounts to win a customer who earns you ₹200, every new sale makes you poorer. Let's make sure that never happens to you.",
     updated: UPDATED,
     primary: { label: "Work out my CAC", href: "#steps" },
@@ -83,16 +84,16 @@ export const cac: TopicPage = {
       { label: "Unit economics for India", href: "/unit-economics-india" },
       { label: "Set your first price", href: "/business-pricing-india" },
       { label: "Get your first customer", href: "/first-customer-india" },
-      { label: "Product-market fit", href: "/product-market-fit-india" },
+      { label: "Product-market fit", href: "/how-to-know-if-your-business-has-product-market-fit-in-india" },
     ],
     keepReading: [
       { title: "Unit economics", body: "Profit per order, CAC and repeat rate together.", href: "/unit-economics-india", cta: "Read" },
       { title: "First customer in India", body: "Where your first ten buyers usually come from.", href: "/first-customer-india", cta: "Read" },
-      { title: "Startup mistakes to avoid", body: "Mistake 7 is ignoring CAC. Here are the other six.", href: "/startup-mistakes-to-avoid-india", cta: "Read" },
+      { title: "Startup mistakes to avoid", body: "Mistake 7 is ignoring CAC. Here are the other six.", href: "/common-mistakes-to-avoid-when-starting-a-business-in-india", cta: "Read" },
     ],
     deeper: [
-      { label: "Customer interviews", href: "/customer-interviews-india" },
-      { label: "Market size: TAM, SAM, SOM", href: "/tam-sam-som-india" },
+      { label: "Customer interviews", href: "/how-to-talk-to-customers-before-starting-a-business-in-india" },
+      { label: "Market size: TAM, SAM, SOM", href: "/how-to-calculate-tam-sam-som-for-a-business-in-india" },
       { label: "Business models compared", href: "/business-models-india" },
     ],
   }),
@@ -100,21 +101,22 @@ export const cac: TopicPage = {
 
 /** Seller layout: question page (/questions/what-is-tam). */
 export const tam: TopicPage = {
-  slug: "tam-sam-som-india",
+  slug: "how-to-calculate-tam-sam-som-for-a-business-in-india",
+  updated: UPDATED_ON,
   sellerRef: "https://ideaproof.io/questions/what-is-tam",
   parent: PARENT,
   seo: {
-    title: "TAM, SAM, SOM Meaning: How to Size Your Market in India",
+    title: "How to Calculate TAM, SAM and SOM for a Business in India",
     description: "TAM, SAM and SOM explained simply for Indian founders, with a bottom-up method you can do for your city or district using numbers you can count yourself.",
   },
   hero: {
     eyebrow: "TAM, SAM, SOM",
-    h1: "What is TAM, SAM and SOM? Market size for India",
+    h1: "How to Calculate TAM, SAM and SOM for a Business in India",
     highlight: "TAM, SAM and SOM",
     intro: "\"India has 140 crore people\" is not a market size. Your market is the people you can actually reach and serve. Here is how to count them honestly, for your street, your city or the whole country.",
     updated: UPDATED,
     primary: { label: "Size my market", href: "#steps" },
-    secondary: { label: "Validate my idea", href: "/how-to-validate-business-idea-india" },
+    secondary: { label: "Validate my idea", href: "/how-to-validate-a-business-idea-in-india" },
     image: IMG.metrics,
     imageAlt: "Sizing a market from total to reachable buyers",
   },
@@ -180,8 +182,8 @@ export const tam: TopicPage = {
       SRC.udyam,
     ],
     related: [
-      { label: "How to validate a business idea", href: "/how-to-validate-business-idea-india" },
-      { label: "Customer interviews", href: "/customer-interviews-india" },
+      { label: "How to validate a business idea", href: "/how-to-validate-a-business-idea-in-india" },
+      { label: "Customer interviews", href: "/how-to-talk-to-customers-before-starting-a-business-in-india" },
       { label: "Business idea research", href: "/business-idea-research-india" },
     ],
     keepReading: [
@@ -190,26 +192,27 @@ export const tam: TopicPage = {
       { title: "Local business ideas", body: "Ideas where your SOM is your own neighbourhood.", href: "/local-business-ideas-india", cta: "Browse" },
     ],
     deeper: [
-      { label: "Customer acquisition cost", href: "/customer-acquisition-cost-india" },
-      { label: "Product-market fit", href: "/product-market-fit-india" },
-      { label: "Business funding in India", href: "/how-to-get-business-funding-india" },
+      { label: "Customer acquisition cost", href: "/what-is-customer-acquisition-cost-for-a-small-business-in-india" },
+      { label: "Product-market fit", href: "/how-to-know-if-your-business-has-product-market-fit-in-india" },
+      { label: "Business funding in India", href: "/how-to-get-funding-for-a-small-business-in-india" },
     ],
   }),
 };
 
 /** Seller layout: question page (/questions/money-to-start-business). */
 export const moneyToStart: TopicPage = {
-  slug: "money-needed-to-start-business-india",
+  slug: "how-much-money-is-needed-to-start-a-business-in-india",
+  updated: UPDATED_ON,
   sellerRef: "https://ideaproof.io/questions/money-to-start-business",
   parent: PARENT,
   seo: {
-    title: "How Much Money Do You Need to Start a Business in India?",
+    title: "How Much Money Is Needed to Start a Business in India? A Rupee-by-Rupee Plan",
     description: "Work out how much money you need to start a business in India: one-time costs, monthly running costs, licences, GST, a safety buffer, and ways to start with less.",
   },
   hero: {
     eyebrow: "Money to start a business",
-    h1: "How much money do you need to start a business in India?",
-    highlight: "money",
+    h1: "How Much Money Is Needed to Start a Business in India?",
+    highlight: "Money",
     intro: "The honest answer: it depends on what you sell, but you can work out your own number in one evening. Do it before you ask family, take a loan or break an FD.",
     updated: UPDATED,
     primary: { label: "Work out my number", href: "#steps" },
@@ -265,7 +268,7 @@ export const moneyToStart: TopicPage = {
         { q: "Can I start a business with no money in India?", a: "You can start some service businesses with almost no cash: tutoring, freelancing, cooking to order, repair services, reselling on order. You still need your time, a phone and a few customers. See [zero-investment business models](/startup-guides/zero-investment-business-models)." },
         { q: "Is Udyam registration free?", a: "Yes. Register only on the official Udyam portal. Avoid sites that charge a fee for it." },
         { q: "Do I need GST registration to start?", a: "It depends on your turnover, what you sell and whether you sell across states or through e-commerce platforms. Check the GST portal or ask a chartered accountant before you start." },
-        { q: "Where can I get money if I fall short?", a: "Savings, family, MUDRA loans through your bank, and other schemes. See [how to get business funding in India](/how-to-get-business-funding-india)." },
+        { q: "Where can I get money if I fall short?", a: "Savings, family, MUDRA loans through your bank, and other schemes. See [how to get business funding in India](/how-to-get-funding-for-a-small-business-in-india)." },
       ],
     },
     tips: [
@@ -275,8 +278,8 @@ export const moneyToStart: TopicPage = {
     ],
     sources: [SRC.udyam, SRC.gst, { label: "FSSAI: Food business registration", href: "https://foscos.fssai.gov.in/", note: "Registration or licence for food businesses." }, SRC.mudra],
     related: [
-      { label: "How to get business funding", href: "/how-to-get-business-funding-india" },
-      { label: "Bootstrapping in India", href: "/bootstrapping-business-india" },
+      { label: "How to get business funding", href: "/how-to-get-funding-for-a-small-business-in-india" },
+      { label: "Bootstrapping in India", href: "/how-to-start-a-business-without-investors-in-india" },
       { label: "Startup cost ledger", href: "/startup-costs-india" },
     ],
     keepReading: [
@@ -287,7 +290,7 @@ export const moneyToStart: TopicPage = {
     deeper: [
       { label: "First-price workbench", href: "/business-pricing-india" },
       { label: "Unit economics", href: "/unit-economics-india" },
-      { label: "How to build an MVP", href: "/how-to-build-mvp-india" },
+      { label: "How to build an MVP", href: "/how-to-build-an-mvp-with-low-investment-in-india" },
     ],
     rules: [
       "**Udyam registration** is free and online with Aadhaar.",
@@ -299,21 +302,22 @@ export const moneyToStart: TopicPage = {
 
 /** Seller layout: question page (/questions/what-is-bootstrapping). */
 export const bootstrapping: TopicPage = {
-  slug: "bootstrapping-business-india",
+  slug: "how-to-start-a-business-without-investors-in-india",
+  updated: UPDATED_ON,
   sellerRef: "https://ideaproof.io/questions/what-is-bootstrapping",
   parent: PARENT,
   seo: {
-    title: "What is Bootstrapping a Business? How to Grow Without Investors in India",
+    title: "How to Start a Business Without Investors in India: A Bootstrapping Guide",
     description: "Bootstrapping explained for Indian founders: growing from your own savings and sales, when it works, how to manage cash, and when outside money makes sense.",
   },
   hero: {
     eyebrow: "Bootstrapping",
-    h1: "What is bootstrapping a business in India?",
-    highlight: "bootstrapping",
+    h1: "How to Start a Business Without Investors in India",
+    highlight: "Without Investors",
     intro: "Bootstrapping means you grow from your own savings and your customers' money, without investors. Most Indian small businesses grow this way. You keep full control, and every rupee has to earn its place.",
     updated: UPDATED,
     primary: { label: "Is it right for me?", href: "#steps" },
-    secondary: { label: "Compare with funding", href: "/how-to-get-business-funding-india" },
+    secondary: { label: "Compare with funding", href: "/how-to-get-funding-for-a-small-business-in-india" },
     image: IMG.funding,
     imageAlt: "A founder growing a business from its own sales",
   },
@@ -383,17 +387,17 @@ export const bootstrapping: TopicPage = {
       ],
     },
     related: [
-      { label: "Money needed to start", href: "/money-needed-to-start-business-india" },
-      { label: "How to get business funding", href: "/how-to-get-business-funding-india" },
+      { label: "Money needed to start", href: "/how-much-money-is-needed-to-start-a-business-in-india" },
+      { label: "How to get business funding", href: "/how-to-get-funding-for-a-small-business-in-india" },
       { label: "Zero-investment business models", href: "/startup-guides/zero-investment-business-models" },
     ],
     keepReading: [
       { title: "Cash-flow calendar", body: "The tool bootstrapped founders use most.", href: "/startup-cash-flow-india", cta: "Open" },
       { title: "Service business ideas", body: "Ideas that can earn from the first month.", href: "/service-business-ideas-india", cta: "Browse" },
-      { title: "Startup mistakes to avoid", body: "The traps that drain your own money.", href: "/startup-mistakes-to-avoid-india", cta: "Read" },
+      { title: "Startup mistakes to avoid", body: "The traps that drain your own money.", href: "/common-mistakes-to-avoid-when-starting-a-business-in-india", cta: "Read" },
     ],
     deeper: [
-      { label: "Customer acquisition cost", href: "/customer-acquisition-cost-india" },
+      { label: "Customer acquisition cost", href: "/what-is-customer-acquisition-cost-for-a-small-business-in-india" },
       { label: "Unit economics", href: "/unit-economics-india" },
       { label: "First customer in India", href: "/first-customer-india" },
     ],

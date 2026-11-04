@@ -1,23 +1,24 @@
 import type { TopicPage } from "@/bought/topic-page";
-import { PARENT, UPDATED, IMG, SRC, questionSections } from "./topic-pages-shared";
+import { PARENT, UPDATED, UPDATED_ON, IMG, SRC, questionSections } from "./topic-pages-shared";
 
 /** Seller layout: question page (/questions/what-is-pmf). */
 export const pmf: TopicPage = {
-  slug: "product-market-fit-india",
+  slug: "how-to-know-if-your-business-has-product-market-fit-in-india",
+  updated: UPDATED_ON,
   sellerRef: "https://ideaproof.io/questions/what-is-pmf",
   parent: PARENT,
   seo: {
-    title: "What is Product-Market Fit? Signs Your Business Has It in India",
+    title: "How to Know If Your Business Has Product-Market Fit in India",
     description: "Product-market fit in simple words for Indian founders: the signs you have it, how to measure it with repeat orders and referrals, and what to do if you don't yet.",
   },
   hero: {
     eyebrow: "Product-market fit",
-    h1: "What is product-market fit, and do you have it?",
-    highlight: "product-market fit",
+    h1: "How to Know If Your Business Has Product-Market Fit in India",
+    highlight: "Product-Market Fit",
     intro: "Product-market fit is the moment buyers pull your product out of your hands. They come back, they tell their friends, and they complain loudly when you run out. Before that moment, you are pushing. After it, you are keeping up.",
     updated: UPDATED,
     primary: { label: "Check my signs", href: "#check" },
-    secondary: { label: "Validate first", href: "/how-to-validate-business-idea-india" },
+    secondary: { label: "Validate first", href: "/how-to-validate-a-business-idea-in-india" },
     image: IMG.validation,
     imageAlt: "Customers coming back for repeat orders",
   },
@@ -88,9 +89,9 @@ export const pmf: TopicPage = {
     ],
     sources: [SRC.npci, SRC.udyam],
     related: [
-      { label: "How to validate a business idea", href: "/how-to-validate-business-idea-india" },
-      { label: "Customer interviews", href: "/customer-interviews-india" },
-      { label: "Customer acquisition cost", href: "/customer-acquisition-cost-india" },
+      { label: "How to validate a business idea", href: "/how-to-validate-a-business-idea-in-india" },
+      { label: "Customer interviews", href: "/how-to-talk-to-customers-before-starting-a-business-in-india" },
+      { label: "Customer acquisition cost", href: "/what-is-customer-acquisition-cost-for-a-small-business-in-india" },
     ],
     keepReading: [
       { title: "Product-market fit metrics", body: "A deeper guide to measuring fit.", href: "/startup-guides/product-market-fit-metrics", cta: "Read" },
@@ -99,25 +100,26 @@ export const pmf: TopicPage = {
     ],
     deeper: [
       { label: "Unit economics", href: "/unit-economics-india" },
-      { label: "How to build an MVP", href: "/how-to-build-mvp-india" },
-      { label: "Bootstrapping in India", href: "/bootstrapping-business-india" },
+      { label: "How to build an MVP", href: "/how-to-build-an-mvp-with-low-investment-in-india" },
+      { label: "Bootstrapping in India", href: "/how-to-start-a-business-without-investors-in-india" },
     ],
   }),
 };
 
 /** Seller layout: question page (/questions/conduct-customer-interviews). */
 export const interviews: TopicPage = {
-  slug: "customer-interviews-india",
+  slug: "how-to-talk-to-customers-before-starting-a-business-in-india",
+  updated: UPDATED_ON,
   sellerRef: "https://ideaproof.io/questions/conduct-customer-interviews",
   parent: PARENT,
   seo: {
-    title: "How to Do Customer Interviews to Validate a Business Idea in India",
+    title: "How to Talk to Customers Before Starting a Business in India",
     description: "How to talk to customers in India before you start: who to meet, where to find them, questions to ask in Hindi, English or your language, and how to read the answers.",
   },
   hero: {
     eyebrow: "Customer interviews",
-    h1: "How to do customer interviews for your business idea",
-    highlight: "customer interviews",
+    h1: "How to Talk to Customers Before Starting a Business in India",
+    highlight: "Talk to Customers",
     intro: "The fastest way to know if your idea will work is to sit with ten people who would pay and listen. Not pitch. Listen. Here is exactly what to ask, and where to find them in your town or city.",
     updated: UPDATED,
     primary: { label: "Get the questions", href: "#steps" },
@@ -183,9 +185,9 @@ export const interviews: TopicPage = {
     ],
     sources: [{ label: "Open Government Data Platform India", href: "https://data.gov.in/", note: "Useful for finding where your buyers are, by district." }],
     related: [
-      { label: "How to validate a business idea", href: "/how-to-validate-business-idea-india" },
+      { label: "How to validate a business idea", href: "/how-to-validate-a-business-idea-in-india" },
       { label: "Get your first customer", href: "/first-customer-india" },
-      { label: "Product-market fit", href: "/product-market-fit-india" },
+      { label: "Product-market fit", href: "/how-to-know-if-your-business-has-product-market-fit-in-india" },
     ],
     keepReading: [
       { title: "Validation field guide", body: "More ways to test before you build.", href: "/startup-idea-validation", cta: "Read" },
@@ -193,8 +195,8 @@ export const interviews: TopicPage = {
       { title: "Founder decision journal", body: "Write what you learned after each interview.", href: "/founder-decision-journal", cta: "Open" },
     ],
     deeper: [
-      { label: "TAM, SAM, SOM", href: "/tam-sam-som-india" },
-      { label: "Startup mistakes to avoid", href: "/startup-mistakes-to-avoid-india" },
+      { label: "TAM, SAM, SOM", href: "/how-to-calculate-tam-sam-som-for-a-business-in-india" },
+      { label: "Startup mistakes to avoid", href: "/common-mistakes-to-avoid-when-starting-a-business-in-india" },
       { label: "Demand test for India", href: "/business-demand-test-india" },
     ],
   }),
@@ -202,21 +204,22 @@ export const interviews: TopicPage = {
 
 /** Seller layout: question page (/questions/how-to-build-mvp). */
 export const mvp: TopicPage = {
-  slug: "how-to-build-mvp-india",
+  slug: "how-to-build-an-mvp-with-low-investment-in-india",
+  updated: UPDATED_ON,
   sellerRef: "https://ideaproof.io/questions/how-to-build-mvp",
   parent: PARENT,
   seo: {
-    title: "How to Build an MVP in India: Start Small With WhatsApp, UPI and Your Own Hands",
+    title: "How to Build an MVP With Low Investment in India",
     description: "Build a minimum viable product in India without big spending: a WhatsApp catalogue, a Google Form, a UPI QR code, a first batch or a manual service. Steps and examples.",
   },
   hero: {
     eyebrow: "Build an MVP",
-    h1: "How to build an MVP for your business in India",
+    h1: "How to Build an MVP With Low Investment in India",
     highlight: "MVP",
     intro: "An MVP (minimum viable product) is the smallest thing you can sell to learn if people want it. In India it is often not an app at all. It is a WhatsApp catalogue, a UPI QR code and you, doing the work by hand.",
     updated: UPDATED,
     primary: { label: "Build mine", href: "#steps" },
-    secondary: { label: "Validate first", href: "/how-to-validate-business-idea-india" },
+    secondary: { label: "Validate first", href: "/how-to-validate-a-business-idea-in-india" },
     image: IMG.hub,
     imageAlt: "A simple first version of a product",
   },
@@ -233,7 +236,7 @@ export const mvp: TopicPage = {
         { title: "Pick the one guess that could kill your idea", body: "Will people pay this price? Will shops stock it? Will students come every week? Your MVP tests that one thing.", check: "Write your riskiest guess in one line." },
         { title: "Choose the simplest form", body: "A WhatsApp Business catalogue, an Instagram page, a Google Form, a printed menu, a single sample batch, a free trial class, a manual service." },
         { title: "Set up payment", body: "A UPI QR code on a business account is enough to start. Real payment is the test." },
-        { title: "Launch to your interview list first", body: "The people you spoke to in [customer interviews](/customer-interviews-india) are your first buyers." },
+        { title: "Launch to your interview list first", body: "The people you spoke to in [customer interviews](/how-to-talk-to-customers-before-starting-a-business-in-india) are your first buyers." },
         { title: "Measure and change one thing at a time", body: "Orders, repeat orders, complaints, time per order. Change price, menu, delivery area or product, one at a time." },
       ],
     },
@@ -286,9 +289,9 @@ export const mvp: TopicPage = {
       ],
     },
     related: [
-      { label: "Customer interviews", href: "/customer-interviews-india" },
-      { label: "Product-market fit", href: "/product-market-fit-india" },
-      { label: "Money needed to start", href: "/money-needed-to-start-business-india" },
+      { label: "Customer interviews", href: "/how-to-talk-to-customers-before-starting-a-business-in-india" },
+      { label: "Product-market fit", href: "/how-to-know-if-your-business-has-product-market-fit-in-india" },
+      { label: "Money needed to start", href: "/how-much-money-is-needed-to-start-a-business-in-india" },
     ],
     keepReading: [
       { title: "MVP development guide", body: "A longer guide to building your first version.", href: "/startup-guides/minimum-viable-product-development", cta: "Read" },
@@ -296,9 +299,9 @@ export const mvp: TopicPage = {
       { title: "Weekend market stall check", body: "Test a product with real buyers in one weekend.", href: "/weekend-market-stall-profit-check", cta: "Check" },
     ],
     deeper: [
-      { label: "How to validate a business idea", href: "/how-to-validate-business-idea-india" },
+      { label: "How to validate a business idea", href: "/how-to-validate-a-business-idea-in-india" },
       { label: "First-price workbench", href: "/business-pricing-india" },
-      { label: "Startup mistakes to avoid", href: "/startup-mistakes-to-avoid-india" },
+      { label: "Startup mistakes to avoid", href: "/common-mistakes-to-avoid-when-starting-a-business-in-india" },
     ],
   }),
 };

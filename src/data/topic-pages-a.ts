@@ -1,19 +1,20 @@
 import type { TopicPage } from "@/bought/topic-page";
-import { PARENT, UPDATED, IMG, SRC, TOOLS, CALCS, EXPLORE, CTA } from "./topic-pages-shared";
+import { PARENT, UPDATED, UPDATED_ON, IMG, SRC, TOOLS, CALCS, EXPLORE, CTA } from "./topic-pages-shared";
 
 /** Seller layout: topic hub (/topics/validation-methods). Sections: 5-step process, methods by category, methods compared, CTA. */
 export const validateIdea: TopicPage = {
-  slug: "how-to-validate-business-idea-india",
+  slug: "how-to-validate-a-business-idea-in-india",
+  updated: UPDATED_ON,
   sellerRef: "https://ideaproof.io/topics/validation-methods",
   parent: PARENT,
   seo: {
-    title: "How to Validate a Business Idea in India: 5 Steps Before You Spend",
+    title: "How to Validate a Business Idea in India Before You Invest Your Savings",
     description: "Validate your business idea in India before you put in savings: talk to real buyers, take a UPI advance, test in your own town and read the signs honestly.",
   },
   hero: {
     eyebrow: "Validate a business idea",
-    h1: "How to validate a business idea in India",
-    highlight: "validate",
+    h1: "How to Validate a Business Idea in India",
+    highlight: "Validate",
     intro: "Before you resign, take a loan or ask your family for money, find out if real people near you will pay. You can do it in two weekends, with your phone and a few hundred rupees.",
     sub: "Built for first-time founders in Indian cities and towns: **buyers who pay by UPI**, family who will ask questions, and a market you can walk through.",
     updated: UPDATED,
@@ -40,11 +41,11 @@ export const validateIdea: TopicPage = {
       heading: "Validation methods by category",
       intro: "Choose the method that fits how your buyers live. You do not need all of them.",
       items: [
-        { title: "Talk: customer conversations", body: "Ten honest conversations with the people who would pay. The cheapest method there is, and the one most founders skip.", href: "/customer-interviews-india", cta: "How to run them" },
+        { title: "Talk: customer conversations", body: "Ten honest conversations with the people who would pay. The cheapest method there is, and the one most founders skip.", href: "/how-to-talk-to-customers-before-starting-a-business-in-india", cta: "How to run them" },
         { title: "Sell: pre-orders and UPI advances", body: "Ask for money before you build. A small advance tells you more than a hundred likes.", href: "/first-customer-india", cta: "Get your first customer" },
         { title: "Show: a stall, a sample, a demo", body: "A weekend market stall, a sample box for five shops, a demo at a society meet. People react honestly to something they can touch.", href: "/weekend-market-stall-profit-check", cta: "Check stall numbers" },
-        { title: "Size: how many buyers are really near you", body: "Count the buyers you can actually reach in your area or online, not the whole country.", href: "/tam-sam-som-india", cta: "Size your market" },
-        { title: "Build small: a first version", body: "A WhatsApp catalogue, a Google Form, a single product. Just enough to deliver and learn.", href: "/how-to-build-mvp-india", cta: "Build an MVP" },
+        { title: "Size: how many buyers are really near you", body: "Count the buyers you can actually reach in your area or online, not the whole country.", href: "/how-to-calculate-tam-sam-som-for-a-business-in-india", cta: "Size your market" },
+        { title: "Build small: a first version", body: "A WhatsApp catalogue, a Google Form, a single product. Just enough to deliver and learn.", href: "/how-to-build-an-mvp-with-low-investment-in-india", cta: "Build an MVP" },
         { title: "Count: unit economics", body: "What one order costs you, what it earns, and what it costs to find each buyer.", href: "/unit-economics-india", cta: "Check the numbers" },
       ],
     },
@@ -75,17 +76,18 @@ export const validateIdea: TopicPage = {
 
 /** Seller layout: question page (/questions/how-to-get-funding). */
 export const getFunding: TopicPage = {
-  slug: "how-to-get-business-funding-india",
+  slug: "how-to-get-funding-for-a-small-business-in-india",
+  updated: UPDATED_ON,
   sellerRef: "https://ideaproof.io/questions/how-to-get-funding",
   parent: PARENT,
   seo: {
-    title: "How to Get Funding for a Business in India: MUDRA, Seed Fund & More",
+    title: "How to Get Funding for a Small Business in India: Loans, Schemes and Investors",
     description: "Where a first-time founder in India can get money: own savings, MUDRA loans, Stand-Up India, PMEGP, the Startup India Seed Fund, angels and VCs, and which one fits you.",
   },
   hero: {
     eyebrow: "Business funding in India",
-    h1: "How to get funding for your business in India",
-    highlight: "funding",
+    h1: "How to Get Funding for a Small Business in India",
+    highlight: "Funding",
     intro: "Most small businesses in India do not start with investors. They start with savings, a bank loan or a government scheme. Find the source that fits your stage, so you do not chase the wrong money for months.",
     sub: "Covers **MUDRA**, **Stand-Up India**, **PMEGP**, **CGTMSE**, the **Startup India Seed Fund**, angels and VCs, in plain words.",
     updated: UPDATED,
@@ -189,8 +191,8 @@ export const getFunding: TopicPage = {
       type: "chips",
       heading: "Related questions",
       items: [
-        { label: "How much money do I need to start?", href: "/money-needed-to-start-business-india" },
-        { label: "Should I bootstrap instead?", href: "/bootstrapping-business-india" },
+        { label: "How much money do I need to start?", href: "/how-much-money-is-needed-to-start-a-business-in-india" },
+        { label: "Should I bootstrap instead?", href: "/how-to-start-a-business-without-investors-in-india" },
         { label: "Cash-flow calendar", href: "/startup-cash-flow-india" },
         { label: "Startup terms in plain words", href: "/startup-terms-india" },
       ],
@@ -200,8 +202,8 @@ export const getFunding: TopicPage = {
       type: "cards",
       heading: "Keep reading",
       items: [
-        { title: "How much money you need to start", body: "Work out the real number before you ask anyone for it.", href: "/money-needed-to-start-business-india", cta: "Read" },
-        { title: "Bootstrapping in India", body: "Grow from your own sales first. How and when it works.", href: "/bootstrapping-business-india", cta: "Read" },
+        { title: "How much money you need to start", body: "Work out the real number before you ask anyone for it.", href: "/how-much-money-is-needed-to-start-a-business-in-india", cta: "Read" },
+        { title: "Bootstrapping in India", body: "Grow from your own sales first. How and when it works.", href: "/how-to-start-a-business-without-investors-in-india", cta: "Read" },
         { title: "Why Indian startups fail", body: "Learn from founders who ran out of money before they found buyers.", href: "/failed-startups/india", cta: "Read" },
       ],
     },
@@ -209,8 +211,8 @@ export const getFunding: TopicPage = {
       type: "chips",
       heading: "Deeper answers founders ask for",
       items: [
-        { label: "Product-market fit in India", href: "/product-market-fit-india" },
-        { label: "Customer acquisition cost", href: "/customer-acquisition-cost-india" },
+        { label: "Product-market fit in India", href: "/how-to-know-if-your-business-has-product-market-fit-in-india" },
+        { label: "Customer acquisition cost", href: "/what-is-customer-acquisition-cost-for-a-small-business-in-india" },
         { label: "Unit economics for India", href: "/unit-economics-india" },
         { label: "Launch evidence plan", href: "/startup-launch-plan-india" },
       ],
@@ -233,17 +235,18 @@ export const getFunding: TopicPage = {
 
 /** Seller layout: guide (/avoid-startup-failure). */
 export const mistakes: TopicPage = {
-  slug: "startup-mistakes-to-avoid-india",
+  slug: "common-mistakes-to-avoid-when-starting-a-business-in-india",
+  updated: UPDATED_ON,
   sellerRef: "https://ideaproof.io/avoid-startup-failure",
   parent: PARENT,
   seo: {
-    title: "Startup Validation Mistakes to Avoid in India: 7 Traps and a 14-Day Check",
+    title: "Common Mistakes to Avoid When Starting a Business in India",
     description: "The seven validation mistakes first-time founders in India make most often, the red flags to check today, and a 14-day plan to test your idea before you spend.",
   },
   hero: {
     eyebrow: "Startup mistakes to avoid",
-    h1: "Startup validation mistakes to avoid in India",
-    highlight: "mistakes",
+    h1: "Common Mistakes to Avoid When Starting a Business in India",
+    highlight: "Mistakes",
     intro: "Most businesses do not fail on launch day. They fail months earlier, on a day the founder skipped one honest check. Here are the traps, and how you catch each one early.",
     updated: UPDATED,
     primary: { label: "See the 7 mistakes", href: "#mistakes" },
@@ -288,13 +291,13 @@ export const mistakes: TopicPage = {
       type: "list",
       heading: "7 validation mistakes and how to catch them",
       items: [
-        { title: "1. Asking family instead of buyers", body: "Your family wants you to be happy. Catch it: talk to ten strangers who fit your buyer line. See [customer interviews](/customer-interviews-india)." },
+        { title: "1. Asking family instead of buyers", body: "Your family wants you to be happy. Catch it: talk to ten strangers who fit your buyer line. See [customer interviews](/how-to-talk-to-customers-before-starting-a-business-in-india)." },
         { title: "2. Counting likes as demand", body: "Reels and likes cost nothing. Catch it: ask for a ₹100 UPI advance or a pre-order." },
         { title: "3. Pricing from the competitor, not your cost", body: "The shop next door may have no rent or family labour. Catch it: build your price in the [first-price workbench](/business-pricing-india)." },
         { title: "4. Forgetting GST, fees and delivery", body: "Marketplace commission, payment fees, packing and delivery can eat the margin. Catch it: check [unit economics](/unit-economics-india) on one order." },
         { title: "5. Signing rent before testing", body: "A lease and deposit lock you in. Catch it: test with a stall, home kitchen, shared space or online catalogue first." },
-        { title: "6. Building the app before the service", body: "Many Indian buyers are happy to order on WhatsApp. Catch it: run the service manually first. See [how to build an MVP](/how-to-build-mvp-india)." },
-        { title: "7. Ignoring what it costs to find each buyer", body: "Ads and commissions add up. Catch it: work out your [customer acquisition cost](/customer-acquisition-cost-india) before you scale." },
+        { title: "6. Building the app before the service", body: "Many Indian buyers are happy to order on WhatsApp. Catch it: run the service manually first. See [how to build an MVP](/how-to-build-an-mvp-with-low-investment-in-india)." },
+        { title: "7. Ignoring what it costs to find each buyer", body: "Ads and commissions add up. Catch it: work out your [customer acquisition cost](/what-is-customer-acquisition-cost-for-a-small-business-in-india) before you scale." },
       ],
     },
     {

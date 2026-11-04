@@ -3,6 +3,8 @@ import type { Link, Section } from "@/bought/topic-page";
 
 export const PARENT: Link = { label: "Startup topics", href: "/topics" };
 export const UPDATED = "India edition";
+/** Last content review date for the topic pages (ISO). Change it whenever a page is reviewed. */
+export const UPDATED_ON = "2026-11-04";
 
 export const IMG = {
   hub: "/bought/topics/images/hero-hub-DBrOLMFS.jpg",
