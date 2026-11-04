@@ -1,0 +1,3916 @@
+{
+ "generated": "2026-11-04",
+ "source": "https://ideaproof.io/topics (read in browser; seller brand never used in our pages)",
+ "total_seller_pages": 147,
+ "could_not_read": [
+  "https://ideaproof.io/failed-startups",
+  "https://ideaproof.io/questions",
+  "https://ideaproof.io/glossary",
+  "https://ideaproof.io/validation-templates",
+  "https://ideaproof.io/tools",
+  "https://ideaproof.io/sitemap",
+  "https://ideaproof.io/fundraising-benchmarks",
+  "https://ideaproof.io/validate-idea",
+  "https://ideaproof.io/questions/pitch-deck-contents"
+ ],
+ "built": 10,
+ "pages": [
+  {
+   "seller_url": "https://ideaproof.io/topics",
+   "seller_title": "",
+   "page_type": "topic hub",
+   "sections": 12,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "accordion",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "-",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "topics-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /topics",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": 16,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "input",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Topics hub",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "(existing route: keep ours)",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/guides",
+   "seller_title": "",
+   "page_type": "topic hub",
+   "sections": 5,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "accordion",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Learn",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "guides-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /guides",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/business-plan",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 9,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Plan & build",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "business-plan-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /business-plan",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/topics/fundraising",
+   "seller_title": "",
+   "page_type": "topic hub",
+   "sections": 4,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "fundraising-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /topics/fundraising",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/failed-startups",
+   "seller_title": "",
+   "page_type": "topic hub",
+   "sections": null,
+   "section_order": null,
+   "components": [],
+   "parent_topic": "Learn from failure",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "failed-startups-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /failed-startups",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "India failure research pages"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "could not read (page did not render)",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/topics/saas-metrics",
+   "seller_title": "",
+   "page_type": "topic hub",
+   "sections": 2,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "saas-metrics-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /topics/saas-metrics",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/topics/validation-methods",
+   "seller_title": "",
+   "page_type": "topic hub",
+   "sections": 4,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "How to validate a business idea in India",
+   "our_slug": "how-to-validate-business-idea-india",
+   "india_angle": "reframe",
+   "layout_file": "src/bought/topics.html components",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "done",
+   "live_url": "https://bbinewcopy.vercel.app/how-to-validate-business-idea-india"
+  },
+  {
+   "seller_url": "https://ideaproof.io/is-my-business-idea-good",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 14,
+   "section_order": null,
+   "components": [
+    "hero"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "is-my-business-idea-good-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /is-my-business-idea-good",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/saas",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 25,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-saas-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/b2b-saas",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 14,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-b2b-saas-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/fintech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 17,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-fintech-startup-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/healthtech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 14,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-healthcare-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/edtech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 14,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-education-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/ecommerce",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 14,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-ecommerce-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/marketplace",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 14,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-marketplace-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/aiml",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 14,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-ai-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/mobile-app",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 14,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-mobile-app-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/cleantech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 17,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-green-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/foodtech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 14,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-food-business-ideas-validate-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/proptech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 14,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-real-estate-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/insurtech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 16,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-insurance-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "low",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/legaltech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 16,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "calculator",
+    "input",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-legal-services-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/hrtech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 16,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-hr-staffing-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/agritech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 16,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-agriculture-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/gametech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 14,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-gaming-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "low",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/retailtech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 16,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-retail-shop-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/spacetech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 16,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-spacetech-startups-india",
+   "india_angle": "adapt",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "low",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/sportstech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 16,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-sports-fitness-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "low",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea/traveltech",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 14,
+   "section_order": "Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "cards"
+   ],
+   "parent_topic": "Industry validators",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-travel-tourism-business-ideas-india",
+   "india_angle": "reframe",
+   "layout_file": "seller industry validator page — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions",
+   "seller_title": "",
+   "page_type": "topic hub",
+   "sections": null,
+   "section_order": null,
+   "components": [],
+   "parent_topic": "Learn",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "questions-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /questions",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "could not read (page did not render)",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/glossary",
+   "seller_title": "",
+   "page_type": "topic hub",
+   "sections": null,
+   "section_order": null,
+   "components": [],
+   "parent_topic": "Learn",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "glossary-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /glossary",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "could not read (page did not render)",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/research-methodology",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": 7,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "chart",
+    "breadcrumb",
+    "cta"
+   ],
+   "parent_topic": "Learn",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "research-methodology-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /research-methodology",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/blog",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": null,
+   "section_order": null,
+   "components": [
+    "hero"
+   ],
+   "parent_topic": "Learn",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "blog-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /blog",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/market-research",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 8,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "accordion",
+    "cards"
+   ],
+   "parent_topic": "Plan & build",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "market-research-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /market-research",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/competitor-analysis",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 8,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "accordion",
+    "cards"
+   ],
+   "parent_topic": "Plan & build",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "competitor-analysis-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /competitor-analysis",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/brand-strategy",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 10,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Plan & build",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "brand-strategy-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /brand-strategy",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/visual-identity",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 10,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Plan & build",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "visual-identity-india",
+   "india_angle": "adapt",
+   "layout_file": "seller page file needed: /visual-identity",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/marketing-suite",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 11,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Plan & build",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "marketing-suite-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /marketing-suite",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/logo-generator",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 10,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Plan & build",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "logo-generator-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /logo-generator",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/templates",
+   "seller_title": "",
+   "page_type": "topic hub",
+   "sections": 6,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "accordion",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Plan & build",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "templates-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /templates",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validation-templates",
+   "seller_title": "",
+   "page_type": "topic hub",
+   "sections": null,
+   "section_order": null,
+   "components": [],
+   "parent_topic": "Plan & build",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validation-templates-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /validation-templates",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "could not read (page did not render)",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/email-sequences",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 11,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "accordion",
+    "cards"
+   ],
+   "parent_topic": "Plan & build",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "email-sequences-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /email-sequences",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/ad-creatives",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 11,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "accordion",
+    "cards"
+   ],
+   "parent_topic": "Plan & build",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "ad-creatives-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /ad-creatives",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/ugc-scripts",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 11,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "accordion",
+    "cards"
+   ],
+   "parent_topic": "Plan & build",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "ugc-scripts-india",
+   "india_angle": "adapt",
+   "layout_file": "seller page file needed: /ugc-scripts",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/calculators",
+   "seller_title": "",
+   "page_type": "topic hub",
+   "sections": 10,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "accordion",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "calculators-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /calculators",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "calculators"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/roi-calculator",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 5,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "calculator",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "roi-calculator-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /roi-calculator",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "calculators"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/industry-benchmarks",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": 3,
+   "section_order": null,
+   "components": [
+    "hero",
+    "breadcrumb"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "industry-benchmarks-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /industry-benchmarks",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/guides/landing-page-validation-facebook-vs-adwords",
+   "seller_title": "",
+   "page_type": "guide",
+   "sections": 18,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "landing-page-validation-facebook-vs-adwords-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /guides/landing-page-validation-facebook-vs-adwords",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/compare",
+   "seller_title": "",
+   "page_type": "comparison",
+   "sections": 6,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Compare",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "compare-india",
+   "india_angle": "adapt",
+   "layout_file": "seller page file needed: /compare",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/compare/feature-matrix",
+   "seller_title": "",
+   "page_type": "comparison",
+   "sections": 4,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "cta"
+   ],
+   "parent_topic": "Compare",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "feature-matrix-india",
+   "india_angle": "adapt",
+   "layout_file": "seller page file needed: /compare/feature-matrix",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/versus",
+   "seller_title": "",
+   "page_type": "comparison",
+   "sections": 7,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Compare",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "versus-india",
+   "india_angle": "adapt",
+   "layout_file": "seller page file needed: /versus",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/frameworks-comparison",
+   "seller_title": "",
+   "page_type": "comparison",
+   "sections": 12,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "breadcrumb",
+    "cta"
+   ],
+   "parent_topic": "Compare",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "frameworks-comparison-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /frameworks-comparison",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/best-ai-validation-tools-2026",
+   "seller_title": "",
+   "page_type": "comparison",
+   "sections": 14,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "chart",
+    "accordion",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Compare",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "best-ai-validation-tools-india",
+   "india_angle": "adapt",
+   "layout_file": "seller page file needed: /best-ai-validation-tools-2026",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/best-business-idea-validators-2026",
+   "seller_title": "",
+   "page_type": "comparison",
+   "sections": 12,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "accordion",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Compare",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "best-business-idea-validators-india",
+   "india_angle": "adapt",
+   "layout_file": "seller page file needed: /best-business-idea-validators-2026",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/best-market-research-tools-2026",
+   "seller_title": "",
+   "page_type": "comparison",
+   "sections": 12,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "chart",
+    "accordion",
+    "breadcrumb",
+    "cards"
+   ],
+   "parent_topic": "Compare",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "best-market-research-tools-india",
+   "india_angle": "adapt",
+   "layout_file": "seller page file needed: /best-market-research-tools-2026",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/startup-failure-database",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": 10,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "tabs",
+    "accordion",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Learn from failure",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "startup-failure-database-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /startup-failure-database",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "India failure research pages"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/startup-failure-reasons",
+   "seller_title": "",
+   "page_type": "guide",
+   "sections": 3,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "chart",
+    "breadcrumb"
+   ],
+   "parent_topic": "Learn from failure",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "startup-failure-reasons-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /startup-failure-reasons",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "India failure research pages"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/startup-failure-analysis",
+   "seller_title": "",
+   "page_type": "guide",
+   "sections": 11,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "chart",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Learn from failure",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "startup-failure-analysis-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /startup-failure-analysis",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "India failure research pages"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/biggest-startup-failures-history",
+   "seller_title": "",
+   "page_type": "guide",
+   "sections": 12,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "chart",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Learn from failure",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "biggest-startup-failures-history-india",
+   "india_angle": "adapt",
+   "layout_file": "seller page file needed: /biggest-startup-failures-history",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "India failure research pages"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/why-startups-fail-ai-analysis",
+   "seller_title": "",
+   "page_type": "guide",
+   "sections": 11,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "chart",
+    "accordion",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Learn from failure",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "why-startups-fail-ai-analysis-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /why-startups-fail-ai-analysis",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "India failure research pages"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/avoid-startup-failure",
+   "seller_title": "",
+   "page_type": "guide",
+   "sections": 12,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Learn from failure",
+   "our_title": "Startup validation mistakes to avoid in India",
+   "our_slug": "startup-mistakes-to-avoid-india",
+   "india_angle": "reframe",
+   "layout_file": "src/bought/topics.html components",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "India failure research pages"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "done",
+   "live_url": "https://bbinewcopy.vercel.app/startup-mistakes-to-avoid-india"
+  },
+  {
+   "seller_url": "https://ideaproof.io/failed-vs-successful-startups",
+   "seller_title": "",
+   "page_type": "comparison",
+   "sections": 9,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "chart",
+    "accordion",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Learn from failure",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "failed-vs-successful-startups-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /failed-vs-successful-startups",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "India failure research pages"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/startup-failures-2026",
+   "seller_title": "",
+   "page_type": "guide",
+   "sections": 11,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "chart",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Learn from failure",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "startup-failures-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /startup-failures-2026",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "India failure research pages"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/case-studies",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": 14,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Ideas & inspiration",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "case-studies-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /case-studies",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/startup-ideas-database",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": 7,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "tabs",
+    "chart",
+    "accordion",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Ideas & inspiration",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "startup-ideas-database-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /startup-ideas-database",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/lists",
+   "seller_title": "",
+   "page_type": "topic hub",
+   "sections": 16,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "accordion",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Ideas & inspiration",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "lists-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /lists",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "categories, subcategories, ideas, lists"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/tools",
+   "seller_title": "",
+   "page_type": "topic hub",
+   "sections": null,
+   "section_order": null,
+   "components": [],
+   "parent_topic": "Tools & resources",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "tools-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /tools",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "could not read (page did not render)",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/resources",
+   "seller_title": "",
+   "page_type": "topic hub",
+   "sections": 20,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Tools & resources",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "resources-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /resources",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/changelog",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": 1,
+   "section_order": null,
+   "components": [
+    "hero",
+    "breadcrumb",
+    "cta"
+   ],
+   "parent_topic": "Site",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "(existing route: keep ours)",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /changelog",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "low",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/faq",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": 1,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "accordion",
+    "breadcrumb",
+    "cta"
+   ],
+   "parent_topic": "Site",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "(existing route: keep ours)",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /faq",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "low",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/startup-funding-faq",
+   "seller_title": "",
+   "page_type": "guide",
+   "sections": 14,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "accordion",
+    "breadcrumb",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "startup-funding-faq-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /startup-funding-faq",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/pricing",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": 6,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "accordion",
+    "breadcrumb",
+    "cta"
+   ],
+   "parent_topic": "Site",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "(existing route: keep ours)",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /pricing",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "low",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/about",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": 4,
+   "section_order": null,
+   "components": [
+    "hero",
+    "input",
+    "cta"
+   ],
+   "parent_topic": "Site",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "(existing route: keep ours)",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /about",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "low",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/about/entity",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": 8,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "chart",
+    "breadcrumb"
+   ],
+   "parent_topic": "Site",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "(existing route: keep ours)",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /about/entity",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "low",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/startup-failure-database/methodology",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": 9,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "breadcrumb"
+   ],
+   "parent_topic": "Learn from failure",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "methodology-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /startup-failure-database/methodology",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/contact",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": 1,
+   "section_order": null,
+   "components": [
+    "hero",
+    "faq",
+    "input",
+    "accordion"
+   ],
+   "parent_topic": "Site",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "(existing route: keep ours)",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /contact",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "low",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/sitemap",
+   "seller_title": "",
+   "page_type": "other",
+   "sections": null,
+   "section_order": null,
+   "components": [],
+   "parent_topic": "Site",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "(existing route: keep ours)",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /sitemap",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "low",
+   "status": "could not read (page did not render)",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/fundraising-benchmarks",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": null,
+   "section_order": null,
+   "components": [],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "fundraising-benchmarks-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /fundraising-benchmarks",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "calculators"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "could not read (page did not render)",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/calculators/funding",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 7,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "chart",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "funding-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /calculators/funding",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "calculators"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/calculators/roi",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 8,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "faq",
+    "calculator",
+    "input",
+    "chart",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "roi-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /calculators/roi",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "calculators"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/calculators/break-even",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": 7,
+   "section_order": null,
+   "components": [
+    "hero",
+    "table",
+    "input",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "break-even-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /calculators/break-even",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [
+    "calculators"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/validate-idea",
+   "seller_title": "",
+   "page_type": "tool",
+   "sections": null,
+   "section_order": null,
+   "components": [],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validate-idea-india",
+   "india_angle": "reframe",
+   "layout_file": "seller page file needed: /validate-idea",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
+   "supabase_data_now": [],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "could not read (page did not render)",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/how-much-funding-needed",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "how-much-funding-needed-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/when-to-raise-funding",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "when-to-raise-funding-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/how-to-get-funding",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "How to get funding for your business in India",
+   "our_slug": "how-to-get-business-funding-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "done",
+   "live_url": "https://bbinewcopy.vercel.app/how-to-get-business-funding-india"
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/money-to-start-business",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "How much money do you need to start a business in India?",
+   "our_slug": "money-needed-to-start-business-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "done",
+   "live_url": "https://bbinewcopy.vercel.app/money-needed-to-start-business-india"
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/angel-vs-vc",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "angel-vs-vc-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/bootstrap-vs-vc",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "bootstrap-vs-vc-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-bootstrapping",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "What is bootstrapping a business in India?",
+   "our_slug": "bootstrapping-business-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "done",
+   "live_url": "https://bbinewcopy.vercel.app/bootstrapping-business-india"
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-incubator",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "incubator-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/how-to-pitch-investors",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "how-to-pitch-investors-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/how-to-create-pitch-deck",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "how-to-create-pitch-deck-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/pitch-deck-contents",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": null,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "pitch-deck-contents-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "could not read (page did not render)",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/pitch-deck-length",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "pitch-deck-length-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/raise-series-a",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "raise-series-a-india",
+   "india_angle": "adapt",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-burn-rate",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "burn-rate-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms",
+    "calculators"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-runway",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "runway-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms",
+    "calculators"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/term-sheet-guide",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "term-sheet-guide-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-equity-dilution",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "equity-dilution-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/vesting-schedule",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "vesting-schedule-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/due-diligence-checklist",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "due-diligence-checklist-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/need-cofounder",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "need-cofounder-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/how-to-find-cofounder",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "how-to-find-cofounder-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/cofounder-equity-split",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "cofounder-equity-split-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/solo-vs-cofounders",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Fund",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "solo-vs-cofounders-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-mrr",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "mrr-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-arr",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "arr-india",
+   "india_angle": "adapt",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-ltv",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "ltv-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/ltv-vs-clv",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "ltv-vs-clv-india",
+   "india_angle": "adapt",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-cac",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "What is customer acquisition cost (CAC)?",
+   "our_slug": "customer-acquisition-cost-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms",
+    "calculators"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "done",
+   "live_url": "https://bbinewcopy.vercel.app/customer-acquisition-cost-india"
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/cac-vs-cpa",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "cac-vs-cpa-india",
+   "india_angle": "adapt",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/how-to-reduce-cac",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "how-to-reduce-cac-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/first-customer-cac",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "first-customer-cac-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/churn-analysis",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "churn-analysis-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/how-to-reduce-churn",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "how-to-reduce-churn-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/customer-retention-strategies",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "customer-retention-strategies-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/increase-ltv",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "increase-ltv-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-tam",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "What is TAM, SAM and SOM? Market size for India",
+   "our_slug": "tam-sam-som-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "done",
+   "live_url": "https://bbinewcopy.vercel.app/tam-sam-som-india"
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/calculate-tam-sam-som",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "calculate-tam-sam-som-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/good-tam-saas",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "good-tam-saas-india",
+   "india_angle": "adapt",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/good-tam-investors",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "good-tam-investors-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-unit-economics",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "unit-economics-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms",
+    "calculators"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/improve-unit-economics",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "improve-unit-economics-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-pmf",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "What is product-market fit, and do you have it?",
+   "our_slug": "product-market-fit-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "done",
+   "live_url": "https://bbinewcopy.vercel.app/product-market-fit-india"
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/measure-product-market-fit",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "measure-product-market-fit-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/sean-ellis-test",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "sean-ellis-test-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-conversion-rate",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Numbers",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "conversion-rate-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/best-validation-methods",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "best-validation-methods-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/is-validation-worth-it",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "is-validation-worth-it-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/fastest-way-validate-startup",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "fastest-way-validate-startup-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/conduct-customer-interviews",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "How to do customer interviews for your business idea",
+   "our_slug": "customer-interviews-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "done",
+   "live_url": "https://bbinewcopy.vercel.app/customer-interviews-india"
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/how-many-customer-interviews",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "how-many-customer-interviews-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/validation-interview-questions",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "validation-interview-questions-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/how-to-find-early-adopters",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "how-to-find-early-adopters-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-market-research",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "market-research-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/market-sizing-methods",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "market-sizing-methods-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/how-to-do-competitor-analysis",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "how-to-do-competitor-analysis-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/find-competitors",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "find-competitors-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/direct-vs-indirect-competitors",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "direct-vs-indirect-competitors-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/competitive-moat",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "competitive-moat-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-mvp",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "mvp-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/how-to-build-mvp",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "How to build an MVP for your business in India",
+   "our_slug": "how-to-build-mvp-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "high",
+   "status": "done",
+   "live_url": "https://bbinewcopy.vercel.app/how-to-build-mvp-india"
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/mvp-vs-full-product",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "mvp-vs-full-product-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/nocode-vs-custom-mvp",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "nocode-vs-custom-mvp-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/what-is-lean-startup",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "lean-startup-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  },
+  {
+   "seller_url": "https://ideaproof.io/questions/pivot-vs-persevere",
+   "seller_title": "",
+   "page_type": "topic detail (Q&A)",
+   "sections": 16,
+   "section_order": "Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed",
+   "components": [
+    "hero",
+    "faq",
+    "tabs",
+    "accordion",
+    "cards",
+    "cta"
+   ],
+   "parent_topic": "Validate",
+   "our_title": "(to write in Phase 2)",
+   "our_slug": "pivot-vs-persevere-india",
+   "india_angle": "reframe",
+   "layout_file": "seller question page (Q&A) — file needed",
+   "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
+   "supabase_data_now": [
+    "glossary terms"
+   ],
+   "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
+   "priority": "medium",
+   "status": "pending",
+   "live_url": null
+  }
+ ]
+}
