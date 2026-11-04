@@ -67,11 +67,11 @@ Saved 4 Nov 2026 at the founder's request. When the founder says "recall", re-re
 
 Every page built before this date failed the owner's review: low-value, thin, generic content with an India tag added. No new pages until every existing page is rewritten to these rules, one at a time, each pushed with a `Live: ` line.
 
-- **Tracker columns**: India Topic Pages Review has Quality check, Reviewed by and Reason for every URL. A page is "Passed" only after the owner approves its rewrite. Each page's pending numbers are listed there too.
-- **Numbers**: wherever a real figure is needed (costs, margins, market size, fees, timelines, loan limits, conversion rates) and is not yet verified, put a `[Data pending: what figure, which source, 2026–27]` marker in the data file. Markers are INTERNAL ONLY (owner rule, 5 Nov 2026): the renderer strips them from the public page (a table cell left empty shows "Your local figure" as a fill-in prompt), and every pending figure is listed in India Topic Pages Review for research. Never show placeholders publicly, never invent a number. Only figures verified from an official source are stated on the page.
+- **Tracker columns**: India Topic Pages Review has Quality check, Reviewed by and Reason for every URL. A page is "Passed" only after the owner approves its rewrite.
+- **Numbers**: no researched figures on topic pages. Where a number is needed, write the point without it and point to the page's Validate button (see "Founder rules — India topic pages: numbers").
 - **Every seller section** filled with full, substantial writing, not two or three lines.
 - **Real Indian depth**: step-by-step processes on actual portals and offices (Udyam, GST, MUDRA, Startup India, bank branch loan steps).
-- **Worked rupee examples** for a real Indian reader, with figures marked pending.
+- **Worked rupee examples** for a real Indian reader: the lines and how to work each one out, with the figures coming from the reader's own Validate session.
 - **Differences** between metros, tier 2 and tier 3 cities and villages, and between sectors.
 - **Mistakes Indians actually make**, and family, social and cash realities.
 - **Checklists and worksheets** the reader can use, and **what to do this week**.
@@ -96,7 +96,7 @@ Use the seller's layout and composition exactly: same sections, order, component
 
 - India only: Indian buyers, rupees, GST, Udyam/MSME, MUDRA, UPI, Indian cities and towns, family and social realities, Indian rules.
 - Warm, emotional, interactive, speaking to the reader as "you"; questions, small checks, real situations; plain words for a first-time founder on a phone. Never write as if the site runs the business.
-- Original only, never scraped or reworded from the seller. Never invent a number, statistic, law or source; if a figure can't be verified, keep it as an internal `[Data pending: ...]` marker (never shown publicly, see Quality rules).
+- Original only, never scraped or reworded from the seller. Never invent a number, statistic, law or source; no researched figures; point to the Validate button instead (see the numbers rules).
 - Future-proof: past budgets and years may be referenced, but never anchor content to an old year.
 - No seller brand, no seller links, no `href="#"`, no visible counts.
 - Q&A pages: no new Q&A research. Use our FAQ page and the Supabase FAQ data inside the seller's question-page structure.
@@ -119,22 +119,19 @@ Next pages come from the seller's header and footer menu pages (validate hub, to
 
 ## Founder rules — India topic pages: numbers
 
-Saved 5 Nov 2026. Applies to every number on every page.
+Updated 5 Nov 2026 (replaces the earlier sourcing rules, which are withdrawn).
 
-1. **Source order, strictly:** (a) Indian government sites first: .gov.in and .nic.in, RBI (rbi.org.in), SEBI, MoSPI/NSO, data.gov.in, Ministry of MSME and Udyam, GST portal and CBIC, Income Tax portal, Startup India and DPIIT, SIDBI, NABARD, MUDRA, PIB releases, Union Budget documents (indiabudget.gov.in), NPCI, TRAI, state portals and notifications (for example state minimum wage orders). (b) Only if a figure is genuinely not on any government site: an Indian .in or .co.in site (Indian banks such as sbi.co.in, Indian industry bodies, Indian institutions). (c) Nothing else: no .com blogs, no foreign sites, no global averages relabelled as India, no AI answers.
-2. **Year:** 2026–27 data first, then 2025–26. If only older data exists, use the latest and state its year on the page (for example "as of FY 2024–25"). Never present old data as current.
-3. **Every number shown** has its unit (rupees for money), the year or date it applies to, and an inline link to the exact source page (not a homepage).
-4. **Never invent, estimate or round** a number to look better. Worked rupee examples use only cited figures and show the working step by step.
-5. **Sources disagree:** show both figures with both sources and say which is newer.
-6. **Not found** on a government or .in site: keep the internal marker `[Data pending: what figure, which source to check, 2026–27]` in the data file. Do not drop the point or guess. (Markers are stripped from the public page; see Quality rules.)
-7. **Local prices** (rent, wages, equipment, stock): government data where it exists (wage orders, tender rates, market price portals); otherwise a .in source naming the city and date; otherwise pending.
-8. **Logging:** India Topic Pages Review lists every number per page with: claim, figure, source URL, publication year, date checked, status (verified or pending). A page cannot be "Passed" while any number has no source.
-9. **Order of work:** research each page's numbers while rewriting it. Push with verified numbers in place and pending markers for the rest, post `Live: ` with its URL, then move straight to the next page.
+1. **No number research.** Do not look up figures for any page on the site. Researched figures already added to topic pages have been removed. Where a page needs a number, write the point without it and add an inline line pointing to the page's Validate button ("Check today's figure for your city with the Validate button."). In data files write the marker `[Validate: what figure]`; the renderer turns it (and any old `[Data pending: ...]`) into that inline line. Real-time numbers come from the visitor's own Validate session, not from us.
+2. **Validate button on every topic page:** reuse our existing picker exactly (`ProviderPromptActions`: Claude, Perplexity, ChatGPT, Grok). Build no new UI. It sits at the top of every topic page (`#validate`), at the end (before Sources), and the inline lines link to it.
+3. **One backend prompt template** for all topic pages: `src/lib/topic-validate-prompt.ts`, filled automatically from the page title, topic and key questions (its section headings) plus today's date. Never write a separate prompt per page.
+4. **Pending, not to be built now** (also listed in India Topic Pages Review):
+   - A full redesign of the Validate button and validation area across the whole site (it works but is not engaging enough).
+   - Much stronger, longer backend prompts for every Validate button.
+5. **Content stays rich without numbers:** steps, processes, documents, eligibility, examples, checklists, a 7-day plan, Indian situations, and inline links to our pages.
 
 ## Rewrite progress (resume point)
 
-- Rewrite order follows the live pages in India Topic Pages Review. Done so far (5 Nov 2026): 1 how-to-validate-a-business-idea-in-india (src/data/topic-pages-rw1.ts), 2 how-to-get-funding-for-a-small-business-in-india (rw2), 3 common-mistakes-to-avoid-when-starting-a-business-in-india (rw3).
-- Next: 4 what-is-customer-acquisition-cost-for-a-small-business-in-india, then the rest of the live pages in tracker order. Old thin versions are in topic-pages-b/c/d/e.ts; replace each with a topic-pages-rwN.ts file and switch the import in src/data/topic-pages.ts.
-- Still to do on pages 1–3 under the numbers rules: add the year and an inline exact-source link next to each stated figure (MUDRA bands, MSME limits, GST thresholds, PMEGP ceilings and subsidy, CGTMSE ₹10 crore, UPI ₹2,000), preferring PIB or the scheme's own .gov.in page; and fill the per-number log in the tracker.
-- Renderer (src/bought/topic-page.ts) supports `rich` long-form sections, internal-only pending markers, Supabase FAQ (`dbfaq`) and idea cards (`dbideas`), and automatic bands between sections linking categories, business models, validation pages, guides (with 16:9 images), blog articles, glossary, failures, case studies, calculators and templates.
-
+- Rewrite order follows the live pages in India Topic Pages Review. Rewritten (5 Nov 2026): 1 how-to-validate-a-business-idea-in-india (src/data/topic-pages-rw1.ts), 2 how-to-get-funding-for-a-small-business-in-india (rw2), 3 common-mistakes-to-avoid-when-starting-a-business-in-india (rw3). All three follow the no-numbers rule with the Validate button at top, end and inline.
+- Next: 4 what-is-customer-acquisition-cost-for-a-small-business-in-india, then the rest of the live pages in tracker order. Old thin versions are in topic-pages-b/c/d/e.ts (they still contain some figures; remove them during each rewrite). Replace each with a topic-pages-rwN.ts file and switch the import in src/data/topic-pages.ts.
+- Renderer (src/bought/topic-page.ts): `rich` long-form sections, `[Validate: ...]` inline lines, Validate picker blocks, Supabase FAQ (`dbfaq`) and idea cards (`dbideas`), and bands between sections linking categories, business models, validation pages, guides (16:9 images), blog articles, glossary, failures, case studies, calculators and templates.
+- Logs: update both logs once at the end of the batch.
