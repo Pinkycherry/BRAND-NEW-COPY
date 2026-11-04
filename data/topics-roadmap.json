@@ -147,10 +147,10 @@
    "supabase_data_now": [],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "next",
-   "live_url": null,
+   "status": "live (awaiting founder review)",
+   "live_url": "https://bbinewcopy.vercel.app/how-to-raise-funds-for-a-startup-in-india",
    "contains": "Topic hub: funding stages overview, topics by category, investor metrics, prepare-to-raise.",
-   "india_plan": "Indian funding ladder: savings, MUDRA, schemes, Seed Fund, angels, VCs; links to our funding pages."
+   "india_plan": "Done: Indian funding ladder table (savings, MUDRA, Seed Fund, angels, VCs), topic cards linking our pages, what lenders check, 7 preparation steps with MCA, DPIIT and Udyam links."
   },
   {
    "seller_url": "https://ideaproof.io/failed-startups",
@@ -187,7 +187,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "important-business-numbers-every-small-business-owner-in-india-should-track",
+   "our_slug": "business-numbers-every-small-business-in-india-should-track",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /topics/saas-metrics",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -242,7 +242,7 @@
    "supabase_data_now": [],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
-   "status": "live (not yet completed: images pass pending)",
+   "status": "live (approved by founder)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-check-if-your-business-idea-is-good-in-india",
    "contains": "Long validator page: what it analyses, 7 factors, worth-it test, red flags, cost of a bad idea.",
    "india_plan": "Done: six questions Indian buyers and families ask, a 6-point worth-it test, what a bad idea costs, red flags, rules, Udyam and FSSAI links."
@@ -1989,7 +1989,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "startup-funding-questions-answered-for-first-time-founders-in-india",
+   "our_slug": "startup-funding-questions-for-first-time-founders-in-india",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /startup-funding-faq",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
