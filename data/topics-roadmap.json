@@ -31,7 +31,7 @@
    ],
    "parent_topic": "-",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "topics-india",
+   "our_slug": "topics",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /topics",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -39,7 +39,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Knowledge hub: quick start by intent, featured deep-dives, 8 topic sections, FAQ, CTA.",
+   "india_plan": "Already on our site; next: point every hub card to our Indian pages and categories."
   },
   {
    "seller_url": "https://ideaproof.io/",
@@ -58,7 +60,7 @@
    ],
    "parent_topic": "Topics hub",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "(existing route: keep ours)",
+   "our_slug": "(our home, keep)",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -66,7 +68,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Home page of the seller (validator product, tools, data library, pricing).",
+   "india_plan": "Not rebuilt: our home stays. Reference only."
   },
   {
    "seller_url": "https://ideaproof.io/guides",
@@ -84,7 +88,7 @@
    ],
    "parent_topic": "Learn",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "guides-india",
+   "our_slug": "startup-guides",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /guides",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -92,7 +96,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Guides library: essentials, full library, curated journeys, FAQ, CTA.",
+   "india_plan": "Map to our existing guides hub; group Indian guides by founder stage."
   },
   {
    "seller_url": "https://ideaproof.io/business-plan",
@@ -110,7 +116,7 @@
    ],
    "parent_topic": "Plan & build",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "business-plan-india",
+   "our_slug": "business-plan",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /business-plan",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -118,7 +124,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "AI business plan generator tool page with steps, sample output, FAQ.",
+   "india_plan": "Plain business plan guide and template for Indian banks and MUDRA project reports; no AI claims."
   },
   {
    "seller_url": "https://ideaproof.io/topics/fundraising",
@@ -132,15 +140,17 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "fundraising-india",
+   "our_slug": "funding-guide",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /topics/fundraising",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
    "supabase_data_now": [],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "pending",
-   "live_url": null
+   "status": "next",
+   "live_url": null,
+   "contains": "Topic hub: funding stages overview, topics by category, investor metrics, prepare-to-raise.",
+   "india_plan": "Indian funding ladder: savings, MUDRA, schemes, Seed Fund, angels, VCs; links to our funding pages."
   },
   {
    "seller_url": "https://ideaproof.io/failed-startups",
@@ -151,7 +161,7 @@
    "components": [],
    "parent_topic": "Learn from failure",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "failed-startups-india",
+   "our_slug": "failed-startups",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /failed-startups",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -160,8 +170,10 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "could not read (page did not render)",
-   "live_url": null
+   "status": "pending (did not render)",
+   "live_url": null,
+   "contains": "Startup failure library hub (did not render).",
+   "india_plan": "Already ours at /failed-startups/india; keep and cross-link."
   },
   {
    "seller_url": "https://ideaproof.io/topics/saas-metrics",
@@ -175,15 +187,17 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "saas-metrics-india",
+   "our_slug": "business-metrics",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /topics/saas-metrics",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
    "supabase_data_now": [],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "pending",
-   "live_url": null
+   "status": "next",
+   "live_url": null,
+   "contains": "Topic hub: SaaS metrics quick reference and calculators.",
+   "india_plan": "Reframe for all small businesses: profit per order, repeat rate, CAC, break-even in rupees."
   },
   {
    "seller_url": "https://ideaproof.io/topics/validation-methods",
@@ -198,15 +212,18 @@
    ],
    "parent_topic": "Validate",
    "our_title": "How to validate a business idea in India",
-   "our_slug": "how-to-validate-business-idea-india",
+   "our_slug": "validate-business-idea",
    "india_angle": "reframe",
    "layout_file": "src/bought/topics.html components",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
    "supabase_data_now": [],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "done",
-   "live_url": "https://bbinewcopy.vercel.app/how-to-validate-business-idea-india"
+   "status": "live",
+   "live_url": "https://bbinewcopy.vercel.app/how-to-validate-business-idea-india",
+   "contains": "Topic hub: 5-step validation process, methods by category, methods compared table, CTA.",
+   "india_plan": "Done: UPI advances, society groups, weekend stalls; each step has a small check.",
+   "old_live_url": "https://bbinewcopy.vercel.app/how-to-validate-business-idea-india"
   },
   {
    "seller_url": "https://ideaproof.io/is-my-business-idea-good",
@@ -219,15 +236,17 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "is-my-business-idea-good-india",
+   "our_slug": "is-my-business-idea-good",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /is-my-business-idea-good",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
    "supabase_data_now": [],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
-   "status": "pending",
-   "live_url": null
+   "status": "next",
+   "live_url": null,
+   "contains": "Long validator page: what it analyses, 7 factors, worth-it test, red flags, cost of a bad idea.",
+   "india_plan": "Self-check for Indian founders: family, savings, local demand and licence questions; links to risk check."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/saas",
@@ -243,7 +262,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-saas-business-ideas-india",
+   "our_slug": "saas-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -253,7 +272,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (saas): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: software for Indian SMEs, GST-ready billing, UPI subscriptions. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/b2b-saas",
@@ -269,7 +290,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-b2b-saas-ideas-india",
+   "our_slug": "b2b-software-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -279,7 +300,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (b2b-saas): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: selling software to Indian MSMEs, long payment cycles, regional language support. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/fintech",
@@ -295,7 +318,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-fintech-startup-ideas-india",
+   "our_slug": "fintech-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -305,7 +328,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (fintech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: RBI rules, UPI, NBFC partnerships, KYC; what a small founder can and cannot do. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/healthtech",
@@ -321,7 +346,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-healthcare-business-ideas-india",
+   "our_slug": "healthcare-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -331,7 +356,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (healthtech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: clinics, diagnostics, pharmacy and home care in Indian towns; licences to check. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/edtech",
@@ -347,7 +374,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-education-business-ideas-india",
+   "our_slug": "education-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -357,7 +384,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (edtech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: tuition, coaching and skill courses; parents as buyers; offline plus online. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/ecommerce",
@@ -373,7 +402,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-ecommerce-business-ideas-india",
+   "our_slug": "ecommerce-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -383,7 +412,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (ecommerce): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: marketplaces, ONDC, WhatsApp selling, COD and returns, GST for online sellers. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/marketplace",
@@ -399,7 +430,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-marketplace-business-ideas-india",
+   "our_slug": "marketplace-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -409,7 +440,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (marketplace): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: local service and supply marketplaces in Indian cities; trust and COD. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/aiml",
@@ -425,7 +458,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-ai-business-ideas-india",
+   "our_slug": "ai-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -435,7 +468,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (aiml): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: AI services for Indian SMEs and regional languages; data and DPDP Act basics. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/mobile-app",
@@ -451,7 +486,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-mobile-app-business-ideas-india",
+   "our_slug": "app-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -461,7 +496,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (mobile-app): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: Android-first, low data, regional language apps; when WhatsApp is enough. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/cleantech",
@@ -477,7 +514,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-green-business-ideas-india",
+   "our_slug": "green-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -487,7 +524,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (cleantech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: solar installation, recycling, EV charging and scrap businesses in India. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/foodtech",
@@ -503,7 +542,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-food-business-ideas-validate-india",
+   "our_slug": "food-business-ideas-validate",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -513,7 +552,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (foodtech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: home food, cloud kitchens, packaged snacks; FSSAI and delivery app fees. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/proptech",
@@ -529,7 +570,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-real-estate-business-ideas-india",
+   "our_slug": "real-estate-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -539,7 +580,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (proptech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: brokerage, PG and rental services, RERA basics. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/insurtech",
@@ -555,7 +598,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-insurance-business-ideas-india",
+   "our_slug": "insurance-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -565,7 +608,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "low",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (insurtech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: becoming a POSP or agent; IRDAI rules in plain words. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/legaltech",
@@ -585,7 +630,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-legal-services-business-ideas-india",
+   "our_slug": "legal-services-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -595,7 +640,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (legaltech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: document, compliance and GST filing services for small businesses. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/hrtech",
@@ -611,7 +658,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-hr-staffing-business-ideas-india",
+   "our_slug": "staffing-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -621,7 +668,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (hrtech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: staffing, payroll and training services for Indian MSMEs. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/agritech",
@@ -637,7 +686,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-agriculture-business-ideas-india",
+   "our_slug": "agriculture-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -647,7 +696,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (agritech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: FPOs, farm inputs, cold storage, mandi linkages, agri schemes. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/gametech",
@@ -663,7 +714,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-gaming-business-ideas-india",
+   "our_slug": "gaming-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -673,7 +724,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "low",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (gametech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: gaming cafes, esports events, game studios; online gaming rules. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/retailtech",
@@ -689,7 +742,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-retail-shop-business-ideas-india",
+   "our_slug": "retail-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -699,7 +752,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (retailtech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: kirana, local shop and POS ideas; UPI and stock management. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/spacetech",
@@ -715,7 +770,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-spacetech-startups-india",
+   "our_slug": "spacetech-startups",
    "india_angle": "adapt",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -725,7 +780,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "low",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (spacetech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: adapt: IN-SPACe enabled small suppliers and services; mark as niche. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/sportstech",
@@ -741,7 +798,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-sports-fitness-business-ideas-india",
+   "our_slug": "sports-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -751,7 +808,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "low",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (sportstech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: turf grounds, coaching academies, fitness studios in Indian cities. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/traveltech",
@@ -767,7 +826,7 @@
    ],
    "parent_topic": "Industry validators",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-travel-tourism-business-ideas-india",
+   "our_slug": "travel-business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller industry validator page — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Validation report preview; Ideas to get inspired; Why startups in this industry failed; Go deeper; Industry overview; Metrics/criteria; Common mistakes; Competitor landscape; Questions founders ask; FAQ; What this validation can and cannot tell; Other industry validators; AI tools; Free calculators; Popular questions; CTA; What changed)",
@@ -777,7 +836,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validator (traveltech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
+   "india_plan": "Indian angle: homestays, local tours, pilgrimage travel; seasonality in India. Link to our matching categories and ideas."
   },
   {
    "seller_url": "https://ideaproof.io/questions",
@@ -788,15 +849,17 @@
    "components": [],
    "parent_topic": "Learn",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "questions-india",
+   "our_slug": "startup-questions",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /questions",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
    "supabase_data_now": [],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "could not read (page did not render)",
-   "live_url": null
+   "status": "pending (did not render)",
+   "live_url": null,
+   "contains": "Q&A hub, 90+ answers (did not render).",
+   "india_plan": "Use our FAQ page and Supabase FAQ data in the seller's Q&A structure."
   },
   {
    "seller_url": "https://ideaproof.io/glossary",
@@ -807,7 +870,7 @@
    "components": [],
    "parent_topic": "Learn",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "glossary-india",
+   "our_slug": "founder-glossary",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /glossary",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -816,8 +879,10 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "could not read (page did not render)",
-   "live_url": null
+   "status": "pending (did not render)",
+   "live_url": null,
+   "contains": "Startup glossary (did not render).",
+   "india_plan": "Already ours; add links from every topic page."
   },
   {
    "seller_url": "https://ideaproof.io/research-methodology",
@@ -834,7 +899,7 @@
    ],
    "parent_topic": "Learn",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "research-methodology-india",
+   "our_slug": "how-we-research",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /research-methodology",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -842,7 +907,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "How the seller validates ideas: scoring rubric, sources, transparency.",
+   "india_plan": "Our editorial and research method: Indian sources, review process, who checks pages."
   },
   {
    "seller_url": "https://ideaproof.io/blog",
@@ -855,7 +922,7 @@
    ],
    "parent_topic": "Learn",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "blog-india",
+   "our_slug": "blog",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /blog",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -863,7 +930,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Blog index.",
+   "india_plan": "Already ours; add featured images and topic links."
   },
   {
    "seller_url": "https://ideaproof.io/market-research",
@@ -880,7 +949,7 @@
    ],
    "parent_topic": "Plan & build",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "market-research-india",
+   "our_slug": "market-research",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /market-research",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -888,7 +957,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Market research tool page: steps, benefits, stats, FAQ.",
+   "india_plan": "Already ours; add Indian data sources (Census, data.gov.in, MSME reports)."
   },
   {
    "seller_url": "https://ideaproof.io/competitor-analysis",
@@ -905,7 +976,7 @@
    ],
    "parent_topic": "Plan & build",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "competitor-analysis-india",
+   "our_slug": "competitor-analysis",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /competitor-analysis",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -913,7 +984,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Competitor analysis tool page with SWOT, steps, FAQ.",
+   "india_plan": "How to study local competitors: visit shops, check Google Maps reviews, marketplace listings."
   },
   {
    "seller_url": "https://ideaproof.io/brand-strategy",
@@ -931,7 +1004,7 @@
    ],
    "parent_topic": "Plan & build",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "brand-strategy-india",
+   "our_slug": "brand-strategy",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /brand-strategy",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -939,7 +1012,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Brand strategy generator page: steps, sample output, FAQ.",
+   "india_plan": "Brand basics for a small Indian business: name, trademark search, local trust signals."
   },
   {
    "seller_url": "https://ideaproof.io/visual-identity",
@@ -957,7 +1032,7 @@
    ],
    "parent_topic": "Plan & build",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "visual-identity-india",
+   "our_slug": "logo-and-brand-design",
    "india_angle": "adapt",
    "layout_file": "seller page file needed: /visual-identity",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -965,7 +1040,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Visual identity generator page.",
+   "india_plan": "Adapt: simple brand kit for a shop or home business; signboard, packaging, WhatsApp profile."
   },
   {
    "seller_url": "https://ideaproof.io/marketing-suite",
@@ -983,7 +1060,7 @@
    ],
    "parent_topic": "Plan & build",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "marketing-suite-india",
+   "our_slug": "small-business-marketing",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /marketing-suite",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -991,7 +1068,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Marketing campaign kit generator.",
+   "india_plan": "Low-cost marketing in India: WhatsApp, Google Business Profile, local tie-ups, reels."
   },
   {
    "seller_url": "https://ideaproof.io/logo-generator",
@@ -1009,7 +1088,7 @@
    ],
    "parent_topic": "Plan & build",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "logo-generator-india",
+   "our_slug": "logo-design",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /logo-generator",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1017,7 +1096,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Logo generator tool page.",
+   "india_plan": "How to get a logo made cheaply and register a trademark in India."
   },
   {
    "seller_url": "https://ideaproof.io/templates",
@@ -1035,7 +1116,7 @@
    ],
    "parent_topic": "Plan & build",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "templates-india",
+   "our_slug": "templates",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /templates",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1043,7 +1124,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Templates hub: discover, position, plan and pitch templates.",
+   "india_plan": "Already ours; add Indian templates (MUDRA project report, GST invoice, cash book)."
   },
   {
    "seller_url": "https://ideaproof.io/validation-templates",
@@ -1054,15 +1137,17 @@
    "components": [],
    "parent_topic": "Plan & build",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validation-templates-india",
+   "our_slug": "validation-templates",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /validation-templates",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
    "supabase_data_now": [],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "could not read (page did not render)",
-   "live_url": null
+   "status": "pending (did not render)",
+   "live_url": null,
+   "contains": "Validation templates (did not render).",
+   "india_plan": "Interview sheet, pre-order form, stall tally sheet."
   },
   {
    "seller_url": "https://ideaproof.io/email-sequences",
@@ -1079,7 +1164,7 @@
    ],
    "parent_topic": "Plan & build",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "email-sequences-india",
+   "our_slug": "whatsapp-and-email-marketing",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /email-sequences",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1087,7 +1172,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Email sequence generator page.",
+   "india_plan": "Adapt: WhatsApp broadcast and email follow-ups for Indian customers."
   },
   {
    "seller_url": "https://ideaproof.io/ad-creatives",
@@ -1104,7 +1191,7 @@
    ],
    "parent_topic": "Plan & build",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "ad-creatives-india",
+   "our_slug": "ad-creatives",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /ad-creatives",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1112,7 +1199,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Ad creatives generator page.",
+   "india_plan": "Running small Meta and Google ads in rupees; what to test first."
   },
   {
    "seller_url": "https://ideaproof.io/ugc-scripts",
@@ -1129,7 +1218,7 @@
    ],
    "parent_topic": "Plan & build",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "ugc-scripts-india",
+   "our_slug": "reels-scripts",
    "india_angle": "adapt",
    "layout_file": "seller page file needed: /ugc-scripts",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1137,7 +1226,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "UGC script generator page.",
+   "india_plan": "Adapt: reels and shorts scripts for local businesses in Indian languages."
   },
   {
    "seller_url": "https://ideaproof.io/calculators",
@@ -1156,7 +1247,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "calculators-india",
+   "our_slug": "calculator",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /calculators",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1166,7 +1257,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Calculators hub: formulas, cost, growth, funding, healthy ranges.",
+   "india_plan": "Already ours; add rupee examples and links to topic pages."
   },
   {
    "seller_url": "https://ideaproof.io/roi-calculator",
@@ -1182,7 +1275,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "roi-calculator-india",
+   "our_slug": "validation-savings",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /roi-calculator",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1192,7 +1285,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Validation ROI calculator.",
+   "india_plan": "How much testing first saves you, in rupees, for a sample Indian business."
   },
   {
    "seller_url": "https://ideaproof.io/industry-benchmarks",
@@ -1206,7 +1301,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "industry-benchmarks-india",
+   "our_slug": "industry-benchmarks",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /industry-benchmarks",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1214,7 +1309,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Industry validation benchmarks report.",
+   "india_plan": "Adapt: only sourced Indian figures; otherwise qualitative checks per industry."
   },
   {
    "seller_url": "https://ideaproof.io/guides/landing-page-validation-facebook-vs-adwords",
@@ -1233,7 +1330,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "landing-page-validation-facebook-vs-adwords-india",
+   "our_slug": "landing-page-test",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /guides/landing-page-validation-facebook-vs-adwords",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1241,7 +1338,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Guide: landing page test with Facebook vs Google ads.",
+   "india_plan": "Run a rupee-budget landing page test; Meta vs Google for Indian buyers; UPI pre-order."
   },
   {
    "seller_url": "https://ideaproof.io/compare",
@@ -1259,7 +1358,7 @@
    ],
    "parent_topic": "Compare",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "compare-india",
+   "our_slug": "compare",
    "india_angle": "adapt",
    "layout_file": "seller page file needed: /compare",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1267,7 +1366,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Seller vs other tools comparison hub.",
+   "india_plan": "Adapt: compare business models and routes (shop vs online, loan vs savings)."
   },
   {
    "seller_url": "https://ideaproof.io/compare/feature-matrix",
@@ -1283,7 +1384,7 @@
    ],
    "parent_topic": "Compare",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "feature-matrix-india",
+   "our_slug": "comparison-table",
    "india_angle": "adapt",
    "layout_file": "seller page file needed: /compare/feature-matrix",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1291,7 +1392,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Feature matrix of validation tools.",
+   "india_plan": "Adapt: compare Indian schemes and registration options side by side."
   },
   {
    "seller_url": "https://ideaproof.io/versus",
@@ -1309,7 +1412,7 @@
    ],
    "parent_topic": "Compare",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "versus-india",
+   "our_slug": "versus",
    "india_angle": "adapt",
    "layout_file": "seller page file needed: /versus",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1317,7 +1420,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Versus directory of tool comparisons.",
+   "india_plan": "Adapt: X vs Y pages Indians search (proprietorship vs LLP, MUDRA vs PMEGP)."
   },
   {
    "seller_url": "https://ideaproof.io/frameworks-comparison",
@@ -1334,7 +1439,7 @@
    ],
    "parent_topic": "Compare",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "frameworks-comparison-india",
+   "our_slug": "frameworks-comparison",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /frameworks-comparison",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1342,7 +1447,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "7 validation frameworks compared.",
+   "india_plan": "Already ours; add Indian examples for each framework."
   },
   {
    "seller_url": "https://ideaproof.io/best-ai-validation-tools-2026",
@@ -1362,7 +1469,7 @@
    ],
    "parent_topic": "Compare",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "best-ai-validation-tools-india",
+   "our_slug": "validation-tools",
    "india_angle": "adapt",
    "layout_file": "seller page file needed: /best-ai-validation-tools-2026",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1370,7 +1477,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Ranked list of AI validation tools.",
+   "india_plan": "Adapt: free tools Indian founders can use (government portals, Google Trends, our calculators)."
   },
   {
    "seller_url": "https://ideaproof.io/best-business-idea-validators-2026",
@@ -1389,7 +1498,7 @@
    ],
    "parent_topic": "Compare",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "best-business-idea-validators-india",
+   "our_slug": "idea-validation-checklist",
    "india_angle": "adapt",
    "layout_file": "seller page file needed: /best-business-idea-validators-2026",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1397,7 +1506,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Ranked list of idea validators.",
+   "india_plan": "Adapt: a checklist instead of a tool ranking."
   },
   {
    "seller_url": "https://ideaproof.io/best-market-research-tools-2026",
@@ -1416,7 +1527,7 @@
    ],
    "parent_topic": "Compare",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "best-market-research-tools-india",
+   "our_slug": "market-research-tools",
    "india_angle": "adapt",
    "layout_file": "seller page file needed: /best-market-research-tools-2026",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1424,7 +1535,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Ranked market research tools.",
+   "india_plan": "Free Indian data sources: Census, data.gov.in, MSME dashboards, RBI publications."
   },
   {
    "seller_url": "https://ideaproof.io/startup-failure-database",
@@ -1444,7 +1557,7 @@
    ],
    "parent_topic": "Learn from failure",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "startup-failure-database-india",
+   "our_slug": "failed-startups/india",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /startup-failure-database",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1454,7 +1567,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Failure database with stats, patterns, timeline.",
+   "india_plan": "Already ours; keep and link."
   },
   {
    "seller_url": "https://ideaproof.io/startup-failure-reasons",
@@ -1470,7 +1585,7 @@
    ],
    "parent_topic": "Learn from failure",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "startup-failure-reasons-india",
+   "our_slug": "why-startups-fail",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /startup-failure-reasons",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1480,7 +1595,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Why startups fail: 10 reasons ranked.",
+   "india_plan": "Indian reasons from our research; no invented percentages."
   },
   {
    "seller_url": "https://ideaproof.io/startup-failure-analysis",
@@ -1498,7 +1615,7 @@
    ],
    "parent_topic": "Learn from failure",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "startup-failure-analysis-india",
+   "our_slug": "startup-failure-analysis",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /startup-failure-analysis",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1508,7 +1625,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Failure analysis study.",
+   "india_plan": "Merge into our India failure research."
   },
   {
    "seller_url": "https://ideaproof.io/biggest-startup-failures-history",
@@ -1526,7 +1645,7 @@
    ],
    "parent_topic": "Learn from failure",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "biggest-startup-failures-history-india",
+   "our_slug": "indian-startup-failures",
    "india_angle": "adapt",
    "layout_file": "seller page file needed: /biggest-startup-failures-history",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1536,7 +1655,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "30 biggest startup failures.",
+   "india_plan": "Adapt: well-documented Indian shutdowns with public sources only."
   },
   {
    "seller_url": "https://ideaproof.io/why-startups-fail-ai-analysis",
@@ -1556,7 +1677,7 @@
    ],
    "parent_topic": "Learn from failure",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "why-startups-fail-ai-analysis-india",
+   "our_slug": "startup-post-mortems",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /why-startups-fail-ai-analysis",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1566,7 +1687,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "AI analysis of post-mortems.",
+   "india_plan": "Adapt: lessons from Indian founders' public post-mortems."
   },
   {
    "seller_url": "https://ideaproof.io/avoid-startup-failure",
@@ -1583,7 +1706,7 @@
    ],
    "parent_topic": "Learn from failure",
    "our_title": "Startup validation mistakes to avoid in India",
-   "our_slug": "startup-mistakes-to-avoid-india",
+   "our_slug": "startup-mistakes",
    "india_angle": "reframe",
    "layout_file": "src/bought/topics.html components",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1592,8 +1715,11 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "done",
-   "live_url": "https://bbinewcopy.vercel.app/startup-mistakes-to-avoid-india"
+   "status": "live",
+   "live_url": "https://bbinewcopy.vercel.app/startup-mistakes-to-avoid-india",
+   "contains": "Guide: post-mortem lessons, prevention pyramid, 7 fatal mistakes, 14-day sprint, 10 red flags, FAQ.",
+   "india_plan": "Done: Indian traps (family praise, GST and marketplace fees, early rent) plus a tickable red-flag check.",
+   "old_live_url": "https://bbinewcopy.vercel.app/startup-mistakes-to-avoid-india"
   },
   {
    "seller_url": "https://ideaproof.io/failed-vs-successful-startups",
@@ -1613,7 +1739,7 @@
    ],
    "parent_topic": "Learn from failure",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "failed-vs-successful-startups-india",
+   "our_slug": "failed-vs-successful-startups",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /failed-vs-successful-startups",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1623,7 +1749,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Failed vs successful head-to-head comparisons.",
+   "india_plan": "Indian pairs from public sources; what the survivor did differently."
   },
   {
    "seller_url": "https://ideaproof.io/startup-failures-2026",
@@ -1641,7 +1769,7 @@
    ],
    "parent_topic": "Learn from failure",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "startup-failures-india",
+   "our_slug": "startup-failures-this-year",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /startup-failures-2026",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1651,7 +1779,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Yearly failure report.",
+   "india_plan": "Evergreen 'recent shutdowns' page updated over time, not tied to one year."
   },
   {
    "seller_url": "https://ideaproof.io/case-studies",
@@ -1668,7 +1798,7 @@
    ],
    "parent_topic": "Ideas & inspiration",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "case-studies-india",
+   "our_slug": "case-studies",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /case-studies",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1676,7 +1806,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Validation case studies.",
+   "india_plan": "Already ours; add Indian founder stories."
   },
   {
    "seller_url": "https://ideaproof.io/startup-ideas-database",
@@ -1697,7 +1829,7 @@
    ],
    "parent_topic": "Ideas & inspiration",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "startup-ideas-database-india",
+   "our_slug": "business-ideas",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /startup-ideas-database",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1707,7 +1839,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Ideas database with stats and patterns.",
+   "india_plan": "Our ideas and categories from Supabase."
   },
   {
    "seller_url": "https://ideaproof.io/lists",
@@ -1725,7 +1859,7 @@
    ],
    "parent_topic": "Ideas & inspiration",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "lists-india",
+   "our_slug": "lists",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /lists",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1735,7 +1869,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Idea lists hub.",
+   "india_plan": "Already ours."
   },
   {
    "seller_url": "https://ideaproof.io/tools",
@@ -1746,15 +1882,17 @@
    "components": [],
    "parent_topic": "Tools & resources",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "tools-india",
+   "our_slug": "tools",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /tools",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
    "supabase_data_now": [],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "could not read (page did not render)",
-   "live_url": null
+   "status": "pending (did not render)",
+   "live_url": null,
+   "contains": "Tools mega hub (did not render).",
+   "india_plan": "Already ours."
   },
   {
    "seller_url": "https://ideaproof.io/resources",
@@ -1771,7 +1909,7 @@
    ],
    "parent_topic": "Tools & resources",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "resources-india",
+   "our_slug": "resources",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /resources",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1779,7 +1917,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Resources hub, 350+ tools and guides.",
+   "india_plan": "Our resources hub with government portals and our tools."
   },
   {
    "seller_url": "https://ideaproof.io/changelog",
@@ -1794,7 +1934,7 @@
    ],
    "parent_topic": "Site",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "(existing route: keep ours)",
+   "our_slug": "(skip: seller product page)",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /changelog",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1802,7 +1942,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "low",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Product updates.",
+   "india_plan": "Not needed for our site."
   },
   {
    "seller_url": "https://ideaproof.io/faq",
@@ -1820,7 +1962,7 @@
    ],
    "parent_topic": "Site",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "(existing route: keep ours)",
+   "our_slug": "faq",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /faq",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1828,7 +1970,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "low",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "FAQ page.",
+   "india_plan": "Already ours; reuse its data."
   },
   {
    "seller_url": "https://ideaproof.io/startup-funding-faq",
@@ -1847,7 +1991,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "startup-funding-faq-india",
+   "our_slug": "funding-faq",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /startup-funding-faq",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1855,7 +1999,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Funding FAQ: sources compared, stages, 40+ questions.",
+   "india_plan": "Use our FAQ data plus MUDRA, Seed Fund and bank questions."
   },
   {
    "seller_url": "https://ideaproof.io/pricing",
@@ -1873,7 +2019,7 @@
    ],
    "parent_topic": "Site",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "(existing route: keep ours)",
+   "our_slug": "pricing",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /pricing",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1881,7 +2027,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "low",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Seller pricing.",
+   "india_plan": "Our own pricing page stays."
   },
   {
    "seller_url": "https://ideaproof.io/about",
@@ -1896,7 +2044,7 @@
    ],
    "parent_topic": "Site",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "(existing route: keep ours)",
+   "our_slug": "about",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /about",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1904,7 +2052,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "low",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Seller about page.",
+   "india_plan": "Our about page stays; reviewer bios go here."
   },
   {
    "seller_url": "https://ideaproof.io/about/entity",
@@ -1920,7 +2070,7 @@
    ],
    "parent_topic": "Site",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "(existing route: keep ours)",
+   "our_slug": "(skip)",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /about/entity",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1928,7 +2078,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "low",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Seller entity profile.",
+   "india_plan": "Not needed."
   },
   {
    "seller_url": "https://ideaproof.io/startup-failure-database/methodology",
@@ -1943,7 +2095,7 @@
    ],
    "parent_topic": "Learn from failure",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "methodology-india",
+   "our_slug": "failed-startups/methodology",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /startup-failure-database/methodology",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1951,7 +2103,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Failure database methodology.",
+   "india_plan": "How we compile India failure data and sources."
   },
   {
    "seller_url": "https://ideaproof.io/contact",
@@ -1967,7 +2121,7 @@
    ],
    "parent_topic": "Site",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "(existing route: keep ours)",
+   "our_slug": "contact",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /contact",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1975,7 +2129,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "low",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Contact page.",
+   "india_plan": "Ours stays."
   },
   {
    "seller_url": "https://ideaproof.io/sitemap",
@@ -1986,15 +2142,17 @@
    "components": [],
    "parent_topic": "Site",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "(existing route: keep ours)",
+   "our_slug": "sitemap",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /sitemap",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
    "supabase_data_now": [],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "low",
-   "status": "could not read (page did not render)",
-   "live_url": null
+   "status": "pending (did not render)",
+   "live_url": null,
+   "contains": "Sitemap (did not render).",
+   "india_plan": "Ours stays."
   },
   {
    "seller_url": "https://ideaproof.io/fundraising-benchmarks",
@@ -2005,7 +2163,7 @@
    "components": [],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "fundraising-benchmarks-india",
+   "our_slug": "funding-benchmarks",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /fundraising-benchmarks",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -2014,8 +2172,10 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
-   "status": "could not read (page did not render)",
-   "live_url": null
+   "status": "pending (did not render)",
+   "live_url": null,
+   "contains": "Funding benchmarks (did not render).",
+   "india_plan": "Only sourced Indian figures, or skip."
   },
   {
    "seller_url": "https://ideaproof.io/calculators/funding",
@@ -2033,7 +2193,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "funding-india",
+   "our_slug": "calculator/funding-needed",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /calculators/funding",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -2043,7 +2203,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Funding calculator workbench.",
+   "india_plan": "Already ours; add rupee examples."
   },
   {
    "seller_url": "https://ideaproof.io/calculators/roi",
@@ -2064,7 +2226,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "roi-india",
+   "our_slug": "calculator/roi",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /calculators/roi",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -2074,7 +2236,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "ROI calculator.",
+   "india_plan": "Already ours."
   },
   {
    "seller_url": "https://ideaproof.io/calculators/break-even",
@@ -2092,7 +2256,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "break-even-india",
+   "our_slug": "calculator/break-even",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /calculators/break-even",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -2102,7 +2266,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Break-even calculator.",
+   "india_plan": "Already ours."
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea",
@@ -2113,15 +2279,17 @@
    "components": [],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validate-idea-india",
+   "our_slug": "validate-idea",
    "india_angle": "reframe",
    "layout_file": "seller page file needed: /validate-idea",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
    "supabase_data_now": [],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
-   "status": "could not read (page did not render)",
-   "live_url": null
+   "status": "pending (did not render)",
+   "live_url": null,
+   "contains": "Validator landing (did not render).",
+   "india_plan": "Our risk check and demand test act as the validator."
   },
   {
    "seller_url": "https://ideaproof.io/questions/how-much-funding-needed",
@@ -2139,7 +2307,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "how-much-funding-needed-india",
+   "our_slug": "how-much-funding-do-i-need",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2149,7 +2317,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: How much funding you need (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Rupee budget sheet for months to break-even; MUDRA size bands."
   },
   {
    "seller_url": "https://ideaproof.io/questions/when-to-raise-funding",
@@ -2167,7 +2337,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "when-to-raise-funding-india",
+   "our_slug": "when-to-raise-funds",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2177,7 +2347,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: When to raise (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Raise after proof: first customers, repeat orders; bank vs investor timing."
   },
   {
    "seller_url": "https://ideaproof.io/questions/how-to-get-funding",
@@ -2195,7 +2367,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "How to get funding for your business in India",
-   "our_slug": "how-to-get-business-funding-india",
+   "our_slug": "business-funding",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2204,8 +2376,11 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "done",
-   "live_url": "https://bbinewcopy.vercel.app/how-to-get-business-funding-india"
+   "status": "live",
+   "live_url": "https://bbinewcopy.vercel.app/how-to-get-business-funding-india",
+   "contains": "Q&A: 7 funding sources, step-by-step, investor metrics, mistakes, FAQ, sources.",
+   "india_plan": "Done: MUDRA, Stand-Up India, PMEGP, CGTMSE, Seed Fund, Udyam; which money fits which stage.",
+   "old_live_url": "https://bbinewcopy.vercel.app/how-to-get-business-funding-india"
   },
   {
    "seller_url": "https://ideaproof.io/questions/money-to-start-business",
@@ -2223,7 +2398,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "How much money do you need to start a business in India?",
-   "our_slug": "money-needed-to-start-business-india",
+   "our_slug": "cost-to-start-business",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2232,8 +2407,11 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "done",
-   "live_url": "https://bbinewcopy.vercel.app/money-needed-to-start-business-india"
+   "status": "live",
+   "live_url": "https://bbinewcopy.vercel.app/money-needed-to-start-business-india",
+   "contains": "Q&A: launch capital categories, cost by business model, capital preservation, FAQ.",
+   "india_plan": "Done: one-time vs monthly costs, Udyam, FSSAI, GST thresholds, ways to start smaller.",
+   "old_live_url": "https://bbinewcopy.vercel.app/money-needed-to-start-business-india"
   },
   {
    "seller_url": "https://ideaproof.io/questions/angel-vs-vc",
@@ -2251,7 +2429,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "angel-vs-vc-india",
+   "our_slug": "angel-investors",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2261,7 +2439,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Angel investors vs VCs (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Indian angel networks and how to approach them; when VCs fit."
   },
   {
    "seller_url": "https://ideaproof.io/questions/bootstrap-vs-vc",
@@ -2279,7 +2459,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "bootstrap-vs-vc-india",
+   "our_slug": "bootstrap-vs-investors",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2289,7 +2469,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Bootstrap vs VC (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Family business style growth vs investor money, with Indian examples."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-bootstrapping",
@@ -2307,7 +2489,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "What is bootstrapping a business in India?",
-   "our_slug": "bootstrapping-business-india",
+   "our_slug": "bootstrapping",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2316,8 +2498,11 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "done",
-   "live_url": "https://bbinewcopy.vercel.app/bootstrapping-business-india"
+   "status": "live",
+   "live_url": "https://bbinewcopy.vercel.app/bootstrapping-business-india",
+   "contains": "Q&A: self-funding mechanics, execution steps, risks, compare options.",
+   "india_plan": "Done: growing on own sales like Indian family businesses; loans without giving up ownership.",
+   "old_live_url": "https://bbinewcopy.vercel.app/bootstrapping-business-india"
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-incubator",
@@ -2335,7 +2520,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "incubator-india",
+   "our_slug": "startup-incubators",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2345,7 +2530,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Incubators vs accelerators (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Government and college incubators, Seed Fund route, how to apply."
   },
   {
    "seller_url": "https://ideaproof.io/questions/how-to-pitch-investors",
@@ -2363,7 +2550,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "how-to-pitch-investors-india",
+   "our_slug": "how-to-pitch",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2373,7 +2560,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: How to pitch investors (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Pitching Indian angels and banks; what each wants to hear."
   },
   {
    "seller_url": "https://ideaproof.io/questions/how-to-create-pitch-deck",
@@ -2391,7 +2580,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "how-to-create-pitch-deck-india",
+   "our_slug": "pitch-deck",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2401,7 +2590,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Creating a pitch deck (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Slide list with rupee numbers and Indian market proof."
   },
   {
    "seller_url": "https://ideaproof.io/questions/pitch-deck-contents",
@@ -2412,7 +2603,7 @@
    "components": [],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "pitch-deck-contents-india",
+   "our_slug": "pitch-deck-slides",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2421,8 +2612,10 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
-   "status": "could not read (page did not render)",
-   "live_url": null
+   "status": "pending (did not render)",
+   "live_url": null,
+   "contains": "Q&A page: Pitch deck contents (did not render) (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Merge into pitch deck page."
   },
   {
    "seller_url": "https://ideaproof.io/questions/pitch-deck-length",
@@ -2440,7 +2633,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "pitch-deck-length-india",
+   "our_slug": "pitch-deck-length",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2450,7 +2643,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Pitch deck length (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Merge into pitch deck page as a section."
   },
   {
    "seller_url": "https://ideaproof.io/questions/raise-series-a",
@@ -2468,7 +2663,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "raise-series-a-india",
+   "our_slug": "series-a-funding",
    "india_angle": "adapt",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2478,7 +2673,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Raising Series A (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Adapt: only for scaling startups; what Indian funds look for."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-burn-rate",
@@ -2496,7 +2693,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "burn-rate-india",
+   "our_slug": "burn-rate",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2507,7 +2704,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Burn rate (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Monthly cash burn for a small business, in rupees; how to cut it."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-runway",
@@ -2525,7 +2724,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "runway-india",
+   "our_slug": "cash-runway",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2536,7 +2735,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Runway (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "How many months your savings or loan last; cash-flow calendar link."
   },
   {
    "seller_url": "https://ideaproof.io/questions/term-sheet-guide",
@@ -2554,7 +2755,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "term-sheet-guide-india",
+   "our_slug": "term-sheet",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2564,7 +2765,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Reading a term sheet (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Plain-words term sheet for Indian startups; get a CA or lawyer."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-equity-dilution",
@@ -2582,7 +2785,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "equity-dilution-india",
+   "our_slug": "equity-dilution",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2592,7 +2795,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Equity dilution (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Share math in rupees and percentages for Pvt Ltd companies."
   },
   {
    "seller_url": "https://ideaproof.io/questions/vesting-schedule",
@@ -2610,7 +2815,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "vesting-schedule-india",
+   "our_slug": "founder-vesting",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2620,7 +2825,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Vesting schedules (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Founder vesting in Indian shareholder agreements."
   },
   {
    "seller_url": "https://ideaproof.io/questions/due-diligence-checklist",
@@ -2638,7 +2845,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "due-diligence-checklist-india",
+   "our_slug": "due-diligence-checklist",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2648,7 +2855,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Due diligence checklist (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Documents Indian investors and banks ask for: MCA, GST, Udyam, bank statements."
   },
   {
    "seller_url": "https://ideaproof.io/questions/need-cofounder",
@@ -2666,7 +2875,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "need-cofounder-india",
+   "our_slug": "do-i-need-a-cofounder",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2676,7 +2885,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Do you need a co-founder (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Solo vs partner for Indian family and friend partnerships."
   },
   {
    "seller_url": "https://ideaproof.io/questions/how-to-find-cofounder",
@@ -2694,7 +2905,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "how-to-find-cofounder-india",
+   "our_slug": "find-a-cofounder",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2704,7 +2915,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Finding a co-founder (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Where Indian founders meet partners: colleges, incubators, local meetups."
   },
   {
    "seller_url": "https://ideaproof.io/questions/cofounder-equity-split",
@@ -2722,7 +2935,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "cofounder-equity-split-india",
+   "our_slug": "cofounder-equity-split",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2732,7 +2945,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Co-founder equity split (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Partnership deed or shareholder agreement basics in India."
   },
   {
    "seller_url": "https://ideaproof.io/questions/solo-vs-cofounders",
@@ -2750,7 +2965,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "solo-vs-cofounders-india",
+   "our_slug": "solo-founder",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2760,7 +2975,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Solo vs co-founders (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Proprietorship as a solo path; when to add a partner."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-mrr",
@@ -2778,7 +2995,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "mrr-india",
+   "our_slug": "monthly-recurring-revenue",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2788,7 +3005,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: MRR (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "For tiffin plans, tuition fees and subscriptions in rupees."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-arr",
@@ -2806,7 +3025,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "arr-india",
+   "our_slug": "annual-recurring-revenue",
    "india_angle": "adapt",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2816,7 +3035,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: ARR (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Adapt: merge with monthly recurring revenue page."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-ltv",
@@ -2834,7 +3055,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "ltv-india",
+   "our_slug": "customer-lifetime-value",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2844,7 +3065,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Customer lifetime value (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Repeat-order value for Indian local businesses."
   },
   {
    "seller_url": "https://ideaproof.io/questions/ltv-vs-clv",
@@ -2862,7 +3085,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "ltv-vs-clv-india",
+   "our_slug": "ltv-vs-clv",
    "india_angle": "adapt",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2872,7 +3095,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: LTV vs CLV (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Adapt: short section inside lifetime value page."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-cac",
@@ -2890,7 +3115,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "What is customer acquisition cost (CAC)?",
-   "our_slug": "customer-acquisition-cost-india",
+   "our_slug": "customer-acquisition-cost",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2900,8 +3125,11 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "done",
-   "live_url": "https://bbinewcopy.vercel.app/customer-acquisition-cost-india"
+   "status": "live",
+   "live_url": "https://bbinewcopy.vercel.app/customer-acquisition-cost-india",
+   "contains": "Q&A: CAC definition, formula, benchmarks, how to reduce it, FAQ.",
+   "india_plan": "Done: rupee example, what to count for tiffin, tuition and resellers, GST on ads.",
+   "old_live_url": "https://bbinewcopy.vercel.app/customer-acquisition-cost-india"
   },
   {
    "seller_url": "https://ideaproof.io/questions/cac-vs-cpa",
@@ -2919,7 +3147,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "cac-vs-cpa-india",
+   "our_slug": "cac-vs-cpa",
    "india_angle": "adapt",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2929,7 +3157,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: CAC vs CPA (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Adapt: section inside CAC page."
   },
   {
    "seller_url": "https://ideaproof.io/questions/how-to-reduce-cac",
@@ -2947,7 +3177,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "how-to-reduce-cac-india",
+   "our_slug": "reduce-customer-acquisition-cost",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2957,7 +3187,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Reducing CAC (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Word of mouth, society groups, shop tie-ups instead of ads."
   },
   {
    "seller_url": "https://ideaproof.io/questions/first-customer-cac",
@@ -2975,7 +3207,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "first-customer-cac-india",
+   "our_slug": "first-customer-cost",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2985,7 +3217,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: First customer CAC (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Link to our first customer page; what your first buyers really cost."
   },
   {
    "seller_url": "https://ideaproof.io/questions/churn-analysis",
@@ -3003,7 +3237,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "churn-analysis-india",
+   "our_slug": "customer-churn",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3013,7 +3247,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Churn analysis (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Why customers stop buying from Indian small businesses and how to ask them."
   },
   {
    "seller_url": "https://ideaproof.io/questions/how-to-reduce-churn",
@@ -3031,7 +3267,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "how-to-reduce-churn-india",
+   "our_slug": "reduce-customer-churn",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3041,7 +3277,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Reducing churn (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Reminders, quality, timely delivery, festival offers."
   },
   {
    "seller_url": "https://ideaproof.io/questions/customer-retention-strategies",
@@ -3059,7 +3297,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "customer-retention-strategies-india",
+   "our_slug": "customer-retention",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3069,7 +3307,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Retention strategies (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Loyalty the Indian way: credit trust, WhatsApp follow-ups, personal touch."
   },
   {
    "seller_url": "https://ideaproof.io/questions/increase-ltv",
@@ -3087,7 +3327,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "increase-ltv-india",
+   "our_slug": "increase-repeat-sales",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3097,7 +3337,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Increasing LTV (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Upsells and second products for existing buyers."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-tam",
@@ -3115,7 +3357,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "What is TAM, SAM and SOM? Market size for India",
-   "our_slug": "tam-sam-som-india",
+   "our_slug": "tam-sam-som",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3124,8 +3366,11 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "done",
-   "live_url": "https://bbinewcopy.vercel.app/tam-sam-som-india"
+   "status": "live",
+   "live_url": "https://bbinewcopy.vercel.app/tam-sam-som-india",
+   "contains": "Q&A: TAM, SAM, SOM explained, calculation, benchmarks, FAQ.",
+   "india_plan": "Done: bottom-up sizing for a city or district using Census and data.gov.in counts.",
+   "old_live_url": "https://bbinewcopy.vercel.app/tam-sam-som-india"
   },
   {
    "seller_url": "https://ideaproof.io/questions/calculate-tam-sam-som",
@@ -3143,7 +3388,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "calculate-tam-sam-som-india",
+   "our_slug": "market-size-calculation",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3153,7 +3398,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Calculating TAM SAM SOM (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Adapt: worked district example; may merge with TAM page."
   },
   {
    "seller_url": "https://ideaproof.io/questions/good-tam-saas",
@@ -3171,7 +3418,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "good-tam-saas-india",
+   "our_slug": "software-market-size",
    "india_angle": "adapt",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3181,7 +3428,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Good TAM for SaaS (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Adapt: Indian SME software market sizing method."
   },
   {
    "seller_url": "https://ideaproof.io/questions/good-tam-investors",
@@ -3199,7 +3448,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "good-tam-investors-india",
+   "our_slug": "market-size-for-investors",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3209,7 +3458,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Good TAM for investors (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "How to present market size to Indian investors."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-unit-economics",
@@ -3227,7 +3478,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "unit-economics-india",
+   "our_slug": "unit-economics",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3238,7 +3489,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Unit economics (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Already ours at /unit-economics-india; link."
   },
   {
    "seller_url": "https://ideaproof.io/questions/improve-unit-economics",
@@ -3256,7 +3509,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "improve-unit-economics-india",
+   "our_slug": "improve-profit-per-order",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3266,7 +3519,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Improving unit economics (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Cut packaging, delivery and fee leakage; raise price carefully."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-pmf",
@@ -3284,7 +3539,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "What is product-market fit, and do you have it?",
-   "our_slug": "product-market-fit-india",
+   "our_slug": "product-market-fit",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3293,8 +3548,11 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "done",
-   "live_url": "https://bbinewcopy.vercel.app/product-market-fit-india"
+   "status": "live",
+   "live_url": "https://bbinewcopy.vercel.app/product-market-fit-india",
+   "contains": "Q&A: product-market fit meaning, measurement, signs, FAQ.",
+   "india_plan": "Done: repeat UPI orders and unasked referrals as signs; 5-point self-check.",
+   "old_live_url": "https://bbinewcopy.vercel.app/product-market-fit-india"
   },
   {
    "seller_url": "https://ideaproof.io/questions/measure-product-market-fit",
@@ -3312,7 +3570,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "measure-product-market-fit-india",
+   "our_slug": "measure-product-market-fit",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3322,7 +3580,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Measuring PMF (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Adapt: section in PMF page or short page with tracker."
   },
   {
    "seller_url": "https://ideaproof.io/questions/sean-ellis-test",
@@ -3340,7 +3600,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "sean-ellis-test-india",
+   "our_slug": "sean-ellis-test",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3350,7 +3610,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Sean Ellis test (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Run the 40% question with Indian buyers over WhatsApp."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-conversion-rate",
@@ -3368,7 +3630,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "conversion-rate-india",
+   "our_slug": "conversion-rate",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3378,7 +3640,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Conversion rate (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "For shops, WhatsApp enquiries and online stores in India."
   },
   {
    "seller_url": "https://ideaproof.io/questions/best-validation-methods",
@@ -3396,7 +3660,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "best-validation-methods-india",
+   "our_slug": "validation-methods",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3406,7 +3670,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Best validation methods (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Compare methods for Indian businesses; link to validate page."
   },
   {
    "seller_url": "https://ideaproof.io/questions/is-validation-worth-it",
@@ -3424,7 +3690,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "is-validation-worth-it-india",
+   "our_slug": "why-validate-business-idea",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3434,7 +3700,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Is validation worth it (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Cost of a failed shop vs two weekends of testing, in rupees."
   },
   {
    "seller_url": "https://ideaproof.io/questions/fastest-way-validate-startup",
@@ -3452,7 +3720,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "fastest-way-validate-startup-india",
+   "our_slug": "validate-idea-fast",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3462,7 +3730,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Fastest validation (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "48-hour tests: UPI pre-order, stall, WhatsApp status."
   },
   {
    "seller_url": "https://ideaproof.io/questions/conduct-customer-interviews",
@@ -3480,7 +3750,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "How to do customer interviews for your business idea",
-   "our_slug": "customer-interviews-india",
+   "our_slug": "customer-interviews",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3489,8 +3759,11 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "done",
-   "live_url": "https://bbinewcopy.vercel.app/customer-interviews-india"
+   "status": "live",
+   "live_url": "https://bbinewcopy.vercel.app/customer-interviews-india",
+   "contains": "Q&A: interview framework, script, mistakes, FAQ.",
+   "india_plan": "Done: where to meet Indian buyers (mandi, society groups, PGs), local-language interviews.",
+   "old_live_url": "https://bbinewcopy.vercel.app/customer-interviews-india"
   },
   {
    "seller_url": "https://ideaproof.io/questions/how-many-customer-interviews",
@@ -3508,7 +3781,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "how-many-customer-interviews-india",
+   "our_slug": "how-many-customer-interviews",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3518,7 +3791,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: How many interviews (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Section or short page linked from customer interviews."
   },
   {
    "seller_url": "https://ideaproof.io/questions/validation-interview-questions",
@@ -3536,7 +3811,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "validation-interview-questions-india",
+   "our_slug": "customer-interview-questions",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3546,7 +3821,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Interview questions (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Question bank in plain English with Hindi prompts."
   },
   {
    "seller_url": "https://ideaproof.io/questions/how-to-find-early-adopters",
@@ -3564,7 +3841,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "how-to-find-early-adopters-india",
+   "our_slug": "first-customers",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3574,7 +3851,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Finding early adopters (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Link to our first customer page; where early buyers are in India."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-market-research",
@@ -3592,7 +3871,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "market-research-india",
+   "our_slug": "what-is-market-research",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3602,7 +3881,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Market research basics (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Free Indian sources and field visits."
   },
   {
    "seller_url": "https://ideaproof.io/questions/market-sizing-methods",
@@ -3620,7 +3901,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "market-sizing-methods-india",
+   "our_slug": "market-sizing",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3630,7 +3911,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Top-down vs bottom-up (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Section in TAM page or short page."
   },
   {
    "seller_url": "https://ideaproof.io/questions/how-to-do-competitor-analysis",
@@ -3648,7 +3931,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "how-to-do-competitor-analysis-india",
+   "our_slug": "competitor-analysis",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3658,7 +3941,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Competitor analysis (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Visit, call, check Maps reviews and marketplace listings."
   },
   {
    "seller_url": "https://ideaproof.io/questions/find-competitors",
@@ -3676,7 +3961,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "find-competitors-india",
+   "our_slug": "find-competitors",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3686,7 +3971,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Finding competitors (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "JustDial, Google Maps, IndiaMART, marketplaces."
   },
   {
    "seller_url": "https://ideaproof.io/questions/direct-vs-indirect-competitors",
@@ -3704,7 +3991,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "direct-vs-indirect-competitors-india",
+   "our_slug": "direct-vs-indirect-competitors",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3714,7 +4001,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Direct vs indirect competitors (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "The unorganised local option is often your real competitor."
   },
   {
    "seller_url": "https://ideaproof.io/questions/competitive-moat",
@@ -3732,7 +4021,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "competitive-moat-india",
+   "our_slug": "competitive-advantage",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3742,7 +4031,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Competitive moat (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Local trust, relationships, location, licences as moats."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-mvp",
@@ -3760,7 +4051,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "mvp-india",
+   "our_slug": "what-is-mvp",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3770,7 +4061,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: What is an MVP (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Section in build MVP page or short definition page."
   },
   {
    "seller_url": "https://ideaproof.io/questions/how-to-build-mvp",
@@ -3788,7 +4081,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "How to build an MVP for your business in India",
-   "our_slug": "how-to-build-mvp-india",
+   "our_slug": "build-mvp",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3797,8 +4090,11 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "done",
-   "live_url": "https://bbinewcopy.vercel.app/how-to-build-mvp-india"
+   "status": "live",
+   "live_url": "https://bbinewcopy.vercel.app/how-to-build-mvp-india",
+   "contains": "Q&A: MVP steps, options, no-code vs custom, FAQ.",
+   "india_plan": "Done: WhatsApp Business catalogue, UPI QR and manual delivery before any app.",
+   "old_live_url": "https://bbinewcopy.vercel.app/how-to-build-mvp-india"
   },
   {
    "seller_url": "https://ideaproof.io/questions/mvp-vs-full-product",
@@ -3816,7 +4112,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "mvp-vs-full-product-india",
+   "our_slug": "mvp-vs-full-product",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3826,7 +4122,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: MVP vs full product (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "When to move from manual to full setup."
   },
   {
    "seller_url": "https://ideaproof.io/questions/nocode-vs-custom-mvp",
@@ -3844,7 +4142,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "nocode-vs-custom-mvp-india",
+   "our_slug": "no-code-mvp",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3854,7 +4152,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: No-code vs custom (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Free tools: Google Forms, Sheets, WhatsApp Business, simple site builders."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-lean-startup",
@@ -3872,7 +4172,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "lean-startup-india",
+   "our_slug": "lean-startup",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3882,7 +4182,9 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Lean startup (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Build-measure-learn with Indian shop and service examples."
   },
   {
    "seller_url": "https://ideaproof.io/questions/pivot-vs-persevere",
@@ -3900,7 +4202,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "(to write in Phase 2)",
-   "our_slug": "pivot-vs-persevere-india",
+   "our_slug": "pivot-or-persevere",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3910,7 +4212,11 @@
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "medium",
    "status": "pending",
-   "live_url": null
+   "live_url": null,
+   "contains": "Q&A page: Pivot vs persevere (takeaways, steps, benchmarks, pitfalls, FAQ, tips, sources, related).",
+   "india_plan": "Already have /business-idea-pivot-or-stop; merge or link."
   }
- ]
+ ],
+ "log_artifact": "https://claude.ai/artifact/Cxg3dZVdJ1DsLEDqMVVwFP",
+ "slug_rule": "Short, readable, how Indians search. No -india suffix. Old -india URLs get 301 redirects after approval."
 }
