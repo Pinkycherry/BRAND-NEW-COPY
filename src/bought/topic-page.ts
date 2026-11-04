@@ -13,6 +13,8 @@ import menuBindings from "./menus.html?raw";
 import sharedHeaderStyles from "@/components/v2/v2.css?raw";
 import sellerShell from "./topics.html?raw";
 import { canonicalUrl, CO_FOUNDER, TEAM } from "@/lib/site-config";
+import { dbOrNull } from "@/lib/db";
+import { faqEntries, normalizeFaqQuestion } from "@/lib/lists.functions";
 
 export type Link = { label: string; href: string; note?: string };
 export type Section =
@@ -25,7 +27,11 @@ export type Section =
   | { type: "faq"; heading: string; intro?: string; items: { q: string; a: string }[] }
   | { type: "sources"; heading: string; items: Link[] }
   | { type: "chips"; heading: string; intro?: string; items: Link[] }
-  | { type: "cta"; heading: string; body: string; button: Link; note?: string };
+  | { type: "cta"; heading: string; body: string; button: Link; note?: string }
+  /** Questions from our published ideas' FAQ in Supabase (no new Q&A research). `match` is a case-insensitive regex on the question. */
+  | { type: "dbfaq"; heading: string; intro?: string; categories: string[]; match?: string; limit: number }
+  /** Cards for our published ideas in these categories, from Supabase. */
+  | { type: "dbideas"; heading: string; intro?: string; categories: string[]; limit: number; all?: Link };
 
 export type TopicPage = {
   slug: string;
@@ -74,7 +80,9 @@ let faqId = 0;
 const ANCHOR: Partial<Record<Section["type"], string>> = { steps: "steps", list: "mistakes", quiz: "check" };
 let used = new Set<string>();
 function anchorFor(s: Section): string {
-  const id = "heading" in s && /^compare/i.test(s.heading) ? "compare" : "heading" in s && /stages/i.test(s.heading) ? "stages" : ANCHOR[s.type];
+  const BY_HEADING: [RegExp, string][] = [[/^compare/i, "compare"], [/stages/i, "stages"], [/quick reference/i, "numbers"], [/^register/i, "register"], [/funding questions/i, "questions"]];
+  const h = "heading" in s ? s.heading : "";
+  const id = BY_HEADING.find(([re]) => re.test(h))?.[1] ?? ANCHOR[s.type];
   if (!id || used.has(id)) return "";
   used.add(id);
   return ` id="${id}"`;
@@ -96,7 +104,7 @@ function section(s: Section, i: number): string {
     case "cards":
       return wrap(`${head(s.heading, s.intro)}<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">${s.items.map((c, n) => {
         const body = `<div class="${CARD} ${c.href ? "hover:border-primary hover:shadow-md transition-all" : ""} animate-fade-up" style="animation-delay: ${(n * 0.04).toFixed(2)}s;"><div class="p-5"><h3 class="font-semibold text-[15px] mb-1 ${c.href ? "group-hover:text-primary transition-colors" : ""}">${esc(c.title)}</h3><p class="text-xs text-muted-foreground mb-3 leading-relaxed">${rich(c.body)}</p>${c.href ? `<span class="inline-flex items-center gap-1 text-xs font-medium text-primary">${esc(c.cta ?? "Open")} ${ICON.arrow}</span>` : ""}</div></div>`;
-        return c.href ? `<a class="group" href="${esc(c.href)}">${body}</a>` : body;
+        return c.href ? `<a class="group" href="${esc(c.href)}"${/^https?:/.test(c.href) ? ' target="_blank" rel="noopener noreferrer"' : ""}>${body}</a>` : body;
       }).join("")}</div>`);
     case "quiz":
       return wrap(`${head(s.heading, s.intro)}<div class="bg-white rounded-xl border border-border/60 p-5" data-topic-quiz><ul class="space-y-2">${s.items.map((q, n) => `<li><label class="flex gap-3 items-start text-[15px] cursor-pointer"><input type="checkbox" class="mt-1 h-4 w-4 accent-[hsl(var(--primary))]" data-q="${n}"><span>${rich(q)}</span></label></li>`).join("")}</ul><p class="mt-4 text-sm text-muted-foreground" data-quiz-out data-total="${s.items.length}">Tick what is true for you today. ${rich(s.result)}</p></div>`, "max-w-3xl");
@@ -109,6 +117,9 @@ function section(s: Section, i: number): string {
       return wrap(`${head(s.heading, "Official pages we checked for this guide. Rules change; confirm on the official page before you apply.")}<ul class="grid sm:grid-cols-2 gap-2 text-sm">${s.items.map((l) => `<li class="${CARD} px-4 py-3"><a class="text-primary hover:underline" href="${esc(l.href)}" target="_blank" rel="noopener noreferrer">${esc(l.label)}</a>${l.note ? `<p class="text-xs text-muted-foreground mt-1">${rich(l.note)}</p>` : ""}</li>`).join("")}</ul>`, "max-w-5xl");
     case "chips":
       return wrap(`${head(s.heading, s.intro)}<div class="flex flex-wrap gap-2">${s.items.map((l) => `<a class="inline-flex items-center gap-1.5 rounded-full border border-border bg-white px-4 py-2 text-sm font-medium text-foreground hover:border-primary hover:text-primary transition-colors" href="${esc(l.href)}">${esc(l.label)} ${ICON.arrow}</a>`).join("")}</div>`, "max-w-5xl");
+    case "dbfaq":
+    case "dbideas":
+      return "";
     case "cta":
       return `<section class="py-10 md:py-14 px-4 bg-gradient-to-br from-brand-500/10 via-brand-400/5 to-background border-t border-border/40"><div class="container mx-auto max-w-3xl text-center"><h2 class="text-2xl md:text-3xl font-bold mb-3">${esc(s.heading)}</h2><p class="text-base text-muted-foreground mb-6 max-w-2xl mx-auto">${rich(s.body)}</p><a class="${BTN_DARK}" href="${esc(s.button.href)}">${esc(s.button.label)} ${ICON.arrow}</a>${s.note ? `<p class="text-xs text-muted-foreground mt-3">${rich(s.note)}</p>` : ""}</div></section>`;
   }
@@ -120,7 +131,7 @@ function hero(p: TopicPage) {
   return `<section class="relative overflow-hidden bg-gradient-to-br from-white via-slate-50/60 to-white py-8 md:py-10 lg:py-14 border-b border-border/40" aria-labelledby="topic-hero"><div aria-hidden="true" class="absolute -top-10 -right-20 w-[28rem] h-[28rem] bg-brand-500/10 rounded-full blur-[120px] pointer-events-none animate-glow-float"></div><div class="container mx-auto max-w-6xl px-4 relative z-10"><div class="grid lg:grid-cols-12 gap-6 lg:gap-12 items-center"><div class="lg:col-span-7 order-2 lg:order-1"><div class="flex items-center gap-2 mb-3 animate-fade-up flex-wrap"><span class="text-sm font-semibold tracking-tight text-slate-900">${esc(h.eyebrow)}</span><div class="inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold border-transparent bg-secondary text-secondary-foreground ml-auto sm:ml-2 text-[10px] sm:text-xs">${esc(h.updated)}</div></div><h1 id="topic-hero" class="text-[1.75rem] sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-[1.1] tracking-tight mb-3 md:mb-4 animate-fade-up" style="animation-delay: 0.05s;">${title}</h1><p class="text-[15px] md:text-lg text-muted-foreground max-w-2xl mb-3 md:mb-4 animate-fade-up" style="animation-delay: 0.1s;">${rich(h.intro)}</p>${h.sub ? `<p class="text-[13px] md:text-sm text-muted-foreground mb-5 md:mb-6 animate-fade-up leading-relaxed" style="animation-delay: 0.15s;">${rich(h.sub)}</p>` : ""}<div class="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 animate-fade-up" style="animation-delay: 0.2s;"><a class="${BTN_DARK}" href="${esc(h.primary.href)}">${esc(h.primary.label)} ${ICON.arrow}</a>${h.secondary ? `<a class="${BTN_LIGHT}" href="${esc(h.secondary.href)}">${esc(h.secondary.label)}</a>` : ""}</div>${byline(p)}</div><div class="lg:col-span-5 order-1 lg:order-2"><div class="relative rounded-2xl overflow-hidden border border-border/60 shadow-lg animate-fade-up"><img src="${esc(h.image)}" alt="${esc(h.imageAlt)}" width="640" height="420" class="w-full h-auto object-cover" loading="eager" decoding="async"></div></div></div></div></section>`;
 }
 
-const REVIEWER = TEAM.find((m) => /verification/i.test(m.role)) ?? TEAM[0];
+const REVIEWER = TEAM.find((m) => /verification/i.test(m.role)) ?? TEAM[0]!;
 const longDate = (iso: string) => new Date(iso + "T00:00:00Z").toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 function byline(p: TopicPage) {
   return `<p class="mt-5 text-[13px] text-muted-foreground leading-relaxed animate-fade-up" style="animation-delay: 0.25s;">Written by <a class="font-medium text-foreground hover:text-primary" href="/about">${esc(CO_FOUNDER.name)}</a>, editorial lead · Reviewed by <a class="font-medium text-foreground hover:text-primary" href="/about">${esc(REVIEWER.name)}</a>, research and verification · Last updated <time datetime="${esc(p.updated)}">${esc(longDate(p.updated))}</time></p>`;
@@ -143,7 +154,53 @@ function schema(p: TopicPage) {
 
 const SCRIPT = `<script>(function(){document.querySelectorAll('[data-topic-acc]').forEach(function(b){b.addEventListener('click',function(){var open=b.getAttribute('aria-expanded')==='true';var r=document.getElementById(b.getAttribute('aria-controls'));b.setAttribute('aria-expanded',String(!open));b.dataset.state=open?'closed':'open';b.closest('[data-state]').dataset.state=open?'closed':'open';if(r)r.hidden=open;});});document.querySelectorAll('[data-topic-quiz]').forEach(function(q){var out=q.querySelector('[data-quiz-out]');var base=out.textContent;q.addEventListener('change',function(){var n=q.querySelectorAll('input:checked').length;var t=+out.dataset.total;out.textContent=n+' of '+t+' ticked. '+(n===t?'You are ready for the next step.':base.replace(/^Tick what is true for you today\\. /,''));});});})();</script>`;
 
-export function renderTopicPage(p: TopicPage): Response {
+type IdeaRow = { slug: string; title: string; hook: string | null; summary: string | null; faq: unknown; category_code: string };
+async function ideasFor(slugs: string[]): Promise<IdeaRow[]> {
+  const client = dbOrNull();
+  if (!client) return [];
+  try {
+    const { data: cats } = await client.from("categories").select("code,slug").in("slug", slugs);
+    const codes = (cats ?? []).map((c: { code: string }) => c.code);
+    if (!codes.length) return [];
+    const { data } = await client.from("ideas").select("slug,title,hook,summary,faq,category_code").eq("status", "published").in("category_code", codes).order("code").limit(400);
+    return (data ?? []) as IdeaRow[];
+  } catch {
+    return [];
+  }
+}
+
+/** Turn database-backed sections into plain sections. A section with no rows falls back to a link to our FAQ page. */
+async function resolve(sections: Section[]): Promise<Section[]> {
+  return Promise.all(sections.map(async (s): Promise<Section> => {
+    if (s.type === "dbfaq") {
+      const rows = await ideasFor(s.categories);
+      const re = s.match ? new RegExp(s.match, "i") : null;
+      const seen = new Set<string>();
+      const items: { q: string; a: string }[] = [];
+      for (const row of rows) {
+        for (const f of faqEntries(row.faq)) {
+          const key = normalizeFaqQuestion(f.q);
+          if (seen.has(key) || (re && !re.test(f.q))) continue;
+          seen.add(key);
+          items.push({ q: f.q, a: `${f.a} [Read the full idea: ${row.title}](/idea/${encodeURIComponent(row.slug)})` });
+          break;
+        }
+        if (items.length >= s.limit) break;
+      }
+      if (!items.length) return { type: "chips", heading: s.heading, intro: s.intro ?? "", items: [{ label: "Browse all founder questions", href: "/faq" }] };
+      return { type: "faq", heading: s.heading, intro: s.intro ?? "Answers from our published idea guides. More on our [founder FAQ page](/faq).", items };
+    }
+    if (s.type === "dbideas") {
+      const rows = (await ideasFor(s.categories)).slice(0, s.limit);
+      if (!rows.length) return { type: "chips", heading: s.heading, intro: s.intro ?? "", items: [s.all ?? { label: "Browse all ideas", href: "/browse" }] };
+      return { type: "cards", heading: s.heading, intro: s.intro ?? "", items: rows.map((r) => ({ title: r.title, body: (r.hook || r.summary || "").slice(0, 160), href: `/idea/${encodeURIComponent(r.slug)}`, cta: "Read the idea" })).concat(s.all ? [{ title: s.all.label, body: s.all.note ?? "See every published idea in this area.", href: s.all.href, cta: "Browse" }] : []) };
+    }
+    return s;
+  }));
+}
+
+export async function renderTopicPage(input: TopicPage): Promise<Response> {
+  const p: TopicPage = { ...input, sections: await resolve(input.sections) };
   faqId = 0;
   used = new Set();
   const url = canonicalUrl(`/${p.slug}`);
