@@ -64,15 +64,14 @@ const STYLE = (() => {
 
 const esc = (v: string) => v.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c] ?? c);
 /** Inline emphasis: **bold** only. */
-/** Internal research markers ([Data pending: ...]) are tracked in India Topic Pages Review and never shown on the public page. */
-const stripPending = (v: string) => v.replace(/\s*\[Data pending: [^\]]+\]/g, "").trim();
+/** Research markers ([Data pending: ...]) are shown on the page while the site is noindex (owner rule, 5 Nov 2026) and listed in India Topic Pages Review. */
 const rich = (v: string) =>
-  esc(stripPending(v))
+  esc(v)
+    .replace(/\[Data pending: ([^\]]+)\]/g, '<mark class="rounded px-1.5 py-0.5 font-medium" style="background:#fef3c7;color:#78350f;box-shadow:0 0 0 1px #fcd34d;font-size:.85em" data-pending="$1">[Data pending: $1]</mark>')
     .replace(/\*\*(.+?)\*\*/g, '<strong class="text-foreground">$1</strong>')
     .replace(/\[([^\]]+)\]\((\/[^)\s]*|#[^)\s]*)\)/g, '<a class="text-primary underline-offset-2 hover:underline" href="$2">$1</a>')
     .replace(/\[([^\]]+)\]\((https:\/\/[^)\s]+)\)/g, '<a class="text-primary underline-offset-2 hover:underline" href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
-/** A table cell whose only content was a pending figure becomes a fill-in prompt for the reader. */
-const cell = (v: string) => (stripPending(v) ? rich(v) : '<em class="text-muted-foreground">Your local figure</em>');
+const cell = (v: string) => rich(v);
 
 const ICON = {
   arrow: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>',
@@ -97,7 +96,7 @@ function block(b: Block): string {
   switch (b.kind) {
     case "p": return `<p>${rich(b.text)}</p>`;
     case "h3": return `<h3 id="${slugId(b.text)}" class="pt-4 text-lg font-semibold text-foreground scroll-mt-24">${esc(b.text)}</h3>`;
-    case "list": { const tag = b.ordered ? "ol" : "ul"; return `<${tag} class="${b.ordered ? "list-decimal" : "list-disc"} pl-6 space-y-1.5">${b.items.filter((i) => stripPending(i)).map((i) => `<li>${rich(i)}</li>`).join("")}</${tag}>`; }
+    case "list": { const tag = b.ordered ? "ol" : "ul"; return `<${tag} class="${b.ordered ? "list-decimal" : "list-disc"} pl-6 space-y-1.5">${b.items.map((i) => `<li>${rich(i)}</li>`).join("")}</${tag}>`; }
     case "table": return `<div class="overflow-x-auto rounded-xl border border-border/60 bg-white"><table class="w-full text-sm"><thead class="bg-muted/40"><tr>${b.columns.map((c) => `<th class="text-left font-semibold text-foreground px-4 py-3">${esc(c)}</th>`).join("")}</tr></thead><tbody>${b.rows.map((r) => `<tr class="border-t border-border/50">${r.map((c, k) => `<td class="px-4 py-3 align-top ${k === 0 ? "font-medium text-foreground" : ""}">${cell(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>${b.note ? `<p class="text-xs">${rich(b.note)}</p>` : ""}`;
     case "checklist": return `<div class="rounded-xl border border-border/60 bg-white p-5" data-topic-quiz><p class="font-semibold text-foreground mb-3">${esc(b.title)}</p><ul class="space-y-2">${b.items.map((q, n) => `<li><label class="flex gap-3 items-start cursor-pointer"><input type="checkbox" class="mt-1 h-4 w-4" data-q="${n}"><span>${rich(q)}</span></label></li>`).join("")}</ul><p class="mt-3 text-sm" data-quiz-out data-total="${b.items.length}">Tick each line as you finish it.</p></div>`;
     case "callout": return `<div class="rounded-xl border border-primary/20 bg-primary/5 p-5"><p class="font-semibold text-foreground mb-1">${esc(b.title)}</p><p>${rich(b.text)}</p></div>`;
