@@ -35,6 +35,7 @@ import { Route as FounderDecisionJournalRouteImport } from './routes/founder-dec
 import { Route as FoundersRouteImport } from './routes/founders'
 import { Route as FrameworksComparisonRouteImport } from './routes/frameworks-comparison'
 import { Route as GdprRouteImport } from './routes/gdpr'
+import { Route as HowToValidateBusinessIdeaIndiaRouteImport } from './routes/how-to-validate-business-idea-india'
 import { Route as LocalBusinessIdeasIndiaRouteImport } from './routes/local-business-ideas-india'
 import { Route as MarketResearchRouteImport } from './routes/market-research'
 import { Route as OnlineBusinessIdeasIndiaRouteImport } from './routes/online-business-ideas-india'
@@ -224,6 +225,12 @@ const GdprRoute = GdprRouteImport.update({
   path: '/gdpr',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HowToValidateBusinessIdeaIndiaRoute =
+  HowToValidateBusinessIdeaIndiaRouteImport.update({
+    id: '/how-to-validate-business-idea-india',
+    path: '/how-to-validate-business-idea-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const LocalBusinessIdeasIndiaRoute = LocalBusinessIdeasIndiaRouteImport.update({
   id: '/local-business-ideas-india',
   path: '/local-business-ideas-india',
@@ -539,6 +546,7 @@ export interface FileRoutesByFullPath {
   '/founders': typeof FoundersRoute
   '/frameworks-comparison': typeof FrameworksComparisonRoute
   '/gdpr': typeof GdprRoute
+  '/how-to-validate-business-idea-india': typeof HowToValidateBusinessIdeaIndiaRoute
   '/local-business-ideas-india': typeof LocalBusinessIdeasIndiaRoute
   '/market-research': typeof MarketResearchRoute
   '/online-business-ideas-india': typeof OnlineBusinessIdeasIndiaRoute
@@ -623,6 +631,7 @@ export interface FileRoutesByTo {
   '/founders': typeof FoundersRoute
   '/frameworks-comparison': typeof FrameworksComparisonRoute
   '/gdpr': typeof GdprRoute
+  '/how-to-validate-business-idea-india': typeof HowToValidateBusinessIdeaIndiaRoute
   '/local-business-ideas-india': typeof LocalBusinessIdeasIndiaRoute
   '/market-research': typeof MarketResearchRoute
   '/online-business-ideas-india': typeof OnlineBusinessIdeasIndiaRoute
@@ -707,6 +716,7 @@ export interface FileRoutesById {
   '/founders': typeof FoundersRoute
   '/frameworks-comparison': typeof FrameworksComparisonRoute
   '/gdpr': typeof GdprRoute
+  '/how-to-validate-business-idea-india': typeof HowToValidateBusinessIdeaIndiaRoute
   '/local-business-ideas-india': typeof LocalBusinessIdeasIndiaRoute
   '/market-research': typeof MarketResearchRoute
   '/online-business-ideas-india': typeof OnlineBusinessIdeasIndiaRoute
@@ -793,6 +803,7 @@ export interface FileRouteTypes {
     | '/founders'
     | '/frameworks-comparison'
     | '/gdpr'
+    | '/how-to-validate-business-idea-india'
     | '/local-business-ideas-india'
     | '/market-research'
     | '/online-business-ideas-india'
@@ -877,6 +888,7 @@ export interface FileRouteTypes {
     | '/founders'
     | '/frameworks-comparison'
     | '/gdpr'
+    | '/how-to-validate-business-idea-india'
     | '/local-business-ideas-india'
     | '/market-research'
     | '/online-business-ideas-india'
@@ -960,6 +972,7 @@ export interface FileRouteTypes {
     | '/founders'
     | '/frameworks-comparison'
     | '/gdpr'
+    | '/how-to-validate-business-idea-india'
     | '/local-business-ideas-india'
     | '/market-research'
     | '/online-business-ideas-india'
@@ -1045,6 +1058,7 @@ export interface RootRouteChildren {
   FoundersRoute: typeof FoundersRoute
   FrameworksComparisonRoute: typeof FrameworksComparisonRoute
   GdprRoute: typeof GdprRoute
+  HowToValidateBusinessIdeaIndiaRoute: typeof HowToValidateBusinessIdeaIndiaRoute
   LocalBusinessIdeasIndiaRoute: typeof LocalBusinessIdeasIndiaRoute
   MarketResearchRoute: typeof MarketResearchRoute
   OnlineBusinessIdeasIndiaRoute: typeof OnlineBusinessIdeasIndiaRoute
@@ -1281,6 +1295,13 @@ declare module '@tanstack/react-router' {
       path: '/gdpr'
       fullPath: '/gdpr'
       preLoaderRoute: typeof GdprRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-to-validate-business-idea-india': {
+      id: '/how-to-validate-business-idea-india'
+      path: '/how-to-validate-business-idea-india'
+      fullPath: '/how-to-validate-business-idea-india'
+      preLoaderRoute: typeof HowToValidateBusinessIdeaIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/local-business-ideas-india': {
@@ -1741,6 +1762,7 @@ const rootRouteChildren: RootRouteChildren = {
   FoundersRoute: FoundersRoute,
   FrameworksComparisonRoute: FrameworksComparisonRoute,
   GdprRoute: GdprRoute,
+  HowToValidateBusinessIdeaIndiaRoute: HowToValidateBusinessIdeaIndiaRoute,
   LocalBusinessIdeasIndiaRoute: LocalBusinessIdeasIndiaRoute,
   MarketResearchRoute: MarketResearchRoute,
   OnlineBusinessIdeasIndiaRoute: OnlineBusinessIdeasIndiaRoute,
