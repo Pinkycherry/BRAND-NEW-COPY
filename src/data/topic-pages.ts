@@ -13,7 +13,8 @@ import { mvp } from "./topic-pages-rw10";
 import { isIdeaGood } from "./topic-pages-rw11";
 import { raiseFunds } from "./topic-pages-rw12";
 import { businessNumbers } from "./topic-pages-rw13";
-import { businessPlan, competitors, fundingQuestions, adsTest, govResources, validateFood, validateOnline } from "./topic-pages-e";
+import { businessPlan } from "./topic-pages-rw14";
+import { competitors, fundingQuestions, adsTest, govResources, validateFood, validateOnline } from "./topic-pages-e";
 
 export const TOPIC_PAGES: TopicPage[] = [validateIdea, getFunding, mistakes, cac, tam, moneyToStart, bootstrapping, pmf, interviews, mvp, isIdeaGood, raiseFunds, businessNumbers, businessPlan, competitors, fundingQuestions, adsTest, govResources, validateFood, validateOnline];
 export const topicPage = (slug: string) => TOPIC_PAGES.find((p) => p.slug === slug)!;
