@@ -28,10 +28,21 @@ export type Section =
   | { type: "sources"; heading: string; items: Link[] }
   | { type: "chips"; heading: string; intro?: string; items: Link[] }
   | { type: "cta"; heading: string; body: string; button: Link; note?: string }
+  /** Long-form section: paragraphs, sub-headings, lists, tables, checklists and callouts inside one seller section. */
+  | { type: "rich"; heading: string; intro?: string; blocks: Block[] }
   /** Questions from our published ideas' FAQ in Supabase (no new Q&A research). `match` is a case-insensitive regex on the question. */
   | { type: "dbfaq"; heading: string; intro?: string; categories: string[]; match?: string; limit: number }
   /** Cards for our published ideas in these categories, from Supabase. */
   | { type: "dbideas"; heading: string; intro?: string; categories: string[]; limit: number; all?: Link };
+
+export type Block =
+  | { kind: "p"; text: string }
+  | { kind: "h3"; text: string }
+  | { kind: "list"; items: string[]; ordered?: boolean }
+  | { kind: "table"; columns: string[]; rows: string[][]; note?: string }
+  | { kind: "checklist"; title: string; items: string[] }
+  | { kind: "callout"; title: string; text: string }
+  | { kind: "steps"; items: { title: string; body: string }[] };
 
 export type TopicPage = {
   slug: string;
@@ -53,6 +64,7 @@ const esc = (v: string) => v.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&
 /** Inline emphasis: **bold** only. */
 const rich = (v: string) =>
   esc(v)
+    .replace(/\[Data pending: ([^\]]+)\]/g, '<mark class="rounded px-1.5 py-0.5 text-[0.85em] font-medium bg-amber-100 text-amber-900 ring-1 ring-amber-300" data-pending="$1">[Data pending: $1]</mark>')
     .replace(/\*\*(.+?)\*\*/g, '<strong class="text-foreground">$1</strong>')
     .replace(/\[([^\]]+)\]\((\/[^)\s]*|#[^)\s]*)\)/g, '<a class="text-primary underline-offset-2 hover:underline" href="$2">$1</a>')
     .replace(/\[([^\]]+)\]\((https:\/\/[^)\s]+)\)/g, '<a class="text-primary underline-offset-2 hover:underline" href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
@@ -74,6 +86,18 @@ const SEC = ["py-10 md:py-12 px-4", "py-10 md:py-12 px-4 bg-muted/20 border-y bo
 
 function head(title: string, sub?: string) {
   return `<div class="flex items-end justify-between mb-6"><div><h2 class="text-xl md:text-2xl font-bold mb-1">${esc(title)}</h2>${sub ? `<p class="text-sm text-muted-foreground">${rich(sub)}</p>` : ""}</div></div>`;
+}
+
+function block(b: Block): string {
+  switch (b.kind) {
+    case "p": return `<p>${rich(b.text)}</p>`;
+    case "h3": return `<h3 id="${b.text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60)}" class="pt-4 text-lg font-semibold text-foreground scroll-mt-24">${esc(b.text)}</h3>`;
+    case "list": { const tag = b.ordered ? "ol" : "ul"; return `<${tag} class="${b.ordered ? "list-decimal" : "list-disc"} pl-6 space-y-1.5">${b.items.map((i) => `<li>${rich(i)}</li>`).join("")}</${tag}>`; }
+    case "table": return `<div class="overflow-x-auto rounded-xl border border-border/60 bg-white"><table class="w-full text-sm"><thead class="bg-muted/40"><tr>${b.columns.map((c) => `<th class="text-left font-semibold text-foreground px-4 py-3">${esc(c)}</th>`).join("")}</tr></thead><tbody>${b.rows.map((r) => `<tr class="border-t border-border/50">${r.map((c, k) => `<td class="px-4 py-3 align-top ${k === 0 ? "font-medium text-foreground" : ""}">${rich(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>${b.note ? `<p class="text-xs">${rich(b.note)}</p>` : ""}`;
+    case "checklist": return `<div class="rounded-xl border border-border/60 bg-white p-5" data-topic-quiz><p class="font-semibold text-foreground mb-3">${esc(b.title)}</p><ul class="space-y-2">${b.items.map((q, n) => `<li><label class="flex gap-3 items-start cursor-pointer"><input type="checkbox" class="mt-1 h-4 w-4" data-q="${n}"><span>${rich(q)}</span></label></li>`).join("")}</ul><p class="mt-3 text-sm" data-quiz-out data-total="${b.items.length}">Tick each line as you finish it.</p></div>`;
+    case "callout": return `<div class="rounded-xl border border-primary/20 bg-primary/5 p-5"><p class="font-semibold text-foreground mb-1">${esc(b.title)}</p><p>${rich(b.text)}</p></div>`;
+    case "steps": return `<ol class="space-y-3">${b.items.map((st, n) => `<li class="rounded-lg border bg-card p-4"><div class="flex gap-3"><span class="w-7 h-7 shrink-0 rounded-md bg-primary/10 text-primary font-bold flex items-center justify-center text-sm">${n + 1}</span><div><p class="font-semibold text-foreground">${esc(st.title)}</p><p class="mt-1">${rich(st.body)}</p></div></div></li>`).join("")}</ol>`;
+  }
 }
 
 let faqId = 0;
@@ -117,6 +141,8 @@ function section(s: Section, i: number): string {
       return wrap(`${head(s.heading, "Official pages we checked for this guide. Rules change; confirm on the official page before you apply.")}<ul class="grid sm:grid-cols-2 gap-2 text-sm">${s.items.map((l) => `<li class="${CARD} px-4 py-3"><a class="text-primary hover:underline" href="${esc(l.href)}" target="_blank" rel="noopener noreferrer">${esc(l.label)}</a>${l.note ? `<p class="text-xs text-muted-foreground mt-1">${rich(l.note)}</p>` : ""}</li>`).join("")}</ul>`, "max-w-5xl");
     case "chips":
       return wrap(`${head(s.heading, s.intro)}<div class="flex flex-wrap gap-2">${s.items.map((l) => `<a class="inline-flex items-center gap-1.5 rounded-full border border-border bg-white px-4 py-2 text-sm font-medium text-foreground hover:border-primary hover:text-primary transition-colors" href="${esc(l.href)}">${esc(l.label)} ${ICON.arrow}</a>`).join("")}</div>`, "max-w-5xl");
+    case "rich":
+      return wrap(`${head(s.heading, s.intro)}<div class="space-y-4 text-[15px] leading-relaxed text-muted-foreground">${s.blocks.map(block).join("")}</div>`, "max-w-4xl");
     case "dbfaq":
     case "dbideas":
       return "";
