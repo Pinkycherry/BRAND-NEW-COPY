@@ -10,7 +10,8 @@ import { bootstrapping } from "./topic-pages-rw7";
 import { pmf } from "./topic-pages-rw8";
 import { interviews } from "./topic-pages-rw9";
 import { mvp } from "./topic-pages-rw10";
-import { isIdeaGood, raiseFunds } from "./topic-pages-d";
+import { isIdeaGood } from "./topic-pages-rw11";
+import { raiseFunds } from "./topic-pages-d";
 import { businessNumbers, businessPlan, competitors, fundingQuestions, adsTest, govResources, validateFood, validateOnline } from "./topic-pages-e";
 
 export const TOPIC_PAGES: TopicPage[] = [validateIdea, getFunding, mistakes, cac, tam, moneyToStart, bootstrapping, pmf, interviews, mvp, isIdeaGood, raiseFunds, businessNumbers, businessPlan, competitors, fundingQuestions, adsTest, govResources, validateFood, validateOnline];
