@@ -12,6 +12,7 @@ export const validateIdea: TopicPage = {
   updated: UPDATED_ON,
   sellerRef: "https://ideaproof.io/topics/validation-methods",
   parent: PARENT,
+  explore: { guideCategory: "Validation" },
   seo: {
     title: "How to Validate a Business Idea in India Before You Invest Your Savings",
     description: "A step-by-step way to validate a business idea in India: buyer conversations, UPI advances, a paid test in your own town, the Udyam, GST and FSSAI steps, city-by-city differences, a worked rupee example and a 7-day plan.",
@@ -62,7 +63,7 @@ export const validateIdea: TopicPage = {
             ["Gas and electricity", "[Data pending: cooking fuel cost per tiffin, LPG price for Pune and usage, 2026–27]", "LPG cylinder price ÷ tiffins per cylinder"],
             ["Steel box or packing", "[Data pending: cost per reusable box or disposable container, local wholesale, 2026–27]", "Wholesale market quote"],
             ["Delivery", "[Data pending: cost per drop for local delivery in Pune, delivery partner quotes, 2026–27]", "Quotes from two local delivery riders or her own scooter fuel"],
-            ["UPI and payment fees", "[Data pending: merchant UPI charges for small businesses, NPCI and bank, 2026–27]", "Ask her bank about her QR account"],
+            ["UPI and payment fees", "No merchant charge on UPI payments up to ₹2,000", "Ask her bank about charges on larger payments"],
             ["Profit before her time", "Price minus all lines above", "Work it out after the test"],
           ],
           note: "Her pass mark, written before the test: 15 of 20 tiffins pre-paid by UPI, 8 repeat orders in week two, and profit per tiffin positive after delivery.",
@@ -181,6 +182,6 @@ export const validateIdea: TopicPage = {
       button: { label: "Run the free risk check", href: "/business-idea-risk-check" },
       note: "Free · About 5 minutes · Next: [is my business idea good?](/how-to-check-if-your-business-idea-is-good-in-india)",
     },
-    { type: "sources", heading: "Sources", items: [SRC.udyam, { label: "FSSAI FoSCoS", href: "https://foscos.fssai.gov.in/", note: "Food business registration and licences." }, SRC.gst, SRC.gstLimits, SRC.mudra, SRC.npci, { label: "WhatsApp Business", href: "https://business.whatsapp.com/" }] },
+    { type: "sources", heading: "Sources", items: [SRC.udyam, { label: "FSSAI FoSCoS", href: "https://foscos.fssai.gov.in/", note: "Food business registration and licences." }, SRC.gst, SRC.gstLimits, SRC.mudra, SRC.npci, { label: "WhatsApp Business", href: "https://business.whatsapp.com/" }, { label: "Business Today: UPI stays free up to ₹2,000 for merchants", href: "https://www.businesstoday.in/latest/economy/story/upi-stays-free-finance-ministry-bars-charges-on-transactions-up-to-rs-2000-555475-2026-09-14" }] },
   ],
 };

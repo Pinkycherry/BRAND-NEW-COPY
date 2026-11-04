@@ -12,6 +12,7 @@ export const mistakes: TopicPage = {
   updated: UPDATED_ON,
   sellerRef: "https://ideaproof.io/avoid-startup-failure",
   parent: PARENT,
+  explore: { guideCategory: "Validation" },
   seo: {
     title: "Common Mistakes to Avoid When Starting a Business in India",
     description: "The mistakes first-time founders in India make most: family praise as demand, early rent, udhaar, wrong pricing, GST and marketplace fees, licences, family money. How to catch each one, a 14-day check, red flags and a worksheet.",

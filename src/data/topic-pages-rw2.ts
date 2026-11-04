@@ -16,6 +16,7 @@ export const getFunding: TopicPage = {
   updated: UPDATED_ON,
   sellerRef: "https://ideaproof.io/questions/how-to-get-funding",
   parent: PARENT,
+  explore: { guideCategory: "Bootstrapping", categories: ["home-based-business-ideas", "village-and-small-town-business-ideas", "women-friendly-business-ideas", "food-business-ideas", "printing-and-signage-business-ideas", "tailoring-and-boutique-business-ideas", "reselling-business-ideas", "freelance-business-ideas"] },
   seo: {
     title: "How to Get Funding for a Small Business in India: Loans, Schemes and Investors",
     description: "Exactly how a small business in India gets money: MUDRA at your bank branch, PMEGP, Stand-Up India, CGTMSE-backed loans, the Seed Fund and angels, with application steps, documents, a worked rupee example and city-by-city differences.",
@@ -61,9 +62,9 @@ export const getFunding: TopicPage = {
         { kind: "h3", text: "Step 5: Apply through the official door" },
         { kind: "steps", items: [
           { title: "MUDRA at your bank branch", body: "Visit the branch where you hold your account. Ask for the MUDRA loan application for your band (Shishu, Kishore, Tarun or Tarun Plus). Submit the form with KYC, Udyam certificate, quotations, address proof of the business, and bank statements. Some banks also accept applications online, and the government [Jan Samarth portal](https://www.jansamarth.in/) lists several credit-linked schemes. [Data pending: typical MUDRA processing time and interest rate range at public sector banks, bank websites and RBI data, 2026–27]" },
-          { title: "PMEGP through the KVIC portal", body: "Apply online on the [PMEGP e-portal](https://www.kviconline.gov.in/pmegpeportal/pmegphome/index.jsp): fill the application, upload documents and choose a bank. The application is scrutinised by the implementing agency (KVIC, KVIB or the District Industries Centre) and forwarded to the bank. An entrepreneurship development training is usually required before the subsidy is released. [Data pending: current PMEGP project cost ceilings and margin-money subsidy percentages by category and area, KVIC PMEGP guidelines, 2026–27]" },
+          { title: "PMEGP through the KVIC portal", body: "Apply online on the [PMEGP e-portal](https://www.kviconline.gov.in/pmegpeportal/pmegphome/index.jsp): fill the application, upload documents and choose a bank. The application is scrutinised by the implementing agency (KVIC, KVIB or the District Industries Centre) and forwarded to the bank. An entrepreneurship development training is usually required before the subsidy is released. The maximum project cost is ₹50 lakh for manufacturing units and ₹20 lakh for service units. The margin-money subsidy is 15% of project cost in urban areas and 25% in rural areas for general category applicants, and 25% (urban) and 35% (rural) for special categories such as SC/ST, OBC, women, minorities, ex-servicemen and persons with disabilities. General category applicants put in 10% of the project cost themselves; special categories 5%." },
           { title: "Stand-Up India", body: "Register on [Stand-Up Mitra](https://www.standupmitra.in/), answer the eligibility questions and choose a bank branch; you can also apply directly at a branch. Loans range from ₹10 lakh to ₹1 crore for greenfield enterprises." },
-          { title: "Collateral-free loans backed by CGTMSE", body: "You do not apply to [CGTMSE](https://www.cgtmse.in/) yourself. Ask your bank whether it will cover your loan under the CGTMSE guarantee so that no collateral is needed. [Data pending: current CGTMSE maximum guarantee cover and annual guarantee fee, CGTMSE, 2026–27]" },
+          { title: "Collateral-free loans backed by CGTMSE", body: "You do not apply to [CGTMSE](https://www.cgtmse.in/) yourself. Ask your bank whether it will cover your loan under the CGTMSE guarantee so that no collateral is needed. Loans up to ₹10 crore to micro and small enterprises can now be covered. The bank pays an annual guarantee fee, which is usually passed on to you; ask the branch for the current rate." },
           { title: "Startup India Seed Fund", body: "First get DPIIT recognition on the [Startup India portal](https://www.startupindia.gov.in/content/sih/en/startupgov/startup_recognition_page.html). Then apply on the [Seed Fund portal](https://seedfund.startupindia.gov.in/) to selected incubators, which evaluate and disburse." },
         ] },
         { kind: "callout", title: "Never pay an agent for a scheme loan", text: "Government scheme applications are made at bank branches and on official portals. Anyone who promises guaranteed approval for a fee is a red flag. If someone asks you for an advance fee, walk away and report it to your bank." },
@@ -169,7 +170,7 @@ export const getFunding: TopicPage = {
         ] },
       ],
     },
-    { type: "sources", heading: "Sources", items: [SRC.mudra, SRC.mudraPlus, SRC.pmegp, SRC.standUp, SRC.cgtmse, JANSAMARTH, SRC.seedFund, SRC.dpiit, SRC.udyam, NABARD, NRLM, { label: "RBI Financial Education", href: "https://rbi.org.in/FinancialEducation/" }, SRC.budget2024] },
+    { type: "sources", heading: "Sources", items: [SRC.mudra, SRC.mudraPlus, SRC.pmegp, SRC.standUp, SRC.cgtmse, JANSAMARTH, SRC.seedFund, SRC.dpiit, SRC.udyam, NABARD, NRLM, { label: "RBI Financial Education", href: "https://rbi.org.in/FinancialEducation/" }, SRC.budget2024, { label: "PMEGP scheme details (Khadi and Village Industries Board, Himachal Pradesh)", href: "https://khadi.hp.gov.in/pmegp/" }, { label: "SBI: CGTMSE scheme", href: "https://sbi.bank.in/web/business/sme/sme-government-schemes/cgtmse" }] },
     {
       type: "table",
       heading: "Compare your funding options",
