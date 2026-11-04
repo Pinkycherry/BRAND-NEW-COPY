@@ -63,6 +63,21 @@ Saved 4 Nov 2026 at the founder's request. When the founder says "recall", re-re
 - The founder checks each URL live and may interrupt with a fix: apply it to that page and every page after it, then carry on.
 - git push is refused from the Claude sandbox; commits go through the GitHub web upload page in the founder's browser, one existing folder per upload. Vercel regenerates the route tree during the build.
 
+### Quality rules (owner review, 5 Nov 2026)
+
+Every page built before this date failed the owner's review: low-value, thin, generic content with an India tag added. No new pages until every existing page is rewritten to these rules, one at a time, each pushed with a `Live: ` line.
+
+- **Tracker columns**: India Topic Pages Review has Quality check, Reviewed by and Reason for every URL. A page is "Passed" only after the owner approves its rewrite. Each page's pending numbers are listed there too.
+- **Numbers**: wherever a real figure is needed (costs, margins, market size, fees, timelines, loan limits, conversion rates), write a visible marker `[Data pending: what figure, which source, 2026–27]`. Never invent a number and never drop the point. Only figures already verified from an official source may be stated.
+- **Every seller section** filled with full, substantial writing, not two or three lines.
+- **Real Indian depth**: step-by-step processes on actual portals and offices (Udyam, GST, MUDRA, Startup India, bank branch loan steps).
+- **Worked rupee examples** for a real Indian reader, with figures marked pending.
+- **Differences** between metros, tier 2 and tier 3 cities and villages, and between sectors.
+- **Mistakes Indians actually make**, and family, social and cash realities.
+- **Checklists and worksheets** the reader can use, and **what to do this week**.
+- **Inline links** to our ideas, lists, calculators and other topic pages, and to authoritative Indian sources.
+- Every page needs something a reader cannot get from a generic AI answer. If a section is generic advice, rewrite it.
+
 ### Slugs and SEO (100% ours)
 
 - A slug is the full phrase an Indian person types into Google or asks Gemini, e.g. seller `/validate-idea/traveltech` becomes `/how-to-validate-a-travel-tech-business-idea-in-india`, H1 "How to Validate a Travel Tech Business Idea in India".
@@ -81,7 +96,7 @@ Use the seller's layout and composition exactly: same sections, order, component
 
 - India only: Indian buyers, rupees, GST, Udyam/MSME, MUDRA, UPI, Indian cities and towns, family and social realities, Indian rules.
 - Warm, emotional, interactive, speaking to the reader as "you"; questions, small checks, real situations; plain words for a first-time founder on a phone. Never write as if the site runs the business.
-- Original only, never scraped or reworded from the seller. Never invent a number, statistic, law or source; if it can't be verified, leave the number out.
+- Original only, never scraped or reworded from the seller. Never invent a number, statistic, law or source; if a figure can't be verified, put the `[Data pending: ...]` marker in its place (see Quality rules).
 - Future-proof: past budgets and years may be referenced, but never anchor content to an old year.
 - No seller brand, no seller links, no `href="#"`, no visible counts.
 - Q&A pages: no new Q&A research. Use our FAQ page and the Supabase FAQ data inside the seller's question-page structure.
