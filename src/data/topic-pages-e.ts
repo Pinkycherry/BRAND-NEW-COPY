@@ -14,68 +14,6 @@ const VALIDATORS = [
   { label: "Is my business idea good?", href: "/how-to-check-if-your-business-idea-is-good-in-india" },
 ];
 
-/** Seller layout: metrics hub (/topics/saas-metrics). Sections: quick reference table, calculate instantly. */
-export const businessNumbers: TopicPage = {
-  slug: "business-numbers-every-small-business-in-india-should-track",
-  updated: UPDATED_ON,
-  sellerRef: "https://ideaproof.io/topics/saas-metrics",
-  parent: PARENT,
-  seo: {
-    title: "Business Numbers Every Small Business in India Should Track Each Month",
-    description: "The ten business numbers every small business owner in India should track: sales, profit per order, break-even, customer cost, repeat buyers, cash runway and more, in rupees.",
-  },
-  hero: {
-    eyebrow: "Business numbers to track",
-    h1: "Business Numbers Every Small Business in India Should Track",
-    highlight: "Business Numbers",
-    intro: "You do not need an accountant's software to know if your business is healthy. Ten simple numbers, written in a notebook or a sheet once a month, tell you whether to push, fix or pause. Most owners track only sales. You will track what actually keeps the shutter open.",
-    sub: "Works for a **kirana**, a **home kitchen**, a **tuition centre**, an **online store** or a **freelance service**.",
-    updated: UPDATED,
-    primary: { label: "See the 10 numbers", href: "#numbers" },
-    secondary: { label: "Open the calculators", href: "/calculator" },
-    image: IMG.metrics,
-    imageAlt: "A shop owner noting monthly business numbers",
-  },
-  sections: [
-    {
-      type: "table",
-      heading: "Your business numbers: quick reference",
-      intro: "Work each one out for last month. Then do it again next month and compare.",
-      columns: ["Number", "What it tells you", "How to work it out", "Where to go next"],
-      rows: [
-        ["Monthly sales", "How much money came in", "Add every UPI, cash and card receipt for the month", "[Cash-flow calendar](/startup-cash-flow-india)"],
-        ["Profit per order", "Whether each sale makes you money", "Price minus material, packing, delivery, platform fee and GST you cannot claim back", "[Unit economics](/unit-economics-india)"],
-        ["Break-even orders", "Sales needed before you stop losing money", "Monthly fixed costs ÷ profit per order", "[Break-even calculator](/calculator/break-even)"],
-        ["Customer acquisition cost", "What each new buyer costs you", "Marketing spend ÷ new paying customers", "[CAC for small businesses](/what-is-customer-acquisition-cost-for-a-small-business-in-india)"],
-        ["Repeat buyers", "Whether people come back", "Last month's buyers who bought again this month", "[Product-market fit](/how-to-know-if-your-business-has-product-market-fit-in-india)"],
-        ["Average order value", "How much a typical buyer spends", "Monthly sales ÷ number of orders", "[First-price workbench](/business-pricing-india)"],
-        ["Money owed to you", "Cash stuck with customers on credit", "Total unpaid bills from customers", "Ask for part advance on new orders"],
-        ["Stock on the shelf", "Cash sitting as unsold goods", "Value of stock at cost price", "Buy smaller batches more often"],
-        ["Cash runway", "How many months you can keep going", "Cash in bank ÷ monthly loss (or monthly fixed costs if not yet earning)", "[Funding needed calculator](/calculator/funding-needed)"],
-        ["Your own pay", "Whether the business pays you for your time", "What you could take home each month after all costs", "[ROI calculator](/calculator/roi)"],
-      ],
-      note: "Keep business and personal money in separate bank accounts so these numbers are real. If you are GST registered, your [GST portal](https://www.gst.gov.in/) returns are a useful monthly check on sales.",
-    },
-    {
-      type: "cards",
-      heading: "Calculate your numbers instantly",
-      intro: "Free calculators and tools in rupees. Put in last month's figures and see where you stand.",
-      items: [
-        { title: "Break-even calculator", body: "Orders a month before you stop losing money.", href: "/calculator/break-even", cta: "Calculate" },
-        { title: "Startup cost calculator", body: "Every rupee you need before the first sale.", href: "/calculator/startup-cost", cta: "Calculate" },
-        { title: "Funding needed calculator", body: "How many months your money lasts, and how much more you need.", href: "/calculator/funding-needed", cta: "Calculate" },
-        { title: "ROI calculator", body: "Is the money and time you put in coming back?", href: "/calculator/roi", cta: "Calculate" },
-        { title: "Cash-flow calendar", body: "Money in and out, month by month.", href: "/startup-cash-flow-india", cta: "Open" },
-        { title: "Unit economics", body: "Profit per order and the cost of each buyer, together.", href: "/unit-economics-india", cta: "Open" },
-        { title: "Money needed to start", body: "Plan your start-up amount properly.", href: "/how-much-money-is-needed-to-start-a-business-in-india", cta: "Read" },
-        { title: "Market size for your area", body: "How many buyers you can actually reach.", href: "/how-to-calculate-tam-sam-som-for-a-business-in-india", cta: "Read" },
-        { title: "All calculators", body: "Every free calculator on one page.", href: "/calculator", cta: "Browse" },
-      ],
-    },
-    { type: "sources", heading: "Sources", items: [SRC.gst, SRC.udyam, SRC.npci, { label: "RBI: Financial Education", href: "https://rbi.org.in/FinancialEducation/", note: "Reserve Bank of India material on managing money and credit." }] },
-  ],
-};
-
 /** Seller layout: generator tool page (/business-plan). Sections: 3 steps, real output, why, statistics, everything about, FAQ, continue, resources, CTA. */
 export const businessPlan: TopicPage = {
   slug: "how-to-write-a-business-plan-for-a-bank-loan-in-india",
