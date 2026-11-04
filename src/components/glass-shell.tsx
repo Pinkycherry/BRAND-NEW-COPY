@@ -89,31 +89,6 @@ export function GlassHeader() {
   );
 }
 
-export function GlassFooter() {
-  return (
-    <footer className="gh-footer">
-      <div className="gh-footer-journey">
-        <div><p className="gh-eyebrow">KEEP MOVING</p><h2>One idea. One question. One useful next step.</h2><p>Find a blueprint, run the numbers, then test the assumptions with the research tool you choose.</p></div>
-        <div><Link to="/blueprints" className="gh-button gh-button-primary">Browse published ideas <ArrowUpRight size={18} aria-hidden="true" /></Link><Link to="/calculator" className="gh-button gh-button-secondary">Open calculators</Link></div>
-      </div>
-      <div className="gh-footer-top">
-        <div className="gh-footer-brand">
-          <Link to="/" className="gh-brand"><span className="gh-brand-mark" aria-hidden="true">b<span>.</span></span><span className="gh-brand-name">businessidea<span>.io</span></span></Link>
-          <p>For the person starting with an idea and a real life to work around.</p>
-          <Link to="/contact" className="gh-footer-contact">Ask us a question <ArrowUpRight size={16} aria-hidden="true" /></Link>
-        </div>
-        <div className="gh-footer-links">
-          <div><h3>Ideas</h3><Link to="/business-ideas-india">Find your first move</Link><Link to="/business-models-india">Compare business models</Link><Link to="/side-business-ideas-india">Side businesses</Link><Link to="/local-business-ideas-india">Local businesses</Link><Link to="/online-business-ideas-india">Online businesses</Link><Link to="/browse">All categories</Link><Link to="/blueprints">Published blueprints</Link><Link to="/search">Search ideas</Link><Link to="/sitemap">All pages</Link></div>
-          <div><h3>Learn</h3><Link to="/startup-guides">Startup guides</Link><Link to="/business-idea-reading-room">Reading room</Link><Link to="/startup-terms-india">Terms by decision</Link><Link to="/startup-idea-validation">Validation field guide</Link><Link to="/business-idea-research-india">Business idea research</Link><Link to="/blog">Founder journal</Link><Link to="/founder-glossary">Glossary</Link><Link to="/learning-resources">Resources</Link></div>
-          <div><h3>Build</h3><Link to="/business-idea-toolkit">Business idea toolkit</Link><Link to="/startup-costs-india">Startup cost ledger</Link><Link to="/business-pricing-india">First-price workbench</Link><Link to="/startup-cash-flow-india">Cash-flow calendar</Link><Link to="/startup-launch-plan-india">Launch evidence plan</Link><Link to="/product-business-ideas-india">Product batch</Link><Link to="/calculator">Calculators</Link><Link to="/blueprints">Validate an idea</Link><Link to="/pricing">Pricing</Link><Link to="/services">Services</Link></div>
-          <div><h3>People & policies</h3><Link to="/about">Our story</Link><Link to="/founders">Founders</Link><Link to="/contact">Contact</Link><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link><Link to="/cookie-policy">Cookies</Link><Link to="/disclaimer">Disclaimer</Link></div>
-        </div>
-      </div>
-      <div className="gh-footer-bottom"><span>© {new Date().getFullYear()} BusinessIdea.io</span><span>Made for people starting from zero.</span></div>
-    </footer>
-  );
-}
-
 export function GlassShell({ children, showShortlistTray = true }: { children: ReactNode; showShortlistTray?: boolean }) {
   return <V2Frame showShortlistTray={showShortlistTray}><div className="glass-home v2-surface"><a className="gh-skip" href="#main">Skip to content</a><div aria-hidden="true" style={{ height: "6rem" }} /><div id="main">{children}</div></div></V2Frame>;
 }
