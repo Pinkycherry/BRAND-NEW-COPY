@@ -72,7 +72,7 @@ export const getFunding: TopicPage = {
     {
       type: "rich",
       heading: "What lenders and investors look at",
-      intro: "We do not publish invented benchmarks. These are the checks you will face, and the figures we are researching for 2026–27.",
+      intro: "These are the checks you will face at each door, and what helps you pass them.",
       blocks: [
         { kind: "table", columns: ["Who", "What they check first", "What helps you"], rows: [
           ["Bank officer (MUDRA, CGTMSE-backed loans)", "Repayment ability from business income; your own contribution; your credit history", "Clean business bank statements, Udyam, quotations, a realistic project report, a good credit score"],
@@ -80,12 +80,6 @@ export const getFunding: TopicPage = {
           ["Stand-Up India branch", "Eligibility (SC/ST or woman entrepreneur), greenfield enterprise, viability", "Complete documents and a written project plan"],
           ["Seed Fund incubator", "DPIIT recognition, innovation, a team that can execute, early validation", "Prototype or pilot results, early users, a short pitch"],
           ["Angel investor", "The founder, the problem, early traction", "Paying customers, repeat purchases, honest numbers"],
-        ] },
-        { kind: "h3", text: "Figures we are researching" },
-        { kind: "list", items: [
-          "[Data pending: minimum credit score banks commonly expect for MUDRA and MSME loans, bank and credit bureau guidance, 2026–27]",
-          "[Data pending: typical own contribution (promoter margin) banks expect on small business term loans, bank policy documents, 2026–27]",
-          "[Data pending: MSME credit gap estimate for India, SIDBI or RBI reports, 2026–27]",
         ] },
         { kind: "p", text: "Check your credit report before you apply. Every individual can get a free credit report from the major credit bureaus; errors in it are a common and fixable reason for rejection. [RBI's financial education pages](https://rbi.org.in/FinancialEducation/) explain credit and borrowing in plain words." },
       ],

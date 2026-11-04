@@ -23,7 +23,7 @@ export const validateIdea: TopicPage = {
     intro: "Validation means getting proof, from people who are not your relatives, that they will pay for what you want to sell, at a price that leaves you money after every cost. In India that proof usually costs a few evenings, a phone, some travel and a small trial batch. Skipping it is how a family's FD ends up as a shop deposit that never comes back.",
     sub: "This guide walks you through the five steps, the methods that work in a metro, a tier 2 town and a village, a worked rupee example, the registrations you need and when, and a plan for the next seven days.",
     updated: UPDATED,
-    primary: { label: "Start the 5 steps", href: "#steps" },
+    primary: { label: "Start the 5 steps", href: "#the-5-step-validation-process" },
     secondary: { label: "Do the 7-day plan", href: "#what-to-do-this-week" },
     image: IMG.validation,
     imageAlt: "A founder checking early buyer interest on a phone",

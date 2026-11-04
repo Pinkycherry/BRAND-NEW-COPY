@@ -1,6 +1,6 @@
 /** All India topic pages, keyed by slug. Rename a slug or title in its data file only. */
 import type { TopicPage } from "@/bought/topic-page";
-import { mistakes } from "./topic-pages-a";
+import { mistakes } from "./topic-pages-rw3";
 import { getFunding } from "./topic-pages-rw2";
 import { validateIdea } from "./topic-pages-rw1";
 import { cac, tam, moneyToStart, bootstrapping } from "./topic-pages-b";
