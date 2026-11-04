@@ -64,7 +64,7 @@ const esc = (v: string) => v.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&
 /** Inline emphasis: **bold** only. */
 const rich = (v: string) =>
   esc(v)
-    .replace(/\[Data pending: ([^\]]+)\]/g, '<mark class="rounded px-1.5 py-0.5 text-[0.85em] font-medium bg-amber-100 text-amber-900 ring-1 ring-amber-300" data-pending="$1">[Data pending: $1]</mark>')
+    .replace(/\[Data pending: ([^\]]+)\]/g, '<mark class="rounded px-1.5 py-0.5 font-medium" style="background:#fef3c7;color:#78350f;box-shadow:0 0 0 1px #fcd34d;font-size:.85em" data-pending="$1">[Data pending: $1]</mark>')
     .replace(/\*\*(.+?)\*\*/g, '<strong class="text-foreground">$1</strong>')
     .replace(/\[([^\]]+)\]\((\/[^)\s]*|#[^)\s]*)\)/g, '<a class="text-primary underline-offset-2 hover:underline" href="$2">$1</a>')
     .replace(/\[([^\]]+)\]\((https:\/\/[^)\s]+)\)/g, '<a class="text-primary underline-offset-2 hover:underline" href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
