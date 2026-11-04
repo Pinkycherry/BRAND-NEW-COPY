@@ -212,18 +212,17 @@
    ],
    "parent_topic": "Validate",
    "our_title": "How to validate a business idea in India",
-   "our_slug": "validate-business-idea",
+   "our_slug": "how-to-validate-a-business-idea-in-india",
    "india_angle": "reframe",
    "layout_file": "src/bought/topics.html components",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
    "supabase_data_now": [],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "live",
-   "live_url": "https://bbinewcopy.vercel.app/how-to-validate-business-idea-india",
+   "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
+   "live_url": "https://bbinewcopy.vercel.app/how-to-validate-a-business-idea-in-india",
    "contains": "Topic hub: 5-step validation process, methods by category, methods compared table, CTA.",
-   "india_plan": "Done: UPI advances, society groups, weekend stalls; each step has a small check.",
-   "old_live_url": "https://bbinewcopy.vercel.app/how-to-validate-business-idea-india"
+   "india_plan": "Done: UPI advances, society groups, weekend stalls; each step has a small check."
   },
   {
    "seller_url": "https://ideaproof.io/is-my-business-idea-good",
@@ -1706,7 +1705,7 @@
    ],
    "parent_topic": "Learn from failure",
    "our_title": "Startup validation mistakes to avoid in India",
-   "our_slug": "startup-mistakes",
+   "our_slug": "common-mistakes-to-avoid-when-starting-a-business-in-india",
    "india_angle": "reframe",
    "layout_file": "src/bought/topics.html components",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (per seller section order)",
@@ -1715,11 +1714,10 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "live",
-   "live_url": "https://bbinewcopy.vercel.app/startup-mistakes-to-avoid-india",
+   "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
+   "live_url": "https://bbinewcopy.vercel.app/common-mistakes-to-avoid-when-starting-a-business-in-india",
    "contains": "Guide: post-mortem lessons, prevention pyramid, 7 fatal mistakes, 14-day sprint, 10 red flags, FAQ.",
-   "india_plan": "Done: Indian traps (family praise, GST and marketplace fees, early rent) plus a tickable red-flag check.",
-   "old_live_url": "https://bbinewcopy.vercel.app/startup-mistakes-to-avoid-india"
+   "india_plan": "Done: Indian traps (family praise, GST and marketplace fees, early rent) plus a tickable red-flag check."
   },
   {
    "seller_url": "https://ideaproof.io/failed-vs-successful-startups",
@@ -2367,7 +2365,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "How to get funding for your business in India",
-   "our_slug": "business-funding",
+   "our_slug": "how-to-get-funding-for-a-small-business-in-india",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2376,11 +2374,10 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "live",
-   "live_url": "https://bbinewcopy.vercel.app/how-to-get-business-funding-india",
+   "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
+   "live_url": "https://bbinewcopy.vercel.app/how-to-get-funding-for-a-small-business-in-india",
    "contains": "Q&A: 7 funding sources, step-by-step, investor metrics, mistakes, FAQ, sources.",
-   "india_plan": "Done: MUDRA, Stand-Up India, PMEGP, CGTMSE, Seed Fund, Udyam; which money fits which stage.",
-   "old_live_url": "https://bbinewcopy.vercel.app/how-to-get-business-funding-india"
+   "india_plan": "Done: MUDRA, Stand-Up India, PMEGP, CGTMSE, Seed Fund, Udyam; which money fits which stage."
   },
   {
    "seller_url": "https://ideaproof.io/questions/money-to-start-business",
@@ -2398,7 +2395,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "How much money do you need to start a business in India?",
-   "our_slug": "cost-to-start-business",
+   "our_slug": "how-much-money-is-needed-to-start-a-business-in-india",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2407,11 +2404,10 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "live",
-   "live_url": "https://bbinewcopy.vercel.app/money-needed-to-start-business-india",
+   "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
+   "live_url": "https://bbinewcopy.vercel.app/how-much-money-is-needed-to-start-a-business-in-india",
    "contains": "Q&A: launch capital categories, cost by business model, capital preservation, FAQ.",
-   "india_plan": "Done: one-time vs monthly costs, Udyam, FSSAI, GST thresholds, ways to start smaller.",
-   "old_live_url": "https://bbinewcopy.vercel.app/money-needed-to-start-business-india"
+   "india_plan": "Done: one-time vs monthly costs, Udyam, FSSAI, GST thresholds, ways to start smaller."
   },
   {
    "seller_url": "https://ideaproof.io/questions/angel-vs-vc",
@@ -2489,7 +2485,7 @@
    ],
    "parent_topic": "Fund",
    "our_title": "What is bootstrapping a business in India?",
-   "our_slug": "bootstrapping",
+   "our_slug": "how-to-start-a-business-without-investors-in-india",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -2498,11 +2494,10 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "live",
-   "live_url": "https://bbinewcopy.vercel.app/bootstrapping-business-india",
+   "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
+   "live_url": "https://bbinewcopy.vercel.app/how-to-start-a-business-without-investors-in-india",
    "contains": "Q&A: self-funding mechanics, execution steps, risks, compare options.",
-   "india_plan": "Done: growing on own sales like Indian family businesses; loans without giving up ownership.",
-   "old_live_url": "https://bbinewcopy.vercel.app/bootstrapping-business-india"
+   "india_plan": "Done: growing on own sales like Indian family businesses; loans without giving up ownership."
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-incubator",
@@ -3115,7 +3110,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "What is customer acquisition cost (CAC)?",
-   "our_slug": "customer-acquisition-cost",
+   "our_slug": "what-is-customer-acquisition-cost-for-a-small-business-in-india",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3125,11 +3120,10 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "live",
-   "live_url": "https://bbinewcopy.vercel.app/customer-acquisition-cost-india",
+   "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
+   "live_url": "https://bbinewcopy.vercel.app/what-is-customer-acquisition-cost-for-a-small-business-in-india",
    "contains": "Q&A: CAC definition, formula, benchmarks, how to reduce it, FAQ.",
-   "india_plan": "Done: rupee example, what to count for tiffin, tuition and resellers, GST on ads.",
-   "old_live_url": "https://bbinewcopy.vercel.app/customer-acquisition-cost-india"
+   "india_plan": "Done: rupee example, what to count for tiffin, tuition and resellers, GST on ads."
   },
   {
    "seller_url": "https://ideaproof.io/questions/cac-vs-cpa",
@@ -3357,7 +3351,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "What is TAM, SAM and SOM? Market size for India",
-   "our_slug": "tam-sam-som",
+   "our_slug": "how-to-calculate-tam-sam-som-for-a-business-in-india",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3366,11 +3360,10 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "live",
-   "live_url": "https://bbinewcopy.vercel.app/tam-sam-som-india",
+   "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
+   "live_url": "https://bbinewcopy.vercel.app/how-to-calculate-tam-sam-som-for-a-business-in-india",
    "contains": "Q&A: TAM, SAM, SOM explained, calculation, benchmarks, FAQ.",
-   "india_plan": "Done: bottom-up sizing for a city or district using Census and data.gov.in counts.",
-   "old_live_url": "https://bbinewcopy.vercel.app/tam-sam-som-india"
+   "india_plan": "Done: bottom-up sizing for a city or district using Census and data.gov.in counts."
   },
   {
    "seller_url": "https://ideaproof.io/questions/calculate-tam-sam-som",
@@ -3539,7 +3532,7 @@
    ],
    "parent_topic": "Numbers",
    "our_title": "What is product-market fit, and do you have it?",
-   "our_slug": "product-market-fit",
+   "our_slug": "how-to-know-if-your-business-has-product-market-fit-in-india",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3548,11 +3541,10 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "live",
-   "live_url": "https://bbinewcopy.vercel.app/product-market-fit-india",
+   "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
+   "live_url": "https://bbinewcopy.vercel.app/how-to-know-if-your-business-has-product-market-fit-in-india",
    "contains": "Q&A: product-market fit meaning, measurement, signs, FAQ.",
-   "india_plan": "Done: repeat UPI orders and unasked referrals as signs; 5-point self-check.",
-   "old_live_url": "https://bbinewcopy.vercel.app/product-market-fit-india"
+   "india_plan": "Done: repeat UPI orders and unasked referrals as signs; 5-point self-check."
   },
   {
    "seller_url": "https://ideaproof.io/questions/measure-product-market-fit",
@@ -3750,7 +3742,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "How to do customer interviews for your business idea",
-   "our_slug": "customer-interviews",
+   "our_slug": "how-to-talk-to-customers-before-starting-a-business-in-india",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -3759,11 +3751,10 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "live",
-   "live_url": "https://bbinewcopy.vercel.app/customer-interviews-india",
+   "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
+   "live_url": "https://bbinewcopy.vercel.app/how-to-talk-to-customers-before-starting-a-business-in-india",
    "contains": "Q&A: interview framework, script, mistakes, FAQ.",
-   "india_plan": "Done: where to meet Indian buyers (mandi, society groups, PGs), local-language interviews.",
-   "old_live_url": "https://bbinewcopy.vercel.app/customer-interviews-india"
+   "india_plan": "Done: where to meet Indian buyers (mandi, society groups, PGs), local-language interviews."
   },
   {
    "seller_url": "https://ideaproof.io/questions/how-many-customer-interviews",
@@ -4081,7 +4072,7 @@
    ],
    "parent_topic": "Validate",
    "our_title": "How to build an MVP for your business in India",
-   "our_slug": "build-mvp",
+   "our_slug": "how-to-build-an-mvp-with-low-investment-in-india",
    "india_angle": "reframe",
    "layout_file": "seller question page (Q&A) — file needed",
    "data_fields": "slug, seo.title, seo.description, hero, sections[] (Key takeaways; Step by step; Benchmarks; Common pitfalls; (Real-world examples); FAQ; Expert tips; (Recommended tools); (Your next steps); Sources; (Compare your options); Related questions; CTA band; Keep reading; Deeper answers; AI tools; Free calculators; Explore more resources; What changed)",
@@ -4090,11 +4081,10 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "live",
-   "live_url": "https://bbinewcopy.vercel.app/how-to-build-mvp-india",
+   "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
+   "live_url": "https://bbinewcopy.vercel.app/how-to-build-an-mvp-with-low-investment-in-india",
    "contains": "Q&A: MVP steps, options, no-code vs custom, FAQ.",
-   "india_plan": "Done: WhatsApp Business catalogue, UPI QR and manual delivery before any app.",
-   "old_live_url": "https://bbinewcopy.vercel.app/how-to-build-mvp-india"
+   "india_plan": "Done: WhatsApp Business catalogue, UPI QR and manual delivery before any app."
   },
   {
    "seller_url": "https://ideaproof.io/questions/mvp-vs-full-product",
@@ -4218,5 +4208,5 @@
   }
  ],
  "log_artifact": "https://claude.ai/artifact/Cxg3dZVdJ1DsLEDqMVVwFP",
- "slug_rule": "Short, readable, how Indians search. No -india suffix. Old -india URLs get 301 redirects after approval."
+ "slug_rule": "Full search phrase an Indian person types: main keyword + niche + India. Never the seller slug with a word added. No redirects while the site is noindex."
 }
