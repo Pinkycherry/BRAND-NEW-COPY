@@ -74,7 +74,7 @@ export const EXPLORE: Section = {
   ],
 };
 
-export const CTA: Section = {
+export const CTA: Extract<Section, { type: "cta" }> = {
   type: "cta",
   heading: "Don't build what nobody in your area will pay for.",
   body: "Pick one idea, check the risks, and test it with ten real buyers this week. It costs you a few evenings, not your savings.",

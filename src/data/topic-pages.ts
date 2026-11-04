@@ -4,6 +4,7 @@ import { validateIdea, getFunding, mistakes } from "./topic-pages-a";
 import { cac, tam, moneyToStart, bootstrapping } from "./topic-pages-b";
 import { pmf, interviews, mvp } from "./topic-pages-c";
 import { isIdeaGood, raiseFunds } from "./topic-pages-d";
+import { businessNumbers, businessPlan, competitors, fundingQuestions, adsTest, govResources, validateFood, validateOnline } from "./topic-pages-e";
 
-export const TOPIC_PAGES: TopicPage[] = [validateIdea, getFunding, mistakes, cac, tam, moneyToStart, bootstrapping, pmf, interviews, mvp, isIdeaGood, raiseFunds];
+export const TOPIC_PAGES: TopicPage[] = [validateIdea, getFunding, mistakes, cac, tam, moneyToStart, bootstrapping, pmf, interviews, mvp, isIdeaGood, raiseFunds, businessNumbers, businessPlan, competitors, fundingQuestions, adsTest, govResources, validateFood, validateOnline];
 export const topicPage = (slug: string) => TOPIC_PAGES.find((p) => p.slug === slug)!;
