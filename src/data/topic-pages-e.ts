@@ -160,7 +160,7 @@ export const businessPlan: TopicPage = {
         { label: "Templates", href: "/templates" },
       ],
     },
-    { type: "dbfaq", heading: "Frequently asked questions", categories: BROAD, match: "(loan|bank|licen|register|registration|cost|invest|capital|money)", limit: 8 },
+    { type: "dbfaq", heading: "Frequently asked questions", categories: BROAD, match: "(loan|mudra|licen|registration|register|investment|capital|how much .*(start|need))", limit: 8 },
     {
       type: "cards",
       heading: "Continue your journey",
@@ -350,7 +350,7 @@ export const fundingQuestions: TopicPage = {
         { title: "Track your numbers monthly", body: "See [business numbers to track](/business-numbers-every-small-business-in-india-should-track)." },
       ],
     },
-    { type: "dbfaq", heading: "Founder funding questions", intro: "Real questions from our published idea guides, on money, loans and costs. More on our [founder FAQ page](/faq).", categories: BROAD, match: "(loan|fund|invest|money|capital|mudra|bank|cost|budget|start with|how much)", limit: 16 },
+    { type: "dbfaq", heading: "Founder funding questions", intro: "Real questions from our published idea guides, on money, loans and costs. More on our [founder FAQ page](/faq).", categories: BROAD, match: "(loan|fund|investment|capital|mudra|budget|how much .*(start|need|invest)|start with)", limit: 16 },
     {
       type: "cards",
       heading: "Validate before you raise",
