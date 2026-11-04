@@ -22,6 +22,7 @@ import { Route as BusinessIdeaTimeFitRouteImport } from './routes/business-idea-
 import { Route as BusinessIdeaToolkitRouteImport } from './routes/business-idea-toolkit'
 import { Route as BusinessIdeasIndiaRouteImport } from './routes/business-ideas-india'
 import { Route as BusinessModelsIndiaRouteImport } from './routes/business-models-india'
+import { Route as BusinessNumbersEverySmallBusinessInIndiaShouldTrackRouteImport } from './routes/business-numbers-every-small-business-in-india-should-track'
 import { Route as BusinessPricingIndiaRouteImport } from './routes/business-pricing-india'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as CoachingBatchBusinessIdeaIndiaRouteImport } from './routes/coaching-batch-business-idea-india'
@@ -35,17 +36,23 @@ import { Route as FirstCustomerIndiaRouteImport } from './routes/first-customer-
 import { Route as FounderDecisionJournalRouteImport } from './routes/founder-decision-journal'
 import { Route as FoundersRouteImport } from './routes/founders'
 import { Route as FrameworksComparisonRouteImport } from './routes/frameworks-comparison'
+import { Route as FreeGovernmentResourcesForStartingABusinessInIndiaRouteImport } from './routes/free-government-resources-for-starting-a-business-in-india'
 import { Route as GdprRouteImport } from './routes/gdpr'
 import { Route as HowMuchMoneyIsNeededToStartABusinessInIndiaRouteImport } from './routes/how-much-money-is-needed-to-start-a-business-in-india'
 import { Route as HowToBuildAnMvpWithLowInvestmentInIndiaRouteImport } from './routes/how-to-build-an-mvp-with-low-investment-in-india'
 import { Route as HowToCalculateTamSamSomForABusinessInIndiaRouteImport } from './routes/how-to-calculate-tam-sam-som-for-a-business-in-india'
 import { Route as HowToCheckIfYourBusinessIdeaIsGoodInIndiaRouteImport } from './routes/how-to-check-if-your-business-idea-is-good-in-india'
+import { Route as HowToDoCompetitorAnalysisForASmallBusinessInIndiaRouteImport } from './routes/how-to-do-competitor-analysis-for-a-small-business-in-india'
 import { Route as HowToGetFundingForASmallBusinessInIndiaRouteImport } from './routes/how-to-get-funding-for-a-small-business-in-india'
 import { Route as HowToKnowIfYourBusinessHasProductMarketFitInIndiaRouteImport } from './routes/how-to-know-if-your-business-has-product-market-fit-in-india'
 import { Route as HowToRaiseFundsForAStartupInIndiaRouteImport } from './routes/how-to-raise-funds-for-a-startup-in-india'
 import { Route as HowToStartABusinessWithoutInvestorsInIndiaRouteImport } from './routes/how-to-start-a-business-without-investors-in-india'
 import { Route as HowToTalkToCustomersBeforeStartingABusinessInIndiaRouteImport } from './routes/how-to-talk-to-customers-before-starting-a-business-in-india'
+import { Route as HowToTestDemandWithFacebookAndGoogleAdsInIndiaRouteImport } from './routes/how-to-test-demand-with-facebook-and-google-ads-in-india'
 import { Route as HowToValidateABusinessIdeaInIndiaRouteImport } from './routes/how-to-validate-a-business-idea-in-india'
+import { Route as HowToValidateAFoodBusinessIdeaInIndiaRouteImport } from './routes/how-to-validate-a-food-business-idea-in-india'
+import { Route as HowToValidateAnOnlineSellingBusinessIdeaInIndiaRouteImport } from './routes/how-to-validate-an-online-selling-business-idea-in-india'
+import { Route as HowToWriteABusinessPlanForABankLoanInIndiaRouteImport } from './routes/how-to-write-a-business-plan-for-a-bank-loan-in-india'
 import { Route as LocalBusinessIdeasIndiaRouteImport } from './routes/local-business-ideas-india'
 import { Route as MarketResearchRouteImport } from './routes/market-research'
 import { Route as OnlineBusinessIdeasIndiaRouteImport } from './routes/online-business-ideas-india'
@@ -68,6 +75,7 @@ import { Route as SitemapIndexDotxmlRouteImport } from './routes/sitemap-index[.
 import { Route as SitemapPagesDotxmlRouteImport } from './routes/sitemap-pages[.]xml'
 import { Route as StartupCashFlowIndiaRouteImport } from './routes/startup-cash-flow-india'
 import { Route as StartupCostsIndiaRouteImport } from './routes/startup-costs-india'
+import { Route as StartupFundingQuestionsForFirstTimeFoundersInIndiaRouteImport } from './routes/startup-funding-questions-for-first-time-founders-in-india'
 import { Route as StartupIdeaComparisonRouteImport } from './routes/startup-idea-comparison'
 import { Route as StartupIdeaValidationRouteImport } from './routes/startup-idea-validation'
 import { Route as StartupLaunchPlanIndiaRouteImport } from './routes/startup-launch-plan-india'
@@ -170,6 +178,12 @@ const BusinessModelsIndiaRoute = BusinessModelsIndiaRouteImport.update({
   path: '/business-models-india',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BusinessNumbersEverySmallBusinessInIndiaShouldTrackRoute =
+  BusinessNumbersEverySmallBusinessInIndiaShouldTrackRouteImport.update({
+    id: '/business-numbers-every-small-business-in-india-should-track',
+    path: '/business-numbers-every-small-business-in-india-should-track',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BusinessPricingIndiaRoute = BusinessPricingIndiaRouteImport.update({
   id: '/business-pricing-india',
   path: '/business-pricing-india',
@@ -237,6 +251,12 @@ const FrameworksComparisonRoute = FrameworksComparisonRouteImport.update({
   path: '/frameworks-comparison',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FreeGovernmentResourcesForStartingABusinessInIndiaRoute =
+  FreeGovernmentResourcesForStartingABusinessInIndiaRouteImport.update({
+    id: '/free-government-resources-for-starting-a-business-in-india',
+    path: '/free-government-resources-for-starting-a-business-in-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const GdprRoute = GdprRouteImport.update({
   id: '/gdpr',
   path: '/gdpr',
@@ -264,6 +284,12 @@ const HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute =
   HowToCheckIfYourBusinessIdeaIsGoodInIndiaRouteImport.update({
     id: '/how-to-check-if-your-business-idea-is-good-in-india',
     path: '/how-to-check-if-your-business-idea-is-good-in-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HowToDoCompetitorAnalysisForASmallBusinessInIndiaRoute =
+  HowToDoCompetitorAnalysisForASmallBusinessInIndiaRouteImport.update({
+    id: '/how-to-do-competitor-analysis-for-a-small-business-in-india',
+    path: '/how-to-do-competitor-analysis-for-a-small-business-in-india',
     getParentRoute: () => rootRouteImport,
   } as any)
 const HowToGetFundingForASmallBusinessInIndiaRoute =
@@ -296,10 +322,34 @@ const HowToTalkToCustomersBeforeStartingABusinessInIndiaRoute =
     path: '/how-to-talk-to-customers-before-starting-a-business-in-india',
     getParentRoute: () => rootRouteImport,
   } as any)
+const HowToTestDemandWithFacebookAndGoogleAdsInIndiaRoute =
+  HowToTestDemandWithFacebookAndGoogleAdsInIndiaRouteImport.update({
+    id: '/how-to-test-demand-with-facebook-and-google-ads-in-india',
+    path: '/how-to-test-demand-with-facebook-and-google-ads-in-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const HowToValidateABusinessIdeaInIndiaRoute =
   HowToValidateABusinessIdeaInIndiaRouteImport.update({
     id: '/how-to-validate-a-business-idea-in-india',
     path: '/how-to-validate-a-business-idea-in-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HowToValidateAFoodBusinessIdeaInIndiaRoute =
+  HowToValidateAFoodBusinessIdeaInIndiaRouteImport.update({
+    id: '/how-to-validate-a-food-business-idea-in-india',
+    path: '/how-to-validate-a-food-business-idea-in-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HowToValidateAnOnlineSellingBusinessIdeaInIndiaRoute =
+  HowToValidateAnOnlineSellingBusinessIdeaInIndiaRouteImport.update({
+    id: '/how-to-validate-an-online-selling-business-idea-in-india',
+    path: '/how-to-validate-an-online-selling-business-idea-in-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HowToWriteABusinessPlanForABankLoanInIndiaRoute =
+  HowToWriteABusinessPlanForABankLoanInIndiaRouteImport.update({
+    id: '/how-to-write-a-business-plan-for-a-bank-loan-in-india',
+    path: '/how-to-write-a-business-plan-for-a-bank-loan-in-india',
     getParentRoute: () => rootRouteImport,
   } as any)
 const LocalBusinessIdeasIndiaRoute = LocalBusinessIdeasIndiaRouteImport.update({
@@ -415,6 +465,12 @@ const StartupCostsIndiaRoute = StartupCostsIndiaRouteImport.update({
   path: '/startup-costs-india',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StartupFundingQuestionsForFirstTimeFoundersInIndiaRoute =
+  StartupFundingQuestionsForFirstTimeFoundersInIndiaRouteImport.update({
+    id: '/startup-funding-questions-for-first-time-founders-in-india',
+    path: '/startup-funding-questions-for-first-time-founders-in-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const StartupIdeaComparisonRoute = StartupIdeaComparisonRouteImport.update({
   id: '/startup-idea-comparison',
   path: '/startup-idea-comparison',
@@ -610,6 +666,7 @@ export interface FileRoutesByFullPath {
   '/business-idea-toolkit': typeof BusinessIdeaToolkitRoute
   '/business-ideas-india': typeof BusinessIdeasIndiaRoute
   '/business-models-india': typeof BusinessModelsIndiaRoute
+  '/business-numbers-every-small-business-in-india-should-track': typeof BusinessNumbersEverySmallBusinessInIndiaShouldTrackRoute
   '/business-pricing-india': typeof BusinessPricingIndiaRoute
   '/case-studies': typeof CaseStudiesRoute
   '/coaching-batch-business-idea-india': typeof CoachingBatchBusinessIdeaIndiaRoute
@@ -623,17 +680,23 @@ export interface FileRoutesByFullPath {
   '/founder-decision-journal': typeof FounderDecisionJournalRoute
   '/founders': typeof FoundersRoute
   '/frameworks-comparison': typeof FrameworksComparisonRoute
+  '/free-government-resources-for-starting-a-business-in-india': typeof FreeGovernmentResourcesForStartingABusinessInIndiaRoute
   '/gdpr': typeof GdprRoute
   '/how-much-money-is-needed-to-start-a-business-in-india': typeof HowMuchMoneyIsNeededToStartABusinessInIndiaRoute
   '/how-to-build-an-mvp-with-low-investment-in-india': typeof HowToBuildAnMvpWithLowInvestmentInIndiaRoute
   '/how-to-calculate-tam-sam-som-for-a-business-in-india': typeof HowToCalculateTamSamSomForABusinessInIndiaRoute
   '/how-to-check-if-your-business-idea-is-good-in-india': typeof HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute
+  '/how-to-do-competitor-analysis-for-a-small-business-in-india': typeof HowToDoCompetitorAnalysisForASmallBusinessInIndiaRoute
   '/how-to-get-funding-for-a-small-business-in-india': typeof HowToGetFundingForASmallBusinessInIndiaRoute
   '/how-to-know-if-your-business-has-product-market-fit-in-india': typeof HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute
   '/how-to-raise-funds-for-a-startup-in-india': typeof HowToRaiseFundsForAStartupInIndiaRoute
   '/how-to-start-a-business-without-investors-in-india': typeof HowToStartABusinessWithoutInvestorsInIndiaRoute
   '/how-to-talk-to-customers-before-starting-a-business-in-india': typeof HowToTalkToCustomersBeforeStartingABusinessInIndiaRoute
+  '/how-to-test-demand-with-facebook-and-google-ads-in-india': typeof HowToTestDemandWithFacebookAndGoogleAdsInIndiaRoute
   '/how-to-validate-a-business-idea-in-india': typeof HowToValidateABusinessIdeaInIndiaRoute
+  '/how-to-validate-a-food-business-idea-in-india': typeof HowToValidateAFoodBusinessIdeaInIndiaRoute
+  '/how-to-validate-an-online-selling-business-idea-in-india': typeof HowToValidateAnOnlineSellingBusinessIdeaInIndiaRoute
+  '/how-to-write-a-business-plan-for-a-bank-loan-in-india': typeof HowToWriteABusinessPlanForABankLoanInIndiaRoute
   '/local-business-ideas-india': typeof LocalBusinessIdeasIndiaRoute
   '/market-research': typeof MarketResearchRoute
   '/online-business-ideas-india': typeof OnlineBusinessIdeasIndiaRoute
@@ -656,6 +719,7 @@ export interface FileRoutesByFullPath {
   '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
   '/startup-cash-flow-india': typeof StartupCashFlowIndiaRoute
   '/startup-costs-india': typeof StartupCostsIndiaRoute
+  '/startup-funding-questions-for-first-time-founders-in-india': typeof StartupFundingQuestionsForFirstTimeFoundersInIndiaRoute
   '/startup-idea-comparison': typeof StartupIdeaComparisonRoute
   '/startup-idea-validation': typeof StartupIdeaValidationRoute
   '/startup-launch-plan-india': typeof StartupLaunchPlanIndiaRoute
@@ -706,6 +770,7 @@ export interface FileRoutesByTo {
   '/business-idea-toolkit': typeof BusinessIdeaToolkitRoute
   '/business-ideas-india': typeof BusinessIdeasIndiaRoute
   '/business-models-india': typeof BusinessModelsIndiaRoute
+  '/business-numbers-every-small-business-in-india-should-track': typeof BusinessNumbersEverySmallBusinessInIndiaShouldTrackRoute
   '/business-pricing-india': typeof BusinessPricingIndiaRoute
   '/case-studies': typeof CaseStudiesRoute
   '/coaching-batch-business-idea-india': typeof CoachingBatchBusinessIdeaIndiaRoute
@@ -719,17 +784,23 @@ export interface FileRoutesByTo {
   '/founder-decision-journal': typeof FounderDecisionJournalRoute
   '/founders': typeof FoundersRoute
   '/frameworks-comparison': typeof FrameworksComparisonRoute
+  '/free-government-resources-for-starting-a-business-in-india': typeof FreeGovernmentResourcesForStartingABusinessInIndiaRoute
   '/gdpr': typeof GdprRoute
   '/how-much-money-is-needed-to-start-a-business-in-india': typeof HowMuchMoneyIsNeededToStartABusinessInIndiaRoute
   '/how-to-build-an-mvp-with-low-investment-in-india': typeof HowToBuildAnMvpWithLowInvestmentInIndiaRoute
   '/how-to-calculate-tam-sam-som-for-a-business-in-india': typeof HowToCalculateTamSamSomForABusinessInIndiaRoute
   '/how-to-check-if-your-business-idea-is-good-in-india': typeof HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute
+  '/how-to-do-competitor-analysis-for-a-small-business-in-india': typeof HowToDoCompetitorAnalysisForASmallBusinessInIndiaRoute
   '/how-to-get-funding-for-a-small-business-in-india': typeof HowToGetFundingForASmallBusinessInIndiaRoute
   '/how-to-know-if-your-business-has-product-market-fit-in-india': typeof HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute
   '/how-to-raise-funds-for-a-startup-in-india': typeof HowToRaiseFundsForAStartupInIndiaRoute
   '/how-to-start-a-business-without-investors-in-india': typeof HowToStartABusinessWithoutInvestorsInIndiaRoute
   '/how-to-talk-to-customers-before-starting-a-business-in-india': typeof HowToTalkToCustomersBeforeStartingABusinessInIndiaRoute
+  '/how-to-test-demand-with-facebook-and-google-ads-in-india': typeof HowToTestDemandWithFacebookAndGoogleAdsInIndiaRoute
   '/how-to-validate-a-business-idea-in-india': typeof HowToValidateABusinessIdeaInIndiaRoute
+  '/how-to-validate-a-food-business-idea-in-india': typeof HowToValidateAFoodBusinessIdeaInIndiaRoute
+  '/how-to-validate-an-online-selling-business-idea-in-india': typeof HowToValidateAnOnlineSellingBusinessIdeaInIndiaRoute
+  '/how-to-write-a-business-plan-for-a-bank-loan-in-india': typeof HowToWriteABusinessPlanForABankLoanInIndiaRoute
   '/local-business-ideas-india': typeof LocalBusinessIdeasIndiaRoute
   '/market-research': typeof MarketResearchRoute
   '/online-business-ideas-india': typeof OnlineBusinessIdeasIndiaRoute
@@ -752,6 +823,7 @@ export interface FileRoutesByTo {
   '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
   '/startup-cash-flow-india': typeof StartupCashFlowIndiaRoute
   '/startup-costs-india': typeof StartupCostsIndiaRoute
+  '/startup-funding-questions-for-first-time-founders-in-india': typeof StartupFundingQuestionsForFirstTimeFoundersInIndiaRoute
   '/startup-idea-comparison': typeof StartupIdeaComparisonRoute
   '/startup-idea-validation': typeof StartupIdeaValidationRoute
   '/startup-launch-plan-india': typeof StartupLaunchPlanIndiaRoute
@@ -802,6 +874,7 @@ export interface FileRoutesById {
   '/business-idea-toolkit': typeof BusinessIdeaToolkitRoute
   '/business-ideas-india': typeof BusinessIdeasIndiaRoute
   '/business-models-india': typeof BusinessModelsIndiaRoute
+  '/business-numbers-every-small-business-in-india-should-track': typeof BusinessNumbersEverySmallBusinessInIndiaShouldTrackRoute
   '/business-pricing-india': typeof BusinessPricingIndiaRoute
   '/case-studies': typeof CaseStudiesRoute
   '/coaching-batch-business-idea-india': typeof CoachingBatchBusinessIdeaIndiaRoute
@@ -815,17 +888,23 @@ export interface FileRoutesById {
   '/founder-decision-journal': typeof FounderDecisionJournalRoute
   '/founders': typeof FoundersRoute
   '/frameworks-comparison': typeof FrameworksComparisonRoute
+  '/free-government-resources-for-starting-a-business-in-india': typeof FreeGovernmentResourcesForStartingABusinessInIndiaRoute
   '/gdpr': typeof GdprRoute
   '/how-much-money-is-needed-to-start-a-business-in-india': typeof HowMuchMoneyIsNeededToStartABusinessInIndiaRoute
   '/how-to-build-an-mvp-with-low-investment-in-india': typeof HowToBuildAnMvpWithLowInvestmentInIndiaRoute
   '/how-to-calculate-tam-sam-som-for-a-business-in-india': typeof HowToCalculateTamSamSomForABusinessInIndiaRoute
   '/how-to-check-if-your-business-idea-is-good-in-india': typeof HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute
+  '/how-to-do-competitor-analysis-for-a-small-business-in-india': typeof HowToDoCompetitorAnalysisForASmallBusinessInIndiaRoute
   '/how-to-get-funding-for-a-small-business-in-india': typeof HowToGetFundingForASmallBusinessInIndiaRoute
   '/how-to-know-if-your-business-has-product-market-fit-in-india': typeof HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute
   '/how-to-raise-funds-for-a-startup-in-india': typeof HowToRaiseFundsForAStartupInIndiaRoute
   '/how-to-start-a-business-without-investors-in-india': typeof HowToStartABusinessWithoutInvestorsInIndiaRoute
   '/how-to-talk-to-customers-before-starting-a-business-in-india': typeof HowToTalkToCustomersBeforeStartingABusinessInIndiaRoute
+  '/how-to-test-demand-with-facebook-and-google-ads-in-india': typeof HowToTestDemandWithFacebookAndGoogleAdsInIndiaRoute
   '/how-to-validate-a-business-idea-in-india': typeof HowToValidateABusinessIdeaInIndiaRoute
+  '/how-to-validate-a-food-business-idea-in-india': typeof HowToValidateAFoodBusinessIdeaInIndiaRoute
+  '/how-to-validate-an-online-selling-business-idea-in-india': typeof HowToValidateAnOnlineSellingBusinessIdeaInIndiaRoute
+  '/how-to-write-a-business-plan-for-a-bank-loan-in-india': typeof HowToWriteABusinessPlanForABankLoanInIndiaRoute
   '/local-business-ideas-india': typeof LocalBusinessIdeasIndiaRoute
   '/market-research': typeof MarketResearchRoute
   '/online-business-ideas-india': typeof OnlineBusinessIdeasIndiaRoute
@@ -848,6 +927,7 @@ export interface FileRoutesById {
   '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
   '/startup-cash-flow-india': typeof StartupCashFlowIndiaRoute
   '/startup-costs-india': typeof StartupCostsIndiaRoute
+  '/startup-funding-questions-for-first-time-founders-in-india': typeof StartupFundingQuestionsForFirstTimeFoundersInIndiaRoute
   '/startup-idea-comparison': typeof StartupIdeaComparisonRoute
   '/startup-idea-validation': typeof StartupIdeaValidationRoute
   '/startup-launch-plan-india': typeof StartupLaunchPlanIndiaRoute
@@ -900,6 +980,7 @@ export interface FileRouteTypes {
     | '/business-idea-toolkit'
     | '/business-ideas-india'
     | '/business-models-india'
+    | '/business-numbers-every-small-business-in-india-should-track'
     | '/business-pricing-india'
     | '/case-studies'
     | '/coaching-batch-business-idea-india'
@@ -913,17 +994,23 @@ export interface FileRouteTypes {
     | '/founder-decision-journal'
     | '/founders'
     | '/frameworks-comparison'
+    | '/free-government-resources-for-starting-a-business-in-india'
     | '/gdpr'
     | '/how-much-money-is-needed-to-start-a-business-in-india'
     | '/how-to-build-an-mvp-with-low-investment-in-india'
     | '/how-to-calculate-tam-sam-som-for-a-business-in-india'
     | '/how-to-check-if-your-business-idea-is-good-in-india'
+    | '/how-to-do-competitor-analysis-for-a-small-business-in-india'
     | '/how-to-get-funding-for-a-small-business-in-india'
     | '/how-to-know-if-your-business-has-product-market-fit-in-india'
     | '/how-to-raise-funds-for-a-startup-in-india'
     | '/how-to-start-a-business-without-investors-in-india'
     | '/how-to-talk-to-customers-before-starting-a-business-in-india'
+    | '/how-to-test-demand-with-facebook-and-google-ads-in-india'
     | '/how-to-validate-a-business-idea-in-india'
+    | '/how-to-validate-a-food-business-idea-in-india'
+    | '/how-to-validate-an-online-selling-business-idea-in-india'
+    | '/how-to-write-a-business-plan-for-a-bank-loan-in-india'
     | '/local-business-ideas-india'
     | '/market-research'
     | '/online-business-ideas-india'
@@ -946,6 +1033,7 @@ export interface FileRouteTypes {
     | '/sitemap-pages.xml'
     | '/startup-cash-flow-india'
     | '/startup-costs-india'
+    | '/startup-funding-questions-for-first-time-founders-in-india'
     | '/startup-idea-comparison'
     | '/startup-idea-validation'
     | '/startup-launch-plan-india'
@@ -996,6 +1084,7 @@ export interface FileRouteTypes {
     | '/business-idea-toolkit'
     | '/business-ideas-india'
     | '/business-models-india'
+    | '/business-numbers-every-small-business-in-india-should-track'
     | '/business-pricing-india'
     | '/case-studies'
     | '/coaching-batch-business-idea-india'
@@ -1009,17 +1098,23 @@ export interface FileRouteTypes {
     | '/founder-decision-journal'
     | '/founders'
     | '/frameworks-comparison'
+    | '/free-government-resources-for-starting-a-business-in-india'
     | '/gdpr'
     | '/how-much-money-is-needed-to-start-a-business-in-india'
     | '/how-to-build-an-mvp-with-low-investment-in-india'
     | '/how-to-calculate-tam-sam-som-for-a-business-in-india'
     | '/how-to-check-if-your-business-idea-is-good-in-india'
+    | '/how-to-do-competitor-analysis-for-a-small-business-in-india'
     | '/how-to-get-funding-for-a-small-business-in-india'
     | '/how-to-know-if-your-business-has-product-market-fit-in-india'
     | '/how-to-raise-funds-for-a-startup-in-india'
     | '/how-to-start-a-business-without-investors-in-india'
     | '/how-to-talk-to-customers-before-starting-a-business-in-india'
+    | '/how-to-test-demand-with-facebook-and-google-ads-in-india'
     | '/how-to-validate-a-business-idea-in-india'
+    | '/how-to-validate-a-food-business-idea-in-india'
+    | '/how-to-validate-an-online-selling-business-idea-in-india'
+    | '/how-to-write-a-business-plan-for-a-bank-loan-in-india'
     | '/local-business-ideas-india'
     | '/market-research'
     | '/online-business-ideas-india'
@@ -1042,6 +1137,7 @@ export interface FileRouteTypes {
     | '/sitemap-pages.xml'
     | '/startup-cash-flow-india'
     | '/startup-costs-india'
+    | '/startup-funding-questions-for-first-time-founders-in-india'
     | '/startup-idea-comparison'
     | '/startup-idea-validation'
     | '/startup-launch-plan-india'
@@ -1091,6 +1187,7 @@ export interface FileRouteTypes {
     | '/business-idea-toolkit'
     | '/business-ideas-india'
     | '/business-models-india'
+    | '/business-numbers-every-small-business-in-india-should-track'
     | '/business-pricing-india'
     | '/case-studies'
     | '/coaching-batch-business-idea-india'
@@ -1104,17 +1201,23 @@ export interface FileRouteTypes {
     | '/founder-decision-journal'
     | '/founders'
     | '/frameworks-comparison'
+    | '/free-government-resources-for-starting-a-business-in-india'
     | '/gdpr'
     | '/how-much-money-is-needed-to-start-a-business-in-india'
     | '/how-to-build-an-mvp-with-low-investment-in-india'
     | '/how-to-calculate-tam-sam-som-for-a-business-in-india'
     | '/how-to-check-if-your-business-idea-is-good-in-india'
+    | '/how-to-do-competitor-analysis-for-a-small-business-in-india'
     | '/how-to-get-funding-for-a-small-business-in-india'
     | '/how-to-know-if-your-business-has-product-market-fit-in-india'
     | '/how-to-raise-funds-for-a-startup-in-india'
     | '/how-to-start-a-business-without-investors-in-india'
     | '/how-to-talk-to-customers-before-starting-a-business-in-india'
+    | '/how-to-test-demand-with-facebook-and-google-ads-in-india'
     | '/how-to-validate-a-business-idea-in-india'
+    | '/how-to-validate-a-food-business-idea-in-india'
+    | '/how-to-validate-an-online-selling-business-idea-in-india'
+    | '/how-to-write-a-business-plan-for-a-bank-loan-in-india'
     | '/local-business-ideas-india'
     | '/market-research'
     | '/online-business-ideas-india'
@@ -1137,6 +1240,7 @@ export interface FileRouteTypes {
     | '/sitemap-pages.xml'
     | '/startup-cash-flow-india'
     | '/startup-costs-india'
+    | '/startup-funding-questions-for-first-time-founders-in-india'
     | '/startup-idea-comparison'
     | '/startup-idea-validation'
     | '/startup-launch-plan-india'
@@ -1188,6 +1292,7 @@ export interface RootRouteChildren {
   BusinessIdeaToolkitRoute: typeof BusinessIdeaToolkitRoute
   BusinessIdeasIndiaRoute: typeof BusinessIdeasIndiaRoute
   BusinessModelsIndiaRoute: typeof BusinessModelsIndiaRoute
+  BusinessNumbersEverySmallBusinessInIndiaShouldTrackRoute: typeof BusinessNumbersEverySmallBusinessInIndiaShouldTrackRoute
   BusinessPricingIndiaRoute: typeof BusinessPricingIndiaRoute
   CaseStudiesRoute: typeof CaseStudiesRoute
   CoachingBatchBusinessIdeaIndiaRoute: typeof CoachingBatchBusinessIdeaIndiaRoute
@@ -1201,17 +1306,23 @@ export interface RootRouteChildren {
   FounderDecisionJournalRoute: typeof FounderDecisionJournalRoute
   FoundersRoute: typeof FoundersRoute
   FrameworksComparisonRoute: typeof FrameworksComparisonRoute
+  FreeGovernmentResourcesForStartingABusinessInIndiaRoute: typeof FreeGovernmentResourcesForStartingABusinessInIndiaRoute
   GdprRoute: typeof GdprRoute
   HowMuchMoneyIsNeededToStartABusinessInIndiaRoute: typeof HowMuchMoneyIsNeededToStartABusinessInIndiaRoute
   HowToBuildAnMvpWithLowInvestmentInIndiaRoute: typeof HowToBuildAnMvpWithLowInvestmentInIndiaRoute
   HowToCalculateTamSamSomForABusinessInIndiaRoute: typeof HowToCalculateTamSamSomForABusinessInIndiaRoute
   HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute: typeof HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute
+  HowToDoCompetitorAnalysisForASmallBusinessInIndiaRoute: typeof HowToDoCompetitorAnalysisForASmallBusinessInIndiaRoute
   HowToGetFundingForASmallBusinessInIndiaRoute: typeof HowToGetFundingForASmallBusinessInIndiaRoute
   HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute: typeof HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute
   HowToRaiseFundsForAStartupInIndiaRoute: typeof HowToRaiseFundsForAStartupInIndiaRoute
   HowToStartABusinessWithoutInvestorsInIndiaRoute: typeof HowToStartABusinessWithoutInvestorsInIndiaRoute
   HowToTalkToCustomersBeforeStartingABusinessInIndiaRoute: typeof HowToTalkToCustomersBeforeStartingABusinessInIndiaRoute
+  HowToTestDemandWithFacebookAndGoogleAdsInIndiaRoute: typeof HowToTestDemandWithFacebookAndGoogleAdsInIndiaRoute
   HowToValidateABusinessIdeaInIndiaRoute: typeof HowToValidateABusinessIdeaInIndiaRoute
+  HowToValidateAFoodBusinessIdeaInIndiaRoute: typeof HowToValidateAFoodBusinessIdeaInIndiaRoute
+  HowToValidateAnOnlineSellingBusinessIdeaInIndiaRoute: typeof HowToValidateAnOnlineSellingBusinessIdeaInIndiaRoute
+  HowToWriteABusinessPlanForABankLoanInIndiaRoute: typeof HowToWriteABusinessPlanForABankLoanInIndiaRoute
   LocalBusinessIdeasIndiaRoute: typeof LocalBusinessIdeasIndiaRoute
   MarketResearchRoute: typeof MarketResearchRoute
   OnlineBusinessIdeasIndiaRoute: typeof OnlineBusinessIdeasIndiaRoute
@@ -1234,6 +1345,7 @@ export interface RootRouteChildren {
   SitemapPagesDotxmlRoute: typeof SitemapPagesDotxmlRoute
   StartupCashFlowIndiaRoute: typeof StartupCashFlowIndiaRoute
   StartupCostsIndiaRoute: typeof StartupCostsIndiaRoute
+  StartupFundingQuestionsForFirstTimeFoundersInIndiaRoute: typeof StartupFundingQuestionsForFirstTimeFoundersInIndiaRoute
   StartupIdeaComparisonRoute: typeof StartupIdeaComparisonRoute
   StartupIdeaValidationRoute: typeof StartupIdeaValidationRoute
   StartupLaunchPlanIndiaRoute: typeof StartupLaunchPlanIndiaRoute
@@ -1360,6 +1472,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BusinessModelsIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/business-numbers-every-small-business-in-india-should-track': {
+      id: '/business-numbers-every-small-business-in-india-should-track'
+      path: '/business-numbers-every-small-business-in-india-should-track'
+      fullPath: '/business-numbers-every-small-business-in-india-should-track'
+      preLoaderRoute: typeof BusinessNumbersEverySmallBusinessInIndiaShouldTrackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/business-pricing-india': {
       id: '/business-pricing-india'
       path: '/business-pricing-india'
@@ -1451,6 +1570,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FrameworksComparisonRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/free-government-resources-for-starting-a-business-in-india': {
+      id: '/free-government-resources-for-starting-a-business-in-india'
+      path: '/free-government-resources-for-starting-a-business-in-india'
+      fullPath: '/free-government-resources-for-starting-a-business-in-india'
+      preLoaderRoute: typeof FreeGovernmentResourcesForStartingABusinessInIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/gdpr': {
       id: '/gdpr'
       path: '/gdpr'
@@ -1484,6 +1610,13 @@ declare module '@tanstack/react-router' {
       path: '/how-to-check-if-your-business-idea-is-good-in-india'
       fullPath: '/how-to-check-if-your-business-idea-is-good-in-india'
       preLoaderRoute: typeof HowToCheckIfYourBusinessIdeaIsGoodInIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-to-do-competitor-analysis-for-a-small-business-in-india': {
+      id: '/how-to-do-competitor-analysis-for-a-small-business-in-india'
+      path: '/how-to-do-competitor-analysis-for-a-small-business-in-india'
+      fullPath: '/how-to-do-competitor-analysis-for-a-small-business-in-india'
+      preLoaderRoute: typeof HowToDoCompetitorAnalysisForASmallBusinessInIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/how-to-get-funding-for-a-small-business-in-india': {
@@ -1521,11 +1654,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HowToTalkToCustomersBeforeStartingABusinessInIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/how-to-test-demand-with-facebook-and-google-ads-in-india': {
+      id: '/how-to-test-demand-with-facebook-and-google-ads-in-india'
+      path: '/how-to-test-demand-with-facebook-and-google-ads-in-india'
+      fullPath: '/how-to-test-demand-with-facebook-and-google-ads-in-india'
+      preLoaderRoute: typeof HowToTestDemandWithFacebookAndGoogleAdsInIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/how-to-validate-a-business-idea-in-india': {
       id: '/how-to-validate-a-business-idea-in-india'
       path: '/how-to-validate-a-business-idea-in-india'
       fullPath: '/how-to-validate-a-business-idea-in-india'
       preLoaderRoute: typeof HowToValidateABusinessIdeaInIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-to-validate-a-food-business-idea-in-india': {
+      id: '/how-to-validate-a-food-business-idea-in-india'
+      path: '/how-to-validate-a-food-business-idea-in-india'
+      fullPath: '/how-to-validate-a-food-business-idea-in-india'
+      preLoaderRoute: typeof HowToValidateAFoodBusinessIdeaInIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-to-validate-an-online-selling-business-idea-in-india': {
+      id: '/how-to-validate-an-online-selling-business-idea-in-india'
+      path: '/how-to-validate-an-online-selling-business-idea-in-india'
+      fullPath: '/how-to-validate-an-online-selling-business-idea-in-india'
+      preLoaderRoute: typeof HowToValidateAnOnlineSellingBusinessIdeaInIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-to-write-a-business-plan-for-a-bank-loan-in-india': {
+      id: '/how-to-write-a-business-plan-for-a-bank-loan-in-india'
+      path: '/how-to-write-a-business-plan-for-a-bank-loan-in-india'
+      fullPath: '/how-to-write-a-business-plan-for-a-bank-loan-in-india'
+      preLoaderRoute: typeof HowToWriteABusinessPlanForABankLoanInIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/local-business-ideas-india': {
@@ -1680,6 +1841,13 @@ declare module '@tanstack/react-router' {
       path: '/startup-costs-india'
       fullPath: '/startup-costs-india'
       preLoaderRoute: typeof StartupCostsIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/startup-funding-questions-for-first-time-founders-in-india': {
+      id: '/startup-funding-questions-for-first-time-founders-in-india'
+      path: '/startup-funding-questions-for-first-time-founders-in-india'
+      fullPath: '/startup-funding-questions-for-first-time-founders-in-india'
+      preLoaderRoute: typeof StartupFundingQuestionsForFirstTimeFoundersInIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/startup-idea-comparison': {
@@ -1980,6 +2148,8 @@ const rootRouteChildren: RootRouteChildren = {
   BusinessIdeaToolkitRoute: BusinessIdeaToolkitRoute,
   BusinessIdeasIndiaRoute: BusinessIdeasIndiaRoute,
   BusinessModelsIndiaRoute: BusinessModelsIndiaRoute,
+  BusinessNumbersEverySmallBusinessInIndiaShouldTrackRoute:
+    BusinessNumbersEverySmallBusinessInIndiaShouldTrackRoute,
   BusinessPricingIndiaRoute: BusinessPricingIndiaRoute,
   CaseStudiesRoute: CaseStudiesRoute,
   CoachingBatchBusinessIdeaIndiaRoute: CoachingBatchBusinessIdeaIndiaRoute,
@@ -1994,6 +2164,8 @@ const rootRouteChildren: RootRouteChildren = {
   FounderDecisionJournalRoute: FounderDecisionJournalRoute,
   FoundersRoute: FoundersRoute,
   FrameworksComparisonRoute: FrameworksComparisonRoute,
+  FreeGovernmentResourcesForStartingABusinessInIndiaRoute:
+    FreeGovernmentResourcesForStartingABusinessInIndiaRoute,
   GdprRoute: GdprRoute,
   HowMuchMoneyIsNeededToStartABusinessInIndiaRoute:
     HowMuchMoneyIsNeededToStartABusinessInIndiaRoute,
@@ -2003,6 +2175,8 @@ const rootRouteChildren: RootRouteChildren = {
     HowToCalculateTamSamSomForABusinessInIndiaRoute,
   HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute:
     HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute,
+  HowToDoCompetitorAnalysisForASmallBusinessInIndiaRoute:
+    HowToDoCompetitorAnalysisForASmallBusinessInIndiaRoute,
   HowToGetFundingForASmallBusinessInIndiaRoute:
     HowToGetFundingForASmallBusinessInIndiaRoute,
   HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute:
@@ -2013,8 +2187,16 @@ const rootRouteChildren: RootRouteChildren = {
     HowToStartABusinessWithoutInvestorsInIndiaRoute,
   HowToTalkToCustomersBeforeStartingABusinessInIndiaRoute:
     HowToTalkToCustomersBeforeStartingABusinessInIndiaRoute,
+  HowToTestDemandWithFacebookAndGoogleAdsInIndiaRoute:
+    HowToTestDemandWithFacebookAndGoogleAdsInIndiaRoute,
   HowToValidateABusinessIdeaInIndiaRoute:
     HowToValidateABusinessIdeaInIndiaRoute,
+  HowToValidateAFoodBusinessIdeaInIndiaRoute:
+    HowToValidateAFoodBusinessIdeaInIndiaRoute,
+  HowToValidateAnOnlineSellingBusinessIdeaInIndiaRoute:
+    HowToValidateAnOnlineSellingBusinessIdeaInIndiaRoute,
+  HowToWriteABusinessPlanForABankLoanInIndiaRoute:
+    HowToWriteABusinessPlanForABankLoanInIndiaRoute,
   LocalBusinessIdeasIndiaRoute: LocalBusinessIdeasIndiaRoute,
   MarketResearchRoute: MarketResearchRoute,
   OnlineBusinessIdeasIndiaRoute: OnlineBusinessIdeasIndiaRoute,
@@ -2037,6 +2219,8 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapPagesDotxmlRoute: SitemapPagesDotxmlRoute,
   StartupCashFlowIndiaRoute: StartupCashFlowIndiaRoute,
   StartupCostsIndiaRoute: StartupCostsIndiaRoute,
+  StartupFundingQuestionsForFirstTimeFoundersInIndiaRoute:
+    StartupFundingQuestionsForFirstTimeFoundersInIndiaRoute,
   StartupIdeaComparisonRoute: StartupIdeaComparisonRoute,
   StartupIdeaValidationRoute: StartupIdeaValidationRoute,
   StartupLaunchPlanIndiaRoute: StartupLaunchPlanIndiaRoute,
