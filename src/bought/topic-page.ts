@@ -53,6 +53,8 @@ export type TopicPage = {
   seo: { title: string; description: string };
   hero: { eyebrow: string; h1: string; highlight?: string; intro: string; sub?: string; updated: string; primary: Link; secondary?: Link; image: string; imageAlt: string };
   sections: Section[];
+  /** Category slugs that drive the "explore" bands placed between sections. */
+  explore?: { categories?: string[]; guideCategory?: string };
 };
 
 const STYLE = (() => {
@@ -229,12 +231,47 @@ async function resolve(sections: Section[]): Promise<Section[]> {
   }));
 }
 
+const RAIL = "flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 -mx-1 px-1";
+const RAIL_CARD = "snap-start shrink-0 w-[78%] sm:w-[46%] lg:w-[31%] rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden hover:border-primary hover:shadow-md transition-all";
+const DEFAULT_CATS = ["home-based-business-ideas", "food-business-ideas", "online-business-ideas", "women-friendly-business-ideas", "village-and-small-town-business-ideas", "freelance-business-ideas", "reselling-business-ideas", "side-hustle-business-ideas"];
+const band = (inner: string) => `<section class="py-8 px-4 border-y border-border/40 bg-white"><div class="container mx-auto max-w-6xl">${inner}</div></section>`;
+const bandHead = (t: string, link?: Link) => `<div class="flex items-end justify-between gap-3 mb-4"><h2 class="text-lg md:text-xl font-bold">${esc(t)}</h2>${link ? `<a class="text-sm font-medium text-primary hover:underline whitespace-nowrap" href="${esc(link.href)}">${esc(link.label)} ${ICON.arrow}</a>` : ""}</div>`;
+const pill = (l: Link) => `<a class="inline-flex items-center rounded-full border border-border bg-white px-3.5 py-1.5 text-sm text-foreground hover:border-primary hover:text-primary transition-colors" href="${esc(l.href)}">${esc(l.label)}</a>`;
+
+/** Bands of our own pages placed between seller sections: categories and models, guides, articles and learning pages. */
+async function exploreBands(p: TopicPage): Promise<string[]> {
+  const cats = p.explore?.categories ?? DEFAULT_CATS;
+  const [{ TAXONOMY }, { STARTUP_GUIDES }, { guideImage }, blog] = await Promise.all([
+    import("@/data/taxonomy"),
+    import("@/lib/guides-data"),
+    import("@/config/guide-imagery"),
+    import("@/lib/blog.server").then((m) => m.fetchPosts(1, 6)).catch(() => ({ posts: [] as { slug: string; title: string; excerpt: string; image: string | null; imageAlt: string | null }[] })),
+  ]);
+  const catLinks: Link[] = (TAXONOMY as { slug: string; short?: string; name?: string }[]).filter((c) => cats.includes(c.slug)).map((c) => ({ label: `${c.short ?? c.name} business ideas`, href: `/category/${c.slug}` }));
+  const ideas = band(`${bandHead("Find a business idea that fits you", { label: "Browse all categories", href: "/browse" })}<div class="flex flex-wrap gap-2">${[...catLinks, { label: "Business models compared", href: "/business-models-india" }, { label: "Idea lists", href: "/lists" }, { label: "Is my business idea good?", href: "/how-to-check-if-your-business-idea-is-good-in-india" }, { label: "Validate a business idea", href: "/how-to-validate-a-business-idea-in-india" }].map(pill).join("")}</div>`);
+  const first = STARTUP_GUIDES.filter((g) => g.category === p.explore?.guideCategory);
+  const guides = [...first, ...STARTUP_GUIDES.filter((g) => !first.includes(g) && !/saas|b2b/i.test(g.slug))].slice(0, 6);
+  const guideRail = band(`${bandHead("Business guides for Indian founders", { label: "All guides", href: "/startup-guides" })}<div class="${RAIL}">${guides.map((g) => { const img = guideImage(g.slug); return `<a class="${RAIL_CARD}" href="/startup-guides/${esc(g.slug)}">${img ? `<img src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width}" height="${img.height}" loading="lazy" class="w-full aspect-[16/9] object-cover">` : ""}<div class="p-4"><p class="text-xs text-primary font-medium mb-1">${esc(g.category)} · ${esc(g.readTime)}</p><h3 class="font-semibold text-[15px] leading-snug">${esc(g.title)}</h3></div></a>`; }).join("")}</div>`);
+  const posts = (blog as { posts: { slug: string; title: string; excerpt: string; image: string | null; imageAlt: string | null }[] }).posts.slice(0, 6);
+  const learn: Link[] = [{ label: "Founder glossary", href: "/founder-glossary" }, { label: "Indian startup failures", href: "/failed-startups/india" }, { label: "Case studies", href: "/case-studies" }, { label: "Calculators", href: "/calculator" }, { label: "Templates", href: "/templates" }, { label: "All startup topics", href: "/topics" }];
+  const blogRail = band(`${posts.length ? `${bandHead("From the founder journal", { label: "All articles", href: "/blog" })}<div class="${RAIL} mb-5">${posts.map((b) => `<a class="${RAIL_CARD}" href="/blog/${esc(b.slug)}">${b.image ? `<img src="${esc(b.image)}" alt="${esc(b.imageAlt ?? b.title)}" loading="lazy" class="w-full aspect-[16/9] object-cover">` : ""}<div class="p-4"><h3 class="font-semibold text-[15px] leading-snug mb-1">${esc(b.title)}</h3><p class="text-xs text-muted-foreground line-clamp-2">${esc(b.excerpt)}</p></div></a>`).join("")}</div>` : ""}<div class="flex flex-wrap gap-2">${learn.map(pill).join("")}</div>`);
+  return [ideas, guideRail, blogRail];
+}
+
+function withBands(sections: string[], bands: string[]): string {
+  const n = sections.length;
+  if (n < 4) return sections.join("") + bands.join("");
+  const at = [1, Math.floor(n / 2), Math.max(Math.floor(n / 2) + 1, n - 2)];
+  return sections.map((html, i) => html + at.map((pos, k) => (pos === i ? bands[k] : "")).join("")).join("");
+}
+
 export async function renderTopicPage(input: TopicPage): Promise<Response> {
-  const p: TopicPage = { ...input, sections: await resolve(input.sections) };
+  const [resolved, bands] = await Promise.all([resolve(input.sections), exploreBands(input).catch(() => [] as string[])]);
+  const p: TopicPage = { ...input, sections: resolved };
   faqId = 0;
   used = new Set();
   const url = canonicalUrl(`/${p.slug}`);
-  const main = `<main class="flex-1">${crumbs(p)}${hero(p)}${p.sections.map(section).join("")}</main>`;
+  const main = `<main class="flex-1">${crumbs(p)}${hero(p)}${withBands(p.sections.map(section), bands)}</main>`;
   const html = `<!DOCTYPE html><html lang="en-IN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="robots" content="noindex, nofollow, noarchive, noimageindex"><title>${esc(p.seo.title)}</title><meta name="description" content="${esc(p.seo.description)}"><link rel="canonical" href="${esc(url)}"><meta property="og:type" content="article"><meta property="og:title" content="${esc(p.seo.title)}"><meta property="og:description" content="${esc(p.seo.description)}"><meta property="og:url" content="${esc(url)}"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="BusinessIdea.io"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">${schema(p)}</script><style>${STYLE}</style><link rel="stylesheet" href="/bought/topics/styles/index-BpDyUYDe.css"><style id="bbi-shared-header-styles">${sharedHeaderStyles}</style></head><body><div id="root"><div class="min-h-screen flex flex-col">${menuPanels.header}${main}${menuPanels.footer}</div></div>${menuBindings}${SCRIPT}</body></html>`;
   return new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, max-age=300" } });
 }
