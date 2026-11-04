@@ -9,7 +9,7 @@ import { moneyToStart } from "./topic-pages-rw6";
 import { bootstrapping } from "./topic-pages-rw7";
 import { pmf } from "./topic-pages-rw8";
 import { interviews } from "./topic-pages-rw9";
-import { mvp } from "./topic-pages-c";
+import { mvp } from "./topic-pages-rw10";
 import { isIdeaGood, raiseFunds } from "./topic-pages-d";
 import { businessNumbers, businessPlan, competitors, fundingQuestions, adsTest, govResources, validateFood, validateOnline } from "./topic-pages-e";
 
