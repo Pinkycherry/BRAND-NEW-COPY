@@ -39,6 +39,7 @@ import { Route as GdprRouteImport } from './routes/gdpr'
 import { Route as HowMuchMoneyIsNeededToStartABusinessInIndiaRouteImport } from './routes/how-much-money-is-needed-to-start-a-business-in-india'
 import { Route as HowToBuildAnMvpWithLowInvestmentInIndiaRouteImport } from './routes/how-to-build-an-mvp-with-low-investment-in-india'
 import { Route as HowToCalculateTamSamSomForABusinessInIndiaRouteImport } from './routes/how-to-calculate-tam-sam-som-for-a-business-in-india'
+import { Route as HowToCheckIfYourBusinessIdeaIsGoodInIndiaRouteImport } from './routes/how-to-check-if-your-business-idea-is-good-in-india'
 import { Route as HowToGetFundingForASmallBusinessInIndiaRouteImport } from './routes/how-to-get-funding-for-a-small-business-in-india'
 import { Route as HowToKnowIfYourBusinessHasProductMarketFitInIndiaRouteImport } from './routes/how-to-know-if-your-business-has-product-market-fit-in-india'
 import { Route as HowToStartABusinessWithoutInvestorsInIndiaRouteImport } from './routes/how-to-start-a-business-without-investors-in-india'
@@ -256,6 +257,12 @@ const HowToCalculateTamSamSomForABusinessInIndiaRoute =
   HowToCalculateTamSamSomForABusinessInIndiaRouteImport.update({
     id: '/how-to-calculate-tam-sam-som-for-a-business-in-india',
     path: '/how-to-calculate-tam-sam-som-for-a-business-in-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute =
+  HowToCheckIfYourBusinessIdeaIsGoodInIndiaRouteImport.update({
+    id: '/how-to-check-if-your-business-idea-is-good-in-india',
+    path: '/how-to-check-if-your-business-idea-is-good-in-india',
     getParentRoute: () => rootRouteImport,
   } as any)
 const HowToGetFundingForASmallBusinessInIndiaRoute =
@@ -613,6 +620,7 @@ export interface FileRoutesByFullPath {
   '/how-much-money-is-needed-to-start-a-business-in-india': typeof HowMuchMoneyIsNeededToStartABusinessInIndiaRoute
   '/how-to-build-an-mvp-with-low-investment-in-india': typeof HowToBuildAnMvpWithLowInvestmentInIndiaRoute
   '/how-to-calculate-tam-sam-som-for-a-business-in-india': typeof HowToCalculateTamSamSomForABusinessInIndiaRoute
+  '/how-to-check-if-your-business-idea-is-good-in-india': typeof HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute
   '/how-to-get-funding-for-a-small-business-in-india': typeof HowToGetFundingForASmallBusinessInIndiaRoute
   '/how-to-know-if-your-business-has-product-market-fit-in-india': typeof HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute
   '/how-to-start-a-business-without-investors-in-india': typeof HowToStartABusinessWithoutInvestorsInIndiaRoute
@@ -707,6 +715,7 @@ export interface FileRoutesByTo {
   '/how-much-money-is-needed-to-start-a-business-in-india': typeof HowMuchMoneyIsNeededToStartABusinessInIndiaRoute
   '/how-to-build-an-mvp-with-low-investment-in-india': typeof HowToBuildAnMvpWithLowInvestmentInIndiaRoute
   '/how-to-calculate-tam-sam-som-for-a-business-in-india': typeof HowToCalculateTamSamSomForABusinessInIndiaRoute
+  '/how-to-check-if-your-business-idea-is-good-in-india': typeof HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute
   '/how-to-get-funding-for-a-small-business-in-india': typeof HowToGetFundingForASmallBusinessInIndiaRoute
   '/how-to-know-if-your-business-has-product-market-fit-in-india': typeof HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute
   '/how-to-start-a-business-without-investors-in-india': typeof HowToStartABusinessWithoutInvestorsInIndiaRoute
@@ -801,6 +810,7 @@ export interface FileRoutesById {
   '/how-much-money-is-needed-to-start-a-business-in-india': typeof HowMuchMoneyIsNeededToStartABusinessInIndiaRoute
   '/how-to-build-an-mvp-with-low-investment-in-india': typeof HowToBuildAnMvpWithLowInvestmentInIndiaRoute
   '/how-to-calculate-tam-sam-som-for-a-business-in-india': typeof HowToCalculateTamSamSomForABusinessInIndiaRoute
+  '/how-to-check-if-your-business-idea-is-good-in-india': typeof HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute
   '/how-to-get-funding-for-a-small-business-in-india': typeof HowToGetFundingForASmallBusinessInIndiaRoute
   '/how-to-know-if-your-business-has-product-market-fit-in-india': typeof HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute
   '/how-to-start-a-business-without-investors-in-india': typeof HowToStartABusinessWithoutInvestorsInIndiaRoute
@@ -897,6 +907,7 @@ export interface FileRouteTypes {
     | '/how-much-money-is-needed-to-start-a-business-in-india'
     | '/how-to-build-an-mvp-with-low-investment-in-india'
     | '/how-to-calculate-tam-sam-som-for-a-business-in-india'
+    | '/how-to-check-if-your-business-idea-is-good-in-india'
     | '/how-to-get-funding-for-a-small-business-in-india'
     | '/how-to-know-if-your-business-has-product-market-fit-in-india'
     | '/how-to-start-a-business-without-investors-in-india'
@@ -991,6 +1002,7 @@ export interface FileRouteTypes {
     | '/how-much-money-is-needed-to-start-a-business-in-india'
     | '/how-to-build-an-mvp-with-low-investment-in-india'
     | '/how-to-calculate-tam-sam-som-for-a-business-in-india'
+    | '/how-to-check-if-your-business-idea-is-good-in-india'
     | '/how-to-get-funding-for-a-small-business-in-india'
     | '/how-to-know-if-your-business-has-product-market-fit-in-india'
     | '/how-to-start-a-business-without-investors-in-india'
@@ -1084,6 +1096,7 @@ export interface FileRouteTypes {
     | '/how-much-money-is-needed-to-start-a-business-in-india'
     | '/how-to-build-an-mvp-with-low-investment-in-india'
     | '/how-to-calculate-tam-sam-som-for-a-business-in-india'
+    | '/how-to-check-if-your-business-idea-is-good-in-india'
     | '/how-to-get-funding-for-a-small-business-in-india'
     | '/how-to-know-if-your-business-has-product-market-fit-in-india'
     | '/how-to-start-a-business-without-investors-in-india'
@@ -1179,6 +1192,7 @@ export interface RootRouteChildren {
   HowMuchMoneyIsNeededToStartABusinessInIndiaRoute: typeof HowMuchMoneyIsNeededToStartABusinessInIndiaRoute
   HowToBuildAnMvpWithLowInvestmentInIndiaRoute: typeof HowToBuildAnMvpWithLowInvestmentInIndiaRoute
   HowToCalculateTamSamSomForABusinessInIndiaRoute: typeof HowToCalculateTamSamSomForABusinessInIndiaRoute
+  HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute: typeof HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute
   HowToGetFundingForASmallBusinessInIndiaRoute: typeof HowToGetFundingForASmallBusinessInIndiaRoute
   HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute: typeof HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute
   HowToStartABusinessWithoutInvestorsInIndiaRoute: typeof HowToStartABusinessWithoutInvestorsInIndiaRoute
@@ -1449,6 +1463,13 @@ declare module '@tanstack/react-router' {
       path: '/how-to-calculate-tam-sam-som-for-a-business-in-india'
       fullPath: '/how-to-calculate-tam-sam-som-for-a-business-in-india'
       preLoaderRoute: typeof HowToCalculateTamSamSomForABusinessInIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-to-check-if-your-business-idea-is-good-in-india': {
+      id: '/how-to-check-if-your-business-idea-is-good-in-india'
+      path: '/how-to-check-if-your-business-idea-is-good-in-india'
+      fullPath: '/how-to-check-if-your-business-idea-is-good-in-india'
+      preLoaderRoute: typeof HowToCheckIfYourBusinessIdeaIsGoodInIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/how-to-get-funding-for-a-small-business-in-india': {
@@ -1959,6 +1980,8 @@ const rootRouteChildren: RootRouteChildren = {
     HowToBuildAnMvpWithLowInvestmentInIndiaRoute,
   HowToCalculateTamSamSomForABusinessInIndiaRoute:
     HowToCalculateTamSamSomForABusinessInIndiaRoute,
+  HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute:
+    HowToCheckIfYourBusinessIdeaIsGoodInIndiaRoute,
   HowToGetFundingForASmallBusinessInIndiaRoute:
     HowToGetFundingForASmallBusinessInIndiaRoute,
   HowToKnowIfYourBusinessHasProductMarketFitInIndiaRoute:
