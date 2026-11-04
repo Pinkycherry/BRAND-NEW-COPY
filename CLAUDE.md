@@ -129,10 +129,22 @@ Updated 5 Nov 2026 (replaces the earlier sourcing rules, which are withdrawn).
    - Much stronger, longer backend prompts for every Validate button.
 5. **Content stays rich without numbers:** steps, processes, documents, eligibility, examples, checklists, a 7-day plan, Indian situations, and inline links to our pages.
 
+## Founder rules — Validate inputs and prompts (5 Nov 2026)
+
+- **Status:** all 20 live topic pages are approved and finalized by the owner (layout and content). Remaining work on them: prompt edits and page-specific user inputs.
+- **Tap-to-select inputs on every topic page, no typing.** Common inputs: language (first), state/city or town type (metro, tier 2, tier 3, village), online / offline / both, budget band (for example under ₹10,000 · ₹10,000–50,000 · ₹50,000–1 lakh · above 1 lakh), social media following (none, small, large), plus page-specific add-ons (e.g. funding page: loan vs investor, stage; idea-check page: sector, time available). Each page gets its own input set that matches its intent.
+- **Existing tick boxes must feed the prompt.** Today they change nothing; every selection must be sent to the Validate prompt.
+- **The LLM must ask follow-up questions** after the redirect, in the chosen language, before answering.
+- **Output tone:** everyday spoken local language (e.g. Telugu as people in Vijayawada speak it), simple and practical, never textbook or formal translation. The backend prompt is our strength; say this explicitly in it.
+- **Prompt length:** no extra or padded words, now and in future. Grok fails on long prompts: when Grok is chosen, send a shorter version of the same prompt. ChatGPT, Claude and Perplexity get the full version. Still one template (src/lib/topic-validate-prompt.ts) with a short and a full variant.
+- **Every page a different structure.** No two pages may look templated, for Google AdSense approval. Vary section types, order of our own additions, visuals and interactive pieces per page while keeping the seller section order.
+- **Visuals:** add infographics and generated images (16:9) and HTML/SVG diagrams where they help.
+- **Tokens:** low until Monday. Read less, write more; no repeated reads.
+
 ## Rewrite progress (resume point)
 
 - All 20 live topic pages are rewritten (5 Nov 2026), one data file each, src/data/topic-pages-rw1.ts to rw20.ts, in tracker order. All follow the no-numbers rule with the Validate button at top, end and inline. The old thin files topic-pages-b/c/d/e.ts are deleted. Every page is still Quality check Failed / Reviewed by Owner until the owner approves its rewrite.
-- Next: wait for the owner's review of pages 1–20 and apply any fix to every page. No new pages until the owner approves. Pending (not to build now): Validate area redesign; stronger Validate prompts.
+- Next: build the tap-to-select Validate inputs and the short/full prompt (rules above), page by page, then new pages from the roadmap. Pending (not to build now): Validate area redesign; stronger Validate prompts.
 - Pattern: keep the seller's section order (see the comment above each page). Question pages: takeaways, step by step (rich), benchmarks (rich), mistakes (rich), real situations (cards), optional quiz, dbfaq, expert tips (rich), sources, optional compare, related chips, CTA, "What to do this week" (rich), keep reading, deeper chips, TOOLS, CALCS, EXPLORE, optional rules. Section anchors: quiz = #check, headings starting "Compare" = #compare, containing "stages" = #stages, "quick reference" = #numbers, rich = slug of heading (60 chars max).
 - Renderer (src/bought/topic-page.ts): `rich` long-form sections, `[Validate: ...]` inline lines, Validate picker blocks, Supabase FAQ (`dbfaq`) and idea cards (`dbideas`), and bands between sections linking categories, business models, validation pages, guides (16:9 images), blog articles, glossary, failures, case studies, calculators and templates. `explore.guideCategory` must be one of: Bootstrapping, Growth & PMF, Launch & Ops, Market Sizing, Validation.
 - Logs: update both logs once at the end of the batch.
