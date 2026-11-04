@@ -68,7 +68,7 @@ Saved 4 Nov 2026 at the founder's request. When the founder says "recall", re-re
 Every page built before this date failed the owner's review: low-value, thin, generic content with an India tag added. No new pages until every existing page is rewritten to these rules, one at a time, each pushed with a `Live: ` line.
 
 - **Tracker columns**: India Topic Pages Review has Quality check, Reviewed by and Reason for every URL. A page is "Passed" only after the owner approves its rewrite. Each page's pending numbers are listed there too.
-- **Numbers**: wherever a real figure is needed (costs, margins, market size, fees, timelines, loan limits, conversion rates), write a visible marker `[Data pending: what figure, which source, 2026–27]`. Never invent a number and never drop the point. Only figures already verified from an official source may be stated.
+- **Numbers**: wherever a real figure is needed (costs, margins, market size, fees, timelines, loan limits, conversion rates) and is not yet verified, put a `[Data pending: what figure, which source, 2026–27]` marker in the data file. Markers are INTERNAL ONLY (owner rule, 5 Nov 2026): the renderer strips them from the public page (a table cell left empty shows "Your local figure" as a fill-in prompt), and every pending figure is listed in India Topic Pages Review for research. Never show placeholders publicly, never invent a number. Only figures verified from an official source are stated on the page.
 - **Every seller section** filled with full, substantial writing, not two or three lines.
 - **Real Indian depth**: step-by-step processes on actual portals and offices (Udyam, GST, MUDRA, Startup India, bank branch loan steps).
 - **Worked rupee examples** for a real Indian reader, with figures marked pending.
@@ -96,7 +96,7 @@ Use the seller's layout and composition exactly: same sections, order, component
 
 - India only: Indian buyers, rupees, GST, Udyam/MSME, MUDRA, UPI, Indian cities and towns, family and social realities, Indian rules.
 - Warm, emotional, interactive, speaking to the reader as "you"; questions, small checks, real situations; plain words for a first-time founder on a phone. Never write as if the site runs the business.
-- Original only, never scraped or reworded from the seller. Never invent a number, statistic, law or source; if a figure can't be verified, put the `[Data pending: ...]` marker in its place (see Quality rules).
+- Original only, never scraped or reworded from the seller. Never invent a number, statistic, law or source; if a figure can't be verified, keep it as an internal `[Data pending: ...]` marker (never shown publicly, see Quality rules).
 - Future-proof: past budgets and years may be referenced, but never anchor content to an old year.
 - No seller brand, no seller links, no `href="#"`, no visible counts.
 - Q&A pages: no new Q&A research. Use our FAQ page and the Supabase FAQ data inside the seller's question-page structure.
