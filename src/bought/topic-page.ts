@@ -74,7 +74,7 @@ let faqId = 0;
 const ANCHOR: Partial<Record<Section["type"], string>> = { steps: "steps", list: "mistakes", quiz: "check" };
 let used = new Set<string>();
 function anchorFor(s: Section): string {
-  const id = "heading" in s && /^compare/i.test(s.heading) ? "compare" : ANCHOR[s.type];
+  const id = "heading" in s && /^compare/i.test(s.heading) ? "compare" : "heading" in s && /stages/i.test(s.heading) ? "stages" : ANCHOR[s.type];
   if (!id || used.has(id)) return "";
   used.add(id);
   return ` id="${id}"`;
