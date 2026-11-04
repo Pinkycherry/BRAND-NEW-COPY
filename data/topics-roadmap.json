@@ -126,7 +126,11 @@
    "status": "live (awaiting founder review)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-write-a-business-plan-for-a-bank-loan-in-india",
    "contains": "AI business plan generator tool page with steps, sample output, FAQ.",
-   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources."
+   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/topics/fundraising",
@@ -150,7 +154,11 @@
    "status": "live (awaiting founder review)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-raise-funds-for-a-startup-in-india",
    "contains": "Topic hub: funding stages overview, topics by category, investor metrics, prepare-to-raise.",
-   "india_plan": "Done: Indian funding ladder table (savings, MUDRA, Seed Fund, angels, VCs), topic cards linking our pages, what lenders check, 7 preparation steps with MCA, DPIIT and Udyam links."
+   "india_plan": "Done: Indian funding ladder table (savings, MUDRA, Seed Fund, angels, VCs), topic cards linking our pages, what lenders check, 7 preparation steps with MCA, DPIIT and Udyam links.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/failed-startups",
@@ -197,7 +205,11 @@
    "status": "live (awaiting founder review)",
    "live_url": "https://bbinewcopy.vercel.app/business-numbers-every-small-business-in-india-should-track",
    "contains": "Topic hub: SaaS metrics quick reference and calculators.",
-   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources."
+   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/topics/validation-methods",
@@ -219,10 +231,149 @@
    "supabase_data_now": [],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
+   "status": "live (rewritten, awaiting owner review)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-validate-a-business-idea-in-india",
    "contains": "Topic hub: 5-step validation process, methods by category, methods compared table, CTA.",
-   "india_plan": "Done: UPI advances, society groups, weekend stalls; each step has a small check."
+   "india_plan": "Done: UPI advances, society groups, weekend stalls; each step has a small check.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content. Rewrite live, awaiting owner review; inline source links per number still to add.",
+   "pending_numbers": [
+    "...",
+    "typical price of a home-cooked school tiffin in Pune societies, local competitor survey, 2026–27",
+    "ingredient cost per veg tiffin in Pune, local market prices, 2026–27",
+    "cooking fuel cost per tiffin, LPG price for Pune and usage, 2026–27",
+    "cost per reusable box or disposable container, local wholesale, 2026–27",
+    "cost per drop for local delivery in Pune, delivery partner quotes, 2026–27",
+    "typical shop rent deposit in months for metro vs tier 2 markets, broker and RERA-registered listings survey, 2026–27",
+    "typical weekend stall fee at society and city flea markets in metro vs tier 2, organiser rate cards, 2026–27",
+    "typical cost per lead for small local businesses on Meta ads in India, Meta and agency benchmarks, 2026–27",
+    "stall fee plus first batch cost for a typical food or craft stall, organiser and wholesale quotes, 2026–27",
+    "minimum practical daily ad budget for a local test on Meta and Google in India, platform help pages, 2026–27",
+    "current FSSAI basic registration turnover limit and annual fee, FSSAI FoSCoS, 2026–27"
+   ],
+   "numbers": [
+    {
+     "claim": "GST registration threshold, goods",
+     "figure": "₹40 lakh turnover",
+     "source_url": "https://gstcouncil.gov.in/sites/default/files/2024-10/32nd_gst_press_information_bureau.pdf",
+     "publication_year": "2019 (32nd GST Council)",
+     "checked": "2026-11-05",
+     "status": "verified"
+    },
+    {
+     "claim": "GST registration threshold, services",
+     "figure": "₹20 lakh turnover",
+     "source_url": "https://gstcouncil.gov.in/sites/default/files/2024-10/32nd_gst_press_information_bureau.pdf",
+     "publication_year": "2019 (32nd GST Council)",
+     "checked": "2026-11-05",
+     "status": "verified"
+    },
+    {
+     "claim": "No merchant charge on UPI payments",
+     "figure": "Up to ₹2,000 per payment",
+     "source_url": "https://www.businesstoday.in/latest/economy/story/upi-stays-free-finance-ministry-bars-charges-on-transactions-up-to-rs-2000-555475-2026-09-14",
+     "publication_year": "2026 (needs PIB source)",
+     "checked": "2026-11-05",
+     "status": "verified (.in media; government source still to add)"
+    },
+    {
+     "claim": "...",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "typical price of a home-cooked school tiffin in Pune societies, local competitor survey, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "ingredient cost per veg tiffin in Pune, local market prices, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "cooking fuel cost per tiffin, LPG price for Pune and usage, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "cost per reusable box or disposable container, local wholesale, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "cost per drop for local delivery in Pune, delivery partner quotes, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "typical shop rent deposit in months for metro vs tier 2 markets, broker and RERA-registered listings survey, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "typical weekend stall fee at society and city flea markets in metro vs tier 2, organiser rate cards, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "typical cost per lead for small local businesses on Meta ads in India, Meta and agency benchmarks, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "stall fee plus first batch cost for a typical food or craft stall, organiser and wholesale quotes, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "minimum practical daily ad budget for a local test on Meta and Google in India, platform help pages, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "current FSSAI basic registration turnover limit and annual fee, FSSAI FoSCoS, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    }
+   ]
   },
   {
    "seller_url": "https://ideaproof.io/is-my-business-idea-good",
@@ -245,7 +396,11 @@
    "status": "live (approved by founder)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-check-if-your-business-idea-is-good-in-india",
    "contains": "Long validator page: what it analyses, 7 factors, worth-it test, red flags, cost of a bad idea.",
-   "india_plan": "Done: six questions Indian buyers and families ask, a 6-point worth-it test, what a bad idea costs, red flags, rules, Udyam and FSSAI links."
+   "india_plan": "Done: six questions Indian buyers and families ask, a 6-point worth-it test, what a bad idea costs, red flags, rules, Udyam and FSSAI links.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/saas",
@@ -413,7 +568,11 @@
    "status": "live (awaiting founder review)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-validate-an-online-selling-business-idea-in-india",
    "contains": "Industry validator (ecommerce): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
-   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources."
+   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/marketplace",
@@ -553,7 +712,11 @@
    "status": "live (awaiting founder review)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-validate-a-food-business-idea-in-india",
    "contains": "Industry validator (foodtech): report preview, ideas, failures, overview, metrics, mistakes, competitors, FAQ.",
-   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources."
+   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/validate-idea/proptech",
@@ -985,7 +1148,11 @@
    "status": "live (awaiting founder review)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-do-competitor-analysis-for-a-small-business-in-india",
    "contains": "Competitor analysis tool page with SWOT, steps, FAQ.",
-   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources."
+   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/brand-strategy",
@@ -1339,7 +1506,11 @@
    "status": "live (awaiting founder review)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-test-demand-with-facebook-and-google-ads-in-india",
    "contains": "Guide: landing page test with Facebook vs Google ads.",
-   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources."
+   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/compare",
@@ -1714,10 +1885,44 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
+   "status": "live (rewritten, awaiting owner review)",
    "live_url": "https://bbinewcopy.vercel.app/common-mistakes-to-avoid-when-starting-a-business-in-india",
    "contains": "Guide: post-mortem lessons, prevention pyramid, 7 fatal mistakes, 14-day sprint, 10 red flags, FAQ.",
-   "india_plan": "Done: Indian traps (family praise, GST and marketplace fees, early rent) plus a tickable red-flag check."
+   "india_plan": "Done: Indian traps (family praise, GST and marketplace fees, early rent) plus a tickable red-flag check.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content. Rewrite live, awaiting owner review; inline source links per number still to add.",
+   "pending_numbers": [
+    "typical shop deposit in months and fit-out cost for a small shop in a metro and a tier 2 market, broker surveys, 2026–27",
+    "typical commission range charged by food delivery and e-commerce marketplaces to small sellers in India, platform rate cards, 2026–27",
+    "ingredient and packaging cost of a 1 kg cream cake for a home baker in Indore, local wholesale prices, 2026–27"
+   ],
+   "numbers": [
+    {
+     "claim": "typical shop deposit in months and fit-out cost for a small shop in a metro and a tier 2 market, broker surveys, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "typical commission range charged by food delivery and e-commerce marketplaces to small sellers in India, platform rate cards, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "ingredient and packaging cost of a 1 kg cream cake for a home baker in Indore, local wholesale prices, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    }
+   ]
   },
   {
    "seller_url": "https://ideaproof.io/failed-vs-successful-startups",
@@ -1917,7 +2122,11 @@
    "status": "live (awaiting founder review)",
    "live_url": "https://bbinewcopy.vercel.app/free-government-resources-for-starting-a-business-in-india",
    "contains": "Resources hub, 350+ tools and guides.",
-   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources."
+   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/changelog",
@@ -1999,7 +2208,11 @@
    "status": "live (awaiting founder review)",
    "live_url": "https://bbinewcopy.vercel.app/startup-funding-questions-for-first-time-founders-in-india",
    "contains": "Funding FAQ: sources compared, stages, 40+ questions.",
-   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources."
+   "india_plan": "Done: seller section order kept; Indian content, inline links to our pages and official portals, FAQ and idea cards from our Supabase data, author/reviewer line, sources.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/pricing",
@@ -2374,10 +2587,185 @@
    ],
    "needs_india_research": "Indian schemes, rules and sources for this topic; no invented figures",
    "priority": "high",
-   "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
+   "status": "live (rewritten, awaiting owner review)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-get-funding-for-a-small-business-in-india",
    "contains": "Q&A: 7 funding sources, step-by-step, investor metrics, mistakes, FAQ, sources.",
-   "india_plan": "Done: MUDRA, Stand-Up India, PMEGP, CGTMSE, Seed Fund, Udyam; which money fits which stage."
+   "india_plan": "Done: MUDRA, Stand-Up India, PMEGP, CGTMSE, Seed Fund, Udyam; which money fits which stage.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content. Rewrite live, awaiting owner review; inline source links per number still to add.",
+   "pending_numbers": [
+    "typical MUDRA processing time and interest rate range at public sector banks, bank websites and RBI data, 2026–27",
+    "typical effective annual interest of informal moneylender and unregulated app loans versus bank MSME loans, RBI working group reports, 2026–27",
+    "local carpenter and signboard quote, small-town Bihar, 2026–27",
+    "repair toolkit and equipment cost, wholesale electronics market quote, 2026–27",
+    "starter spare-parts stock value for a small repair shop, distributor quote, 2026–27",
+    "shop rent and deposit in a Bihar district town market, local broker, 2026–27",
+    "own contribution share his bank expects, branch policy, 2026–27",
+    "EMI at the bank's MUDRA rate for this amount and tenure, bank EMI table, 2026–27"
+   ],
+   "numbers": [
+    {
+     "claim": "MUDRA Shishu limit",
+     "figure": "Up to ₹50,000",
+     "source_url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/oct/doc20241029426401.pdf",
+     "publication_year": "2024",
+     "checked": "2026-11-05",
+     "status": "verified"
+    },
+    {
+     "claim": "MUDRA Kishore limit",
+     "figure": "Up to ₹5 lakh",
+     "source_url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/oct/doc20241029426401.pdf",
+     "publication_year": "2024",
+     "checked": "2026-11-05",
+     "status": "verified"
+    },
+    {
+     "claim": "MUDRA Tarun limit",
+     "figure": "Up to ₹10 lakh",
+     "source_url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/oct/doc20241029426401.pdf",
+     "publication_year": "2024",
+     "checked": "2026-11-05",
+     "status": "verified"
+    },
+    {
+     "claim": "MUDRA Tarun Plus limit",
+     "figure": "Up to ₹20 lakh",
+     "source_url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/oct/doc20241029426401.pdf",
+     "publication_year": "2024",
+     "checked": "2026-11-05",
+     "status": "verified"
+    },
+    {
+     "claim": "Stand-Up India loan range",
+     "figure": "₹10 lakh to ₹1 crore",
+     "source_url": "https://www.standupmitra.in/",
+     "publication_year": "current",
+     "checked": "2026-11-05",
+     "status": "verified"
+    },
+    {
+     "claim": "Seed Fund proof-of-concept grant",
+     "figure": "Up to ₹20 lakh",
+     "source_url": "https://seedfund.startupindia.gov.in/",
+     "publication_year": "current",
+     "checked": "2026-11-05",
+     "status": "verified"
+    },
+    {
+     "claim": "Seed Fund market-entry support",
+     "figure": "Up to ₹50 lakh",
+     "source_url": "https://seedfund.startupindia.gov.in/",
+     "publication_year": "current",
+     "checked": "2026-11-05",
+     "status": "verified"
+    },
+    {
+     "claim": "PMEGP max project cost",
+     "figure": "₹50 lakh manufacturing, ₹20 lakh service",
+     "source_url": "https://khadi.hp.gov.in/pmegp/",
+     "publication_year": "current",
+     "checked": "2026-11-05",
+     "status": "verified"
+    },
+    {
+     "claim": "PMEGP subsidy",
+     "figure": "15%/25% general; 25%/35% special (urban/rural)",
+     "source_url": "https://khadi.hp.gov.in/pmegp/",
+     "publication_year": "current",
+     "checked": "2026-11-05",
+     "status": "verified"
+    },
+    {
+     "claim": "PMEGP own contribution",
+     "figure": "10% general, 5% special",
+     "source_url": "https://khadi.hp.gov.in/pmegp/",
+     "publication_year": "current",
+     "checked": "2026-11-05",
+     "status": "verified"
+    },
+    {
+     "claim": "CGTMSE coverage",
+     "figure": "Loans up to ₹10 crore",
+     "source_url": "https://sbi.bank.in/web/business/sme/sme-government-schemes/cgtmse",
+     "publication_year": "2025 (needs CGTMSE/PIB source)",
+     "checked": "2026-11-05",
+     "status": "verified (.in media; government source still to add)"
+    },
+    {
+     "claim": "MSME micro limit",
+     "figure": "Investment ₹2.5 crore, turnover ₹10 crore",
+     "source_url": "https://newsonair.gov.in/govt-notifies-revised-criteria-for-classifying-msmes",
+     "publication_year": "2025",
+     "checked": "2026-11-05",
+     "status": "verified"
+    },
+    {
+     "claim": "typical MUDRA processing time and interest rate range at public sector banks, bank websites and RBI data, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "typical effective annual interest of informal moneylender and unregulated app loans versus bank MSME loans, RBI working group reports, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "local carpenter and signboard quote, small-town Bihar, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "repair toolkit and equipment cost, wholesale electronics market quote, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "starter spare-parts stock value for a small repair shop, distributor quote, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "shop rent and deposit in a Bihar district town market, local broker, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "own contribution share his bank expects, branch policy, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    },
+    {
+     "claim": "EMI at the bank's MUDRA rate for this amount and tenure, bank EMI table, 2026–27",
+     "figure": "",
+     "source_url": "",
+     "publication_year": "",
+     "checked": "2026-11-05",
+     "status": "pending"
+    }
+   ]
   },
   {
    "seller_url": "https://ideaproof.io/questions/money-to-start-business",
@@ -2407,7 +2795,11 @@
    "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
    "live_url": "https://bbinewcopy.vercel.app/how-much-money-is-needed-to-start-a-business-in-india",
    "contains": "Q&A: launch capital categories, cost by business model, capital preservation, FAQ.",
-   "india_plan": "Done: one-time vs monthly costs, Udyam, FSSAI, GST thresholds, ways to start smaller."
+   "india_plan": "Done: one-time vs monthly costs, Udyam, FSSAI, GST thresholds, ways to start smaller.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/questions/angel-vs-vc",
@@ -2497,7 +2889,11 @@
    "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-start-a-business-without-investors-in-india",
    "contains": "Q&A: self-funding mechanics, execution steps, risks, compare options.",
-   "india_plan": "Done: growing on own sales like Indian family businesses; loans without giving up ownership."
+   "india_plan": "Done: growing on own sales like Indian family businesses; loans without giving up ownership.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/questions/what-is-incubator",
@@ -3123,7 +3519,11 @@
    "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
    "live_url": "https://bbinewcopy.vercel.app/what-is-customer-acquisition-cost-for-a-small-business-in-india",
    "contains": "Q&A: CAC definition, formula, benchmarks, how to reduce it, FAQ.",
-   "india_plan": "Done: rupee example, what to count for tiffin, tuition and resellers, GST on ads."
+   "india_plan": "Done: rupee example, what to count for tiffin, tuition and resellers, GST on ads.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/questions/cac-vs-cpa",
@@ -3363,7 +3763,11 @@
    "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-calculate-tam-sam-som-for-a-business-in-india",
    "contains": "Q&A: TAM, SAM, SOM explained, calculation, benchmarks, FAQ.",
-   "india_plan": "Done: bottom-up sizing for a city or district using Census and data.gov.in counts."
+   "india_plan": "Done: bottom-up sizing for a city or district using Census and data.gov.in counts.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/questions/calculate-tam-sam-som",
@@ -3544,7 +3948,11 @@
    "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-know-if-your-business-has-product-market-fit-in-india",
    "contains": "Q&A: product-market fit meaning, measurement, signs, FAQ.",
-   "india_plan": "Done: repeat UPI orders and unasked referrals as signs; 5-point self-check."
+   "india_plan": "Done: repeat UPI orders and unasked referrals as signs; 5-point self-check.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/questions/measure-product-market-fit",
@@ -3754,7 +4162,11 @@
    "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-talk-to-customers-before-starting-a-business-in-india",
    "contains": "Q&A: interview framework, script, mistakes, FAQ.",
-   "india_plan": "Done: where to meet Indian buyers (mandi, society groups, PGs), local-language interviews."
+   "india_plan": "Done: where to meet Indian buyers (mandi, society groups, PGs), local-language interviews.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/questions/how-many-customer-interviews",
@@ -4084,7 +4496,11 @@
    "status": "live (not yet completed: links, images and E-E-A-T pass pending)",
    "live_url": "https://bbinewcopy.vercel.app/how-to-build-an-mvp-with-low-investment-in-india",
    "contains": "Q&A: MVP steps, options, no-code vs custom, FAQ.",
-   "india_plan": "Done: WhatsApp Business catalogue, UPI QR and manual delivery before any app."
+   "india_plan": "Done: WhatsApp Business catalogue, UPI QR and manual delivery before any app.",
+   "quality_check": "Failed",
+   "reviewed_by": "Owner",
+   "reason": "Low-value, thin, generic content",
+   "pending_numbers": []
   },
   {
    "seller_url": "https://ideaproof.io/questions/mvp-vs-full-product",
