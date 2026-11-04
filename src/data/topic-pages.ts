@@ -15,7 +15,8 @@ import { raiseFunds } from "./topic-pages-rw12";
 import { businessNumbers } from "./topic-pages-rw13";
 import { businessPlan } from "./topic-pages-rw14";
 import { competitors } from "./topic-pages-rw15";
-import { fundingQuestions, adsTest, govResources, validateFood, validateOnline } from "./topic-pages-e";
+import { fundingQuestions } from "./topic-pages-rw16";
+import { adsTest, govResources, validateFood, validateOnline } from "./topic-pages-e";
 
 export const TOPIC_PAGES: TopicPage[] = [validateIdea, getFunding, mistakes, cac, tam, moneyToStart, bootstrapping, pmf, interviews, mvp, isIdeaGood, raiseFunds, businessNumbers, businessPlan, competitors, fundingQuestions, adsTest, govResources, validateFood, validateOnline];
 export const topicPage = (slug: string) => TOPIC_PAGES.find((p) => p.slug === slug)!;
