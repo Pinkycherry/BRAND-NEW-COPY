@@ -14,6 +14,10 @@ import sharedHeaderStyles from "@/components/v2/v2.css?raw";
 import sellerShell from "./topics.html?raw";
 import { canonicalUrl, CO_FOUNDER, TEAM } from "@/lib/site-config";
 import { dbOrNull } from "@/lib/db";
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import { ProviderPromptActions } from "@/components/founder-workspace/provider-prompt-actions";
+import { topicValidatePrompt } from "@/lib/topic-validate-prompt";
 import { faqEntries, normalizeFaqQuestion } from "@/lib/lists.functions";
 
 export type Link = { label: string; href: string; note?: string };
@@ -64,13 +68,19 @@ const STYLE = (() => {
 
 const esc = (v: string) => v.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c] ?? c);
 /** Inline emphasis: **bold** only. */
-/** Research markers ([Data pending: ...]) are shown on the page while the site is noindex (owner rule, 5 Nov 2026) and listed in India Topic Pages Review. */
+/**
+ * Numbers rule (founder, 5 Nov 2026): topic pages carry no researched figures. Any `[Data pending: ...]` or
+ * `[Validate: ...]` marker in page data renders as an inline line pointing to the page's Validate button,
+ * so the visitor gets today's figure for their own city from their own Validate session.
+ */
+const VALIDATE_LINE = '<a class="font-medium text-primary underline-offset-2 hover:underline" href="#validate">Check today\'s figure for your city with the Validate button.</a>';
 const rich = (v: string) =>
   esc(v)
-    .replace(/\[Data pending: ([^\]]+)\]/g, '<mark class="rounded px-1.5 py-0.5 font-medium" style="background:#fef3c7;color:#78350f;box-shadow:0 0 0 1px #fcd34d;font-size:.85em" data-pending="$1">[Data pending: $1]</mark>')
+    .replace(/\s*\[(?:Data pending|Validate): [^\]]+\]/g, " " + VALIDATE_LINE)
     .replace(/\*\*(.+?)\*\*/g, '<strong class="text-foreground">$1</strong>')
     .replace(/\[([^\]]+)\]\((\/[^)\s]*|#[^)\s]*)\)/g, '<a class="text-primary underline-offset-2 hover:underline" href="$2">$1</a>')
-    .replace(/\[([^\]]+)\]\((https:\/\/[^)\s]+)\)/g, '<a class="text-primary underline-offset-2 hover:underline" href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+    .replace(/\[([^\]]+)\]\((https:\/\/[^)\s]+)\)/g, '<a class="text-primary underline-offset-2 hover:underline" href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+    .trim();
 const cell = (v: string) => rich(v);
 
 const ICON = {
@@ -183,7 +193,7 @@ function schema(p: TopicPage) {
   return JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replace(/</g, "\\u003c");
 }
 
-const SCRIPT = `<script>(function(){document.querySelectorAll('[data-topic-acc]').forEach(function(b){b.addEventListener('click',function(){var open=b.getAttribute('aria-expanded')==='true';var r=document.getElementById(b.getAttribute('aria-controls'));b.setAttribute('aria-expanded',String(!open));b.dataset.state=open?'closed':'open';b.closest('[data-state]').dataset.state=open?'closed':'open';if(r)r.hidden=open;});});document.querySelectorAll('[data-topic-quiz]').forEach(function(q){var out=q.querySelector('[data-quiz-out]');var base=out.textContent;q.addEventListener('change',function(){var n=q.querySelectorAll('input:checked').length;var t=+out.dataset.total;out.textContent=n+' of '+t+' ticked. '+(n===t?'You are ready for the next step.':base.replace(/^Tick what is true for you today\\. /,''));});});})();</script>`;
+const SCRIPT = `<script>(function(){document.querySelectorAll('[data-topic-validate]').forEach(function(w){var pre=w.querySelector('pre');w.querySelectorAll('button').forEach(function(b){if(!/Copy/.test(b.textContent))return;b.addEventListener('click',function(){var t=pre?pre.textContent:'';(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.lastChild.textContent=' Prompt copied';},function(){var r=document.createRange();if(pre){r.selectNodeContents(pre);var sel=getSelection();sel.removeAllRanges();sel.addRange(r);}});});});});document.querySelectorAll('[data-topic-acc]').forEach(function(b){b.addEventListener('click',function(){var open=b.getAttribute('aria-expanded')==='true';var r=document.getElementById(b.getAttribute('aria-controls'));b.setAttribute('aria-expanded',String(!open));b.dataset.state=open?'closed':'open';b.closest('[data-state]').dataset.state=open?'closed':'open';if(r)r.hidden=open;});});document.querySelectorAll('[data-topic-quiz]').forEach(function(q){var out=q.querySelector('[data-quiz-out]');var base=out.textContent;q.addEventListener('change',function(){var n=q.querySelectorAll('input:checked').length;var t=+out.dataset.total;out.textContent=n+' of '+t+' ticked. '+(n===t?'You are ready for the next step.':base.replace(/^Tick what is true for you today\\. /,''));});});})();</script>`;
 
 type IdeaRow = { slug: string; title: string; hook: string | null; summary: string | null; faq: unknown; category_code: string };
 async function ideasFor(slugs: string[]): Promise<IdeaRow[]> {
@@ -257,6 +267,14 @@ async function exploreBands(p: TopicPage): Promise<string[]> {
   return [ideas, guideRail, blogRail];
 }
 
+/** Our existing Validate picker (Claude, Perplexity, ChatGPT, Grok), reused as-is and filled from the one topic prompt template. */
+function validateBlock(p: TopicPage, id: string, title: string): string {
+  const questions = p.sections.map((s) => ("heading" in s ? s.heading : "")).filter((h) => h && !/^(sources|explore|free|related|keep|deeper|popular|other|part of)/i.test(h));
+  const { prompt, prefillPrompt } = topicValidatePrompt({ title: p.hero.h1, topic: p.hero.eyebrow, questions, date: new Date() });
+  const ui = renderToStaticMarkup(createElement(ProviderPromptActions, { prompt, prefillPrompt, title }));
+  return `<section id="${id}" class="py-8 px-4 scroll-mt-24"><div class="container mx-auto max-w-4xl" data-topic-validate>${ui}</div></section>`;
+}
+
 function withBands(sections: string[], bands: string[]): string {
   const n = sections.length;
   if (n < 4) return sections.join("") + bands.join("");
@@ -270,7 +288,11 @@ export async function renderTopicPage(input: TopicPage): Promise<Response> {
   faqId = 0;
   used = new Set();
   const url = canonicalUrl(`/${p.slug}`);
-  const main = `<main class="flex-1">${crumbs(p)}${hero(p)}${withBands(p.sections.map(section), bands)}</main>`;
+  const body = p.sections.map(section);
+  const srcAt = p.sections.findIndex((x) => x.type === "sources");
+  const endBlock = validateBlock(p, "validate-end", "Validate this for your city today");
+  if (srcAt >= 0) body[srcAt] = endBlock + body[srcAt]; else body.push(endBlock);
+  const main = `<main class="flex-1">${crumbs(p)}${hero(p)}${validateBlock(p, "validate", "Validate this for your city today")}${withBands(body, bands)}</main>`;
   const html = `<!DOCTYPE html><html lang="en-IN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="robots" content="noindex, nofollow, noarchive, noimageindex"><title>${esc(p.seo.title)}</title><meta name="description" content="${esc(p.seo.description)}"><link rel="canonical" href="${esc(url)}"><meta property="og:type" content="article"><meta property="og:title" content="${esc(p.seo.title)}"><meta property="og:description" content="${esc(p.seo.description)}"><meta property="og:url" content="${esc(url)}"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="BusinessIdea.io"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">${schema(p)}</script><style>${STYLE}</style><link rel="stylesheet" href="/bought/topics/styles/index-BpDyUYDe.css"><style id="bbi-shared-header-styles">${sharedHeaderStyles}</style></head><body><div id="root"><div class="min-h-screen flex flex-col">${menuPanels.header}${main}${menuPanels.footer}</div></div>${menuBindings}${SCRIPT}</body></html>`;
   return new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, max-age=300" } });
 }
