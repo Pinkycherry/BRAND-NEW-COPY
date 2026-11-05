@@ -1,26 +1,58 @@
 /**
- * The ONE backend prompt template behind the Validate button on every India topic page.
- * It is filled automatically from the page's title, topic and key questions (its section headings)
- * plus today's date. Never write a separate prompt per page.
- * Pending (founder, 5 Nov 2026): much stronger, longer prompts for every Validate button.
+ * The ONE backend prompt template behind the Validate button on every India topic page (founder rules, 5 Nov 2026).
+ * Filled from the page (title, key questions), today's date, the visitor's one-tap answers (language, place,
+ * online or offline, budget band, social following, stage, page add-ons) and the tick boxes on the page.
+ * Two lengths from the same template: "full" for ChatGPT, Claude and Perplexity; "short" for Grok, which fails on long prompts.
+ * No padded words. The same function runs on the server (default prompt) and in the browser (after every tap or tick).
  */
-export type TopicPromptInput = { title: string; topic: string; questions: string[]; date: Date };
+export type TopicPromptState = {
+  title: string;
+  questions: string[];
+  date: string;
+  answers: Record<string, string>;
+  ticked: string[];
+  notYet: string[];
+};
 
-export function topicValidatePrompt({ title, topic, questions, date }: TopicPromptInput): { prompt: string; prefillPrompt: string } {
-  const today = date.toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Kolkata" });
-  const qs = questions.filter(Boolean).slice(0, 8);
-  const prompt = [
-    `Today is ${today}. I am a first-time founder in India reading a guide titled "${title}" (topic: ${topic}).`,
-    `Ask me first for my city or town, state, the business I have in mind, my budget in rupees and the time I can give each week. Then answer for my exact location, using today's figures.`,
-    `Cover these questions from the guide:`,
-    ...qs.map((q, i) => `${i + 1}. ${q}`),
-    `Rules: give current numbers in rupees with the date they apply to, and name the official Indian source for each (a .gov.in or .nic.in site, RBI, PIB, the scheme's own portal, or my bank). If a figure differs by state or city, say so. If you are not sure of a figure, say so plainly instead of guessing.`,
-    `Finish with a checklist of documents and a simple plan for the next 7 days.`,
-  ].join("\n");
-  const prefillPrompt = [
-    `Today is ${today}. I'm a first-time founder in India. Help me with: "${title}".`,
-    `First ask my city, state, business, budget in ₹ and weekly time. Then give today's figures in ₹ with official Indian sources (.gov.in, RBI, PIB, scheme portals), note state differences, flag anything uncertain, and end with a document checklist and a 7-day plan.`,
-    qs.length ? `Cover: ${qs.slice(0, 5).join("; ")}.` : "",
+export function buildTopicPrompt(s: TopicPromptState, short: boolean): string {
+  const lang = s.answers["Language"] || "English";
+  const me = Object.keys(s.answers).filter((k) => k !== "Language" && s.answers[k]).map((k) => k + ": " + s.answers[k]).join("; ");
+  const cut = (a: string[], n: number) => a.slice(0, n).map((t) => t.replace(/\*\*/g, "").slice(0, 90).replace(/[.;,\s]+$/, "")).join("; ");
+  if (short) {
+    return [
+      s.date + '. Help me with "' + s.title + (/india/i.test(s.title) ? '".' : '" in India.'),
+      me ? "Me: " + me + "." : "",
+      s.ticked.length ? "True for me: " + cut(s.ticked, 4) + "." : "",
+      "Ask me 3 short questions first, one at a time. Then answer for my case: steps, today's ₹ figures with official Indian sources.",
+      "Reply in everyday spoken " + lang + ", short sentences, not textbook. End with a 7-day plan.",
+    ].filter(Boolean).join("\n");
+  }
+  return [
+    "Today is " + s.date + '. I am a first-time founder in India. Topic: "' + s.title + '".',
+    me ? "About me: " + me + "." : "About me: not shared yet.",
+    s.ticked.length ? "From the page checklist, true for me: " + cut(s.ticked, 8) + "." : "",
+    s.notYet.length ? "Not done yet: " + cut(s.notYet, 8) + "." : "",
+    "Before answering, ask me 3 to 5 short questions about what is missing (my town, the exact business, my timeline). Ask one at a time and wait for each reply.",
+    "Then answer only for my situation: practical steps, today's figures in ₹ with the date and an official Indian source (.gov.in, RBI, PIB, the scheme's portal), state or city differences, and say plainly when you are unsure.",
+    "Write in " + lang + " the way people in my area speak every day: short, simple, friendly. No textbook or formal words; keep words people really use, like UPI, GST, loan, shop.",
+    s.questions.length ? "Cover: " + s.questions.slice(0, 6).join("; ") + "." : "",
+    "End with my next 7 days, one task per day.",
   ].filter(Boolean).join("\n");
-  return { prompt, prefillPrompt };
 }
+
+/** Server-side default (before the visitor taps anything). */
+export function topicValidatePrompt({ title, questions, date }: { title: string; topic?: string; questions: string[]; date: Date }): { prompt: string; prefillPrompt: string; state: TopicPromptState } {
+  const today = date.toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Kolkata" });
+  const state: TopicPromptState = { title, questions: questions.filter(Boolean), date: today, answers: {}, ticked: [], notYet: [] };
+  return { prompt: buildTopicPrompt(state, false), prefillPrompt: buildTopicPrompt(state, false), state };
+}
+
+/** One-tap questions shown above the Validate button on every topic page. Pages may add their own groups. */
+export const COMMON_INPUTS: { label: string; options: string[] }[] = [
+  { label: "Language", options: ["English", "Hindi", "Telugu", "Tamil", "Kannada", "Malayalam", "Marathi", "Bengali", "Gujarati", "Odia", "Punjabi"] },
+  { label: "Where I live", options: ["Metro city", "Tier 2 city", "Small town", "Village"] },
+  { label: "How I want to sell", options: ["Online", "Offline (shop or local)", "Both"] },
+  { label: "Budget", options: ["Under ₹10,000", "₹10,000–50,000", "₹50,000–1 lakh", "₹1–5 lakh", "Above ₹5 lakh"] },
+  { label: "Social media following", options: ["None", "Under 1,000", "1,000–10,000", "Above 10,000"] },
+  { label: "Stage", options: ["Just an idea", "Testing with buyers", "Already selling"] },
+];
