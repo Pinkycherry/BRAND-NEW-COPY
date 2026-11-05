@@ -193,7 +193,7 @@ function schema(p: TopicPage) {
   return JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replace(/</g, "\\u003c");
 }
 
-const SCRIPT = `<script>(function(){document.querySelectorAll('[data-topic-validate]').forEach(function(w){var pre=w.querySelector('pre');w.querySelectorAll('button').forEach(function(b){if(!/Copy/.test(b.textContent))return;b.addEventListener('click',function(){var t=pre?pre.textContent:'';(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.lastChild.textContent=' Prompt copied';},function(){var r=document.createRange();if(pre){r.selectNodeContents(pre);var sel=getSelection();sel.removeAllRanges();sel.addRange(r);}});});});});document.querySelectorAll('[data-topic-acc]').forEach(function(b){b.addEventListener('click',function(){var open=b.getAttribute('aria-expanded')==='true';var r=document.getElementById(b.getAttribute('aria-controls'));b.setAttribute('aria-expanded',String(!open));b.dataset.state=open?'closed':'open';b.closest('[data-state]').dataset.state=open?'closed':'open';if(r)r.hidden=open;});});document.querySelectorAll('[data-topic-quiz]').forEach(function(q){var out=q.querySelector('[data-quiz-out]');var base=out.textContent;q.addEventListener('change',function(){var n=q.querySelectorAll('input:checked').length;var t=+out.dataset.total;out.textContent=n+' of '+t+' ticked. '+(n===t?'You are ready for the next step.':base.replace(/^Tick what is true for you today\\. /,''));});});})();</script>`;
+const SCRIPT = `<script>(function(){document.querySelectorAll('[data-topic-validate]').forEach(function(w){var pre=w.querySelector('pre');w.querySelectorAll('button').forEach(function(b){if(!/Copy/.test(b.textContent))return;b.addEventListener('click',function(){var t=pre?pre.textContent:'';(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.lastChild.textContent=' Prompt copied';},function(){var r=document.createRange();if(pre){r.selectNodeContents(pre);var sel=getSelection();sel.removeAllRanges();sel.addRange(r);}});});});});document.querySelectorAll('[data-topic-acc]').forEach(function(b){b.addEventListener('click',function(){var open=b.getAttribute('aria-expanded')==='true';var r=document.getElementById(b.getAttribute('aria-controls'));b.setAttribute('aria-expanded',String(!open));b.dataset.state=open?'closed':'open';b.closest('[data-state]').dataset.state=open?'closed':'open';if(r)r.hidden=open;});});document.querySelectorAll('[data-mq]').forEach(function(m){var t;m.addEventListener('touchstart',function(){clearTimeout(t);m.classList.add('is-held');},{passive:true});m.addEventListener('touchend',function(){t=setTimeout(function(){m.classList.remove('is-held');},2500);});});document.querySelectorAll('[data-topic-quiz]').forEach(function(q){var out=q.querySelector('[data-quiz-out]');var base=out.textContent;q.addEventListener('change',function(){var n=q.querySelectorAll('input:checked').length;var t=+out.dataset.total;out.textContent=n+' of '+t+' ticked. '+(n===t?'You are ready for the next step.':base.replace(/^Tick what is true for you today\\. /,''));});});})();</script>`;
 
 type IdeaRow = { slug: string; title: string; hook: string | null; summary: string | null; faq: unknown; category_code: string };
 async function ideasFor(slugs: string[]): Promise<IdeaRow[]> {
@@ -240,31 +240,58 @@ async function resolve(sections: Section[]): Promise<Section[]> {
   }));
 }
 
-const RAIL = "flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 -mx-1 px-1";
-const RAIL_CARD = "snap-start shrink-0 w-[78%] sm:w-[46%] lg:w-[31%] rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden hover:border-primary hover:shadow-md transition-all";
 const DEFAULT_CATS = ["home-based-business-ideas", "food-business-ideas", "online-business-ideas", "women-friendly-business-ideas", "village-and-small-town-business-ideas", "freelance-business-ideas", "reselling-business-ideas", "side-hustle-business-ideas"];
-const band = (inner: string) => `<section class="py-8 px-4 border-y border-border/40 bg-white"><div class="container mx-auto max-w-6xl">${inner}</div></section>`;
+const band = (inner: string) => `<section class="py-7 px-4 border-y border-border/40 bg-white overflow-hidden"><div class="container mx-auto max-w-6xl">${inner}</div></section>`;
 const bandHead = (t: string, link?: Link) => `<div class="flex items-end justify-between gap-3 mb-4"><h2 class="text-lg md:text-xl font-bold">${esc(t)}</h2>${link ? `<a class="text-sm font-medium text-primary hover:underline whitespace-nowrap" href="${esc(link.href)}">${esc(link.label)} ${ICON.arrow}</a>` : ""}</div>`;
-const pill = (l: Link) => `<a class="inline-flex items-center rounded-full border border-border bg-white px-3.5 py-1.5 text-sm text-foreground hover:border-primary hover:text-primary transition-colors" href="${esc(l.href)}">${esc(l.label)}</a>`;
+/** Small hash of the slug: picks how many motion bands a page gets, their order and where they sit, so no two pages share one pattern. */
+const seedOf = (t: string) => [...t].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+/** Motion rail (founder, 5 Nov 2026): small cards that drift sideways; alternate rails move in opposite directions. Pauses on hover or touch; static scroll when the visitor prefers reduced motion. */
+const MQ_CSS = `.bbi-mq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}.bbi-mq-track{display:flex;width:max-content;animation:bbi-mq var(--mq,48s) linear infinite}.bbi-mq[data-dir="right"] .bbi-mq-track{animation-direction:reverse}.bbi-mq:hover .bbi-mq-track,.bbi-mq:focus-within .bbi-mq-track,.bbi-mq.is-held .bbi-mq-track{animation-play-state:paused}.bbi-mq-item{flex:0 0 auto;margin-right:12px}@keyframes bbi-mq{to{transform:translateX(-50%)}}@media (prefers-reduced-motion:reduce){.bbi-mq{overflow-x:auto;-webkit-mask-image:none;mask-image:none}.bbi-mq-track{animation:none}}`;
+const MQ_CARD = "bbi-mq-item block w-[210px] sm:w-[232px] rounded-lg border bg-card text-card-foreground overflow-hidden hover:border-primary transition-colors";
+function marquee(items: string[], dir: "left" | "right", secs: number): string {
+  const dup = items.map((h) => h.replace(/^<a /, '<a tabindex="-1" aria-hidden="true" '));
+  return `<div class="bbi-mq" data-mq data-dir="${dir}" style="--mq:${secs}s"><div class="bbi-mq-track">${items.join("")}${dup.join("")}</div></div>`;
+}
+const imgCard = (href: string, img: string | null, alt: string, kicker: string, title: string) => `<a class="${MQ_CARD}" href="${esc(href)}">${img ? `<img src="${esc(img)}" alt="${esc(alt)}" loading="lazy" class="w-full aspect-[16/9] object-cover">` : ""}<div class="p-3"><p class="text-[11px] text-primary font-medium mb-1 truncate">${esc(kicker)}</p><h3 class="font-semibold text-[13.5px] leading-snug line-clamp-2">${esc(title)}</h3></div></a>`;
+const textCard = (href: string, kicker: string, title: string, body: string) => `<a class="${MQ_CARD} p-3.5" href="${esc(href)}"><p class="text-[11px] text-primary font-medium mb-1">${esc(kicker)}</p><h3 class="font-semibold text-[13.5px] leading-snug mb-1">${esc(title)}</h3><p class="text-xs text-muted-foreground line-clamp-2">${esc(body)}</p></a>`;
+const pillCard = (l: Link) => `<a class="bbi-mq-item inline-flex items-center rounded-full border border-border bg-white px-3.5 py-1.5 text-sm text-foreground hover:border-primary hover:text-primary transition-colors whitespace-nowrap" href="${esc(l.href)}">${esc(l.label)}</a>`;
 
-/** Bands of our own pages placed between seller sections: categories and models, guides, articles and learning pages. */
+/** Motion bands of our own pages placed between seller sections: guides, articles, calculators and tools, categories and lists. */
 async function exploreBands(p: TopicPage): Promise<string[]> {
   const cats = p.explore?.categories ?? DEFAULT_CATS;
   const [{ TAXONOMY }, { STARTUP_GUIDES }, { guideImage }, blog] = await Promise.all([
     import("@/data/taxonomy"),
     import("@/lib/guides-data"),
     import("@/config/guide-imagery"),
-    import("@/lib/blog.server").then((m) => m.fetchPosts(1, 6)).catch(() => ({ posts: [] as { slug: string; title: string; excerpt: string; image: string | null; imageAlt: string | null }[] })),
+    import("@/lib/blog.server").then((m) => m.fetchPosts(1, 10)).catch(() => ({ posts: [] as { slug: string; title: string; excerpt: string; image: string | null; imageAlt: string | null }[] })),
   ]);
-  const catLinks: Link[] = (TAXONOMY as { slug: string; short?: string; name?: string }[]).filter((c) => cats.includes(c.slug)).map((c) => ({ label: `${c.short ?? c.name} business ideas`, href: `/category/${c.slug}` }));
-  const ideas = band(`${bandHead("Find a business idea that fits you", { label: "Browse all categories", href: "/browse" })}<div class="flex flex-wrap gap-2">${[...catLinks, { label: "Business models compared", href: "/business-models-india" }, { label: "Idea lists", href: "/lists" }, { label: "Is my business idea good?", href: "/how-to-check-if-your-business-idea-is-good-in-india" }, { label: "Validate a business idea", href: "/how-to-validate-a-business-idea-in-india" }].map(pill).join("")}</div>`);
+  const seed = seedOf(p.slug);
+  const tax = TAXONOMY as { slug: string; short?: string; name?: string }[];
+  const catLinks: Link[] = [...tax.filter((c) => cats.includes(c.slug)), ...tax.filter((c) => !cats.includes(c.slug)).slice(seed % 40, (seed % 40) + 6)].map((c) => ({ label: `${c.short ?? c.name} business ideas`, href: `/category/${c.slug}` }));
+  const ideas = (dir: "left" | "right") => band(`${bandHead("Find a business idea that fits you", { label: "Browse all categories", href: "/browse" })}${marquee([...catLinks, { label: "Idea lists", href: "/lists" }, { label: "Business models compared", href: "/business-models-india" }, { label: "Side business ideas", href: "/side-business-ideas-india" }].map(pillCard), dir, 60)}`);
   const first = STARTUP_GUIDES.filter((g) => g.category === p.explore?.guideCategory);
-  const guides = [...first, ...STARTUP_GUIDES.filter((g) => !first.includes(g) && !/saas|b2b/i.test(g.slug))].slice(0, 6);
-  const guideRail = band(`${bandHead("Business guides for Indian founders", { label: "All guides", href: "/startup-guides" })}<div class="${RAIL}">${guides.map((g) => { const img = guideImage(g.slug); return `<a class="${RAIL_CARD}" href="/startup-guides/${esc(g.slug)}">${img ? `<img src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width}" height="${img.height}" loading="lazy" class="w-full aspect-[16/9] object-cover">` : ""}<div class="p-4"><p class="text-xs text-primary font-medium mb-1">${esc(g.category)} · ${esc(g.readTime)}</p><h3 class="font-semibold text-[15px] leading-snug">${esc(g.title)}</h3></div></a>`; }).join("")}</div>`);
-  const posts = (blog as { posts: { slug: string; title: string; excerpt: string; image: string | null; imageAlt: string | null }[] }).posts.slice(0, 6);
-  const learn: Link[] = [{ label: "Founder glossary", href: "/founder-glossary" }, { label: "Indian startup failures", href: "/failed-startups/india" }, { label: "Case studies", href: "/case-studies" }, { label: "Calculators", href: "/calculator" }, { label: "Templates", href: "/templates" }, { label: "All startup topics", href: "/topics" }];
-  const blogRail = band(`${posts.length ? `${bandHead("From the founder journal", { label: "All articles", href: "/blog" })}<div class="${RAIL} mb-5">${posts.map((b) => `<a class="${RAIL_CARD}" href="/blog/${esc(b.slug)}">${b.image ? `<img src="${esc(b.image)}" alt="${esc(b.imageAlt ?? b.title)}" loading="lazy" class="w-full aspect-[16/9] object-cover">` : ""}<div class="p-4"><h3 class="font-semibold text-[15px] leading-snug mb-1">${esc(b.title)}</h3><p class="text-xs text-muted-foreground line-clamp-2">${esc(b.excerpt)}</p></div></a>`).join("")}</div>` : ""}<div class="flex flex-wrap gap-2">${learn.map(pill).join("")}</div>`);
-  return [ideas, guideRail, blogRail];
+  const guides = [...first, ...STARTUP_GUIDES.filter((g) => !first.includes(g) && !/saas|b2b/i.test(g.slug))].slice(0, 9);
+  const guideRail = (dir: "left" | "right") => band(`${bandHead("Business guides for Indian founders", { label: "All guides", href: "/startup-guides" })}${marquee(guides.map((g) => { const img = guideImage(g.slug); return imgCard(`/startup-guides/${g.slug}`, img?.src ?? null, img?.alt ?? g.title, `${g.category} · ${g.readTime}`, g.title); }), dir, 55)}`);
+  const posts = (blog as { posts: { slug: string; title: string; excerpt: string; image: string | null; imageAlt: string | null }[] }).posts;
+  const blogRail = (dir: "left" | "right") => posts.length ? band(`${bandHead("From the founder journal", { label: "All articles", href: "/blog" })}${marquee(posts.map((b) => imgCard(`/blog/${b.slug}`, b.image, b.imageAlt ?? b.title, "Article", b.title)), dir, 58)}`) : "";
+  const tools: [string, string, string, string][] = [
+    ["/calculator/break-even", "Calculator", "Break-even", "Orders a month before you stop losing money."],
+    ["/calculator/startup-cost", "Calculator", "Startup cost", "Every rupee you need before the first sale."],
+    ["/calculator/funding-needed", "Calculator", "Funding needed", "How much to raise or borrow, and for how long."],
+    ["/calculator/roi", "Calculator", "Return on investment", "Is your money and time coming back?"],
+    ["/business-idea-risk-check", "Free tool", "Idea risk check", "The one guess that could sink your idea."],
+    ["/business-demand-test-india", "Free tool", "Demand test", "A small paid test with real buyers."],
+    ["/business-pricing-india", "Free tool", "First-price workbench", "A price that covers cost, GST and your time."],
+    ["/startup-cash-flow-india", "Free tool", "Cash-flow calendar", "See the month money runs short."],
+    ["/templates", "Templates", "Founder templates", "Plans and worksheets to fill in."],
+    ["/founder-glossary", "Glossary", "Founder glossary", "Money and startup words in plain English."],
+    ["/failed-startups/india", "Research", "Indian startup failures", "What went wrong, so you avoid it."],
+  ];
+  const toolRail = (dir: "left" | "right") => band(`${bandHead("Calculators and free tools", { label: "All calculators", href: "/calculator" })}${marquee(tools.map(([h, k, t, b]) => textCard(h, k, t, b)), dir, 50)}`);
+  const all = [guideRail, blogRail, toolRail, ideas];
+  const count = 2 + (seed % 3);
+  const start = seed % all.length;
+  return Array.from({ length: count }, (_, i) => all[(start + i) % all.length](i % 2 ? "right" : "left")).filter(Boolean);
 }
 
 /** Our existing Validate picker (Claude, Perplexity, ChatGPT, Grok), reused as-is and filled from the one topic prompt template. */
@@ -277,9 +304,9 @@ function validateBlock(p: TopicPage, id: string, title: string): string {
 
 function withBands(sections: string[], bands: string[]): string {
   const n = sections.length;
-  if (n < 4) return sections.join("") + bands.join("");
-  const at = [1, Math.floor(n / 2), Math.max(Math.floor(n / 2) + 1, n - 2)];
-  return sections.map((html, i) => html + at.map((pos, k) => (pos === i ? bands[k] : "")).join("")).join("");
+  if (n < 3 || !bands.length) return sections.join("") + bands.join("");
+  const at = bands.map((_, k) => Math.min(n - 2, Math.max(0, Math.round(((k + 1) * n) / (bands.length + 1)) - 1)));
+  return sections.map((html, i) => html + bands.filter((_, k) => at[k] === i).join("")).join("");
 }
 
 export async function renderTopicPage(input: TopicPage): Promise<Response> {
@@ -293,6 +320,6 @@ export async function renderTopicPage(input: TopicPage): Promise<Response> {
   const endBlock = validateBlock(p, "validate-end", "Validate this for your city today");
   if (srcAt >= 0) body[srcAt] = endBlock + body[srcAt]; else body.push(endBlock);
   const main = `<main class="flex-1">${crumbs(p)}${hero(p)}${validateBlock(p, "validate", "Validate this for your city today")}${withBands(body, bands)}</main>`;
-  const html = `<!DOCTYPE html><html lang="en-IN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="robots" content="noindex, nofollow, noarchive, noimageindex"><title>${esc(p.seo.title)}</title><meta name="description" content="${esc(p.seo.description)}"><link rel="canonical" href="${esc(url)}"><meta property="og:type" content="article"><meta property="og:title" content="${esc(p.seo.title)}"><meta property="og:description" content="${esc(p.seo.description)}"><meta property="og:url" content="${esc(url)}"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="BusinessIdea.io"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">${schema(p)}</script><style>${STYLE}</style><link rel="stylesheet" href="/bought/topics/styles/index-BpDyUYDe.css"><style id="bbi-shared-header-styles">${sharedHeaderStyles}</style></head><body><div id="root"><div class="min-h-screen flex flex-col">${menuPanels.header}${main}${menuPanels.footer}</div></div>${menuBindings}${SCRIPT}</body></html>`;
+  const html = `<!DOCTYPE html><html lang="en-IN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="robots" content="noindex, nofollow, noarchive, noimageindex"><title>${esc(p.seo.title)}</title><meta name="description" content="${esc(p.seo.description)}"><link rel="canonical" href="${esc(url)}"><meta property="og:type" content="article"><meta property="og:title" content="${esc(p.seo.title)}"><meta property="og:description" content="${esc(p.seo.description)}"><meta property="og:url" content="${esc(url)}"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="BusinessIdea.io"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">${schema(p)}</script><style>${STYLE}${MQ_CSS}</style><link rel="stylesheet" href="/bought/topics/styles/index-BpDyUYDe.css"><style id="bbi-shared-header-styles">${sharedHeaderStyles}</style></head><body><div id="root"><div class="min-h-screen flex flex-col">${menuPanels.header}${main}${menuPanels.footer}</div></div>${menuBindings}${SCRIPT}</body></html>`;
   return new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, max-age=300" } });
 }
