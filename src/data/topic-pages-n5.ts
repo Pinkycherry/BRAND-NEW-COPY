@@ -12,6 +12,10 @@ export const cofounder: TopicPage = {
   sellerRef: "https://ideaproof.io/questions/how-to-find-cofounder",
   parent: PARENT,
   explore: { guideCategory: "Launch & Ops", categories: ["web-and-app-service-business-ideas", "ai-and-automation-service-business-ideas", "digital-marketing-business-ideas", "food-processing-business-ideas", "education-business-ideas", "e-commerce-selling-business-ideas", "student-business-ideas", "freelance-business-ideas"] },
+  inputs: [
+    { label: "Partner skill I need", options: ["Tech", "Sales and marketing", "Operations", "Money and finance"] },
+    { label: "Partner I have in mind", options: ["Friend", "Family member", "Colleague", "Not found yet"] },
+  ],
   seo: {
     title: "How to Find a Co-Founder for a Startup in India (and Test the Partnership First)",
     description: "Find the right co-founder in India: decide whether you need one, where to look (college networks, incubators, work colleagues, communities), test with a paid trial project, check skills and values, and put the partnership on paper with a founders' agreement, partnership deed or LLP agreement.",
