@@ -1,5 +1,15 @@
 # BusinessIdea.io: working rules for Claude
 
+## The one goal: AdSense approval (founder, 5 Nov 2026)
+
+bbusiness.online is under Google AdSense review. Every change is judged by one question: does it help Google approve the site?
+
+- Google already knows the old URLs (sitemaps were submitted). Never make them unreachable: every old idea, category and subcategory URL gets a permanent 301 redirect to the closest new page, at the same moment the new data goes live.
+- No broken links, no empty or half-built pages, no duplicate or thin topics live, not even for a short time. Swap everything in one step.
+- Templated pages (individual ideas, individual calculators) stay noindex and out of sitemaps. Hubs (categories, subcategories, the calculators hub) and hand-written pages are indexed.
+- Policy and trust pages (about, author, contact, privacy, terms, disclaimer) must be complete and reachable from every page.
+- If a task does not serve approval, it waits.
+
 ## Commits: always straight to main (founder rule, 28 Oct 2026)
 
 Every commit goes to `main` and is pushed to `main`. No side branches, no pull
