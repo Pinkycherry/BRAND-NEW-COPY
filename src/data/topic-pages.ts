@@ -24,6 +24,7 @@ import { runway } from "./topic-pages-n1";
 import { ltv } from "./topic-pages-n2";
 import { retention } from "./topic-pages-n3";
 import { whenToRaise } from "./topic-pages-n4";
+import { cofounder } from "./topic-pages-n5";
 
-export const TOPIC_PAGES: TopicPage[] = [validateIdea, getFunding, mistakes, cac, tam, moneyToStart, bootstrapping, pmf, interviews, mvp, isIdeaGood, raiseFunds, businessNumbers, businessPlan, competitors, fundingQuestions, adsTest, govResources, validateFood, validateOnline, runway, ltv, retention, whenToRaise];
+export const TOPIC_PAGES: TopicPage[] = [validateIdea, getFunding, mistakes, cac, tam, moneyToStart, bootstrapping, pmf, interviews, mvp, isIdeaGood, raiseFunds, businessNumbers, businessPlan, competitors, fundingQuestions, adsTest, govResources, validateFood, validateOnline, runway, ltv, retention, whenToRaise, cofounder];
 export const topicPage = (slug: string) => TOPIC_PAGES.find((p) => p.slug === slug)!;
