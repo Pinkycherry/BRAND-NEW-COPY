@@ -92,7 +92,7 @@ export function ValidateButton({ slug }: { slug: string }) {
   return <div className="rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-5 md:p-7">
     <div className="flex items-center gap-3">
       <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary"><FileText size={21}/></span>
-      <div><h3 className="text-xl font-bold">Tailor the validation to your situation</h3><p className="mt-1 text-sm text-muted-foreground">This short brief travels with the selected idea. Details are saved only in this browser when you prepare the prompt.</p></div>
+      <div><h3 className="text-xl font-bold">Tailor the validation to your situation</h3><p className="mt-1 text-sm text-muted-foreground">These details go with the idea you picked. They stay only in this browser.</p></div>
     </div>
     <form onSubmit={prepare} className="mt-5 space-y-5">
       <div className="grid gap-4 sm:grid-cols-2">
@@ -151,10 +151,10 @@ export function ValidateButton({ slug }: { slug: string }) {
       {imageIntent && <p className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">For an image request, only ChatGPT and Grok are offered below. The actual image feature can still depend on the chosen service's current session and plan.</p>}
 
       <button type="submit" disabled={loading} className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-blue-700 px-5 py-3 font-semibold text-white transition hover:bg-blue-800 disabled:cursor-wait disabled:opacity-60 sm:w-auto">
-        {loading ? "Preparing your prompt…" : "Prepare validation prompt"}
+        {loading ? "Getting ready…" : "Validate this idea"}
         {!loading && <ArrowRight size={17}/>}
       </button>
-      <p className="text-xs leading-5 text-slate-500">This site prepares the prompt; the chosen AI performs the research. You review and send it there. The answer is not returned to or stored by BusinessIdea.io.</p>
+      <p className="text-xs leading-5 text-slate-500">The AI tool you pick does the research in a new tab. BusinessIdea.io never sees or stores the answer.</p>
     </form>
 
     {error && <p className="mt-4 rounded-lg bg-red-50 p-3 text-sm text-red-800" role="alert">{error}</p>}
